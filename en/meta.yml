@@ -1,16 +1,18 @@
 ---
-title: explore-project-template
+title: personalise-me
 hero_image: images/banner.png
-description: explore-project-template description
+description: Use Javascript to create interactive websites
 version: 4
 listed: false
 copyedit: false
 last_tested: '2021-03-26'
 steps:
 - title: Introduction
-- title: Step title
-- title: Step title
-- title: Step title
+- title: Add footer (DOM manipulation)
+- title: Show/Hide/Input boxes
+- title: Light Mode/Local Storage
+- title: Captcha
+- title: Make it responsive
 - title: Reflection
   knowledge_quiz:
     path: quiz1
