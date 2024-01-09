@@ -382,9 +382,27 @@ input{
     margin: 10px 0;
   }
 
-  .toggle-container {
-    margin-top: 10px;
+    .menu-icon {
+      display: block;
   }
+
+  .toggle-container {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .toggle-label {
+      margin-left: 10px;
+      color: #fff;
+      order: 1; /* Reorder the label for proper display on small screens */
+  }
+
+  #logoutIcon {
+      order: 2; /* Reorder the logout icon for proper display on small screens */
+  }
+
 
   .hero-container {
     height: 300px;
@@ -431,4 +449,15 @@ body.dark-mode {
 
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}

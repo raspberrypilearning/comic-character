@@ -9,7 +9,7 @@ last_tested: '2021-03-26'
 steps:
 - title: Introduction
 - title: Add footer (DOM manipulation)
-- title: Form Handling/Event Handling
+- title: Form Input/Event Handling
 - title: Light Mode/Local Storage
 - title: Captcha/Functions/Logic
 - title: Make it responsive

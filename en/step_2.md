@@ -1,6 +1,6 @@
 ## Add a footer/ DOM Manipulation
 
-#### HTML
+#### HTML - index & comicbook
 <footer>
             <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
         </footer>
