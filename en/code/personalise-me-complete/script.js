@@ -34,7 +34,7 @@ function displaySummary() {
     document.getElementById("summary-section").style.display = "block";
 }
 
-// Dark mode function 
+// Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("darkModeToggle");
   

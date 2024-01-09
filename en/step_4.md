@@ -1,4 +1,146 @@
-## Using grids and animations
+## Light mode and local storage
+
+#### HTML index & comicbook
+Add to header after nav
+
+<div class="toggle-container">
+        <label class="switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider"></span>
+        </label>
+        <span class="toggle-label material-symbols-outlined">light_mode</span>
+ </div>
+
+#### CSS
+/* Light mode */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+  
+.toggle-label {
+    margin-left: 10px;
+    color: #fff;
+  }
+
+// Dark mode styles
+body.dark-mode {
+  background: linear-gradient(to right, #d2cfcf, #bcb7bc);
+  color: #ffffff;
+}
+
+.dark-mode .navigation {
+  background-color: #8e6363;
+}
+
+.dark-mode .year {
+  color: #fff;
+}
+
+
+.dark-mode .logo {
+  color: rgb(243, 239, 239);
+  
+}
+
+.dark-mode .navbar a {
+color: #ffffff;
+}
+
+.dark-mode .header {
+background: #e6b400;
+}
+
+.dark-mode footer {
+background-color: #e6b400;;
+color: #ffffff;
+
+}
+
+.menu-icon {
+display: none;
+cursor: pointer;
+}
+
+.bar {
+width: 25px;
+height: 3px;
+background-color: #fff;
+margin: 6px 0;
+transition: 0.4s;
+}
+
+#### Javascript
+// Light mode function 
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+  
+    // Check if dark mode preference is stored in local storage
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+  
+    // Set initial dark mode state based on the stored preference
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    darkModeToggle.checked = isDarkMode;
+  
+    darkModeToggle.addEventListener("change", function () {
+      const isDarkMode = darkModeToggle.checked;
+  
+      // Check if dark mode is already in the desired state
+    if (isDarkMode !== document.body.classList.contains("dark-mode")) {
+      // Update body class and store the user's preference in local storage
+      document.body.classList.toggle("dark-mode", isDarkMode);
+      localStorage.setItem("darkMode", isDarkMode.toString());
+    }
+    });
+  }); 
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">

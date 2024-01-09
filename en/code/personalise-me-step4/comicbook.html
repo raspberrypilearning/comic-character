@@ -1,8 +1,34 @@
-## Add form input fields/Functions/Logic
-
-#### HTML comicbook
-Add to main
-<section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Comic Book</title>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="index.html" class="logo">Pi Comics</a>
+        <nav class="navbar" id="nav">
+            <a href="index.html">HOME</a>
+            <a href="comicbook.html">CREATE COMIC</a>
+        </nav>
+        <div class="toggle-container">
+            <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+            </label>
+            <span class="toggle-label material-symbols-outlined">light_mode</span>
+     </div>
+    
+    </header>
+   
+    <main>
+        <section>
             <div class="character-sheet">
                 <div class="name-section">
                 <div id="name-input">
@@ -67,67 +93,12 @@ Add to main
             <h2>Superhero Summary</h2>
             <p id="summary-paragraph"></p>
         </section>
+       
+    </main>
+    <footer class="footer">
+        <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
 
-#### Javascript
-// Update Create Comic Display function 
-function changeDisplay(id) {
-    var input = document.querySelector("#" + id);
-    var inputSection = document.querySelector("#" + id + "-input");
-    var displaySection = document.querySelector("#" + id + "-display");
-    var valueDisplay = document.querySelector("#" + id + "-span");
-
-    valueDisplay.textContent = input.value;
-    inputSection.style.display = "none";
-    displaySection.style.display = "flex";
-
-    // Check if all changeDisplay actions are completed
-    if (id === "origin") {
-        displaySummary(); // Call displaySummary after all changeDisplay actions
-    }
-}
-// Function to display summary
-function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
-
-    var name = document.getElementById("name-span").textContent;
-    var abilities = document.getElementById("class-span").textContent;
-    var appearance = document.getElementById("description-span").textContent;
-    var origin = document.getElementById("origin-span").textContent;
-
-    summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your abilities are ${abilities}. Your appearance is ${appearance}. 
-    Your origin story is ${origin}.`;
-
-    document.getElementById("summary-section").style.display = "block";
-}
-
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
-</div>
-<div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
-</div>
-</div>
-
---- task ---
-
-Another step of tasks to complete.
-
---- /task ---
-
---- task ---
-
-Step content... 
-Can use:
-**Test:**
-**Choose:**
-**Tip:**
-
---- /task ---
-
---- save ---
-
-### Code to add
-
+</body>
+</html>
