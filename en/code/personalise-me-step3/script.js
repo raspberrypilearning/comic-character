@@ -2,7 +2,7 @@
 const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
-/ Update Create Comic function 
+// Update Create Comic function 
 function changeDisplay(id) {
     var input = document.querySelector("#" + id);
     var inputSection = document.querySelector("#" + id + "-input");
