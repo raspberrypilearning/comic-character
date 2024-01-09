@@ -1,4 +1,53 @@
-## Create a navbar
+## Add a footer/ DOM Manipulation
+
+#### HTML
+<footer>
+            <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
+        </footer>
+        <script src="script.js"></script>
+
+#### Javascript
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+
+## Add a Hero slider - Might be better after functions
+
+#### HTML
+<main>
+
+            <div class="hero-container">
+                <div class="hero-slider">
+                    <div class="hero-slide"><img src="stacey_hero.jpg" alt="Slide 1"></div>
+                    <div class="hero-slide"><img src="safina_hero.jpg" alt="Slide 2"></div>
+                    <div class="hero-slide"><img src="layton_hero.jpg" alt="Slide 3"></div>
+                </div>
+                <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
+                <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
+            </div>
+        </main>
+
+#### Javascript
+// Hero slider function 
+let currentHeroIndex = 0;
+const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+
+function nextHero() {
+    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+    updateHeroSlider();
+}
+
+function prevHero() {
+    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+    updateHeroSlider();
+}
+
+function updateHeroSlider() {
+    const heroSlider = document.querySelector('.hero-slider');
+    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+}
+
 
 ~~~
 

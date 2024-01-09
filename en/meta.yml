@@ -9,9 +9,9 @@ last_tested: '2021-03-26'
 steps:
 - title: Introduction
 - title: Add footer (DOM manipulation)
-- title: Show/Hide/Input boxes
+- title: Form Handling/Event Handling
 - title: Light Mode/Local Storage
-- title: Captcha
+- title: Captcha/Functions/Logic
 - title: Make it responsive
 - title: Reflection
   knowledge_quiz:
