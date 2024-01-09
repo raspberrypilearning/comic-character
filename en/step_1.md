@@ -11,6 +11,12 @@ In this project, <mark> short project description </mark>
 <mark>Objectives in language that learners will understand</mark>
 
 You will:
+Create an image slider 
+Add form elements using HTML
+Use event handlers/DOM manipulation/logic
+Show/Hide elements using javascript
+Use local storage to store user preferences
+Use Captcha to protect your content
 
 
 
