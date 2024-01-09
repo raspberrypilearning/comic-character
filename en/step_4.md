@@ -71,7 +71,7 @@ input:checked + .slider:before {
     color: #fff;
   }
 
-// Dark mode styles
+/* Dark mode styles */
 body.dark-mode {
   background: linear-gradient(to right, #d2cfcf, #bcb7bc);
   color: #ffffff;
