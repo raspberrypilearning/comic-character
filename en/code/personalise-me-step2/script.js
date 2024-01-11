@@ -1,24 +1,19 @@
 // Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+
+
+// Update Create Comic function 
+
+
+
+// Light mode function 
+
+
 
 // Hero slider function 
-let currentHeroIndex = 0;
-const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
 
-function nextHero() {
-    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-    updateHeroSlider();
-}
 
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-    updateHeroSlider();
-}
+// Captcha Function
 
-function updateHeroSlider() {
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
 
+
+// Function to logout and clear local storage

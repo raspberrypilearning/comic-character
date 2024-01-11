@@ -3,6 +3,7 @@ const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
 // Update Create Comic function 
+
 function changeDisplay(id) {
     var input = document.querySelector("#" + id);
     var inputSection = document.querySelector("#" + id + "-input");
@@ -35,6 +36,10 @@ function displaySummary() {
     document.getElementById("summary-section").style.display = "block";
 }
 
+// Light mode function 
+
+
+
 // Hero slider function 
 let currentHeroIndex = 0;
 const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
@@ -55,3 +60,8 @@ function updateHeroSlider() {
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
+// Captcha Function
+
+
+
+// Function to logout and clear local storage

@@ -319,7 +319,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Dark Mode Styles */
+/* Light Mode Styles */
 body.dark-mode {
   background: linear-gradient(to right, #d2cfcf, #bcb7bc);
   color: #ffffff;
