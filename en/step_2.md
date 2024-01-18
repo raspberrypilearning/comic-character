@@ -1,27 +1,21 @@
-## Add form input fields/ more images to hero div 
+## Create hero image slider
 
 --- code ---
 ---
-language: javascript
-filename: script.js
+language: html
+filename: index.html
 line_numbers: true
 line_number_start: 1
 line_highlights: 3
 ---
 
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="wildlife.html">Wildlife</a>
-        <a href="climate.html">Climate</a>
-      </nav>
-    </header>
+    
 
 --- /code ---
 
 ## Add a Hero slider - Might be better after functions
 
-#### HTML
+#### HTML index.html
 <main>
 
             <div class="hero-container">
@@ -36,7 +30,7 @@ line_highlights: 3
         </main>
 
 
-#### HTML comicbook
+#### HTML comicbook.html
 Add to main
 <section>
             <div class="character-sheet">

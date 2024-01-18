@@ -8,10 +8,11 @@ copyedit: false
 last_tested: '2021-03-26'
 steps:
 - title: Introduction
-- title: Add image slider/Form elements
-- title: Footer (DOM manipulation)/Event Handling/Functions/Logic
-- title: Light Mode/Local Storage
-- title: Captcha
+- title: Create hero image slider
+- title: Add Form/Input elements
+- title: Show/Hide elements
+- title: Create light mode theme
+- title: Secure content
 - title: Reflection
   knowledge_quiz:
     path: quiz1
