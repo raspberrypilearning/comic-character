@@ -1,39 +1,46 @@
 ## Introduction
 
-In this project, <mark> short project description </mark>
 
-<mark>Boxout (wherever wanted/needed) </mark>
+In this project, you will combine JavaScript, HTML and CSS, to create a website where users can design their superhero character. 
+
+The website also features light and dark modes and includes a captcha for exclusive content access.
+
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Term**</span> description of term or interesting phrase.
+<span style="color: #0faeb0">**Captcha**</span> is a security tool that adds protection by checking the difference between humans and automated bots using challenges.
 </p>
 
-<mark>Objectives in language that learners will understand</mark>
-
 You will:
-Create an image slider 
-Add form elements using HTML
-Use event handlers/DOM manipulation/functions/logic
-Show/Hide elements using javascript
-Use local storage to store user preferences
-Use Captcha to protect your content
-
++ Create an image slider that navigates through images
++ Add form and input elements to create a superhero character
++ Use Javascript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
++ Use Javascript to show/hide elements on your website
++ Apply light mode/ dark mode themes to your website
++ Use local storage to store user preferences
++ Use Captcha to protect your content
 
 
 --- no-print ---
 --- task ---
+
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Description of what to do or think about when looking at the example.
+Explore the Superhero Website. 
+
++ Type in the captcha characters to access the site.
++ Once you have access, click the arrows on the home page slider to navigate through the images .
++ Toggle the light mode button to see the theme colours on the site change .
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/personalise-me-complete" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/485673032/?autostart=false" frameborder="0"></iframe>
 </div>
-</div>
+
+**TODO** Check the height of complete project and update height of embed.
+
 --- /task ---
 --- /no-print ---
 
 --- print-only ---
-![Completed project](images/showcase_static.png)
+![Completed project](images/showcase_static.png) **TODO**
 --- /print-only ---
