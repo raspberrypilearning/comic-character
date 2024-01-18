@@ -2,7 +2,7 @@
 
 --- code ---
 ---
-language: js
+language: javascript
 filename: script.js
 line_numbers: true
 line_number_start: 1
