@@ -1,7 +1,7 @@
 ## Introduction
 
 
-In this project, you will combine JavaScript, HTML and CSS, to create a website where users can design their superhero character. 
+In this project, you will combine JavaScript, HTML and CSS, to create a website where users can design their own superhero character. 
 
 The website also features light and dark modes and includes a captcha for exclusive content access.
 
