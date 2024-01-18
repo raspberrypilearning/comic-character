@@ -1,5 +1,24 @@
 ## Add form input fields/ more images to hero div 
 
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="wildlife.html">Wildlife</a>
+        <a href="climate.html">Climate</a>
+      </nav>
+    </header>
+
+--- /code ---
+
 ## Add a Hero slider - Might be better after functions
 
 #### HTML
