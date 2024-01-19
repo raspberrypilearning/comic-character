@@ -1,5 +1,57 @@
 ## Create hero image slider
 
+
+Create an interactive hero slider for your webpage, so users can navigate through different hero images with next and previous buttons.
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/personalise-me-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+--- task ---
+
+Open the [Personalise me starter project](https://staging-editor.raspberrypi.org/en/projects/personalise-me-starter){:target="_blank"}.
+
+--- /task ---
+
+Your starter project contains:
++ two HTML pages with some content
++ a CSS file that contains styling for some of the content
++ the images you will use in the project
++ a JavaScript file to make your website interactive and engaging
+
+### Add more images to the hero image container
+
+This project already contains a navbar and a hero image. 
+
+You will add more images to the hero section and make it interactive using javascript.
+
+--- task ---
+
+Open index.html.
+
+Find the <main> tag. Inside the `hero-slider` container, add two more slides, each containing an image of a superhero. 
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 20
+line_highlights: 24-25
+---
+
+      <main>
+        <section class="hero-container">
+          <div class="hero-slider">
+            <span class="hero-slide"><img src="stacey_hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina_hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton_hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+          </div>
+
+--- /code ---
+
+--- /task ---
+
+Notice that the classes for each contianer have already been provided.
+
+
 --- code ---
 ---
 language: html
