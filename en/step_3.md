@@ -1,5 +1,8 @@
 ## Add form input fields
 
+Create an interactive hero slider for your webpage, so users can navigate through different hero images with next and previous buttons.
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
 --- code ---
 ---
 language: html
