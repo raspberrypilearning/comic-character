@@ -2,11 +2,11 @@
 
 
 Create an interactive hero slider for your webpage, so users can navigate through different hero images with next and previous buttons.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/personalise-me-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 --- task ---
 
-Open the [Personalise me starter project](https://staging-editor.raspberrypi.org/en/projects/personalise-me-starter){:target="_blank"}.
+Open the [Personalise me starter project](https://staging-editor.raspberrypi.org/en/projects/comic-character-starter).
 
 --- /task ---
 

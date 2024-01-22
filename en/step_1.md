@@ -32,7 +32,7 @@ Explore the Superhero Website.
 + Once you have access, click the arrows on the home page slider to navigate through the images .
 + Toggle the light mode button to see the theme colours on the site change .
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/personalise-me-complete" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
 </div>
 
