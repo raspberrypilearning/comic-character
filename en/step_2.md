@@ -22,6 +22,22 @@ This project already contains a navbar and a hero image.
 
 You will add more images to the hero section and make it interactive using javascript.
 
+--- collapse ---
+
+---
+title: How does Javascript make websites interactive?
+---
+
+Javascript is a powerful language that provides tools to allow developers create interactive websites by controlling the webpage content and behaviour. In this project we will focus on the following tools:
++ DOM Manipulation
++ Event Handling
++ User input validation
++ Animations & Transitions
++ Local storage
+
+
+--- /collapse ---
+
 --- task ---
 
 Open index.html.
@@ -51,13 +67,11 @@ line_highlights: 24-25
 
 Notice that the classes to style the slider have already been provided.
 
-Include navigation buttons (prev and next) to allow users to navigate through the hero slides.
+Include nav buttons (prev and next) to allow users to navigate through the hero slides.
 
 --- task ---
 
-Open index.html.
-
-Find the <main> tag. Inside the div with the class `hero-slider`, add two more slides, each containing an image of a superhero. 
+Add the classes for the buttons inside the `hero-container`.
 
 --- code ---
 ---
@@ -83,124 +97,235 @@ line_highlights: 27-28
 
 --- /task ---
 
-## Add a Hero slider - Might be better after functions
-
-#### HTML index.html
-<main>
-
-            <div class="hero-container">
-                <div class="hero-slider">
-                    <div class="hero-slide"><img src="stacey_hero.jpg" alt="Slide 1"></div>
-                    <div class="hero-slide"><img src="safina_hero.jpg" alt="Slide 2"></div>
-                    <div class="hero-slide"><img src="layton_hero.jpg" alt="Slide 3"></div>
-                </div>
-                <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
-                <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
-            </div>
-        </main>
-
-
-#### HTML comicbook.html
-Add to main
-<section>
-            <div class="character-sheet">
-                <div class="name-section">
-                <div id="name-input">
-                    <label>Superhero Name:</label>
-                    <input type="text" id="name">
-                    <button onclick="changeDisplay('name')">Submit</button>
-                </div>
-                <div id="name-display">
-                    <h2>Superhero Name:</h2>
-                    <span id="name-span"></span>
-                </div>
-            </div>
-            <div class="class-section">
-                <div id="class-input">
-                    <label>Abilities:</label>
-                    <select id="class">
-                        <option value="Flight">Flying</option>
-                        <option value="XXL Strength">XXL Strength</option>
-                        <option value="Fire">Fire</option>
-                        <option value="Ice">Ice</option>
-                        <option value="Laser Rays">Laser Rays</option>
-                        <option value="Telepathy">Telepathy</option>
-                        <option value="Visions">Visions</option>
-                        <option value="Stretch">Stretch</option>
-                        <option value="Invisibility">Invisibility</option>
-                        <option value="Shapeshift">Shapeshift</option>
-                        <option value="Super speed">Speedstar</option>
-                        <option value="Magic">Magic</option>
-                        <option value="Time hop">Time travel</option>
-                    </select>
-                    <button onclick="changeDisplay('class')">Submit</button>
-                </div>
-                <div id="class-display">
-                    <h2>Abilities:</h2>
-                    <span id="class-span"></span>
-                </div>
-            </div>
-            <div class="description-section">
-                <div id="description-input">
-                    <label>Appearance: </label> 
-                    <textarea id="description">Type the appearance of your comic character here....</textarea>
-                    <button onclick="changeDisplay('description')">Submit</button>
-                </div>
-                <div id="description-display">
-                    <h2>Appearance:</h2>
-                    <span id="description-span"></span>
-                </div>
-            </div>
-            <div class="origin-section">
-                <div id="origin-input">
-                    <label>Origin Story: </label> 
-                    <textarea id="origin">Type your origin story here....</textarea>
-                    <button onclick="changeDisplay('origin')">Submit</button>
-                </div>
-                <div id="origin-display">
-                    <h2>Origin Story:</h2>
-                    <span id="origin-span"></span>
-                </div>
-            </div>
-        </section>
-        <section id="summary-section">
-            <h2>Superhero Summary</h2>
-            <p id="summary-paragraph"></p>
-        </section>
-
-
-~~~
-
-~~~
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
-</div>
-<div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
-</div>
-</div>
+### Control the Nav buttons
 
 --- task ---
 
-Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scratch will open in another browser tab.
 
-[[[working-offline]]]
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 2
+line_highlights: 2
+---
+      let currentHeroIndex = 0;
+      
+--- /code ---
 
 --- /task ---
 
 --- task ---
 
-Step content... 
-Can use:
-**Test:**
-**Choose:**
-**Tip:**
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 2
+line_highlights: 3
+---
+      let currentHeroIndex = 0;
+      const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+      
+--- /code ---
 
 --- /task ---
 
---- save ---
+--- task ---
 
-### Code to add
 
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 5
+line_highlights: 5-8
+---
+      function nextHero() {
+    
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 5
+line_highlights: 6-7
+---
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+        
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 5
+line_highlights: 6-7
+---
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+        updateHeroSlider();
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 5
+line_highlights: 6-7
+---
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+        updateHeroSlider();
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 9
+line_highlights: 10-13
+---
+      // Place Hero slider previous button function here 
+      function prevHero() {
+        currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+        updateHeroSlider();
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 15
+line_highlights: 15-19
+---
+      function updateHeroSlider() {
+       
+
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 15
+line_highlights: 16
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 15
+line_highlights: 17
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: index.html
+line_numbers: true
+line_number_start: 15
+line_highlights: 17
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+      }
+      
+--- /code ---
+
+--- /task ---

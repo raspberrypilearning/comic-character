@@ -1,3 +1,23 @@
+// Place Hero slider variables here 
+let currentHeroIndex = 0;
+const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+// Place Hero slider next button function here 
+function nextHero() {
+    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+    updateHeroSlider();
+}
+// Place Hero slider previous button function here 
+function prevHero() {
+    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+    updateHeroSlider();
+}
+// Place Update Slider function here 
+function updateHeroSlider() {
+    const heroSlider = document.querySelector('.hero-slider');
+    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+}
+
 // Update Copyright Year function 
 const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
@@ -57,24 +77,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     });
   });
-
-// Hero slider function 
-let currentHeroIndex = 0;
-const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
-
-function nextHero() {
-    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-    updateHeroSlider();
-}
-
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-    updateHeroSlider();
-}
-
-function updateHeroSlider() {
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
 
