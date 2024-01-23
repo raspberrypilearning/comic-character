@@ -106,7 +106,7 @@ line_highlights: 27-28
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 2
 line_highlights: 2
@@ -124,7 +124,7 @@ line_highlights: 2
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 2
 line_highlights: 3
@@ -143,7 +143,7 @@ line_highlights: 3
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 5-8
@@ -164,7 +164,7 @@ line_highlights: 5-8
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
@@ -185,7 +185,7 @@ line_highlights: 6-7
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
@@ -206,7 +206,7 @@ line_highlights: 6-7
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
@@ -227,7 +227,7 @@ line_highlights: 6-7
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 9
 line_highlights: 10-13
@@ -249,7 +249,7 @@ line_highlights: 10-13
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 15
 line_highlights: 15-19
@@ -271,7 +271,7 @@ line_highlights: 15-19
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 15
 line_highlights: 16
@@ -293,7 +293,7 @@ line_highlights: 16
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 15
 line_highlights: 17
@@ -315,7 +315,7 @@ line_highlights: 17
 --- code ---
 ---
 language: js
-filename: index.html
+filename: script.js
 line_numbers: true
 line_number_start: 15
 line_highlights: 17
