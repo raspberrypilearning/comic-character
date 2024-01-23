@@ -6,7 +6,7 @@ Create an interactive hero slider for your webpage, so users can navigate throug
 
 --- task ---
 
-Open the [Personalise me starter project](https://staging-editor.raspberrypi.org/en/projects/comic-character-starter).
+Open the [Comic Character starter project](https://staging-editor.raspberrypi.org/en/projects/comic-character-starter).
 
 --- /task ---
 
@@ -26,7 +26,7 @@ You will add more images to the hero section and make it interactive using javas
 
 Open index.html.
 
-Find the <main> tag. Inside the `hero-slider` container, add two more slides, each containing an image of a superhero. 
+Find the <main> tag. Inside the div with the class `hero-slider`, add two more slides, each containing an image of a superhero. 
 
 --- code ---
 ---
@@ -49,21 +49,39 @@ line_highlights: 24-25
 
 --- /task ---
 
-Notice that the classes for each contianer have already been provided.
+Notice that the classes to style the slider have already been provided.
 
+Include navigation buttons (prev and next) to allow users to navigate through the hero slides.
+
+--- task ---
+
+Open index.html.
+
+Find the <main> tag. Inside the div with the class `hero-slider`, add two more slides, each containing an image of a superhero. 
 
 --- code ---
 ---
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 1
-line_highlights: 3
+line_number_start: 20
+line_highlights: 27-28
 ---
 
-    
+      <main>
+        <section class="hero-container">
+          <div class="hero-slider">
+            <span class="hero-slide"><img src="stacey_hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina_hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton_hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+          </div>
+          <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
+          <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
+        </section>
 
 --- /code ---
+
+--- /task ---
 
 ## Add a Hero slider - Might be better after functions
 
