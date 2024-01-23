@@ -318,7 +318,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 15
-line_highlights: 17
+line_highlights: 18
 ---
       function updateHeroSlider() {
         const heroSlider = document.querySelector('.hero-slider');
@@ -327,5 +327,30 @@ line_highlights: 17
       }
       
 --- /code ---
+
+--- /task ---
+
+--- task ---
+
+Open `index.html`.
+
+Add the **javascript** file to your page. 
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+
+--- /code ---
+
+
+**Click the Run button** to see your changes.
 
 --- /task ---
