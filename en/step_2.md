@@ -20,7 +20,9 @@ Your starter project contains:
 
 This project already contains a navbar and a hero image. 
 
-You will add more images to the hero section and make it interactive using javascript.
+You will add more images to the hero section to create a series of slides.
+
+Each slide will contain a different superhero image and you will make it interactive using Javascript.
 
 --- collapse ---
 
@@ -42,7 +44,7 @@ Javascript is a powerful language that provides tools to allow developers create
 
 Open index.html.
 
-Find the <main> tag. Inside the div with the class `hero-slider`, add two more slides, each containing an image of a superhero. 
+Find the <main> tag. Inside the div with the class `hero-slider`, add two more span elements, each containing an image of a superhero. 
 
 --- code ---
 ---
@@ -67,11 +69,11 @@ line_highlights: 24-25
 
 Notice that the classes to style the slider have already been provided.
 
-Include nav buttons (prev and next) to allow users to navigate through the hero slides.
+To navigate through the slides, include navigation buttons inside the `hero-container`.
 
 --- task ---
 
-Add the classes for the buttons inside the `hero-container`.
+Add the classes for the buttons inside the `hero-container`. One for the previous slide and one for the next slide.
 
 --- code ---
 ---
@@ -95,13 +97,21 @@ line_highlights: 27-28
 
 --- /code ---
 
+**Click the Run button** to see your changes.
+
+The buttons will show on your hero slide but there will be no functionality when you click them.
+
 --- /task ---
 
-### Control the Nav buttons
+### Control the Slider buttons
+
+You will use Javascript to control the nav buttons to witch between slides.
 
 --- task ---
 
+Open `script.js`
 
+Create a variable to store and keep track of the current slide index.
 
 --- code ---
 ---
@@ -117,9 +127,39 @@ line_highlights: 2
 
 --- /task ---
 
+--- collapse ---
+
+---
+title: What is a variable and what is index?
+---
+
+A variable in programming is a named storage that holds a value. The value can be changed when the program runs.
+For example, `let age = 30;` `age` is the variable storing the value `30`
+
+An index in programming is the position of an element within a list(array). 
+Usually indexing starts at 0; 
+For example when given a list `["Fruits", "Clothes", "Toys"]`, "Fruits" is at index 0.
+
+--- /collapse ---
+
+You will need to define the length of the total number of slides using the Document Object Model (DOM).
+
+The DOM uses a method called querySelectorAll which can find all the CSS selectors of an element.
+
+--- collapse ---
+
+---
+title: What does the Doccument Object Model do exactly?
+---
+
+
+
+--- /collapse ---
+
+
 --- task ---
 
-
+Add a constant to store the length of the total slides in the list of slides.
 
 --- code ---
 ---
@@ -138,7 +178,7 @@ line_highlights: 3
 
 --- task ---
 
-
+Create a function to navigate to the next slide.
 
 --- code ---
 ---
@@ -146,8 +186,9 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 5
-line_highlights: 5-8
+line_highlights: 4-8
 ---
+      // Place Hero slider previous button function here 
       function nextHero() {
     
 
@@ -159,16 +200,21 @@ line_highlights: 5-8
 
 --- task ---
 
+Update the current slide index by counting up by 1.
 
+You also have to check if there are any remaining slides to show, using the modulus operator.
+
+If there are no remainder slides, the `currentHeroIndex`will be set back to 0.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
+line_number_start: 4
 line_highlights: 6-7
 ---
+      // Place Hero slider previous button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
         
@@ -180,7 +226,7 @@ line_highlights: 6-7
 
 --- task ---
 
-
+Add another function `updateHer`slider inside the `nextHero` function. You will create this later.
 
 --- code ---
 ---
@@ -190,6 +236,7 @@ line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
 ---
+      // Place Hero slider previous button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
         updateHeroSlider();
@@ -211,6 +258,7 @@ line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
 ---
+      // Place Hero slider previous button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
         updateHeroSlider();
