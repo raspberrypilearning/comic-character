@@ -101,6 +101,9 @@ line_highlights: 27-28
 
 The buttons will show on your hero slide but there will be no functionality when you click them.
 
+**TODO** Create Debug Step
+**TODO** Create image to show prev and next buttons showing 
+
 --- /task ---
 
 ### Control the Slider buttons
@@ -161,6 +164,16 @@ title: What does the Doccument Object Model do exactly?
 
 Add a constant to store the length of the total slides in the list of slides.
 
+--- collapse ---
+
+---
+title: What is a constant?
+---
+
+
+
+--- /collapse ---
+
 --- code ---
 ---
 language: js
@@ -178,7 +191,7 @@ line_highlights: 3
 
 --- task ---
 
-Create a function to navigate to the next slide.
+Create a function to navigate to the next slide when users click the `>` button.
 
 --- code ---
 ---
@@ -198,9 +211,22 @@ line_highlights: 4-8
 
 --- /task ---
 
+--- collapse ---
+
+---
+title: What is a function and how are they used in Javascript?
+---
+
+
+
+--- /collapse ---
+
+
 --- task ---
 
-Update the current slide index by counting up by 1.
+--- task ---
+
+Update the next slide index by counting up by 1 (+1).
 
 You also have to check if there are any remaining slides to show, using the modulus operator.
 
@@ -224,9 +250,22 @@ line_highlights: 6-7
 
 --- /task ---
 
+--- collapse ---
+
+---
+title: Using operators in Javascript
+---
+
+
+
+--- /collapse ---
+
+
 --- task ---
 
-Add another function `updateHer`slider inside the `nextHero` function. You will create this later.
+--- task ---
+
+Add another function `updateHero`slider inside the `nextHero` function. You will create this function later.
 
 --- code ---
 ---
@@ -234,7 +273,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 5
-line_highlights: 6-7
+line_highlights: 8
 ---
       // Place Hero slider previous button function here 
       function nextHero() {
@@ -248,29 +287,9 @@ line_highlights: 6-7
 
 --- task ---
 
+Create another function `prevHero` to control the `<` nav button.
 
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
----
-      // Place Hero slider previous button function here 
-      function nextHero() {
-        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        updateHeroSlider();
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-
+This will allow users go back to the previous slide.
 
 --- code ---
 ---
@@ -282,8 +301,8 @@ line_highlights: 10-13
 ---
       // Place Hero slider previous button function here 
       function prevHero() {
-        currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-        updateHeroSlider();
+        
+
       }
       
 --- /code ---
@@ -292,16 +311,44 @@ line_highlights: 10-13
 
 --- task ---
 
+Calculate the preious index by counting down by 1 (-1).
 
+You will also ensure the index never falls below zero by adding the total number of slides.
+
+Once again, use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
+line_number_start: 9
+line_highlights: 11-12
+---
+      // Place Hero slider previous button function here 
+      function prevHero() {
+        currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+        updateHeroSlider();
+      }
+      
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+Create another function `updateHeroSlider` which you have called inside previous functions.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
 line_highlights: 15-19
 ---
+      // Place Update Slider function here 
       function updateHeroSlider() {
        
 
@@ -314,7 +361,9 @@ line_highlights: 15-19
 
 --- task ---
 
+Add a DOM method to return the `hero-slider` class using the querySelector.
 
+Save the method call into a constant.
 
 --- code ---
 ---
@@ -336,7 +385,9 @@ line_highlights: 16
 
 --- task ---
 
+Calcuilate the width of a single slide using the `offsetWidth` property.
 
+This will return the viewable width of the slider element.
 
 --- code ---
 ---
@@ -400,5 +451,7 @@ line_highlights:
 
 
 **Click the Run button** to see your changes.
+
+**TODO** Create Debug Step
 
 --- /task ---

@@ -181,10 +181,11 @@ button:hover {
 .hero-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .hero-slide {
-    min-width: 100%;
+    width: 100%;
     box-sizing: border-box;
 }
 
