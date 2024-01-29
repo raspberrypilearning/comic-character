@@ -3,6 +3,367 @@
 In this step, you will add a Captcha feature to protect your content. Your users will need to enter the right code to gain access. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
+#### Add captcha to your website
+
+--- task ---
+
+Open index.html.
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 13-17
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Open index.html.
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 17-21
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+        <span id="user-input" class="inline">
+          <input type="text"
+            id="submit"
+            placeholder=" Enter Captcha code" />
+        </span>
+        <span class="inline" onclick="generate()">
+            <i class="fas fa-sync"></i>
+        </span>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 17-21
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+        <span id="user-input" class="inline">
+          <input type="text"
+            id="submit"
+            placeholder=" Enter Captcha code" />
+        </span>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+        <span id="user-input" class="inline">
+          <input type="text"
+            id="submit"
+            placeholder=" Enter Captcha code" />
+        </span>
+        <span id="image"
+             class="inline"
+             selectable="False">
+        </span>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+        <span id="user-input" class="inline">
+          <input type="text" id="submit" placeholder=" Enter Captcha code" />
+        </span>
+        <span id="image" class="inline" selectable="False"> </span>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+      <section id="captchaSection" class="center-container" onload="generate()">
+        <h1>Login</h1>
+        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
+        </p>
+        <span id="user-input" class="inline">
+          <input type="text" id="submit" placeholder=" Enter Captcha code" />
+        </span>
+        <span id="image" class="inline" selectable="False"> </span>
+        <input type="Submit" id="btn" onclick="printmsg()" />
+        <p id="key"></p>
+      </section>
+
+--- /code ---
+
+--- /task ---
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="successfulLogin" style="display: none;">
+        <header class="header">
+            <a href="index.html" class="logo">Pi Comics</a>
+            <nav class="navbar" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="comicbook.html">CREATE COMIC</a>
+            </nav>
+
+--- /code ---
+
+--- /task ---
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="logoutIcon" onclick="logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 68-69
+---
+    // Captcha Function
+    let captcha;
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if the user has already successfully logged in during this session
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn === 'true') {
+        // If already logged in, hide the captcha section and show the successful login section
+        document.getElementById("captchaSection").style.display = 'none';
+        document.getElementById("successfulLogin").style.display = 'block';
+    } else {
+        // If not logged in, show the captcha section
+        document.getElementById("captchaSection").style.display = 'block';
+        document.getElementById("successfulLogin").style.display = 'none';
+
+        // Call generate function to load captcha
+        generate();
+    }
+});
+  
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 68-69
+---
+    // Captcha Function
+   function generate() {
+    // Clear old input
+    document.getElementById("submit").value = "";
+
+    // Access the element to store the generated captcha
+    captcha = document.getElementById("image");
+    let uniquechar = "";
+
+    const randomchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    // Generate captcha for length of 5 with random character
+    for (let i = 0; i < 5; i++) {
+        uniquechar += randomchar.charAt(
+            Math.random() * randomchar.length
+        );
+    }
+
+    // Store generated input
+    captcha.innerHTML = uniquechar;
+}
+  
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 68-69
+---
+    // Captcha Function
+   
+function printmsg() {
+    const usr_input = document.getElementById("submit").value;
+
+    // Check whether the input is equal to the generated captcha or not
+    if (usr_input == captcha.innerHTML) {
+        document.getElementById("key").innerHTML = "Matched";
+        // Store the successful login state in local storage
+        localStorage.setItem('isLoggedIn', 'true');
+        document.getElementById("captchaSection").style.display = 'none';
+        document.getElementById("successfulLogin").style.display = 'block';
+        generate();
+    } else {
+        document.getElementById("key").innerHTML = "not Matched";
+        generate();
+    }
+}
+  
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 68-69
+---
+    // Captcha Function
+   
+// Function to logout and clear local storage
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    document.getElementById("captchaSection").style.display = 'block';
+    document.getElementById("successfulLogin").style.display = 'none';
+    generate();
+}
+  
+--- /code ---
+
+--- /task ---
 
 ### Code to Add
 
