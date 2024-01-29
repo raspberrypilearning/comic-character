@@ -69,7 +69,7 @@ line_highlights: 24-25
 
 Notice that the classes to style the slider have already been provided.
 
-To navigate through the slides, include navigation buttons inside the `hero-container`.
+To navigate through the slides, add navigation buttons inside the `hero-container`.
 
 --- task ---
 
@@ -108,7 +108,9 @@ The buttons will show on your hero slide but there will be no functionality when
 
 ### Control the Slider buttons
 
-You will use Javascript to control the nav buttons to witch between slides.
+You will use Javascript to control the nav buttons to switch between slides.
+
+**TODO** Add explanation about how the slide works
 
 --- task ---
 
@@ -405,7 +407,9 @@ line_highlights: 17
 
 --- task ---
 
+Use the CSS transform property to move the `heroSlider` element so it is shown horizontally on the screen.
 
+The `translateX` function will also check the index of the current image and multiply it by the current slide width.
 
 --- code ---
 ---
