@@ -224,8 +224,6 @@ title: What is a function and how are they used in Javascript?
 
 --- task ---
 
---- task ---
-
 Update the next slide index by counting up by 1 (+1).
 
 You also have to check if there are any remaining slides to show, using the modulus operator.
@@ -260,8 +258,6 @@ title: Using operators in Javascript
 
 --- /collapse ---
 
-
---- task ---
 
 --- task ---
 
