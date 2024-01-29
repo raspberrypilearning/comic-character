@@ -19,18 +19,6 @@ line_highlights: 3
 ## Add a Hero slider - Might be better after functions
 
 #### HTML index.html
-<main>
-
-            <div class="hero-container">
-                <div class="hero-slider">
-                    <div class="hero-slide"><img src="stacey_hero.jpg" alt="Slide 1"></div>
-                    <div class="hero-slide"><img src="safina_hero.jpg" alt="Slide 2"></div>
-                    <div class="hero-slide"><img src="layton_hero.jpg" alt="Slide 3"></div>
-                </div>
-                <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
-                <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
-            </div>
-        </main>
 
 
 #### HTML comicbook.html
@@ -102,6 +90,38 @@ Add to main
         </section>
 
 
+#### Javascript
+// Update Create Comic Display function 
+function changeDisplay(id) {
+    var input = document.querySelector("#" + id);
+    var inputSection = document.querySelector("#" + id + "-input");
+    var displaySection = document.querySelector("#" + id + "-display");
+    var valueDisplay = document.querySelector("#" + id + "-span");
+
+    valueDisplay.textContent = input.value;
+    inputSection.style.display = "none";
+    displaySection.style.display = "flex";
+
+    // Check if all changeDisplay actions are completed
+    if (id === "origin") {
+        displaySummary(); // Call displaySummary after all changeDisplay actions
+    }
+}
+// Function to display summary
+function displaySummary() {
+    var summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+    var abilities = document.getElementById("class-span").textContent;
+    var appearance = document.getElementById("description-span").textContent;
+    var origin = document.getElementById("origin-span").textContent;
+
+    summaryParagraph.textContent = `Your superhero name is ${name}. 
+    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    Your origin story is ${origin}.`;
+
+    document.getElementById("summary-section").style.display = "block";
+}
 ~~~
 
 ~~~
