@@ -1,19 +1,28 @@
 ## What next?
 
-If you are following the [PathName](https://projects.raspberrypi.org/en/raspberrypi/path-name) path, you can move on to the [ProjectName](https://projects.raspberrypi.org/en/projects/project-name) project. In this project, you will make a (add description here).
+If you are following the [More Web](https://projects.raspberrypi.org/en/pathways/more-web) path, you can move on to the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project. In this project, make an interactive story with features that are triggered when the user scrolls. 
 
 --- print-only ---
 
-![ProjectName project](images/projectname-project.png)
+![The finished Animated story project](images/animated-story.png) **TODO** 
 
 --- /print-only ---
 
 --- no-print ---
 
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/486719199/?autostart=false" frameborder="0"></iframe>
+### Try it
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 175px; flex-grow: 1">  
+Explore the Animated Story. 
+
++ Scroll down on the page to watch the images load
++ Click on the links on the navbar at the side to see the different pages
++ Scroll down the page to see the different interactive features.
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/animated-story-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+</div>
 </div>
 
---- /no-print ---
+--- /task ---
 
-If you want to have more fun exploring Scratch, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=scratch&curriculum%5B%5D=%201).
+--- /no-print ---

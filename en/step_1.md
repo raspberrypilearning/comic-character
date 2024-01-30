@@ -1,7 +1,7 @@
 ## Introduction
 
 
-In this project, you will combine JavaScript, HTML and CSS, to create a website where users can design their own superhero character. 
+In this project, you will combine JavaScript, HTML and CSS, to create a website where your users can design their own superhero character. 
 
 The website also features light and dark modes and includes a captcha for exclusive content access.
 
@@ -30,7 +30,8 @@ Explore the Superhero Website.
 
 + Type in the captcha characters to access the site.
 + Once you have access, click the arrows on the home page slider to navigate through the images .
-+ Toggle the light mode button to see the theme colours on the site change .
++ Toggle the light mode button to see the theme colours on the site change.
++ Navigate to the Comic book page, complete the input fields to create your own superhero chcracter.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
