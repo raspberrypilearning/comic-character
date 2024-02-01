@@ -169,7 +169,7 @@ title: What are the form inputs in HTML?
 
 --- task ---
 
-Add a text <input> field for adding the superhero's name.
+Add a text `<input>` field for adding the superhero's name.
 
 --- code ---
 ---
@@ -379,6 +379,10 @@ line_highlights: 47-50
     
 --- /code ---
 
+**Click the Run button** to see your changes.
+
+**TODO** Create Debug Step
+
 --- /task ---
 
 ### Design the Superhero appearance section 
@@ -407,6 +411,8 @@ line_highlights: 51-58
       </div>
     
 --- /code ---
+
+**Click the Run button** to see your changes.
 
 --- /task ---
 
@@ -437,6 +443,8 @@ line_highlights: 57-60
     
 --- /code ---
 
+**Click the Run button** to see your changes.
+
 --- /task ---
 
 ### Design the Superhero origin story section 
@@ -465,6 +473,8 @@ line_highlights: 62-68
       </div>
     
 --- /code ---
+
+**Click the Run button** to see your changes.
 
 --- /task ---
 
@@ -495,12 +505,15 @@ line_highlights: 68-71
     
 --- /code ---
 
+**Click the Run button** to see your changes.
+
 --- /task ---
 
 ### Show your user their Superhero character story 
 
 --- task ---
 
+Add a section for displaying the superhero summary.
 
 --- code ---
 ---
@@ -517,6 +530,8 @@ line_highlights: 24-25
         </section>
     
 --- /code ---
+
+**Click the Run button** to see your changes.
 
 --- /task ---
 

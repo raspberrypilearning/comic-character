@@ -44,7 +44,7 @@ JavaScript is a powerful language that provides tools to allow developers create
 
 Open the index.html file.
 
-Find the <main> tag. Inside the div with the class `hero-slider`, add two more span elements, each containing an image of a superhero. 
+Find the `<main>` tag. Inside the div with the class `hero-slider`, add two more span elements, each containing an image of a superhero. 
 
 --- code ---
 ---
@@ -114,7 +114,7 @@ You will use JavaScript to control the nav buttons to switch between slides.
 
 --- task ---
 
-Open `script.js`
+Open the `script.js`file.
 
 Create a variable to store and keep track of the current slide index.
 
