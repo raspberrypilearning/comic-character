@@ -497,6 +497,8 @@ line_highlights: 68-71
 
 --- /task ---
 
+### Show your user their Superhero character story 
+
 --- task ---
 
 
