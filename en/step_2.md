@@ -22,15 +22,15 @@ This project already contains a navbar and a hero image.
 
 You will add more images to the hero section to create a series of slides.
 
-Each slide will contain a different superhero image and you will make it interactive using Javascript.
+Each slide will contain a different superhero image and you will make it interactive using JavaScript.
 
 --- collapse ---
 
 ---
-title: How does Javascript make websites interactive?
+title: How does JavaScript make websites interactive?
 ---
 
-Javascript is a powerful language that provides tools to allow developers create interactive websites by controlling the webpage content and behaviour. In this project we will focus on the following tools:
+JavaScript is a powerful language that provides tools to allow developers create interactive websites by controlling the webpage content and behaviour. In this project we will focus on the following tools:
 + DOM Manipulation
 + Event Handling
 + User input validation
@@ -42,7 +42,7 @@ Javascript is a powerful language that provides tools to allow developers create
 
 --- task ---
 
-Open index.html.
+Open the index.html file.
 
 Find the <main> tag. Inside the div with the class `hero-slider`, add two more span elements, each containing an image of a superhero. 
 
@@ -108,7 +108,7 @@ The buttons will show on your hero slide but there will be no functionality when
 
 ### Control the Slider buttons
 
-You will use Javascript to control the nav buttons to switch between slides.
+You will use JavaScript to control the nav buttons to switch between slides.
 
 **TODO** Add explanation about how the slide works
 
@@ -216,7 +216,7 @@ line_highlights: 4-8
 --- collapse ---
 
 ---
-title: What is a function and how are they used in Javascript?
+title: What is a function and how are they used in JavaScript?
 ---
 
 
@@ -253,7 +253,7 @@ line_highlights: 6-7
 --- collapse ---
 
 ---
-title: Using operators in Javascript
+title: Using operators in JavaScript
 ---
 
 
@@ -276,7 +276,7 @@ line_highlights: 8
       // Place Hero slider previous button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        updateHeroSlider();
+        
       }
       
 --- /code ---
@@ -326,7 +326,7 @@ line_highlights: 11-12
       // Place Hero slider previous button function here 
       function prevHero() {
         currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-        updateHeroSlider();
+        
       }
       
 --- /code ---
@@ -336,7 +336,7 @@ line_highlights: 11-12
 
 --- task ---
 
-Create another function `updateHeroSlider` which you have called inside previous functions.
+Create another function `updateHeroSlider` which .
 
 --- code ---
 ---
@@ -423,6 +423,54 @@ line_highlights: 18
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
         heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Add another function `updateHero`slider inside the `nextHero` function. 
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 5
+line_highlights: 8
+---
+      // Place Hero slider previous button function here 
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+        updateHeroSlider();
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Calculate the preious index by counting down by 1 (-1).
+
+You will also ensure the index never falls below zero by adding the total number of slides.
+
+Once again, use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-12
+---
+      // Place Hero slider previous button function here 
+      function prevHero() {
+        currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+        updateHeroSlider();
       }
       
 --- /code ---

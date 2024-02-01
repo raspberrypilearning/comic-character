@@ -1,15 +1,16 @@
 ## Create light mode theme
 
-Add a toggle feature that will allow your users switch between dark mode and light mode themes. 
+In this step, you will create a toggle switch that will allow your users switch between dark mode and light mode themes. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 #### Add toggle to the header section
+
 
 --- task ---
 
 Open index.html.
 
-
+Create a div element inside the header section and give it a class `toggle-container`
 
 --- code ---
 ---
@@ -30,11 +31,11 @@ line_highlights: 19-25
 
 --- /task ---
 
+The toggle switch is made up of three elements, <label>, <input>, and <span>.
+
 --- task ---
 
-Open index.html.
-
-
+Add a <label> element with a class "switch".
 
 --- code ---
 ---
@@ -58,9 +59,9 @@ line_highlights: 20, 23
 
 --- task ---
 
-Open index.html.
+Add the input element that your users will click to toggle between dark mode and light mode.
 
-
+The input type of `checkbox` and an id of `darkModeToggle`.
 
 --- code ---
 ---
@@ -85,9 +86,7 @@ line_highlights: 21
 
 --- task ---
 
-Open index.html.
-
-
+Add the <span> element with the class "slider".
 
 --- code ---
 ---
@@ -112,9 +111,7 @@ line_highlights: 22
 
 --- task ---
 
-Open index.html.
-
-
+Below the <label> element, add a final <span> with the classes "toggle-label" and "material-symbols-outlined" and the text light_mode.
 
 --- code ---
 ---
@@ -134,13 +131,23 @@ line_highlights: 24
       
 --- /code ---
 
+The toggle switch will modify your website's CSS settings by using JavaScript to add and remove classes from your main HTML element.
+
+
 --- /task ---
 
 
 #### Check the user's local storage
 
+Good Job! You've successfully added the toggle switch to the HTML document, let's give it some functionality.
+
+You will give your toggle switch functionality by using JavaScript. 
+
 --- task ---
 
+Open script.js to create the light mode function.
+
+Add an Event Listener to the HTML document. This function will check the browsers local storage and update our page to light mode from dark mode and back.
 
 --- code ---
 ---
@@ -162,7 +169,7 @@ line_highlights: 59
 
 --- task ---
 
-
+Within the function's curly brackets add a variable called darkModeToggle that stores the <input> element of our toggle switch. You can reference the <input> element through its id.
 
 --- code ---
 ---
@@ -184,7 +191,7 @@ line_highlights: 60
 
 --- task ---
 
-
+Next, check our local storage of the browser to see if the page is set to light mode or dark mode.
 
 --- code ---
 ---
@@ -209,7 +216,7 @@ line_highlights: 63
 
 --- task ---
 
-Create a function to navigate to the next slide when users click the `>` button.
+After confirming, if dark mode is already set in the local storage, we should set the page to be in dark mode. Otherwise, it will be set to light mode. And update the checked state of the darkModeToggle to match the mode preference stored in the browser local storage.
 
 --- code ---
 ---
@@ -238,7 +245,7 @@ line_highlights: 66-67
 
 --- task ---
 
-
+Add another event listener function to manage the state of the toggle swtich <input> element. It will check if it has been toggled and set it to the opposite of the current mode of the page. If it's in light mode, it will change it to dark mode. And if it's in dark mode, it will change it to light mode.
 
 --- code ---
 ---
@@ -271,7 +278,7 @@ line_highlights: 68-69
 
 --- task ---
 
-Create a function to navigate to the next slide when users click the `>` button.
+Now create the function and add a variable called isDarkMode that stores the state of the toggle switch <input> element stored earlier in the darkModeToggle variable. It will check if it has been checked or not.
 
 --- code ---
 ---
@@ -309,6 +316,7 @@ line_highlights: 73, 78
 
 --- task ---
 
+The final function to create is an if statement that takes the state of the toggle switch and changes the "dark-mode" class from the HTML document <body> element.
 
 
 --- code ---

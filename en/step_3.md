@@ -1,23 +1,56 @@
 ## Add form input fields
 
-Create an interactive hero slider for your webpage, so users can navigate through different hero images with next and previous buttons.
+In this step, you will use form input fields to design an interactive webpage where users can create their own superhero.
+
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+You have added text and images to your website to add content. 
+However, there are other types of content you could use including:
++ Videos
++ Form elements
++ Maps
++ Music
+
+Form elements in HTML allow users to input data, interact with the page, and submit information. 
+
+--- collapse ---
+
+---
+title: What are the different types of form elements?
+---
+
+Here are some useful form elements:
++ `<form>`: The overall form container.
++ `<label>`: Labels for the input fields.
++ `<input>`: Text inputs, checkboxes, radio buttons, etc.
++ `<button>`: Submit or reset buttons.
+
+### Design the Superhero name section
+
+--- /collapse ---
+
+You will use different types of form elements to allow users interact with your webpage.
+
+CSS classes have already been provided in the `styles.css` file to style your form.
 
 --- task ---
 
-Open comicbook.html.
+Open the comicbook.html file.
 
+Find the `<section` tags for the superhero character form.
+
+Add a div with the class `character-sheet` between the tags.
 
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 23
+line_highlights: 24, 26
 ---
 
-      <section>
+      <section> <!--Suoerhero character creation form-->
         <div class="character-sheet">
          
         </div>
@@ -27,27 +60,51 @@ line_highlights: 24-25
 
 --- /task ---
 
+The `character sheet` selector styles the entire form.
+
 --- task ---
 
-Open comicbook.html.
-
+Add a class `name-section` to style the superhero name fields.
 
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 23
+line_highlights: 25, 27
 ---
 
-      <section>
+      <section> <!--Suoerhero character creation form-->
+        <div class="character-sheet">
+          <div class="name-section">
+           
+         </div>
+       </div>
+      </section>
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Add an id `name-input` to style the superhero input field.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 23
+line_highlights: 26, 28
+---
+
+      <section> <!--Suoerhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
-              <label>Superhero Name:</label>
-              <input type="text" id="name">
-              <button onclick="changeDisplay('name')">Submit</button>
+              
            </div>
          </div>
        </div>
@@ -59,27 +116,185 @@ line_highlights: 24-25
 
 --- task ---
 
-Open comicbook.html.
+Add a `<label> ` element to the superhero name section.
 
+The `<label>` element is good for accessibility. 
+
+It allows screen-readers to read the label when the user clicks on the input element.
 
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 23
+line_highlights: 27
 ---
 
-      <section>
+      <section> <!--Suoerhero character creation form-->
+        <div class="character-sheet">
+          <div class="name-section">
+            <div id="name-input">
+              <label>Superhero Name:</label>
+              
+           </div>
+         </div>
+       </div>
+      </section>
+    
+--- /code ---
+
+--- /task ---
+
+The `<input>` element is the most commonly used form element because it allows users add data to a form.
+
+This can be displayed in many ways using the `type` attribute.
+
+--- collapse ---
+
+---
+title: What are the form inputs in HTML?
+---
+
++ Text Input (<input type="text">): allows users to enter a single line of text.
++ Password Input (<input type="password">): text input but hides the entered text for sensitive information.
++ Textarea (<textarea></textarea>): allows users to enter multiple lines of text.
++ Checkbox (<input type="checkbox">): allows users to select one or more options from a list.
++ Radio Button (<input type="radio">): allows users to select a single option from a list.
++ Select Dropdown (<select></select>): creates a dropdown list for users to choose one option.
++ Submit (<input type="submit">): a special button that submits the form data to the server.
++ Reset (<input type="reset">): a button that resets all form fields to their default values.
+
+--- /collapse ---
+
+--- task ---
+
+Add a text <input> field for adding the superhero's name.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 23
+line_highlights: 28
+---
+
+      <section> <!--Suoerhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
               <label>Superhero Name:</label>
               <input type="text" id="name">
+              
+           </div>
+         </div>
+       </div>
+      </section>
+    
+--- /code ---
+
+--- /task ---
+
+You can add attributes to input fields to control their behaviour and their interactions.
+
+--- task ---
+
+Add a `<submit>` button with an `onclick` attribute. 
+
+The `onlick` attribute provides interactivity using JavaScript.
+
+Leave the `onclick` action empty for now.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 23
+line_highlights: 29
+---
+
+      <section> <!--Suoerhero character creation form-->
+        <div class="character-sheet">
+          <div class="name-section">
+            <div id="name-input">
+              <label>Superhero Name:</label>
+              <input type="text" id="name">
+              <button onclick="">Submit</button>
+           </div>
+         </div>
+       </div>
+      </section>
+    
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+**TODO** Create Debug Step
+
+--- /task ---
+
+--- collapse ---
+
+---
+title: What other attributes can I use?
+---
++ type: defines the type of input field. Examples include text, password, checkbox, radio, submit, reset, etc.
+Example: `<input type="text">`
+
++ name: specifies the name of the input field, which is used when submitting the form data to the server.
+Example: `<input type="text" name="username">`
+
++ value: sets the initial or default value of the input field.
+Example: <input type="text" value="Default Text">
+
++ placeholder: provides a short hint that describes the expected value of the input field.
+Example: `<input type="text" placeholder="Enter your name">`
+
++ required: indicates that the input field must be filled out before submitting the form.
+Example: `<input type="text" required>`
+
++ maxlength: specifies the maximum number of characters allowed in a text or password input.
+Example: `<input type="text" maxlength="30">`
+
++ min and max: sets the minimum and maximum values for number or date inputs.
+Example: `<input type="number" min="0" max="100">`
+
+pattern: specifies a regular expression pattern that the input value must match.
+Example: `<input type="text" pattern="[A-Za-z]{3}">`
+
+--- /collapse ---
+
+
+### Update the Superhero name display
+
+--- task ---
+
+Add the id for styling the display name area.
+
+Add title for the display.
+
+Use a `<span>` tag to display the superhero name.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 23
+line_highlights: 31-34
+---
+
+      <section> <!--Suoerhero character creation form-->
+        <div class="character-sheet">
+          <div class="name-section"> <!--Name section-->
+            <div id="name-input">
+              <label>Superhero Name:</label>
+              <input type="text" id="name">
               <button onclick="changeDisplay('name')">Submit</button>
            </div>
-           <div id="name-display">
+           <div id="name-display"> <!--Name display-->
              <h2>Superhero Name:</h2>
              <span id="name-span"></span>
            </div>
@@ -91,36 +306,83 @@ line_highlights: 24-25
 
 --- /task ---
 
+**Click the Run button** to see your changes.
+
+**TODO** Create Debug Step
+
+### Design the Superhero ability section 
+
+You will create a select dropdown list for users to choose one option.
+
+--- task ---
+
+Add the html for creating the ability dropdown list. 
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 38
+line_highlights: 38-48
+---
+
+      <div class="class-section"> <!--Ability section-->
+        <div id="class-input">
+          <label>Abilities:</label>
+            <select id="class">
+              <option value="Flying"> Flying</option>
+              <option value="Invisibility">Invisibility</option>
+              <option value="Time travel">Time travel</option>
+            </select>
+            <button onclick="">Submit
+            </button>
+        </div>
+    
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+**TODO** Create Debug Step
+
+--- /task ---
+
+Add the html for updating the ability display area. 
+
 --- task ---
 
 
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
 ---
 
-      <div class="class-section">
-                <div id="class-input">
-                    <label>Abilities:</label>
-                    <select id="class">
-                        <option value="Flying">Flying</option>
-                        <option value="Invisibility">Invisibility</option>
-                        <option value="Time travel">Time travel</option>
-                    </select>
-                    <button onclick="changeDisplay('class')">Submit</button>
-                </div>
-               
-
-
-            </div>
+      <div class="class-section"> <!--Ability section-->
+        <div id="class-input">
+          <label>Abilities:</label>
+            <select id="class">
+              <option value="Flying"> Flying</option>
+              <option value="Invisibility">Invisibility</option>
+              <option value="Time travel">Time travel</option>
+            </select>
+            <button onclick="">Submit
+            </button>
+        </div>
+        <div id="class-display">  <!--Ability display-->
+          <h2>Abilities:</h2>
+          <span id="class-span"></span>
+          </div>
+      </div>
     
 --- /code ---
 
 --- /task ---
+
+### Design the Superhero appearance section 
 
 --- task ---
 
@@ -128,39 +390,7 @@ line_highlights: 24-25
 --- code ---
 ---
 language: html
-filename: index.html
-line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
----
-
-      <div class="class-section">
-                <div id="class-input">
-                    <label>Abilities:</label>
-                    <select id="class">
-                        <option value="Flying">Flying</option>
-                        <option value="Invisibility">Invisibility</option>
-                        <option value="Time travel">Time travel</option>
-                    </select>
-                    <button onclick="changeDisplay('class')">Submit</button>
-                </div>
-                <div id="class-display">
-                    <h2>Abilities:</h2>
-                    <span id="class-span"></span>
-                </div>
-            </div>
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-
---- code ---
----
-language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
@@ -185,7 +415,7 @@ line_highlights: 24-25
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
@@ -213,7 +443,7 @@ line_highlights: 24-25
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
@@ -237,7 +467,7 @@ line_highlights: 24-25
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
@@ -265,7 +495,7 @@ line_highlights: 24-25
 --- code ---
 ---
 language: html
-filename: index.html
+filename: comicbook.html
 line_numbers: true
 line_number_start: 20
 line_highlights: 24-25
