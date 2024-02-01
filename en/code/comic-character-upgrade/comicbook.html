@@ -17,10 +17,17 @@
             <a href="index.html">HOME</a>
             <a href="comicbook.html">CREATE COMIC</a>
         </nav>
+        <div class="toggle-container">
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label material-symbols-outlined">light_mode</span>
+          </div>  
     </header>
    
     <main>
-        <section> <!--Suoerhero character creation form-->
+        <section>
             <div class="character-sheet">
                 <div class="name-section">
                 <div id="name-input">
@@ -38,8 +45,18 @@
                     <label>Abilities:</label>
                     <select id="class">
                         <option value="Flight">Flying</option>
+                        <option value="XXL Strength">XXL Strength</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Ice">Ice</option>
+                        <option value="Laser Rays">Laser Rays</option>
+                        <option value="Telepathy">Telepathy</option>
+                        <option value="Visions">Visions</option>
+                        <option value="Stretch">Stretch</option>
                         <option value="Invisibility">Invisibility</option>
-                        <option value="Time travel">Time travel</option>
+                        <option value="Shapeshift">Shapeshift</option>
+                        <option value="Super speed">Speedstar</option>
+                        <option value="Magic">Magic</option>
+                        <option value="Time hop">Time travel</option>
                     </select>
                     <button onclick="changeDisplay('class')">Submit</button>
                 </div>
@@ -71,16 +88,16 @@
                 </div>
             </div>
         </section>
-        <section id="summary-section"> <!--Summary of Super hero character-->
+        <section id="summary-section">
             <h2>Superhero Summary</h2>
             <p id="summary-paragraph"></p>
         </section>
-       
+
     </main>
-    <footer class="footer">
+
+    <footer>
         <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
-
 </body>
 </html>

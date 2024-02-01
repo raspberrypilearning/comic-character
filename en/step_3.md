@@ -25,9 +25,9 @@ Here are some useful form elements:
 + `<input>`: Text inputs, checkboxes, radio buttons, etc.
 + `<button>`: Submit or reset buttons.
 
-### Design the Superhero name section
-
 --- /collapse ---
+
+### Design the Superhero name section
 
 You will use different types of form elements to allow users interact with your webpage.
 
@@ -292,7 +292,7 @@ line_highlights: 31-34
             <div id="name-input">
               <label>Superhero Name:</label>
               <input type="text" id="name">
-              <button onclick="changeDisplay('name')">Submit</button>
+              <button onclick="changeDisplay('name')">Submit <button>
            </div>
            <div id="name-display"> <!--Name display-->
              <h2>Superhero Name:</h2>
@@ -323,8 +323,8 @@ Add the html for creating the ability dropdown list.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 38
-line_highlights: 38-48
+line_number_start: 36
+line_highlights: 36-45
 ---
 
       <div class="class-section"> <!--Ability section-->
@@ -335,8 +335,7 @@ line_highlights: 38-48
               <option value="Invisibility">Invisibility</option>
               <option value="Time travel">Time travel</option>
             </select>
-            <button onclick="">Submit
-            </button>
+            <button onclick="">Submit</button>
         </div>
     
 --- /code ---
@@ -357,8 +356,8 @@ Add the html for updating the ability display area.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 36
+line_highlights: 47-50
 ---
 
       <div class="class-section"> <!--Ability section-->
@@ -375,7 +374,7 @@ line_highlights: 24-25
         <div id="class-display">  <!--Ability display-->
           <h2>Abilities:</h2>
           <span id="class-span"></span>
-          </div>
+        </div>
       </div>
     
 --- /code ---
@@ -384,26 +383,28 @@ line_highlights: 24-25
 
 ### Design the Superhero appearance section 
 
+You will add a text area to your form so user's can describe their supehero's appearance.
+
 --- task ---
 
+Add the html for creating the appearance description section. 
 
 --- code ---
 ---
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 51
+line_highlights: 51-58
 ---
 
-     <div class="description-section">
-                <div id="description-input">
-                    <label>Appearance: </label> 
-                    <textarea id="description">Type the appearance of your comic character here....</textarea>
-                    <button onclick="changeDisplay('description')">Submit</button>
-                </div>
-                
-            </div>
+      <div class="description-section"> <!--Appearance section-->
+        <div id="description-input">
+          <label>Appearance: </label> 
+          <textarea id="description">Type the appearance of your comic character here....</textarea>
+          <button onclick="changeDisplay('description')">Submit</button>
+        </div>
+      </div>
     
 --- /code ---
 
@@ -411,27 +412,57 @@ line_highlights: 24-25
 
 --- task ---
 
+Add the html for updating the appearance description area. 
 
 --- code ---
 ---
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 51
+line_highlights: 57-60
 ---
 
-     <div class="description-section">
-                <div id="description-input">
-                    <label>Appearance: </label> 
-                    <textarea id="description">Type the appearance of your comic character here....</textarea>
-                    <button onclick="changeDisplay('description')">Submit</button>
-                </div>
-                <div id="description-display">
-                    <h2>Appearance:</h2>
-                    <span id="description-span"></span>
-                </div>
-            </div>
+      <div class="description-section">
+        <div id="description-input">
+          <label>Appearance: </label> 
+          <textarea id="description">Type the appearance of your comic character here....</textarea>
+          <button onclick="changeDisplay('description')">Submit</button>
+        </div>
+        <div id="description-display">
+          <h2>Appearance:</h2>
+          <span id="description-span"></span>
+        </div>
+      </div>
+    
+--- /code ---
+
+--- /task ---
+
+### Design the Superhero origin story section 
+
+You will add another text area to your form so user's can describe their supehero's origin story.
+
+--- task ---
+
+Add the html for creating the origin story description section. 
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 62
+line_highlights: 62-68
+---
+
+      <div class="origin-section">
+        <div id="origin-input">
+          <label>Origin Story: </label> 
+          <textarea id="origin">Type your origin story here....</textarea>
+          <button onclick="changeDisplay('origin')">Submit</button>
+        </div>
+      </div>
     
 --- /code ---
 
@@ -439,38 +470,15 @@ line_highlights: 24-25
 
 --- task ---
 
+Add the html for updating the origin story description area. 
 
 --- code ---
 ---
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
----
-
-       <div class="origin-section">
-                <div id="origin-input">
-                    <label>Origin Story: </label> 
-                    <textarea id="origin">Type your origin story here....</textarea>
-                    <button onclick="changeDisplay('origin')">Submit</button>
-                </div>
-            </div>
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 68
+line_highlights: 68-71
 ---
 
        <div class="origin-section">
