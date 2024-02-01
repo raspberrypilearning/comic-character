@@ -535,3 +535,7 @@ line_highlights: 24-25
 
 --- /task ---
 
+Fantastic work! Your comicbook page now contains a form with input fields.
+
+In the next step you will make your form interactive so your user's changes can be updated on the page. 
+

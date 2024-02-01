@@ -1,6 +1,5 @@
 ## Create hero image slider
 
-
 In this step you will reate an interactive hero slider for your webpage. Users can navigate through different hero images using buttons on the slider.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -44,7 +43,9 @@ JavaScript is a powerful language that provides tools to allow developers create
 
 Open the index.html file.
 
-Find the `<main>` tag. Inside the div with the class `hero-slider`, add two more span elements, each containing an image of a superhero. 
+Find the `<main>` tag.
+
+Add two more `<span>` elements, each containing `<img>` tags inside the `<div>`tags with the class attribute `hero-slider`. 
 
 --- code ---
 ---
@@ -62,18 +63,19 @@ line_highlights: 24-25
             <span class="hero-slide"><img src="safina_hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
             <span class="hero-slide"><img src="layton_hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
+        </section>
 
 --- /code ---
 
 --- /task ---
 
-Notice that the classes to style the slider have already been provided.
+Notice that the class selectors to style the slider have already been provided.
 
-To navigate through the slides, add navigation buttons inside the `hero-container`.
+To navigate through the slides, add nav buttons inside the `hero-container` section.
 
 --- task ---
 
-Add the classes for the buttons inside the `hero-container`. One for the previous slide and one for the next slide.
+Add `<button>` elements below the `hero-container`. One for the previous slide and one for the next slide.
 
 --- code ---
 ---
@@ -87,12 +89,12 @@ line_highlights: 27-28
       <main>
         <section class="hero-container">
           <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey_hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina_hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton_hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
-          <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
-          <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
+          <button class="hero-nav-btn prev">❮</button>
+          <button class="hero-nav-btn next">❯</button>
         </section>
 
 --- /code ---
@@ -101,10 +103,13 @@ line_highlights: 27-28
 
 The buttons will show on your hero slide but there will be no functionality when you click them.
 
-**TODO** Create Debug Step
-**TODO** Create image to show prev and next buttons showing 
+**TODO** Create image to show prev and next buttons showing on the slider.
 
 --- /task ---
+
+**Debug step:** 
++ Check that your classes have `"` marks around them.
++ Check that your img src attribute contains the correct file names.
 
 ### Control the Slider buttons
 
@@ -479,6 +484,44 @@ line_highlights: 11-12
 
 --- task ---
 
+Add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn prev"`.
+
+Also add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn next"`
+
+This will trigger an action calling the `prevHero` and `nextHero` functions when you click either button.
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 20
+line_highlights: 27-28
+---
+
+      <main>
+        <section class="hero-container">
+          <div class="hero-slider">
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+          </div>
+          <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
+          <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
+        </section>
+
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+The buttons will show on your hero slide but there will be no functionality when you click them.
+
+**TODO** Create image to show prev and next buttons showing 
+
+--- /task ---
+
+--- task ---
+
 Open `index.html`.
 
 Add the **javascript** file to your page. 
@@ -503,3 +546,7 @@ line_highlights:
 **TODO** Create Debug Step
 
 --- /task ---
+
+Great job! You have added a hero slider to your index page.
+
+Next, you will design an interactive webpage where users can create their own superhero.

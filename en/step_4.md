@@ -1,9 +1,19 @@
 ## Show/Hide elements
 
-Create an interactive hero slider for your webpage, so users can navigate through different hero images with next and previous buttons.
+In this step, you will continue building the functionality of the superhero character creation form. You will use JavaScript to add interactivity and a summary display. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
+The submit buttons on your comicbook page can be used to update each section.
+
+You will create functions that will use the `submit` buttons as a trigger.
+
 --- task ---
+
+Open the `script.js` file.
+
+Create a JavaScript function named `changeDisplay` that takes a parameter `id`.
+
+This function will update the display based on the provided id.
 
 
 --- code ---
@@ -27,6 +37,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+Use the `document.querySelector` method to select an HTML element with the specified id. The selected element is stored in the variable `input`.
 
 --- code ---
 ---
@@ -50,6 +61,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+this selects an element with an id derived from the provided id parameter by appending -input. The selected element is stored in the variable inputSection.
 
 --- code ---
 ---
@@ -73,6 +85,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+this line selects an element with an id derived from the provided id parameter by appending -display. The selected element is stored in the variable displaySection.
 
 --- code ---
 ---
@@ -97,6 +110,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+this selects an element with an id derived from the provided id parameter by appending -span. The selected element is stored in the variable valueDisplay.
 
 --- code ---
 ---
@@ -122,6 +136,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+This line sets the text content of the valueDisplay element to the value of the input element. This is typically used to update the displayed content based on user input.
 
 --- code ---
 ---
@@ -149,6 +164,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+This line changes the CSS display property of the inputSection element to "none", effectively hiding it from view.
 
 --- code ---
 ---
@@ -177,6 +193,7 @@ function changeDisplay(id) {
 
 --- task ---
 
+This line changes the CSS display property of the displaySection element to "flex", making it visible. This is often used to reveal a new section of the form after the user has completed a previous section.
 
 --- code ---
 ---
@@ -203,10 +220,15 @@ function changeDisplay(id) {
       
 --- /code ---
 
+**Click the Run button** to see your changes.
+
 --- /task ---
+
+This function essentially gathers information about the superhero from specific elements, constructs a summary string, updates the content of a designated paragraph, and then makes the summary section visible. It is typically called after the user has completed entering information in various form sections.
 
 --- task ---
 
+ Create a function named `displaySummary`. This function will generate and display a summary of superhero information.
 
 --- code ---
 ---
@@ -228,6 +250,7 @@ function displaySummary() {
 
 --- task ---
 
+This line selects an HTML element with the id "summary-paragraph" and stores it in the variable summaryParagraph. This element is presumably a paragraph where the summary will be displayed.
 
 --- code ---
 ---
@@ -250,6 +273,7 @@ function displaySummary() {
 
 --- task ---
 
+This line selects an HTML element with the id "name-span" and retrieves its text content, storing it in the variable name. Similar lines are used to retrieve text content for abilities, appearance, and origin from their respective elements.
 
 --- code ---
 ---
@@ -277,6 +301,7 @@ function displaySummary() {
 
 --- task ---
 
+This line sets the text content of the summaryParagraph element to a formatted string using the retrieved values of name, abilities, appearance, and origin. This string forms the superhero summary.
 
 --- code ---
 ---
@@ -309,6 +334,7 @@ function displaySummary() {
 
 --- task ---
 
+This line selects an HTML element with the id "summary-section" and sets its CSS display property to "block". This makes the summary section visible, as it was initially hidden or set to a different display style.
 
 --- code ---
 ---
@@ -341,6 +367,9 @@ function displaySummary() {
 
 --- task ---
 
+if (id === "origin") {: This line checks if the provided id is equal to the string "origin". If true, the following block of code is executed.
+
+displaySummary();: This line calls the displaySummary function. This function is presumably responsible for showing a summary of the user's inputs. It is called after all the actions in the changeDisplay function are completed.
 
 --- code ---
 ---
@@ -370,6 +399,8 @@ function changeDisplay(id) {
 }
       
 --- /code ---
+
+**Click the Run button** to see your changes.
 
 --- /task ---
 
