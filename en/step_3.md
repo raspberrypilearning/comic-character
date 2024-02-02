@@ -215,7 +215,7 @@ line_number_start: 23
 line_highlights: 29
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
@@ -231,7 +231,7 @@ line_highlights: 29
 
 **Click the Run button** to see your changes.
 
-**TODO** Create Debug Step
+**Debug step:**
 
 --- /task ---
 

@@ -579,15 +579,15 @@ line_highlights: 27-28
 
 Open `index.html`.
 
-Add the **javascript** file to your page. 
+Add the **javascript** file to your page just before the closing `</body>` tag. 
 
 --- code ---
 ---
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 
-line_highlights: 
+line_number_start: 31
+line_highlights: 31
 ---
     <script type="text/javascript" src="script.js"></script>
   </body>
