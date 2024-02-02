@@ -251,9 +251,19 @@ In JavaScript, a function is a reusable block of code that performs a specific t
 
 Writing a Function:
 
-      function addNumbers(a, b) {
-      return a + b;
-      }
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+        function addNumbers(a, b) {
+            return a + b;
+        }
+      
+--- /code ---
 
 Here, addNumbers is a function that takes two inputs (a and b) and returns their sum.
 

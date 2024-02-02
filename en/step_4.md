@@ -1,11 +1,23 @@
 ## Show/Hide elements
 
-In this step, you will continue building the functionality of the superhero character creation form. You will use JavaScript to add interactivity and a summary display. 
+In this step, you will continue building the functionality of your superhero character creation form. You will use JavaScript to add interactivity and a summary display. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 The submit buttons on your comicbook page can be used to update each section.
 
 You will create functions that will use the `submit` buttons as a trigger.
+
+You will use more DOM methods to manipulate your web page and create interactions.
+
+--- collapse ---
+
+---
+title: What are DOM Methods?
+---
+
+
+
+--- /collapse ---
 
 --- task ---
 

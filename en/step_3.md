@@ -50,7 +50,7 @@ line_number_start: 23
 line_highlights: 24, 26
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
          
         </div>
@@ -75,7 +75,7 @@ line_number_start: 23
 line_highlights: 25, 27
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
            
@@ -100,7 +100,7 @@ line_number_start: 23
 line_highlights: 26, 28
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
@@ -131,7 +131,7 @@ line_number_start: 23
 line_highlights: 27
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
@@ -180,7 +180,7 @@ line_number_start: 23
 line_highlights: 28
 ---
 
-      <section> <!--Suoerhero character creation form-->
+      <section> <!--Superhero character creation form-->
         <div class="character-sheet">
           <div class="name-section">
             <div id="name-input">
@@ -232,6 +232,9 @@ line_highlights: 29
 **Click the Run button** to see your changes.
 
 **Debug step:**
+
++ Check that you have used the correct `input type` for your name section.
++ Check that you have used the correct `id` for each element
 
 --- /task ---
 
@@ -292,7 +295,7 @@ line_highlights: 31-34
             <div id="name-input">
               <label>Superhero Name:</label>
               <input type="text" id="name">
-              <button onclick="changeDisplay('name')">Submit <button>
+              <button onclick="">Submit <button>
            </div>
            <div id="name-display"> <!--Name display-->
              <h2>Superhero Name:</h2>
@@ -308,7 +311,7 @@ line_highlights: 31-34
 
 **Click the Run button** to see your changes.
 
-**TODO** Create Debug Step
++ Check that you have used the correct `id` for each element
 
 ### Design the Superhero ability section 
 
@@ -406,7 +409,7 @@ line_highlights: 51-58
         <div id="description-input">
           <label>Appearance: </label> 
           <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="changeDisplay('description')">Submit</button>
+          <button onclick="">Submit</button>
         </div>
       </div>
     
@@ -433,7 +436,7 @@ line_highlights: 57-60
         <div id="description-input">
           <label>Appearance: </label> 
           <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="changeDisplay('description')">Submit</button>
+          <button onclick="">Submit</button>
         </div>
         <div id="description-display">
           <h2>Appearance:</h2>
@@ -468,7 +471,7 @@ line_highlights: 62-68
         <div id="origin-input">
           <label>Origin Story: </label> 
           <textarea id="origin">Type your origin story here....</textarea>
-          <button onclick="changeDisplay('origin')">Submit</button>
+          <button onclick="">Submit</button>
         </div>
       </div>
     
@@ -495,7 +498,7 @@ line_highlights: 68-71
                 <div id="origin-input">
                     <label>Origin Story: </label> 
                     <textarea id="origin">Type your origin story here....</textarea>
-                    <button onclick="changeDisplay('origin')">Submit</button>
+                    <button onclick="">Submit</button>
                 </div>
                 <div id="origin-display">
                     <h2>Origin Story:</h2>
