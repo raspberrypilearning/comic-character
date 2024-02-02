@@ -279,28 +279,28 @@ When writing functions, you can follow these steps so your syntax is correct.
 1. Function Keyword: start with the function keyword to tell JavaScript that you're creating a function.
 
 2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
-     ` function sayHello`
+      function sayHello
 
 3. Parameters: put parentheses () after the function name. Inside these parentheses, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
-      `function sayHello()`
+      function sayHello()
 
 4. Curly Braces: open curly braces { to define the block of code that the function will execute. This is where you write the instructions for your function.
-      `function sayHello() {`
+      function sayHello() {
 
 5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
-      `function sayHello() {
-         console.log("Hello, World!");'
+      function sayHello() {
+            console.log("Hello, World!");
        
 
 6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
-      `function sayHello() {
-       console.log("Hello, World!");
-      }`
+      function sayHello() {
+            console.log("Hello, World!");
+      }
 
 Now, you've created a simple function named sayHello. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console.
 
 Using the function:
-`sayHello();` // Outputs: Hello, World!
+      sayHello(); // Outputs: Hello, World!
 
 --- /collapse ---
 
@@ -600,15 +600,18 @@ line_highlights:
 When you click the `<` button on your hero slider, your slider should navigate to the previous hero image.
 When you click the `>` button on your hero slider, your slider should navigate to the next hero image.
 
-**Debug:**
+**Debug step:**
 + Ensure you have created all variables and constants correctly using the right keywords.
+
 + Ensure you have used the right syntax when creating the functions including `()` and `{}`
 + Ensure that you have used + 1 for the `>` next button logic:
       `(currentHeroIndex + 1) % totalHeroSlides`
+
 + Ensure that you have used - 1 for the `<` previous button logic:
       `(currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides`
 
 + Ensure you have added the `updateHeroSlider()` function inside the `nextHero()` and `prevHero()` functions.
+
 + Ensure you add the `onclick` trigger method as an attribute to each button element.
 
 
