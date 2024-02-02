@@ -116,7 +116,7 @@ The buttons will show on your hero slide but there will be no functionality when
 + Check that your img src attribute contains the correct file names.
 + Check that the classes `.hero-slider` and `.hero-slide` exist in the correct elements provided.
 
-### Control the Slider buttons
+### Control the Next slider button
 
 You will use JavaScript to control the nav buttons to switch between slides.
 
@@ -147,11 +147,19 @@ The `let` keyword is used to declare a variable which can only be used within th
 --- collapse ---
 
 ---
-title: What is a variable and what is index?
+title: What is a variable 
 ---
 
 A variable in programming is a named storage that holds a value. The value can be changed when the program runs.
 For example, `let age = 30;` `age` is the variable storing the value `30`
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: What is index?
+---
 
 An index in programming is the position of an element within a list(array). 
 Usually indexing starts at 0; 
@@ -192,17 +200,7 @@ It facilitates the exchange of data between the web page and the server.
 
 Add a constant to store the length of the total slides in the list of slides.
 
---- collapse ---
-
----
-title: What is a constant?
----
-
-A constant in JavaScript is a variable that can't change; once set, its value stays the same.
-
-For example, using Pi which is a mathematical constant or storing an element that won't change through the program such as the total number of slides.
-
---- /collapse ---
+A constant is a variable that can't change; once set, its value stays the same.
 
 --- code ---
 ---
@@ -254,7 +252,7 @@ Writing a Function:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: 
 line_numbers: true
 line_number_start: 
 line_highlights: 
@@ -269,8 +267,18 @@ Here, addNumbers is a function that takes two inputs (a and b) and returns their
 
 Using a Function:
 
-      let result = addNumbers(5, 8);
-      console.log(result); // Outputs: 13
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+        let result = addNumbers(5, 8);
+        console.log(result); // Outputs: 13
+      
+--- /code ---
 
 You call the function addNumbers with values 5 and 8, and it gives back the sum, which you can then use or display.
 
@@ -289,28 +297,87 @@ When writing functions, you can follow these steps so your syntax is correct.
 1. Function Keyword: start with the function keyword to tell JavaScript that you're creating a function.
 
 2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
+
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
       function sayHello
 
+--- /code ---
+      
+
 3. Parameters: put parentheses () after the function name. Inside these parentheses, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
+
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
       function sayHello()
+
+--- /code ---
 
 4. Curly Braces: open curly braces { to define the block of code that the function will execute. This is where you write the instructions for your function.
       function sayHello() {
 
 5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
-      function sayHello() {
-            console.log("Hello, World!");
+      
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+        function sayHello() {
+          console.log("Hello, World!");
+
+--- /code ---
+      
        
 
 6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
-      function sayHello() {
-            console.log("Hello, World!");
-      }
+
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+        function sayHello() {
+          console.log("Hello, World!");
+        }
+
+--- /code ---
+    
 
 Now, you've created a simple function named sayHello. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console.
 
 Using the function:
-      sayHello(); // Outputs: Hello, World!
+
+--- code ---
+---
+language: js
+filename: 
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+        sayHello(); // Outputs: Hello, World!
+
+--- /code ---
+      
 
 --- /collapse ---
 
@@ -350,17 +417,19 @@ In JavaScript, operators are like special symbols that help you do different thi
 
 Arithmetic Operators:
 
-+ adds two numbers.
-- subtracts one number from another.
-* multiplies two numbers.
-/ divides one number by another.
-% gives the remainder when one number is divided by another.
++ `+` adds two numbers.
++ `-` subtracts one number from another.
++ `*` multiplies two numbers.
++ `/` divides one number by another.
++ `%` gives the remainder when one number is divided by another.
 
 Example:
 
 `let result = 10 % 3; `// result will be 1 (remainder of 10 divided by 3)
 
 --- /collapse ---
+
+### Control the Previous slider button
 
 
 --- task ---
@@ -413,6 +482,7 @@ line_highlights: 11-12
 
 --- /task ---
 
+### Update the current slider
 
 --- task ---
 
@@ -552,6 +622,8 @@ line_highlights: 11-12
 --- /code ---
 
 --- /task ---
+
+### Link the JavaScript file
 
 --- task ---
 
