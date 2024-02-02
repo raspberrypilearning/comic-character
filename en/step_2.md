@@ -39,6 +39,10 @@ JavaScript is a powerful language that provides tools to allow developers create
 
 --- /collapse ---
 
+A slider is a slideshow which allows you to display multiple pictures within one frame. 
+
+This can be done automatically or using buttons to control it.
+
 --- task ---
 
 Open the index.html file.
@@ -110,18 +114,19 @@ The buttons will show on your hero slide but there will be no functionality when
 **Debug step:** 
 + Check that your classes have `"` marks around them.
 + Check that your img src attribute contains the correct file names.
++ Check that the classes `.hero-slider` and `.hero-slide` exist in the correct elements provided.
 
 ### Control the Slider buttons
 
 You will use JavaScript to control the nav buttons to switch between slides.
-
-**TODO** Add explanation about how the slide works
 
 --- task ---
 
 Open the `script.js`file.
 
 Create a variable to store and keep track of the current slide index.
+
+Set the value to 0.
 
 --- code ---
 ---
@@ -136,6 +141,8 @@ line_highlights: 2
 --- /code ---
 
 --- /task ---
+
+The `let` keyword is used to declare a variable which can only be used within the code block for the hero slider.
 
 --- collapse ---
 
@@ -154,15 +161,29 @@ For example when given a list `["Fruits", "Clothes", "Toys"]`, "Fruits" is at in
 
 You will need to define the length of the total number of slides using the Document Object Model (DOM).
 
-The DOM uses a method called querySelectorAll which can find all the CSS selectors of an element.
+The DOM uses a method called querySelectorAll which can find and return all elements in a document that match a specified CSS selector.
 
 --- collapse ---
 
 ---
-title: What does the Doccument Object Model do exactly?
+title: What does the Document Object Model do exactly?
 ---
 
+The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a web page dynamically.
 
+The DOM allows developers to interact using the following methods:
+
++ Dynamic Interaction:
+It allows dynamic interaction with the web page. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
+
++ Event Handling:
+The DOM enables the handling of user actions or events, such as clicks or keyboard inputs. Developers can link event listeners to specific elements and run custom code in response to these events.
+
++ Content Manipulation:
+Developers can add, delete, or modify elements and content on the page dynamically. This is commonly used to update the page without requiring a full page reload.
+
++ Data Exchange:
+It facilitates the exchange of data between the web page and the server. 
 
 --- /collapse ---
 
@@ -177,7 +198,9 @@ Add a constant to store the length of the total slides in the list of slides.
 title: What is a constant?
 ---
 
+A constant in JavaScript is a variable that can't change; once set, its value stays the same.
 
+For example, using Pi which is a mathematical constant or storing an element that won't change through the program such as the total number of slides.
 
 --- /collapse ---
 
@@ -198,7 +221,7 @@ line_highlights: 3
 
 --- task ---
 
-Create a function to navigate to the next slide when users click the `>` button.
+Create a function `nextHero()` which will define what happens when users click the `>` button.
 
 --- code ---
 ---
@@ -224,10 +247,62 @@ line_highlights: 4-8
 title: What is a function and how are they used in JavaScript?
 ---
 
+In JavaScript, a function is a reusable block of code that performs a specific task. It helps keep your code organized and efficient.
 
+Writing a Function:
+
+      function addNumbers(a, b) {
+      return a + b;
+      }
+
+Here, addNumbers is a function that takes two inputs (a and b) and returns their sum.
+
+Using a Function:
+
+      let result = addNumbers(5, 8);
+      console.log(result); // Outputs: 13
+
+You call the function addNumbers with values 5 and 8, and it gives back the sum, which you can then use or display.
+
+Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: How do you write a simple function?
+---
+
+When writing functions, you can follow these steps so your syntax is correct.
+
+1. Function Keyword: start with the function keyword to tell JavaScript that you're creating a function.
+
+2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
+     ` function sayHello`
+
+3. Parameters: put parentheses () after the function name. Inside these parentheses, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
+      `function sayHello()`
+
+4. Curly Braces: open curly braces { to define the block of code that the function will execute. This is where you write the instructions for your function.
+      `function sayHello() {`
+
+5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
+      `function sayHello() {
+         console.log("Hello, World!");'
+       
+
+6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
+      `function sayHello() {
+       console.log("Hello, World!");
+      }`
+
+Now, you've created a simple function named sayHello. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console.
+
+Using the function:
+`sayHello();` // Outputs: Hello, World!
+
+--- /collapse ---
 
 --- task ---
 
@@ -261,36 +336,26 @@ line_highlights: 6-7
 title: Using operators in JavaScript
 ---
 
+In JavaScript, operators are like special symbols that help you do different things with numbers, strings, and other types of data.
 
+Arithmetic Operators:
+
++ adds two numbers.
+- subtracts one number from another.
+* multiplies two numbers.
+/ divides one number by another.
+% gives the remainder when one number is divided by another.
+
+Example:
+
+`let result = 10 % 3; `// result will be 1 (remainder of 10 divided by 3)
 
 --- /collapse ---
 
 
 --- task ---
 
-Add another function `updateHero`slider inside the `nextHero` function. You will create this function later.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 8
----
-      // Place Hero slider previous button function here 
-      function nextHero() {
-        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Create another function `prevHero` to control the `<` nav button.
+Create another function `prevHero()` to control the `<` nav button.
 
 This will allow users go back to the previous slide.
 
@@ -314,11 +379,11 @@ line_highlights: 10-13
 
 --- task ---
 
-Calculate the preious index by counting down by 1 (-1).
+Calculate the previous index by counting down by 1 (-1).
 
 You will also ensure the index never falls below zero by adding the total number of slides.
 
-Once again, use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
+Use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
 
 --- code ---
 ---
@@ -341,7 +406,7 @@ line_highlights: 11-12
 
 --- task ---
 
-Create another function `updateHeroSlider` which .
+Create another function `updateHeroSlider()` which updates a slider's position based on the current hero index, making it slide to a specific position. .
 
 --- code ---
 ---
@@ -436,7 +501,7 @@ line_highlights: 18
 
 --- task ---
 
-Add another function `updateHero`slider inside the `nextHero` function. 
+Add the function `updateHero`slider inside the `nextHero` function. 
 
 --- code ---
 ---
@@ -458,11 +523,7 @@ line_highlights: 8
 
 --- task ---
 
-Calculate the preious index by counting down by 1 (-1).
-
-You will also ensure the index never falls below zero by adding the total number of slides.
-
-Once again, use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
+Also add the function `updateHero`slider inside the `prevHero` function. 
 
 --- code ---
 ---
@@ -512,12 +573,6 @@ line_highlights: 27-28
 
 --- /code ---
 
-**Click the Run button** to see your changes.
-
-The buttons will show on your hero slide but there will be no functionality when you click them.
-
-**TODO** Create image to show prev and next buttons showing 
-
 --- /task ---
 
 --- task ---
@@ -542,8 +597,20 @@ line_highlights:
 
 
 **Click the Run button** to see your changes.
+When you click the `<` button on your hero slider, your slider should navigate to the previous hero image.
+When you click the `>` button on your hero slider, your slider should navigate to the next hero image.
 
-**TODO** Create Debug Step
+**Debug:**
++ Ensure you have created all variables and constants correctly using the right keywords.
++ Ensure you have used the right syntax when creating the functions including `()` and `{}`
++ Ensure that you have used + 1 for the `>` next button logic:
+      `(currentHeroIndex + 1) % totalHeroSlides`
++ Ensure that you have used - 1 for the `<` previous button logic:
+      `(currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides`
+
++ Ensure you have added the `updateHeroSlider()` function inside the `nextHero()` and `prevHero()` functions.
++ Ensure you add the `onclick` trigger method as an attribute to each button element.
+
 
 --- /task ---
 
