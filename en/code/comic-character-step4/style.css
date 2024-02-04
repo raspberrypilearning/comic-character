@@ -236,6 +236,13 @@ input:checked + .slider:before {
 
 
 /* Hero Slider */
+.hero-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 700px;
+}
+
 .hero-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;

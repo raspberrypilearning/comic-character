@@ -462,7 +462,7 @@ Calculate the previous index by counting down by 1 (-1).
 
 You will also ensure the index never falls below zero by adding the total number of slides.
 
-Use the modulus operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
+Use the % (modulus) operator to check if there are remainder slides to show, loop back to 0 if there are no remainder slides to show.
 
 --- code ---
 ---

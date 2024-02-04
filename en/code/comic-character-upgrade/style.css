@@ -85,6 +85,13 @@ footer {
 
 
 /* Create a comic */
+.hero-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 700px;
+}
+
 .character-sheet {
     display: flex;
     flex-wrap: wrap;
