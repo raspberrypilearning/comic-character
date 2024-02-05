@@ -19,6 +19,8 @@ Your starter project contains:
 
 This project already contains a navbar and a hero image. 
 
+The **javascript** file has already been linked to your pages just before the closing `</body>` tag.
+
 You will add more images to the hero section to create a series of slides.
 
 Each slide will contain a different superhero image and you will make it interactive using JavaScript.
@@ -103,18 +105,51 @@ line_highlights: 27-28
 
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
+Add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn prev"`.
+
+Also add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn next"`
+
+This will trigger an action when you click either button using the JavaScript functions you will create.
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 20
+line_highlights: 27-28
+---
+
+      <main>
+        <section class="hero-container">
+          <div class="hero-slider">
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+          </div>
+          <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
+          <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
+        </section>
+
+--- /code ---
+
+--- /task ---
+
 **Click the Run button** to see your changes.
 
 The buttons will show on your hero slide but there will be no functionality when you click them.
-
-**TODO** Create image to show prev and next buttons showing on the slider.
-
---- /task ---
 
 **Debug step:** 
 + Check that your classes have `"` marks around them.
 + Check that your img src attribute contains the correct file names.
 + Check that the classes `.hero-slider` and `.hero-slide` exist in the correct elements provided.
+
+**TODO** Create image to show prev and next buttons showing on the slider.
+
 
 ### Create the function variables
 
@@ -167,9 +202,47 @@ For example when given a list `["Fruits", "Clothes", "Toys"]`, "Fruits" is at in
 
 --- /collapse ---
 
+--- task ---
+
+Add a constant to store the length of the total slides in the list of slides.
+
+A constant is a variable that can't change; once set, its value stays the same.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 2
+line_highlights: 3
+---
+      let currentHeroIndex = 0;
+      const totalHeroSlides = 
+      
+--- /code ---
+
+--- /task ---
+
 You will need to define the length of the total number of slides using the Document Object Model (DOM).
 
 The DOM uses a method called querySelectorAll which can find and return all elements in a document that match a specified CSS selector.
+
+--- task ---
+
+Add the `document.querySelectorAll`method and store it as a value inside the `totalHeroSlides` constant.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 2
+line_highlights: 3
+---
+      let currentHeroIndex = 0;
+      const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+      
+--- /code ---
 
 --- collapse ---
 
@@ -195,123 +268,6 @@ It facilitates the exchange of data between the web page and the server.
 
 --- /collapse ---
 
-
---- task ---
-
-Add a constant to store the length of the total slides in the list of slides.
-
-A constant is a variable that can't change; once set, its value stays the same.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 2
-line_highlights: 3
----
-      let currentHeroIndex = 0;
-      const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
-      
---- /code ---
-
---- /task ---
-
-### Update the current slider
-
---- task ---
-
-Create another function `updateHeroSlider()` which updates a slider's position based on the current hero index, making it slide to a specific position. .
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 14
-line_highlights: 15-19
----
-      // Place Update Slider function here 
-      function updateHeroSlider() {
-       
-
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add a DOM method to return the `hero-slider` class using the querySelector.
-
-Save the method call into a constant.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 16
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Calcuilate the width of a single slide using the `offsetWidth` property.
-
-This will return the viewable width of the slider element.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 17
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Use the CSS transform property to move the `heroSlider` element so it is shown horizontally on the screen.
-
-The `translateX` function will also check the index of the current image and multiply it by the current slide width.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 18
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-      }
-      
---- /code ---
-
 --- /task ---
 
 ### Control the Next slider button
@@ -319,24 +275,6 @@ line_highlights: 18
 --- task ---
 
 Create a function `nextHero()` which will define what happens when users click the `>` button.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 4-8
----
-      // Place Hero slider previous button function here 
-      function nextHero() {
-    
-
-      }
-      
---- /code ---
-
---- /task ---
 
 --- collapse ---
 
@@ -384,6 +322,26 @@ You call the function addNumbers with values 5 and 8, and it gives back the sum,
 Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
 
 --- /collapse ---
+
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 5
+line_highlights: 4-8
+---
+      // Place Hero slider next button function here 
+      function nextHero() {
+    
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
 
 --- collapse ---
 
@@ -488,24 +446,6 @@ You also have to check if there are any remaining slides to show, using the modu
 
 If there are no remainder slides, the `currentHeroIndex`will be set back to 0.
 
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 4
-line_highlights: 6-7
----
-      // Place Hero slider previous button function here 
-      function nextHero() {
-        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        updateHeroSlider();
-      }
-      
---- /code ---
-
---- /task ---
-
 --- collapse ---
 
 ---
@@ -528,8 +468,129 @@ Example:
 
 --- /collapse ---
 
-### Control the Previous slider button
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 4
+line_highlights: 6-7
+---
+      // Place Hero slider next button function here  
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
+      }
+      
+--- /code ---
+
+--- /task ---
+
+You will need to use the DOM to update a slider's position based on the current hero index, making it slide to a specific position. .
+
+--- task ---
+
+Add a DOM method to return the `hero-slider` class using the querySelector.
+
+Save the method call into a constant.
+
+--- /collapse ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 4
+line_highlights: 8
+---
+      // Place Hero slider next button function here 
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+
+      // Function to update the slider
+        const heroSlider = document.querySelector('.hero-slider');
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Calculate the width of a single slide using the `offsetWidth` property.
+
+This will return the viewable width of the slider element.
+
+--- /collapse ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 4
+line_highlights: 8
+---
+      // Place Hero slider next button function here 
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+
+      // Function to update the slider
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Use the CSS transform property to move the `heroSlider` element so it is shown horizontally on the screen.
+
+The `translateX` function will also check the index of the current image and multiply it by the current slide width.
+
+--- /collapse ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 4
+line_highlights: 8
+---
+      // Place Hero slider next button function here 
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+
+      // Function to update the slider
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+      }
+      
+--- /code ---
+
+--- /task ---
+
+**Click the Run button** to see your changes.
+
+When you click the `>` button on your hero slider, your slider should navigate to the next hero image.
+
+**Debug step:**
++ Ensure you have created all variables and constants correctly using the right keywords.
++ Ensure your variable and constant names are written correctly.
++ Ensure you have used the right syntax when creating the functions including `()` and `{}`
++ Ensure that you have used + 1 for the `>` next button logic:
+      `(currentHeroIndex + 1) % totalHeroSlides`
+
++ Ensure you add the `onclick` trigger method as an attribute to each HTML button element.
+
+### Control the Previous slider button
 
 --- task ---
 
@@ -574,7 +635,6 @@ line_highlights: 11-12
       // Place Hero slider previous button function here 
       function prevHero() {
         currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-        updateHeroSlider();
         
       }
       
@@ -582,33 +642,11 @@ line_highlights: 11-12
 
 --- /task ---
 
-
-
 --- task ---
 
-Add the function `updateHero`slider inside the `nextHero` function. 
+Copy (CMD + C or CTRL + C) and paste (CMD + V or CTRL + V) the lines of code to update the slider from the `nextHero()` function.
 
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 8
----
-      // Place Hero slider previous button function here 
-      function nextHero() {
-        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        updateHeroSlider();
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Also add the function `updateHero`slider inside the `prevHero` function. 
+Paste them inside the `prevHero` function
 
 --- code ---
 ---
@@ -621,84 +659,26 @@ line_highlights: 11-12
       // Place Hero slider previous button function here 
       function prevHero() {
         currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-        updateHeroSlider();
+
+       // Function to update the slider
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`; 
       }
       
 --- /code ---
 
 --- /task ---
 
-### Link the JavaScript file
-
---- task ---
-
-Add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn prev"`.
-
-Also add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn next"`
-
-This will trigger an action calling the `prevHero` and `nextHero` functions when you click either button.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 20
-line_highlights: 27-28
----
-
-      <main>
-        <section class="hero-container">
-          <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
-          </div>
-          <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
-          <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
-        </section>
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-Open `index.html`.
-
-Add the **javascript** file to your page just before the closing `</body>` tag. 
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 31
-line_highlights: 31
----
-    <script type="text/javascript" src="script.js"></script>
-  </body>
-</html>
-
---- /code ---
-
-
 **Click the Run button** to see your changes.
 When you click the `<` button on your hero slider, your slider should navigate to the previous hero image.
-When you click the `>` button on your hero slider, your slider should navigate to the next hero image.
 
 **Debug step:**
 + Ensure you have created all variables and constants correctly using the right keywords.
-
++ Ensure your variable and constant names are written correctly.
 + Ensure you have used the right syntax when creating the functions including `()` and `{}`
-+ Ensure that you have used + 1 for the `>` next button logic:
-      `(currentHeroIndex + 1) % totalHeroSlides`
-
 + Ensure that you have used - 1 for the `<` previous button logic:
       `(currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides`
-
-+ Ensure you have added the `updateHeroSlider()` function inside the `nextHero()` and `prevHero()` functions.
-
 + Ensure you add the `onclick` trigger method as an attribute to each button element.
 
 
