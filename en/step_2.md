@@ -585,11 +585,12 @@ When you click the `>` button on your hero slider, your slider should navigate t
 **Debug step:**
 + Ensure you have created all variables and constants correctly using the right keywords.
 + Ensure your variable and constant names are written correctly.
-+ Ensure you have used the right syntax when creating the functions including `()` and `{}`
++ Ensure you have used the right syntax when creating the functions including `()` and `{}`.
 + Ensure that you have used + 1 for the `>` next button logic:
       `(currentHeroIndex + 1) % totalHeroSlides`
 + Ensure that you have used the correct indents when creating the function.
 + Ensure you add the `onclick` trigger method as an attribute to each HTML button element.
++ Ensure you have added `;` a semicolon at the end of your declarations.
 
 --- /task ---
 
@@ -689,7 +690,7 @@ When you click the `<` button on your hero slider, your slider should navigate t
 + Ensure that you have used - 1 for the `<` previous button logic:
       `(currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides`
 + Ensure you add the `onclick` trigger method as an attribute to each button element.
-
++ Ensure you have added `;` a semicolon at the end of your declarations.
 
 --- /task ---
 

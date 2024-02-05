@@ -347,6 +347,12 @@ Open `comicbook.html`.
 Type into the form input fields. 
 Each `<h2>` title should update when you click the `Submit` buttons.
 
+**Debug step:**
++ Ensure you have created all variables correctly using the `=`.
++ Ensure your parameter values have `" "` around them.
++ Ensure you have used the right syntax when creating the functions including `()` and `{}`
++ Ensure you have used the correct parameters for your function calls & DOM methods.
+
 --- /task ---
 
 ### Update and show the summary section
@@ -643,6 +649,10 @@ When you click the `Submit` button on each section, the summary section will be 
 Complete the whole form and clip `Submit` on all the sections.
 
 You should see the whole paragraph get updated to show your user their superhero summary.
+
+**Debug step:**
++ Ensure you have added `displaySummary()`to your `changeDisplay()` function.
++ Ensure you have used the correct `id` names in your `comicbook.html` file.
 
 --- /task ---
 
