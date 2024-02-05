@@ -1,26 +1,26 @@
 // Place Hero slider variables here 
 let currentHeroIndex = 0;
 const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+
 // Place Hero slider next button function here 
 function nextHero() {
     currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-    updateHeroSlider();
-}
-// Place Hero slider previous button function here 
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-    updateHeroSlider();
-}
-// Place Update Slider function here 
-function updateHeroSlider() {
+
+    // Function to update the slider
     const heroSlider = document.querySelector('.hero-slider');
     const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+// Place Hero slider previous button function here 
+function prevHero() {
+    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+
+    // Function to update the slider
+    const heroSlider = document.querySelector('.hero-slider');
+    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+}
 
 // Update Create Comic function 
 function changeDisplay(id) {
@@ -34,9 +34,8 @@ function changeDisplay(id) {
     displaySection.style.display = "flex";
 
     // Check if all changeDisplay actions are completed
-    if (id === "origin") {
-        displaySummary(); // Call displaySummary after all changeDisplay actions
-    }
+    displaySummary(); // Call displaySummary after all changeDisplay actions
+    
 }
 
 // Function to display summary
@@ -77,4 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     });
   });
+
+  // Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 

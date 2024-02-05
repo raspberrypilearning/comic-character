@@ -1,5 +1,7 @@
 ## Upgrade your project
 
++ conditional statement for the summary area
+
 #### HTML comicbook.html
 Add to main
 <section>

@@ -200,7 +200,7 @@ You can add attributes to input fields to control their behaviour and their inte
 
 --- task ---
 
-Add a `<submit>` button with an `onclick` attribute. 
+Add a `<submit>` button with an `onclick` attribute so users can submit their superhero's name.
 
 The `onlick` attribute provides interactivity using JavaScript.
 
@@ -230,6 +230,7 @@ line_highlights: 29
 --- /code ---
 
 **Click the Run button** to see your changes.
+You will see a text input area so your user can type in their superhero's name and submit it using a button.
 
 **Debug step:**
 
@@ -272,11 +273,13 @@ Example: `<input type="text" pattern="[A-Za-z]{3}">`
 
 ### Update the Superhero name display
 
+You will create a display field that will be updated when your user clicks the submit button.
+
 --- task ---
 
 Add the id for styling the display name area.
 
-Add title for the display.
+Add a title for the display.
 
 Use a `<span>` tag to display the superhero name.
 
@@ -310,16 +313,18 @@ line_highlights: 31-34
 --- /task ---
 
 **Click the Run button** to see your changes.
+You will see a title below your text input area.
+If you click the Submit button, the display will not update yet.
 
 + Check that you have used the correct `id` for each element
 
 ### Design the Superhero ability section 
 
-You will create a select dropdown list for users to choose one option.
+You will create a select dropdown list for users to choose one option for their superhero's ability..
 
 --- task ---
 
-Add the html for creating the ability dropdown list. 
+Add the HTML for creating the ability dropdown list. 
 
 --- code ---
 ---
@@ -345,11 +350,14 @@ line_highlights: 36-45
 
 **Click the Run button** to see your changes.
 
+You will see a dropdown list with three abilities for your users to choose from.
+Click on the arrow to view more options.
+
 **TODO** Create Debug Step
 
 --- /task ---
 
-Add the html for updating the ability display area. 
+Add the HTML for updating the ability display area. 
 
 --- task ---
 
@@ -384,6 +392,9 @@ line_highlights: 47-50
 
 **Click the Run button** to see your changes.
 
+You will see a title below your dropdown menu.
+If you click the Submit button, the display will not update yet.
+
 **TODO** Create Debug Step
 
 --- /task ---
@@ -394,7 +405,7 @@ You will add a text area to your form so user's can describe their supehero's ap
 
 --- task ---
 
-Add the html for creating the appearance description section. 
+Add the HTML for creating the appearance description section. 
 
 --- code ---
 ---
@@ -417,11 +428,13 @@ line_highlights: 51-58
 
 **Click the Run button** to see your changes.
 
+You will now see a text area that you can type into.
+
 --- /task ---
 
 --- task ---
 
-Add the html for updating the appearance description area. 
+Add the HTML for updating the appearance description area. 
 
 --- code ---
 ---
@@ -452,11 +465,11 @@ line_highlights: 57-60
 
 ### Design the Superhero origin story section 
 
-You will add another text area to your form so user's can describe their supehero's origin story.
+You will add another text area to your form so users can describe their supehero's origin story.
 
 --- task ---
 
-Add the html for creating the origin story description section. 
+Add the HTML for creating the origin story description section. 
 
 --- code ---
 ---
@@ -483,7 +496,7 @@ line_highlights: 62-68
 
 --- task ---
 
-Add the html for updating the origin story description area. 
+Add the HTML for updating the origin story description area. 
 
 --- code ---
 ---
@@ -514,17 +527,19 @@ line_highlights: 68-71
 
 ### Show your user their Superhero character story 
 
+Once your users have finished creating their superhero, you can provide a section so they can see a summary of what they have created.
+
 --- task ---
 
-Add a section for displaying the superhero summary.
+Add the HTML to create a section for displaying the superhero summary.
 
 --- code ---
 ---
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
+line_number_start: 74
+line_highlights: 74-77
 ---
 
  <section id="summary-section">
@@ -538,7 +553,7 @@ line_highlights: 24-25
 
 --- /task ---
 
-Fantastic work! Your comicbook page now contains a form with input fields.
+Fantastic work! Your superhero creation page now contains a form with input fields.
 
 In the next step you will make your form interactive so your user's changes can be updated on the page. 
 

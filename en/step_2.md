@@ -81,7 +81,11 @@ To navigate through the slides, add nav buttons inside the `hero-container` sect
 
 --- task ---
 
-Add `<button>` elements below the `hero-container`. One for the previous slide and one for the next slide.
+Add `<button>` elements below the `hero-container`. 
+
+One for the previous button with the attribute `class="hero-nav-btn prev"`.
+
+Add another one for the next button with the attribute `class="hero-nav-btn next"`.
 
 --- code ---
 ---
@@ -109,9 +113,9 @@ line_highlights: 27-28
 
 --- task ---
 
-Add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn prev"`.
+Add the `onclick` attribute to the `prevHero` button element.
 
-Also add the `onclick` attribute to the `<button>` element with the attribute `class="hero-nav-btn next"`
+Also add the `onclick` attribute to the `nextHero`button element.
 
 This will trigger an action when you click either button using the JavaScript functions you will create.
 
@@ -330,12 +334,11 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 5
-line_highlights: 4-8
+line_highlights: 5-8
 ---
       // Place Hero slider next button function here 
       function nextHero() {
     
-
       }
       
 --- /code ---
@@ -473,7 +476,7 @@ Example:
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 4
+line_number_start: 5
 line_highlights: 6-7
 ---
       // Place Hero slider next button function here  
@@ -494,21 +497,19 @@ Add a DOM method to return the `hero-slider` class using the querySelector.
 
 Save the method call into a constant.
 
---- /collapse ---
-
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 4
-line_highlights: 8
+line_number_start: 5
+line_highlights: 10
 ---
       // Place Hero slider next button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
-      // Function to update the slider
+        // Function to update the slider
         const heroSlider = document.querySelector('.hero-slider');
 
       }
@@ -521,23 +522,21 @@ line_highlights: 8
 
 Calculate the width of a single slide using the `offsetWidth` property.
 
-This will return the viewable width of the slider element.
-
---- /collapse ---
+The `offsetWidth` represents the total width of the slider element including its padding and borders (but not its margins).
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 4
-line_highlights: 8
+line_number_start: 5
+line_highlights: 11
 ---
       // Place Hero slider next button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
-      // Function to update the slider
+        // Function to update the slider
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
 
@@ -553,21 +552,19 @@ Use the CSS transform property to move the `heroSlider` element so it is shown h
 
 The `translateX` function will also check the index of the current image and multiply it by the current slide width.
 
---- /collapse ---
-
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 4
-line_highlights: 8
+line_number_start: 5
+line_highlights: 12
 ---
       // Place Hero slider next button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
-      // Function to update the slider
+        // Function to update the slider
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
         heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
@@ -576,6 +573,10 @@ line_highlights: 8
 --- /code ---
 
 --- /task ---
+
+--- task ---
+
+Open the index.html file to preview your changes.
 
 **Click the Run button** to see your changes.
 
@@ -587,12 +588,16 @@ When you click the `>` button on your hero slider, your slider should navigate t
 + Ensure you have used the right syntax when creating the functions including `()` and `{}`
 + Ensure that you have used + 1 for the `>` next button logic:
       `(currentHeroIndex + 1) % totalHeroSlides`
-
++ Ensure that you have used the correct indents when creating the function.
 + Ensure you add the `onclick` trigger method as an attribute to each HTML button element.
+
+--- /task ---
 
 ### Control the Previous slider button
 
 --- task ---
+
+Open `script.js` again.
 
 Create another function `prevHero()` to control the `<` nav button.
 
@@ -603,8 +608,8 @@ This will allow users go back to the previous slide.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 9
-line_highlights: 10-13
+line_number_start: 15
+line_highlights: 16
 ---
       // Place Hero slider previous button function here 
       function prevHero() {
@@ -629,8 +634,8 @@ Use the % (modulus) operator to check if there are remainder slides to show, loo
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 9
-line_highlights: 11-12
+line_number_start: 15
+line_highlights: 17
 ---
       // Place Hero slider previous button function here 
       function prevHero() {
@@ -653,8 +658,8 @@ Paste them inside the `prevHero` function
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 9
-line_highlights: 11-12
+line_number_start: 15
+line_highlights: 20-22
 ---
       // Place Hero slider previous button function here 
       function prevHero() {
@@ -669,6 +674,10 @@ line_highlights: 11-12
 --- /code ---
 
 --- /task ---
+
+--- task ---
+
+Open the index.html file to preview your changes.
 
 **Click the Run button** to see your changes.
 When you click the `<` button on your hero slider, your slider should navigate to the previous hero image.

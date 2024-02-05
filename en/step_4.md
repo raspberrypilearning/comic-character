@@ -1,11 +1,13 @@
 ## Show/Hide elements
 
-In this step, you will continue building the functionality of your superhero character creation form. You will use JavaScript to add interactivity and a summary display. 
+In this step, you will continue building the functionality of your form. You will use JavaScript to add show/hide elements of your form and show a summary display of your user's superhero character. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-The submit buttons on your comicbook page can be used to update each section.
+The `Submit` buttons on your comicbook page can be used to update each section.
 
-You will create functions that will use the `submit` buttons as a trigger.
+You will create functions that will use the `Submit` buttons as a trigger.
+
+When your user clicks `Submit`, the functions will take the value they enter, hide where they type it, and show a cool display of what they wrote! 
 
 You will use more DOM methods to manipulate your web page and create interactions.
 
@@ -15,17 +17,56 @@ You will use more DOM methods to manipulate your web page and create interaction
 title: What are DOM Methods?
 ---
 
+DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.These methods enable developers to manipulate a document while the code is running. 
 
+Here are some common DOM methods:
+
++ getElementById(id): retrieves an element by its id attribute.
+    var element = document.getElementById("myElement");
+
++ getElementsByClassName(className): Returns a live HTML Collection of elements with the given class name.
+    var elements = document.getElementsByClassName("myClass");
+
++ getElementsByTagName(tagName): Returns a live HTML Collection of elements with the given tag name.
+    var paragraphs = document.getElementsByTagName("p");
+
++ querySelector(selector): Returns the first element that matches the specified CSS selector.
+    var element = document.querySelector(".myClass");
+
++ querySelectorAll(selector): Returns a NodeList of all elements that match the specified CSS selector.
+    var elements = document.querySelectorAll("p.myClass");
+
++ addEventListener(event, callback): Attaches an event listener to an element.
+    element.addEventListener("click", function() {
+        console.log("Element clicked!");
+    });
+
++ createElement(tagName): Creates a new HTML element with the specified tag name.
+    var newDiv = document.createElement("div");
+
++ appendChild(node): Appends a node as the last child of a parent node.
+    parentElement.appendChild(childElement);
+
++ removeChild(node): Removes a child node from its parent.
+    parentElement.removeChild(childElement);
+
++ setAttribute(attribute, value): Sets the value of an attribute on the specified element.
+    element.setAttribute("class", "newClass");
+
++ getAttribute(attribute): Retrieves the value of the specified attribute on the element.
+    var classValue = element.getAttribute("class");
 
 --- /collapse ---
 
+### Create the superhero display area function
+
 --- task ---
 
-Open the `script.js` file.
+Open the `script.js` file which has already been linked to your `comicbook.html` file.
 
-Create a JavaScript function named `changeDisplay` that takes a parameter `id`.
+Create a JavaScript function named `changeDisplay()` that takes a parameter `id`.
 
-This function will update the display based on the provided id.
+This means the function will update the display based on the provided id from your HTML page.
 
 
 --- code ---
@@ -33,31 +74,36 @@ This function will update the display based on the provided id.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 26-28
 ---
     
     // Update Create Comic Display function 
 function changeDisplay(id) {
     
-
 }
       
 --- /code ---
 
 --- /task ---
 
+The `var` keyword is used to declare a variable which can be used within functions.
+
 --- task ---
 
-Use the `document.querySelector` method to select an HTML element with the specified id. The selected element is stored in the variable `input`.
+Create a variable `input` inside the `changeDisplay()` function.
+
+Use a `document.querySelector` method to select an HTML element with any specified `id` name you pass through the function. 
+
+Store it as the variable value.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 27
 ---
     
     // Update Create Comic Display function 
@@ -71,17 +117,27 @@ function changeDisplay(id) {
 
 --- /task ---
 
+Whenever the DOM finds the `id` you pass through the `changeDisplay()` function, it will store it in the variable declared.
+
+You will now declare another variable to store any `id` you pass through the function and add `-input` as part of the selector name.
+
+For example if you pass the `name` id through the function: `changeDisplay(name)`, it will search for `name-input`.
+
+This will store whatever the user types in.
+
 --- task ---
 
-this selects an element with an id derived from the provided id parameter by appending -input. The selected element is stored in the variable inputSection.
+Declare another variable `inputSection`.
+
+Use a `document.querySelector` method to search for an HTML element with any specified `id` name that has `-input` as a part of it.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 28
 ---
     
     // Update Create Comic Display function 
@@ -95,17 +151,23 @@ function changeDisplay(id) {
 
 --- /task ---
 
+You will now use the DOM method to select and store the `display` sections so you can manipulate and update them from the user's input.
+
 --- task ---
 
-this line selects an element with an id derived from the provided id parameter by appending -display. The selected element is stored in the variable displaySection.
+Declare another variable `displaySection`.
+
+Use a `document.querySelector` method to search for an HTML element with the provided `id` name that has `-display` as a part of it.
+
+The selected element will be stored in the variable displaySection.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 29
 ---
     
     // Update Create Comic Display function 
@@ -120,17 +182,23 @@ function changeDisplay(id) {
 
 --- /task ---
 
+You will also use the DOM to select the `<span>` element from your display section so you can update it.
+
 --- task ---
 
-this selects an element with an id derived from the provided id parameter by appending -span. The selected element is stored in the variable valueDisplay.
+Declare another variable `valueDisplay`.
+
+Use a `document.querySelector` method to search for an HTML element with the provided `id` name that has `-span` as a part of it.
+
+The selected element will be stored in the variable displaySection.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 30
 ---
     
     // Update Create Comic Display function 
@@ -146,17 +214,21 @@ function changeDisplay(id) {
 
 --- /task ---
 
+You will now use a text content property to take the value from the input the user has typed and place it into the `<span>` element of the display section.
+
 --- task ---
 
-This line sets the text content of the valueDisplay element to the value of the input element. This is typically used to update the displayed content based on user input.
+Use the text content of the `valueDisplay` element and set it to the value of the input element. 
+
+This will be used to update the displayed content based on user input.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 32
 ---
     
     // Update Create Comic Display function 
@@ -174,17 +246,53 @@ function changeDisplay(id) {
 
 --- /task ---
 
+We want to hide the input section of the form once the user has typed into it and then update and show content in the display section from their input.
+
+You can use the `style.display` property in JavaScript to control the visibility of an HTML element. 
+
+This will allow you to show or hide certain elements on your webpage based on your user's actions.
+
+--- collapse ---
+
+---
+title: What display properties can I use?
+---
+
+You can dynamically change the `style.display` property in response to user interactions or other events to create interactive user interfaces. For example, toggling between "block" and "none" can be used to show/hide elements, creating interactive features on a website.
+
+The most commonly used values are:
+
++ "none": setting `style.display` to "none" makes the element invisible and removes it from the layout. It's as if the element isn't there at all.
+    element.style.display = "none";
+
++ "block": makes the element a block-level element, causing it to start on a new line and stretch the full width of its container.
+    element.style.display = "block";
+
++ "inline": this makes the element an inline-level element, allowing it to sit inline with the surrounding content.
+    element.style.display = "inline";
+
++ "inline-block": similar to "inline," but it takes the block-level features and allows you to set width and height.
+    element.style.display = "inline-block";
+
+"flex": this turns the element into a flex container, allowing you to use flex properties for flexible layouts.
+    element.style.display = "flex";
+
+
+--- /collapse ---
+
 --- task ---
 
-This line changes the CSS display property of the inputSection element to "none", effectively hiding it from view.
+Change the CSS `style.display` property of the `inputSection` element to `"none"`.
+
+This will hide it on the page.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 33
 ---
     
     // Update Create Comic Display function 
@@ -205,15 +313,17 @@ function changeDisplay(id) {
 
 --- task ---
 
-This line changes the CSS display property of the displaySection element to "flex", making it visible. This is often used to reveal a new section of the form after the user has completed a previous section.
+Change the CSS `style.display` property of the `displaySection` element to `"flex"`. 
+
+This will make it visible. 
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 34
 ---
     
     // Update Create Comic Display function 
@@ -226,51 +336,62 @@ function changeDisplay(id) {
     valueDisplay.textContent = input.value;
     inputSection.style.display = "none";
     displaySection.style.display = "flex";
-
-
 }
       
 --- /code ---
+
+Open `comicbook.html` to view your changes.
 
 **Click the Run button** to see your changes.
 
 --- /task ---
 
-This function essentially gathers information about the superhero from specific elements, constructs a summary string, updates the content of a designated paragraph, and then makes the summary section visible. It is typically called after the user has completed entering information in various form sections.
+### Update and show the summary section
+
+You will create a function that collects the superhero details, summarises it, and shows the summary. 
 
 --- task ---
 
- Create a function named `displaySummary`. This function will generate and display a summary of superhero information.
+Open `script.js`.
+
+ Create a function named `displaySummary()`. 
+ 
+ This function will generate and display a summary of superhero information.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 36
+line_highlights: 37
 ---
     
-// Function to display summary
-function displaySummary() {
-   
-}
+      // Function to display summary
+      function displaySummary() {
+
+
+      }
     
 --- /code ---
 
 --- /task ---
 
+You will control the `summarySection` so the superhero summary can be displayed.
+
 --- task ---
 
-This line selects an HTML element with the id "summary-paragraph" and stores it in the variable summaryParagraph. This element is presumably a paragraph where the summary will be displayed.
+Create a variable `summaryParagraph`.
+
+Use the DOM to select an HTML element with the id "summary-paragraph" and store it in the variable. 
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 36
+line_highlights: 38
 ---
     
 // Function to display summary
@@ -285,15 +406,46 @@ function displaySummary() {
 
 --- task ---
 
-This line selects an HTML element with the id "name-span" and retrieves its text content, storing it in the variable name. Similar lines are used to retrieve text content for abilities, appearance, and origin from their respective elements.
+Use the DOM to search for an HTML element with the id "name-span".  
+
+Use the `textContent` property of the `document.getElementById` method to collect any user input updated in the `name-span`. 
+
+Store it in the variable 'name'. 
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 36
+line_highlights: 40
+---
+    
+// Function to display summary
+function displaySummary() {
+    var summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Repeat the same steps to collect the `textContent` for abilities, appearance, and origin from their respective elements.
+
+Create variables `abilities`, `appearance` and `origins` to store the `textContent`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 36
+line_highlights: 41-43
 ---
     
 // Function to display summary
@@ -311,17 +463,21 @@ function displaySummary() {
 
 --- /task ---
 
+You can use combine all the `textContent` into one paragraph as well as your own message you want the user to see.
+
 --- task ---
 
-This line sets the text content of the summaryParagraph element to a formatted string using the retrieved values of name, abilities, appearance, and origin. This string forms the superhero summary.
+Create a variable `summaryParagraph.textContent`.
+
+Store all the superhero display field elements.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 36
+line_highlights: 45-47
 ---
     
 // Function to display summary
@@ -337,24 +493,27 @@ function displaySummary() {
     Your abilities are ${abilities}. Your appearance is ${appearance}. 
     Your origin story is ${origin}.`;
 
-
 }
     
 --- /code ---
 
 --- /task ---
 
+Control the summary section to make it visible, as it has been set to `none` in the CSS styles to hide it initially.
+
 --- task ---
 
-This line selects an HTML element with the id "summary-section" and sets its CSS display property to "block". This makes the summary section visible, as it was initially hidden or set to a different display style.
+Select an HTML element with the id `summary-section`.
+
+Set the CSS display property to "block"
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 36
+line_highlights: 48
 ---
     
 // Function to display summary
@@ -375,21 +534,21 @@ function displaySummary() {
     
 --- /code ---
 
---- /task ---
-
 --- task ---
 
-if (id === "origin") {: This line checks if the provided id is equal to the string "origin". If true, the following block of code is executed.
+Find your `changeDisplay()` function.
 
-displaySummary();: This line calls the displaySummary function. This function is presumably responsible for showing a summary of the user's inputs. It is called after all the actions in the changeDisplay function are completed.
+Add the `displaySummary()` function inside it, below all the existing code.
+
+This will call the function.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 17
+line_number_start: 25
+line_highlights: 36
 ---
     
     // Update Create Comic Display function 
@@ -402,83 +561,24 @@ function changeDisplay(id) {
     valueDisplay.textContent = input.value;
     inputSection.style.display = "none";
     displaySection.style.display = "flex";
-
-// Check if all changeDisplay actions are completed
-    if (id === "origin") {
-        displaySummary(); // Call displaySummary after all changeDisplay actions
-    }
-
+    
+    displaySummary();
 }
       
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
+Open `comicbook.html`.
+
 **Click the Run button** to see your changes.
 
---- /task ---
+Type in a superhero name or any other details on the form.
 
-
---- task ---
-
-Open comicbook.html.
-
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
----
-
-     <footer>
-            <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
-    </footer>
-    
---- /code ---
+When you click the `Submit` button, the summary section will be updated.
 
 --- /task ---
 
---- task ---
-
-Open index.html.
-
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 20
-line_highlights: 24-25
----
-
-     <footer>
-            <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
-    </footer>
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 17
----
-    
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
-      
---- /code ---
-
---- /task ---
-
-
+Well done! You have created an interactive form that shows/hides elements. Next, you will allow users change their theme colours on your website.
