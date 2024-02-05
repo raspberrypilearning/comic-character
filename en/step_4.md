@@ -534,6 +534,8 @@ function displaySummary() {
     
 --- /code ---
 
+--- /task ---
+
 --- task ---
 
 Find your `changeDisplay()` function.
