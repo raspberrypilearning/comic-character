@@ -141,13 +141,15 @@ The toggle switch will modify your website's CSS settings by using JavaScript to
 
 Good Job! You've successfully added the toggle switch to the HTML document, let's give it some functionality.
 
-You will give your toggle switch functionality by using JavaScript. 
+You will give your toggle switch functionality by using a DOM method: Event Listener. 
+
+An event listener waits for a specific action, like a button click, and then runs a function in response to that action.
 
 --- task ---
 
 Open script.js to create the light mode function.
 
-Add an Event Listener to the HTML document. This function will check the browsers local storage and update our page to light mode from dark mode and back.
+Add an Event Listener to the HTML document. 
 
 --- code ---
 ---
@@ -165,11 +167,19 @@ line_highlights: 59
       
 --- /code ---
 
+Notice that you didn't create the function by writing the function name like you have done in previous steps.
+
+This function will check the browsers local storage when we toggle our switch. 
+
+It will also update your page to light mode and back.
+
 --- /task ---
 
 --- task ---
 
-Within the function's curly brackets add a variable called darkModeToggle that stores the <input> element of our toggle switch. You can reference the <input> element through its id.
+Within the function's curly brackets add a variable called `darkModeToggle` that stores the `<input>` element of your toggle switch. 
+
+Use the DOM `document.getElementById` method.
 
 --- code ---
 ---
@@ -189,9 +199,14 @@ line_highlights: 60
 
 --- /task ---
 
+Next, you will check the local storage of the browser to see if the website is set to light mode or dark mode.
+
+You will use a boolean value to set the state to `true`.
+
 --- task ---
 
-Next, check our local storage of the browser to see if the page is set to light mode or dark mode.
+Create a constant `isDarkMode` and store the value of the localStorage check
+
 
 --- code ---
 ---

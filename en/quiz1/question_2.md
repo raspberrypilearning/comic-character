@@ -5,37 +5,33 @@
 legend: Question 2 of 3
 ---
 
-You made Pico say hello in a speech bubble.
+In HTML, the <input> element is commonly used to collect user input.
 
-```blocks3
-say [Hello!] for [2] secs
-```
-
-Where would you go to find this block?
+Which attribute is used to specify the type of input the user can enter?
 
 --- choices ---
 
-- (x) 
+- (x) `type`
 
   --- feedback ---
+
+  Correct! The `type` attribute in the `<input>` element is used to specify the type of input the user can enter, such as text, password, checkbox, etc.
 
   --- /feedback ---
 
-- ( ) 
+- ( ) `data-input`
 
   --- feedback ---
+
+Not quite! The data- prefix is used for custom data attributes, not for specifying the type of input.
 
   --- /feedback ---
 
-- ( ) 
+- ( ) `input-type`
 
   --- feedback ---
-
-  --- /feedback ---
-
-- ( ) 
-
-  --- feedback ---
+  
+The data- prefix is used for custom data attributes, not for specifying the type of input.
 
   --- /feedback ---
 

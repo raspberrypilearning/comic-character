@@ -340,9 +340,12 @@ function changeDisplay(id) {
       
 --- /code ---
 
-Open `comicbook.html` to view your changes.
+Open `comicbook.html`.
 
 **Click the Run button** to see your changes.
+
+Type into the form input fields. 
+Each `<h2>` title should update when you click the `Submit` buttons.
 
 --- /task ---
 
@@ -354,7 +357,7 @@ You will create a function that collects the superhero details, summarises it, a
 
 Open `script.js`.
 
- Create a function named `displaySummary()`. 
+ Create a function `displaySummary()`. 
  
  This function will generate and display a summary of superhero information.
 
@@ -463,7 +466,63 @@ function displaySummary() {
 
 --- /task ---
 
-You can use combine all the `textContent` into one paragraph as well as your own message you want the user to see.
+You can use "string" formatting to combine all the `textContent` into one paragraph.
+
+You can also add your own message you want the user to see.
+
+--- collapse ---
+
+---
+title: What is "string"?
+---
+
+A "string" is a data type in JavaScript and other programming languages.
+
+Data types are groups of data tell the program how we want to use data.
+
+JavaScript has several primitive data types including:
+
++ Number: represents numeric values. Examples: 10, 3.14.
++ String: represents sequences of characters. Examples: "Hello", 'JavaScript'.
++ Boolean: represents true or false values.
++ Undefined: represents a variable that has been declared but not assigned a value.
++ Null: represents the intentional absence of any object value.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: What is string formatting?
+---
+
+In JavaScript, you can format strings using template literals or concatenation. Here are examples of how they work:
+
++ Template Literals (String Interpolation): Use backticks (` `) to define a template literal. Embed variables or expressions within ${} inside the template literal.
+
+    const name = "Spider-Man";
+    const age = 25;
+    // Example using template literals
+    const message = `Hello, ${name}! You are ${age} years old.`;
+    console.log(message);
+
++ Concatenation: concatenate strings using the + operator.
+
+    const superhero = "Iron Man";
+    const power = "suit of armor";
+    // Example using concatenation
+    const description = "The superhero " + superhero + " possesses a " + power + ".";
+    console.log(description);
+
+String Methods: utilise string methods like concat(), slice(), toUpperCase(), toLowerCase(), etc.
+
+    const city = "Gotham";
+    const capitalizedCity = city.toUpperCase();
+    // Example using string methods
+    const result = `Welcome to ${capitalizedCity}!`;
+    console.log(result);
+
+--- /collapse ---
 
 --- task ---
 
@@ -513,7 +572,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 36
-line_highlights: 48
+line_highlights: 49
 ---
     
 // Function to display summary
@@ -550,7 +609,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 25
-line_highlights: 36
+line_highlights: 37
 ---
     
     // Update Create Comic Display function 
@@ -579,7 +638,11 @@ Open `comicbook.html`.
 
 Type in a superhero name or any other details on the form.
 
-When you click the `Submit` button, the summary section will be updated.
+When you click the `Submit` button on each section, the summary section will be updated.
+
+Complete the whole form and clip `Submit` on all the sections.
+
+You should see the whole paragraph get updated to show your user their superhero summary.
 
 --- /task ---
 

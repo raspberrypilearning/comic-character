@@ -202,9 +202,9 @@ You can add attributes to input fields to control their behaviour and their inte
 
 Add a `<submit>` button with an `onclick` attribute so users can submit their superhero's name.
 
-The `onlick` attribute provides interactivity using JavaScript.
+The `onclick` attribute provides interactivity using JavaScript.
 
-Leave the `onclick` action empty for now.
+Set the `onclick` attribute to `changeDisplay('name')`.
 
 --- code ---
 ---
@@ -221,13 +221,15 @@ line_highlights: 29
             <div id="name-input">
               <label>Superhero Name:</label>
               <input type="text" id="name">
-              <button onclick="">Submit</button>
+              <button onclick="changeDisplay('name')">Submit</button>
            </div>
          </div>
        </div>
       </section>
     
 --- /code ---
+
+You will create a `changeDisplay()` function in the next step that will trigger the `Submit` buttons. 
 
 **Click the Run button** to see your changes.
 You will see a text input area so your user can type in their superhero's name and submit it using a button.
@@ -298,7 +300,7 @@ line_highlights: 31-34
             <div id="name-input">
               <label>Superhero Name:</label>
               <input type="text" id="name">
-              <button onclick="">Submit <button>
+              <button onclick="changeDisplay('name')">Submit <button>
            </div>
            <div id="name-display"> <!--Name display-->
              <h2>Superhero Name:</h2>
@@ -343,7 +345,7 @@ line_highlights: 36-45
               <option value="Invisibility">Invisibility</option>
               <option value="Time travel">Time travel</option>
             </select>
-            <button onclick="">Submit</button>
+            <button onclick="changeDisplay('class')">Submit</button>
         </div>
     
 --- /code ---
@@ -379,7 +381,7 @@ line_highlights: 47-50
               <option value="Invisibility">Invisibility</option>
               <option value="Time travel">Time travel</option>
             </select>
-            <button onclick="">Submit
+            <button onclick="changeDisplay('class')">Submit
             </button>
         </div>
         <div id="class-display">  <!--Ability display-->
@@ -420,7 +422,7 @@ line_highlights: 51-58
         <div id="description-input">
           <label>Appearance: </label> 
           <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="">Submit</button>
+          <button onclick="changeDisplay('description')">Submit</button>
         </div>
       </div>
     
@@ -449,7 +451,7 @@ line_highlights: 57-60
         <div id="description-input">
           <label>Appearance: </label> 
           <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="">Submit</button>
+          <button onclick="changeDisplay('description')">Submit</button>
         </div>
         <div id="description-display">
           <h2>Appearance:</h2>
@@ -484,7 +486,7 @@ line_highlights: 62-68
         <div id="origin-input">
           <label>Origin Story: </label> 
           <textarea id="origin">Type your origin story here....</textarea>
-          <button onclick="">Submit</button>
+          <button onclick="changeDisplay('origin')">Submit</button>
         </div>
       </div>
     
@@ -511,7 +513,7 @@ line_highlights: 68-71
                 <div id="origin-input">
                     <label>Origin Story: </label> 
                     <textarea id="origin">Type your origin story here....</textarea>
-                    <button onclick="">Submit</button>
+                    <button onclick="changeDisplay('origin')">Submit</button>
                 </div>
                 <div id="origin-display">
                     <h2>Origin Story:</h2>

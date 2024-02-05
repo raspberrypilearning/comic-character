@@ -12,31 +12,32 @@ You will be guided towards the correct answer. You can do this activity as many 
 legend: Question 1 of 3
 ---
 
-Correct code to write a function.
+To create a function in JavaScript, you use the function keyword.
+
+What is the basic structure of a function declaration?
 
 --- choices ---
 
-- ( )
+- ( ) create functionmyFunction() { /* code here */ }
 
   --- feedback ---
+
+  Not quite! The correct way to declare a function is without the "create" keyword and with a space between function and the function name.
 
   --- /feedback ---
 
-- ( )
+- ( ) function myFunction { /* code here */ }
 
   --- feedback ---
+
+  Incorrect syntax. There are missing parentheses in the function declaration. A correct function declaration requires parentheses after the function name.
 
   --- /feedback ---
 
-- (x) 
+- (x) function myFunction() { /* code here */ }
 
   --- feedback ---
-
-  --- /feedback ---
-
-- ( ) 
-
-  --- feedback ---
+  That's correct! The basic structure of a function declaration includes the function keyword, followed by the function name, parentheses, and curly braces containing the function's code.
 
   --- /feedback ---
 

@@ -34,8 +34,7 @@ function changeDisplay(id) {
     displaySection.style.display = "flex";
 
     // Check if all changeDisplay actions are completed
-    displaySummary(); // Call displaySummary after all changeDisplay actions
-    
+    displaySummary(); // Call displaySummary after all changeDisplay actions  
 }
 
 // Function to display summary
