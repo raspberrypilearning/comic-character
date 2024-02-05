@@ -1,7 +1,7 @@
 ## Create light mode theme
 
 In this step, you will create a toggle switch that will allow your users switch between dark mode and light mode themes. 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 #### Add toggle to the header section
 

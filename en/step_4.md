@@ -1,7 +1,7 @@
 ## Show/Hide elements
 
 In this step, you will continue building the functionality of your form. You will use JavaScript to add show/hide elements of your form and show a summary display of your user's superhero character. 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 The `Submit` buttons on your comicbook page can be used to update each section.
 
