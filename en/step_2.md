@@ -116,7 +116,7 @@ The buttons will show on your hero slide but there will be no functionality when
 + Check that your img src attribute contains the correct file names.
 + Check that the classes `.hero-slider` and `.hero-slide` exist in the correct elements provided.
 
-### Control the Next slider button
+### Create the function variables
 
 You will use JavaScript to control the nav buttons to switch between slides.
 
@@ -216,6 +216,105 @@ line_highlights: 3
 --- /code ---
 
 --- /task ---
+
+### Update the current slider
+
+--- task ---
+
+Create another function `updateHeroSlider()` which updates a slider's position based on the current hero index, making it slide to a specific position. .
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 15-19
+---
+      // Place Update Slider function here 
+      function updateHeroSlider() {
+       
+
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Add a DOM method to return the `hero-slider` class using the querySelector.
+
+Save the method call into a constant.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 15
+line_highlights: 16
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Calcuilate the width of a single slide using the `offsetWidth` property.
+
+This will return the viewable width of the slider element.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 15
+line_highlights: 17
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+
+      }
+      
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Use the CSS transform property to move the `heroSlider` element so it is shown horizontally on the screen.
+
+The `translateX` function will also check the index of the current image and multiply it by the current slide width.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 15
+line_highlights: 18
+---
+      function updateHeroSlider() {
+        const heroSlider = document.querySelector('.hero-slider');
+        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+      }
+      
+--- /code ---
+
+--- /task ---
+
+### Control the Next slider button
 
 --- task ---
 
@@ -400,7 +499,7 @@ line_highlights: 6-7
       // Place Hero slider previous button function here 
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-        
+        updateHeroSlider();
       }
       
 --- /code ---
@@ -475,6 +574,7 @@ line_highlights: 11-12
       // Place Hero slider previous button function here 
       function prevHero() {
         currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+        updateHeroSlider();
         
       }
       
@@ -482,102 +582,7 @@ line_highlights: 11-12
 
 --- /task ---
 
-### Update the current slider
 
---- task ---
-
-Create another function `updateHeroSlider()` which updates a slider's position based on the current hero index, making it slide to a specific position. .
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 14
-line_highlights: 15-19
----
-      // Place Update Slider function here 
-      function updateHeroSlider() {
-       
-
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add a DOM method to return the `hero-slider` class using the querySelector.
-
-Save the method call into a constant.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 16
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Calcuilate the width of a single slide using the `offsetWidth` property.
-
-This will return the viewable width of the slider element.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 17
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-
-      }
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Use the CSS transform property to move the `heroSlider` element so it is shown horizontally on the screen.
-
-The `translateX` function will also check the index of the current image and multiply it by the current slide width.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 15
-line_highlights: 18
----
-      function updateHeroSlider() {
-        const heroSlider = document.querySelector('.hero-slider');
-        const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-        heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-      }
-      
---- /code ---
-
---- /task ---
 
 --- task ---
 
