@@ -646,7 +646,7 @@ Type in a superhero name or any other details on the form.
 
 When you click the `Submit` button on each section, the summary section will be updated.
 
-Complete the whole form and clip `Submit` on all the sections.
+Complete the whole form and click `Submit` on all the sections.
 
 You should see the whole paragraph get updated to show your user their superhero summary.
 
