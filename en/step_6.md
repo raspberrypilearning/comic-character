@@ -214,8 +214,8 @@ Add the captcha check function provided below to your file.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 58
-line_highlights: 68-69
+line_number_start: 80
+line_highlights: 81-99
 ---
     // Captcha check Function
     let captcha;
@@ -242,17 +242,19 @@ line_highlights: 68-69
 
 --- /task ---
 
+### Create captcha characters randomly
+
 --- task ---
 
-
+Add the random character generation function to your file.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 58
-line_highlights: 68-69
+line_number_start: 101
+line_highlights: 102-121
 ---
     // Captcha Function
    function generate() {
@@ -278,19 +280,31 @@ line_highlights: 68-69
   
 --- /code ---
 
+--- collapse ---
+
+---
+title: How does random character generation work?
+---
+
+
+
+--- /collapse ---
+
 --- /task ---
+
+### Update the captcha based on user response
 
 --- task ---
 
-
+Add a function to print a message to the user if they enter the captcha incorrectly.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 58
-line_highlights: 68-69
+line_number_start: 123
+line_highlights: 124-139
 ---
     // Captcha Function
    
@@ -317,7 +331,33 @@ function printmsg() {
 
 --- task ---
 
+Open `index.html`.
 
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="successfulLogin" style="display: none;">
+        <header class="header">
+            <a href="index.html" class="logo">Pi Comics</a>
+            <nav class="navbar" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="comicbook.html">CREATE COMIC</a>
+            </nav>
+
+--- /code ---
+
+--- /task ---
+
+### Clear local storage preferences
+
+--- task ---
+
+Add a function to logout and clear the user's local preference so they can see the captcha every time they logout.
 
 --- code ---
 ---
@@ -341,25 +381,6 @@ function logout() {
 
 --- /task ---
 
+Fantastic effort! You have created an interactive website where users can create their own superhero character. You have also secured your content. 
 
-
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 13
-line_highlights: 22-25
----
-     <div id="successfulLogin" style="display: none;">
-        <header class="header">
-            <a href="index.html" class="logo">Pi Comics</a>
-            <nav class="navbar" id="nav">
-                <a href="index.html">HOME</a>
-                <a href="comicbook.html">CREATE COMIC</a>
-            </nav>
-
---- /code ---
-
---- /task ---
+Check your understanding of the project using the reflection quiz on the next step.
