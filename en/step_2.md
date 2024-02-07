@@ -229,7 +229,7 @@ line_highlights: 3
 
 You will need to define the length of the total number of slides using the Document Object Model (DOM).
 
-The DOM uses a method called querySelectorAll which can find and return all elements in a document that match a specified CSS selector.
+The DOM uses a method called `querySelectorAll` which can find and return all elements in a document that match a specified CSS selector.
 
 --- task ---
 

@@ -33,7 +33,6 @@ function changeDisplay(id) {
     inputSection.style.display = "none";
     displaySection.style.display = "flex";
 
-    // Check if all changeDisplay actions are completed
     displaySummary(); // Call displaySummary after all changeDisplay actions  
 }
 
@@ -54,29 +53,19 @@ function displaySummary() {
 }
 
 // Light mode function 
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-  
-    // Check if dark mode preference is stored in local storage
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-  
-    // Set initial dark mode state based on the stored preference
-    document.body.classList.toggle("dark-mode", isDarkMode);
-    darkModeToggle.checked = isDarkMode;
-  
-    darkModeToggle.addEventListener("change", function () {
-      const isDarkMode = darkModeToggle.checked;
-  
-      // Check if dark mode is already in the desired state
-    if (isDarkMode !== document.body.classList.contains("dark-mode")) {
-      // Update body class and store the user's preference in local storage
-      document.body.classList.toggle("dark-mode", isDarkMode);
-      localStorage.setItem("darkMode", isDarkMode.toString());
-    }
-    });
-  });
 
-  // Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+    // Check if dark mode preference is stored in local storage
+   
+    // Set initial dark mode state based on the stored preference
+    
+      // Check if dark mode is already in the desired state
+    
+      // Update body class and store the user's preference in local storage
+    
+// Update Copyright Year function 
+
+// Captcha Function
+
+// Function to logout and clear local storage
+
 

@@ -327,34 +327,34 @@ input:checked + .slider:before {
 }
 
 /* Light Mode Styles */
-body.dark-mode {
+body.light-mode {
   background: linear-gradient(to right, #d2cfcf, #bcb7bc);
   color: #ffffff;
 }
 
-.dark-mode .navigation {
+.light-mode .navigation {
   background-color: #8e6363;
 }
 
-.dark-mode .year {
+.light-mode .year {
   color: #fff;
 }
 
 
-.dark-mode .logo {
+.light-mode .logo {
   color: rgb(243, 239, 239);
   
 }
 
-.dark-mode .navbar a {
+.light-mode .navbar a {
 color: #ffffff;
 }
 
-.dark-mode .header {
+.light-mode .header {
 background: #e6b400;
 }
 
-.dark-mode footer {
+.light-mode footer {
 background-color: #e6b400;;
 color: #ffffff;
 

@@ -22,17 +22,25 @@ function prevHero() {
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
-
-// Update Copyright Year function 
-
-
 // Update Create Comic function 
 
 
+     // Call displaySummary after all changeDisplay actions  
+
+// Function to display summary
+
 // Light mode function 
 
+    // Check if dark mode preference is stored in local storage
+   
+    // Set initial dark mode state based on the stored preference
+    
+      // Check if dark mode is already in the desired state
+    
+      // Update body class and store the user's preference in local storage
+    
+// Update Copyright Year function 
 
 // Captcha Function
-
 
 // Function to logout and clear local storage

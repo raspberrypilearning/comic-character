@@ -372,13 +372,12 @@ Open `script.js`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 37
+line_number_start: 37
+line_highlights: 38-40
 ---
     
       // Function to display summary
       function displaySummary() {
-
 
       }
     
@@ -399,8 +398,8 @@ Use the DOM to select an HTML element with the id "summary-paragraph" and store 
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 38
+line_number_start: 37
+line_highlights: 39
 ---
     
 // Function to display summary
@@ -426,8 +425,8 @@ Store it in the variable 'name'.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 40
+line_number_start: 37
+line_highlights: 41
 ---
     
 // Function to display summary
@@ -453,8 +452,8 @@ Create variables `abilities`, `appearance` and `origins` to store the `textConte
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 41-43
+line_number_start: 37
+line_highlights: 42-44
 ---
     
 // Function to display summary
@@ -541,8 +540,8 @@ Store all the superhero display field elements.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 45-47
+line_number_start: 37
+line_highlights: 46-48
 ---
     
 // Function to display summary
@@ -577,8 +576,8 @@ Set the CSS display property to "block"
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 36
-line_highlights: 49
+line_number_start: 37
+line_highlights: 50
 ---
     
 // Function to display summary
@@ -615,7 +614,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 25
-line_highlights: 37
+line_highlights: 36
 ---
     
     // Update Create Comic Display function 
@@ -629,7 +628,7 @@ function changeDisplay(id) {
     inputSection.style.display = "none";
     displaySection.style.display = "flex";
     
-    displaySummary();
+    displaySummary(); // Call displaySummary after all changeDisplay actions
 }
       
 --- /code ---

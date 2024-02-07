@@ -176,66 +176,6 @@ button:hover {
   color: #007BFF;
 }
 
-
-/* Hero Slider */
-.hero-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 700px;
-}
-
-.hero-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.hero-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.hero-slide img {
-  width: 100vw;
-  height: auto;
-}
-
-.hero-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-
-#background {
-  width: 70%;
-  height: 50%;
-  background-color: var(--background-colour);
-  border: none;
-  color: var(--text-colour);
-}
-
-#background-display {
-  display: none;
-  justify-content: space-between;
-  margin: 20px;
-}
-
 /* Light mode */
 .toggle-container {
   display: flex;
@@ -295,6 +235,126 @@ input:checked + .slider:before {
     color: #fff;
   }
 
+  .hero-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+}
+
+/* Logout */
+#logoutIcon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff; 
+  margin-top: 20px; 
+}
+
+#logoutIcon i {
+  margin-right: 5px; 
+}
+
+/* Hero Slider */
+.hero-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-slide img {
+    width: 100vw;
+    height: auto;
+}
+
+.hero-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+#background {
+  width: 70%;
+  height: 50%;
+  background-color: var(--background-colour);
+  border: none;
+  color: var(--text-colour);
+}
+
+#background-display {
+  display: none;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Captcha */
+
+#image{
+	margin-top: 10px;
+	box-shadow: 5px 5px 5px 5px gray;
+	width: 60px;;
+	padding: 20px;
+	font-weight: 400;
+	padding-bottom: 0px;
+	height: 40px;
+	user-select: none;
+	text-decoration:line-through;
+	font-style: italic;
+	font-size: x-large;
+	border: red 2px solid;
+	margin-left: 10px;
+	
+}
+#user-input{
+	box-shadow: 5px 5px 5px 5px gray;
+	width:auto;
+	margin-right: 10px;
+	padding: 20px;
+	padding-bottom: 0px;
+	height: 50px;
+	border: red 0px solid;
+}
+input{
+	border:1px black solid;
+  height: 30px;
+  width: auto;
+}
+.inline{
+	display:inline-block;
+}
+
+#captchaSection {
+  text-align: center;
+}
+
+#btn{
+	box-shadow: 5px 5px 5px grey;
+	color: aqua;
+	margin: 10px;
+	background-color: brown;
+  width: auto;
+}
+
 /* Responsive styles */
 
 
@@ -322,7 +382,82 @@ input:checked + .slider:before {
     margin: 10px 0;
   }
 
-  .toggle-container {
-    margin-top: 10px;
+    .menu-icon {
+      display: block;
   }
+
+  .toggle-container {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .toggle-label {
+      margin-left: 10px;
+      color: #fff;
+      order: 1; /* Reorder the label for proper display on small screens */
+  }
+
+  #logoutIcon {
+      order: 2; /* Reorder the logout icon for proper display on small screens */
+  }
+
+
+  .hero-container {
+    height: 300px;
+  }
+
+  .hero-slide img {
+    height: 100%;
+  }
+  
+}
+
+
+/* Light Mode Styles */
+body.light-mode {
+  background: linear-gradient(to right, #d2cfcf, #bcb7bc);
+  color: #ffffff;
+}
+
+.light-mode .navigation {
+  background-color: #8e6363;
+}
+
+.light-mode .year {
+  color: #fff;
+}
+
+
+.light-mode .logo {
+  color: rgb(243, 239, 239);
+  
+}
+
+.light-mode .navbar a {
+color: #ffffff;
+}
+
+.light-mode .header {
+background: #e6b400;
+}
+
+.light-mode footer {
+background-color: #e6b400;;
+color: #ffffff;
+
+}
+
+.menu-icon {
+display: none;
+cursor: pointer;
+}
+
+.bar {
+width: 25px;
+height: 3px;
+background-color: #fff;
+margin: 6px 0;
+transition: 0.4s;
 }

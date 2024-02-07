@@ -1,26 +1,26 @@
 // Place Hero slider variables here 
 let currentHeroIndex = 0;
 const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+
 // Place Hero slider next button function here 
 function nextHero() {
     currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-    updateHeroSlider();
-}
-// Place Hero slider previous button function here 
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-    updateHeroSlider();
-}
-// Place Update Slider function here 
-function updateHeroSlider() {
+
+    // Function to update the slider
     const heroSlider = document.querySelector('.hero-slider');
     const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+// Place Hero slider previous button function here 
+function prevHero() {
+    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
+
+    // Function to update the slider
+    const heroSlider = document.querySelector('.hero-slider');
+    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
+    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
+}
 
 // Update Create Comic function 
 function changeDisplay(id) {
@@ -33,10 +33,7 @@ function changeDisplay(id) {
     inputSection.style.display = "none";
     displaySection.style.display = "flex";
 
-    // Check if all changeDisplay actions are completed
-    if (id === "origin") {
-        displaySummary(); // Call displaySummary after all changeDisplay actions
-    }
+    displaySummary(); // Call displaySummary after all changeDisplay actions
 }
 
 function displaySummary() {
@@ -56,26 +53,30 @@ function displaySummary() {
 
 // Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
+    const lightModeToggle = document.getElementById("lightModeToggle");
   
-    // Check if dark mode preference is stored in local storage
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    // Check if light mode preference is stored in local storage
+    const isLightMode = localStorage.getItem("lightMode") === "true";
   
-    // Set initial dark mode state based on the stored preference
-    document.body.classList.toggle("dark-mode", isDarkMode);
-    darkModeToggle.checked = isDarkMode;
+    // Set initial light mode state based on the stored preference
+    document.body.classList.toggle("light-mode", isLightMode);
+    lightModeToggle.checked = isLightMode;
   
-    darkModeToggle.addEventListener("change", function () {
-      const isDarkMode = darkModeToggle.checked;
+    lightModeToggle.addEventListener("change", function () {
+      const isLightMode = lightModeToggle.checked;
   
-      // Check if dark mode is already in the desired state
-    if (isDarkMode !== document.body.classList.contains("dark-mode")) {
-      // Update body class and store the user's preference in local storage
-      document.body.classList.toggle("dark-mode", isDarkMode);
-      localStorage.setItem("darkMode", isDarkMode.toString());
-    }
+      // Check if light mode is already in the desired state
+      if (isLightMode !== document.body.classList.contains("light-mode")) {
+        // Update body class and store the user's preference in local storage
+        document.body.classList.toggle("light-mode", isLightMode);
+        localStorage.setItem("lightMode", isLightMode.toString());
+      }
     });
-  });
+});
+
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
 // Captcha Function
 let captcha;
