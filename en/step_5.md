@@ -630,12 +630,47 @@ Open `index.html`.
 
 **Click the Run button** to see your changes.
 
-**Debug step:**
+Toggle the light mode switch on and off to see your website theme colours change.
+
+**Debug step (script.js):**
 + Ensure all your code is indented correctly inside EventListeners.
 + Ensure all your code is indented correctly inside `if` statments.
 + Ensure you have closed all parentheses `()`
 + Ensure you have closed all curly braces `{}`
 
 --- /task ---
+
+--- task ---
+
+Open `comicbook.html`.
+
+Add the toggle switch code to the `<header>` element, below the `<nav>` tags.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 19
+line_highlights: 19-25
+---
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="lightModeToggle" />
+          <span class="slider"></span>
+      </label>
+      <span class="toggle-label material-symbols-outlined">light_mode</span>
+    </div>
+      
+--- /code ---
+
+--- /task ---
+
+**Click the Run button** to see your changes.
+Your toggle switch should appear in your nav bar aligned to the right of your menu items.
+
+Toggle the switch on and off to see your website theme colours change.
+
+Navigate to the `index.html` page to check that your preference stays on.
 
 Great work! You have created a toggle switch that changes your website theme colours. Next, you will secure your content so users have to be verified before they gain access.
