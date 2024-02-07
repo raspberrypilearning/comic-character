@@ -152,10 +152,6 @@ line_highlights: 24-25
 
 -- task ---
 
-
-
-
-
 --- code ---
 ---
 language: html
@@ -180,9 +176,7 @@ line_highlights: 22-25
 
 -- task ---
 
-
-
-
+Add a `Submit` button so your users can submit their captcha text.
 
 --- code ---
 ---

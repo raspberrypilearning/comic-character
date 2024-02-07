@@ -5,7 +5,7 @@ In this step you will reate an interactive hero slider for your webpage. Users c
 
 --- task ---
 
-Open the [Comic Character starter project](https://staging-editor.raspberrypi.org/en/projects/comic-character-starter).
+Open the [Comic Character starter project](https://staging-editor.raspberrypi.org/en/projects/comic-character-starter){:target="_blank"}.
 
 --- /task ---
 
