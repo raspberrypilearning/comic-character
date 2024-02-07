@@ -266,7 +266,7 @@ You will check if the user's preference for light mode is stored in the browser'
 --- collapse ---
 
 ---
-title: What does `===` mean?
+title: What does === mean?
 ---
 
 In JavaScript, `===` is a strict equality operator. It checks if two values are not only equal in value but also of the same data type. If both the value and the data type are the same, `===` returns true; otherwise, it returns false.
@@ -455,6 +455,7 @@ const day = "Monday";
 --- task ---
 
 Add an `if` statement inside your `lightModeToggle.addEventListener` method.
+
 --- code ---
 ---
 language: js
