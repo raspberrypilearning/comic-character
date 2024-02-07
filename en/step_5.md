@@ -168,6 +168,60 @@ You will give your toggle switch functionality by using a DOM method: EventListe
 
 An EventListener waits for a specific action, like a button click, and then triggers a response to that action.
 
+--- collapse ---
+
+---
+title: What are local storage preferences?
+
+---
+
+Local storage in web development is a way to store data on a user's browser that persists even after the user closes the browser or navigates away from the page. It provides a simple key-value pair storage system that uses local storage to save and retrieve user preferences or settings.
+
+1. **Local Storage:**
+   - A small storage space available in a user's web browser.
+   - Data stored in local storage remains on the user's device even after they close the browser.
+
+2. **Preferences:**
+   - User-specific choices or settings, such as theme preferences, language selection, or any customizations.
+
+3. **Storing Preferences in Local Storage:**
+   - Developers can use local storage to save and retrieve user preferences.
+   - Preferences are often stored as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
+
+A simple JavaScript example:
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+// Check if light mode preference is stored in local storage
+const isLightMode = localStorage.getItem("lightMode") === "true";
+
+// Set initial light mode state based on the stored preference
+document.body.classList.toggle("light-mode", isLightMode);
+
+// Example of setting the light mode preference
+// Assuming a checkbox with id "lightModeToggle"
+const lightModeToggle = document.getElementById("lightModeToggle");
+
+lightModeToggle.addEventListener("change", function () {
+  const isLightMode = lightModeToggle.checked;
+
+  // Update body class and store the user's preference in local storage
+  document.body.classList.toggle("light-mode", isLightMode);
+  localStorage.setItem("lightMode", isLightMode.toString());
+});
+
+--- /code ---
+
+In this example, the user's preference for light mode is stored in local storage, and it's retrieved when the page loads. 
+
+The preference is also updated when the user interacts with a toggle switch on the page. Storing preferences in local storage allows websites to provide a more personalised experience for users.
+
+--- /collapse ---
+
 --- task ---
 
 Open `script.js` to create the light mode function.
