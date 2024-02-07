@@ -392,7 +392,7 @@ If it does not, an action or change needs to occur.
 --- collapse ---
 
 ---
-title: What is a condiitonal statement?
+title: What is a conditonal statement?
 ---
 
 Conditional statements in JavaScript are used to make decisions in your code based on certain conditions. 
