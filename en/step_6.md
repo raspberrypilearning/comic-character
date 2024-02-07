@@ -202,7 +202,7 @@ Well done, you have created a form for your users to engage with your captcha ch
 
 You can use local storage preferences to check if your user has already completed your captcha check so they are given access.
 
--- task ---
+--- task ---
 
 Open `script.js`
 
