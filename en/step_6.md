@@ -16,11 +16,13 @@ The captcha section you will create contains five elements.
 
 Open index.html.
 
-Add a captcha section with a `<section>` tag. 
+Add a captcha section with a `<section>` tag above the `<header>` element. 
 
 Add the attributes `id="captchaSection"`, `class="center-container"` and the function attribute `onload="generate()"`.
 
-Continue by adding a <h1> element and a <p> element below it with information about the page.
+Continue by adding a `<h1> `element and a `<p>`element below it with information about the page.
+
+This will show a welcoming message for the comic book creator, explaining the purpose of the captcha.
 
 --- code ---
 ---
@@ -69,7 +71,7 @@ line_highlights: 18-20
 
 --- task ---
 
-Also add a text input element with the attributes `type="text"` `id="submit"` and placeholder=" Enter Captcha code".
+Also add a text input element with the attributes type="text" `id="submit"` and placeholder=" Enter Captcha code".
 
 --- code ---
 ---
@@ -152,6 +154,10 @@ line_highlights: 24-25
 
 -- task ---
 
+Add a `Submit` button so your users can submit their captcha text.
+
+Also add a `<p>` element with the attribute `id="key"`.
+
 --- code ---
 ---
 language: html
@@ -167,31 +173,8 @@ line_highlights: 22-25
         <span id="user-input" class="inline">
           <input type="text" id="submit" placeholder=" Enter Captcha code" />
         </span>
-        <span id="image" class="inline" selectable="False"> </span>
-      </section>
-
---- /code ---
-
---- /task ---
-
--- task ---
-
-Add a `Submit` button so your users can submit their captcha text.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 13
-line_highlights: 22-25
----
-      <section id="captchaSection" class="center-container" onload="generate()">
-        <h1>Login</h1>
-        <p>Welcome Comic book creator, enter the captcha to unlock exclusive content!
-        </p>
-        <span id="user-input" class="inline">
-          <input type="text" id="submit" placeholder=" Enter Captcha code" />
+        <span class="inline" onclick="generate()">
+        <i class="fas fa-sync"></i>
         </span>
         <span id="image" class="inline" selectable="False"> </span>
         <input type="Submit" id="btn" onclick="printmsg()" />
@@ -202,56 +185,28 @@ line_highlights: 22-25
 
 --- /task ---
 
--- task ---
+**Click the Run button** to see your changes.
 
++ A new section will appear above your navbar.
++ You will be able to type into the text input field.
++ There will be no captcha code generated yet and the `Submit` button will not work.
 
+**Debug step:**
++ Ensure all your `class` and `id` attributes are correct.
++ Ensure there are spaces between classes.
++ Ensure you have added parentheses `()` on your `onclick` action.
 
+### Create a login check
 
+Well done, you have created a form for your users to engage with your captcha check.
 
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 13
-line_highlights: 22-25
----
-     <div id="successfulLogin" style="display: none;">
-        <header class="header">
-            <a href="index.html" class="logo">Pi Comics</a>
-            <nav class="navbar" id="nav">
-                <a href="index.html">HOME</a>
-                <a href="comicbook.html">CREATE COMIC</a>
-            </nav>
-
---- /code ---
-
---- /task ---
+You can use local storage preferences to check if your user has already completed your captcha check so they are given access.
 
 -- task ---
 
+Open `script.js`
 
-
-
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 13
-line_highlights: 22-25
----
-     <div id="logoutIcon" onclick="logout()">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            </div>
-
---- /code ---
-
---- /task ---
-
---- task ---
-
+Add the captcha check function provided below to your file.
 
 
 --- code ---
@@ -262,10 +217,10 @@ line_numbers: true
 line_number_start: 58
 line_highlights: 68-69
 ---
-    // Captcha Function
+    // Captcha check Function
     let captcha;
 
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     // Check if the user has already successfully logged in during this session
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
@@ -385,6 +340,55 @@ function logout() {
 --- /code ---
 
 --- /task ---
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="successfulLogin" style="display: none;">
+        <header class="header">
+            <a href="index.html" class="logo">Pi Comics</a>
+            <nav class="navbar" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="comicbook.html">CREATE COMIC</a>
+            </nav>
+
+--- /code ---
+
+--- /task ---
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="logoutIcon" onclick="logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+
 
 ### Code to Add
 

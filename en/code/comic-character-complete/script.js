@@ -74,11 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
-
-// Captcha Function
+// Captcha Check Function
 let captcha;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -98,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
         generate();
     }
 });
+
+// Generate Random characters
 
 function generate() {
     // Clear old input
@@ -120,6 +118,7 @@ function generate() {
     captcha.innerHTML = uniquechar;
 }
 
+// Captcha print message function
 function printmsg() {
     const usr_input = document.getElementById("submit").value;
 
@@ -136,6 +135,7 @@ function printmsg() {
         generate();
     }
 }
+
 // Function to logout and clear local storage
 function logout() {
     localStorage.removeItem('isLoggedIn');
@@ -143,3 +143,7 @@ function logout() {
     document.getElementById("successfulLogin").style.display = 'none';
     generate();
 }
+
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;

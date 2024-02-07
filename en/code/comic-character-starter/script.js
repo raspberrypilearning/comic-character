@@ -25,9 +25,13 @@
       // Check if dark mode is already in the desired state
     
       // Update body class and store the user's preference in local storage
-    
-// Update Copyright Year function 
 
-// Captcha Function
+// Captcha Check Function
+
+// Generate Random characters
+
+// Captcha print message function
 
 // Function to logout and clear local storage
+
+// Update Copyright Year function 

@@ -75,9 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Update Copyright Year function 
+// Captcha Check Function
 
-// Captcha Function
+// Generate Random characters
+
+// Captcha print message function
 
 // Function to logout and clear local storage
+
+// Update Copyright Year function 
 

@@ -22,10 +22,6 @@ function prevHero() {
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
-
 // Update Create Comic function 
 function changeDisplay(id) {
     var input = document.querySelector("#" + id);
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-// Captcha Function
+// Captcha Check Function
 let captcha;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -102,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Generate Random characters
 function generate() {
     // Clear old input
     document.getElementById("submit").value = "";
@@ -123,6 +120,7 @@ function generate() {
     captcha.innerHTML = uniquechar;
 }
 
+// Captcha print message function
 function printmsg() {
     const usr_input = document.getElementById("submit").value;
 
@@ -139,6 +137,7 @@ function printmsg() {
         generate();
     }
 }
+
 // Function to logout and clear local storage
 function logout() {
     localStorage.removeItem('isLoggedIn');
@@ -146,3 +145,7 @@ function logout() {
     document.getElementById("successfulLogin").style.display = 'none';
     generate();
 }
+
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
