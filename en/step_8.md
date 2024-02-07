@@ -69,6 +69,31 @@ Add to main
             <p id="summary-paragraph"></p>
         </section>
 
+
+
+-- task ---
+
+
+
+
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 13
+line_highlights: 22-25
+---
+     <div id="logoutIcon" onclick="logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+--- /code ---
+
+--- /task ---
+
+
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 Summary or upgrade project task
