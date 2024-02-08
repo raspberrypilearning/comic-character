@@ -1,7 +1,7 @@
 ## Protect your content
 
 You will now add captcha verification to your website. Captcha is used as a form of security to protect a page from unwanted activity or bots. It works similar to a password, except that it is generated randomly every single time.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 The captcha section you will create contains five elements.
 + a "text" type `<input> `field that is used to compare to the captcha generated
@@ -152,7 +152,7 @@ line_highlights: 24-25
 
 --- /task ---
 
--- task ---
+--- task ---
 
 Add a `Submit` button so your users can submit their captcha text.
 

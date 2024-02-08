@@ -65,9 +65,9 @@ line_highlights: 24-25
       <main>
         <section class="hero-container">
           <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey_hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina_hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton_hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
         </section>
 
@@ -100,8 +100,8 @@ line_highlights: 27-28
         <section class="hero-container">
           <div class="hero-slider">
             <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
           <button class="hero-nav-btn prev">❮</button>
           <button class="hero-nav-btn next">❯</button>
@@ -132,8 +132,8 @@ line_highlights: 27-28
         <section class="hero-container">
           <div class="hero-slider">
             <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-hero.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-hero.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
           <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
           <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
