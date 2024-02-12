@@ -13,7 +13,7 @@ The website also features light and dark modes and includes a captcha for exclus
 You will:
 + Create an image slider that navigates through images
 + Add form and input elements to create a superhero character
-+ Use Javascript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
++ Use JavaScript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
 + Use Javascript to show/hide elements on your website
 + Apply light mode/ dark mode themes to your website
 + Use local storage to store user preferences

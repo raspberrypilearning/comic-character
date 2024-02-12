@@ -12,7 +12,7 @@ What does this code do when the "submit-button" is clicked?
 
 --- code ---
 ---
-language: javascript
+language: JavaScript
 filename: script.js
 line_numbers: true
 line_number_start: 

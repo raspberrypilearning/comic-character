@@ -19,7 +19,7 @@ Your starter project contains:
 
 This project already contains a navbar and a hero image. 
 
-The **javascript** file has already been linked to your pages just before the closing `</body>` tag.
+The **JavaScript** file has already been linked to your pages just before the closing `</body>` tag.
 
 You will add more images to the hero section to create a series of slides.
 
@@ -254,12 +254,12 @@ line_highlights: 3
 title: What does the Document Object Model do exactly?
 ---
 
-The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a web page dynamically.
+The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a webpage dynamically.
 
 The DOM allows developers to interact using the following methods:
 
 + Dynamic Interaction:
-It allows dynamic interaction with the web page. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
+It allows dynamic interaction with the webpage. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
 
 + Event Handling:
 The DOM enables the handling of user actions or events, such as clicks or keyboard inputs. Developers can link event listeners to specific elements and run custom code in response to these events.
@@ -268,7 +268,7 @@ The DOM enables the handling of user actions or events, such as clicks or keyboa
 Developers can add, delete, or modify elements and content on the page dynamically. This is commonly used to update the page without requiring a full page reload.
 
 + Data Exchange:
-It facilitates the exchange of data between the web page and the server. 
+It facilitates the exchange of data between the webpage and the server. 
 
 --- /collapse ---
 

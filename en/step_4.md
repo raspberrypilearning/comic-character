@@ -9,7 +9,7 @@ You will create functions that will use the `Submit` buttons as a trigger.
 
 When your user clicks `Submit`, the functions will take the value they enter, hide where they type it, and show a cool display of what they wrote! 
 
-You will use more DOM methods to manipulate your web page and create interactions.
+You will use more DOM methods to manipulate your webpage and create interactions.
 
 --- collapse ---
 
