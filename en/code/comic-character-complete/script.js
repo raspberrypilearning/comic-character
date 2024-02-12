@@ -82,15 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (isLoggedIn === 'true') {
-        // If already logged in, hide the captcha section and show the successful login section
+        // If already logged in, hide the CAPTCHA section and show the successful login section
         document.getElementById("captchaSection").style.display = 'none';
         document.getElementById("successfulLogin").style.display = 'block';
     } else {
-        // If not logged in, show the captcha section
+        // If not logged in, show the CAPTCHA section
         document.getElementById("captchaSection").style.display = 'block';
         document.getElementById("successfulLogin").style.display = 'none';
 
-        // Call generate function to load captcha
+        // Call generate function to load CAPTCHA
         generate();
     }
 });
@@ -101,13 +101,13 @@ function generate() {
     // Clear old input
     document.getElementById("submit").value = "";
 
-    // Access the element to store the generated captcha
+    // Access the element to store the generated CAPTCHA
     captcha = document.getElementById("image");
     let uniquechar = "";
 
     const randomchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    // Generate captcha for length of 5 with random character
+    // Generate CAPTCHA for length of 5 with random character
     for (let i = 0; i < 5; i++) {
         uniquechar += randomchar.charAt(
             Math.random() * randomchar.length
@@ -118,11 +118,11 @@ function generate() {
     captcha.innerHTML = uniquechar;
 }
 
-// Captcha print message function
+// CAPTCHA print message function
 function printmsg() {
     const usr_input = document.getElementById("submit").value;
 
-    // Check whether the input is equal to the generated captcha or not
+    // Check whether the input is equal to the generated CAPTCHA or not
     if (usr_input == captcha.innerHTML) {
         document.getElementById("key").innerHTML = "Matched";
         // Store the successful login state in local storage

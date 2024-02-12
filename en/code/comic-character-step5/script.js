@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Captcha Check Function
+// CAPTCHA Check Function
 
 // Generate Random characters
 
-// Captcha print message function
+// CAPTCHA print message function
 
 // Function to logout and clear local storage
 
