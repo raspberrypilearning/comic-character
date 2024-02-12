@@ -1,7 +1,7 @@
 ## Create hero image slider
 
 In this step you will create an interactive hero slider for your webpage. Users can navigate through different hero images using buttons on the slider.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 --- task ---
 
@@ -15,13 +15,13 @@ Your starter project contains:
 + the images you will use in the project
 + a JavaScript file to make your website interactive and engaging
 
-### Add more images to the hero image container
+### Add more images to the hero container
 
 This project already contains a navbar and a hero image. 
 
 The **JavaScript** file has already been linked to your pages just before the closing `</body>` tag.
 
-You will add more images to the hero section to create a series of slides.
+You will add more images to the hero container to create a series of slides.
 
 Each slide will contain a different superhero image and you will make it interactive using JavaScript.
 
@@ -51,7 +51,9 @@ Open the index.html file.
 
 Find the `<main>` tag.
 
-Add two more `<span>` elements, each containing `<img>` tags inside the `<div>`tags with the class attribute `hero-slider`. 
+Add two more `<span>` elements inside the `<div>`. 
+
+Each `<span>` should have the class attribute `hero-slide`, contain an `<img>` attribute and have alt text. 
 
 --- code ---
 ---
@@ -75,7 +77,9 @@ line_highlights: 24-25
 
 --- /task ---
 
-Notice that the class selectors to style the slider have already been provided.
+Notice that the code provided contains class attributes. 
+
+These selectors have already been created in your `styles.css` file to style the slider.
 
 To navigate through the slides, add nav buttons inside the `hero-container` section.
 
