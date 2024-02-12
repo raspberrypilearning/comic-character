@@ -31,7 +31,7 @@ Each slide will contain a different superhero image and you will make it interac
 title: How does JavaScript make websites interactive?
 ---
 
-JavaScript is a powerful language that provides tools to allow developers create interactive websites by controlling the webpage content and behaviour. In this project we will focus on the following tools:
+JavaScript is a powerful language that provides tools to allow developers create interactive websites, by controlling the webpage content and behaviour. In this project we will focus on the following tools:
 + DOM Manipulation
 + Event Handling
 + User input validation
@@ -65,9 +65,9 @@ line_highlights: 24-25
       <main>
         <section class="hero-container">
           <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
         </section>
 
@@ -99,9 +99,9 @@ line_highlights: 27-28
       <main>
         <section class="hero-container">
           <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
           <button class="hero-nav-btn prev">❮</button>
           <button class="hero-nav-btn next">❯</button>
@@ -131,9 +131,9 @@ line_highlights: 27-28
       <main>
         <section class="hero-container">
           <div class="hero-slider">
-            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A female superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="safina-cape.jpg" alt="A male superhero character with black hair, wearing a red and white costume and red cape in front of a blue and yellow background"> </span>
-            <span class="hero-slide"><img src="layton-slider.jpg" alt="A male superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
+            <span class="hero-slide"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape in front of a blue and yellow background"> </span>
+            <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"> </span>
           </div>
           <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
           <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
