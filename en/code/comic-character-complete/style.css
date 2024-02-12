@@ -360,61 +360,6 @@ input{
 /* Responsive styles */
 
 
-@media only screen and (max-width: 768px) {
-  .header {
-    padding: 20px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: #333;
-    z-index: 1;
-  }
-
-  .navbar.show {
-    display: flex;
-  }
-
-  .navbar a {
-    margin: 10px 0;
-  }
-
-    .menu-icon {
-      display: block;
-  }
-
-  .toggle-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-
-  .toggle-label {
-      margin-left: 10px;
-      color: #fff;
-      order: 1; /* Reorder the label for proper display on small screens */
-  }
-
-  #logoutIcon {
-      order: 2; /* Reorder the logout icon for proper display on small screens */
-  }
-
-
-  .hero-container {
-    height: 300px;
-  }
-
-  .hero-slide img {
-    height: 100%;
-  }
-  
-}
-
 
 /* Light Mode Styles */
 body.light-mode {
