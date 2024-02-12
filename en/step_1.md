@@ -33,7 +33,7 @@ Explore the Superhero Website.
 + Toggle the light mode button to see the theme colours on the site change.
 + Navigate to the Comic book page, complete the input fields to create your own superhero chcracter.
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="1400" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
 </div>
 
