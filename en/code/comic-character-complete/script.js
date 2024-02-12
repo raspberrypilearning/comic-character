@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Captcha Check Function
+// CAPTCHA Check Function
 let captcha;
 
 document.addEventListener("DOMContentLoaded", function () {
