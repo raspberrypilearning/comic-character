@@ -17,7 +17,7 @@ You will:
 + Use Javascript to show/hide elements on your website
 + Apply light mode/ dark mode themes to your website
 + Use local storage to store user preferences
-+ Use Captcha to protect your content
++ Use CAPTCHA to protect your content
 
 
 --- no-print ---
@@ -28,7 +28,7 @@ You will:
 <div style="flex-basis: 175px; flex-grow: 1">  
 Explore the Superhero Website. 
 
-+ Type in the captcha characters to access the site.
++ Type in the CAPTCHA characters to access the site.
 + Once you have access, click the arrows on the home page slider to navigate through the images .
 + Toggle the light mode button to see the theme colours on the site change.
 + Navigate to the Comic book page, complete the input fields to create your own superhero chcracter.
