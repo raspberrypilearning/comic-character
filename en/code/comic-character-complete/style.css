@@ -417,8 +417,8 @@ input{
 
 /* Light Mode Styles */
 body.light-mode {
-  background: linear-gradient(to right, #d2cfcf, #bcb7bc);
-  color: #ffffff;
+  background: linear-gradient(to right, #515152, #474747);
+  color: #fff;
 }
 
 .light-mode .navigation {
@@ -426,17 +426,17 @@ body.light-mode {
 }
 
 .light-mode .year {
-  color: #fff;
+  color: #000;
 }
 
 
 .light-mode .logo {
-  color: rgb(243, 239, 239);
+  color: #000;
   
 }
 
 .light-mode .navbar a {
-color: #ffffff;
+color: #000;
 }
 
 .light-mode .header {
@@ -445,7 +445,7 @@ background: #e6b400;
 
 .light-mode footer {
 background-color: #e6b400;;
-color: #ffffff;
+color: #000;
 
 }
 
