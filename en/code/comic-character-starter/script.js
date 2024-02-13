@@ -2,11 +2,11 @@
 
 // Place Hero slider next button function here 
 
-    // Function to update the slider
+    // Update the slider
 
 // Place Hero slider previous button function here 
 
-    // Function to update the slider
+    // Update the slider
 
 // Update Create Comic function 
 

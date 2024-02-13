@@ -81,11 +81,11 @@ Notice that the code provided contains class attributes.
 
 These selectors have already been created in your `styles.css` file to style the slider.
 
-To navigate through the slides, add nav buttons inside the `hero-container` section.
+To navigate through the slides, add nav buttons inside the `<section>` that has the `hero-container` class’.
 
 --- task ---
 
-Add `<button>` elements below the `hero-container`. 
+Add `<button>` elements within the section that uses the hero-container class. 
 
 One for the previous button with the attribute `class="hero-nav-btn prev"`.
 
@@ -113,13 +113,27 @@ line_highlights: 27-28
 
 --- /code ---
 
+Each button is styled using the `hero-nav-btn` class, but each button then has a separate class applied (prev and next). This positions the ‘prev’ button to the left and the ‘next’ button on the right.
+
 --- /task ---
+
+
+**Click the Run button** to see your changes.
+
+The buttons will show on your hero slide but there will be no functionality when you click them.
+
+![Preview of the hero slider image with the previous arrow button shown to the left of the image and the next arrow button shown to the right of the image ](images/buttons-slider.png) 
+
+**Debug step:** 
++ Check that your classes have `"` marks around them.
++ Check that the `src` attribute for each `<img>` element contains the correct file names.
++ Check that the `.hero-slider` class is applied to the `<div>` and each <span> element has the `.hero-slide` class.
 
 --- task ---
 
-Add the `onclick` attribute to the `prevHero` button element.
+Add the `onclick` attribute to the button element with `class="hero-nav-btn prev"`.
 
-Also add the `onclick` attribute to the `nextHero`button element.
+Also add the `onclick` attribute to the button element with `class="hero-nav-btn next"`.
 
 This will trigger an action when you click either button using the JavaScript functions you will create.
 
@@ -147,29 +161,17 @@ line_highlights: 27-28
 
 --- /task ---
 
-**Click the Run button** to see your changes.
-
-The buttons will show on your hero slide but there will be no functionality when you click them.
-
-**Debug step:** 
-+ Check that your classes have `"` marks around them.
-+ Check that your img src attribute contains the correct file names.
-+ Check that the classes `.hero-slider` and `.hero-slide` exist in the correct elements provided.
-
-**TODO** Create image to show prev and next buttons showing on the slider.
-
-
 ### Create the function variables
 
 You will use JavaScript to control the nav buttons to switch between slides.
 
 --- task ---
 
-Open the `script.js`file.
+Open the `script.js` file.
 
 Create a variable to store and keep track of the current slide index.
 
-Set the value to 0.
+Set the value to `0`.
 
 --- code ---
 ---
@@ -190,10 +192,10 @@ The `let` keyword is used to declare a variable which can only be used within th
 --- collapse ---
 
 ---
-title: What is a variable 
+title: What is a variable? 
 ---
 
-A variable in programming is a named storage that holds a value. The value can be changed when the program runs.
+A variable in programming is a named area of memory that holds a value. The value can be changed when the program runs.
 For example, `let age = 30;` `age` is the variable storing the value `30`
 
 --- /collapse ---
@@ -214,7 +216,7 @@ For example when given a list `["Fruits", "Clothes", "Toys"]`, "Fruits" is at in
 
 Add a constant to store the length of the total slides in the list of slides.
 
-A constant is a variable that can't change; once set, its value stays the same.
+A constant is a named data value that can't change; once set, its value stays the same.
 
 --- code ---
 ---
@@ -278,11 +280,28 @@ It facilitates the exchange of data between the webpage and the server.
 
 --- /task ---
 
-### Control the Next slider button
+### Program the Next button on the slider
 
 --- task ---
 
 Create a function `nextHero()` which will define what happens when users click the `>` button.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 5
+line_highlights: 6-8
+---
+      // Place Hero slider next button function here 
+      function nextHero() {
+    
+      }
+      
+--- /code ---
+
+--- /task ---
 
 --- collapse ---
 
@@ -290,7 +309,9 @@ Create a function `nextHero()` which will define what happens when users click t
 title: What is a function and how are they used in JavaScript?
 ---
 
-In JavaScript, a function is a reusable block of code that performs a specific task. It helps keep your code organized and efficient.
+In JavaScript, a function is a reusable block of code that performs a specific task. 
+
+Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
 
 Writing a Function:
 
@@ -327,28 +348,7 @@ line_highlights:
 
 You call the function addNumbers with values 5 and 8, and it gives back the sum, which you can then use or display.
 
-Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
-
 --- /collapse ---
-
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 5-8
----
-      // Place Hero slider next button function here 
-      function nextHero() {
-    
-      }
-      
---- /code ---
-
---- /task ---
-
 
 --- collapse ---
 
@@ -362,86 +362,86 @@ When writing functions, you can follow these steps so your syntax is correct.
 
 2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
 
---- code ---
----
-language: js
-filename: 
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-      function sayHello
+      --- code ---
+      ---
+      language: js
+      filename: 
+      line_numbers: true
+      line_number_start: 
+      line_highlights: 
+      ---
+            function sayHello
 
---- /code ---
+      --- /code ---
       
 
-3. Parameters: put parentheses () after the function name. Inside these parentheses, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
+3. Parameters: put brackets () after the function name. Inside these brackets, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
 
---- code ---
----
-language: js
-filename: 
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-      function sayHello()
+      --- code ---
+      ---
+      language: js
+      filename: 
+      line_numbers: true
+      line_number_start: 
+      line_highlights: 
+      ---
+            function sayHello()
 
---- /code ---
+      --- /code ---
 
-4. Curly Braces: open curly braces { to define the block of code that the function will execute. This is where you write the instructions for your function.
-      function sayHello() {
+4. Curly Braces: open curly braces `{` to define the block of code that the function will execute. This is where you write the instructions for your function.
+      `function sayHello() {`
 
 5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
       
---- code ---
----
-language: js
-filename: 
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-        function sayHello() {
-          console.log("Hello, World!");
+      --- code ---
+      ---
+      language: js
+      filename: 
+      line_numbers: true
+      line_number_start: 
+      line_highlights: 
+      ---
+            function sayHello() {
+            console.log("Hello, World!");
 
---- /code ---
-      
+      --- /code ---
+            
        
 
 6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
 
---- code ---
----
-language: js
-filename: 
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-        function sayHello() {
-          console.log("Hello, World!");
-        }
+      --- code ---
+      ---
+      language: js
+      filename: 
+      line_numbers: true
+      line_number_start: 
+      line_highlights: 
+      ---
+            function sayHello() {
+            console.log("Hello, World!");
+            }
 
---- /code ---
+      --- /code ---
     
 
 Now, you've created a simple function named sayHello. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console.
 
-Using the function:
+7. Using the function: you can use the function by writing the syntax shown below.
 
---- code ---
----
-language: js
-filename: 
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-        sayHello(); // Outputs: Hello, World!
+      --- code ---
+      ---
+      language: js
+      filename: 
+      line_numbers: true
+      line_number_start: 
+      line_highlights: 
+      ---
+            sayHello(); // Outputs: Hello, World!
 
---- /code ---
-      
+      --- /code ---
+            
 
 --- /collapse ---
 
@@ -452,6 +452,24 @@ Update the next slide index by counting up by 1 (+1).
 You also have to check if there are any remaining slides to show, using the modulus operator.
 
 If there are no remainder slides, the `currentHeroIndex`will be set back to 0.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 5
+line_highlights: 7
+---
+      // Place Hero slider next button function here  
+      function nextHero() {
+        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+
+      }
+      
+--- /code ---
+
+--- /task ---
 
 --- collapse ---
 
@@ -471,33 +489,15 @@ Arithmetic Operators:
 
 Example:
 
-`let result = 10 % 3; `// result will be 1 (remainder of 10 divided by 3)
+`let result = 10 % 3;` // result will be 1 (remainder of 10 divided by 3)
 
 --- /collapse ---
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
----
-      // Place Hero slider next button function here  
-      function nextHero() {
-        currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-
-      }
-      
---- /code ---
-
---- /task ---
 
 You will need to use the DOM to update a slider's position based on the current hero index, making it slide to a specific position. .
 
 --- task ---
 
-Add a DOM method to return the `hero-slider` class using the querySelector.
+Add a DOM method using the querySelector to return the `hero-slider` class .
 
 Save the method call into a constant.
 
@@ -540,7 +540,7 @@ line_highlights: 11
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
-        // Function to update the slider
+        // Update the slider
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
 
@@ -568,7 +568,7 @@ line_highlights: 12
       function nextHero() {
         currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
 
-        // Function to update the slider
+        // Update the slider
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
         heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
@@ -587,18 +587,17 @@ Open the index.html file to preview your changes.
 When you click the `>` button on your hero slider, your slider should navigate to the next hero image.
 
 **Debug step:**
-+ Ensure you have created all variables and constants correctly using the right keywords.
++ Ensure you have created all variables `let` and constants `const` correctly using the right keywords.
 + Ensure your variable and constant names are written correctly.
 + Ensure you have used the right syntax when creating the functions including `()` and `{}`.
 + Ensure that you have used + 1 for the `>` next button logic:
       `(currentHeroIndex + 1) % totalHeroSlides`
-+ Ensure that you have used the correct indents when creating the function.
 + Ensure you add the `onclick` trigger method as an attribute to each HTML button element.
 + Ensure you have added `;` a semicolon at the end of your declarations.
 
 --- /task ---
 
-### Control the Previous slider button
+### Program the Previous button on the slider
 
 --- task ---
 
@@ -670,7 +669,7 @@ line_highlights: 20-22
       function prevHero() {
         currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
 
-       // Function to update the slider
+       // Update the slider
         const heroSlider = document.querySelector('.hero-slider');
         const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
         heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`; 
@@ -688,13 +687,8 @@ Open the index.html file to preview your changes.
 When you click the `<` button on your hero slider, your slider should navigate to the previous hero image.
 
 **Debug step:**
-+ Ensure you have created all variables and constants correctly using the right keywords.
-+ Ensure your variable and constant names are written correctly.
-+ Ensure you have used the right syntax when creating the functions including `()` and `{}`
 + Ensure that you have used - 1 for the `<` previous button logic:
       `(currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides`
-+ Ensure you add the `onclick` trigger method as an attribute to each button element.
-+ Ensure you have added `;` a semicolon at the end of your declarations.
 
 --- /task ---
 
