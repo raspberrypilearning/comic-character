@@ -1,54 +1,63 @@
-// Place Hero slider variables here 
-let currentHeroIndex = 0;
-const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
-// Place Hero slider next button function here 
-function nextHero() {
-    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
+// Create constants for superhero form
 
-    // Update the slider
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
+const characterSheet = document.querySelector("#character-sheet");
+const summary = document.querySelector("#summary-section");
 
-// Place Hero slider previous button function here 
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-
-    // Update the slider
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
-
-// Update Create Comic function 
-function changeDisplay(id) {
-    var input = document.querySelector("#" + id);
-    var inputSection = document.querySelector("#" + id + "-input");
-    var displaySection = document.querySelector("#" + id + "-display");
-    var valueDisplay = document.querySelector("#" + id + "-span");
-
-    valueDisplay.textContent = input.value;
-    inputSection.style.display = "none";
-    displaySection.style.display = "flex";
-
-    displaySummary(); // Call displaySummary after all changeDisplay actions
-}
-
+// Function to display summary
 function displaySummary() {
     var summaryParagraph = document.getElementById("summary-paragraph");
 
-    var name = document.getElementById("name-span").textContent;
-    var abilities = document.getElementById("class-span").textContent;
-    var appearance = document.getElementById("description-span").textContent;
-    var origin = document.getElementById("origin-span").textContent;
+    var nameinput = document.getElementById("name-text").value;
+    var ability = document.getElementById("ability-choice").value;
+    var appearance = document.getElementById("appearance-text").value;
+    var origin = document.getElementById("origin-text").value;
 
-    summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    summaryParagraph.textContent = `Your superhero name is ${nameinput}. 
+    Your abilities are ${ability}. Your appearance is ${appearance}. 
     Your origin story is ${origin}.`;
 
-    document.getElementById("summary-section").style.display = "block";
+    characterSheet.style.display = "none";
+    summary.style.display = "flex";
+}
+
+function changeSummary() {
+
+    characterSheet.style.display = "block";
+    summary.style.display = "none";
+}
+
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var nameinput = document.getElementById("name-text").value;
+    var ability = document.getElementById("ability-choice").value;
+    var appearance = document.getElementById("appearance-text").value;
+    var origin = document.getElementById("origin-text").value;
+
+    var alertMessage = ""
+
+    if (nameinput == ""){
+        alertMessage = "Please enter a name"; 
+    } else if (ability == "") {
+        alertMessage = "Please choose an ability";
+    }  else if (appearance == "") {
+        alertMessage = "Please describe the appearance";
+    } else if (origin == "") {
+        alertMessage = "Please write the origin story";
+    } 
+    
+    if (alertMessage != ""){
+        alertBox.innerHTML = alertMessage;
+        alertBox.style.display = "block";
+    } else {
+        alertBox.style.display = "none";
+        displaySummary();
+    }
 }
 
 // Light mode function 
@@ -74,76 +83,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// CAPTCHA Check Function
-let captcha;
+// Place Hero slider variables here 
+let currentHeroIndex = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Check if the user has already successfully logged in during this session
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+// Change Hero function
+function changeHero(direction) {
+    //Turn the current slide off
+    heroSlides[currentHeroIndex].classList.remove("active");
 
-    if (isLoggedIn === 'true') {
-        // If already logged in, hide the CAPTCHA section and show the successful login section
-        document.getElementById("captchaSection").style.display = 'none';
-        document.getElementById("successfulLogin").style.display = 'block';
-    } else {
-        // If not logged in, show the CAPTCHA section
-        document.getElementById("captchaSection").style.display = 'block';
-        document.getElementById("successfulLogin").style.display = 'none';
+    // Find the next slide
+    currentHeroIndex = currentHeroIndex + direction;
 
-        // Call generate function to load CAPTCHA
-        generate();
-    }
-});
-
-// Generate Random characters
-
-function generate() {
-    // Clear old input
-    document.getElementById("submit").value = "";
-
-    // Access the element to store the generated CAPTCHA
-    captcha = document.getElementById("image");
-    let uniquechar = "";
-
-    const randomchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    // Generate CAPTCHA for length of 5 with random character
-    for (let i = 0; i < 5; i++) {
-        uniquechar += randomchar.charAt(
-            Math.random() * randomchar.length
-        );
+    // Wrap around
+    if (currentHeroIndex < 0){
+        currentHeroIndex = heroSlides.length - 1;
+    } else if (currentHeroIndex > heroSlides.length - 1) {
+        currentHeroIndex = 0;
     }
 
-    // Store generated input
-    captcha.innerHTML = uniquechar;
+    // Update the slider
+    heroSlides[currentHeroIndex].classList.add("active");
 }
 
-// CAPTCHA print message function
-function printmsg() {
-    const usr_input = document.getElementById("submit").value;
 
-    // Check whether the input is equal to the generated CAPTCHA or not
-    if (usr_input == captcha.innerHTML) {
-        document.getElementById("key").innerHTML = "Matched";
-        // Store the successful login state in local storage
-        localStorage.setItem('isLoggedIn', 'true');
-        document.getElementById("captchaSection").style.display = 'none';
-        document.getElementById("successfulLogin").style.display = 'block';
-        generate();
-    } else {
-        document.getElementById("key").innerHTML = "not Matched";
-        generate();
-    }
-}
-
-// Function to logout and clear local storage
-function logout() {
-    localStorage.removeItem('isLoggedIn');
-    document.getElementById("captchaSection").style.display = 'block';
-    document.getElementById("successfulLogin").style.display = 'none';
-    generate();
-}
-
-// Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
