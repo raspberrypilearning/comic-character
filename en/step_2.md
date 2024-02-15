@@ -233,13 +233,15 @@ line_highlights: 3
 
 --- /task ---
 
-You will need to define the length of the total number of slides using the Document Object Model (DOM).
+You will need to define the length of the total number of slides so that…….[insert reason here]. 
 
-The DOM uses a method called `querySelectorAll` which can find and return all elements in a document that match a specified CSS selector.
+You can use the `querySelectorAll` method for this. `querySelectorAll` returns all elements in a document that match a specified CSS selector. 
+
+`querySelectorAll` is a method used using the Document Object Model (DOM).
 
 --- task ---
 
-Add the `document.querySelectorAll`method and store it as a value inside the `totalHeroSlides` constant.
+Add the `document.querySelectorAll` method and store it as a value inside the `totalHeroSlides` constant.
 
 --- code ---
 ---
@@ -255,6 +257,8 @@ line_highlights: 3
 --- /code ---
 
 --- collapse ---
+
+--- /task ---
 
 ---
 title: What does the Document Object Model do exactly?
@@ -277,8 +281,6 @@ Developers can add, delete, or modify elements and content on the page dynamical
 It facilitates the exchange of data between the webpage and the server. 
 
 --- /collapse ---
-
---- /task ---
 
 ### Program the Next button on the slider
 
@@ -426,9 +428,9 @@ When writing functions, you can follow these steps so your syntax is correct.
       --- /code ---
     
 
-Now, you've created a simple function named sayHello. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console.
+      Now, you've created a simple function named sayHello. 
 
-7. Using the function: you can use the function by writing the syntax shown below.
+7. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console. You can use the function (call it) by writing the syntax shown below.
 
       --- code ---
       ---
@@ -490,6 +492,17 @@ Arithmetic Operators:
 Example:
 
 `let result = 10 % 3;` // result will be 1 (remainder of 10 divided by 3)
+
+--- /collapse ---
+
+-- collapse ---
+
+---
+title: How does the modulus operator work?
+---
+The modulus operator `%` returns the remainder when a number is divided by another. In the 
+
+Example:
 
 --- /collapse ---
 

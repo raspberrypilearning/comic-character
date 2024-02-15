@@ -200,6 +200,145 @@ line_highlights: 28
 
 You can add attributes to input fields to control their behaviour and their interactions.
 
+--- collapse ---
+
+---
+title: What other attributes can I use?
+---
++ type: defines the type of input field. Examples include text, password, checkbox, radio, submit, reset, etc.
+Example: `<input type="text">`
+
++ name: specifies the name of the input field, which is used when submitting the form data to the server.
+Example: `<input type="text" name="username">`
+
++ value: sets the initial or default value of the input field.
+Example: <input type="text" value="Default Text">
+
++ placeholder: provides a short hint that describes the expected value of the input field.
+Example: `<input type="text" placeholder="Enter your name">`
+
++ required: indicates that the input field must be filled out before submitting the form.
+Example: `<input type="text" required>`
+
++ maxlength: specifies the maximum number of characters allowed in a text or password input.
+Example: `<input type="text" maxlength="30">`
+
++ min and max: sets the minimum and maximum values for number or date inputs.
+Example: `<input type="number" min="0" max="100">`
+
+pattern: specifies a regular expression pattern that the input value must match.
+Example: `<input type="text" pattern="[A-Za-z]{3}">`
+
+--- /collapse ---
+
+
+**Click the Run button** to see your changes.
+You will see a title below your text input area.
+
++ Check that you have used the correct `id` for each element
+
+### Design the Superhero ability section 
+
+You will create a select dropdown list for users to choose one option for their superhero's ability..
+
+--- task ---
+
+Add the HTML for creating the ability dropdown list. 
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 36
+line_highlights: 36-44
+---
+
+      <div class="class-section"> <!--Ability section-->
+        <div id="class-input">
+          <label>Abilities:</label>
+            <select id="class">
+              <option value="Flying"> Flying</option>
+              <option value="Invisibility">Invisibility</option>
+              <option value="Time travel">Time travel</option>
+            </select>
+        </div>
+    
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+You will see a dropdown list with three abilities for your users to choose from.
+Click on the arrow to view more options.
+
+**TODO** Create Debug Step
+
+--- /task ---
+
+### Design the Superhero appearance section 
+
+You will add a text area to your form so user's can describe their supehero's appearance.
+
+--- task ---
+
+Add the HTML for creating the appearance description section. 
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 51
+line_highlights: 51-58
+---
+
+      <div class="description-section"> <!--Appearance section-->
+        <div id="description-input">
+          <label>Appearance: </label> 
+          <textarea id="description">Type the appearance of your comic character here....</textarea>
+        </div>
+      </div>
+    
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+You will now see a text area that you can type into.
+
+--- /task ---
+
+### Design the Superhero origin story section 
+
+You will add another text area to your form so users can describe their supehero's origin story.
+
+--- task ---
+
+Add the HTML for creating the origin story description section. 
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 62
+line_highlights: 62-68
+---
+
+      <div class="origin-section">
+        <div id="origin-input">
+          <label>Origin Story: </label> 
+          <textarea id="origin">Type your origin story here....</textarea>
+        </div>
+      </div>
+    
+--- /code ---
+
+**Click the Run button** to see your changes.
+
+--- /task ---
+
+### Show your user their Superhero character story 
+
 --- task ---
 
 Add a `<submit>` button with an `onclick` attribute so users can submit their superhero's name.
@@ -242,294 +381,6 @@ You will see a text input area so your user can type in their superhero's name a
 + Check that you have used the correct `id` for each element
 
 --- /task ---
-
---- collapse ---
-
----
-title: What other attributes can I use?
----
-+ type: defines the type of input field. Examples include text, password, checkbox, radio, submit, reset, etc.
-Example: `<input type="text">`
-
-+ name: specifies the name of the input field, which is used when submitting the form data to the server.
-Example: `<input type="text" name="username">`
-
-+ value: sets the initial or default value of the input field.
-Example: <input type="text" value="Default Text">
-
-+ placeholder: provides a short hint that describes the expected value of the input field.
-Example: `<input type="text" placeholder="Enter your name">`
-
-+ required: indicates that the input field must be filled out before submitting the form.
-Example: `<input type="text" required>`
-
-+ maxlength: specifies the maximum number of characters allowed in a text or password input.
-Example: `<input type="text" maxlength="30">`
-
-+ min and max: sets the minimum and maximum values for number or date inputs.
-Example: `<input type="number" min="0" max="100">`
-
-pattern: specifies a regular expression pattern that the input value must match.
-Example: `<input type="text" pattern="[A-Za-z]{3}">`
-
---- /collapse ---
-
-
-### Update the Superhero name display
-
-You will create a display field that will be updated when your user clicks the submit button.
-
---- task ---
-
-Add the id for styling the display name area.
-
-Add a title for the display.
-
-Use a `<span>` tag to display the superhero name.
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 23
-line_highlights: 31-34
----
-
-      <section> <!--Suoerhero character creation form-->
-        <div class="character-sheet">
-          <div class="name-section"> <!--Name section-->
-            <div id="name-input">
-              <label>Superhero Name:</label>
-              <input type="text" id="name">
-              <button onclick="changeDisplay('name')">Submit <button>
-           </div>
-           <div id="name-display"> <!--Name display-->
-             <h2>Superhero Name:</h2>
-             <span id="name-span"></span>
-           </div>
-         </div>
-       </div>
-      </section>
-    
---- /code ---
-
---- /task ---
-
-**Click the Run button** to see your changes.
-You will see a title below your text input area.
-If you click the Submit button, the display will not update yet.
-
-+ Check that you have used the correct `id` for each element
-
-### Design the Superhero ability section 
-
-You will create a select dropdown list for users to choose one option for their superhero's ability..
-
---- task ---
-
-Add the HTML for creating the ability dropdown list. 
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 36
-line_highlights: 36-45
----
-
-      <div class="class-section"> <!--Ability section-->
-        <div id="class-input">
-          <label>Abilities:</label>
-            <select id="class">
-              <option value="Flying"> Flying</option>
-              <option value="Invisibility">Invisibility</option>
-              <option value="Time travel">Time travel</option>
-            </select>
-            <button onclick="changeDisplay('class')">Submit</button>
-        </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
-You will see a dropdown list with three abilities for your users to choose from.
-Click on the arrow to view more options.
-
-**TODO** Create Debug Step
-
---- /task ---
-
-Add the HTML for updating the ability display area. 
-
---- task ---
-
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 36
-line_highlights: 47-50
----
-
-      <div class="class-section"> <!--Ability section-->
-        <div id="class-input">
-          <label>Abilities:</label>
-            <select id="class">
-              <option value="Flying"> Flying</option>
-              <option value="Invisibility">Invisibility</option>
-              <option value="Time travel">Time travel</option>
-            </select>
-            <button onclick="changeDisplay('class')">Submit
-            </button>
-        </div>
-        <div id="class-display">  <!--Ability display-->
-          <h2>Abilities:</h2>
-          <span id="class-span"></span>
-        </div>
-      </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
-You will see a title below your dropdown menu.
-If you click the Submit button, the display will not update yet.
-
-**TODO** Create Debug Step
-
---- /task ---
-
-### Design the Superhero appearance section 
-
-You will add a text area to your form so user's can describe their supehero's appearance.
-
---- task ---
-
-Add the HTML for creating the appearance description section. 
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 51
-line_highlights: 51-58
----
-
-      <div class="description-section"> <!--Appearance section-->
-        <div id="description-input">
-          <label>Appearance: </label> 
-          <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="changeDisplay('description')">Submit</button>
-        </div>
-      </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
-You will now see a text area that you can type into.
-
---- /task ---
-
---- task ---
-
-Add the HTML for updating the appearance description area. 
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 51
-line_highlights: 57-60
----
-
-      <div class="description-section">
-        <div id="description-input">
-          <label>Appearance: </label> 
-          <textarea id="description">Type the appearance of your comic character here....</textarea>
-          <button onclick="changeDisplay('description')">Submit</button>
-        </div>
-        <div id="description-display">
-          <h2>Appearance:</h2>
-          <span id="description-span"></span>
-        </div>
-      </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
---- /task ---
-
-### Design the Superhero origin story section 
-
-You will add another text area to your form so users can describe their supehero's origin story.
-
---- task ---
-
-Add the HTML for creating the origin story description section. 
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 62
-line_highlights: 62-68
----
-
-      <div class="origin-section">
-        <div id="origin-input">
-          <label>Origin Story: </label> 
-          <textarea id="origin">Type your origin story here....</textarea>
-          <button onclick="changeDisplay('origin')">Submit</button>
-        </div>
-      </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
---- /task ---
-
---- task ---
-
-Add the HTML for updating the origin story description area. 
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 68
-line_highlights: 68-71
----
-
-       <div class="origin-section">
-                <div id="origin-input">
-                    <label>Origin Story: </label> 
-                    <textarea id="origin">Type your origin story here....</textarea>
-                    <button onclick="changeDisplay('origin')">Submit</button>
-                </div>
-                <div id="origin-display">
-                    <h2>Origin Story:</h2>
-                    <span id="origin-span"></span>
-                </div>
-            </div>
-    
---- /code ---
-
-**Click the Run button** to see your changes.
-
---- /task ---
-
-### Show your user their Superhero character story 
 
 Once your users have finished creating their superhero, you can provide a section so they can see a summary of what they have created.
 
