@@ -1,56 +1,33 @@
-// Place Hero slider variables here 
-let currentHeroIndex = 0;
-const totalHeroSlides = document.querySelectorAll('.hero-slide').length;
+// Update Copyright Year function 
+const currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
-// Place Hero slider next button function here 
-function nextHero() {
-    currentHeroIndex = (currentHeroIndex + 1) % totalHeroSlides;
-
-    // Function to update the slider
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
-
-// Place Hero slider previous button function here 
-function prevHero() {
-    currentHeroIndex = (currentHeroIndex - 1 + totalHeroSlides) % totalHeroSlides;
-
-    // Function to update the slider
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlideWidth = document.querySelector('.hero-slide').offsetWidth;
-    heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
-}
-
-// Update Create Comic function 
-function changeDisplay(id) {
-    var input = document.querySelector("#" + id);
-    var inputSection = document.querySelector("#" + id + "-input");
-    var displaySection = document.querySelector("#" + id + "-display");
-    var valueDisplay = document.querySelector("#" + id + "-span");
-
-    valueDisplay.textContent = input.value;
-    inputSection.style.display = "none";
-    displaySection.style.display = "flex";
-
-    displaySummary(); // Call displaySummary after all changeDisplay actions
-}
+const characterSheet = document.querySelector("#character-sheet");
+const summary = document.querySelector("#summary-section");
 
 // Function to display summary
 function displaySummary() {
     var summaryParagraph = document.getElementById("summary-paragraph");
 
-    var name = document.getElementById("name-span").textContent;
-    var abilities = document.getElementById("class-span").textContent;
-    var appearance = document.getElementById("description-span").textContent;
-    var origin = document.getElementById("origin-span").textContent;
+    var name = document.getElementById("name-text").value;
+    var ability = document.getElementById("ability-choice").value;
+    var appearance = document.getElementById("appearance-text").value;
+    var origin = document.getElementById("origin-text").value;
 
     summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    Your abilities are ${ability}. Your appearance is ${appearance}. 
     Your origin story is ${origin}.`;
 
-    document.getElementById("summary-section").style.display = "block";
+    characterSheet.style.display = "none";
+    summary.style.display = "flex";
 }
+
+function changeSummary() {
+
+    characterSheet.style.display = "block";
+    summary.style.display = "none";
+}
+
 
 // Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,13 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// CAPTCHA Check Function
+// Place Hero slider variables here 
+let currentHeroIndex = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
 
-// Generate Random characters
+// Change Hero function
+function changeHero(direction) {
+    //Turn the current slide off
+    heroSlides[currentHeroIndex].classList.remove("active");
 
-// CAPTCHA print message function
+    // Find the next slide
+    currentHeroIndex = currentHeroIndex + direction;
 
-// Function to logout and clear local storage
+    // Wrap around
+    if (currentHeroIndex < 0){
+        currentHeroIndex = heroSlides.length - 1;
+    } else if (currentHeroIndex > heroSlides.length - 1) {
+        currentHeroIndex = 0;
+    }
 
-// Update Copyright Year function 
+    // Update the slider
+    heroSlides[currentHeroIndex].classList.add("active");
+}
+
 
