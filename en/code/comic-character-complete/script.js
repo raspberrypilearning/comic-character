@@ -7,18 +7,18 @@ document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}
 const characterSheet = document.querySelector("#character-sheet");
 const summary = document.querySelector("#summary-section");
 
+const name = document.querySelector("#name-text");
+const ability = document.querySelector("#ability-choice");
+const appearance = document.querySelector("#appearance-text");
+const origin = document.querySelector("#origin-text");
+
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    var summaryParagraph = document.querySelector("#summary-paragraph");
 
-    var nameinput = document.getElementById("name-text").value;
-    var ability = document.getElementById("ability-choice").value;
-    var appearance = document.getElementById("appearance-text").value;
-    var origin = document.getElementById("origin-text").value;
-
-    summaryParagraph.textContent = `Your superhero name is ${nameinput}. 
-    Your abilities are ${ability}. Your appearance is ${appearance}. 
-    Your origin story is ${origin}.`;
+    summaryParagraph.textContent = `Your superhero name is ${name.value}. 
+    Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
+    Your origin story is ${origin.value}.`;
 
     characterSheet.style.display = "none";
     summary.style.display = "flex";
@@ -34,20 +34,15 @@ const alertBox = document.querySelector("#alert");
 
 function validateForm(){
 
-    var nameinput = document.getElementById("name-text").value;
-    var ability = document.getElementById("ability-choice").value;
-    var appearance = document.getElementById("appearance-text").value;
-    var origin = document.getElementById("origin-text").value;
-
     var alertMessage = ""
 
-    if (nameinput == ""){
+    if (name.value == ""){
         alertMessage = "Please enter a name"; 
-    } else if (ability == "") {
+    } else if (ability.value == "") {
         alertMessage = "Please choose an ability";
-    }  else if (appearance == "") {
+    }  else if (appearance.value == "") {
         alertMessage = "Please describe the appearance";
-    } else if (origin == "") {
+    } else if (origin.value == "") {
         alertMessage = "Please write the origin story";
     } 
     
@@ -62,7 +57,7 @@ function validateForm(){
 
 // Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
+    const lightModeToggle = document.querySelector("#lightModeToggle");
   
     // Check if light mode preference is stored in local storage
     const isLightMode = localStorage.getItem("lightMode") === "true";
