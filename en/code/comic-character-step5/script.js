@@ -2,19 +2,21 @@
 const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
 
+// Create constants for superhero form
+
 const characterSheet = document.querySelector("#character-sheet");
 const summary = document.querySelector("#summary-section");
+
+const nameinput = document.getElementById("name-text").value;
+const ability = document.getElementById("ability-choice").value;
+const appearance = document.getElementById("appearance-text").value;
+const origin = document.getElementById("origin-text").value;
 
 // Function to display summary
 function displaySummary() {
     var summaryParagraph = document.getElementById("summary-paragraph");
 
-    var name = document.getElementById("name-text").value;
-    var ability = document.getElementById("ability-choice").value;
-    var appearance = document.getElementById("appearance-text").value;
-    var origin = document.getElementById("origin-text").value;
-
-    summaryParagraph.textContent = `Your superhero name is ${name}. 
+    summaryParagraph.textContent = `Your superhero name is ${nameinput}. 
     Your abilities are ${ability}. Your appearance is ${appearance}. 
     Your origin story is ${origin}.`;
 
@@ -28,6 +30,30 @@ function changeSummary() {
     summary.style.display = "none";
 }
 
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var alertMessage = ""
+
+    if (nameinput == ""){
+        alertMessage = "Please enter a name"; 
+    } else if (ability == "") {
+        alertMessage = "Please choose an ability";
+    }  else if (appearance == "") {
+        alertMessage = "Please describe the appearance";
+    } else if (origin == "") {
+        alertMessage = "Please write the origin story";
+    } 
+    
+    if (alertMessage != ""){
+        alertBox.innerHTML = alertMessage;
+        alertBox.style.display = "block";
+    } else {
+        alertBox.style.display = "none";
+        displaySummary();
+    }
+}
 
 // Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
