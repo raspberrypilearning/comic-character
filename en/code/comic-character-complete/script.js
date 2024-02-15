@@ -30,6 +30,7 @@ function changeSummary() {
     summary.style.display = "none";
 }
 
+// Function to validate the character creation form 
 const alertBox = document.querySelector("#alert");
 
 function validateForm(){
