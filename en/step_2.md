@@ -208,7 +208,7 @@ Note that you have placed the id `#currentYear` within the `querySelector()` bec
 
 --- task ---
 
-Change the content of the `<span>` element (which is currently blank) using `innerHTML`.
+Change the content of the `<span>` element (which is currently blank) using `.innerHTML`.
 
 --- code ---
 ---
@@ -224,15 +224,15 @@ line_highlights: 3
     
 --- /code ---
 
+--- /task ---
+
 The `currentYear` variable is storing the `new Date()` function as a value.
 
 You will need to place `currentYear` inside the `<span>` element once it has been found using its id attribute.
 
---- /task ---
-
 --- task ---
 
-Use an `=` operator to use the HTML element as a container for your `new Date` function.
+Use an `=` operator to use the HTML element as a container for your `new Date()` function.
 
 --- code ---
 ---
@@ -247,7 +247,6 @@ line_highlights: 3
      document.querySelector("#currentYear").innerHTML =
     
 --- /code ---
-
 
 --- /task ---
 
@@ -325,7 +324,7 @@ You can explore other `Date` functions JavaScript provides when creating other p
 title: What other `Date` functions can I use?
 ---
 
-
+You can also learn about other DOM functions you cn use in this and other projects.
 
 --- /collapse ---
 
