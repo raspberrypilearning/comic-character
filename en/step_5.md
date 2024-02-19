@@ -1,642 +1,340 @@
-## Create light mode theme
+## Validate your user's input
 
-In this step, you will create a toggle switch that will allow your users switch between dark mode, which is the original theme colour of your website and light mode. 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+In this step, you will continue building the functionality of your form. You will use JavaScript to add show/hide elements of your form and show a summary display of your user's superhero character. 
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Dark mode and light mode**</span> are user interface themes that change the colour scheme of an application or website based on the user's preference or system settings.
+The `Submit` button on your comicbook page can be used to update each section.
 
-Using these theme colour modes is good for accessibility and dark mode, in particular, is praised for improving readability and reducing eye strain, especially in low-light conditions.
-</p>
+You will create functions that will use the `Submit` buttons as a trigger.
 
-In this project, your users can click a button to change between dark and light modes. The website remembers their option even if they navigate to another page.
+When your user clicks `Submit`, the functions will take the value they enter, hide where they type it, and show a cool display of what they wrote! 
 
-Your `styles.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
-
-#### Add toggle to the header section
-You will need to give your users a way to switch between both themes by using a toglle slider
-
---- task ---
-
-Open `index.html`.
-
-Create a div element inside the header section with the attribute `class="toggle-container"`
-
-Place it below the `<nav>` tags in the `<header>` element.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 19-25
----
-    <div class="toggle-container">
-
-
-
-
-    </div>
-      
---- /code ---
-
---- /task ---
-
-The toggle switch is made up of three elements, `<label>`, `<input>`, and `<span>`.
-
-You have used some of these form field elements previously, when you created your superhero form. 
-
---- task ---
-
-Inside the div, add a `<label>` element with a with the attribute `class="switch"`.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 20, 23
----
-    <div class="toggle-container">
-      <label class="switch">
-      
-      
-      </label>
-      
-    </div>
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add the `<input>` element that your users will click to toggle between dark mode and light mode.
-
-Add the attribute `type="checkbox"` and `id="lightModeToggle"`.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 21
----
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
-
-      </label>
-      
-    </div>
-      
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add the `<span>` element with the attribute `class="slider"`.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 22
----
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
-          <span class="slider"></span>
-      </label>
-      
-    </div>
-      
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-Below the `<label>` element, add a final `<span>` elment with the attribute `class="toggle-label material-symbols-outlined"`.
-
- Add text: "light_mode" between the `<span>` tags.
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 24
----
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
-          <span class="slider"></span>
-      </label>
-      <span class="toggle-label material-symbols-outlined">light_mode</span>
-    </div>
-      
---- /code ---
-
---- /task ---
-
-**Click the Run button** to see your changes.
-Your toggle switch should appear in your nav bar aligned to the right of your menu items.
-
-You can toggle the switch, but it will not work yet.
-
-**Debug step:**
-+ Ensure you have left spaces between your class names.
-+ Ensure you have used the correct form field type.
-
-Good Job! You've successfully added the toggle switch to your webpage, let's give it some functionality.
-
-#### Check the user's local storage
-
-The toggle switch you have created will modify your website's CSS settings by using JavaScript.
-
-You will give your toggle switch functionality by using a DOM method: EventListener. 
-
-An EventListener waits for a specific action, like a button click, and then triggers a response to that action.
+You will use more DOM methods to manipulate your webpage and create interactions.
 
 --- collapse ---
 
 ---
-title: What are local storage preferences?
-
+title: What are DOM Methods?
 ---
 
-Local storage in web development is a way to store data on a user's browser that persists even after the user closes the browser or navigates away from the page. It provides a simple key-value pair storage system that uses local storage to save and retrieve user preferences or settings.
+DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.These methods enable developers to manipulate a document while the code is running. 
 
-1. **Local Storage:**
-   - A small storage space available in a user's web browser.
-   - Data stored in local storage remains on the user's device even after they close the browser.
+Here are some common DOM methods:
 
-2. **Preferences:**
-   - User-specific choices or settings, such as theme preferences, language selection, or any customizations.
++ getElementById(id): retrieves an element by its id attribute.
+    var element = document.getElementById("myElement");
 
-3. **Storing Preferences in Local Storage:**
-   - Developers can use local storage to save and retrieve user preferences.
-   - Preferences are often stored as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
++ getElementsByClassName(className): Returns a live HTML Collection of elements with the given class name.
+    var elements = document.getElementsByClassName("myClass");
 
-A simple JavaScript example:
++ getElementsByTagName(tagName): Returns a live HTML Collection of elements with the given tag name.
+    var paragraphs = document.getElementsByTagName("p");
 
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
----
-// Check if light mode preference is stored in local storage
-const isLightMode = localStorage.getItem("lightMode") === "true";
++ querySelector(selector): Returns the first element that matches the specified CSS selector.
+    var element = document.querySelector(".myClass");
 
-// Set initial light mode state based on the stored preference
-document.body.classList.toggle("light-mode", isLightMode);
++ querySelectorAll(selector): Returns a NodeList of all elements that match the specified CSS selector.
+    var elements = document.querySelectorAll("p.myClass");
 
-// Example of setting the light mode preference
-// Assuming a checkbox with id "lightModeToggle"
-const lightModeToggle = document.getElementById("lightModeToggle");
++ addEventListener(event, callback): Attaches an event listener to an element.
+    element.addEventListener("click", function() {
+        console.log("Element clicked!");
+    });
 
-lightModeToggle.addEventListener("change", function () {
-  const isLightMode = lightModeToggle.checked;
++ createElement(tagName): Creates a new HTML element with the specified tag name.
+    var newDiv = document.createElement("div");
 
-  // Update body class and store the user's preference in local storage
-  document.body.classList.toggle("light-mode", isLightMode);
-  localStorage.setItem("lightMode", isLightMode.toString());
-});
++ appendChild(node): Appends a node as the last child of a parent node.
+    parentElement.appendChild(childElement);
 
---- /code ---
++ removeChild(node): Removes a child node from its parent.
+    parentElement.removeChild(childElement);
 
-In this example, the user's preference for light mode is stored in local storage, and it's retrieved when the page loads. 
++ setAttribute(attribute, value): Sets the value of an attribute on the specified element.
+    element.setAttribute("class", "newClass");
 
-The preference is also updated when the user interacts with a toggle switch on the page. Storing preferences in local storage allows websites to provide a more personalised experience for users.
++ getAttribute(attribute): Retrieves the value of the specified attribute on the element.
+    var classValue = element.getAttribute("class");
 
 --- /collapse ---
 
+### Update and show the summary section
+
+You will create a function that collects the superhero details, summarises it, and shows the summary. 
+
 --- task ---
 
-Open `script.js` to create the light mode function.
+Open `script.js`.
 
-Create a .`addEventListener` function.
+ Create a function `displaySummary()`. 
+ 
+ This function will generate and display a summary of superhero information.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 56-58
+line_number_start: 37
+line_highlights: 38-40
 ---
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
     
-    }); 
+      // Function to display summary
+      function displaySummary() {
+
+      }
+    
+--- /code ---
+
+--- /task ---
+
+You will control the `summarySection` so the superhero summary can be displayed.
+
+--- task ---
+
+Create a variable `summaryParagraph`.
+
+Use the DOM to select an HTML element with the id "summary-paragraph" and store it in the variable. 
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 37
+line_highlights: 39
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.getElementById("summary-paragraph");
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Use the DOM to search for an HTML element with the id "name-span".  
+
+Use the `textContent` property of the `document.getElementById` method to collect any user input updated in the `name-span`. 
+
+Store it in the variable 'name'. 
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 37
+line_highlights: 41
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Repeat the same steps to collect the `textContent` for abilities, appearance, and origin from their respective elements.
+
+Create variables `abilities`, `appearance` and `origins` to store the `textContent`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 37
+line_highlights: 42-44
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+    var abilities = document.getElementById("class-span").textContent;
+    var appearance = document.getElementById("description-span").textContent;
+    var origin = document.getElementById("origin-span").textContent;
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+You can use "string" formatting to combine all the `textContent` into one paragraph.
+
+You can also add your own message you want the user to see.
+
+--- collapse ---
+
+---
+title: What is "string"?
+---
+
+A "string" is a data type in JavaScript and other programming languages.
+
+Data types are groups of data tell the program how we want to use data.
+
+JavaScript has several primitive data types including:
+
++ Number: represents numeric values. Examples: 10, 3.14.
++ String: represents sequences of characters. Examples: "Hello", 'JavaScript'.
++ Boolean: represents true or false values.
++ Undefined: represents a variable that has been declared but not assigned a value.
++ Null: represents the intentional absence of any object value.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: What is string formatting?
+---
+
+In JavaScript, you can format strings using template literals or concatenation. Here are examples of how they work:
+
++ Template Literals (String Interpolation): Use backticks (` `) to define a template literal. Embed variables or expressions within ${} inside the template literal.
+
+    const name = "Spider-Man";
+    const age = 25;
+    // Example using template literals
+    const message = `Hello, ${name}! You are ${age} years old.`;
+    console.log(message);
+
++ Concatenation: concatenate strings using the + operator.
+
+    const superhero = "Iron Man";
+    const power = "suit of armor";
+    // Example using concatenation
+    const description = "The superhero " + superhero + " possesses a " + power + ".";
+    console.log(description);
+
+String Methods: utilise string methods like concat(), slice(), toUpperCase(), toLowerCase(), etc.
+
+    const city = "Gotham";
+    const capitalizedCity = city.toUpperCase();
+    // Example using string methods
+    const result = `Welcome to ${capitalizedCity}!`;
+    console.log(result);
+
+--- /collapse ---
+
+--- task ---
+
+Create a variable `summaryParagraph.textContent`.
+
+Store all the superhero display field elements.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 37
+line_highlights: 46-48
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+    var abilities = document.getElementById("class-span").textContent;
+    var appearance = document.getElementById("description-span").textContent;
+    var origin = document.getElementById("origin-span").textContent;
+
+    summaryParagraph.textContent = `Your superhero name is ${name}. 
+    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    Your origin story is ${origin}.`;
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+Control the summary section to make it visible, as it has been set to `none` in the CSS styles to hide it initially.
+
+--- task ---
+
+Select an HTML element with the id `summary-section`.
+
+Set the CSS display property to "block"
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 37
+line_highlights: 50
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.getElementById("summary-paragraph");
+
+    var name = document.getElementById("name-span").textContent;
+    var abilities = document.getElementById("class-span").textContent;
+    var appearance = document.getElementById("description-span").textContent;
+    var origin = document.getElementById("origin-span").textContent;
+
+    summaryParagraph.textContent = `Your superhero name is ${name}. 
+    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    Your origin story is ${origin}.`;
+
+    document.getElementById("summary-section").style.display = "block";
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Find your `changeDisplay()` function.
+
+Add the `displaySummary()` function inside it, below all the existing code.
+
+This will call the function.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 25
+line_highlights: 36
+---
+    
+    // Update Create Comic Display function 
+function changeDisplay(id) {
+    var input = document.querySelector("#" + id);
+    var inputSection = document.querySelector("#" + id + "-input");
+    var displaySection = document.querySelector("#" + id + "-display");
+    var valueDisplay = document.querySelector("#" + id + "-span");
+
+    valueDisplay.textContent = input.value;
+    inputSection.style.display = "none";
+    displaySection.style.display = "flex";
+    
+    displaySummary(); // Call displaySummary after all changeDisplay actions
+}
       
 --- /code ---
-
---- collapse ---
-
----
-title: How is the EventListener method used?
----
-
-The `.addEventListener` syntax is written in the following way:
-  element.addEventListener(eventType, callbackFunction);
-
-+ element: The HTML element to which you want to attach the event listener.
-+ eventType: The type of event you want to listen for (e.g., "click", "keydown").
-+ callbackFunction: The function to be executed when the specified event occurs.
-
---- /collapse ---
-
-"DOMContentLoaded" is an `eventType` signal that tells when the main structure of a webpage is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
-
---- /task ---
-
---- task ---
-
-Declare a constant called `lightModeToggle` that stores the HTML element of your toggle switch with the attribute `id="lightModeToggle"`. 
-
-Use the DOM `document.getElementById` method to select the HTML element.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 57
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-      const lightModeToggle = document.getElementById("lightModeToggle");
-  
-   }); 
-
---- /code ---
-
---- /task ---
-
-Ensure that the line of code you just added is indented inside your `EventListener` method.
-
-Next, you will check the local storage of the browser to see if their local browser preference is set to light mode or dark mode.
-
-You will use a boolean value to set the state to `true`.
-
---- task ---
-
-Create a constant `isLightMode` and store the value of the localStorage check.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 60
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    }); 
-  
---- /code ---
-
-You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
-
---- collapse ---
-
----
-title: What does === mean?
----
-
-In JavaScript, `===` is a strict equality operator. It checks if two values are not only equal in value but also of the same data type. If both the value and the data type are the same, `===` returns true; otherwise, it returns false.
-
-For example:
-
-5 === 5 is true because both values are the same (and they are both numbers).
-'5' === 5 is false because even though the values are equal, they are of different types (string and number).
-
-
---- /collapse ---
-
---- /task ---
-
-Use a DOM method: `document.body.classList.toggle` that toggles the presence of a specified CSS class on the body element of an HTML document. 
-
-You will select the `.light-mode` CSS selector.
-
---- task ---
-
-Add the `document.body.classList.toggle` method inside the `EventListener`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 63
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-  
-   }); 
-  
---- /code ---
-
-When `isLightMode` is true, the `"light-mode"` class is added to the body element, and when `isLightMode` is false, the class is removed.
-
---- /task ---
-
-Set the initial state of the light mode toggle switch based on the user's preference. 
-
-If `isLightMode` is true, the switch is `on`; otherwise, it's `off`.
-
---- task ---
-
-Add the `LightModeToggle` check inside the `Eventlistener`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 64
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-   }); 
-  
---- /code ---
-
---- /task ---
-
-### Check and change the CSS style
-
---- task ---
-
-Create another `EventListener` function to check if the current state of the toggle switch is different from the current state of the body's `"light-mode"` class.
-
-Also declare a constant to store the current state of the toggle position: `on` or `off`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 66-67
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-   });
-   }); 
-  
---- /code ---
-
---- /task ---
-
-You will use a conditional statement to check `if` the toggle switch state matches the current CSS `body` class state.
-
-If it does not, an action or change needs to occur.
-
---- collapse ---
-
----
-title: What is a conditonal statement?
----
-
-Conditional statements in JavaScript are used to make decisions in your code based on certain conditions. 
-
-They allow your program to execute different blocks of code depending on whether a specified condition evaluates to true or false.
-
-These are the conditional statements used in in JavaScript: if, else, else if, and switch:
-
-if Statement: executes a block of code if a specified condition is true.
-
-    const age = 16;
-
-    if (age >= 18) {
-        console.log("You are eligible to vote!");
-    } else {
-        console.log("Sorry, you are too young to vote.");
-    }
-    
-else if Statement: allows you to check multiple conditions sequentially.
-
-    const time = 14;
-
-    if (time < 12) {
-        console.log("Good morning!");
-    } else if (time < 18) {
-        console.log("Good afternoon!");
-    } else {
-        console.log("Good evening!");
-    }
-
-else Statement: executes a block of code if the preceding if or else if condition(s) are not true.
-
-    const isRaining = true;
-
-    if (isRaining) {
-        console.log("Take an umbrella!");
-    } else {
-        console.log("Enjoy the weather!");
-    }
-
-switch Statement: allows you to choose one of many code blocks to be executed.
-
-const day = "Monday";
-
-    switch (day) {
-        case "Monday":
-            console.log("It's the start of the week.");
-            break;
-        case "Friday":
-            console.log("It's almost the weekend!");
-            break;
-        default:
-            console.log("It's a regular day.");
-    }
-
-
---- /collapse ---
-
-
---- task ---
-
-Add an `if` statement inside your `lightModeToggle.addEventListener` method.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 70
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-     const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-     
-
-    }
-    });
-  }); 
-  
---- /code ---
-
- Check if the current state of the toggle switch is different from the current state of the body's `"light-mode"` class.
-
---- /task ---
-
---- task ---
-
-Add a DOM method to change the website theme using the `light-mode` style when the toggle is switched `on`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 72
----
-      // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-        // Update body class and store the user's preference in local storage
-        document.body.classList.toggle("light-mode", isLightMode);
-       
-    }
-    });
-  }); 
-  
---- /code ---
-
---- /task ---
-
---- task ---
-
-Update the user's preference for `light mode` in the local storage and save it as a `string` data type.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 73
----
-      // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-        // Update body class and store the user's preference in local storage
-        document.body.classList.toggle("light-mode", isLightMode);
-        localStorage.setItem("lightMode", isLightMode.toString());
-    }
-    });
-  }); 
-  
---- /code ---
-
---- /task ---
-
---- task ---
-
-Open `index.html`.
-
-**Click the Run button** to see your changes.
-
-Toggle the light mode switch on and off to see your website theme colours change.
-
-**Debug step (script.js):**
-+ Ensure all your code is indented correctly inside EventListeners.
-+ Ensure all your code is indented correctly inside `if` statments.
-+ Ensure you have closed all parentheses `()`
-+ Ensure you have closed all curly braces `{}`
 
 --- /task ---
 
@@ -644,33 +342,20 @@ Toggle the light mode switch on and off to see your website theme colours change
 
 Open `comicbook.html`.
 
-Add the toggle switch code to the `<header>` element, below the `<nav>` tags.
+**Click the Run button** to see your changes.
 
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 19-25
----
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
-          <span class="slider"></span>
-      </label>
-      <span class="toggle-label material-symbols-outlined">light_mode</span>
-    </div>
-      
---- /code ---
+Type in a superhero name or any other details on the form.
+
+When you click the `Submit` button on each section, the summary section will be updated.
+
+Complete the whole form and click `Submit` on all the sections.
+
+You should see the whole paragraph get updated to show your user their superhero summary.
+
+**Debug step:**
++ Ensure you have added `displaySummary()`to your `changeDisplay()` function.
++ Ensure you have used the correct `id` names in your `comicbook.html` file.
 
 --- /task ---
 
-**Click the Run button** to see your changes.
-Your toggle switch should appear in your nav bar aligned to the right of your menu items.
-
-Toggle the switch on and off to see your website theme colours change.
-
-Navigate to the `index.html` page to check that your preference stays on.
-
-Great work! You have created a toggle switch that changes your website theme colours. Next, you will secure your content so users have to be verified before they gain access.
+Well done! You have created an interactive form that shows/hides elements. Next, you will allow users change their theme colours on your website.

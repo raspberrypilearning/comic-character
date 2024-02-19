@@ -11,8 +11,9 @@ steps:
 - title: Create hero image slider
 - title: Add Form/Input elements
 - title: Show/Hide elements
+- title: Validate user input
 - title: Create light mode theme
-- title: Secure content
+- title: Create hero slider
 - title: Reflection
   knowledge_quiz:
     path: quiz1

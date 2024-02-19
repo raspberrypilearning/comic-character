@@ -7,16 +7,17 @@ The website also allows users toggle between light and dark mode themes.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Captcha**</span> is a security tool that adds protection by checking the difference between humans and automated bots using challenges.
+<span style="color: #0faeb0">**Light and dark mode**</span> themes are considerations of colour schemes used when designing user interfaces for web or other apps. Dark mode is a color scheme that uses light-colored text and icons on dark backgrounds. Light mode is the opposite of this. Both themes have their benefits and are used to improve readability. However, it is important to check that the colours used in the themes are accessibility friendly.
 </p>
 
 You will:
-+ Create an image slider that navigates through images
++ Use the date function in JavaScript to update the Copyright text on your website
 + Add form and input elements to create a superhero character
 + Use JavaScript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
 + Use Javascript to show/hide elements on your website
 + Apply light mode/ dark mode themes to your website
 + Use local storage to store user preferences
++ Create an image slider that navigates through images
 
 
 --- no-print ---
