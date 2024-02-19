@@ -1,10 +1,10 @@
 ## Add Copyright message to footer
 
-In this step, you will create a Copyright message and a function to automatically update the current year to add to your footer section.
+In this step, you will create a Copyright message and a function to automatically update the current year. You will add this to your footer section.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Copyright**</span> is a legal.
+<span style="color: #0faeb0">**Copyright**</span> is a law that stops people from using someone else's work without their permission. It is a legal consideration when building apps on the web or for other devices because of the content used. This includes images, videos, music and other ideas.
 </p>
 
 In modern web design, websites include a footer section, displaying a Copyright message. The Copyright message consists of the following:
@@ -30,28 +30,11 @@ This project already contains a navbar and a hero image which you learnt how to 
 
 The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
 
-The **CSS** file you will use has already been linked to your webpages.
-
---- collapse ---
-
----
-title: How does JavaScript make websites interactive?
----
-
-JavaScript is a powerful language that provides tools to allow developers create interactive websites, by controlling the webpage content and behaviour. In this project we will focus on the following tools:
-+ DOM Manipulation
-+ Event Handling
-+ User input validation
-+ Animations & Transitions
-+ Local storage
-
-
---- /collapse ---
-
+The **CSS** file you will use has also been linked to your webpages.
 
 --- task ---
 
-Open the index.html file.
+Open the `index.html` file.
 
 Find the `footer` element.
 
@@ -72,13 +55,15 @@ line_highlights: 30
 
 --- /code ---
 
+You can change the fictional name `Malik Johnson` to a name of your choice.
+
 --- /task ---
 
 --- task ---
 
-Add a `<span>` element with the attribute `id="currentYear"`.
+Add a `<span>` element with the attribute `id="currentYear"` between the Ⓒ symbol and the name.
 
-The `id` will be used to 
+The `id` attribute is used to specify a unique id for a HTML element.
 
 --- code ---
 ---
@@ -97,6 +82,187 @@ line_highlights: 30
 
 --- /task ---
 
-Great job! You have used the date function to upate the current year on your website.
+**Test:** Click the **Run** button to see the changes you have made.
+
+### Update the current year
+
+There is currently no text written between the `<span>` elements. This will be used to display the current year using a JavaScript function.
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is the third most popular programming language in the world and without it, websites would be static and boring.
+</p>
+
+--- collapse ---
+
+---
+title: How does JavaScript make websites interactive?
+---
+
+JavaScript is a powerful language that provides tools to allow developers create interactive websites, by controlling the webpage content and behaviour. 
+JavaScript can be used to change HTML content, change HTML attribute values, change HTML styles, show/hide HTML elements, and more.
+
+In this project we will focus on the following tools:
++ DOM Manipulation
++ Event Handling
++ User input validation
++ Animations & Transitions
++ Local storage
+
+--- /collapse ---
+
+JavaScript provides a `date` function `new Date()` that lets you work with dates automatically.
+
+--- task ---
+
+Open `script.js`.
+
+Create a variable `currentYear` to store the `new Date()` value.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 2
+---
+     
+     // Update Copyright Year function 
+     var currentYear = new Date();
+    
+--- /code ---
+
+--- /task ---
+
+The `new Date()` function is typically stored in a **constant** but you will learn about these later.
+
+--- collapse ---
+
+---
+title: What is a variable?
+---
+
+A variable in programming is a named area of memory that holds a value. The value can be changed when the program runs.
+For example, `var age = 30;` `age` is the variable storing the value `30`
+
+--- /collapse ---
+
+--- task ---
+
+Use the `querySelector` to find the element with the id attribute `currentYear`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+     // Update Copyright Year function 
+     var currentYear = new Date();
+     document.querySelector("#currentYear")
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Change the content of the element using `innerHTML`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+     // Update Copyright Year function 
+     var currentYear = new Date();
+     document.querySelector("#currentYear").innerHTML
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Declare a variable using the `=` operator.
+
+Use a `Get` function to get only the full year from the `Date()` function.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+     // Update Copyright Year function 
+     var currentYear = new Date();
+     document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
+    
+--- /code ---
+
+This is because you only want the year to show e.g. `2035` and not the entire day, month and year.
+
+--- /task ---
+
+--- task ---
+
+Open `index.html` 
+
+**Test:** Click the **Run** button. 
+
+You should see the current year displayed along with your Copyright message.
+
+Copy (CTRL + C) or (CMD + C) the `<p>` element within the footer.
+You will need it for your next task.
+
+--- /task ---
+
+--- task ---
+
+Open the `comicbook.html` file.
+
+Find the `footer` element.
+
+Paste (CTRL + V) or (CMD + V) the `<p>` element you copied earlier.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 29
+line_highlights: 30
+---
+
+      <footer class="footer">
+        <p> Ⓒ Malik Johnson- All Rights Reserved</p>
+      </footer>
+
+--- /code ---
+
+You can change the fictional name `Malik Johnson` to a name of your choice.
+
+--- /task ---
+
+You can explore other `Date` functions JavaScript provides when creating other projects.
+
+--- collapse ---
+
+---
+title: What other `Date` functions can I use?
+---
+
+
+
+--- /collapse ---
+
+Great job! You have used added dynamic footer content to your website.
 
 Next, you will design an interactive webpage where users can create their own superhero.

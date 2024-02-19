@@ -7,7 +7,7 @@ The website also allows users toggle between light and dark mode themes.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark mode**</span> themes are considerations of colour schemes used when designing user interfaces for web or other apps. Dark mode is a color scheme that uses light-colored text and icons on dark backgrounds. Light mode is the opposite of this. Both themes have their benefits and are used to improve readability. However, it is important to check that the colours used in the themes are accessibility friendly.
+<span style="color: #0faeb0">**Light and dark mode**</span> themes are considerations of colour schemes used when designing user interfaces for web and other apps. Dark mode is a color scheme that uses light-colored text and icons on dark backgrounds. Light mode is the opposite of this. Both themes have their benefits and are used to improve readability. However, it is important to check that the colours used in the themes are accessibility friendly.
 </p>
 
 You will:
