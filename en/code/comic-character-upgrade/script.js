@@ -40,7 +40,7 @@ function changeDisplay(id) {
 }
 
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
     var name = document.getElementById("name-span").textContent;
     var abilities = document.getElementById("class-span").textContent;

@@ -13,7 +13,7 @@ const origin = document.querySelector("#origin-text");
 
 // Function to display summary
 function displaySummary() {
-  var summaryParagraph = document.querySelector("#summary-paragraph");
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
   summaryParagraph.textContent = `Your superhero name is ${name.value}. 
   Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
@@ -26,7 +26,7 @@ function displaySummary() {
 // Function to edit summary
 function changeSummary() {
 
-  characterSheet.style.display = "block";
+  characterSheet.style.display = "flex";
   summary.style.display = "none";
 }
 

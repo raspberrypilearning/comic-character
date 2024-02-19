@@ -107,7 +107,7 @@ line_highlights: 39
     
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
 }
     
@@ -134,7 +134,7 @@ line_highlights: 41
     
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
     var name = document.getElementById("name-span").textContent;
 
@@ -161,7 +161,7 @@ line_highlights: 42-44
     
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
     var name = document.getElementById("name-span").textContent;
     var abilities = document.getElementById("class-span").textContent;
@@ -249,7 +249,7 @@ line_highlights: 46-48
     
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
     var name = document.getElementById("name-span").textContent;
     var abilities = document.getElementById("class-span").textContent;
@@ -285,7 +285,7 @@ line_highlights: 50
     
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.getElementById("summary-paragraph");
+    const summaryParagraph = document.getElementById("summary-paragraph");
 
     var name = document.getElementById("name-span").textContent;
     var abilities = document.getElementById("class-span").textContent;

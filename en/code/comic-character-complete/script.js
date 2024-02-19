@@ -1,6 +1,6 @@
 // Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+var currentYear = new Date();
+document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
 
 // Create constants for superhero form
 
@@ -14,7 +14,7 @@ const origin = document.querySelector("#origin-text");
 
 // Function to display summary
 function displaySummary() {
-    var summaryParagraph = document.querySelector("#summary-paragraph");
+    const summaryParagraph = document.querySelector("#summary-paragraph");
 
     summaryParagraph.textContent = `Your superhero name is ${name.value}. 
     Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
@@ -26,7 +26,7 @@ function displaySummary() {
 
 function changeSummary() {
 
-    characterSheet.style.display = "block";
+    characterSheet.style.display = "flex";
     summary.style.display = "none";
 }
 
@@ -41,7 +41,7 @@ function validateForm(){
         alertMessage = "Please enter a name"; 
     } else if (ability.value == "") {
         alertMessage = "Please choose an ability";
-    }  else if (appearance.value == "") {
+    } else if (appearance.value == "") {
         alertMessage = "Please describe the appearance";
     } else if (origin.value == "") {
         alertMessage = "Please write the origin story";
@@ -56,27 +56,24 @@ function validateForm(){
     }
 }
 
+function changeLightMode(){
+    var isLightMode = lightModeToggle.checked;
+
+    document.body.classList.toggle("light-mode", isLightMode);
+
+    localStorage.setItem("lightMode", isLightMode.toString());
+}
+
 // Light mode function 
 document.addEventListener("DOMContentLoaded", function () {
     const lightModeToggle = document.querySelector("#lightModeToggle");
   
     // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
+    var isLightMode = localStorage.getItem("lightMode") === "true";
   
     // Set initial light mode state based on the stored preference
     document.body.classList.toggle("light-mode", isLightMode);
     lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-        // Update body class and store the user's preference in local storage
-        document.body.classList.toggle("light-mode", isLightMode);
-        localStorage.setItem("lightMode", isLightMode.toString());
-      }
-    });
 });
 
 // Place Hero slider variables here 
