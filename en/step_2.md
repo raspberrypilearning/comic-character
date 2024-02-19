@@ -110,13 +110,17 @@ In this project we will focus on the following tools:
 
 --- /collapse ---
 
-JavaScript provides a `date` function `new Date()` that lets you work with dates automatically.
+JavaScript provides a Date function using the syntax `new Date()`.
+
+This function lets you work with dates automatically. JavaScript will use the browser's time zone and return the current date and time. For example:
+
+`Mon Feb 19 2024 16:15:20 GMT+0000 (Greenwich Mean Time)`
 
 --- task ---
 
 Open `script.js`.
 
-Create a variable `currentYear` to store the `new Date()` value.
+Create a variable `currentYear` to store the `new Date()` as a value.
 
 --- code ---
 ---
@@ -147,9 +151,42 @@ For example, `var age = 30;` `age` is the variable storing the value `30`
 
 --- /collapse ---
 
+JavaScript can be used to change HTML elements. You want to update the current year and show the text inside the `<span>` elements you created earlier.
+
+To access the `<span>` element, you will use the Document Object Model which represents your webpage. 
+
+With the DOM (Document Object Model), JavaScript can find and change all the elements of a HTML document.
+
+You can use the function `querySelector()` for this. `querySelector()` returns the First element in your webpage that match a specified CSS selector.
+
+--- collapse ---
+
+---
+title: What does the Document Object Model do exactly?
+---
+
+The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a webpage dynamically.
+
+
+The DOM allows developers to interact using the following methods:
+
+
++ Dynamic Interaction:
+It allows dynamic interaction with the webpage. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
+
+
++ Event Handling:
+The DOM enables the handling of user actions or events, such as clicks or keyboard inputs. Developers can link event listeners to specific elements and run custom code in response to these events.
+
+
++ Content Manipulation:
+Developers can add, delete, or modify elements and content on the page dynamically. This is commonly used to update the page without requiring a full page reload.
+
+--- /collapse ---
+
 --- task ---
 
-Use the `querySelector` to find the element with the id attribute `currentYear`.
+Use the `querySelector()` to find the element with the id attribute `currentYear`.
 
 --- code ---
 ---
@@ -165,11 +202,13 @@ line_highlights: 3
     
 --- /code ---
 
+Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` you are trying to change.
+
 --- /task ---
 
 --- task ---
 
-Change the content of the element using `innerHTML`.
+Change the content of the `<span>` element (which is currently blank) using `innerHTML`.
 
 --- code ---
 ---
@@ -185,13 +224,40 @@ line_highlights: 3
     
 --- /code ---
 
+The `currentYear` variable is storing the `new Date()` function as a value.
+
+You will need to place `currentYear` inside the `<span>` element once it has been found using its id attribute.
+
 --- /task ---
 
 --- task ---
 
-Declare a variable using the `=` operator.
+Use an `=` operator to use the HTML element as a container for your `new Date` function.
 
-Use a `Get` function to get only the full year from the `Date()` function.
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+     // Update Copyright Year function 
+     var currentYear = new Date();
+     document.querySelector("#currentYear").innerHTML =
+    
+--- /code ---
+
+
+--- /task ---
+
+The Date function provides instructions to access certain properties. 
+
+You can do this using the `get` keyword.
+
+--- task ---
+
+Use a `get` function to access and show only the full current year from the `new Date()` function.
 
 --- code ---
 ---
@@ -207,7 +273,7 @@ line_highlights: 3
     
 --- /code ---
 
-This is because you only want the year to show e.g. `2035` and not the entire day, month and year.
+This is because you only want to show the year in your HTML element e.g. `2035` and not the entire day, month and year.
 
 --- /task ---
 
@@ -262,6 +328,54 @@ title: What other `Date` functions can I use?
 
 
 --- /collapse ---
+
+--- collapse ---
+
+---
+title: What are DOM Methods?
+---
+
+DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.These methods enable developers to manipulate a document while the code is running. 
+
+Here are some common DOM methods:
+
++ getElementById(id): retrieves an element by its id attribute.
+    var element = document.getElementById("myElement");
+
++ getElementsByClassName(className): Returns a live HTML Collection of elements with the given class name.
+    var elements = document.getElementsByClassName("myClass");
+
++ getElementsByTagName(tagName): Returns a live HTML Collection of elements with the given tag name.
+    var paragraphs = document.getElementsByTagName("p");
+
++ querySelector(selector): Returns the first element that matches the specified CSS selector.
+    var element = document.querySelector(".myClass");
+
++ querySelectorAll(selector): Returns a NodeList of all elements that match the specified CSS selector.
+    var elements = document.querySelectorAll("p.myClass");
+
++ addEventListener(event, callback): Attaches an event listener to an element.
+    element.addEventListener("click", function() {
+        console.log("Element clicked!");
+    });
+
++ createElement(tagName): Creates a new HTML element with the specified tag name.
+    var newDiv = document.createElement("div");
+
++ appendChild(node): Appends a node as the last child of a parent node.
+    parentElement.appendChild(childElement);
+
++ removeChild(node): Removes a child node from its parent.
+    parentElement.removeChild(childElement);
+
++ setAttribute(attribute, value): Sets the value of an attribute on the specified element.
+    element.setAttribute("class", "newClass");
+
++ getAttribute(attribute): Retrieves the value of the specified attribute on the element.
+    var classValue = element.getAttribute("class");
+
+--- /collapse ---
+
 
 Great job! You have used added dynamic footer content to your website.
 
