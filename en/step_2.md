@@ -90,7 +90,7 @@ line_highlights: 30
 
 ### Update the current year
 
-There is currently no text written between the `<span>` elements. This will be used to display the current year using a JavaScript function.
+There is currently no text written between the `<span>``</span>` tags. This will be used to display the current year using a JavaScript function.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is the third most popular programming language in the world and without it, websites would be static and boring.
