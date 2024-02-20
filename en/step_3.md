@@ -124,7 +124,7 @@ title: What are the form inputs in HTML?
 ---
 
 + Text Input (<input type="text">): allows users to enter a single line of text.
-+ Password Input (<input type="password">): text input but hides the entered text for sensitive information.
++ Password Input (<input type="password">): allows text input but hides the entered text for sensitive information.
 + Textarea (<textarea></textarea>): allows users to enter multiple lines of text.
 + Checkbox (<input type="checkbox">): allows users to select one or more options.
 + Radio Button (<input type="radio">): allows users to select a single option.
