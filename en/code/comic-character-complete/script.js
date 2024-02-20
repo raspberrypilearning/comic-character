@@ -1,5 +1,5 @@
 // Update Copyright Year function 
-var currentYear = new Date();
+const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
 
 // Create constants for superhero form

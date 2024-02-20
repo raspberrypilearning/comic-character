@@ -49,7 +49,7 @@ line_number_start: 29
 line_highlights: 30
 ---
 
-      <footer class="footer">
+      <footer>
         <p> Ⓒ Malik Johnson- All Rights Reserved</p>
       </footer>
 
@@ -74,13 +74,15 @@ line_number_start: 29
 line_highlights: 30
 ---
 
-      <footer class="footer">
-        <p> Ⓒ <span id="currentYear"></span> Malik Johnson- All Rights Reserved</p>
+      <footer>
+        <p> Ⓒ <span id="currentYear"> Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
 
 --- /task ---
+
+The `<span>` element is used because you want to insert the date within the Copyright message.
 
 **Test:** Click the **Run** button to see the changes you have made.
 + The Copyright message will be shown at the bottom(footer section) of your webpage.
@@ -90,7 +92,7 @@ line_highlights: 30
 
 ### Update the current year
 
-There is currently no text written between the `<span>``</span>` tags. This will be used to display the current year using a JavaScript function.
+There is currently no text written between as part of the `<span>` element. This will be used to display the current year using a JavaScript function.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is the third most popular programming language in the world and without it, websites would be static and boring.
@@ -124,7 +126,7 @@ This function lets you work with dates automatically. JavaScript will use the br
 
 Open `script.js`.
 
-Create a variable `currentYear` to store the `new Date()` as a value.
+Create a constant `currentYear` to store the `new Date()` as a value.
 
 --- code ---
 ---
@@ -136,32 +138,34 @@ line_highlights: 2
 ---
      
      // Update Copyright Year function 
-     var currentYear = new Date();
+     const currentYear = new Date();
     
 --- /code ---
 
 --- /task ---
 
-The `new Date()` function is typically stored in a **constant** but you will learn about these later.
-
 --- collapse ---
 
 ---
-title: What is a variable?
+title: What is a constant?
 ---
+A constant is like a variable; it is a named data value that can't change; once set, its value stays the same.
+Therefore, you cannot reassign the value of a constant once you have declared it.
+For example, `const PI = 3.3.14159265359;`;
+`PI` cannot be assigned another value throughout the programme.
 
 A variable in programming is a named area of memory that holds a value. The value can be changed when the program runs.
 For example, `var age = 30;` `age` is the variable storing the value `30`
 
 --- /collapse ---
 
-JavaScript can be used to change HTML elements. You want to update the current year and show the text inside the `<span>` element you created earlier.
+JavaScript can be used to change HTML elements. You want to update the current year and show the using the `<span>` element you created earlier.
 
 To access the `<span>` element, you will use the Document Object Model which represents your webpage. 
 
 With the DOM (Document Object Model), JavaScript can find and change all the elements of a HTML document.
 
-You can use the function `querySelector()` for this. `querySelector()` returns the first element in your webpage that matches a specified CSS selector.
+You can use the function `querySelector()` for this. `querySelector()` returns the first element in your webpage that matches a specified CSS selector. (E.g. #openHam, .nav-items)
 
 --- collapse ---
 
@@ -201,12 +205,12 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     var currentYear = new Date();
+     const currentYear = new Date();
      document.querySelector("#currentYear")
     
 --- /code ---
 
-Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` element you are trying to change.
+Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` element you are trying to manipulate.
 
 --- /task ---
 
@@ -214,6 +218,7 @@ Note that you have placed the id `#currentYear` within the `querySelector()` bec
 
 Change the content of the `<span>` element (which is currently blank) using `.innerHTML`.
 
+`.innerHTML` is a HTML property that can be used to find and change the content of an element.
 --- code ---
 ---
 language: js
@@ -223,7 +228,7 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     var currentYear = new Date();
+     const currentYear = new Date();
      document.querySelector("#currentYear").innerHTML
     
 --- /code ---
@@ -232,7 +237,7 @@ line_highlights: 3
 
 The `currentYear` variable is storing the `new Date()` function as a value.
 
-You will need to place `currentYear` inside the `<span>` element once it has been found using its id attribute.
+You will need to  change the content of the `<span>` element  and update it with the `currentYear` using its id attribute.
 
 --- task ---
 
@@ -247,7 +252,7 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     var currentYear = new Date();
+     const currentYear = new Date();
      document.querySelector("#currentYear").innerHTML =
     
 --- /code ---
@@ -297,7 +302,7 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     var currentYear = new Date();
+     const currentYear = new Date();
      document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
     
 --- /code ---
@@ -338,12 +343,12 @@ Paste (CTRL + V) or (CMD + V) the `<p>` element you copied earlier.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 29
-line_highlights: 30
+line_number_start: 24
+line_highlights: 25
 ---
 
-      <footer class="footer">
-        <p> Ⓒ Malik Johnson- All Rights Reserved</p>
+      <footer>
+        <p> <span id="currentYear"> Ⓒ Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
