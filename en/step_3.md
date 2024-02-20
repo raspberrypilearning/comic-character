@@ -136,7 +136,7 @@ title: What are the form inputs in HTML?
 
 --- task ---
 
-Add a text `<input>` field for adding the superhero's name.
+Add a text `<input>` field with the attributes `type="text"` and `id="name-text"`.
 
 --- code ---
 ---
@@ -147,23 +147,18 @@ line_number_start: 23
 line_highlights: 28
 ---
 
-      <section> <!--Superhero character creation form-->
-        <div class="character-sheet">
-          <div class="name-section">
-            <div id="name-input">
-              <label>Superhero Name:</label>
-              <input type="text" id="name">
-              
-           </div>
-         </div>
-       </div>
-      </section>
+      <section id="character-sheet"> <!--Superhero character creation form-->
+      <div id="name-input">
+        <label>Superhero Name:</label>
+          <input type="text" id="name-text">     
+      </div>
+    </section>
     
 --- /code ---
 
 --- /task ---
 
-You can add attributes to input fields to control their behaviour and their interactions.
+You can add attributes to input elemements to control their behaviour and their interactions.
 
 --- collapse ---
 
@@ -173,7 +168,7 @@ title: What other attributes can I use?
 + type: defines the type of input field. Examples include text, password, checkbox, radio, submit, reset, etc.
 Example: `<input type="text">`
 
-+ name: specifies the name of the input field, which is used when submitting the form data to the server.
++ name: specifies the name of the input field, which is used when submitting the form data.
 Example: `<input type="text" name="username">`
 
 + value: sets the initial or default value of the input field.
