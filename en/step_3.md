@@ -48,14 +48,12 @@ Add the attribute `id="character-sheet"` inside the opening `<section> tag.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 23
-line_highlights: 24-26
+line_number_start: 22
+line_highlights: 22-24
 ---
 
-      <section> <!--Superhero character creation form-->
-        <div class="character-sheet">
-         
-        </div>
+      <section id="character-sheet"> <!--Superhero character creation form-->
+  
       </section>
     
 --- /code ---
@@ -66,7 +64,7 @@ The `character-sheet` selector styles the entire form.
 
 --- task ---
 
-Add another div with the attribute `id="name-input"` to style the input field where the .
+Add a div element with the attribute `id="name-input"` between the `<section>` tags.
 
 --- code ---
 ---
@@ -77,15 +75,11 @@ line_number_start: 23
 line_highlights: 26, 28
 ---
 
-      <section> <!--Superhero character creation form-->
-        <div class="character-sheet">
-          <div class="name-section">
-            <div id="name-input">
-              
-           </div>
-         </div>
-       </div>
-      </section>
+    <section id="character-sheet"> <!--Superhero character creation form-->
+      <div id="name-input">
+               
+      </div>
+    </section>
     
 --- /code ---
 
@@ -93,7 +87,7 @@ line_highlights: 26, 28
 
 --- task ---
 
-Add a `<label> ` element to the superhero name section.
+Add a `<label>` element to the superhero name section.
 
 The `<label>` element is good for accessibility. 
 
@@ -108,16 +102,12 @@ line_number_start: 23
 line_highlights: 27
 ---
 
-      <section> <!--Superhero character creation form-->
-        <div class="character-sheet">
-          <div class="name-section">
-            <div id="name-input">
-              <label>Superhero Name:</label>
-              
-           </div>
-         </div>
-       </div>
-      </section>
+    <section id="character-sheet"> <!--Superhero character creation form-->
+      <div id="name-input">
+        <label>Superhero Name:</label>
+               
+      </div>
+    </section>
     
 --- /code ---
 
@@ -136,11 +126,11 @@ title: What are the form inputs in HTML?
 + Text Input (<input type="text">): allows users to enter a single line of text.
 + Password Input (<input type="password">): text input but hides the entered text for sensitive information.
 + Textarea (<textarea></textarea>): allows users to enter multiple lines of text.
-+ Checkbox (<input type="checkbox">): allows users to select one or more options from a list.
-+ Radio Button (<input type="radio">): allows users to select a single option from a list.
-+ Select Dropdown (<select></select>): creates a dropdown list for users to choose one option.
-+ Submit (<input type="submit">): a special button that submits the form data to the server.
-+ Reset (<input type="reset">): a button that resets all form fields to their default values.
++ Checkbox (<input type="checkbox">): allows users to select one or more options.
++ Radio Button (<input type="radio">): allows users to select a single option.
++ Select Dropdown (<select><option value="Flight">Flying</option></select>): creates a dropdown list for users to choose one option.
++ Submit (<input type="submit">): a button that submits the form data to the server.
++ Reset (<input type="reset">): a button that clears all the form fields to their default values.
 
 --- /collapse ---
 
