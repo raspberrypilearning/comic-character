@@ -440,6 +440,6 @@ Here are some common DOM methods:
 
 --- /collapse ---
 
-Great job! You have used added dynamic footer content to your website.
+Great job! You have added dynamic footer content to your website.
 
 Next, you will design an interactive webpage where users can create their own superhero.

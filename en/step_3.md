@@ -33,7 +33,7 @@ Here are some useful form elements:
 
 You will use different types of form elements to allow users interact with your webpage.
 
-CSS classes have already been provided in the `styles.css` file to style your form.
+**CSS** classes have already been provided in the `styles.css` file to style your form.
 
 --- task ---
 
@@ -91,7 +91,7 @@ line_highlights: 25, 27
 
 --- task ---
 
-Add an id `name-input` to style the superhero input field.
+Add an attribute `id="name-input"` to style the superhero input field.
 
 --- code ---
 ---
