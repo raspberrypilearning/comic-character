@@ -128,7 +128,7 @@ title: What are the form inputs in HTML?
 + Textarea (<textarea></textarea>): allows users to enter multiple lines of text.
 + Checkbox (<input type="checkbox">): allows users to select one or more options.
 + Radio Button (<input type="radio">): allows users to select a single option.
-+ Select Dropdown (<select><option value="Flying"> Flying</option></select>): creates a dropdown list for users to choose one option.
++ Select Dropdown (<select><option value="1">1</option><option value="2">2</option></select>): creates a dropdown list for users to choose one option.
 + Submit (<input type="submit">): a button that submits the form data to the server.
 + Reset (<input type="reset">): a button that clears all the form fields to their default values.
 
