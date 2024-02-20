@@ -26,7 +26,7 @@ Your starter project contains:
 
 ### Add content to your footer section
 
-This project already contains a navbar and a hero image which you learnt how to create in Welcome to Antarctica. 
+This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
 The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
 
@@ -83,6 +83,10 @@ line_highlights: 30
 --- /task ---
 
 **Test:** Click the **Run** button to see the changes you have made.
++ The Copyright message will be shown at the bottom(footer section) of your webpage.
++ It will have a blank space where the year is supposed to be displayed.
+
+**Debug step:** Check the `id` attribute has speeach marks `""` around it.
 
 ### Update the current year
 
@@ -151,13 +155,13 @@ For example, `var age = 30;` `age` is the variable storing the value `30`
 
 --- /collapse ---
 
-JavaScript can be used to change HTML elements. You want to update the current year and show the text inside the `<span>` elements you created earlier.
+JavaScript can be used to change HTML elements. You want to update the current year and show the text inside the `<span>` element you created earlier.
 
 To access the `<span>` element, you will use the Document Object Model which represents your webpage. 
 
 With the DOM (Document Object Model), JavaScript can find and change all the elements of a HTML document.
 
-You can use the function `querySelector()` for this. `querySelector()` returns the First element in your webpage that match a specified CSS selector.
+You can use the function `querySelector()` for this. `querySelector()` returns the first element in your webpage that matches a specified CSS selector.
 
 --- collapse ---
 
@@ -202,7 +206,7 @@ line_highlights: 3
     
 --- /code ---
 
-Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` you are trying to change.
+Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` element you are trying to change.
 
 --- /task ---
 
@@ -250,6 +254,32 @@ line_highlights: 3
 
 --- /task ---
 
+--- collapse ---
+
+
+---
+title: Using operators in JavaScript
+---
+
+
+In JavaScript, operators are special symbols that help you do different things with numbers, strings, and other types of data.
+
+
+Arithmetic Operators:
+
++ `=` assigns a value to a variable.
++ `+` adds two numbers.
++ `-` subtracts one number from another.
++ `*` multiplies two numbers.
++ `/` divides one number by another.
+
+Example:
+
+`let result = 30;` // assigns the value 30 to the variable `result`
+
+--- /collapse ---
+
+
 The Date function provides instructions to access certain properties. 
 
 You can do this using the `get` keyword.
@@ -272,7 +302,7 @@ line_highlights: 3
     
 --- /code ---
 
-This is because you only want to show the year in your HTML element e.g. `2035` and not the entire day, month and year.
+This is because you only want to show the year in your HTML element e.g. `2035` and not the entire time, day, month and year.
 
 --- /task ---
 
@@ -282,12 +312,18 @@ Open `index.html`
 
 **Test:** Click the **Run** button. 
 
-You should see the current year displayed along with your Copyright message.
++ You should see the current year displayed along with your Copyright message.
 
 Copy (CTRL + C) or (CMD + C) the `<p>` element within the footer.
 You will need it for your next task.
 
 --- /task ---
+
+**Debug step:**  
++ Ensure there is a `#` next to the `currentYear` id.
++ Check that you have opening and closing brackets `()` when using `querySelector` and at the end of `.getFullYear()`.
++ Check that you have written `querySelector()` and `.getFullYear()` in camel case.
++ Check there is a `;` colon at the end of your `document.querySelector()` container
 
 --- task ---
 
@@ -314,6 +350,10 @@ line_highlights: 30
 
 You can change the fictional name `Malik Johnson` to a name of your choice.
 
+**Test:** Click the **Run** button to see the changes you have made.
++ The Copyright message will be shown at the bottom(footer section) of your webpage.
++ It will have a blank space where the year is supposed to be displayed.
+
 --- /task ---
 
 You can explore other `Date` functions JavaScript provides when creating other projects.
@@ -324,9 +364,32 @@ You can explore other `Date` functions JavaScript provides when creating other p
 title: What other `Date` functions can I use?
 ---
 
-You can also learn about other DOM functions you cn use in this and other projects.
++ Creating a Date Object: creates a new Date object representing the current date and time:
+
+    const currentDate = new Date();
+
++ Setting a Specific Date - creates a Date object for the specified date (year, month, day).
+    const specificDate = new Date("2022-01-09");
+
++ Getting Various Components - these functions retrieve specific components of the date and time:
+
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth(); // 0-indexed (0 = January, 11 = December)
+    const day = currentDate.getDate();
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+    const milliseconds = currentDate.getMilliseconds();
+
++ Setting Date Components - these functions allow you to set specific components of the date:
+
+    currentDate.setFullYear(2023);
+    currentDate.setMonth(5); // 0-indexed (5 = June)
+    currentDate.setDate(15);
 
 --- /collapse ---
+
+You can also learn about other DOM functions you can use in this and other projects.
 
 --- collapse ---
 
@@ -334,7 +397,9 @@ You can also learn about other DOM functions you cn use in this and other projec
 title: What are DOM Methods?
 ---
 
-DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.These methods enable developers to manipulate a document while the code is running. 
+DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.
+
+These methods enable developers to manipulate a document while the code is running. 
 
 Here are some common DOM methods:
 
@@ -374,7 +439,6 @@ Here are some common DOM methods:
     var classValue = element.getAttribute("class");
 
 --- /collapse ---
-
 
 Great job! You have used added dynamic footer content to your website.
 
