@@ -16,6 +16,16 @@ main {
   width: 100%;
 }
 
+footer {
+  height: 5%;
+  background-color: rgb(0, 0, 0);
+  color: #e6b400;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+
 section {
   width: 95%;
   text-align: center;
@@ -63,15 +73,7 @@ nav a:hover {
   color: white;
 }
 
-footer {
-  height: 5%;
-  background-color: rgb(0, 0, 0);
-  color: #e6b400;
-  padding: 10px;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-}
+
 
 /* Create a comic */
 
@@ -270,26 +272,7 @@ input:checked + .slider:before {
   .header {
     padding: 20px;
   }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: #333;
-    z-index: 1;
-  }
-
-  .navbar.show {
-    display: flex;
-  }
-
-  .navbar a {
-    margin: 10px 0;
-  }
-
+  
   .toggle-container {
     margin-top: 10px;
   }
