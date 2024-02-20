@@ -86,7 +86,7 @@ line_highlights: 30
 + The Copyright message will be shown at the bottom(footer section) of your webpage.
 + It will have a blank space where the year is supposed to be displayed.
 
-**Debug step:** Check the `id` attribute has speeach marks `""` around it.
+**Debug step:** Check the `id` attribute has speech marks `""` around it.
 
 ### Update the current year
 
@@ -102,8 +102,8 @@ There is currently no text written between the `<span>``</span>` tags. This will
 title: How does JavaScript make websites interactive?
 ---
 
-JavaScript is a powerful language that provides tools to allow developers create interactive websites, by controlling the webpage content and behaviour. 
-JavaScript can be used to change HTML content, change HTML attribute values, change HTML styles, show/hide HTML elements, and more.
+JavaScript is a powerful language that provides tools to allow developers to create interactive websites, by controlling the webpage content and behaviour. 
+JavaScript can be used to change HTML content, change HTML attribute values, change CSS styles, show/hide HTML elements, and more.
 
 In this project we will focus on the following tools:
 + DOM Manipulation
@@ -394,49 +394,34 @@ You can also learn about other DOM functions you can use in this and other proje
 --- collapse ---
 
 ---
-title: What are DOM Methods?
+title: What can you do with the DOM?
 ---
 
-DOM (Document Object Model) methods are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.
+DOM (Document Object Model) functions are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.
 
 These methods enable developers to manipulate a document while the code is running. 
 
-Here are some common DOM methods:
+Here are some common DOM functions:
 
 + getElementById(id): retrieves an element by its id attribute.
     var element = document.getElementById("myElement");
 
-+ getElementsByClassName(className): Returns a live HTML Collection of elements with the given class name.
++ getElementsByClassName(className): Returns a collection of elements with the given class name.
     var elements = document.getElementsByClassName("myClass");
 
-+ getElementsByTagName(tagName): Returns a live HTML Collection of elements with the given tag name.
++ getElementsByTagName(tagName): Returns a collection of elements with the given tag name.
     var paragraphs = document.getElementsByTagName("p");
 
 + querySelector(selector): Returns the first element that matches the specified CSS selector.
     var element = document.querySelector(".myClass");
 
-+ querySelectorAll(selector): Returns a NodeList of all elements that match the specified CSS selector.
++ querySelectorAll(selector): Returns a list of all elements that match the specified CSS selector.
     var elements = document.querySelectorAll("p.myClass");
 
 + addEventListener(event, callback): Attaches an event listener to an element.
     element.addEventListener("click", function() {
         console.log("Element clicked!");
     });
-
-+ createElement(tagName): Creates a new HTML element with the specified tag name.
-    var newDiv = document.createElement("div");
-
-+ appendChild(node): Appends a node as the last child of a parent node.
-    parentElement.appendChild(childElement);
-
-+ removeChild(node): Removes a child node from its parent.
-    parentElement.removeChild(childElement);
-
-+ setAttribute(attribute, value): Sets the value of an attribute on the specified element.
-    element.setAttribute("class", "newClass");
-
-+ getAttribute(attribute): Retrieves the value of the specified attribute on the element.
-    var classValue = element.getAttribute("class");
 
 --- /collapse ---
 
