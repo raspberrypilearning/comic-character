@@ -39,9 +39,9 @@ You will use different types of form elements to allow users interact with your 
 
 Open the comicbook.html file.
 
-Find the `<section` tags for the superhero character form.
+Find the `<section>` tags between the `<main>` element. 
 
-Add a div with the class `character-sheet` between the tags.
+Add the attribute `id="character-sheet"` inside the opening `<section> tag.
 
 --- code ---
 ---
@@ -49,7 +49,7 @@ language: html
 filename: comicbook.html
 line_numbers: true
 line_number_start: 23
-line_highlights: 24, 26
+line_highlights: 24-26
 ---
 
       <section> <!--Superhero character creation form-->
@@ -62,36 +62,11 @@ line_highlights: 24, 26
 
 --- /task ---
 
-The `character sheet` selector styles the entire form.
+The `character-sheet` selector styles the entire form.
 
 --- task ---
 
-Add a class `name-section` to style the superhero name fields.
-
---- code ---
----
-language: html
-filename: comicbook.html
-line_numbers: true
-line_number_start: 23
-line_highlights: 25, 27
----
-
-      <section> <!--Superhero character creation form-->
-        <div class="character-sheet">
-          <div class="name-section">
-           
-         </div>
-       </div>
-      </section>
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add an attribute `id="name-input"` to style the superhero input field.
+Add another div with the attribute `id="name-input"` to style the input field where the .
 
 --- code ---
 ---
