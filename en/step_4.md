@@ -5,6 +5,16 @@ In this step, you will continue building the functionality of your form. You wil
 
 You will use an event listener to activate the `<button>` element.
 
+--- collapse ---
+
+---
+title: What is an event listener?
+---
+
+
+
+--- /collapse ---
+
 You will use DOM functions to manipulate your webpage and create interactions.
 
 ### Create contants to store your form fields

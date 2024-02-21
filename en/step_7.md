@@ -1,20 +1,17 @@
 ## Create light mode theme
 
-In this step, you will create a toggle switch that will allow your users switch between dark mode, which is the original theme colour of your website and light mode. 
+In this step, you will create a toggle switch that will allow your users switch between dark mode, which is the original theme colour of your website and light mode. The website will remember their option even if they navigate to another page.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**Dark mode and light mode**</span> are user interface themes that change the colour scheme of an application or website based on the user's preference or system settings.
-
 Using these theme colour modes is good for accessibility and dark mode, in particular, is praised for improving readability and reducing eye strain, especially in low-light conditions.
 </p>
-
-In this project, your users can click a button to change between dark and light modes. The website remembers their option even if they navigate to another page.
 
 Your `styles.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
 
 #### Add toggle to the header section
-You will need to give your users a way to switch between both themes by using a toglle slider
+You will need to give your users a way to switch between both themes by using a toggle switch.
 
 --- task ---
 
@@ -75,7 +72,7 @@ line_highlights: 20, 23
 
 Add the `<input>` element that your users will click to toggle between dark mode and light mode.
 
-Add the attribute `type="checkbox"` and `id="lightModeToggle"`.
+Add the attributes `type="checkbox"` and `id="lightModeToggle"`.
 
 --- code ---
 ---
@@ -87,7 +84,7 @@ line_highlights: 21
 ---
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
 
       </label>
       
@@ -112,7 +109,7 @@ line_highlights: 22
 ---
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
           <span class="slider"></span>
       </label>
       
@@ -139,7 +136,7 @@ line_highlights: 24
 ---
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
           <span class="slider"></span>
       </label>
       <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -158,7 +155,9 @@ You can toggle the switch, but it will not work yet.
 + Ensure you have left spaces between your class names.
 + Ensure you have used the correct form field type.
 
-Good Job! You've successfully added the toggle switch to your webpage, let's give it some functionality.
+Good Job! You've successfully added the toggle switch to your webpage, you will need to give it some functionality.
+
+
 
 #### Check the user's local storage
 
@@ -187,38 +186,6 @@ Local storage in web development is a way to store data on a user's browser that
 3. **Storing Preferences in Local Storage:**
    - Developers can use local storage to save and retrieve user preferences.
    - Preferences are often stored as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
-
-A simple JavaScript example:
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
----
-// Check if light mode preference is stored in local storage
-const isLightMode = localStorage.getItem("lightMode") === "true";
-
-// Set initial light mode state based on the stored preference
-document.body.classList.toggle("light-mode", isLightMode);
-
-// Example of setting the light mode preference
-// Assuming a checkbox with id "lightModeToggle"
-const lightModeToggle = document.getElementById("lightModeToggle");
-
-lightModeToggle.addEventListener("change", function () {
-  const isLightMode = lightModeToggle.checked;
-
-  // Update body class and store the user's preference in local storage
-  document.body.classList.toggle("light-mode", isLightMode);
-  localStorage.setItem("lightMode", isLightMode.toString());
-});
-
---- /code ---
-
-In this example, the user's preference for light mode is stored in local storage, and it's retrieved when the page loads. 
-
-The preference is also updated when the user interacts with a toggle switch on the page. Storing preferences in local storage allows websites to provide a more personalised experience for users.
 
 --- /collapse ---
 
@@ -352,16 +319,14 @@ line_number_start: 55
 line_highlights: 63
 ---
     // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
+function changeLightMode(){
+    var isLightMode = lightModeToggle.checked;
+
     document.body.classList.toggle("light-mode", isLightMode);
-  
-   }); 
+
+    localStorage.setItem("lightMode", isLightMode.toString());
+}
+
   
 --- /code ---
 

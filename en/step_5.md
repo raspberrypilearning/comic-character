@@ -51,7 +51,7 @@ line_highlights: 6-7
 
 --- /task ---
 
-You have used the `onclick` attribute previously. This acts as an event listener which allows you to associate a specific action or behaviour with the user's mouse click on a particular element, such as a button, link, or any other interactive element on a webpage.
+You have used the `onclick` attribute previously. This acts as an event listener which allows you to associate a specific action with the user's mouse click on a particular element, such as a button, link, or any other interactive element on a webpage.
 
 --- task ---
 
@@ -79,6 +79,16 @@ line_highlights: 51
 --- /code ---
 
 --- /task ---
+
+--- collapse ---
+
+---
+title: What other event listeners can I use?
+---
+
+
+
+--- /collapse ---
 
 --- task ---
 
