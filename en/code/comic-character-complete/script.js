@@ -25,7 +25,6 @@ function displaySummary() {
 
 // Function to edit form content
 function changeSummary() {
-
     characterSheet.style.display = "flex";
     summary.style.display = "none";
 }

@@ -1,6 +1,6 @@
 ## Validate your user's input
 
-In this step, you will continue building the functionality of your form. You will use JavaScript to show/hide elements of your form. and show a summary display of your user's superhero character. 
+In this step, you will use JavaScript functionality to validate your users input. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 --- task ---
@@ -13,11 +13,11 @@ Open `script.js`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
+line_number_start: 32
+line_highlights: 33
 ---
      // Function to validate the character creation form 
-const alertBox = document.querySelector("#alert");
+      const alertBox = document.querySelector("#alert");
     
 --- /code ---
 
@@ -30,8 +30,77 @@ const alertBox = document.querySelector("#alert");
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
+line_number_start: 32
+line_highlights: 35-37
+---
+     // Function to validate the character creation form 
+      const alertBox = document.querySelector("#alert");
+
+    function validateForm(){
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 32
+line_highlights: 35-39
+---
+     // Function to validate the character creation form 
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var alertMessage = ""
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 33
+line_highlights: 41
+---
+     // Function to validate the character creation form 
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var alertMessage = ""
+
+    if (name.value == "")
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 33
+line_highlights: 41-42
 ---
      // Function to validate the character creation form 
 const alertBox = document.querySelector("#alert");
@@ -57,8 +126,8 @@ function validateForm(){
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
+line_number_start: 32
+line_highlights: 45-51
 ---
      // Function to validate the character creation form 
 const alertBox = document.querySelector("#alert");
@@ -92,8 +161,45 @@ function validateForm(){
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
+line_number_start: 32
+line_highlights: 43-45
+---
+     // Function to validate the character creation form 
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var alertMessage = ""
+
+    if (name.value == ""){
+        alertMessage = "Please enter a name"; 
+    } else if (ability.value == "") {
+        alertMessage = "Please choose an ability";
+    }
+
+    if (alertMessage != ""){
+        alertBox.innerHTML = alertMessage;
+        alertBox.style.display = "block";
+    } else {
+        alertBox.style.display = "none";
+        displaySummary();
+    }
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 32
+line_highlights: 45-50
 ---
      // Function to validate the character creation form 
 const alertBox = document.querySelector("#alert");

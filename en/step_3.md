@@ -372,8 +372,8 @@ This attribute will provide the styling for the `<section>` element.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 46
-line_highlights: 46-48
+line_number_start: 48
+line_highlights: 48-50
 ---
 
     <section id="summary-section">
@@ -395,8 +395,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 46
-line_highlights: 46-49
+line_number_start: 48
+line_highlights: 49-50
 ---
 
     <section id="summary-section">
