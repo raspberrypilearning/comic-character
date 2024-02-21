@@ -23,6 +23,7 @@ function displaySummary() {
     summary.style.display = "flex";
 }
 
+// Function to edit form content
 function changeSummary() {
 
     characterSheet.style.display = "flex";

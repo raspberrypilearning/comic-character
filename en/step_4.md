@@ -246,10 +246,6 @@ function displaySummary() {
 
 --- task ---
 
-Select an HTML element with the id `summary-section`.
-
-Set the CSS display property to "block"
-
 --- code ---
 ---
 language: js
@@ -273,9 +269,9 @@ function displaySummary() {
 
 --- /task ---
 
---- task ---
+### Change CSS property 
 
-Select an HTML element with the id `summary-section`.
+--- task ---
 
 Set the CSS display property to "block"
 
@@ -307,9 +303,7 @@ function displaySummary() {
 
 --- task ---
 
-Select an HTML element with the id `summary-section`.
-
-Set the CSS display property to "block"
+Set the CSS display property to "flex"
 
 --- code ---
 ---
@@ -351,126 +345,10 @@ Complete the whole form and click `Submit` on all the sections.
 
 You should see the whole paragraph get updated to show your user their superhero summary.
 
+--- /task ---
+
 **Debug step:**
 + Ensure you have added `displaySummary()`to your `changeDisplay()` function.
 + Ensure you have used the correct `id` names in your `comicbook.html` file.
-
---- /task ---
-
---- collapse ---
-
-
----
-title: How do you write a simple function?
----
-
-
-When writing functions, you can follow these steps so your syntax is correct.
-
-
-1. Function Keyword: start with the function keyword to tell JavaScript that you're creating a function.
-
-
-2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
-
-
-     --- code ---
-     ---
-     language: js
-     filename:
-     line_numbers: true
-     line_number_start:
-     line_highlights:
-     ---
-           function sayHello
-
-
-     --- /code ---
-    
-
-
-3. Parameters: put brackets () after the function name. Inside these brackets, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
-
-
-     --- code ---
-     ---
-     language: js
-     filename:
-     line_numbers: true
-     line_number_start:
-     line_highlights:
-     ---
-           function sayHello()
-
-
-     --- /code ---
-
-
-4. Curly Braces: open curly braces `{` to define the block of code that the function will execute. This is where you write the instructions for your function.
-     `function sayHello() {`
-
-
-5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
-    
-     --- code ---
-     ---
-     language: js
-     filename:
-     line_numbers: true
-     line_number_start:
-     line_highlights:
-     ---
-           function sayHello() {
-           console.log("Hello, World!");
-
-
-     --- /code ---
-          
-     
-
-
-6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
-
-
-     --- code ---
-     ---
-     language: js
-     filename:
-     line_numbers: true
-     line_number_start:
-     line_highlights:
-     ---
-           function sayHello() {
-           console.log("Hello, World!");
-           }
-
-
-     --- /code ---
-  
-
-
-     Now, you've created a simple function named sayHello.
-
-
-7. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console. You can use the function (call it) by writing the syntax shown below.
-
-
-     --- code ---
-     ---
-     language: js
-     filename:
-     line_numbers: true
-     line_number_start:
-     line_highlights:
-     ---
-           sayHello(); // Outputs: Hello, World!
-
-
-     --- /code ---
-          
-
-
---- /collapse ---
-
 
 Well done! You have created an interactive form that shows/hides elements. Next, you will allow users change their theme colours on your website.
