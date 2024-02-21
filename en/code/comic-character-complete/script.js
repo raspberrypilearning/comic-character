@@ -3,7 +3,6 @@ const currentYear = new Date();
 document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
 
 // Create constants for superhero form
-
 const characterSheet = document.querySelector("#character-sheet");
 const summary = document.querySelector("#summary-section");
 

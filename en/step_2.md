@@ -92,10 +92,10 @@ The `<span>` element is used because you want to insert the date within the Copy
 
 ### Update the current year
 
-There is currently no text written between as part of the `<span>` element. This will be used to display the current year using a JavaScript function.
+There is currently no text written as part of the `<span>` element. This will be used to display the current year using a JavaScript function.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is the third most popular programming language in the world and without it, websites would be static and boring.
+<span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is a very popular programming language in the world and without it, websites would be static and boring.
 </p>
 
 --- collapse ---
@@ -159,7 +159,7 @@ For example, `var age = 30;` `age` is the variable storing the value `30`
 
 --- /collapse ---
 
-JavaScript can be used to change HTML elements. You want to update the current year and show the using the `<span>` element you created earlier.
+JavaScript can be used to change HTML elements. You want to update the current year and show it using the `<span>` element you created earlier.
 
 To access the `<span>` element, you will use the Document Object Model which represents your webpage. 
 
@@ -392,42 +392,6 @@ title: What other `Date` functions can I use?
     currentDate.setFullYear(2023);
     currentDate.setMonth(5); // 0-indexed (5 = June)
     currentDate.setDate(15);
-
---- /collapse ---
-
-You can also learn about other DOM functions you can use in this and other projects.
-
---- collapse ---
-
----
-title: What can you do with the DOM?
----
-
-DOM (Document Object Model) functions are a set of tools used to manipulate the content, style and structure of web documents dynamically using JavaScript.
-
-These methods enable developers to manipulate a document while the code is running. 
-
-Here are some common DOM functions:
-
-+ getElementById(id): retrieves an element by its id attribute.
-    var element = document.getElementById("myElement");
-
-+ getElementsByClassName(className): Returns a collection of elements with the given class name.
-    var elements = document.getElementsByClassName("myClass");
-
-+ getElementsByTagName(tagName): Returns a collection of elements with the given tag name.
-    var paragraphs = document.getElementsByTagName("p");
-
-+ querySelector(selector): Returns the first element that matches the specified CSS selector.
-    var element = document.querySelector(".myClass");
-
-+ querySelectorAll(selector): Returns a list of all elements that match the specified CSS selector.
-    var elements = document.querySelectorAll("p.myClass");
-
-+ addEventListener(event, callback): Attaches an event listener to an element.
-    element.addEventListener("click", function() {
-        console.log("Element clicked!");
-    });
 
 --- /collapse ---
 

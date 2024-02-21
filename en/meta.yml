@@ -11,6 +11,7 @@ steps:
 - title: Add Copyright text to footer
 - title: Add Form/Input elements
 - title: Show/Hide elements
+- title: Edit the summary content
 - title: Validate user input
 - title: Create light mode theme
 - title: Create hero slider
