@@ -218,7 +218,7 @@ Note that you have placed the id `#currentYear` within the `querySelector()` bec
 
 Change the content of the `<span>` element (which is currently blank) using `.innerHTML`.
 
-`.innerHTML` is a HTML property that can be used to find and change the content of an element.
+`.innerHTML` is a HTML property that can be used to find and change the text content of an element.
 
 --- code ---
 ---
@@ -235,6 +235,24 @@ line_highlights: 3
 --- /code ---
 
 --- /task ---
+
+--- collapse ---
+
+---
+title: How does `.innerHTML` work?
+---
+
+In JavaScript, you can view and change the inner text content of an HTML element using various DOM properties.
+
+These include:
++ `.innerHTML` this property finds and returns the text content as well as the CSS styling, attributes and HTML tags of an element.
+For example: 
+
++ `.innerText` this property finds and returns the text content as well as the CSS styling but not the tags and attributes of an element.
+
++ `.textContent` this property returns only the text content of an HTML element.
+
+--- /collapse ---
 
 The `currentYear` constant is storing the `new Date()` function as a value.
 

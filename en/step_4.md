@@ -213,15 +213,13 @@ function displaySummary() {
 
 --- /task ---
 
-You can use "string" formatting to combine all the form fields into one paragraph.
+You have previously used a text property to change an HTML element. 
 
-You can also add your own message you want the user to see.
+You will use another property `.textContent` which finds and changes only the text content of an HTML element.
 
 --- task ---
 
-Select an HTML element with the id `summary-section`.
-
-Set the CSS display property to "block"
+Append the `.textContent` property to your `summaryParagraph` constant.
 
 --- code ---
 ---
@@ -244,7 +242,52 @@ function displaySummary() {
 
 --- /task ---
 
+When your user completes information on your form, you want to be able to retrieve this information. 
+
+The `.value` property is commonly used with form elements to retrieve the current value of the user input.
+
+You also want to be able to show your user a friendly message alongside the information they have completed.
+
+You can use "string" formatting to do this.
+
 --- task ---
+
+Use "string" formatting to write a user friendly message and combine this with the constant storing the HTML element with the attribute `id="name-text"`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 18
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.querySelector("#summary-paragraph");
+
+    summaryParagraph.textContent = `Your superhero name is ${name.value}. 
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- collapse ---
+
+---
+title: What is "string" formatting?
+---
+
+
+
+--- /collapse ---
+
+--- task ---
+
+Write more user friendly messages to create your summary and combine them with the other constants storing your form field attributes.
 
 --- code ---
 ---
@@ -271,9 +314,19 @@ function displaySummary() {
 
 ### Change CSS property 
 
+You previously added a HTML element to your form with the attribute `id="summary-section"`.
+
+The property of the `summary-section` CSS selector is currently set to `none;`.
+
+The property of the `character-sheet` CSS selector is currently set to `flex;`.
+
+In JavaScript, you can manipulate the display properties of these elements using the style property.
+
 --- task ---
 
-Set the CSS display property to "block"
+Use the `.style.display` property to change your "characterSheet" constant to `"none";`
+
+THis will hide the HTML element (the whole form) on the page.
 
 --- code ---
 ---
@@ -293,7 +346,6 @@ function displaySummary() {
     Your origin story is ${origin.value}.`;
 
     characterSheet.style.display = "none";
-    summary.style.display = "flex";
 
 }
     
@@ -301,9 +353,29 @@ function displaySummary() {
 
 --- /task ---
 
+--- collapse ---
+
+---
+title: How does the display property work in CSS?
+---
+
+In CSS, the display property is used to control the layout behaviour of an element. It determines how an element is shown in terms of its box type, whether it's block-level, inline, inline-block, or other variations. 
+
+The values for the display property include:
++ None: If you set an element to display: none;, it becomes invisible and doesn't affect the space around it. It's like it's not even there.
++ Grid: This provides a grid of boxes. It helps you arrange things in rows and columns, making it easier to design complex layouts.
++ Flex: This provides flexible box. It helps you control how things inside it are arranged. It's useful for making responsive layouts.
++ Block: This provides a whole box that starts on a new line and takes up the whole width.
++ Inline: This provides a box that stays on the same line and only takes up as much space as it needs.
++ Inline-block: This is a mix of the block and inline. It provides a box that sits in a line, not taking up the whole width.
+
+--- /collapse ---
+
 --- task ---
 
-Set the CSS display property to "flex"
+Use the `.style.display` property to change your "summary" constant to `"flex";`.
+
+This will display the sumamry section on your page.
 
 --- code ---
 ---
@@ -324,7 +396,6 @@ function displaySummary() {
 
     characterSheet.style.display = "none";
     summary.style.display = "flex";
-
 }
     
 --- /code ---
@@ -335,20 +406,21 @@ function displaySummary() {
 
 Open `comicbook.html`.
 
-**Click the Run button** to see your changes.
+**Test:** Click the **Run** button. 
 
-Type in a superhero name or any other details on the form.
++ Type in a superhero name or any other details on the form.
 
-When you click the `Submit` button on each section, the summary section will be updated.
++ When you click the Submit button, the form will be hidden and the summary section will be displayed.
 
-Complete the whole form and click `Submit` on all the sections.
-
-You should see the whole paragraph get updated to show your user their superhero summary.
++ You should see the whole paragraph get updated to show your user their superhero summary.
 
 --- /task ---
 
 **Debug step:**
-+ Ensure you have added `displaySummary()`to your `changeDisplay()` function.
-+ Ensure you have used the correct `id` names in your `comicbook.html` file.
++ Ensure you have created all constants `const` correctly using the right keywords.
++ Ensure your constant names are written correctly.
++ Ensure you have used the right syntax when creating the functions including `()` and `{}`.
++ Ensure you add the `onclick = "displaySummary"` as an attribute to the `<button>` element on your form.
++ Ensure you have added `;` a semicolon at the end of your declarations.
 
-Well done! You have created an interactive form that shows/hides elements. Next, you will allow users change their theme colours on your website.
+Well done! You have created an interactive form that shows/hides elements. Next, you will allow users to edit their choices on the superhero form.
