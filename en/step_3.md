@@ -89,9 +89,7 @@ line_highlights: 26, 28
 
 Add a `<label>` element to the superhero name section.
 
-The `<label>` element is good for accessibility. 
-
-It allows screen-readers to read the label when the user clicks on the input element.
+The `<label>` element allows you to define a title for a particular form field.
 
 --- code ---
 ---
@@ -110,6 +108,10 @@ line_highlights: 27
     </section>
     
 --- /code ---
+
+The `<label>` element is also good for accessibility. 
+
+It allows screen-readers to read the label when the user clicks on the input element.
 
 --- /task ---
 
@@ -156,7 +158,14 @@ line_highlights: 28
     
 --- /code ---
 
+**Test:** Click the **Run** button to see the changes you have made.
++ You will see a text input area with the label "Superhero Name" displayed next to it.
+
 --- /task ---
+
+**Debug step:**
++ Check that you have used the correct `input type` for your "Superhero Name" section.
++ Check that you have used the correct attributes for each element
 
 You can add attributes to input elemements to control their behaviour and their interactions.
 
@@ -191,13 +200,13 @@ Example: `<input type="text" pattern="[A-Za-z]{3}">`
 
 --- /collapse ---
 
-
-**Test:** Click the **Run** button to see the changes you have made.
-+ You will see 
-
 ### Design the Superhero ability section 
 
 You will create a dropdown list for users to choose one option for their superhero's ability..
+
+The `<select>` element is used to create a drop down list.
+
+The `<option>` element is then used to provide options within the list.
 
 --- task ---
 
@@ -218,7 +227,7 @@ line_highlights: 36-44
       <label>Abilities:</label>
       <select id="ability-choice">
         <option value="">Choose an option</option>
-        <option value="Flight">Flying</option>
+        <option value="Flying">Flying</option>
         <option value="Invisibility">Invisibility</option>
         <option value="Time travel">Time travel</option>
       </select>
@@ -226,15 +235,24 @@ line_highlights: 36-44
     
 --- /code ---
 
+Notice that the first option has a blank `value` attribute.
+This will be used later when creating the functionality for your form.
+
 **Test:** Click the **Run** button to see the changes you have made.
 + You will see a dropdown list.
 + Click on the arrow to view more options.
 
 --- /task ---
 
+**Debug step:**
++ Check that you have used `<option>` elements inside your `<select>` elements.
++ Ensure that you have placed the entire div with the attribute `id="ability-input"` below the div element with the attribute `id="name-input"`. This is to ensure your form is being created in the right order.
+
 ### Design the Superhero appearance section 
 
 You will add a text area to your form so users can describe their supehero's appearance.
+
+The `<textarea>` element creates a form field with multiple lines so users can input text. The element can be styled using CSS.
 
 --- task ---
 
@@ -265,7 +283,7 @@ line_highlights: 51-58
 
 ### Design the Superhero origin story section 
 
-You will add another text area to your form so users can describe their supehero's origin story.
+You will add another text area to your form so users can describe their superhero's origin story.
 
 --- task ---
 
@@ -296,15 +314,18 @@ line_highlights: 62-68
 
 --- /task ---
 
+
 ### Show your user their Superhero character story 
+
+The `<button>` element creates a control that can be activated by the user's mouse, keyboard, voice command or any other assistive technology.
 
 --- task ---
 
-Add a Submit button with an `onclick` attribute so users can submit their superhero's name.
+Add a `<button>` element with an attribute `onclick="displaySummary()"` below the div with the attribute `id="origin-input"`.
 
 The `onclick` attribute provides interactivity using JavaScript.
 
-Set the `onclick` attribute to `changeDisplay('name')`.
+Also add the text "Submit" inside the `<button>` tags so users know the purpose of the button.
 
 --- code ---
 ---
@@ -323,23 +344,53 @@ line_highlights: 29
     
 --- /code ---
 
-You will create a `displaySummary()` function in the next step that will be used as an event listener when the user clicks the Submit button. 
+You will create a `displaySummary()` function in the next step that will be used as an event listener when the user clicks this `<button>` element. 
 
 **Test:** Click the **Run** button to see the changes you have made.
-+ You will see another text area showing placeholder text.
-
-**Debug step:**
-
-+ Check that you have used the correct `input type` for your name section.
-+ Check that you have used the correct `id` for each element
++ You will see a button with the label "Submit" below your origin story text area.
 
 --- /task ---
 
-Once your users have finished creating their superhero, you will need to provide a section so they can see a summary of what they have created.
+**Debug step:**
+
++ Check that you have added brackets () at the end of the attribute `onclick="displaySummary()"`
+
+### Create a summary section
+
+Once your users have finished creating their superhero, it would be great for design purposes, to show them a summary of their character.
+
+This section will stay hidden until users click the Submit button.
 
 --- task ---
 
-Add the HTML to create a section for displaying the superhero summary.
+Create a new `<section>` element below the section with the attributes `id="character-sheet"`
+
+Add the attribute `id="summary-section"`.
+
+This attribute will provide the styling for the `<section>` element.
+
+--- code ---
+---
+language: html
+filename: comicbook.html
+line_numbers: true
+line_number_start: 74
+line_highlights: 74-76
+---
+
+    <section id="summary-section">
+  
+    </section>
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Add a `<h2>` element to create a title for the section.
+
+Add a `<p>` element with the attribute `id="summary-paragraph"`.
 
 --- code ---
 ---
@@ -357,11 +408,43 @@ line_highlights: 74-77
     
 --- /code ---
 
-**Click the Run button** to see your changes.
-
 --- /task ---
+
+The display property for the `summary-section` selector has been set to `none`. 
+
+This means you will not see any changes immediately.
+
+You will learn more about using JavaScript to change CSS styles in the next step.
+
+--- collapse ---
+
+---
+title: View the summary-section selector
+---
+
+--- code ---
+---
+language: css
+filename: style.css
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+
+#summary-section {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+}
+    
+--- /code ---
+
+--- /collapse ---
+
 
 Fantastic work! Your superhero creation page now contains a form with input fields.
 
-In the next step you will make your form interactive so your user's changes can be updated on the page. 
+In the next step you will make your form interactive so your users changes can be updated on the page. 
 
