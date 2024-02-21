@@ -3,13 +3,11 @@
 In this step, you will continue building the functionality of your form. You will use JavaScript to show/hide elements of your form. and show a summary display of your user's superhero character. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You will create functions that will use the Submit buttons as an event listener.
+You will use an event listener to activate the `<button>` element.
 
 You will use DOM functions to manipulate your webpage and create interactions.
 
 ### Update and show the summary section
-
-You will create a function that collects the superhero details, summarises it, and shows the summary. 
 
 --- task ---
 

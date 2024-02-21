@@ -71,8 +71,8 @@ Add a div element with the attribute `id="name-input"` between the `<section>` t
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 23
-line_highlights: 26, 28
+line_number_start: 22
+line_highlights: 23-25
 ---
 
     <section id="character-sheet"> <!--Superhero character creation form-->
@@ -96,8 +96,8 @@ The `<label>` element allows you to define a title for a particular form field.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 23
-line_highlights: 27
+line_number_start: 22
+line_highlights: 24
 ---
 
     <section id="character-sheet"> <!--Superhero character creation form-->
@@ -145,14 +145,14 @@ Add a text `<input>` field with the attributes `type="text"` and `id="name-text"
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 23
-line_highlights: 28
+line_number_start: 22
+line_highlights: 25
 ---
 
-      <section id="character-sheet"> <!--Superhero character creation form-->
+    <section id="character-sheet"> <!--Superhero character creation form-->
       <div id="name-input">
         <label>Superhero Name:</label>
-          <input type="text" id="name-text">     
+        <input type="text" id="name-text">     
       </div>
     </section>
     
@@ -219,8 +219,8 @@ This should be placed below the div element with the attribute `id="name-input"`
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 36
-line_highlights: 36-44
+line_number_start: 27
+line_highlights: 27-35
 ---
 
     <div id="ability-input">
@@ -265,8 +265,8 @@ This should be placed below the div element with the attribute `id="ability-inpu
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 51
-line_highlights: 51-58
+line_number_start: 36
+line_highlights: 36-39
 ---
 
     <div id="appearance-input">
@@ -296,16 +296,14 @@ This should be placed below the div element with the attribute `id="appearance-i
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 62
-line_highlights: 62-68
+line_number_start: 40
+line_highlights: 40-43
 ---
 
-      <div class="origin-section">
-        <div id="origin-input">
-          <label>Origin Story: </label> 
-          <textarea id="origin">Type your origin story here....</textarea>
-        </div>
-      </div>
+    <div id="origin-input">
+      <label>Origin Story: </label> 
+      <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+    </div>
     
 --- /code ---
 
@@ -332,8 +330,8 @@ Also add the text "Submit" inside the `<button>` tags so users know the purpose 
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 23
-line_highlights: 29
+line_number_start: 40
+line_highlights: 44
 ---
 
     <div id="origin-input">
@@ -341,7 +339,7 @@ line_highlights: 29
       <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
     </div>
     <button onclick="displaySummary()">Submit</button>
-    
+
 --- /code ---
 
 You will create a `displaySummary()` function in the next step that will be used as an event listener when the user clicks this `<button>` element. 
@@ -374,8 +372,8 @@ This attribute will provide the styling for the `<section>` element.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 74
-line_highlights: 74-76
+line_number_start: 46
+line_highlights: 46-48
 ---
 
     <section id="summary-section">
@@ -397,8 +395,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: comicbook.html
 line_numbers: true
-line_number_start: 74
-line_highlights: 74-77
+line_number_start: 46
+line_highlights: 46-49
 ---
 
     <section id="summary-section">
@@ -419,7 +417,7 @@ You will learn more about using JavaScript to change CSS styles in the next step
 --- collapse ---
 
 ---
-title: View the summary-section selector
+title: View the `summary-section` CSS selector
 ---
 
 --- code ---
