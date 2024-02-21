@@ -408,7 +408,7 @@ line_highlights: 46-49
 
 --- /task ---
 
-The display property for the `summary-section` selector has been set to `none`. 
+The display property for the `summary-section` selector has been set to `none;`. 
 
 This means you will not see any changes immediately.
 

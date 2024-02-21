@@ -7,19 +7,27 @@ You will use an event listener to activate the `<button>` element.
 
 You will use DOM functions to manipulate your webpage and create interactions.
 
-### Update and show the summary section
+### Create contants to store your form fields
+
+At the moment users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Submit button. 
+
+You will need to retrieve the HTML element with the attribute `id="summary-section"` because its CSS display property is currently set to `none;` and you need to change this.
 
 --- task ---
 
 Open `script.js`.
+
+Use the DOM function `querySelector()` to find the HTML elements for the form and the summary section using their respective attributes.
+
+Create constants to store the values of the `querySelector()` function.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 37
-line_highlights: 38-40
+line_number_start: 5
+line_highlights: 6-7
 ---
       // Create constants for superhero form
       const characterSheet = document.querySelector("#character-sheet");
@@ -27,120 +35,10 @@ line_highlights: 38-40
     
 --- /code ---
 
---- /task ---
-
---- task ---
-
-Create four more constants to store the ids for name-text, ability-choice, appearance-text and origin-text.
+By retrieving the elements with the attributes `id="character-sheet"` and `id="summary-section"`, you will be able to manipulate them.
 
 --- /task ---
 
---- collapse ---
-
----
-title: Solution for creating more constants
----
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 37
-line_highlights: 38-40
----
-       // Create constants for superhero form
-      const characterSheet = document.querySelector("#character-sheet");
-      const summary = document.querySelector("#summary-section");
-
-      const name = document.querySelector("#name-text");
-      const ability = document.querySelector("#ability-choice");
-      const appearance = document.querySelector("#appearance-text");
-      const origin = document.querySelector("#origin-text");
-    
---- /code ---
-
---- /collapse ---
-
---- task ---
-
- Create a function `displaySummary()`. 
- 
- This function will generate and display a summary of superhero information.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 37
-line_highlights: 38-40
----
-    
-      // Function to display summary
-      function displaySummary() {
-
-      }
-    
---- /code ---
-
---- /task ---
-
-You will control the `summarySection` so the superhero summary can be displayed.
-
---- task ---
-
-Create a constant `summaryParagraph`.
-
-Use the DOM to select an HTML element with the id "summary-paragraph" and store it in the variable. 
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 37
-line_highlights: 39
----
-    
-// Function to display summary
-function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
-
-}
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-Use the DOM to search for an HTML element with the id "name-span".  
-
-Use the `value` property of the `document.querySelector` method to collect any user input updated in the `name-span`. 
-
-Store it in the variable 'name'. 
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 37
-line_highlights: 41
----
-    
-// Function to display summary
-function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
-
-    summaryParagraph.textContent =
-
-}
-    
---- /code ---
-
---- /task ---
 
 You can also learn about other DOM functions you can use in this and other projects.
 
@@ -178,20 +76,187 @@ Here are some common DOM functions:
 
 --- /collapse ---
 
-
 --- task ---
 
-Repeat the same steps to collect the `textContent` for abilities, appearance, and origin from their respective elements.
+Use the DOM function `querySelector()` to find the HTML elements with the attributes `id="name-text"`, `id="ability-choice"`, `id="appearance-text"` and `id="origin-text"`.
 
-Create variables `abilities`, `appearance` and `origins` to store the `textContent`.
+Create four more constants "name", "ability", "appearance" and "origin" to store their values.
+
+--- /task ---
+
+--- collapse ---
+
+---
+title: Solution for creating more constants
+---
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 37
-line_highlights: 42-44
+line_number_start: 5
+line_highlights: 9-12
+---
+       // Create constants for superhero form
+      const characterSheet = document.querySelector("#character-sheet");
+      const summary = document.querySelector("#summary-section");
+
+      const name = document.querySelector("#name-text");
+      const ability = document.querySelector("#ability-choice");
+      const appearance = document.querySelector("#appearance-text");
+      const origin = document.querySelector("#origin-text");
+    
+--- /code ---
+
+--- /collapse ---
+
+### Create the form content summary
+
+You will need a function that will generate and display a summary of the information your user has completed on the superhero form.
+
+A function is a reusable block of code that performs a specific task.
+
+--- task ---
+
+Create a function `displaySummary()`. 
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 15
+---
+    
+      // Function to display summary
+      function displaySummary() {
+
+      }
+    
+--- /code ---
+
+--- /task ---
+
+--- collapse ---
+
+---
+title: What is a function and how are they used in JavaScript?
+---
+
+Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
+Writing a Function:
+
+--- code ---
+---
+language: js
+filename:
+line_numbers: true
+line_number_start:
+line_highlights:
+---
+       function addNumbers(a, b) {
+           return a + b;
+       }
+    
+--- /code ---
+
+
+Here, addNumbers is a function that takes two inputs (a and b) and returns their sum.
+
+Using a Function:
+
+--- code ---
+---
+language: js
+filename:
+line_numbers: true
+line_number_start:
+line_highlights:
+---
+       let result = addNumbers(5, 8);
+       console.log(result); // Outputs: 13
+    
+--- /code ---
+
+You call the function addNumbers with values 5 and 8, and it gives back the sum, which you can then use or display.
+
+--- /collapse ---
+
+You will need to be able to collect the information your users complete and then show the summary when they click the `<button>` element provided.
+
+You can do this by changing the element with the attribute `id="summary-paragraph"`.
+
+--- task ---
+
+Use the `querySelector()` to find the HTML element with the attribute `id="summary-paragraph"`.
+
+Create a constant "summaryParagraph" to store its value.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 16
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.querySelector("#summary-paragraph");
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+You can use "string" formatting to combine all the form fields into one paragraph.
+
+You can also add your own message you want the user to see.
+
+--- task ---
+
+Select an HTML element with the id `summary-section`.
+
+Set the CSS display property to "block"
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 18
+---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.querySelector("#summary-paragraph");
+
+    summaryParagraph.textContent = `Your superhero name is ${name.value}. 
+
+}
+    
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Select an HTML element with the id `summary-section`.
+
+Set the CSS display property to "block"
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 19-20
 ---
     
 // Function to display summary
@@ -208,65 +273,37 @@ function displaySummary() {
 
 --- /task ---
 
-You can use "string" formatting to combine all the `textContent` into one paragraph.
+--- task ---
 
-You can also add your own message you want the user to see.
+Select an HTML element with the id `summary-section`.
 
---- collapse ---
+Set the CSS display property to "block"
 
+--- code ---
 ---
-title: What is "string"?
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 14
+line_highlights: 22
 ---
+    
+// Function to display summary
+function displaySummary() {
+    const summaryParagraph = document.querySelector("#summary-paragraph");
 
-A "string" is a data type in JavaScript and other programming languages.
+    summaryParagraph.textContent = `Your superhero name is ${name.value}. 
+    Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
+    Your origin story is ${origin.value}.`;
 
-Data types are groups of data tell the program how we want to use data.
+    characterSheet.style.display = "none";
+    summary.style.display = "flex";
 
-JavaScript has several primitive data types including:
+}
+    
+--- /code ---
 
-+ Number: represents numeric values. Examples: 10, 3.14.
-+ String: represents sequences of characters. Examples: "Hello", 'JavaScript'.
-+ Boolean: represents true or false values.
-+ Undefined: represents a variable that has been declared but not assigned a value.
-+ Null: represents the intentional absence of any object value.
-
---- /collapse ---
-
---- collapse ---
-
----
-title: What is string formatting?
----
-
-In JavaScript, you can format strings using template literals or concatenation. Here are examples of how they work:
-
-+ Template Literals (String Interpolation): Use backticks (` `) to define a template literal. Embed variables or expressions within ${} inside the template literal.
-
-    const name = "Spider-Man";
-    const age = 25;
-    // Example using template literals
-    const message = `Hello, ${name}! You are ${age} years old.`;
-    console.log(message);
-
-+ Concatenation: concatenate strings using the + operator.
-
-    const superhero = "Iron Man";
-    const power = "suit of armor";
-    // Example using concatenation
-    const description = "The superhero " + superhero + " possesses a " + power + ".";
-    console.log(description);
-
-String Methods: utilise string methods like concat(), slice(), toUpperCase(), toLowerCase(), etc.
-
-    const city = "Gotham";
-    const capitalizedCity = city.toUpperCase();
-    // Example using string methods
-    const result = `Welcome to ${capitalizedCity}!`;
-    console.log(result);
-
---- /collapse ---
-
-Control the summary section to make it visible, as it has been set to `none` in the CSS styles to hide it initially.
+--- /task ---
 
 --- task ---
 
@@ -279,19 +316,21 @@ Set the CSS display property to "block"
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 37
-line_highlights: 50
+line_number_start: 14
+line_highlights: 23
 ---
     
 // Function to display summary
 function displaySummary() {
     const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your abilities are ${abilities}. Your appearance is ${appearance}. 
-    Your origin story is ${origin}.`;
+    summaryParagraph.textContent = `Your superhero name is ${name.value}. 
+    Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
+    Your origin story is ${origin.value}.`;
 
-    document.getElementById("summary-section").style.display = "block";
+    characterSheet.style.display = "none";
+    summary.style.display = "flex";
+
 }
     
 --- /code ---
@@ -317,5 +356,121 @@ You should see the whole paragraph get updated to show your user their superhero
 + Ensure you have used the correct `id` names in your `comicbook.html` file.
 
 --- /task ---
+
+--- collapse ---
+
+
+---
+title: How do you write a simple function?
+---
+
+
+When writing functions, you can follow these steps so your syntax is correct.
+
+
+1. Function Keyword: start with the function keyword to tell JavaScript that you're creating a function.
+
+
+2. Function Name: give your function a name so you can refer to it later. For example, let's name our function sayHello.
+
+
+     --- code ---
+     ---
+     language: js
+     filename:
+     line_numbers: true
+     line_number_start:
+     line_highlights:
+     ---
+           function sayHello
+
+
+     --- /code ---
+    
+
+
+3. Parameters: put brackets () after the function name. Inside these brackets, you can list parameters (inputs) that your function needs. Parameters are like placeholders for values you'll provide when using the function.
+
+
+     --- code ---
+     ---
+     language: js
+     filename:
+     line_numbers: true
+     line_number_start:
+     line_highlights:
+     ---
+           function sayHello()
+
+
+     --- /code ---
+
+
+4. Curly Braces: open curly braces `{` to define the block of code that the function will execute. This is where you write the instructions for your function.
+     `function sayHello() {`
+
+
+5. Function Body: inside the curly braces, write the code that your function will run. For example, let's make our function print "Hello, World!" to the console.
+    
+     --- code ---
+     ---
+     language: js
+     filename:
+     line_numbers: true
+     line_number_start:
+     line_highlights:
+     ---
+           function sayHello() {
+           console.log("Hello, World!");
+
+
+     --- /code ---
+          
+     
+
+
+6. Closing Curly Brace: close the curly braces } to indicate the end of the function.
+
+
+     --- code ---
+     ---
+     language: js
+     filename:
+     line_numbers: true
+     line_number_start:
+     line_highlights:
+     ---
+           function sayHello() {
+           console.log("Hello, World!");
+           }
+
+
+     --- /code ---
+  
+
+
+     Now, you've created a simple function named sayHello.
+
+
+7. When you call this function, it will execute the code inside the curly braces and print "Hello, World!" to the console. You can use the function (call it) by writing the syntax shown below.
+
+
+     --- code ---
+     ---
+     language: js
+     filename:
+     line_numbers: true
+     line_number_start:
+     line_highlights:
+     ---
+           sayHello(); // Outputs: Hello, World!
+
+
+     --- /code ---
+          
+
+
+--- /collapse ---
+
 
 Well done! You have created an interactive form that shows/hides elements. Next, you will allow users change their theme colours on your website.
