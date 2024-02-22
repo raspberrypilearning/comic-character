@@ -317,11 +317,35 @@ line_highlights: 40-43
 
 The `<button>` element creates a control that can be activated by the user's mouse, keyboard, voice command or any other assistive technology.
 
+The `onclick` attribute provides interactivity using JavaScript.
+
+It acts as an event attribute so that when an action occurs such as a user clicking a button with their mouse, a JavaScript function can be executed.
+
+--- collapse ---
+
+---
+title: What is an event?
+---
+
+An event is an action or occurence that takes place in your browser. Events can be triggered by the user, the browser of any other elements on the page. 
+
+Event types include:
++ User generated events:
+  + Mouse events (e.g., click, double click, mouseover).
+  + Keyboard events (e.g., keypress, keydown, keyup).
+  + Touch events (e.g., touchstart, touchmove, touchend).
+  + Form events (e.g., submit, change, input).
+
++ Browser generated events:
+  + Load events (e.g., load, unload).
+  + Window events (e.g., resize, scroll).
+  + Time events (e.g., setInterval, setTimeout).
+
+--- /collapse ---
+
 --- task ---
 
 Add a `<button>` element with an attribute `onclick="displaySummary()"` below the div with the attribute `id="origin-input"`.
-
-The `onclick` attribute provides interactivity using JavaScript.
 
 Also add the text "Submit" inside the `<button>` tags so users know the purpose of the button.
 
@@ -342,7 +366,9 @@ line_highlights: 44
 
 --- /code ---
 
-You will create a `displaySummary()` function in the next step that will be used as an event listener when the user clicks this `<button>` element. 
+You will create a `displaySummary()` function in the next step that will be used as an event handler.
+
+An event handler is a function that gets executed in response to a specific event e.g when the user clicks this `<button>` element. 
 
 **Test:** Click the **Run** button to see the changes you have made.
 + You will see a button with the label "Submit" below your origin story text area.

@@ -3,18 +3,6 @@
 In this step, you will continue building the functionality of your form. You will use JavaScript to show/hide elements of your form. and show a summary display of your user's superhero character. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You will use an event listener to activate the `<button>` element.
-
---- collapse ---
-
----
-title: What is an event listener?
----
-
-
-
---- /collapse ---
-
 You will use DOM functions to manipulate your webpage and create interactions.
 
 ### Create contants to store your form fields
@@ -194,6 +182,20 @@ You call the function addNumbers with values 5 and 8, and it gives back the sum,
 
 --- /collapse ---
 
+The function `displaySummary()` will be called as an event handler providing a response when your user clicks the Submit button.
+
+--- collapse ---
+
+---
+title: What is an event handler?
+---
+
+Event handling means writing code e.g. a function to respond to certain events. JavaScript allows you to define functions, known as event handlers, that are executed when a specific event occurs. 
+
+You can assign event handlers directly in HTML using attributes such as `onclick`, `onmouseover`.
+
+--- /collapse ---
+
 You will need to be able to collect the information your users complete and then show the summary when they click the `<button>` element provided.
 
 You can do this by changing the element with the attribute `id="summary-paragraph"`.
@@ -291,7 +293,43 @@ function displaySummary() {
 title: What is "string" formatting?
 ---
 
+A "string" is a data type in JavaScript and other programming languages. Data types are groups of data tell the program how we want to use data.
+You can format strings using template literals or concatenation. 
 
+Here are examples of how they work:
++ Template Literals (String Interpolation): Use backticks (` `) to create a template literal. Embed variables within ${} inside the template literal.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+    
+   const name = "Spider-Man";
+   const age = 25;
+   // Example using template literals
+   const message = `Hello, ${name}! You are ${age} years old.`;
+   console.log(message);
+    
+--- /code ---
+
++ Concatenation: you can combine strings together using the + operator.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+    
+   const superhero = "Iron Man";
+   const power = "suit of armor";
+   // Example using concatenation
+   const description = "The superhero " + superhero + " possesses a " + power + ".";
+   console.log(description);
+    
+--- /code ---
 
 --- /collapse ---
 
