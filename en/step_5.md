@@ -57,7 +57,7 @@ You have used the `onclick` attribute previously to provide an event handler in 
 
 Open `comicbook.html`.
 
-Add a `<button>` element with the attribute `onlick="changeSummary()`.
+Add a `<button>` element with the attribute `onlick="changeSummary()` inside the section with the attribute `id="summary-section"`.
 
 Write the text "Edit" between the `<button>` tags to provide a label for your users.
 
@@ -86,9 +86,9 @@ line_highlights: 51
 
 + Complete the form as you did in the previous step.
 
-+ When you click the Submit button, the form will be hidden and the summary section will be displayed.
++ When you click the Create button, the form will be hidden and the summary section will be displayed.
 
-+ You should see an Edit button. Click on it to edit your form.
++ You should see a button with the title "Edit". Click on it to edit your form.
 
 --- /task ---
 

@@ -11,7 +11,9 @@ Using these theme colour modes is good for accessibility and dark mode, in parti
 Your `styles.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
 
 #### Add toggle to the header section
-You will need to give your users a way to switch between both themes by using a toggle switch.
+You have learnt how to use `<button>` element to trigger an event 
+
+You will learn to use a toggle switch so your users can between both themes.
 
 --- task ---
 
@@ -29,6 +31,7 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 19-25
 ---
+
     <div class="toggle-container">
 
 
@@ -74,6 +77,8 @@ line_highlights: 20, 23
 Add the `<input>` element that your users will click to toggle between dark mode and light mode.
 
 Add the attributes `type="checkbox"` and `id="lightModeToggle"`.
+
+Add an event attribute `onchange="changeLightMode()"`
 
 --- code ---
 ---
@@ -137,7 +142,7 @@ line_highlights: 24
 ---
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
           <span class="slider"></span>
       </label>
       <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -155,18 +160,87 @@ Your toggle switch should appear in your nav bar aligned to the right of your me
 You can toggle the switch, but it will not work yet.
 
 **Debug step:**
-+ Ensure you have left spaces between your class names.
-+ Ensure you have used the correct form field type.
++ Ensure you have left spaces between your attributes where you have multiple attributes in an element.
++ Ensure you have used an underscore when writing the light_mode icon.
 
 Good Job! You've successfully added the toggle switch to your webpage, you will need to give it some functionality.
 
+### Create an event handler for your toggle
+
+--- task ---
+
+Open `script.js` to create the light mode function.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 59-61
+---
+   
+   // Light mode function 
+  function changeLightMode(){
+   
+  }
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 60
+---
+   
+   // Light mode function 
+  function changeLightMode(){
+      var isLightMode = lightModeToggle.checked;
+
+  }
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 58
+line_highlights: 62
+---
+   
+   // Light mode function 
+  function changeLightMode(){
+      var isLightMode = lightModeToggle.checked;
+
+      document.body.classList.toggle("light-mode", isLightMode);
+  }
+
+--- /code ---
+
+**Test:** Click the **Run** button. 
 
 
-#### Check the user's local storage
+--- /task ---
+
+
+### Check the user's local storage
 
 The toggle switch you have created will modify your website's CSS settings by using JavaScript.
 
-You will give your toggle switch functionality by using a DOM method: EventListener. 
+You will ..... by using a DOM method: EventListener. 
 
 An EventListener waits for a specific action, like a button click, and then triggers a response to that action.
 
@@ -206,7 +280,8 @@ line_numbers: true
 line_number_start: 55
 line_highlights: 56-58
 ---
-    // Light mode function 
+
+    // Check local storage
     document.addEventListener("DOMContentLoaded", function () {
     
     }); 
@@ -248,15 +323,13 @@ line_highlights: 57
 ---
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
-      const lightModeToggle = document.getElementById("lightModeToggle");
+      const lightModeToggle = document.querySelector("lightModeToggle");
   
    }); 
 
 --- /code ---
 
 --- /task ---
-
-Ensure that the line of code you just added is indented inside your `EventListener` method.
 
 Next, you will check the local storage of the browser to see if their local browser preference is set to light mode or dark mode.
 
@@ -285,6 +358,8 @@ line_highlights: 60
   
 --- /code ---
 
+--- /task ---
+
 You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
 
 --- collapse ---
@@ -303,39 +378,10 @@ For example:
 
 --- /collapse ---
 
---- /task ---
-
 Use a DOM method: `document.body.classList.toggle` that toggles the presence of a specified CSS class on the body element of an HTML document. 
 
 You will select the `.light-mode` CSS selector.
 
---- task ---
-
-Add the `document.body.classList.toggle` method inside the `EventListener`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 63
----
-    // Light mode function 
-function changeLightMode(){
-    var isLightMode = lightModeToggle.checked;
-
-    document.body.classList.toggle("light-mode", isLightMode);
-
-    localStorage.setItem("lightMode", isLightMode.toString());
-}
-
-  
---- /code ---
-
-When `isLightMode` is true, the `"light-mode"` class is added to the body element, and when `isLightMode` is false, the class is removed.
-
---- /task ---
 
 Set the initial state of the light mode toggle switch based on the user's preference. 
 
@@ -370,13 +416,10 @@ line_highlights: 64
 
 --- /task ---
 
-### Check and change the CSS style
 
 --- task ---
 
-Create another `EventListener` function to check if the current state of the toggle switch is different from the current state of the body's `"light-mode"` class.
-
-Also declare a constant to store the current state of the toggle position: `on` or `off`.
+Add the `document.body.classList.toggle` method inside the `EventListener`.
 
 --- code ---
 ---
@@ -384,211 +427,21 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 55
-line_highlights: 66-67
+line_highlights: 63
 ---
     // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
+function changeLightMode(){
+    var isLightMode = lightModeToggle.checked;
+
     document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-   });
-   }); 
+
+    localStorage.setItem("lightMode", isLightMode.toString());
+}
+
   
 --- /code ---
 
---- /task ---
-
-You will use a conditional statement to check `if` the toggle switch state matches the current CSS `body` class state.
-
-If it does not, an action or change needs to occur.
-
---- collapse ---
-
----
-title: What is a conditonal statement?
----
-
-Conditional statements in JavaScript are used to make decisions in your code based on certain conditions. 
-
-They allow your program to execute different blocks of code depending on whether a specified condition evaluates to true or false.
-
-These are the conditional statements used in in JavaScript: if, else, else if, and switch:
-
-if Statement: executes a block of code if a specified condition is true.
-
-    const age = 16;
-
-    if (age >= 18) {
-        console.log("You are eligible to vote!");
-    } else {
-        console.log("Sorry, you are too young to vote.");
-    }
-    
-else if Statement: allows you to check multiple conditions sequentially.
-
-    const time = 14;
-
-    if (time < 12) {
-        console.log("Good morning!");
-    } else if (time < 18) {
-        console.log("Good afternoon!");
-    } else {
-        console.log("Good evening!");
-    }
-
-else Statement: executes a block of code if the preceding if or else if condition(s) are not true.
-
-    const isRaining = true;
-
-    if (isRaining) {
-        console.log("Take an umbrella!");
-    } else {
-        console.log("Enjoy the weather!");
-    }
-
-switch Statement: allows you to choose one of many code blocks to be executed.
-
-const day = "Monday";
-
-    switch (day) {
-        case "Monday":
-            console.log("It's the start of the week.");
-            break;
-        case "Friday":
-            console.log("It's almost the weekend!");
-            break;
-        default:
-            console.log("It's a regular day.");
-    }
-
-
---- /collapse ---
-
-
---- task ---
-
-Add an `if` statement inside your `lightModeToggle.addEventListener` method.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 70
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-     const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-     
-
-    }
-    });
-  }); 
-  
---- /code ---
-
- Check if the current state of the toggle switch is different from the current state of the body's `"light-mode"` class.
-
---- /task ---
-
---- task ---
-
-Add a DOM method to change the website theme using the `light-mode` style when the toggle is switched `on`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 72
----
-      // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-        // Update body class and store the user's preference in local storage
-        document.body.classList.toggle("light-mode", isLightMode);
-       
-    }
-    });
-  }); 
-  
---- /code ---
-
---- /task ---
-
---- task ---
-
-Update the user's preference for `light mode` in the local storage and save it as a `string` data type.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 73
----
-      // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
-  
-    // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the stored preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
-  
-    lightModeToggle.addEventListener("change", function () {
-      const isLightMode = lightModeToggle.checked;
-  
-      // Check if light mode is already in the desired state
-      if (isLightMode !== document.body.classList.contains("light-mode")) {
-        // Update body class and store the user's preference in local storage
-        document.body.classList.toggle("light-mode", isLightMode);
-        localStorage.setItem("lightMode", isLightMode.toString());
-    }
-    });
-  }); 
-  
---- /code ---
+When `isLightMode` is true, the `"light-mode"` class is added to the body element, and when `isLightMode` is false, the class is removed.
 
 --- /task ---
 
@@ -627,7 +480,7 @@ line_highlights: 19-25
         <input type="checkbox" id="lightModeToggle" />
           <span class="slider"></span>
       </label>
-      <span class="toggle-label material-symbols-outlined">light_mode</span>
+      <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
     </div>
       
 --- /code ---

@@ -7,7 +7,7 @@ You will use DOM functions to manipulate your webpage and create interactions.
 
 ### Create contants to store your form fields
 
-At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Submit button. 
+At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Create button. 
 
 You will need to retrieve the HTML element with the attribute `id="summary-section"` because its CSS display property is currently set to `none;` and you need to change this.
 
@@ -182,7 +182,7 @@ You call the function addNumbers with values 5 and 8, and it gives back the sum,
 
 --- /collapse ---
 
-The function `displaySummary()` will be called as an event handler providing a response when your user clicks the Submit button.
+The function `displaySummary()` will be called as an event handler providing a response when your user clicks the Create button.
 
 --- collapse ---
 
@@ -458,7 +458,7 @@ Open `comicbook.html`.
 
 + Type in a superhero name or any other details on the form.
 
-+ When you click the Submit button, the form will be hidden and the summary section will be displayed.
++ When you click the Create button, the form will be hidden and the summary section will be displayed.
 
 + You should see the whole paragraph get updated to show your user their superhero summary.
 

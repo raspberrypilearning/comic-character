@@ -55,6 +55,7 @@ function validateForm(){
     }
 }
 
+// Light mode function 
 function changeLightMode(){
     var isLightMode = lightModeToggle.checked;
 
@@ -63,7 +64,7 @@ function changeLightMode(){
     localStorage.setItem("lightMode", isLightMode.toString());
 }
 
-// Light mode function 
+// Check local storage 
 document.addEventListener("DOMContentLoaded", function () {
     const lightModeToggle = document.querySelector("#lightModeToggle");
   
