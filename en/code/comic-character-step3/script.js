@@ -12,11 +12,11 @@ document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}
 
 // Light mode function 
   
+// Check local storage 
+
     // Check if light mode preference is stored in local storage
   
     // Set initial light mode state based on the stored preference
-  
-      // Check if light mode is already in the desired state
      
 // Place Hero slider variables here 
 
