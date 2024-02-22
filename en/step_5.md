@@ -38,8 +38,8 @@ Add the `.style.display` property to change your "summary" constant back to `"no
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 5
-line_highlights: 6-7
+line_number_start: 26
+line_highlights: 27-30
 ---
      // Function to edit form content
     function changeSummary() {
