@@ -452,7 +452,7 @@ You might expect to see a summary section shown when the user clicks the "Create
 
 --- /task ---
 
-However, the display property for the `summary-section` selector has been set to `none;`. 
+However, the `display` property for the `#summary-section` selector has been set to `none;`. 
 
 This means you will not see any changes immediately.
 
@@ -488,5 +488,5 @@ line_highlights: 6
 
 Fantastic work! Your superhero creation page now contains a form with input fields.
 
-In the next step you will make your form interactive so your users changes can be updated on the page. 
+In the next step you will make your form interactive so your users' changes can be updated on the page. 
 
