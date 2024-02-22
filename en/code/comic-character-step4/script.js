@@ -24,11 +24,6 @@ function displaySummary() {
 }
 
 // Function to edit summary
-function changeSummary() {
-
-  characterSheet.style.display = "flex";
-  summary.style.display = "none";
-}
 
 // Function to validate the character creation form 
 

@@ -31,6 +31,30 @@ function changeSummary() {
 }
 
 // Function to validate the character creation form 
+const alertBox = document.querySelector("#alert");
+
+function validateForm(){
+
+    var alertMessage = ""
+
+    if (name.value == ""){
+        alertMessage = "Please enter a name"; 
+    } else if (ability.value == "") {
+        alertMessage = "Please choose an ability";
+    }  else if (appearance.value == "") {
+        alertMessage = "Please describe the appearance";
+    } else if (origin.value == "") {
+        alertMessage = "Please write the origin story";
+    } 
+    
+    if (alertMessage != ""){
+        alertBox.innerHTML = alertMessage;
+        alertBox.style.display = "block";
+    } else {
+        alertBox.style.display = "none";
+        displaySummary();
+    }
+}
 
 
 // Light mode function 
@@ -45,13 +69,7 @@ function changeSummary() {
 
 // Change Hero function
 
-    //Turn the current slide off
 
-    // Find the next slide
-
-    // Wrap around
-
-    // Update the slider
 
 
 

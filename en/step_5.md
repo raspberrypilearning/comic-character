@@ -1,6 +1,6 @@
 ## Edit the summary content
 
-In this step, you will allow users to edit their form choices using a `<button>` element an event listener.
+In this step, you will allow users to edit their form choices using a `<button>` element.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 --- task ---
