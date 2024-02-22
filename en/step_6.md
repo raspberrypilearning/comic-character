@@ -1,4 +1,4 @@
-## Validate your user's input
+## Validate your user input
 
 In this step, you will use JavaScript functionality to validate your users input. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
