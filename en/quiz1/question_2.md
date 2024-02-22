@@ -5,9 +5,9 @@
 legend: Question 2 of 3
 ---
 
-In HTML, the <input> element is commonly used to collect user input.
+In HTML, the `<input>` element is a form element commonly used to collect user input.
 
-Which attribute is used to specify the type of input the user can enter?
+Which attribute is used to specify the category of input the user can enter?
 
 --- choices ---
 
@@ -31,7 +31,7 @@ Not quite! The data- prefix is used for custom data attributes, not for specifyi
 
   --- feedback ---
   
-The data- prefix is used for custom data attributes, not for specifying the type of input.
+Not quite! The syntax `input-type` is not an attribute in the `<input>` element and will not specify the category of input the user can enter.
 
   --- /feedback ---
 

@@ -272,6 +272,7 @@ line_numbers: true
 line_number_start: 27
 line_highlights: 36-39
 ---
+
     <div id="ability-input">
       <label>Abilities:</label>
       <select id="ability-choice">
@@ -311,7 +312,8 @@ line_numbers: true
 line_number_start: 36
 line_highlights: 40-43
 ---
-      <div id="appearance-input">
+
+    <div id="appearance-input">
       <label>Appearance: </label> 
       <textarea id="appearance-text" placeholder="Type the appearance of your superhero here...."></textarea>
     </div>
@@ -488,5 +490,5 @@ line_highlights: 6
 
 Fantastic work! Your superhero creation page now contains a form with input fields.
 
-In the next step you will make your form interactive so your users' changes can be updated on the page. 
+In the next step you will make your form interactive so your user can submit their superhero features and view a summary of the character they have created. 
 

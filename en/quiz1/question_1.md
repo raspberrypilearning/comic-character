@@ -14,7 +14,7 @@ legend: Question 1 of 3
 
 To create a function in JavaScript, you use the function keyword.
 
-What is the basic structure of a function declaration?
+What is the basic structure of writing a function?
 
 --- choices ---
 
@@ -30,14 +30,14 @@ What is the basic structure of a function declaration?
 
   --- feedback ---
 
-  Incorrect syntax. There are missing parentheses in the function declaration. A correct function declaration requires parentheses after the function name.
+  Incorrect syntax. There are missing brackets in the function syntax. A correct function syntax requires brackets after the function name.
 
   --- /feedback ---
 
 - (x) function myFunction() { /* code here */ }
 
   --- feedback ---
-  That's correct! The basic structure of a function declaration includes the function keyword, followed by the function name, parentheses, and curly braces containing the function's code.
+  That's correct! The basic structure of writing a function includes the function keyword, followed by the function name, brackets, and curly braces containing the function's code.
 
   --- /feedback ---
 

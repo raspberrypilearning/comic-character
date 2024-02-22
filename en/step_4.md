@@ -7,7 +7,7 @@ You will use DOM functions to manipulate your webpage and create interactions.
 
 ### Create contants to store your form fields
 
-At the moment users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Submit button. 
+At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Submit button. 
 
 You will need to retrieve the HTML element with the attribute `id="summary-section"` because its CSS display property is currently set to `none;` and you need to change this.
 

@@ -17,7 +17,7 @@ You will need to give your users a way to switch between both themes by using a 
 
 Open `index.html`.
 
-Create a div element inside the header section with the attribute `class="toggle-container"`
+Create a `<div>` element inside the header section with the attribute `class="toggle-container"`
 
 Place it below the `<nav>` tags in the `<header>` element.
 
@@ -56,6 +56,7 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 20, 23
 ---
+
     <div class="toggle-container">
       <label class="switch">
       
@@ -143,6 +144,8 @@ line_highlights: 24
     </div>
       
 --- /code ---
+
+This provides the icon for the light mode option on your toggle.
 
 --- /task ---
 

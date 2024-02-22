@@ -8,7 +8,7 @@ You used JavaScript to manipulate the Document Object Model (DOM) in your superh
 
 Look at the code using a few DOM method tools. 
 
-What does this code do when the "submit-button" is clicked?
+What does this code do when the element with the attribute "submit-button" is clicked?
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ line_number_start:
 line_highlights: 
 ---
 
-    document.getElementById("submit-button").addEventListener("click", function() {
+    document.querySelector("#submit-button").addEventListener("click", function() {
       var inputValue = document.getElementById("user-input").value;
-      document.getElementById("output-paragraph").textContent = "You entered: " + inputValue;
+      document.querySelector("#output-paragraph").textContent = "You entered: " + inputValue;
     });
 
 --- /code ---
