@@ -41,7 +41,7 @@ You will need a section on your form page to show validation messages (alerts) t
 
 --- task ---
 
-Add a `<div>` element with the attribute `id="alert"` below the `<button>` element with the attribute  `onclick="validateForm()`.
+Create a `<div>` element with the attribute `id="alert"` below the `<button>` element with the attribute  `onclick="validateForm()`.
 
 --- code ---
 ---
@@ -89,9 +89,13 @@ line_highlights: 33
 
 --- /task ---
 
+You previously created a function `displaySummary()` which would be used as an event handler when your users click the "Create" button.
+
+However, you have changed this event attribute to `validateForm()` which will handle the response first to check if your user has completed all the details on the superhero form.
+
 --- task ---
 
-Create a function `validateForm()`.
+Create a function `validateForm()` to act as the new event handler.
 
 --- code ---
 ---
@@ -136,6 +140,16 @@ line_highlights: 35-39
 --- /code ---
 
 --- /task ---
+
+--- collapse ---
+
+---
+title: What is a variable?
+---
+
+
+
+--- /collapse ---
 
 --- task ---
 
