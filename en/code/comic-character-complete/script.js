@@ -55,6 +55,8 @@ function validateForm(){
     }
 }
 
+const lightModeToggle = document.querySelector("#lightModeToggle");
+
 // Light mode function
 function changeLightMode(){
     var isLightMode = lightModeToggle.checked;
@@ -65,8 +67,7 @@ function changeLightMode(){
 }
 
 // Check local storage 
-document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.querySelector("#lightModeToggle");
+document.addEventListener("DOMContentLoaded", function () {    
   
     // Check if light mode preference is stored in local storage
     var isLightMode = localStorage.getItem("lightMode") === "true";
@@ -77,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Place Hero slider variables here 
-let currentHeroIndex = 0;
 const heroSlides = document.querySelectorAll('.hero-slide');
+let currentHeroIndex = 0;
 
 // Change Hero function
 function changeHero(direction) {
