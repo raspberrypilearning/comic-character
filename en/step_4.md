@@ -1,6 +1,6 @@
-## Show/Hide elements
+## Make items appear/disappear
 
-In this step, you will continue building the functionality of your form. You will use JavaScript to show/hide elements of your form. and show a summary display of your user's superhero character. 
+In this step, you will continue building the functionality of your form. You will use JavaScript to make parts of your form appear and disappear. You will also show a summary display of your user's superhero character. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 You will use DOM functions to manipulate your webpage and create interactions.
@@ -9,7 +9,9 @@ You will use DOM functions to manipulate your webpage and create interactions.
 
 At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Create button. 
 
-You will need to retrieve the HTML element with the attribute `id="summary-section"` because its CSS display property is currently set to `none;` and you need to change this.
+You will need to retrieve the HTML element with the attribute `id="summary-section"` because its' CSS display property is currently set to `none;` and you need to change this.
+
+You will also need to retrieve the HTML element with the attribute `id="character-sheet"` because its' CSS display property is currently set to `flex;` and you need to make it disappear.
 
 --- task ---
 
@@ -17,7 +19,7 @@ Open `script.js`.
 
 Use the DOM function `querySelector()` to find the HTML elements for the form and the summary section using their respective attributes.
 
-Create constants to store the values of the `querySelector()` function.
+Assign these elements to two new constants.
 
 --- code ---
 ---
@@ -78,7 +80,7 @@ Here are some common DOM functions:
 
 Use the DOM function `querySelector()` to find the HTML elements with the attributes `id="name-text"`, `id="ability-choice"`, `id="appearance-text"` and `id="origin-text"`.
 
-Create four more constants "name", "ability", "appearance" and "origin" to store their values.
+Create four more constants `name`, `ability`, `appearance` and `origin` to store their values.
 
 --- /task ---
 
@@ -143,42 +145,46 @@ line_highlights: 15
 title: What is a function and how are they used in JavaScript?
 ---
 
-Functions make your code modular and easier to understand, especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
-Writing a Function:
+Functions breaks your code into particular tasks so it is easier to understand. Especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
 
---- code ---
----
-language: js
-filename:
-line_numbers: true
-line_number_start:
-line_highlights:
----
-       function addNumbers(a, b) {
-           return a + b;
-       }
-    
---- /code ---
++ Writing a Function: 
+    + start with the function keyword to indicate the creation of a function. Give your function a name (e.g., addNumbers).
+    + include brackets `()` after the function name for parameters (inputs) your function needs.
+    + use open curly braces `{` to define the block of code that the function will execute.
+    + close the curly braces `}` to show the end of the function.
 
+    --- code ---
+    ---
+    language: js
+    filename:
+    line_numbers: true
+    line_number_start:
+    line_highlights:
+    ---
+        function addNumbers(a, b) {
+            return a + b;
+        }
+        
+    --- /code ---
 
 Here, addNumbers is a function that takes two inputs (a and b) and returns their sum.
 
-Using a Function:
++ Using a Function:
 
---- code ---
----
-language: js
-filename:
-line_numbers: true
-line_number_start:
-line_highlights:
----
-       let result = addNumbers(5, 8);
-       console.log(result); // Outputs: 13
-    
---- /code ---
+    --- code ---
+    ---
+    language: js
+    filename:
+    line_numbers: true
+    line_number_start:
+    line_highlights:
+    ---
+        let result = addNumbers(5, 8);
+        console.log(result); // Outputs: 13
+        
+    --- /code ---
 
-You call the function addNumbers with values 5 and 8, and it gives back the sum, which you can then use or display.
+You call the function `addNumbers()` with values 5 and 8, and it gives back the sum, which you can then use or display.
 
 --- /collapse ---
 
@@ -190,7 +196,7 @@ The function `displaySummary()` will be called as an event handler providing a r
 title: What is an event handler?
 ---
 
-Event handling means writing code e.g. a function to respond to certain events. JavaScript allows you to define functions, known as event handlers, that are executed when a specific event occurs. 
+Event handling means assigning a function to respond to certain events. JavaScript allows you to define functions, known as event handlers, that are executed when a specific event occurs. 
 
 You can assign event handlers directly in HTML using attributes such as `onclick`, `onmouseover`.
 
@@ -204,7 +210,7 @@ You can do this by changing the element with the attribute `id="summary-paragrap
 
 Use the `querySelector()` to find the HTML element with the attribute `id="summary-paragraph"`.
 
-Create a constant "summaryParagraph" to store its value.
+Assign the element to a constant: `summaryParagraph`.
 
 --- code ---
 ---
@@ -256,7 +262,7 @@ function displaySummary() {
 
 When your user completes information on your form, you want to be able to retrieve this information. 
 
-The `.value` property is commonly used with form elements to retrieve the current value of the user input.
+The `.value` property is used to retrieve the current value of the user input.
 
 You also want to be able to show your user a friendly message alongside the information they have completed.
 
@@ -297,7 +303,7 @@ A "string" is a data type in JavaScript and other programming languages. Data ty
 You can format strings using template literals or concatenation. 
 
 Here are examples of how they work:
-+ Template Literals (String Interpolation): Use backticks (` `) to create a template literal. Embed variables within ${} inside the template literal.
++ Use backticks (` `) to embed variables within ${} inside the string. This is called a template literal.
 
 --- code ---
 ---
@@ -421,7 +427,7 @@ The values for the display property include:
 
 --- task ---
 
-Use the `.style.display` property to change your "summary" constant to `"flex";`.
+Use the `.style.display` property to change your "summary" constant to `flex;`.
 
 This will display the sumamry section on your page.
 
