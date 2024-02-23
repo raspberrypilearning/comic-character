@@ -49,7 +49,7 @@ language: html
 filename: comicbook.html
 line_numbers: true
 line_number_start: 41
-line_highlights: 45
+line_highlights: 46
 ---
 
       <div id="origin-input">
@@ -70,7 +70,9 @@ line_highlights: 45
 
 Open `script.js`.
 
-Use the DOM function `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
+Use the `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
+
+Assign this elment to a constant `alertBox`.
 
 --- code ---
 ---
@@ -88,6 +90,8 @@ line_highlights: 33
 --- /task ---
 
 --- task ---
+
+Create a function `validateForm()`.
 
 --- code ---
 ---
@@ -109,6 +113,8 @@ line_highlights: 35-37
 --- /task ---
 
 --- task ---
+
+Assing a variable `alertMessage` to store a blank string.
 
 --- code ---
 ---
@@ -132,6 +138,8 @@ line_highlights: 35-39
 --- /task ---
 
 --- task ---
+
+Create a conditional 
 
 --- code ---
 ---

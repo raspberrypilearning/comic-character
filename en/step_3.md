@@ -471,7 +471,7 @@ title: View the summary-section CSS selector
 language: css
 filename: style.css
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 6
 ---
 
