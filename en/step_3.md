@@ -60,8 +60,6 @@ line_highlights: 22-24
 
 --- /task ---
 
-The `character-sheet` selector styles the entire form.
-
 --- task ---
 
 Add a div element with the attribute `id="name-input"` between the `<section>` tags.
