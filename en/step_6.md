@@ -153,8 +153,6 @@ title: What is a variable?
 
 --- task ---
 
-Create a conditional 
-
 --- code ---
 ---
 language: js
