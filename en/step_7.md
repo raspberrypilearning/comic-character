@@ -77,13 +77,17 @@ line_highlights: 20-23
 
 --- /task ---
 
+The `<input>` element contains the attribute `type="checkbox"` which creates a checkbox for your toggle switch. 
+
+You also added a `<span>` element with the attribute `class="slider"`. This provides the styling to convert the checkbox into a toggle design.
+
 --- task ---
 
 Below the `<label>` element, add a final `<span>` element with the attribute `class="toggle-label material-symbols-outlined"`.
 
-This provides the icon for the light mode option on your toggle.
+This provides the icon for light mode on your toggle.
 
-Add text: "light_mode" between the `<span>` tags.
+Add text: "light_mode" inside the `<span>` element.
 
 --- code ---
 ---
@@ -129,7 +133,9 @@ Good Job! You've successfully added the toggle switch to your webpage, you will 
 
 --- task ---
 
-Open `script.js` to create the light mode function.
+Open `script.js`. 
+
+Create the function `changeLightMode()`.
 
 --- code ---
 ---
@@ -149,7 +155,15 @@ line_highlights: 59-61
 
 --- /task ---
 
+When you added the `<label>` element to your HTML page, you added an `<input>` element with the attribute `type="checkbox"`.
+
+JavaScript provides a property to allow you check if the checkbox has been ticked(checked).
+
 --- task ---
+
+Use the `.checked` property to check the HTML element with the id `lightModeToggle`.
+
+Assign this to a variable `isLightMode`.
 
 --- code ---
 ---
