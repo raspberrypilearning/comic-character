@@ -135,7 +135,15 @@ Good Job! You've successfully added the toggle switch to your webpage, you will 
 
 Open `script.js`. 
 
-Create the function `changeLightMode()`.
+Use the `querySelector()` to find the element with the attribute `id="lightModeToggle"`.
+
+Assign it to a constant `lightModeToggle`. 
+
+--- collapse ---
+
+---
+title: Solution for lightModeToggle constant
+---
 
 --- code ---
 ---
@@ -143,7 +151,30 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 58
-line_highlights: 59-61
+line_highlights: 59
+---
+   //Create the constant for light mode
+    const lightModeToggle = document.querySelector("#lightModeToggle");
+
+--- /code ---
+
+--- /collapse ---
+
+--- /task ---
+
+You will now need to create a function that will act as an event handler for your checkbox element.
+
+--- task ---
+
+Create the function `changeLightMode()`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 61
+line_highlights: 62-64
 ---
    
    // Light mode function 
@@ -157,7 +188,7 @@ line_highlights: 59-61
 
 When you added the `<label>` element to your HTML page, you added an `<input>` element with the attribute `type="checkbox"`.
 
-JavaScript provides a property to allow you check if the checkbox has been ticked(checked).
+JavaScript provides a property to allow you check if the checkbox has been ticked(`.checked`).
 
 --- task ---
 
@@ -170,13 +201,52 @@ Assign this to a variable `isLightMode`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 58
-line_highlights: 60
+line_number_start: 61
+line_highlights: 63
 ---
    
    // Light mode function 
   function changeLightMode(){
       var isLightMode = lightModeToggle.checked;
+
+  }
+
+--- /code ---
+
+--- /task ---
+
+The DOM provides a `classList` property that finds and returns the CSS class of an element.
+
+You can then use functions of the `classList` property to add, toggle or remove CSS classes from an element.
+
+--- collapse ---
+
+---
+title: How does the classList property work?
+---
+
+
+
+--- /collapse ---
+
+--- task ---
+
+Use the `.toggle` function from the `classList` property to toggle (tun on and off) the `light-mode` class selector onto the variable storing the HTML element attribute.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 61
+line_highlights: 65
+---
+   
+   // Light mode function 
+  function changeLightMode(){
+      var isLightMode = lightModeToggle.checked;
+
+      document.body.classList.toggle("light-mode", isLightMode);
 
   }
 
@@ -186,37 +256,44 @@ line_highlights: 60
 
 --- task ---
 
+Open `index.html`.
+
+Add the attribute `onchange="changeLightMode()"` to the `<input>` element inside the toggle `<label>` element.
+
 --- code ---
 ---
-language: js
-filename: script.js
+language: html
+filename: index.html
 line_numbers: true
-line_number_start: 58
-line_highlights: 62
+line_number_start: 19
+line_highlights: 22
 ---
-   
-   // Light mode function 
-  function changeLightMode(){
-      var isLightMode = lightModeToggle.checked;
 
-      document.body.classList.toggle("light-mode", isLightMode);
-  }
-
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
+          <span class="slider"></span>
+      </label>
+      <span class="toggle-label material-symbols-outlined">light_mode</span>
+    </div>
+      
 --- /code ---
 
 **Test:** Click the **Run** button. 
 
++ Click on the toggle switch to slide it into light mode.
++ The theme colours of your website should change.
 
 --- /task ---
 
 
 ### Check the user's local storage
 
-The toggle switch you have created will modify your website's CSS settings by using JavaScript.
+The toggle you have created will modify your website's CSS settings when the user switches on light mode. However, when you navigate from one page to another, the toggle will switch back to it's original position, turning light mode off.
 
-You will ..... by using a DOM method: EventListener. 
+You will need to find a way to store the user's choice when they switch light mode on.
 
-An EventListener waits for a specific action, like a button click, and then triggers a response to that action.
+JavaScript provides a `localStorage` function to enable this feature.
 
 --- collapse ---
 
@@ -225,14 +302,16 @@ title: What are local storage preferences?
 
 ---
 
-Local storage in web development is a way to store data on a user's browser that persists even after the user closes the browser or navigates away from the page. It provides a simple key-value pair storage system that uses local storage to save and retrieve user preferences or settings.
+Local storage in web development is a way to store data on a user's browser that remains even after the user closes the browser or navigates away from the page. 
+
+It provides a simple key-value pair storage system that uses local storage to save and retrieve user preferences or settings.
 
 1. **Local Storage:**
    - A small storage space available in a user's web browser.
    - Data stored in local storage remains on the user's device even after they close the browser.
 
 2. **Preferences:**
-   - User-specific choices or settings, such as theme preferences, language selection, or any customizations.
+   - User choices or settings, such as theme preferences, language selection, or any customizations.
 
 3. **Storing Preferences in Local Storage:**
    - Developers can use local storage to save and retrieve user preferences.
@@ -242,7 +321,48 @@ Local storage in web development is a way to store data on a user's browser that
 
 --- task ---
 
-Open `script.js` to create the light mode function.
+Open `script.js`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 61
+line_highlights: 67
+---
+   
+   // Light mode function 
+  function changeLightMode(){
+      var isLightMode = lightModeToggle.checked;
+
+      document.body.classList.toggle("light-mode", isLightMode);
+
+      localStorage.setItem("lightMode", isLightMode.toString());
+  }
+
+--- /code ---
+
+--- /task ---
+
+--- collapse ---
+
+---
+title: How is the EventListener method used?
+---
+
+The `.addEventListener` syntax is written in the following way:
+  element.addEventListener(eventType, callbackFunction);
+
++ element: The HTML element to which you want to attach the event listener.
++ eventType: The type of event you want to listen for (e.g., "click", "keydown").
++ callbackFunction: The function to be executed when the specified event occurs.
+
+--- /collapse ---
+
+--- task ---
+
+Create the local storage function.
 
 Create a .`addEventListener` function.
 
@@ -262,48 +382,10 @@ line_highlights: 56-58
       
 --- /code ---
 
---- collapse ---
-
----
-title: How is the EventListener method used?
----
-
-The `.addEventListener` syntax is written in the following way:
-  element.addEventListener(eventType, callbackFunction);
-
-+ element: The HTML element to which you want to attach the event listener.
-+ eventType: The type of event you want to listen for (e.g., "click", "keydown").
-+ callbackFunction: The function to be executed when the specified event occurs.
-
---- /collapse ---
-
-"DOMContentLoaded" is an `eventType` signal that tells when the main structure of a webpage is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
-
 --- /task ---
 
---- task ---
+`"DOMContentLoaded"` is an `eventType` signal that tells when the main structure of a webpage is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
 
-Declare a constant called `lightModeToggle` that stores the HTML element of your toggle switch with the attribute `id="lightModeToggle"`. 
-
-Use the DOM `document.getElementById` method to select the HTML element.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 57
----
-    // Light mode function 
-    document.addEventListener("DOMContentLoaded", function () {
-      const lightModeToggle = document.querySelector("lightModeToggle");
-  
-   }); 
-
---- /code ---
-
---- /task ---
 
 Next, you will check the local storage of the browser to see if their local browser preference is set to light mode or dark mode.
 
@@ -323,7 +405,6 @@ line_highlights: 60
 ---
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
-    const lightModeToggle = document.getElementById("lightModeToggle");
   
     // Check if light mode preference is stored in local storage
     const isLightMode = localStorage.getItem("lightMode") === "true";

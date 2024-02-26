@@ -194,7 +194,7 @@ Developers can add, delete, or modify elements and content on the page dynamical
 
 --- task ---
 
-Use the `querySelector()` to find the element with the id attribute `currentYear`.
+Use the `querySelector()` to find the element with the attribute `id="currentYear"`.
 
 --- code ---
 ---
