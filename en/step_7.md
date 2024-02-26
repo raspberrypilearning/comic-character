@@ -1,6 +1,6 @@
 ## Create light mode theme
 
-In this step, you will create a toggle switch that will allow your users switch between dark mode, which is the original theme colour of your website and light mode. The website will remember their option even if they navigate to another page.
+In this step, you will create a toggle switch that will allow your users switch between dark mode and light mode. The website will remember their option even if they navigate to another page.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
@@ -11,7 +11,8 @@ Using these theme colour modes is good for accessibility and dark mode, in parti
 Your `styles.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
 
 #### Add toggle to the header section
-You have learnt how to use `<button>` element to trigger an event 
+
+You have previously learnt how to use `<button>` elements to trigger an event. 
 
 You will learn to use a toggle switch so your users can between both themes.
 
@@ -49,7 +50,7 @@ You have used some of these form field elements previously, when you created you
 
 --- task ---
 
-Inside the div, add a `<label>` element with a with the attribute `class="switch"`.
+Inside the `<div>` element, add a `<label>` element with a with the attribute `class="switch"`.
 
 --- code ---
 ---
