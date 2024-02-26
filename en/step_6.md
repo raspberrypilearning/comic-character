@@ -4,7 +4,7 @@ In this step, you will use JavaScript functionality to validate your users input
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 At the moment, your users are able to complete the superhero creation form and submit it.
-However, they are able to submit the information even if they have left some form fields blank.
+However, they are able to submit the information even if they have left some form fields empty.
 
 You can ensure that users complete all the form fields before submitting it by using validation. 
 
@@ -122,7 +122,7 @@ This function will check the fields on your form for any empty values. If there 
 
 --- task ---
 
-Assing a variable `alertMessage` to store an empty string represented by two speech marks ("").
+Assign a variable `alertMessage` to store an empty string represented by two speech marks ("").
 
 This will be used later to store validation messages when the function runs.
 
@@ -218,7 +218,7 @@ line_numbers: true
 ---
     if (condition) {
         // Code to be executed if the condition is true
-        }
+    }
     
 --- /code ---
 
@@ -235,7 +235,7 @@ line_numbers: true
       // Code to be executed if the condition is true
     } else {
     // Code to be executed if the condition is false
-   }
+    }
     
 --- /code ---
 
@@ -261,15 +261,116 @@ line_numbers: true
 
 --- /collapse ---
 
-You have used a conditional operator `==` to check if the value of the form field is equal to an empty string. 
+You have used a comparison operator `==` to check if the value of the form field is equal to an empty string. 
 
 --- collapse ---
 
 ---
-title: What are conditional operators?
+title: What are comparison operators?
 ---
 
+Comparison operators in JavaScript are used to compare two values and return a Boolean result (either `true` or `false`). Here are some commonly used comparison operators:
 
++ Equal (==) Operator: this operator checks if two values are equal, and it converts the data types to be the same if they are different.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+    var num1 = 5;
+    var num2 = "5";
+    console.log(num1 == num2); // Outputs: true
+    
+--- /code ---
+
+    In this example, num1 and num2 are considered equal because the values are the same after data type conversion.
+
++ Strict Equal (===) Operator: this operator checks if two values are equal without converting them to be the same data type. It also checks if the data types are the same.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    var num1 = 5;
+    var num2 = "5";
+    console.log(num1 === num2); // Outputs: false
+    
+--- /code ---
+
+     In this example, num1 and num2 are not strictly equal because their data types are different
+
++ Not Equal (!=) Operator: this operator checks if two values are not equal and converts them to the same data type if they are different.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    var num1 = 5;
+    var num2 = "5";
+    console.log(num1 != num2); // Outputs: false
+    
+--- /code ---
+
+    In this example, num1 and num2 are equal after the data types are converted. It will return as false.
+
++ Strict Not Equal (!==) Operator: this operator checks if two values are not equal, without converting them to the same data type. It also checks if the data types are different.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    var num1 = 5;
+    var num2 = "5";
+    console.log(num1 !== num2); // Outputs: true
+  
+--- /code ---
+
+    In this example, num1 and num2 have different data types. So it will return as true.
+
++ Greater Than (>) Operator: this operator checks if the value on the left is greater than the value on the right
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    var num1 = 10;
+    var num2 = 5;
+    console.log(num1 > num2); // Outputs: true
+  
+--- /code ---
+
+    In this example, num1 is greater than num2 so it will return as true.
+
++ Less Than (<) Operator: this operator checks if the value on the left is less than the value on the right.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    var num1 = 10;
+    var num2 = 15;
+    console.log(num1 < num2); // Outputs: true
+  
+--- /code ---
+
+     In this example, num1 is less than num2 so it will return as true.
 
 --- /collapse ---
 
@@ -607,3 +708,5 @@ Open `comicbook.html`.
 + You can then complete the whole form. Click 'Create', a character summary should be shown.
 
 --- /task ---
+
+Great effort, you have created validation checks to ensure your users complete all the form fields to create their superhero. Next, you will create a toggle switch that will allow your users switch between light and dark mode.
