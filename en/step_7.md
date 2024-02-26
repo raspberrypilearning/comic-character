@@ -14,7 +14,7 @@ Your `styles.css` file contains the colour scheme `.light-mode` that will be use
 
 You have previously learnt how to use `<button>` elements to trigger an event. 
 
-You will learn to use a toggle switch so your users can between both themes.
+You will learn to use a checkbox styled as a toggle slider, so your users can switch between both themes.
 
 --- task ---
 
@@ -109,7 +109,7 @@ line_highlights: 24
 --- /code ---
 
 **Test:** Click the **Run** button.
-+ Your toggle switch should appear in your nav bar aligned to the right of your menu items.
++ Your toggle slider should appear in your nav bar aligned to the right of your menu items.
 + You can toggle the switch, but it will not work yet.
 
 --- /task ---
@@ -127,7 +127,7 @@ title: How to import icons using Google fonts
 
 --- /collapse ---
 
-Good Job! You've successfully added the toggle switch to your webpage, you will need to give it some functionality.
+Good Job! You've successfully added the toggle slider to your webpage, you will need to give it some functionality.
 
 ### Create an event handler for your toggle
 
@@ -231,7 +231,7 @@ title: How does the classList property work?
 
 --- task ---
 
-Use the `.toggle` function from the `classList` property to toggle (tun on and off) the `light-mode` class selector onto the variable storing the HTML element attribute.
+Use the `.toggle` function from the `classList` property to toggle (turn on and off) the `light-mode` class selector onto the variable storing the HTML element attribute.
 
 --- code ---
 ---
@@ -323,6 +323,8 @@ It provides a simple key-value pair storage system that uses local storage to sa
 
 Open `script.js`.
 
+Use the `.setItem` function of the `localStorage` property
+
 --- code ---
 ---
 language: js
@@ -389,11 +391,13 @@ line_highlights: 56-58
 
 Next, you will check the local storage of the browser to see if their local browser preference is set to light mode or dark mode.
 
+You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
+
 You will use a boolean value to set the state to `true`.
 
 --- task ---
 
-Create a constant `isLightMode` and store the value of the localStorage check.
+Create a variable `isLightMode` and store the value of the `localStorage` check.
 
 --- code ---
 ---
@@ -407,15 +411,13 @@ line_highlights: 60
     document.addEventListener("DOMContentLoaded", function () {
   
     // Check if light mode preference is stored in local storage
-    const isLightMode = localStorage.getItem("lightMode") === "true";
+    var isLightMode = localStorage.getItem("lightMode") === "true";
   
     }); 
   
 --- /code ---
 
 --- /task ---
-
-You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
 
 --- collapse ---
 
@@ -433,18 +435,46 @@ For example:
 
 --- /collapse ---
 
-Use a DOM method: `document.body.classList.toggle` that toggles the presence of a specified CSS class on the body element of an HTML document. 
+If the user's local storage preference is already set to "lightMode", then you will need to ensure that the light mode selector is added to the HTML element.
 
-You will select the `.light-mode` CSS selector.
-
-
-Set the initial state of the light mode toggle switch based on the user's preference. 
-
-If `isLightMode` is true, the switch is `on`; otherwise, it's `off`.
+You can use the `.toggle` function from the `classList` property to achieve this.
 
 --- task ---
 
-Add the `LightModeToggle` check inside the `Eventlistener`.
+Add the `.toggle` function from the `classList` property onto the variable storing the HTML element attribute.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 55
+line_highlights: 64
+---
+    // Light mode function 
+    document.addEventListener("DOMContentLoaded", function () {
+  
+    // Check if light mode preference is stored in local storage
+    var isLightMode = localStorage.getItem("lightMode") === "true";
+  
+    // Set initial light mode state based on the stored preference
+    document.body.classList.toggle("light-mode", isLightMode);
+  
+   }); 
+  
+--- /code ---
+
+--- /task ---
+
+You also have to ensure the checkbox is shown as ticked (checked) to the user if the light mode preference is turned on.
+
+If this isn't done, the light mode preference would be set to `on` but the toggle switch position would be set to `off`.
+
+--- task ---
+
+Use the `.checked` property of the variable storing the checkbox HTML element.
+
+Store the variable `isLightmode` which is the check that the user preference is set to "true".
 
 --- code ---
 ---
@@ -464,55 +494,9 @@ line_highlights: 64
     // Set initial light mode state based on the stored preference
     document.body.classList.toggle("light-mode", isLightMode);
     lightModeToggle.checked = isLightMode;
-  
    }); 
   
 --- /code ---
-
---- /task ---
-
-
---- task ---
-
-Add the `document.body.classList.toggle` method inside the `EventListener`.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 55
-line_highlights: 63
----
-    // Light mode function 
-function changeLightMode(){
-    var isLightMode = lightModeToggle.checked;
-
-    document.body.classList.toggle("light-mode", isLightMode);
-
-    localStorage.setItem("lightMode", isLightMode.toString());
-}
-
-  
---- /code ---
-
-When `isLightMode` is true, the `"light-mode"` class is added to the body element, and when `isLightMode` is false, the class is removed.
-
---- /task ---
-
---- task ---
-
-Open `index.html`.
-
-**Click the Run button** to see your changes.
-
-Toggle the light mode switch on and off to see your website theme colours change.
-
-**Debug step (script.js):**
-+ Ensure all your code is indented correctly inside EventListeners.
-+ Ensure all your code is indented correctly inside `if` statments.
-+ Ensure you have closed all parentheses `()`
-+ Ensure you have closed all curly braces `{}`
 
 --- /task ---
 
@@ -520,7 +504,9 @@ Toggle the light mode switch on and off to see your website theme colours change
 
 Open `comicbook.html`.
 
-Add the toggle switch code to the `<header>` element, below the `<nav>` tags.
+Add the `<div>` element inside `<header>` section. 
+
+Place it below the `<nav>` element.
 
 --- code ---
 ---
@@ -528,7 +514,7 @@ language: html
 filename: comicbook.html
 line_numbers: true
 line_number_start: 19
-line_highlights: 19-25
+line_highlights: 
 ---
     <div class="toggle-container">
       <label class="switch">
@@ -542,11 +528,10 @@ line_highlights: 19-25
 
 --- /task ---
 
-**Click the Run button** to see your changes.
-Your toggle switch should appear in your nav bar aligned to the right of your menu items.
-
-Toggle the switch on and off to see your website theme colours change.
+**Test:** Click the **Run** button. 
++ Your toggle switch should appear in your nav bar aligned to the right of your menu items.
++ Toggle the switch on and off to see your website theme colours change.
 
 Navigate to the `index.html` page to check that your preference stays on.
 
-Great work! You have created a toggle switch that changes your website theme colours. Next, you will secure your content so users have to be verified before they gain access.
+Great work! You have created a toggle slider that allows users switch from dark mode to light mode themes. Next, you will add a hero slider to your website and allow users navigate between each hero image using JavaScript.
