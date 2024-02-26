@@ -22,7 +22,7 @@ Open `index.html`.
 
 Create a `<div>` element inside the header section with the attribute `class="toggle-container"`
 
-Place it below the `<nav>` tags in the `<header>` element.
+Place it below the `<nav>` element in the `<header>` section.
 
 --- code ---
 ---
@@ -30,13 +30,10 @@ language: html
 filename: index.html
 line_numbers: true
 line_number_start: 19
-line_highlights: 19-25
+line_highlights: 19-21
 ---
 
     <div class="toggle-container">
-
-
-
 
     </div>
       
@@ -52,57 +49,9 @@ You have used some of these form field elements previously, when you created you
 
 Inside the `<div>` element, add a `<label>` element with a with the attribute `class="switch"`.
 
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 20, 23
----
-
-    <div class="toggle-container">
-      <label class="switch">
-      
-      
-      </label>
-      
-    </div>
-      
---- /code ---
-
---- /task ---
-
---- task ---
-
 Add the `<input>` element that your users will click to toggle between dark mode and light mode.
 
 Add the attributes `type="checkbox"` and `id="lightModeToggle"`.
-
-Add an event attribute `onchange="changeLightMode()"`
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 19
-line_highlights: 21
----
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
-
-      </label>
-      
-    </div>
-      
-
---- /code ---
-
---- /task ---
-
---- task ---
 
 Add the `<span>` element with the attribute `class="slider"`.
 
@@ -112,11 +61,12 @@ language: html
 filename: index.html
 line_numbers: true
 line_number_start: 19
-line_highlights: 22
+line_highlights: 20-23
 ---
+
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
+        <input type="checkbox" id="lightModeToggle">
           <span class="slider"></span>
       </label>
       
@@ -129,9 +79,11 @@ line_highlights: 22
 
 --- task ---
 
-Below the `<label>` element, add a final `<span>` elment with the attribute `class="toggle-label material-symbols-outlined"`.
+Below the `<label>` element, add a final `<span>` element with the attribute `class="toggle-label material-symbols-outlined"`.
 
- Add text: "light_mode" between the `<span>` tags.
+This provides the icon for the light mode option on your toggle.
+
+Add text: "light_mode" between the `<span>` tags.
 
 --- code ---
 ---
@@ -141,9 +93,10 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 24
 ---
+
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
+        <input type="checkbox" id="lightModeToggle"/>
           <span class="slider"></span>
       </label>
       <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -151,18 +104,24 @@ line_highlights: 24
       
 --- /code ---
 
-This provides the icon for the light mode option on your toggle.
+**Test:** Click the **Run** button.
++ Your toggle switch should appear in your nav bar aligned to the right of your menu items.
++ You can toggle the switch, but it will not work yet.
 
 --- /task ---
 
-**Click the Run button** to see your changes.
-Your toggle switch should appear in your nav bar aligned to the right of your menu items.
-
-You can toggle the switch, but it will not work yet.
-
 **Debug step:**
 + Ensure you have left spaces between your attributes where you have multiple attributes in an element.
-+ Ensure you have used an underscore when writing the light_mode icon.
+
+--- collapse ---
+
+---
+title: How to import icons using Google fonts
+---
+
+
+
+--- /collapse ---
 
 Good Job! You've successfully added the toggle switch to your webpage, you will need to give it some functionality.
 

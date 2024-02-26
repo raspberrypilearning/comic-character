@@ -188,7 +188,7 @@ Open `index.html`.
 --- /task ---
 
 
-Fantastic effort! You have created an interactive website where users can create their own superhero character. You have also secured your content. 
+Fantastic effort! You have created an interactive website where users can create their own superhero character. You have validated user entry and allowed users to choose a theme for the website. 
 
 Check your understanding of the project using the reflection quiz on the next step.
 
