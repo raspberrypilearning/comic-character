@@ -43,7 +43,7 @@ You will need a section on your form page to show validation messages (alerts) t
 
 Create a `<div>` element with the attribute `id="alert"`.
 
-This should be created below the `<button>` element with the attribute  `onclick="validateForm()`.
+This should be placed below the `<button>` element with the attribute  `onclick="validateForm()`.
 
 --- code ---
 ---
@@ -200,17 +200,68 @@ So you will be checking if this form field has been left empty by the user.
 
 --- /task ---
 
-You have used a conditional operator `==` to check if the value of the form field is equal to an empty string. 
-
 --- collapse ---
 
 ---
 title: How do conditional statements work?
 ---
 
+In JavaScript, conditional statements are used to make decisions in your code based on certain criteria. These conditions are checked to either be true or false, and the code is then executed based on these choices. There are three main types of conditional statements in JavaScript:
 
++ if statement: this is used to execute a block of code if a specified condition is checked to be true.
+    
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+    if (condition) {
+        // Code to be executed if the condition is true
+        }
+    
+--- /code ---
+
++ if-else statement: this is an extension of the if statement. It allows you to set an alternative block of code to be executed if the initial condition is false.
+    
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    if (condition) {
+      // Code to be executed if the condition is true
+    } else {
+    // Code to be executed if the condition is false
+   }
+    
+--- /code ---
+
++ if-else if-else statement: this is used when you have multiple conditions to check. It allows you to execute different blocks of code based on the checks.
+    
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+---
+
+    if (condition1) {
+    // Code to be executed if condition1 is true
+    } else if (condition2) {
+    // Code to be executed if condition2 is true
+    } else {
+    // Code to be executed if none of the conditions is true
+    }
+    
+--- /code ---
 
 --- /collapse ---
+
+You have used a conditional operator `==` to check if the value of the form field is equal to an empty string. 
 
 --- collapse ---
 
@@ -222,7 +273,7 @@ title: What are conditional operators?
 
 --- /collapse ---
 
-Inside the `if` statement, you can set the block of code that will be executed if the condition is true (form field is left empty by the user).
+Inside the `if` statement, you can set the block of code that will be executed if the condition is true (in this case you are checking if the form field is left empty by the user).
 
 --- task ---
 
@@ -260,7 +311,7 @@ You will now need the program to check two conditions:
 + if `alertMessage` is not an empty string (it now contains the validation message you have created earlier).
 + or `alertMessage` is empty (there is no validation message, the form field is not empty).
 
-You can use an `if-else` statement to set this conditions.
+You can use an `if-else` statement to set these conditions.
 
 --- task ---
 
@@ -299,6 +350,8 @@ You will need to manipulate the content of the element, to display your validati
 
 --- task ---
 
+Inside the `if` statement, add the block of code that will be executed if the condition is true.
+
 Use the `.innerHTML` property to update the HTML element stored in the `alertBox` constant to the value of the current `alertMessage`.
 
 --- code ---
@@ -332,7 +385,7 @@ function validateForm(){
 
 The display property of the `<div>` element with the attribute `id="alert"` is currently set to `none;` 
 
-You will need to change this to make it appear, when there is a validation message to show the user using that element.
+You will need to change this to make it appear, when there is a validation message to show the user.
 
 --- task ---
 
@@ -369,7 +422,8 @@ function validateForm(){
 
 You have set a decision to make `alertBox` appear, if `alertMessage `is not equal to an empty string.
 
-But what happens if `alertMessage` is equal to an empty string? 
+But what happens if `alertMessage` is equal to an empty string? This means the condition is false!
+
 You want the HTML element stored in the constant `alertBox` to disappear because there is no validation message to show the user. 
 This means there are no empty fields and the form can then be submitted.
 
@@ -422,7 +476,7 @@ Open `comicbook.html`.
 
 + Do not type in a superhero name on the form because this is the only validation check you have created.
 + Click 'Create' to submit the form; a validation message should be shown.
-+ You can then type in a superhero name on the form. Click 'Create', a character sumamry should be shown.
++ You can then type in a superhero name on the form. Click 'Create', a character summary should be shown.
 
 --- /task ---
 
@@ -444,6 +498,10 @@ You can use an `if-else if-else` statement when checking multiple conditions.
 --- task ---
 
 Open `script.js`.
+
+Use an `else if` statement to check if the value of `ability` is empty.
+
+Inside the `else if` statement, add the block of code to be executed if the condition is true.
 
 --- code ---
 ---
@@ -480,7 +538,21 @@ function validateForm(){
 
 --- /task ---
 
+Note that `ability` is currently storing the HTML element with the attribute `id="ability-choice"`.
+
+So you have changed the validation message to match the content of the form field.
+
 --- task ---
+
+Use two more `else if` statements to check the values of `appearance` and `origin`.
+
+Add two more validation messages to show your user inside your `else if` statements.
+
+--- collapse ---
+
+---
+title: Solution for else if statements
+---
 
 --- code ---
 ---
@@ -518,5 +590,20 @@ function validateForm(){
 }
     
 --- /code ---
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Open `comicbook.html`.
+
+**Test:** Click the **Run** button. 
+
++ Type values into some of the form fields, while leaving some blank.
++ Click "Create" to submit the form; a validation message should be shown for the form field you have left blank.
++ Test this a few times with a different form field.
++ You can then complete the whole form. Click 'Create', a character summary should be shown.
 
 --- /task ---
