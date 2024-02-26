@@ -14,7 +14,7 @@ Your `styles.css` file contains the colour scheme `.light-mode` that will be use
 
 You have previously learnt how to use `<button>` elements to trigger an event. 
 
-You will learn to use a checkbox styled as a toggle slider, so your users can switch between both themes.
+You will learn to use a checkbox (<input type="checkbox">) styled as a toggle slider, so your users can switch between both themes.
 
 --- task ---
 
@@ -81,6 +81,54 @@ The `<input>` element contains the attribute `type="checkbox"` which creates a c
 
 You also added a `<span>` element with the attribute `class="slider"`. This provides the styling to convert the checkbox into a toggle design.
 
+Icons like emojis are a good way of representing messages because they are universally understood.
+
+You can show your users an icon that represents light mode rather than show them the phrase "light mode"
+
+Google fonts provides icons and a way to add them to your website. 
+
+--- collapse ---
+
+---
+title: How to import icons using Google fonts
+---
+
+Google Material Icons are a set of customisable, vector icons designed and maintained by Google. They are widely used in web and mobile app development to make the visual appeal of user interfaces better.
+
+Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The link will open in a new tab. 
+
+![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
+You can search for specific icons on the website. The website provides an extensive library of icons, each with a unique name. You can find icons suitable for their project by browsing or using the search functionality on the site.
+
+Click on the icon you would like to add. This will open a modal with instructions on how to add the icon to your project. ![The Google Fonts icons page with the home icon selected. There is an instructions panel open, showing how to add the icon to a project.](images/google-selectedicon.png)
+
++ Include Material Icons Font in HTML:
+Add the following link tag in the <head> section of your HTML file to include the Material Icons font. This link will import the Material Icons font from the Google Fonts API.
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
++ Use Material Icons in HTML:
+You can then use Material Icons in your HTML by adding the appropriate class to an HTML element. For example:
+
+    <span class="material-symbols-outlined">home</span>
+
++ CSS Styling:
+You can apply the icon’s custom styles to the CSS stylesheet of your project and personalise it to your preference:
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    </style>
+
+Testing:
+Run your project to verify that the Material Icons are displayed correctly. If everything is set up properly, you should see the icons styled according to the provided classes.
+
+--- /collapse ---
+
 --- task ---
 
 Below the `<label>` element, add a final `<span>` element with the attribute `class="toggle-label material-symbols-outlined"`.
@@ -108,6 +156,8 @@ line_highlights: 24
       
 --- /code ---
 
+The link to import your Google font icon has already been added inside the `<head>` element of your website. The CSS styles have also been provided.
+
 **Test:** Click the **Run** button.
 + Your toggle slider should appear in your nav bar aligned to the right of your menu items.
 + You can toggle the switch, but it will not work yet.
@@ -116,16 +166,6 @@ line_highlights: 24
 
 **Debug step:**
 + Ensure you have left spaces between your attributes where you have multiple attributes in an element.
-
---- collapse ---
-
----
-title: How to import icons using Google fonts
----
-
-
-
---- /collapse ---
 
 Good Job! You've successfully added the toggle slider to your webpage, you will need to give it some functionality.
 
@@ -217,7 +257,7 @@ line_highlights: 63
 
 The DOM provides a `classList` property that finds and returns the CSS class of an element.
 
-You can then use functions of the `classList` property to add, toggle or remove CSS classes from an element.
+You can then use functions from the `classList` property to add, toggle or remove CSS classes from an element.
 
 --- collapse ---
 
@@ -225,13 +265,37 @@ You can then use functions of the `classList` property to add, toggle or remove 
 title: How does the classList property work?
 ---
 
+The `classList` property in JavaScript is used to interact with the class attributes of an HTML element. It provides a set of functions for adding, removing, toggling, and checking the presence of CSS classes on an element. These are some of the functions and how the `classList` property works:
+
++ Accessing classList:
+`element.classList` returns a list representing the class attribute of the specified element.
+
++ Adding a Class:
+`classList.add("className")` adds the specified class to the element. If the class already exists, it is ignored.
+
++ Removing a Class:
+`classList.remove("className")` removes the specified class from the element.
+
++ Toggling a Class:
+`classList.toggle("className")` toggles the presence of the specified class. If the class is present, it is removed; otherwise, it is added.
+
++ Checking if a Class Exists:
+`classList.contains("className")` returns a Boolean confirming whether the specified class is present on the element.
+
++ Replacing Classes:
+`classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
+
++ Multiple Classes:
+Multiple classes can be added or removed simultaneously by providing multiple arguments to add or remove methods.
 
 
 --- /collapse ---
 
 --- task ---
 
-Use the `.toggle` function from the `classList` property to toggle (turn on and off) the `light-mode` class selector onto the variable storing the HTML element attribute.
+Use the `.toggle` function from the `classList` property to toggle the `light-mode` class selector onto the variable storing the HTML element attribute.
+
+This will add the class to the element attirbute if it is not present, or remove it if it is present.
 
 --- code ---
 ---
@@ -281,7 +345,7 @@ line_highlights: 22
 
 **Test:** Click the **Run** button. 
 
-+ Click on the toggle switch to slide it into light mode.
++ Click on the toggle switch to slide it into the light mode position.
 + The theme colours of your website should change.
 
 --- /task ---
@@ -314,8 +378,37 @@ It provides a simple key-value pair storage system that uses local storage to sa
    - User choices or settings, such as theme preferences, language selection, or any customizations.
 
 3. **Storing Preferences in Local Storage:**
-   - Developers can use local storage to save and retrieve user preferences.
+   - You can use local storage to save and retrieve user preferences.
    - Preferences are often stored as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: What local storage functions can you use?
+---
+
+The `localStorage` property in JavaScript provides a simple key-value storage system that keeps a user’s preference even if the webpage is reloaded or the browser is closed. The main functions available include:
++ setItem(key, value):
+  + Adds a key-value pair to the localStorage.
+  Example: `localStorage.setItem("username", "John")`;
+
++ getItem(key):
+  + Retrieves the value associated with a specified key from localStorage.
+  Example: `var username = localStorage.getItem("username")`;
+
++ removeItem(key):
+  + Removes the key-value pair associated with the specified key from localStorage.
+  Example: `localStorage.removeItem("username")`;
+
++ clear():
+  + Removes all key-value pairs from localStorage.
+  Example: localStorage.clear();
+
++ length:
+  + Returns the number of key-value pairs stored in localStorage.
+  Example: var numberOfItems = localStorage.length;
 
 --- /collapse ---
 
@@ -323,7 +416,11 @@ It provides a simple key-value pair storage system that uses local storage to sa
 
 Open `script.js`.
 
-Use the `.setItem` function of the `localStorage` property
+Use the `.setItem` function of the `localStorage` property.
+
+Add the key-value pairs inside the function.
+
+These would be the CSS class and the variable, storing the HTML `.checked` property of the checkbox HTML element
 
 --- code ---
 ---
@@ -345,28 +442,40 @@ line_highlights: 67
 
 --- /code ---
 
+The `isLightMode` variable is currently stored as a Boolean data type (true of false) so this has to be converted to a `string` data type.
+
+It is then stored as the value associated with the key "lightMode" in the localStorage.
+
 --- /task ---
+
+### Create the local storage function
+
+Currently, when users switch the toggle to the light mode position, you need a way to track their choice if they reload the webpage or navigate to another page.
+
+JavaScript provides ways to check for browser generated events such as a webpage being loaded.
+
+You have previously written functions to act as event handlers in response to an event trigger.
+
+You can also use an EventListener to link an HTML element to a set event and a response function.
 
 --- collapse ---
 
 ---
-title: How is the EventListener method used?
+title: How is the EventListener function used?
 ---
 
 The `.addEventListener` syntax is written in the following way:
   element.addEventListener(eventType, callbackFunction);
 
 + element: The HTML element to which you want to attach the event listener.
-+ eventType: The type of event you want to listen for (e.g., "click", "keydown").
++ eventType: The type of event you want to listen for (e.g., "click", "keydown", "DOMContentLoaded").
 + callbackFunction: The function to be executed when the specified event occurs.
 
 --- /collapse ---
 
 --- task ---
 
-Create the local storage function.
-
-Create a .`addEventListener` function.
+Use the `.addEventListener` to link page loaded event to a response function.
 
 --- code ---
 ---
@@ -384,12 +493,11 @@ line_highlights: 56-58
       
 --- /code ---
 
---- /task ---
-
 `"DOMContentLoaded"` is an `eventType` signal that tells when the main structure of a webpage is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
 
+--- /task ---
 
-Next, you will check the local storage of the browser to see if their local browser preference is set to light mode or dark mode.
+Next, you will check the local storage of the user's browser to see if their local preference is set to light mode or dark mode.
 
 You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
 
@@ -504,9 +612,11 @@ line_highlights: 64
 
 Open `comicbook.html`.
 
-Add the `<div>` element inside `<header>` section. 
+Add the `<div>` element with the attribute `class="toggle-container" inside the `<header>` section. 
 
 Place it below the `<nav>` element.
+
+Add the 
 
 --- code ---
 ---
@@ -516,12 +626,13 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 
 ---
+
     <div class="toggle-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeToggle" />
+        <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
           <span class="slider"></span>
       </label>
-      <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
+      <span class="toggle-label material-symbols-outlined">light_mode</span>
     </div>
       
 --- /code ---
@@ -532,6 +643,6 @@ line_highlights:
 + Your toggle switch should appear in your nav bar aligned to the right of your menu items.
 + Toggle the switch on and off to see your website theme colours change.
 
-Navigate to the `index.html` page to check that your preference stays on.
+Navigate to the `index.html` page to check that your light preference stays on.
 
 Great work! You have created a toggle slider that allows users switch from dark mode to light mode themes. Next, you will add a hero slider to your website and allow users navigate between each hero image using JavaScript.
