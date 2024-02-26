@@ -404,11 +404,11 @@ The `localStorage` property in JavaScript provides a simple key-value storage sy
 
 + clear():
   + Removes all key-value pairs from localStorage.
-  Example: localStorage.clear();
+  Example: `localStorage.clear()`;
 
 + length:
   + Returns the number of key-value pairs stored in localStorage.
-  Example: var numberOfItems = localStorage.length;
+  Example: `var numberOfItems = localStorage.length`;
 
 --- /collapse ---
 
@@ -475,7 +475,7 @@ The `.addEventListener` syntax is written in the following way:
 
 --- task ---
 
-Use the `.addEventListener` to link page loaded event to a response function.
+Use the `.addEventListener` to link a page load event to a response function.
 
 --- code ---
 ---
