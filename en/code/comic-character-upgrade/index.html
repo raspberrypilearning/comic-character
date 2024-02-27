@@ -5,37 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>SuperPi Comic Book</title>
 </head>
 <body>
-    <section id="captchaSection" class="center-container" onload="generate()">
-        <h1>Login</h1>
-        <p>Welcome Comic book creator, enter the CAPTCHA to unlock exclusive content!</p>
-        <span id="user-input" class="inline">
-            <input type="text"
-                   id="submit"
-                   placeholder=" Enter CAPTCHA code" />
-        </span>
-     
-        <span class="inline" onclick="generate()">
-            <i class="fas fa-sync"></i>
-        </span>
-     
-        <span id="image"
-             class="inline"
-             selectable="False">
-        </span>
-        <input type="Submit"
-               id="btn"
-               onclick="printmsg()" />
-     
-        <p id="key"></p>
-    </section>
-
-    
-    <div id="successfulLogin" style="display: none;">
         <header class="header">
             <a href="index.html" class="logo">Pi Comics</a>
             <nav class="navbar" id="nav">
@@ -44,31 +17,28 @@
             </nav>
             <div class="toggle-container">
                 <label class="switch">
-                <input type="checkbox" id="lightModeToggle" />
-                <span class="slider"></span>
+                    <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()" />
+                    <span class="slider"></span>
                 </label>
                 <span class="toggle-label material-symbols-outlined">light_mode</span>
-            </div>  
-            <div id="logoutIcon" onclick="logout()">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </div>
-            </header>
-
-            <main>
-                <section class="hero-container">
-                    <div class="hero-slider">
-                        <span class="hero-slide"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"></span>
+        </header>
+        <main>
+            <div class="hero-container">
+                <div class="hero-slider">
+                    <span class="hero-slide active"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"></span>
                     <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape, in front of a blue and yellow background"></span>
+                    <span class="hero-slide"><img src="kwame-cape.jpg" alt="A cartoon boy in a superhero costume standing proudly in front of majestic mountain range."></span>
                     <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"></span>
-                    </div>
-                    <button class="hero-nav-btn prev" onclick="prevHero()">❮</button>
-                    <button class="hero-nav-btn next" onclick="nextHero()">❯</button>
-                </section>
+                    <span class="hero-slide"><img src="ellenhero-image.jpg" alt="A cartoon girl in a red cape and blue shirt standing in front of mountains."></span>
+                </div>
+                <button class="hero-nav-btn prev" onclick="changeHero(-1)">❮</button>
+                <button class="hero-nav-btn next" onclick="changeHero(+1)">❯</button>
+            </div>
         </main>
         <footer>
-            <p> Ⓒ <span id="currentYear"></span> - All Rights Reserved</p>
+            <p> Ⓒ <span id="currentYear"></span> Malik Johnson- All Rights Reserved</p>
         </footer>
-</div>
-<script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
