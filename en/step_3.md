@@ -111,7 +111,7 @@ line_highlights: 24
 
 The `<label>` element is also good for accessibility. 
 
-It allows screen-readers to read the .....
+It allows screen-readers to read the label out loud when the user focuses on the input element.
 
 --- /task ---
 
