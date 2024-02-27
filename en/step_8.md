@@ -68,8 +68,8 @@ Assign the value 0 to the variable.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 81
 ---
 
 // Place Hero slider variables here 
@@ -92,8 +92,8 @@ Assign it to a constant `heroSlides`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 82
 ---
 
 // Place Hero slider variables here 
@@ -113,8 +113,8 @@ Create a function `changeHero()` and pass in the parameter `direction`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 84
+line_highlights: 85-87
 ---
 
 // Place Hero slider variables here 
@@ -197,8 +197,8 @@ Use `heroSlides` as an array to store the current `active` class index `currentH
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 87
 ---
 
 // Place Hero slider variables here 
@@ -230,8 +230,8 @@ Use the `remove()` function from the `classList` property to take the `active` c
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 87
 ---
 
 // Place Hero slider variables here 
@@ -262,8 +262,8 @@ Update the `currentHeroIndex` by storing its' current position + the direction.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 90
 ---
 
 // Place Hero slider variables here 
@@ -301,8 +301,8 @@ Use an `if-else` statement and the `.length` property to check if the conditions
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 93-97
 ---
 
 // Place Hero slider variables here 
@@ -344,8 +344,8 @@ Update the `active` class using the `.add()` function from the `classList` prope
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 63
+line_number_start: 80
+line_highlights: 100
 ---
 
 // Place Hero slider variables here 
