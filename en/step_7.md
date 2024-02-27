@@ -444,7 +444,7 @@ line_highlights: 67
 
 The `isLightMode` variable is currently stored as a Boolean data type (true of false) so this has to be converted to a `string` data type.
 
-It is then stored as the value associated with the key "lightMode" in the localStorage.
+It is then stored as the value paired with the key "lightMode" in the localStorage.
 
 --- /task ---
 

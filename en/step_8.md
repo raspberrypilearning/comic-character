@@ -129,19 +129,101 @@ function changeHero(direction) {
   
 --- /code ---
 
+A parameter acts as a placeholder for a value that you will pass when the function is called.
+
 --- /task ---
+
+Currently, `heroSlides` is storing the values of the three HTML elements with the attrbiutes `class="hero-slide"`.
+
+One of the elements has the `active` class as an attribute when it is the image showing on the slider.
+You want to update this each time a user clicks the prev (<) or next (>) button.
+
+You can create an array using `heroSlides` and the variable `currentHeroIndex` stores the index of the currently active slide.
+
+An array is like a variable but it can hold more than one value; in this case you wnat it to hold three values (each HTML element)
 
 --- collapse ---
 
 ---
-title: Using functions with parameters
+title: How do arrays work? and what is index
 ---
 
+An array is a special type of storage in memory that allows you to store and organise multiple values in a single variable. Unlike regular variables that hold only one value, an array can hold multiple values, and these values can be of different types.
 
+Arrays are created using square brackets [] and can contain various types of data, such as numbers, strings, objects, or even other arrays. 
+
+Each value in the array is called an element, and each element has a unique index that represents its position in the array. The index starts from 0 for the first element, 1 for the second element, and so on.
+For example when given a list `["Fruits", "Clothes", "Toys"]`, "Fruits" is at index 0.
+
+Here are a few examples of arrays:
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+
+---
+
+    // Creating an array of numbers
+    var myArray = [1, 2, 3, 4, 5];
+
+    // Creating an array of strings
+    var fruits = ["apple", "banana", "orange"];
+
+    // Creating an array of mixed types
+    var mixedArray = [1, "hello", true, { key: "value" }];
+
+    // Accessing elements in an array
+    console.log(myArray[0]); // Outputs 1
+    console.log(fruits[1]);  // Outputs "banana"
+
+    // Changing elements in an array
+    myArray[2] = 10;         // Changes the third element to 10
+
+    // Finding the length of an array
+    var arrayLength = myArray.length; // Returns 5
+
+--- /code ---
 
 --- /collapse ---
 
 --- task ---
+
+Use `heroSlides` as an array to store the current `active` class index `currentHeroIndex`.
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 55
+line_highlights: 63
+---
+
+// Place Hero slider variables here 
+let currentHeroIndex = 0;
+const heroSlides = document.querySelectorAll('.hero-slide');
+
+// Change Hero function
+function changeHero(direction) {
+    //Turn the current slide off
+    heroSlides[currentHeroIndex]
+
+}
+
+  
+--- /code ---
+
+Note when you created `currentHeroIndex`, you set it to store the value `0`; 
+
+--- /task ---
+
+You want to update the class of the HTML element so you can do this by using the `classList` property.
+
+--- task ---
+
+Use the `remove()` function from the `classList` property to take the `active` class off the current HTML element. 
 
 --- code ---
 ---
@@ -162,13 +244,18 @@ function changeHero(direction) {
     heroSlides[currentHeroIndex].classList.remove("active");
 
 }
-
   
 --- /code ---
 
 --- /task ---
 
+You will now update the `currentHeroIndex` based on the direction parameter passed to the function.
+
+This could either be +1 to find he next slide, or -1 to find the previous slide.
+
 --- task ---
+
+Update the `currentHeroIndex` by storing its' current position + the direction.
 
 --- code ---
 ---
@@ -198,7 +285,16 @@ function changeHero(direction) {
 
 --- /task ---
 
+You will now check two conditions so there is always an image showing on the slider even if you click the prev(<) or next(>) direction endlessly.
+
++ if the `currentHeroIndex` is less than 0, the program will check the length of `heroSlides` and set the position to the last slide;
++ else if `currentHeroIndex` moves past the last slide, the index will be set back to 0;
+
+The `.length` property returns the size of an array.
+
 --- task ---
+
+Use an `if-else` statement and the `.length` property to check if the conditions are true or false;
 
 --- code ---
 ---
@@ -235,7 +331,13 @@ function changeHero(direction) {
 
 --- /task ---
 
+Once a new element is visible on the slide, you want to set that element as `active`.
+
+You can do this using the `classList` property which you have used previously.
+
 --- task ---
+
+Update the `active` class using the `.add()` function from the `classList` property.
 
 --- code ---
 ---
@@ -278,8 +380,16 @@ function changeHero(direction) {
 
 Open `index.html`.
 
+**Test:** Click the **Run** button. 
++ Click the prev (<) button on your hero image slider, the image should change.
++ Click the next (>) button on your hero image slider, the image should change.
 
 --- /task ---
+
+**Debug step on script.js:**
++ Ensure you have used square brackets`[]` when creating your array assignment.
++ Ensure you have added the `.length` property to your `if-else` statement.
++ Ensure you have used -1 inside your `if-else` statement.
 
 
 Fantastic effort! You have created an interactive website where users can create their own superhero character. You have validated user entry and allowed users to choose a theme for the website. 
