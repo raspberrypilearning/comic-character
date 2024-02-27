@@ -21,6 +21,8 @@ Form elements in HTML allow users to input data, interact with the page, and sub
 title: What are the different types of form elements?
 ---
 
+[An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
+
 Here are some useful form elements:
 + `<form>`: The overall form container.
 + `<label>`: Labels for the input fields.
