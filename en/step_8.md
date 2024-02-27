@@ -15,6 +15,8 @@ You have also been provided buttons to navigate to the left (<) and to the right
 
 There is a `<span>` element with the attribute `class="hero-slide active"`. You have used the `active` class in the previous project to specify that a particlar link was selected.
 
+The same idea will be used for the slider, where `active` class will show that a particular image is selected.
+
 --- code ---
 ---
 language: html
@@ -44,7 +46,7 @@ line_highlights:
 
 --- /task ---
 
-There is currently no function written as an event handler for the `<button>` elements. 
+There is currently no function written as an event handler for the `<button>` elements. Therefore, the buttons will not work.
 
 ### Create the slider variables
 
@@ -104,7 +106,7 @@ const heroSlides = document.querySelectorAll('.hero-slide');
 
 --- task ---
 
-Change a function `changeHero()` and pass in the parameter `direction`.
+Create a function `changeHero()` and pass in the parameter `direction`.
 
 --- code ---
 ---
@@ -128,6 +130,16 @@ function changeHero(direction) {
 --- /code ---
 
 --- /task ---
+
+--- collapse ---
+
+---
+title: Using functions with parameters
+---
+
+
+
+--- /collapse ---
 
 --- task ---
 

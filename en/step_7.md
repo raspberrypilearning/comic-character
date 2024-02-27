@@ -8,7 +8,7 @@ In this step, you will create a toggle switch that will allow your users switch 
 Using these theme colour modes is good for accessibility and dark mode, in particular, is praised for improving readability and reducing eye strain, especially in low-light conditions.
 </p>
 
-Your `styles.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
+Your `style.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
 
 #### Add toggle to the header section
 
@@ -482,8 +482,8 @@ Use the `.addEventListener` to link a page load event to a response function.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 56-58
+line_number_start: 70
+line_highlights: 71-73
 ---
 
     // Check local storage
@@ -512,8 +512,8 @@ Create a variable `isLightMode` and store the value of the `localStorage` check.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 60
+line_number_start: 70
+line_highlights: 74
 ---
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
@@ -556,8 +556,8 @@ Add the `.toggle` function from the `classList` property onto the variable stori
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 64
+line_number_start: 70
+line_highlights: 77
 ---
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
@@ -589,8 +589,8 @@ Store the variable `isLightmode` which is the check that the user preference is 
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 55
-line_highlights: 64
+line_number_start: 70
+line_highlights: 78
 ---
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
@@ -642,7 +642,6 @@ line_highlights:
 **Test:** Click the **Run** button. 
 + Your toggle switch should appear in your nav bar aligned to the right of your menu items.
 + Toggle the switch on and off to see your website theme colours change.
-
-Navigate to the `index.html` page to check that your light preference stays on.
++ Navigate to the `index.html` page to check that your light preference stays on.
 
 Great work! You have created a toggle slider that allows users switch from dark mode to light mode themes. Next, you will add a hero slider to your website and allow users navigate between each hero image using JavaScript.
