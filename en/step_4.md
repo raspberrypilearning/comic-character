@@ -5,7 +5,7 @@ In this step, you will continue building the functionality of your form. You wil
 
 You will use DOM functions to manipulate your webpage and create interactions.
 
-### Create contants to store your form fields
+### Create constants to store your form fields
 
 At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Create button. 
 
