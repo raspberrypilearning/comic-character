@@ -113,7 +113,7 @@ Create a function `changeHero()` and pass in the parameter `direction`.
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 84
+line_number_start: 80
 line_highlights: 85-87
 ---
 
