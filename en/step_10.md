@@ -45,6 +45,13 @@ line_highlights:
 
 #### Add more hero images
 
+In the starter projects there are multiple images you can use to expand your hero slider.
+
+`kwame-cape.jpg`
+`ellenhero-image.jpg`
+
+You can add more `<img>` elements to your hero slider.
+
 --- collapse ---
 
 ---
@@ -200,24 +207,14 @@ line_highlights:
 
 --- /collapse ---
 
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Summary or upgrade project task
-</div>
-<div>
-![](images/image.png){:width="300px"}
-</div>
-</div>
+### See the upgraded project
 
 --- collapse ---
 
 ---
-title: Completed project
+title: Upgraded project
 ---
 
-You can view the [completed project here](https://scratch.mit.edu/projects/485673032/){:target="_blank"}.
+You can view the [upgraded project here](https://editor.raspberrypi.org/en/projects/comic-character-upgraded){:target="_blank"}.
 
 --- /collapse ---
-
---- save ---
