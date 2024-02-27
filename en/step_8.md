@@ -136,7 +136,7 @@ A parameter acts as a placeholder for a value that you will pass when the functi
 Currently, `heroSlides` is storing the values of the three HTML elements with the attrbiutes `class="hero-slide"`.
 
 One of the elements has the `active` class as an attribute when it is the image showing on the slider.
-You want to update this each time a user clicks the prev (<) or next (>) button.
+You want to update this each time a user clicks the left (<) or right (>) button.
 
 You can create an array using `heroSlides` and the variable `currentHeroIndex` stores the index of the currently active slide.
 
@@ -251,7 +251,7 @@ function changeHero(direction) {
 
 You will now update the `currentHeroIndex` based on the direction parameter passed to the function.
 
-This could either be +1 to find he next slide, or -1 to find the previous slide.
+This could either be +1 to find the next slide, or -1 to find the previous slide.
 
 --- task ---
 
@@ -285,7 +285,7 @@ function changeHero(direction) {
 
 --- /task ---
 
-You will now check two conditions so there is always an image showing on the slider even if you click the prev(<) or next(>) direction endlessly.
+You will now check two conditions so there is always an image showing on the slider even if you click the left(<) or right(>) direction endlessly.
 
 + if the `currentHeroIndex` is less than 0, the program will check the length of `heroSlides` and set the position to the last slide;
 + else if `currentHeroIndex` moves past the last slide, the index will be set back to 0;
@@ -381,8 +381,8 @@ function changeHero(direction) {
 Open `index.html`.
 
 **Test:** Click the **Run** button. 
-+ Click the prev (<) button on your hero image slider, the image should change.
-+ Click the next (>) button on your hero image slider, the image should change.
++ Click the left (<) button on your hero image slider, the image should change.
++ Click the right (>) button on your hero image slider, the image should change.
 
 --- /task ---
 
