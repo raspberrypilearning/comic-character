@@ -384,7 +384,7 @@ You can explore other `Date` functions JavaScript provides when creating other p
 --- collapse ---
 
 ---
-title: What other `Date` functions can I use?
+title: What other Date functions can I use?
 ---
 
 + Creating a Date Object: creates a new Date object representing the current date and time:
