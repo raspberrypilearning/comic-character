@@ -269,7 +269,7 @@ You have used a comparison operator `==` to check if the value of the form field
 title: What are comparison operators?
 ---
 
-Comparison operators in JavaScript are used to compare two values and return a Boolean result (either `true` or `false`). Here are some commonly used comparison operators:
+Comparison operators in JavaScript are used to compare two values and return a Boolean result (either `true` or `false`). These are some commonly used comparison operators:
 
 + Equal (==) Operator: this operator checks if two values are equal, and it converts the data types to be the same if they are different.
 
