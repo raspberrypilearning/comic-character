@@ -14,7 +14,7 @@ You will:
 + Use the date function in JavaScript to update the Copyright text on your website
 + Add form and input elements to create a superhero character
 + Use JavaScript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
-+ Use Javascript to show/hide elements on your website
++ Use JavaSscript to show/hide elements on your website
 + Apply light mode/ dark mode themes to your website
 + Use local storage to store user preferences
 + Create an image slider that navigates through images
