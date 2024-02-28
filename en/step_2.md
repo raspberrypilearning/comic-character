@@ -239,7 +239,7 @@ line_highlights: 3
 --- collapse ---
 
 ---
-title: How does `.innerHTML` work?
+title: How does .innerHTML work?
 ---
 
 In JavaScript, you can view and change the inner text content of an HTML element using various DOM properties.

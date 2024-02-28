@@ -296,7 +296,7 @@ function displaySummary() {
 --- collapse ---
 
 ---
-title: What is "string" formatting?
+title: What is string formatting?
 ---
 
 A "string" is a data type in JavaScript and other programming languages. Data types are groups of data tell the program how we want to use data.
