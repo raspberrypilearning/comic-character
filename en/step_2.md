@@ -246,7 +246,6 @@ In JavaScript, you can view and change the inner text content of an HTML element
 
 These include:
 + `.innerHTML` this property finds and returns the text content as well as the CSS styling, attributes and HTML tags of an element.
-For example: 
 
 + `.innerText` this property finds and returns the text content as well as the CSS styling but not the tags and attributes of an element.
 
