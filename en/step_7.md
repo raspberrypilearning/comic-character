@@ -1,11 +1,11 @@
 ## Create light mode theme
 
 In this step, you will create a toggle slider that will allow your users switch between dark mode and light mode. The website will remember their option even if they navigate to another page.
+
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Dark mode and light mode**</span> are user interface themes that change the colour scheme of an application or website based on the user's preference or system settings.
-Using these theme colour modes is good for accessibility and dark mode, in particular, is praised for improving readability and reducing eye strain, especially in low-light conditions.
+<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to users improves readability and accessibility.
 </p>
 
 Your `style.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
@@ -100,7 +100,7 @@ Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The l
 ![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
 You can search for specific icons on the website. The website provides an extensive library of icons, each with a unique name. You can find icons suitable for their project by browsing or using the search functionality on the site.
 
-Click on the icon you would like to add. This will open a modal with instructions on how to add the icon to your project. ![The Google Fonts icons page with the home icon selected. There is an instructions panel open, showing how to add the icon to a project.](images/google-selectedicon.png)
+Click on the icon you would like to add. This will open a modal with instructions on how to add the icon to your project. ![The Google Fonts icons page with the home icon selected. There is an instructions panel open, showing how to add the icon to a project.](images/google-selected-icon.png)
 
 + Include Material Icons Font in HTML:
 Add the following link tag in the <head> section of your HTML file to include the Material Icons font. This link will import the Material Icons font from the Google Fonts API.
@@ -167,7 +167,7 @@ The link to import your Google font icon has already been added inside the `<hea
 **Debug step:**
 + Ensure you have left spaces between your attributes where you have multiple attributes in an element.
 
-Good Job! You've successfully added the toggle slider to your webpage, you will need to give it some functionality.
+Good Job! You've successfully added the toggle slider to your web page, you will need to give it some functionality.
 
 ### Create an event handler for your toggle
 
@@ -389,7 +389,7 @@ It provides a simple key-value pair storage system that uses local storage to sa
 title: What local storage functions can you use?
 ---
 
-The `localStorage` property in JavaScript provides a simple key-value storage system that keeps a user’s preference even if the webpage is reloaded or the browser is closed. The main functions available include:
+The `localStorage` property in JavaScript provides a simple key-value storage system that keeps a user’s preference even if the web page is reloaded or the browser is closed. The main functions available include:
 + setItem(key, value):
   + Adds a key-value pair to the localStorage.
   Example: `localStorage.setItem("username", "John")`;
@@ -450,9 +450,9 @@ It is then stored as the value paired with the key "lightMode" in the localStora
 
 ### Create the local storage function
 
-Currently, when users switch the toggle to the light mode position, you need a way to track their choice if they reload the webpage or navigate to another page.
+Currently, when users switch the toggle to the light mode position, you need a way to track their choice if they reload the web page or navigate to another page.
 
-JavaScript provides ways to check for browser generated events such as a webpage being loaded.
+JavaScript provides ways to check for browser generated events such as a web page being loaded.
 
 You have previously written functions to act as event handlers in response to an event trigger.
 
@@ -493,7 +493,7 @@ line_highlights: 71-73
       
 --- /code ---
 
-`"DOMContentLoaded"` is an `eventType` signal that tells when the main structure of a webpage is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
+`"DOMContentLoaded"` is an `eventType` signal that tells when the main structure of a web page is ready, letting JavaScript start doing things without waiting for everything like pictures to finish loading.
 
 --- /task ---
 
@@ -610,7 +610,7 @@ line_highlights: 78
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 Add the `<div>` element with the attribute `class="toggle-container" inside the `<header>` section. 
 
@@ -621,7 +621,7 @@ Add the
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 19
 line_highlights: 

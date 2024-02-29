@@ -22,7 +22,7 @@ function prevHero() {
     heroSlider.style.transform = `translateX(${-currentHeroIndex * heroSlideWidth}px)`;
 }
 
-// Update Create Comic function 
+// Update Create Character function 
 function changeDisplay(id) {
     var input = document.querySelector("#" + id);
     var inputSection = document.querySelector("#" + id + "-input");

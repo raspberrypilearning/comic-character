@@ -1,16 +1,19 @@
 ## Add Copyright message to footer
 
 In this step, you will create a Copyright message and a function to automatically update the current year. You will add this to your footer section.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Copyright**</span> is a law that stops people from using someone else's work without their permission. It is a legal consideration when building apps on the web or for other devices because of the content used. This includes images, videos, music and other ideas.
+<span style="color: #0faeb0">**Copyright**</span> is a legal protection that stops people from using someone else's work (e.g. websites, images, music) without their permission.
 </p>
 
-In modern web design, websites include a footer section, displaying a Copyright message. The Copyright message consists of the following:
-+ a Copyright symbol Ⓒ
-+ the name of the owner of the website
-+ the current year in which the user is viewing the website
+In modern web design, websites include a footer section, displaying a copyright message. 
+
+A copyright message usually contains:
++ a copyright symbol Ⓒ
++ the owner of the website
++ the year the content was published
 
 --- task ---
 
@@ -28,9 +31,9 @@ Your starter project contains:
 
 This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
-The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
+The **JavaScript** file you will use has already been linked to your web pages just before the closing `</body>` tag.
 
-The **CSS** file you will use has also been linked to your webpages.
+The **CSS** file you will use has also been linked to your web pages.
 
 --- task ---
 
@@ -38,7 +41,9 @@ Open the `index.html` file.
 
 Find the `footer` element.
 
-Add a `<p>` element containing the Copyright message crea†ed for you. 
+Add a `<p>` element containing the Copyright message. 
+
+(You can change the fictional name `Malik Johnson` to a name of your choice.)
 
 --- code ---
 ---
@@ -55,15 +60,13 @@ line_highlights: 30
 
 --- /code ---
 
-You can change the fictional name `Malik Johnson` to a name of your choice.
-
 --- /task ---
 
 --- task ---
 
 Add a `<span>` element with the attribute `id="currentYear"` between the Ⓒ symbol and the name.
 
-The `id` attribute is used to specify a unique id for a HTML element.
+The `id` attribute is used to specify a unique identifier for an HTML element.
 
 --- code ---
 ---
@@ -75,28 +78,22 @@ line_highlights: 30
 ---
 
       <footer>
-        <p> Ⓒ <span id="currentYear"> Malik Johnson- All Rights Reserved</p>
+        <p> Ⓒ <span id="currentYear"></span> Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
 
 --- /task ---
 
-The `<span>` element is used because you want to insert the date within the Copyright message.
+**Test:** Click the **Run** button to see your changes.
++ The Copyright message will be shown at the bottom (footer) of your web page.
+**Notice:** there is no date shown yet.
 
-**Test:** Click the **Run** button to see the changes you have made.
-+ The Copyright message will be shown at the bottom(footer section) of your webpage.
-+ It will have a blank space where the year is supposed to be displayed.
+### Display the current year
 
-**Debug step:** Check the `id` attribute has speech marks `""` around it.
+There is no text inside the `<span>` element. 
 
-### Update the current year
-
-There is currently no text written as part of the `<span>` element. This will be used to display the current year using a JavaScript function.
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**JavaScript(JS)**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is a very popular programming language in the world and without it, websites would be static and boring.
-</p>
+JavaScript will be used to update the content of the `<span>` to display the current year.
 
 --- collapse ---
 
@@ -104,29 +101,31 @@ There is currently no text written as part of the `<span>` element. This will be
 title: How does JavaScript make websites interactive?
 ---
 
-JavaScript is a powerful language that provides tools to allow developers to create interactive websites, by controlling the webpage content and behaviour. 
-JavaScript can be used to change HTML content, change HTML attribute values, change CSS styles, show/hide HTML elements, and more.
+JavaScript is a powerful language that allows developers to create interactive websites.
+JavaScript can be used to update, hide or show HTML content, change CSS styling and lots more!
 
-In this project we will focus on the following tools:
-+ DOM Manipulation
-+ Event Handling
-+ User input validation
-+ Animations & Transitions
-+ Local storage
+In this project you will use JavaScript to:
++ Update, hide and show HTML elements 
++ Give users control of updating the page content
++ Check users have completed a form correctly
++ Add animations
++ Store user preferences
 
 --- /collapse ---
 
-JavaScript provides a Date function using the syntax `new Date()`.
+JavaScript has a `Date()` function that returns the current date and time, using the browser's time zone.
 
-This function lets you work with dates automatically. JavaScript will use the browser's time zone and return the current date and time. For example:
+A call to `Date()` returns a string.
 
-`Mon Feb 19 2024 16:15:20 GMT+0000 (Greenwich Mean Time)`
+Here is the result of the call to `Date()` when this page was loaded:
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-date" width="100%" height="20" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 --- task ---
 
 Open `script.js`.
 
-Create a constant `currentYear` to store `new Date()` as a value.
+Create a constant `currentYear` to store a new `Date()` object.
 
 --- code ---
 ---
@@ -161,11 +160,11 @@ For example, `var age = 30;` `age` is the variable storing the value `30`
 
 JavaScript can be used to change HTML elements. You want to update the current year and show it using the `<span>` element you created earlier.
 
-To access the `<span>` element, you will use the Document Object Model which represents your webpage. 
+To access the `<span>` element, you will use the Document Object Model which represents your web page. 
 
-With the DOM (Document Object Model), JavaScript can find and change all the elements of a HTML document.
+With the DOM (Document Object Model), JavaScript can find and change all the elements of an HTML document.
 
-You can use the function `querySelector()` for this. `querySelector()` returns the first element in your webpage that matches a specified CSS selector. (E.g. #openHam, .nav-items)
+You can use the function `querySelector()` for this. `querySelector()` returns the first element in your web page that matches a specified CSS selector. (E.g. #openHam, .nav-items)
 
 --- collapse ---
 
@@ -173,14 +172,14 @@ You can use the function `querySelector()` for this. `querySelector()` returns t
 title: What does the Document Object Model do exactly?
 ---
 
-The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a webpage dynamically.
+The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a web page dynamically.
 
 
 The DOM allows developers to interact using the following methods:
 
 
 + Dynamic Interaction:
-It allows dynamic interaction with the webpage. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
+It allows dynamic interaction with the web page. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
 
 
 + Event Handling:
@@ -218,7 +217,7 @@ Note that you have placed the id `#currentYear` within the `querySelector()` bec
 
 Change the content of the `<span>` element (which is currently blank) using `.innerHTML`.
 
-`.innerHTML` is a HTML property that can be used to find and change the text content of an element.
+`.innerHTML` is an HTML property that can be used to find and change the text content of an element.
 
 --- code ---
 ---
@@ -350,7 +349,7 @@ You will need it for your next task.
 
 --- task ---
 
-Open the `comicbook.html` file.
+Open the `character.html` file.
 
 Find the `footer` element.
 
@@ -359,7 +358,7 @@ Paste (CTRL + V) or (CMD + V) the `<p>` element you copied earlier.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 24
 line_highlights: 25
@@ -374,7 +373,7 @@ line_highlights: 25
 You can change the fictional name `Malik Johnson` to a name of your choice.
 
 **Test:** Click the **Run** button to see the changes you have made.
-+ The Copyright message will be shown at the bottom(footer section) of your webpage.
++ The Copyright message will be shown at the bottom(footer section) of your web page.
 + It will have a blank space where the year is supposed to be displayed.
 
 --- /task ---
@@ -414,4 +413,4 @@ title: What other Date functions can I use?
 
 Great job! You have added dynamic footer content to your website.
 
-Next, you will design an interactive webpage where users can create their own superhero.
+Next, you will design an interactive web page where users can create their own superhero.

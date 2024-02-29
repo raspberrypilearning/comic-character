@@ -55,7 +55,7 @@ You have used the `onclick` attribute previously to provide an event handler in 
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 Add a `<button>` element with the attribute `onlick="changeSummary()` inside the section with the attribute `id="summary-section"`.
 
@@ -64,7 +64,7 @@ Write the text "Edit" between the `<button>` tags to provide a label for your us
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 48
 line_highlights: 51

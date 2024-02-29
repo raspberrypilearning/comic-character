@@ -44,11 +44,11 @@ line_highlights:
  
   --- /feedback ---
 
-- ( ) Changes the background color of the webpage to the user's input.
+- ( ) Changes the background colour of the web page to the user's input.
 
   --- feedback ---
 
- Not quite! The code will not change the background colour of the webpage baseed on user's input.
+ Not quite! The code will not change the background colour of the web page baseed on user's input.
 
   --- /feedback ---
 

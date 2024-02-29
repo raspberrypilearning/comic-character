@@ -1,24 +1,19 @@
 ## Introduction
 
 
-In this project, you will combine JavaScript, HTML and CSS, to create a website where your users can design their own superhero character. 
-
-The website also allows users toggle between light and dark mode themes.
-
+In this project, you will combine JavaScript, HTML and CSS, to create an interactive website where your users can design their own superhero character!
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark mode**</span> themes are considerations of colour schemes used when designing user interfaces for web and other apps. Dark mode is a color scheme that uses light-colored text and icons on dark backgrounds. Light mode is the opposite of this. Both themes have their benefits and are used to improve readability. However, it is important to check that the colours used in the themes are accessibility friendly.
+<span style="color: #0faeb0">**JavaScript**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is a very popular programming language and without it, websites would be static and boring.
 </p>
 
 You will:
-+ Use the date function in JavaScript to update the Copyright text on your website
-+ Add form and input elements to create a superhero character
-+ Use JavaScript to manipulate HTML pages and apply logic (event handlers/DOM manipulation/functions)
-+ Use JavaSscript to show/hide elements on your website
-+ Apply light mode/ dark mode themes to your website
-+ Use local storage to store user preferences
-+ Create an image slider that navigates through images
-
++ Use the `Date()` function in JavaScript to update Copyright text on your website
++ Add a form and input options to let people create a superhero character
++ Use JavaScript to show/hide elements on your website
++ Add light/dark mode options to your website
++ Store user preferences
++ Create an image slider that scrolls through images.
 
 --- no-print ---
 --- task ---
@@ -30,9 +25,9 @@ Explore the Superhero Website.
 
 + Click the arrows on the home page slider to navigate through the images .
 + Toggle the light mode button to see the theme colours on the site change.
-+ Navigate to the Comic book page, complete the input fields to create your own superhero character.
++ Navigate to the Create Character page and complete the input fields to create your own superhero character!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
 </div>
 

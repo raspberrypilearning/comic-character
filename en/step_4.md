@@ -3,11 +3,11 @@
 In this step, you will continue building the functionality of your form. You will use JavaScript to make parts of your form appear and disappear. You will also show a summary display of your user's superhero character. 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You will use DOM functions to manipulate your webpage and create interactions.
+You will use DOM functions to manipulate your web page and create interactions.
 
 ### Create constants to store your form fields
 
-At the moment, users can complete the form fields on your `comicbook.html ` but nothing will happen when they click the Create button. 
+At the moment, users can complete the form fields on your `character.html ` but nothing will happen when they click the Create button. 
 
 You will need to retrieve the HTML element with the attribute `id="summary-section"` because its' CSS display property is currently set to `none;` and you need to change this.
 
@@ -299,7 +299,7 @@ function displaySummary() {
 title: What is string formatting?
 ---
 
-A "string" is a data type in JavaScript and other programming languages. Data types are groups of data tell the program how we want to use data.
+A "string" is a data type in JavaScript and other programming languages. Data types are groups of data that tell the program how to use data.
 You can format strings using template literals or concatenation. 
 
 Here are examples of how they work:
@@ -368,7 +368,7 @@ function displaySummary() {
 
 ### Change CSS property 
 
-You previously added a HTML element to your form with the attribute `id="summary-section"`.
+You previously added an HTML element to your form with the attribute `id="summary-section"`.
 
 The property of the `summary-section` CSS selector is currently set to `none;`.
 
@@ -458,7 +458,7 @@ function displaySummary() {
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 **Test:** Click the **Run** button. 
 

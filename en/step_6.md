@@ -14,14 +14,14 @@ For example, when you register on some websites, your registration form will be 
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 Change the event handler function in the `<button>` element with the attribute `onclick="changeSummary()` to `onclick="validateForm()`.
 
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 41
 line_highlights: 45
@@ -48,7 +48,7 @@ This should be placed below the `<button>` element with the attribute  `onclick=
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 41
 line_highlights: 46
@@ -571,7 +571,7 @@ function validateForm(){
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 **Test:** Click the **Run** button. 
 
@@ -698,7 +698,7 @@ function validateForm(){
 
 --- task ---
 
-Open `comicbook.html`.
+Open `character.html`.
 
 **Test:** Click the **Run** button. 
 

@@ -1,6 +1,6 @@
 ## Add form input fields
 
-In this step, you will use form input fields to design an interactive webpage where users can create their own superhero.
+In this step, you will use form input fields to design an interactive web page where users can create their own superhero.
 
 However, you will create the functionality for your form and buttons in the next step.  
 
@@ -33,13 +33,13 @@ Here are some useful form elements:
 
 ### Design the Superhero name section
 
-You will use different types of form elements to allow users interact with your webpage.
+You will use different types of form elements to allow users interact with your web page.
 
 **CSS** classes have already been provided in the `styles.css` file to style your form.
 
 --- task ---
 
-Open the comicbook.html file.
+Open the character.html file.
 
 Find the `<section>` tags between the `<main>` element. 
 
@@ -48,7 +48,7 @@ Add the attribute `id="character-sheet"` inside the opening `<section>` tag.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 22
 line_highlights: 22-24
@@ -69,7 +69,7 @@ Add a div element with the attribute `id="name-input"` between the `<section>` t
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 22
 line_highlights: 23-25
@@ -94,7 +94,7 @@ The `<label>` element allows you to define a title for a particular form field.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 22
 line_highlights: 24
@@ -143,7 +143,7 @@ Add a text `<input>` field with the attributes `type="text"` and `id="name-text"
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 22
 line_highlights: 25
@@ -214,7 +214,7 @@ Add the `<select>` and `<option>` for creating the dropdown list within the `<di
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 22
 line_highlights: 27-35
@@ -267,7 +267,7 @@ Add the HTML code for creating the appearance description within the `<div>` ele
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 27
 line_highlights: 36-39
@@ -307,7 +307,7 @@ Add the HTML code for creating the origin story within the `<div>` element.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 36
 line_highlights: 40-43
@@ -367,7 +367,7 @@ Also add the text "Submit" inside the `<button>` element so users know the purpo
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 40
 line_highlights: 44
@@ -411,7 +411,7 @@ This attribute will be used to style this section.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 44
 line_highlights: 46-48
@@ -436,7 +436,7 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: true
 line_number_start: 46
 line_highlights: 47-48

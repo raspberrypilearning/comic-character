@@ -2,7 +2,7 @@
 
 If you have more time, you can: 
 
-+ add more abilities on `comicbook.html`
++ add more abilities on `character.html`
 + add more form elements to your superhero creation form.
 + add more images to your hero slider
 
@@ -17,7 +17,7 @@ title: Add more abilities to the superhero creation form
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: false
 line_number_start: 
 line_highlights: 
@@ -89,12 +89,12 @@ line_highlights:
 title: Add more form fields
 ---
 
-+ Add HTML to `comicbook.html`
++ Add HTML to `character.html`
 
 --- code ---
 ---
 language: html
-filename: comicbook.html
+filename: character.html
 line_numbers: false
 line_number_start: 
 line_highlights: 

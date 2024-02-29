@@ -1,6 +1,6 @@
 ## Create a hero image slider
 
-In this step you will create an interactive hero image slider for your webpage. Users can navigate through different hero images using buttons on the slider.
+In this step you will create an interactive hero image slider for your web page. Users can navigate through different hero images using buttons on the slider.
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 ### View the slider code
@@ -50,7 +50,7 @@ There is currently no function written as an event handler for the `<button>` el
 
 ### Create the slider variables
 
-You have previously used the `querySelector()` function to search and return the first element in your webpage that matches a specified CSS selector.
+You have previously used the `querySelector()` function to search and return the first element in your web page that matches a specified CSS selector.
 
 Your <span> elements all contain the same attribute `class="hero-slide"` so you need to use a different DOM function.
 
