@@ -116,7 +116,7 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 Open `script.js`.
 
-Create a constant `currentYear` to store a new `Date()` object.
+Create a constant `currentYear` to hold a new `Date()` object.
 
 --- code ---
 ---
