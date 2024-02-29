@@ -158,7 +158,7 @@ line_highlights: 25
     
 --- /code ---
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + You will see a text input area with the label "Superhero Name:" displayed next to it.
 
 --- /task ---
@@ -241,7 +241,7 @@ line_highlights: 27-35
 Notice that the first option has a blank `value` attribute.
 This will be used later when creating the functionality for your form.
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + You will see a dropdown list.
 + Click on the arrow to view more options.
 
@@ -289,7 +289,7 @@ line_highlights: 36-39
     
 --- /code ---
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + You will see a text area showing placeholder text.
 
 --- /task ---
@@ -324,7 +324,7 @@ line_highlights: 40-43
     
 --- /code ---
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + You will see another text area showing placeholder text.
 
 --- /task ---
@@ -385,7 +385,7 @@ You will create a `displaySummary()` function in the next step that will be used
 
 An event handler is a function that gets executed in response to a specific event e.g when the user clicks this `<button>` element. 
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + You will see a button with the title "Create" below your origin story text area.
 
 --- /task ---

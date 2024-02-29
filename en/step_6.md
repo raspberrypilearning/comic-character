@@ -573,7 +573,7 @@ function validateForm(){
 
 Open `character.html`.
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 
 + Do not type in a superhero name on the form because this is the only validation check you have created.
 + Click 'Create' to submit the form; a validation message should be shown.
@@ -700,7 +700,7 @@ function validateForm(){
 
 Open `character.html`.
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 
 + Type values into some of the form fields, while leaving some blank.
 + Click "Create" to submit the form; a validation message should be shown for the form field you have left blank.

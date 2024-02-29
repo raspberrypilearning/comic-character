@@ -158,7 +158,7 @@ line_highlights: 24
 
 The link to import your Google font icon has already been added inside the `<head>` element of your website. The CSS styles have also been provided.
 
-**Test:** Click the **Run** button.
+**Test:** Click the **Run** button to see your changes.
 + Your toggle slider should appear in your nav bar aligned to the right of your menu items.
 + You can toggle the switch, but it will not work yet.
 
@@ -343,7 +343,7 @@ line_highlights: 22
       
 --- /code ---
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 
 + Click on the toggle switch to slide it into the light mode position.
 + The theme colours of your website should change.
@@ -639,7 +639,7 @@ line_highlights:
 
 --- /task ---
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 + Your toggle switch should appear in your nav bar aligned to the right of your menu items.
 + Toggle the switch on and off to see your website theme colours change.
 + Navigate to the `index.html` page to check that your light preference stays on.

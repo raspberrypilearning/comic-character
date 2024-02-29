@@ -40,7 +40,7 @@ line_highlights:
   
 --- /code ---
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 + There will be a hero image with left and right arrows (buttons) through the images .
 + Click both buttons. What do you expect to happen?
 
@@ -380,7 +380,7 @@ function changeHero(direction) {
 
 Open `index.html`.
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 + Click the left (<) button on your hero image slider, the image should change.
 + Click the right (>) button on your hero image slider, the image should change.
 

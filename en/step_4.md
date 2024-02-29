@@ -460,7 +460,7 @@ function displaySummary() {
 
 Open `character.html`.
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 
 + Type in a superhero name or any other details on the form.
 

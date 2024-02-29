@@ -82,7 +82,7 @@ line_highlights: 51
 
 --- task ---
 
-**Test:** Click the **Run** button. 
+**Test:** Click the **Run** button to see your changes. 
 
 + Complete the form as you did in the previous step.
 

@@ -234,11 +234,7 @@ line_highlights: 3
     
 --- /code ---
 
---- /task ---
-
---- task ---
-
-**Test:** Click the **Run** button.
+**Test:** Click the **Run** button to see your changes.
 
 + You should see the current year displayed in the copyright message.
 
@@ -277,9 +273,9 @@ line_highlights: 25
 
 --- /code ---
 
-**Remember:** You may have changes the fictional name `Malik Johnson` to a name of your choice.
+**Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
 
-**Test:** Click the **Run** button to see the changes you have made.
+**Test:** Click the **Run** button to see your changes.
 + The Copyright message will be shown at the bottom (footer section) of your web page.
 + It will include the year.
 
