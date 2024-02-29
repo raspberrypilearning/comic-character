@@ -1,6 +1,6 @@
 ## Add Copyright message to footer
 
-In this step, you will create a Copyright message and a function to automatically update the current year. You will add this to your footer section.
+In this step, you will create a copyright message and a function to automatically update the current year. You will add this to your footer section.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -87,39 +87,30 @@ line_highlights: 30
 
 **Test:** Click the **Run** button to see your changes.
 + The Copyright message will be shown at the bottom (footer) of your web page.
+  
 **Notice:** there is no date shown yet.
-
-### Display the current year
 
 There is no text inside the `<span>` element. 
 
 JavaScript will be used to update the content of the `<span>` to display the current year.
 
+### Display the current year
+
+JavaScript has a `Date()` function that returns the current date and time, using the browser's time zone.
+
 --- collapse ---
 
 ---
-title: How does JavaScript make websites interactive?
+title: See an example
 ---
-
-JavaScript is a powerful language that allows developers to create interactive websites.
-JavaScript can be used to update, hide or show HTML content, change CSS styling and lots more!
-
-In this project you will use JavaScript to:
-+ Update, hide and show HTML elements 
-+ Give users control of updating the page content
-+ Check users have completed a form correctly
-+ Add animations
-+ Store user preferences
-
---- /collapse ---
-
-JavaScript has a `Date()` function that returns the current date and time, using the browser's time zone.
 
 A call to `Date()` returns a string.
 
 Here is the result of the call to `Date()` when this page was loaded:
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-date" width="100%" height="100" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+--- /collapse ---
 
 --- task ---
 
@@ -148,52 +139,36 @@ line_highlights: 2
 ---
 title: What is a constant?
 ---
-A constant is like a variable; it is a named data value that can't change; once set, its value stays the same.
-Therefore, you cannot reassign the value of a constant once you have declared it.
-For example, `const PI = 3.3.14159265359;`;
-`PI` cannot be assigned another value throughout the program.
 
-A variable in programming is a named area of memory that holds a value. The value can be changed when the program runs.
-For example, `var age = 30;` `age` is the variable storing the value `30`
+A constant is a named data value. 
+
+The value cannot be changed by the program.
 
 --- /collapse ---
 
-JavaScript can be used to change HTML elements. You want to update the current year and show it using the `<span>` element you created earlier.
+The current year will be added to the `<span>` element you created earlier.
 
-To access the `<span>` element, you will use the Document Object Model which represents your web page. 
+JavaScript can be used to find and change HTML elements.
 
-With the DOM (Document Object Model), JavaScript can find and change all the elements of an HTML document.
-
-You can use the function `querySelector()` for this. `querySelector()` returns the first element in your web page that matches a specified CSS selector. (E.g. #openHam, .nav-items)
+To access the `<span>` element, you will 'select' it, using the Document Object Model method: `querySelector()`. 
 
 --- collapse ---
 
 ---
-title: What does the Document Object Model do exactly?
+title: What is the Document Object Model?
 ---
 
-The Document Object Model (DOM) is a programming interface for web documents. It serves as a bridge between web documents and programming languages (such as JavaScript).This provides a way to interact with and manipulate the content and structure of a web page dynamically.
+The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with web page elements.
 
+It represents the structure of a web page (document).
 
-The DOM allows developers to interact using the following methods:
-
-
-+ Dynamic Interaction:
-It allows dynamic interaction with the web page. Using languages e.g. JavaScript, developers can access, modify, or manipulate the content and structure of the page.
-
-
-+ Event Handling:
-The DOM enables the handling of user actions or events, such as clicks or keyboard inputs. Developers can link event listeners to specific elements and run custom code in response to these events.
-
-
-+ Content Manipulation:
-Developers can add, delete, or modify elements and content on the page dynamically. This is commonly used to update the page without requiring a full page reload.
+`querySelector()` is a DOM method that returns the first element in your web page that matches a specified CSS selector (e.g. `#currentYear`)
 
 --- /collapse ---
 
 --- task ---
 
-Use the `querySelector()` to find the element with the attribute `id="currentYear"`.
+Use the `querySelector()` method to find the element in the web page document with the attribute `id="currentYear"`.
 
 --- code ---
 ---
@@ -209,15 +184,17 @@ line_highlights: 3
     
 --- /code ---
 
-Note that you have placed the id `#currentYear` within the `querySelector()` because this is the attribute given to the `<span>` element you are trying to manipulate.
-
 --- /task ---
+
+The querySelector will find the whole `<span>` element. 
+
+You only need to change the text *inside* the element. 
+
+The `.innerText` property can be used to refer to the text content of an HTML element.
 
 --- task ---
 
-Change the content of the `<span>` element (which is currently blank) using `.innerHTML`.
-
-`.innerHTML` is an HTML property that can be used to find and change the text content of an element.
+Add the `.innerText` property to the querySelector.
 
 --- code ---
 ---
@@ -229,36 +206,19 @@ line_highlights: 3
 ---
      // Update Copyright Year function 
      const currentYear = new Date();
-     document.querySelector("#currentYear").innerHTML
+     document.querySelector("#currentYear").innerText
     
 --- /code ---
 
 --- /task ---
 
---- collapse ---
+The `currentYear` constant holds the full date returned by the `Date()` function, but you only need the four-digit year part of the date.
 
----
-title: How does .innerHTML work?
----
-
-In JavaScript, you can view and change the inner text content of an HTML element using various DOM properties.
-
-These include:
-+ `.innerHTML` this property finds and returns the text content as well as the CSS styling, attributes and HTML tags of an element.
-
-+ `.innerText` this property finds and returns the text content as well as the CSS styling but not the tags and attributes of an element.
-
-+ `.textContent` this property returns only the text content of an HTML element.
-
---- /collapse ---
-
-The `currentYear` constant is storing the `new Date()` function as a value.
-
-You will need to  change the content of the `<span>` element  and update it with the `currentYear` using its id attribute.
+You can use the `.getFullYear()` method for this.
 
 --- task ---
 
-Use an `=` operator to use the HTML element as a container for your `new Date()` function.
+Set the text content of the `<span>` to the current year.
 
 --- code ---
 ---
@@ -270,84 +230,31 @@ line_highlights: 3
 ---
      // Update Copyright Year function 
      const currentYear = new Date();
-     document.querySelector("#currentYear").innerHTML =
+     document.querySelector("#currentYear").innerText = currentYear.getFullYear();
     
 --- /code ---
 
 --- /task ---
-
---- collapse ---
-
-
----
-title: Using operators in JavaScript
----
-
-
-In JavaScript, operators are special symbols that help you do different things with numbers, strings, and other types of data.
-
-
-Arithmetic Operators:
-
-+ `=` assigns a value to a variable.
-+ `+` adds two numbers.
-+ `-` subtracts one number from another.
-+ `*` multiplies two numbers.
-+ `/` divides one number by another.
-
-Example:
-
-`let result = 30;` // assigns the value 30 to the variable `result`
-
---- /collapse ---
-
-
-The Date function provides instructions to access certain properties. 
-
-You can do this using the `get` keyword.
 
 --- task ---
 
-Use a `get` function to access and show only the full current year from the `new Date()` function.
+**Test:** Click the **Run** button.
 
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 1
-line_highlights: 3
----
-     // Update Copyright Year function 
-     const currentYear = new Date();
-     document.querySelector("#currentYear").innerHTML = currentYear.getFullYear();
-    
---- /code ---
-
-This is because you only want to show the year in your HTML element e.g. `2035` and not the entire time, day, month and year.
++ You should see the current year displayed in the copyright message.
 
 --- /task ---
+
+**Debug step:**  
++ Ensure there is a `#` in `#currentYear` in the `querySelector`
++ Check you have opening and closing brackets `()` at the end of `.getFullYear()`
++ Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
++ Check there is a `;` colon at the end of lines 2 and 3.
 
 --- task ---
 
 Open `index.html` 
 
-**Test:** Click the **Run** button. 
-
-+ You should see the current year displayed along with your Copyright message.
-
 Copy (CTRL + C) or (CMD + C) the `<p>` element within the footer.
-You will need it for your next task.
-
---- /task ---
-
-**Debug step:**  
-+ Ensure there is a `#` next to the `currentYear` id.
-+ Check that you have opening and closing brackets `()` when using `querySelector` and at the end of `.getFullYear()`.
-+ Check that you have written `querySelector()` and `.getFullYear()` in camel case.
-+ Check there is a `;` colon at the end of your `document.querySelector()` container
-
---- task ---
 
 Open the `character.html` file.
 
@@ -365,52 +272,37 @@ line_highlights: 25
 ---
 
       <footer>
-        <p> <span id="currentYear"> Ⓒ Malik Johnson- All Rights Reserved</p>
+        <p> <span id="currentYear"></span> Ⓒ Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
 
-You can change the fictional name `Malik Johnson` to a name of your choice.
+**Remember:** You may have changes the fictional name `Malik Johnson` to a name of your choice.
 
 **Test:** Click the **Run** button to see the changes you have made.
-+ The Copyright message will be shown at the bottom(footer section) of your web page.
-+ It will have a blank space where the year is supposed to be displayed.
++ The Copyright message will be shown at the bottom (footer section) of your web page.
++ It will include the year.
 
 --- /task ---
-
-You can explore other `Date` functions JavaScript provides when creating other projects.
 
 --- collapse ---
 
 ---
-title: What other Date functions can I use?
+title: What other date methods can I use?
 ---
 
-+ Creating a Date Object: creates a new Date object representing the current date and time:
-
-    const currentDate = new Date();
-
-+ Setting a Specific Date - creates a Date object for the specified date (year, month, day).
-    const specificDate = new Date("2022-01-09");
-
-+ Getting Various Components - these functions retrieve specific components of the date and time:
+Retrieve specific components of the date and time:
 
     const year = currentDate.getFullYear();
-    const month = currentDate.getMonth(); // 0-indexed (0 = January, 11 = December)
+    const month = currentDate.getMonth(); // (0 = January, 11 = December)
     const day = currentDate.getDate();
     const hours = currentDate.getHours();
     const minutes = currentDate.getMinutes();
     const seconds = currentDate.getSeconds();
     const milliseconds = currentDate.getMilliseconds();
 
-+ Setting Date Components - these functions allow you to set specific components of the date:
-
-    currentDate.setFullYear(2023);
-    currentDate.setMonth(5); // 0-indexed (5 = June)
-    currentDate.setDate(15);
-
 --- /collapse ---
 
-Great job! You have added dynamic footer content to your website.
+Great job! You have added dynamic footer content to your website!
 
-Next, you will design an interactive web page where users can create their own superhero.
+Next, you will design an interactive web page where users can create their own character.

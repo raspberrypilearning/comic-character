@@ -453,7 +453,7 @@ You will need to manipulate the content of the element, to display your validati
 
 Inside the `if` statement, add the block of code that will be executed if the condition is true.
 
-Use the `.innerHTML` property to update the HTML element stored in the `alertBox` constant to the value of the current `alertMessage`.
+Use the `.innerText` property to update the HTML element stored in the `alertBox` constant to the value of the current `alertMessage`.
 
 --- code ---
 ---
@@ -475,7 +475,7 @@ function validateForm(){
     }
 
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         
     }
 }
@@ -512,7 +512,7 @@ function validateForm(){
     }
 
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     }
 }
@@ -556,7 +556,7 @@ function validateForm(){
     }
 
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     } else {
         alertBox.style.display = "none";
@@ -626,7 +626,7 @@ function validateForm(){
     }
 
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     } else {
         alertBox.style.display = "none";
@@ -681,7 +681,7 @@ function validateForm(){
     } 
 
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     } else {
         alertBox.style.display = "none";

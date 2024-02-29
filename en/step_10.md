@@ -195,7 +195,7 @@ line_highlights:
     } 
     
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     } else {
         alertBox.style.display = "none";

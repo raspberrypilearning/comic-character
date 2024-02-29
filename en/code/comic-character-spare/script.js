@@ -117,7 +117,7 @@ function generate() {
     }
 
     // Store generated input
-    captcha.innerHTML = uniquechar;
+    captcha.innerText = uniquechar;
 }
 
 // CAPTCHA print message function
@@ -125,15 +125,15 @@ function printmsg() {
     const usr_input = document.getElementById("submit").value;
 
     // Check whether the input is equal to the generated CAPTCHA or not
-    if (usr_input == captcha.innerHTML) {
-        document.getElementById("key").innerHTML = "Matched";
+    if (usr_input == captcha.innerText) {
+        document.getElementById("key").innerText = "Matched";
         // Store the successful login state in local storage
         localStorage.setItem('isLoggedIn', 'true');
         document.getElementById("captchaSection").style.display = 'none';
         document.getElementById("successfulLogin").style.display = 'block';
         generate();
     } else {
-        document.getElementById("key").innerHTML = "not Matched";
+        document.getElementById("key").innerText = "not Matched";
         generate();
     }
 }
@@ -148,4 +148,4 @@ function logout() {
 
 // Update Copyright Year function 
 const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+document.querySelector("#currentYear").innerText = `${currentYear.getFullYear()}`;

@@ -1,6 +1,6 @@
 // Update Copyright Year function 
 const currentYear = new Date();
-document.querySelector("#currentYear").innerHTML = `${currentYear.getFullYear()}`;
+document.querySelector("#currentYear").innerText = `${currentYear.getFullYear()}`;
 
 // Create constants for superhero form
 const characterSheet = document.querySelector("#character-sheet");
@@ -48,7 +48,7 @@ function validateForm(){
     } 
     
     if (alertMessage != ""){
-        alertBox.innerHTML = alertMessage;
+        alertBox.innerText = alertMessage;
         alertBox.style.display = "block";
     } else {
         alertBox.style.display = "none";
