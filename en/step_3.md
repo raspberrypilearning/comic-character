@@ -1,49 +1,50 @@
 ## Add form input fields
 
-In this step, you will use form input fields to design an interactive web page where users can create their own superhero.
-
-However, you will create the functionality for your form and buttons in the next step.  
+In this step, you will design an interactive web page and a web form where users can create their own superhero!
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You have added text and images to your website to add content. 
-However, there are other types of content you could use including:
+You have added text and images to your website. 
+
+There are other types of content, including:
 + Videos
-+ Form elements
++ Forms
 + Maps
 + Music
 
-Form elements in HTML allow users to input data, interact with the page, and submit information. 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+HTML <span style="color: #0faeb0">**forms**</span> allow users to input and submit information.
+</p>
+
+You will add different types of form elements to allow users to create their superhero character.
+
+**Note:** CSS styling for your form is already provided in the file `styles.css`.
 
 --- collapse ---
 
 ---
-title: What are the different types of form elements?
+title: Types of form elements
 ---
 
-![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
+![An example HTML form with form fields annotated to show their use.](images/HTML_form_elements.png)
 
-Here are some useful form elements:
-+ `<form>`: The overall form container.
-+ `<label>`: Labels for the input fields.
-+ `<input>`: Text inputs, checkboxes, radio buttons, etc.
-+ `<button>`: Submit or reset buttons.
++ `<input>` e.g. single-line text box, checkbox, button.
++ `<textarea>` For entering multiple lines of text.
++ `<label>` Text to tell the user what information to enter.
 
 --- /collapse ---
 
-### Design the Superhero name section
+### Set up the form
 
-You will use different types of form elements to allow users interact with your web page.
-
-**CSS** classes have already been provided in the `styles.css` file to style your form.
+All the input elements will be inside a `<section>` with an `id` attribute, so you can update it later.
 
 --- task ---
 
-Open the character.html file.
+Open the `character.html` file.
 
-Find the `<section>` tags between the `<main>` element. 
+Find the comment `<!--Superhero character details-->`.
 
-Add the attribute `id="character-sheet"` inside the opening `<section>` tag.
+Add the attribute `id="character-details"` to the `<section>` tag.
 
 --- code ---
 ---
@@ -54,7 +55,7 @@ line_number_start: 22
 line_highlights: 22-24
 ---
 
-      <section id="character-sheet"> <!--Superhero character creation form-->
+      <section id="character-details"> <!--Superhero character details-->
   
       </section>
     
@@ -62,9 +63,13 @@ line_highlights: 22-24
 
 --- /task ---
 
+### Superhero 'name' section
+
+Users will start by naming their superhero!
+
 --- task ---
 
-Add a div element with the attribute `id="name-input"` between the `<section>` tags.
+Add a `div` element with the attribute `id="name-input"` between the `<section>` tags.
 
 --- code ---
 ---
@@ -75,7 +80,7 @@ line_number_start: 22
 line_highlights: 23-25
 ---
 
-    <section id="character-sheet"> <!--Superhero character creation form-->
+    <section id="character-details"> <!--Superhero character details-->
       <div id="name-input">
                
       </div>
@@ -87,9 +92,7 @@ line_highlights: 23-25
 
 --- task ---
 
-Add a `<label>` element to the superhero name section.
-
-The `<label>` element allows you to define a title for a particular form field.
+Add a `<label>` element to tell the user what they need to enter.
 
 --- code ---
 ---
@@ -100,7 +103,7 @@ line_number_start: 22
 line_highlights: 24
 ---
 
-    <section id="character-sheet"> <!--Superhero character creation form-->
+    <section id="character-details"> <!--Superhero character details-->
       <div id="name-input">
         <label>Superhero Name:</label>
                
@@ -109,36 +112,53 @@ line_highlights: 24
     
 --- /code ---
 
-The `<label>` element is also good for accessibility. 
+--- collapse ---
 
-It allows screen-readers to read the label out loud when the user focuses on the input element.
+---
+title: Accessible design
+---
+
+The `<label>` element allows screen-readers to read the label out loud when a user focuses on the input element.
+
+--- /collapse ---
 
 --- /task ---
 
-The `<input>` element is the most commonly used form element because it allows users add data to a form.
+An `<input>` element allows users enter data.
 
-This can be displayed in many ways using the `type` attribute.
+You set the type of input using `type=`.
 
 --- collapse ---
 
 ---
-title: What are the form inputs in HTML?
+title: Examples of input types
 ---
 
-+ Text (<input type="text">): allows users to enter a single line of text.
-+ Password (<input type="password">): allows text input but hides the entered text for sensitive information.
-+ Textarea (<textarea></textarea>): allows users to enter multiple lines of text.
-+ Checkbox (<input type="checkbox">): allows users to select one or more options.
-+ Radio Button (<input type="radio">): allows users to select a single option.
-+ Select Dropdown (<select><option value="1">1</option><option value="2">2</option></select>): creates a dropdown list for users to choose one option.
-+ Submit (<input type="submit">): a button that sends the data enetered byt the users on the form.
-+ Reset (<input type="reset">): a button that clears all the form fields to their default values.
++ **text:** Single line of text. 
+<br>`<input type="text">`
+<br>*Try it*:
+<br><input type="text">
+
++ **password:** Hides the entered text.
+<br>`<input type="password">`
+<br>*Try it*:
+<br><input type="password">
+
++ **checkbox:** Tick one or more options.
+<br>`<input type="checkbox">`
+<br>*Try it*:
+<br><input type="checkbox">
+
++ **radio:** Select one or more options.
+<br>`<input type="radio">`
+<br>*Try it*:
+<br><input type="radio">
 
 --- /collapse ---
 
 --- task ---
 
-Add a text `<input>` field with the attributes `type="text"` and `id="name-text"`.
+Add a text `<input>` element with the attribute `id="name-text"`.
 
 --- code ---
 ---
@@ -149,7 +169,7 @@ line_number_start: 22
 line_highlights: 25
 ---
 
-    <section id="character-sheet"> <!--Superhero character creation form-->
+    <section id="character-details"> <!--Superhero character details-->
       <div id="name-input">
         <label>Superhero Name:</label>
         <input type="text" id="name-text">     
@@ -159,57 +179,39 @@ line_highlights: 25
 --- /code ---
 
 **Test:** Click the **Run** button to see your changes.
-+ You will see a text input area with the label "Superhero Name:" displayed next to it.
++ You will see a text box with the label "Superhero Name:" above it.
 
 --- /task ---
 
 **Debug step:**
-+ Check that you have used the correct `input type` for your "Superhero Name" section.
-+ Check that you have used the correct attributes for each element
++ Check you have added `""` marks around `text`.
 
-You can add attributes to input elements to control their behaviour and the way a user interacts with them.
+### Superhero 'ability' section 
+
+Next, users will choose an ability for their superhero!
+
++ The `<select>` element is used to create the drop-down list.
++ The `<option>` elements are used to provide choices.
 
 --- collapse ---
 
 ---
-title: What other attributes can I use?
+title: See an example
 ---
-+ type: sets the category of input field. Examples include text, password, checkbox, radio, submit, reset, etc.
-Example: `<input type="text">`
 
-+ name: sets the identifier for the field, which is used when submitting the form data.
-Example: `<input type="text" name="username">`
-
-+ value: sets the default data entered in the input field. For example in a form where the user is asked for their dietary requirements, you could set the default value of that field to "None".
-Example: `<input type="text" name="Dietary requirements" value="None">`
-
-+ placeholder: provides a short hint that describes the expected value of the input field and is replaced when the user enters a value.
-Example: `<input type="text" placeholder="Enter your name">`
-
-+ required: ensures that the input field must be filled out before submitting the form.
-Example: `<input type="text" required>`
-
-+ maxlength: sets the maximum number of characters allowed in a text or password input.
-Example: `<input type="text" maxlength="30">`
-
-+ min and max: sets the minimum and maximum values for number or date inputs.
-Example: `<input type="number" min="0" max="100">`
+<br>`<select><option value="Water">Water</option><option value="Juice">Juice</option></select>`
+<br>*Try it*:
+<br><select><option value="Water">Water</option><option value="Juice">Juice</option></select>
 
 --- /collapse ---
 
-### Design the Superhero ability section 
-
-You will create a dropdown list for users to choose one option for their superhero's ability..
-
-The `<select>` element is used to create a drop down list on a form.
-
-The `<option>` element is then used to provide options within the list.
-
 --- task ---
 
-Create a `<div>` element with the attribute `id="ability-input"`.
+Add a `<div>` element with the attribute `id="ability-input"`.
 
-Add the `<select>` and `<option>` for creating the dropdown list within the `<div>` element.
+Add a `<label>`. 
+
+Add a `<select>` element with **four** `<option>` elements for the choices.
 
 --- code ---
 ---
@@ -220,7 +222,7 @@ line_number_start: 22
 line_highlights: 27-35
 ---
    
-    <section id="character-sheet"> <!--Superhero character creation form-->
+    <section id="character-details"> <!--Superhero character details-->
       <div id="name-input">
         <label>Superhero Name:</label>
         <input type="text" id="name-text">     
@@ -238,31 +240,72 @@ line_highlights: 27-35
     
 --- /code ---
 
-Notice that the first option has a blank `value` attribute.
-This will be used later when creating the functionality for your form.
+**Notice:** The first option has a blank `value`.
 
 **Test:** Click the **Run** button to see your changes.
-+ You will see a dropdown list.
-+ Click on the arrow to view more options.
++ You will see a drop-down list.
++ Click the arrow to view the choices.
 
 --- /task ---
 
 **Debug step:**
-+ Check that you have used `<option>` elements inside your `<select>` elements.
-+ Ensure your form fields are being created in the right order: 
-    place the entire div with the attribute `id="ability-input"` below the `<div>` element with the attribute `id="name-input"`. 
++ Check you have four `<option>` elements inside your `<select>` elements.
++ Check you have closing `</option>` tags foe each option.
 
-### Design the Superhero appearance section 
+### Superhero 'appearance' section 
 
-You will add a text area to your form so users can describe their supehero's appearance.
+Next, users will describe their superhero's appearance!
 
-The `<textarea>` element creates a form field with multiple lines so users can input text. The element can be styled using CSS.
+The `<textarea>` element provides multi-line text entry.
+
+--- collapse ---
+
+---
+title: See an example
+---
+
+<br>`<textarea></textarea>`
+<br>*Try it*:
+<br><textarea></textarea>
+
+--- /collapse ---
+
+You can add a `placeholder` attribute to an input element.
+
+This gives a hint as to what the user should enter. 
+
+The hint is replaced when the user starts typing.
+
+--- collapse ---
+
+---
+title: Examples of input attributes
+---
+
++ placeholder: provides a short hint that describes the expected value of the input field and is replaced when the user enters a value.
+Example: `<input type="text" placeholder="Enter your name">`
+
++ value: sets the default data entered in the input field. For example in a form where the user is asked for their dietary requirements, you could set the default value of that field to "None".
+Example: `<input type="text" name="Dietary requirements" value="None">`
+
++ required: ensures that the input field must be filled out before submitting the form.
+Example: `<input type="text" required>`
+
++ maxlength: sets the maximum number of characters allowed in a text or password input.
+Example: `<input type="text" maxlength="30">`
+
++ min and max: sets the minimum and maximum values for number or date inputs.
+Example: `<input type="number" min="0" max="100">`
+
+--- /collapse ---
 
 --- task ---
 
 Create a `<div>` element with the attribute `id="appearance-input"`.
 
-Add the HTML code for creating the appearance description within the `<div>` element.
+Add the `<label>` and `<textarea>` HTML inside the `<div>` element.
+
+Include a `placeholder` attribute for the `<textarea>` element.
 
 --- code ---
 ---
@@ -276,25 +319,27 @@ line_highlights: 36-39
     <div id="ability-input">
       <label>Abilities:</label>
       <select id="ability-choice">
-          <option value="">Choose an option</option>
-          <option value="Flying">Flying</option>
-          <option value="Invisibility">Invisibility</option>
-          <option value="Time travel">Time travel</option>
+        <option value="">Choose an option</option>
+        <option value="Flying">Flying</option>
+        <option value="Invisibility">Invisibility</option>
+        <option value="Time travel">Time travel</option>
       </select>
     </div>
     <div id="appearance-input">
       <label>Appearance: </label> 
-      <textarea id="appearance-text" placeholder="Type the appearance of your superhero here...."></textarea>
+      <textarea id="appearance-text" placeholder="Describe your superhero!"></textarea>
     </div>
     
 --- /code ---
 
 **Test:** Click the **Run** button to see your changes.
-+ You will see a text area showing placeholder text.
++ You will see a multi-line text box with the placeholder text.
 
 --- /task ---
 
-### Design the Superhero origin story section 
+**TODO** UP TO HERE
+
+### Superhero 'origin story' section 
 
 You will add another text area to your form so users can describe their superhero's origin story.
 
@@ -402,7 +447,7 @@ This section will stay hidden until users click the "Create" button.
 
 --- task ---
 
-Create a new `<section>` element below the section with the attribute `id="character-sheet"`
+Create a new `<section>` element below the section with the attribute `id="character-details"`
 
 Give your new section the attribute `id="summary-section"`.
 
@@ -491,4 +536,3 @@ line_highlights: 6
 Fantastic work! Your superhero creation page now contains a form with input fields.
 
 In the next step you will make your form interactive so your user can submit their superhero features and view a summary of the character they have created. 
-

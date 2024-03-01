@@ -11,7 +11,7 @@ At the moment, users can complete the form fields on your `character.html ` but 
 
 You will need to retrieve the HTML element with the attribute `id="summary-section"` because its' CSS display property is currently set to `none;` and you need to change this.
 
-You will also need to retrieve the HTML element with the attribute `id="character-sheet"` because its' CSS display property is currently set to `flex;` and you need to make it disappear.
+You will also need to retrieve the HTML element with the attribute `id="character-details"` because its' CSS display property is currently set to `flex;` and you need to make it disappear.
 
 --- task ---
 
@@ -30,12 +30,12 @@ line_number_start: 5
 line_highlights: 6-7
 ---
       // Create constants for superhero form
-      const characterSheet = document.querySelector("#character-sheet");
+      const characterSheet = document.querySelector("#character-details");
       const summary = document.querySelector("#summary-section");
     
 --- /code ---
 
-By retrieving the elements with the attributes `id="character-sheet"` and `id="summary-section"`, you will be able to manipulate them.
+By retrieving the elements with the attributes `id="character-details"` and `id="summary-section"`, you will be able to manipulate them.
 
 --- /task ---
 
@@ -99,7 +99,7 @@ line_number_start: 5
 line_highlights: 9-12
 ---
        // Create constants for superhero form
-      const characterSheet = document.querySelector("#character-sheet");
+      const characterSheet = document.querySelector("#character-details");
       const summary = document.querySelector("#summary-section");
 
       const name = document.querySelector("#name-text");
@@ -372,7 +372,7 @@ You previously added an HTML element to your form with the attribute `id="summar
 
 The property of the `summary-section` CSS selector is currently set to `none;`.
 
-The property of the `character-sheet` CSS selector is currently set to `flex;`.
+The property of the `character-details` CSS selector is currently set to `flex;`.
 
 In JavaScript, you can manipulate the display properties of these elements using the style property.
 

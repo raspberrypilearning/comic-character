@@ -147,7 +147,7 @@ line_highlights:
 ---
 
     // Create constants for superhero form
-    const characterSheet = document.querySelector("#character-sheet");
+    const characterSheet = document.querySelector("#character-details");
     const summary = document.querySelector("#summary-section");
 
     const name = document.querySelector("#name-text");
