@@ -486,31 +486,34 @@ Events can be triggered by the user or the browser.
 
 --- task ---
 
-Add a `<button>` element with an attribute `onclick="displaySummary()"` below the summary section.
+Add a `<button>` element below the origin story `div` with the event `onclick="displaySummary()"`
 
-Also add the text 'Create' to the `<button>`, so users know what the button does.
+Add the text 'Create' to the `<button>`, so users know what the button does.
 
 --- code ---
 ---
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 45
-line_highlights: 49
+line_number_start: 39
+line_highlights: 44
 ---
 
-    <section id="summary-section">
-      <h2>Superhero Summary</h2>
-      <p id="summary-paragraph"></p>
-    </section>
-    <button onclick="displaySummary()">Create</button>
-  </main>
+            </div>
+            <div id="origin-input">
+                <label>Origin Story: </label> 
+                <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+            </div>
+            <button onclick="displaySummary()">Create</button>
+        </section>
 
 --- /code ---
 
 **Test:** Click the **Run** button to see your changes.
 + You will see a Create button below your superhero form.
-+ The Create button does not do anything at the moment. You will create the `displaySummary()` function in the next step that will be used to handle the `onclick` event.
++ The Create button does not do anything at the moment. 
+  
+In the next step you will create the JavaScript function `displaySummary()` that will handle the `onclick` event.
 
 --- /task ---
 
