@@ -161,7 +161,7 @@ line_highlights:
     const summaryParagraph = document.querySelector("#summary-paragraph");
 
     summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your abilities are ${characterAbility.value}. You are from ${country.value}.
+    Your ability is ${characterAbility.value}. You are from ${country.value}.
     Your appearance is ${characterAppearance.value}. 
     Your origin story is ${characterOrigin.value}.`;
 

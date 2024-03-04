@@ -48,7 +48,7 @@ function displaySummary() {
     var origin = document.getElementById("origin-span").textContent;
 
     summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your abilities are ${abilities}. Your appearance is ${appearance}. 
+    Your ability is ${abilities}. Your appearance is ${appearance}. 
     Your origin story is ${origin}.`;
 
     document.getElementById("summary-section").style.display = "block";

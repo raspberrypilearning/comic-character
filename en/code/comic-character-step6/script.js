@@ -16,7 +16,7 @@ function displaySummary() {
   const summaryParagraph = document.querySelector("#summary-paragraph");
 
   summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your ability is ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
   Your origin story is ${characterOrigin.value}.`;
 
   characterDetails.style.display = "none";
@@ -25,7 +25,6 @@ function displaySummary() {
 
 // Function to edit summary
 function changeSummary() {
-
   characterDetails.style.display = "flex";
   summary.style.display = "none";
 }
