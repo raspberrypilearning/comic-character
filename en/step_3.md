@@ -2,7 +2,7 @@
 
 In this step, you will design an interactive web page and a web form where users can create their own superhero!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 You have added text and images to your website. 
 
@@ -329,6 +329,7 @@ line_highlights: 36-39
       <label>Appearance: </label> 
       <textarea id="appearance-text" placeholder="Describe your superhero!"></textarea>
     </div>
+  </section>
     
 --- /code ---
 
@@ -337,17 +338,17 @@ line_highlights: 36-39
 
 --- /task ---
 
-**TODO** UP TO HERE
-
 ### Superhero 'origin story' section 
 
-You will add another text area to your form so users can describe their superhero's origin story.
+Next, users will describe their superhero's origin story!
 
 --- task ---
 
 Create a `<div>` element with the attribute `id="origin-input"`.
 
-Add the HTML code for creating the origin story within the `<div>` element. 
+Add the <label> and <textarea> HTML inside the <div> element.
+
+Include a placeholder attribute for the <textarea> element.
 
 --- code ---
 ---
@@ -364,94 +365,24 @@ line_highlights: 40-43
     </div>
     <div id="origin-input">
       <label>Origin Story: </label> 
-      <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+      <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
     </div>
+  </section>
     
 --- /code ---
 
 **Test:** Click the **Run** button to see your changes.
-+ You will see another text area showing placeholder text.
++ You will see another multi-line text box showing placeholder text.
 
 --- /task ---
 
+### Superhero 'summary' section 
 
-### Show your user their Superhero character story 
-
-The `<button>` element creates a control that can be activated by the user's mouse, keyboard, voice command or any other assistive technology.
-
-The `onclick` attribute provides interactivity using a JavaScript event.
-
---- collapse ---
-
----
-title: What is an event?
----
-
-An event is an action or occurrence that takes place in your browser. Events can be triggered by the user, the browser or any other elements on the page. 
-
-Event types include:
-+ User generated events:
-  + Mouse events (click, double click, mouseover).
-  + Keyboard events (keypress, keydown, keyup).
-  + Touch events (touchstart, touchmove, touchend).
-  + Form events (submit, change, input).
-
-+ Browser generated events:
-  + Page load events (load, unload).
-  + Window events (resize, scroll).
-  + Time events (setInterval, setTimeout).
-
---- /collapse ---
+It would be great to show users a summary of their character.
 
 --- task ---
 
-Add a `<button>` element with an attribute `onclick="displaySummary()"` below the `<div>` element with the attribute `id="origin-input"`.
-
-Also add the text "Submit" inside the `<button>` element so users know the purpose of the button.
-
---- code ---
----
-language: html
-filename: character.html
-line_numbers: true
-line_number_start: 40
-line_highlights: 44
----
-
-    <div id="origin-input">
-      <label>Origin Story: </label> 
-      <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
-    </div>
-    <button onclick="displaySummary()">Create</button>
-
---- /code ---
-
-You will create a `displaySummary()` function in the next step that will be used as an event handler.
-
-An event handler is a function that gets executed in response to a specific event e.g when the user clicks this `<button>` element. 
-
-**Test:** Click the **Run** button to see your changes.
-+ You will see a button with the title "Create" below your origin story text area.
-
---- /task ---
-
-**Debug step:**
-
-+ Check that you have added brackets () at the end of the attribute `onclick="displaySummary()"`
-
-### Create a summary section
-
-Once your users have finished creating their superhero, it would be great to show them a summary of their character.
-
-This section will stay hidden until users click the "Create" button.
-
---- task ---
-
-Create a new `<section>` element below the section with the attribute `id="character-details"`
-
-Give your new section the attribute `id="summary-section"`.
-
-This attribute will be used to style this section.
+Add a new `<section>` element with the attribute `id="summary-section"`.
 
 --- code ---
 ---
@@ -462,7 +393,6 @@ line_number_start: 44
 line_highlights: 46-48
 ---
       
-      <button onclick="displaySummary()">Submit</button>
     </section>
     <section id="summary-section">
   
@@ -474,7 +404,7 @@ line_highlights: 46-48
 
 --- task ---
 
-Add a `<h2>` element to create a title for the section.
+Add a `<h2>` element to create a title for the summary.
 
 Add a `<p>` element with the attribute `id="summary-paragraph"`.
 
@@ -483,8 +413,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 46
-line_highlights: 47-48
+line_number_start: 45
+line_highlights: 46-47
 ---
 
     <section id="summary-section">
@@ -494,16 +424,8 @@ line_highlights: 47-48
     
 --- /code ---
 
-**Test:** Click the **Run** button
-You might expect to see a summary section shown when the user clicks the "Create" button.
-
---- /task ---
-
-However, the `display` property for the `#summary-section` selector has been set to `none;`. 
-
-This means you will not see any changes immediately.
-
-You will learn more about using JavaScript to change CSS styles in the next step.
+**Test:** Click the **Run** button to see your changes.
++ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. Next, you will add a button that can run JavaScript code to show it.
 
 --- collapse ---
 
@@ -532,7 +454,66 @@ line_highlights: 6
 
 --- /collapse ---
 
+--- /task ---
 
-Fantastic work! Your superhero creation page now contains a form with input fields.
+### Show the summary section
 
-In the next step you will make your form interactive so your user can submit their superhero features and view a summary of the character they have created. 
+Your users need to press a button to show the summary section.
+
+An `onclick` event can be added to the button.
+
+JavaScript can be used to react to this event and show the summary.
+
+--- collapse ---
+
+---
+title: Examples of events
+---
+
+Events can be triggered by the user or the browser.
+
++ User events:
+  + Mouse events (click, double click, mouseover).
+  + Keyboard events (keypress, keydown, keyup).
+  + Touch events (touchstart, touchmove, touchend).
+
++ Browser events:
+  + Page load events (load, unload).
+  + Window events (resize, scroll).
+  + Time events (setInterval, setTimeout).
+
+--- /collapse ---
+
+--- task ---
+
+Add a `<button>` element with an attribute `onclick="displaySummary()"` below the summary section.
+
+Also add the text 'Create' to the `<button>`, so users know what the button does.
+
+--- code ---
+---
+language: html
+filename: character.html
+line_numbers: true
+line_number_start: 45
+line_highlights: 49
+---
+
+    <section id="summary-section">
+      <h2>Superhero Summary</h2>
+      <p id="summary-paragraph"></p>
+    </section>
+    <button onclick="displaySummary()">Create</button>
+  </main>
+
+--- /code ---
+
+**Test:** Click the **Run** button to see your changes.
++ You will see a Create button below your superhero form.
++ The Create button does not do anything at the moment. You will create the `displaySummary()` function in the next step that will be used to handle the `onclick` event.
+
+--- /task ---
+
+Fantastic work! Your character creation page now contains a form with input fields.
+
+In the next step you will make your form interactive, so your user can view a summary of their character. 
