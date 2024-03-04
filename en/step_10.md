@@ -24,7 +24,7 @@ line_highlights:
 ---
 
       <div id="ability-input">
-        <label>Abilities:</label>
+        <label>Ability:</label>
         <select id="ability-choice">
           <option value="">Choose an option</option>
           <option value="Flight">Flying</option>

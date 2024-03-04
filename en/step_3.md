@@ -228,7 +228,7 @@ line_highlights: 27-35
         <input type="text" id="name-text">     
       </div>
       <div id="ability-input">
-        <label>Abilities:</label>
+        <label>Ability:</label>
         <select id="ability-choice">
           <option value="">Choose an option</option>
           <option value="Flying">Flying</option>
@@ -317,7 +317,7 @@ line_highlights: 36-39
 ---
 
     <div id="ability-input">
-      <label>Abilities:</label>
+      <label>Ability:</label>
       <select id="ability-choice">
         <option value="">Choose an option</option>
         <option value="Flying">Flying</option>
