@@ -5,14 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <title>Comic Book</title>
   </head>
   <body>
@@ -24,11 +18,7 @@
       </nav>
       <div class="toggle-container">
         <label class="switch">
-          <input
-            type="checkbox"
-            id="lightModeToggle"
-            onchange="changeLightMode()"
-          />
+          <input type="checkbox" id="lightModeToggle" onchange="changeLightMode()"/>
           <span class="slider"></span>
         </label>
         <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -52,17 +42,11 @@
         </div>
         <div id="appearance-input">
           <label>Appearance: </label>
-          <textarea
-            id="appearance-text"
-            placeholder="Type the appearance of your superhero here...."
-          ></textarea>
+          <textarea id="appearance-text" placeholder="Type the appearance of your superhero here...."></textarea>
         </div>
         <div id="origin-input">
           <label>Origin Story: </label>
-          <textarea
-            id="origin-text"
-            placeholder="Type your superhero origin story here...."
-          ></textarea>
+          <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
         </div>
         <div id="alert"></div>
         <button onclick="validateForm()">Create</button>

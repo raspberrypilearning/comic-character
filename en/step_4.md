@@ -4,15 +4,15 @@ In this step, you will continue building the functionality of your form.
 
 You will use JavaScript to make parts of your form appear and disappear. 
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 At the moment, users can add character details on the `character.html` page, but nothing will happen when they click the Create button. 
 
 This is because the summary section has its CSS `display` property set to `none`.
 
-You need to use JavaScript to change this to `flex` so it shows.
+You need to use JavaScript to change the summary section's `display` property to `flex`.
 
-When the summary section is displayed, you will hide the character details section. 
+When the summary section is displayed, you will hide the character details form.
 
 ### Create constants to refer to each section
 
@@ -93,8 +93,8 @@ line_highlights: 3
 ---
 
 		<section id="summary-section">
-			<h2>Superhero Summary</h2>
-			<p id="summary-paragraph"></p>
+		  <h2>Superhero Summary</h2>
+		  <p id="summary-paragraph"></p>
 		</section>
 
 --- /code ---
@@ -237,11 +237,11 @@ line_highlights: 19-20
     
 // Function to display summary
 function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
-    Your origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your origin story is ${characterOrigin.value}.`;
 
 }
     
@@ -268,13 +268,13 @@ line_highlights: 22
     
 // Function to display summary
 function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
-    Your origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your origin story is ${characterOrigin.value}.`;
 
-    characterDetails.style.display = "none";
+  characterDetails.style.display = "none";
 
 }
     
@@ -299,14 +299,14 @@ line_highlights: 23
     
 // Function to display summary
 function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
-    Your origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your origin story is ${characterOrigin.value}.`;
 
-    characterDetails.style.display = "none";
-    summary.style.display = "flex";
+  characterDetails.style.display = "none";
+  summary.style.display = "flex";
 }
     
 --- /code ---
@@ -318,98 +318,16 @@ function displaySummary() {
 Open `character.html`.
 
 **Test:** Click the **Run** button to see your changes. 
-
 + Fill in the character details.
-
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
-
 + The summary paragraph will include a summary of your character.
 
 --- /task ---
 
 **Debug step:**
-+ Ensure you have named all constants (`const`) correctly.
-+ Ensure you have used correct syntax when creating the functions, including `()` and `{}`.
-+ Ensure you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
-+ Ensure you have added `;` a semicolon at the end of your declarations.
++ Check you have named all constants (`const`) correctly.
++ Check you have used correct syntax when creating the functions, including `()` and `{}`.
++ Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
++ Check you have added `;` a semicolon at the end of your declarations.
 
-Well done! You have created an interactive form that shows/hides elements. Next, you will allow users to edit their choices on the superhero form.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**TODO** Do we need this here? Or just leave as an ingredient for later?
-
---- collapse ---
-
----
-title: What is a function and how are they used in JavaScript?
----
-
-A function is a reusable block of code that performs a specific task.
-
-Functions break your code into particular tasks so it is easier to understand. 
-
-Especially when you have tasks that need to be done multiple times. They're like tools you can use over and over in different parts of your code.
-
-### Writing a Function: 
-+ start with the `function` keyword to indicate the creation of a function. 
-+ give your function a name (e.g. `addNumbers`).
-+ include brackets `()` after the function name. These can include parameters (inputs) your function needs.
-+ use open curly braces `{` to define the block of code that the function will execute.
-+ close the curly braces `}` to show the end of the function.
-
-Here is an example:
-
---- code ---
----
-language: js
-filename:
-line_numbers:
-line_number_start:
-line_highlights:
----
-function addNumbers(a, b) {
-  return a + b;
-}
-    
---- /code ---
-
-Here, `addNumbers` is a function that takes two inputs `a` and `b` and returns their sum.
-
-### Using a Function:
-
-You use a function by **calling** it.
-
-Here, the function `addNumbers()` is called with values 5 and 8. 
-
-It returns the sum of the number, which you can then use. In this example, the sum of 5 and 8 is assigned to the variable `result` and then `result` is displayed in the Console.
-
---- code ---
----
-language: js
-filename:
-line_numbers: 
-line_number_start:
-line_highlights:
----
-let result = addNumbers(5, 8);
-console.log(result); // Outputs: 13
-    
---- /code ---
-
---- /collapse ---
+Well done! You have created an interactive form that shows/hides elements. Next, you will allow users to edit their choices!
