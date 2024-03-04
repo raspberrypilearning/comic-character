@@ -25,7 +25,6 @@ function displaySummary() {
 
 // Function to edit summary
 function changeSummary() {
-
   characterDetails.style.display = "flex";
   summary.style.display = "none";
 }

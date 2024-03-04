@@ -1,37 +1,24 @@
-## Edit the summary content
+## Change the summary content
 
-In this step, you will allow users to edit their form choices using a `<button>` element.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+In this step, you will allow users to change their form choices.
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+### Add the changeSummary() function
+
+You need a function that shows the form and hides the summary when the user clicks an Edit button.
 
 --- task ---
 
 Open `script.js`.
 
-Write a function `changeSummary()`.
+Find the comment `// Function to edit form content`
 
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 26
-line_highlights: 27-29
----
-     // Function to edit form content
-    function changeSummary() {
-    
-}   
-    
---- /code ---
+Add the function `changeSummary()`
 
---- /task ---
-
-The purpose of your function is to show the form and the hide the summary when the users click on a button.
-
---- task ---
-
-Add the `.style.display` property to change your "characterDetails" constant back to `flex;`.
-Add the `.style.display` property to change your "summary" constant back to `none;`.
+In your function:
++ Set the value of the `display` property of the character details `<section>` to `flex`
++ Set the value of the `display` property of the summary `<section>` to `none`
 
 --- code ---
 ---
@@ -41,25 +28,27 @@ line_numbers: true
 line_number_start: 26
 line_highlights: 27-30
 ---
-     // Function to edit form content
-    function changeSummary() {
-      characterDetails.style.display = "flex";
-      summary.style.display = "none";
+// Function to edit form content
+function changeSummary() {
+  characterDetails.style.display = "flex";
+  summary.style.display = "none";
 }   
     
 --- /code ---
 
 --- /task ---
 
-You have used the `onclick` attribute previously to provide an event handler in response to an action.
+### Create an Edit button
+
+You need to create a new button to call the `changeSummary()` function.
 
 --- task ---
 
 Open `character.html`.
 
-Add a `<button>` element with the attribute `onlick="changeSummary()` inside the section with the attribute `id="summary-section"`.
+Add a `<button>` element with the event `onlick="changeSummary()` to the summary section.
 
-Write the text "Edit" between the `<button>` tags to provide a label for your users.
+Add the text 'Edit' to the `<button>`, so users know what the button does.
 
 --- code ---
 ---
@@ -83,13 +72,12 @@ line_highlights: 51
 --- task ---
 
 **Test:** Click the **Run** button to see your changes. 
-
-+ Complete the form as you did in the previous step.
-
++ Complete the form again.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
-
-+ You should see a button with the title "Edit". Click on it to edit your form.
++ You should see an Edit button. Click on it to edit your form.
 
 --- /task ---
 
-Well done! You have used functions to allow your users edit their options on a form. Next, you will allow users validate their input when creating their superhero character.
+Well done! You have added even more interactivity to your website!
+
+Next, you will check that users have completed the form and warn them if they have missed a section.
