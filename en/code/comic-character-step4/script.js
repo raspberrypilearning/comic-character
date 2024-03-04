@@ -3,23 +3,23 @@ const currentYear = new Date();
 document.querySelector("#currentYear").innerText = `${currentYear.getFullYear()}`;
 
 // Create constants for superhero form
-const characterSheet = document.querySelector("#character-details");
 const summary = document.querySelector("#summary-section");
+const characterDetails = document.querySelector("#character-details");
 
-const name = document.querySelector("#name-text");
-const ability = document.querySelector("#ability-choice");
-const appearance = document.querySelector("#appearance-text");
-const origin = document.querySelector("#origin-text");
+const characterName = document.querySelector("#name-text");
+const characterAbility = document.querySelector("#ability-choice");
+const characterAppearance = document.querySelector("#appearance-text");
+const characterOrigin = document.querySelector("#origin-text");
 
 // Function to display summary
 function displaySummary() {
   const summaryParagraph = document.querySelector("#summary-paragraph");
 
-  summaryParagraph.textContent = `Your superhero name is ${name.value}. 
-  Your abilities are ${ability.value}. Your appearance is ${appearance.value}. 
-  Your origin story is ${origin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Your abilities are ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your origin story is ${characterOrigin.value}.`;
 
-  characterSheet.style.display = "none";
+  characterDetails.style.display = "none";
   summary.style.display = "flex";
 }
 

@@ -189,7 +189,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == "")
+    if (characterName.value == "")
 
 }
     
@@ -395,7 +395,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
     }
 
@@ -433,7 +433,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
     }
 
@@ -470,7 +470,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
     }
 
@@ -507,7 +507,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
     }
 
@@ -551,7 +551,7 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
     }
 
@@ -582,7 +582,7 @@ Open `character.html`.
 --- /task ---
 
 **Debug step:**
-+ Ensure you have used brackets`()` e.g.`if (name.value == "")` when checking a condition in an `if`, `if-else`, statement.
++ Ensure you have used brackets`()` e.g.`if (characterName.value == "")` when checking a condition in an `if`, `if-else`, statement.
 + Ensure you have added the block of code to be executed within curly braces `{}` if your condition is true.
 + Ensure you have called the `displaySummary()` function within your `else` condition block.
 
@@ -619,9 +619,9 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
-    } else if (ability.value == "") {
+    } else if (characterAbility.value == "") {
         alertMessage = "Please choose an ability";
     }
 
@@ -670,13 +670,13 @@ function validateForm(){
 
     var alertMessage = ""
 
-    if (name.value == ""){
+    if (characterName.value == ""){
         alertMessage = "Please enter a name"; 
-    } else if (ability.value == "") {
+    } else if (characterAbility.value == "") {
         alertMessage = "Please choose an ability";
-    } else if (appearance.value == "") {
+    } else if (characterAppearance.value == "") {
         alertMessage = "Please describe the appearance";
-    } else if (origin.value == "") {
+    } else if (characterOrigin.value == "") {
         alertMessage = "Please write the origin story";
     } 
 

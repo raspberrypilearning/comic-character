@@ -30,7 +30,7 @@ The purpose of your function is to show the form and the hide the summary when t
 
 --- task ---
 
-Add the `.style.display` property to change your "characterSheet" constant back to `flex;`.
+Add the `.style.display` property to change your "characterDetails" constant back to `flex;`.
 Add the `.style.display` property to change your "summary" constant back to `none;`.
 
 --- code ---
@@ -43,7 +43,7 @@ line_highlights: 27-30
 ---
      // Function to edit form content
     function changeSummary() {
-      characterSheet.style.display = "flex";
+      characterDetails.style.display = "flex";
       summary.style.display = "none";
 }   
     
