@@ -301,4 +301,4 @@ Retrieve specific components of the date and time:
 
 Great job! You have added dynamic footer content to your website!
 
-Next, you will design an interactive web page where users can create their own character.
+Next, you will design an interactive web page where the user can create their own character.

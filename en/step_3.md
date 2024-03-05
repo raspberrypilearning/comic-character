@@ -1,6 +1,6 @@
 ## Add form input fields
 
-In this step, you will design an interactive web page and a web form where users can create their own superhero!
+In this step, you will design an interactive web page and a web form where the user can create their own superhero!
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -13,10 +13,10 @@ There are other types of content, including:
 + Music
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-HTML <span style="color: #0faeb0">**forms**</span> allow users to input and submit information.
+HTML <span style="color: #0faeb0">**forms**</span> allows the user to input and submit information.
 </p>
 
-You will add different types of form elements to allow users to create their superhero character.
+You will add different types of form elements to allow the user to create their superhero character.
 
 **Note:** CSS styling for your form is already provided in the file `styles.css`.
 
@@ -124,7 +124,7 @@ The `<label>` element allows screen-readers to read the label out loud when a us
 
 --- /task ---
 
-An `<input>` element allows users enter data.
+An `<input>` element allows the user to enter data.
 
 You set the type of input using `type=`.
 
@@ -188,7 +188,7 @@ line_highlights: 25
 
 ### Superhero 'ability' section 
 
-Next, users will choose an ability for their superhero!
+Next, the user will choose an ability for their superhero!
 
 + The `<select>` element is used to create the drop-down list.
 + The `<option>` elements are used to provide choices.
@@ -254,7 +254,7 @@ line_highlights: 27-35
 
 ### Superhero 'appearance' section 
 
-Next, users will describe their superhero's appearance!
+Next, the user will describe their superhero's appearance!
 
 The `<textarea>` element provides multi-line text entry.
 
@@ -340,7 +340,7 @@ line_highlights: 36-39
 
 ### Superhero 'origin story' section 
 
-Next, users will describe their superhero's origin story!
+Next, the user will describe their superhero's origin story!
 
 --- task ---
 
@@ -378,7 +378,7 @@ line_highlights: 40-43
 
 ### Superhero 'summary' section 
 
-It would be great to show users a summary of their character.
+It would be great to show the user a summary of their character.
 
 --- task ---
 
@@ -458,7 +458,7 @@ line_highlights: 6
 
 ### Show the summary section
 
-Your users need to press a button to show the summary section.
+Your user needs to press a button to show the summary section.
 
 An `onclick` event can be added to the button.
 
@@ -488,7 +488,7 @@ Events can be triggered by the user or the browser.
 
 Add a `<button>` element below the origin story `div` with the event `onclick="displaySummary()"`
 
-Add the text 'Create' to the `<button>`, so users know what the button does.
+Add the text 'Create' to the `<button>`, so the user knows what the button does.
 
 --- code ---
 ---
@@ -519,4 +519,4 @@ In the next step you will create the JavaScript function `displaySummary()` that
 
 Fantastic work! Your character creation page now contains a form with input fields.
 
-In the next step you will make your form interactive, so your user can view a summary of their character. 
+In the next step you will make your form interactive, so the user can view a summary of their character. 

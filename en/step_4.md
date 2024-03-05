@@ -6,7 +6,7 @@ You will use JavaScript to make parts of your form appear and disappear.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-At the moment, users can add character details on the `character.html` page, but nothing will happen when they click the Create button. 
+At the moment, the user can add character details on the `character.html` page, but nothing will happen when they click the Create button. 
 
 This is because the summary section has its CSS `display` property set to `none`.
 
@@ -330,4 +330,4 @@ Open `character.html`.
 + Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
 + Check you have added `;` a semicolon at the end of your declarations.
 
-Well done! You have created an interactive form that shows/hides elements. Next, you will allow users to edit their choices!
+Well done! You have created an interactive form that shows/hides elements. Next, you will allow the user to edit their choices!

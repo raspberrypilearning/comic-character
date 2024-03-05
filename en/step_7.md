@@ -1,20 +1,20 @@
 ## Create light mode theme
 
-In this step, you will create a toggle slider that will allow your users switch between dark mode and light mode. The website will remember their option even if they navigate to another page.
+In this step, you will create a toggle slider that will allow the user to switch between dark mode and light mode. The website will remember their option even if they navigate to another page.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to users improves readability and accessibility.
+<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
 </p>
 
-Your `style.css` file contains the colour scheme `.light-mode` that will be used to update your website based on your user's choices.
+Your `style.css` file contains the colour scheme `.light-mode` that will be used to update your website based on the user's choices.
 
 #### Add toggle to the header section
 
 You have previously learnt how to use `<button>` elements to trigger an event. 
 
-You will learn to use a checkbox (<input type="checkbox">) styled as a toggle slider, so your users can switch between both themes.
+You will learn to use a checkbox (<input type="checkbox">) styled as a toggle slider, so the user can switch between both themes.
 
 --- task ---
 
@@ -49,7 +49,7 @@ You have used some of these form field elements previously, when you created you
 
 Inside the `<div>` element, add a `<label>` element with a with the attribute `class="switch"`.
 
-Add the `<input>` element that your users will click to toggle between dark mode and light mode.
+Add the `<input>` element that the user will click to toggle between dark mode and light mode.
 
 Add the attributes `type="checkbox"` and `id="lightModeToggle"`.
 
@@ -83,7 +83,7 @@ You also added a `<span>` element with the attribute `class="slider"`. This prov
 
 Icons like emojis are a good way of representing messages because they are universally understood.
 
-You can show your users an icon that represents light mode rather than show them the phrase "light mode"
+You can show the user an icon that represents light mode rather than show them the phrase "light mode"
 
 Google fonts provides icons and a way to add them to your website. 
 
@@ -450,7 +450,7 @@ It is then stored as the value paired with the key "lightMode" in the localStora
 
 ### Create the local storage function
 
-Currently, when users switch the toggle to the light mode position, you need a way to track their choice if they reload the web page or navigate to another page.
+Currently, when the user switches the toggle to the light mode position, you need a way to track their choice if they reload the web page or navigate to another page.
 
 JavaScript provides ways to check for browser generated events such as a web page being loaded.
 
@@ -582,7 +582,7 @@ If this isn't done, the light mode preference would be set to `on` but the toggl
 
 Use the `.checked` property of the variable storing the checkbox HTML element.
 
-Store the variable `isLightmode` which is the check that the user preference is set to "true".
+Store the variable `isLightmode` which is the check that the user's preference is set to "true".
 
 --- code ---
 ---
@@ -644,4 +644,4 @@ line_highlights:
 + Toggle the switch on and off to see your website theme colours change.
 + Navigate to the `index.html` page to check that your light preference stays on.
 
-Great work! You have created a toggle slider that allows users switch from dark mode to light mode themes. Next, you will add a hero slider to your website and allow users navigate between each hero image using JavaScript.
+Great work! You have created a toggle slider that allows the user to switch from dark mode to light mode themes. Next, you will add a hero slider to your website and allow the user to navigate between each hero image using JavaScript.

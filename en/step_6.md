@@ -1,14 +1,14 @@
-## Validate your users input
+## Validate the user's input
 
-In this step, you will use JavaScript functionality to validate your users input. 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+In this step, you will check that the user has completed the form and warn them if they have missed a section.
 
-At the moment, your users are able to complete the superhero creation form and submit it.
-However, they are able to submit the information even if they have left some form fields empty.
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You can ensure that users complete all the form fields before submitting it by using validation. 
+At the moment, the user can submit the information even if they have left some form fields empty.
 
-For example, when you register on some websites, your registration form will be validated to check you have completed certain fields such as your username or password. Some forms can also validate the length and characters contained within your password input.
+You can check the user completes all the form fields before submitting it by using validation. 
+
+For example, when you register on some websites, your registration form will be validated to check you have completed certain fields such as the username or password. Some forms can also validate the length and characters contained within your password input.
 
 ### Create an area to show your validation alerts
 
@@ -37,7 +37,7 @@ line_highlights: 45
 
 --- /task ---
 
-You will need a section on your form page to show validation messages (alerts) to your user.
+You will need a section on your form page to show validation messages (alerts) to the user.
 
 --- task ---
 
@@ -91,9 +91,9 @@ line_highlights: 33
 
 --- /task ---
 
-You previously created a function `displaySummary()` which would be used as an event handler when your users click the "Create" button.
+You previously created a function `displaySummary()` which would be used as an event handler when the user clicks the "Create" button.
 
-However, you have changed this event attribute to `validateForm()` which will handle the response first, to check if your user has completed all the details on the superhero form.
+However, you have changed this event attribute to `validateForm()` which will handle the response first, to check if the user has completed all the details on the superhero form.
 
 --- task ---
 
@@ -118,7 +118,7 @@ line_highlights: 35-37
 
 --- /task ---
 
-This function will check the fields on your form for any empty values. If there are empty values, a validation message will be shown to your user in the alert box. The alert box will be hidden until the `validateForm()` function is run.
+This function will check the fields on your form for any empty values. If there are empty values, a validation message will be shown to the user in the alert box. The alert box will be hidden until the `validateForm()` function is run.
 
 --- task ---
 
@@ -161,7 +161,7 @@ You will be able to change the value of this variable as the function is execute
 
 --- /collapse ---
 
-To check the data inputted on your form, you can use the `.value` property to retrieve the current value of the user input.
+To check the data inputted on your form, you can use the `.value` property to retrieve the current value of the user's input.
 
 You will also need to use a conditional statement to check if the current value of the fields is empty or blank.
 
@@ -588,7 +588,7 @@ Open `character.html`.
 
 ### Create more validation messages
 
-You have created a validation message to be shown to your users, if the form field with the attribute `id="name-text"`(stored in the constant `name` ) is left empty. 
+You have created a validation message to be shown to the user, if the form field with the attribute `id="name-text"`(stored in the constant `name` ) is left empty. 
 
 However, you will need to create more validation messages for the other form field elements.
 These have been stored in the constants `ability`, `appearance` and `origin`.
@@ -647,7 +647,7 @@ So you have changed the validation message to match the content of the form fiel
 
 Use two more `else if` statements to check the values of `appearance` and `origin`.
 
-Add two more validation messages to show your user inside your `else if` statements.
+Add two more validation messages to show the user inside your `else if` statements.
 
 --- collapse ---
 
@@ -709,4 +709,4 @@ Open `character.html`.
 
 --- /task ---
 
-Great effort, you have created validation checks to ensure your users complete all the form fields to create their superhero. Next, you will create a toggle switch that will allow your users switch between light and dark mode.
+Great effort, you have created validation checks to ensure the user completes all the form fields to create their superhero. Next, you will create a toggle switch that will allow the user to switch between light and dark mode.

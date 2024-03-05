@@ -1,6 +1,6 @@
 ## Change the summary content
 
-In this step, you will allow users to change their form choices.
+In this step, you will allow the user to change their form choices.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step5" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -48,7 +48,7 @@ Open `character.html`.
 
 Add a `<button>` element with the event `onlick="changeSummary()` to the summary section.
 
-Add the text 'Edit' to the `<button>`, so users know what the button does.
+Add the text 'Edit' to the `<button>`, so the user knows what the button does.
 
 --- code ---
 ---
@@ -80,4 +80,4 @@ line_highlights: 51
 
 Well done! You have added even more interactivity to your website!
 
-Next, you will check that users have completed the form and warn them if they have missed a section.
+Next, you will check that the user has completed the form and warn them if they have missed a section.

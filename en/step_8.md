@@ -392,7 +392,7 @@ Open `index.html`.
 + Ensure you have used -1 inside your `if-else` statement.
 
 
-Fantastic effort! You have created an interactive website where users can create their own superhero character. You have validated user entry and allowed users to choose a theme for the website. 
+Fantastic effort! You have created an interactive website where the user can create their own superhero character. You have validated user entry and allowed the user to choose a theme for the website. 
 
 Check your understanding of the project using the reflection quiz on the next step.
 
