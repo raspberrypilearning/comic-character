@@ -167,7 +167,7 @@ The link to import your Google font icon has already been added inside the `<hea
 **Debug step:**
 + Ensure you have left spaces between your attributes where you have multiple attributes in an element.
 
-Good Job! You've successfully added the toggle slider to your web page, you will need to give it some functionality.
+Good Job! You've successfully added the toggle slider to your web page, you need to give it some functionality.
 
 ### Create an event handler for your toggle
 
@@ -293,7 +293,7 @@ Multiple classes can be added or removed simultaneously by providing multiple ar
 
 --- task ---
 
-Use the `.toggle` function from the `classList` property to toggle the `light-mode` class selector onto the variable storing the HTML element attribute.
+Use the `.toggle` function from the `classList` property to toggle the `light-mode` class selector onto the variable holding the HTML element attribute.
 
 This will add the class to the element attirbute if it is not present, or remove it if it is present.
 
@@ -355,7 +355,7 @@ line_highlights: 22
 
 The toggle you have created will modify your website's CSS settings when the user switches on light mode. However, when you navigate from one page to another, the toggle will switch back to it's original position, turning light mode off.
 
-You will need to find a way to store the user's choice when they switch light mode on.
+You need to find a way to keep the user's choice when they switch light mode on.
 
 JavaScript provides a `localStorage` function to enable this feature.
 
@@ -366,20 +366,20 @@ title: What are local storage preferences?
 
 ---
 
-Local storage in web development is a way to store data on a user's browser that remains even after the user closes the browser or navigates away from the page. 
+Local storage in web development is a way to keep data in a user's browser that remains even after the user closes the browser or navigates away from the page. 
 
 It provides a simple key-value pair storage system that uses local storage to save and retrieve user preferences or settings.
 
 1. **Local Storage:**
    - A small storage space available in a user's web browser.
-   - Data stored in local storage remains on the user's device even after they close the browser.
+   - Data held in local storage remains on the user's device even after they close the browser.
 
 2. **Preferences:**
    - User choices or settings, such as theme preferences, language selection, or any customizations.
 
-3. **Storing Preferences in Local Storage:**
+3. **Holding Preferences in Local Storage:**
    - You can use local storage to save and retrieve user preferences.
-   - Preferences are often stored as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
+   - Preferences are often held as key-value pairs. For example, a key might be "lightMode" with a value of "true" or "false" to represent a light or dark mode preference.
 
 --- /collapse ---
 
@@ -407,7 +407,7 @@ The `localStorage` property in JavaScript provides a simple key-value storage sy
   Example: `localStorage.clear()`;
 
 + length:
-  + Returns the number of key-value pairs stored in localStorage.
+  + Returns the number of key-value pairs held in localStorage.
   Example: `var numberOfItems = localStorage.length`;
 
 --- /collapse ---
@@ -420,7 +420,7 @@ Use the `.setItem` function of the `localStorage` property.
 
 Add the key-value pairs inside the function.
 
-These would be the CSS class and the variable, storing the HTML `.checked` property of the checkbox HTML element
+These would be the CSS class and the variable, holding the HTML `.checked` property of the checkbox HTML element
 
 --- code ---
 ---
@@ -442,9 +442,9 @@ line_highlights: 67
 
 --- /code ---
 
-The `isLightMode` variable is currently stored as a Boolean data type (true of false) so this has to be converted to a `string` data type.
+The `isLightMode` variable is currently held as a Boolean data type (true of false) so this has to be converted to a `string` data type.
 
-It is then stored as the value paired with the key "lightMode" in the localStorage.
+It is then held as the value paired with the key "lightMode" in the localStorage.
 
 --- /task ---
 
@@ -499,13 +499,13 @@ line_highlights: 71-73
 
 Next, you will check the local storage of the user's browser to see if their local preference is set to light mode or dark mode.
 
-You will check if the user's preference for light mode is stored in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
+You will check if the user's preference for light mode is held in the browser's local storage. If it is, isLightMode is set to true; otherwise, it's set to false.
 
 You will use a boolean value to set the state to `true`.
 
 --- task ---
 
-Create a variable `isLightMode` and store the value of the `localStorage` check.
+Create a variable `isLightMode` and hold the value of the `localStorage` check.
 
 --- code ---
 ---
@@ -518,7 +518,7 @@ line_highlights: 74
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
   
-    // Check if light mode preference is stored in local storage
+    // Check if light mode preference is held in local storage
     var isLightMode = localStorage.getItem("lightMode") === "true";
   
     }); 
@@ -543,13 +543,13 @@ For example:
 
 --- /collapse ---
 
-If the user's local storage preference is already set to "lightMode", then you will need to ensure that the light mode selector is added to the HTML element.
+If the user's local storage preference is already set to "lightMode", then you need to ensure that the light mode selector is added to the HTML element.
 
 You can use the `.toggle` function from the `classList` property to achieve this.
 
 --- task ---
 
-Add the `.toggle` function from the `classList` property onto the variable storing the HTML element attribute.
+Add the `.toggle` function from the `classList` property onto the variable holding the HTML element attribute.
 
 --- code ---
 ---
@@ -562,10 +562,10 @@ line_highlights: 77
     // Light mode function 
     document.addEventListener("DOMContentLoaded", function () {
   
-    // Check if light mode preference is stored in local storage
+    // Check if light mode preference is held in local storage
     var isLightMode = localStorage.getItem("lightMode") === "true";
   
-    // Set initial light mode state based on the stored preference
+    // Set initial light mode state based on the current preference
     document.body.classList.toggle("light-mode", isLightMode);
   
    }); 
@@ -580,9 +580,7 @@ If this isn't done, the light mode preference would be set to `on` but the toggl
 
 --- task ---
 
-Use the `.checked` property of the variable storing the checkbox HTML element.
-
-Store the variable `isLightmode` which is the check that the user's preference is set to "true".
+Set the value of the `.checked` property of the checkbox to the value held in the variable `isLightmode`.
 
 --- code ---
 ---
@@ -596,10 +594,10 @@ line_highlights: 78
     document.addEventListener("DOMContentLoaded", function () {
     const lightModeToggle = document.getElementById("lightModeToggle");
   
-    // Check if light mode preference is stored in local storage
+    // Check if light mode preference is held in local storage
     const isLightMode = localStorage.getItem("lightMode") === "true";
   
-    // Set initial light mode state based on the stored preference
+    // Set initial light mode state based on the current preference
     document.body.classList.toggle("light-mode", isLightMode);
     lightModeToggle.checked = isLightMode;
    }); 

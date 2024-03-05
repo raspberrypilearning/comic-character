@@ -129,7 +129,7 @@ line_number_start:
 line_highlights: 
 ---
 
-    #name-input, #ability-input, #country-input, #appearance-input, #origin-input {
+    #name-input, #ability-input, #country-input, #origin-input {
   width: 100%;
    }
 
@@ -151,10 +151,9 @@ line_highlights:
     const summary = document.querySelector("#summary-section");
 
     const name = document.querySelector("#name-text");
-    const ability = document.querySelector("#ability-choice");
-    const country = document.querySelector("#country-choice");
-    const appearance = document.querySelector("#appearance-text");
-    const origin = document.querySelector("#origin-text");
+    const characterAbility = document.querySelector("#ability-choice");
+    const characterCountry = document.querySelector("#country-choice");
+    const characterOrigin = document.querySelector("#origin-text");
 
     // Function to display summary
     function displaySummary() {
@@ -162,7 +161,6 @@ line_highlights:
 
     summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
     Your ability is ${characterAbility.value}. You are from ${country.value}.
-    Your appearance is ${characterAppearance.value}. 
     Your origin story is ${characterOrigin.value}.`;
 
     characterDetails.style.display = "none";
@@ -175,10 +173,10 @@ line_highlights:
     summary.style.display = "none";
 }
 
-    // Function to validate the character creation form 
+    // Function to check the character details form 
     const alertBox = document.querySelector("#alert");
 
-    function validateForm(){
+    function checkForm(){
 
     var alertMessage = ""
 
@@ -186,10 +184,8 @@ line_highlights:
         alertMessage = "Please enter a name"; 
     } else if (characterAbility.value == "") {
         alertMessage = "Please choose an ability";
-    }  else if (country.value == "") {
+    } else if (country.value == "") {
         alertMessage = "Please choose a country of origin";
-    }else if (characterAppearance.value == "") {
-        alertMessage = "Please describe the appearance";
     } else if (characterOrigin.value == "") {
         alertMessage = "Please write the origin story";
     } 

@@ -44,11 +44,10 @@ function displaySummary() {
 
     var name = document.getElementById("name-span").textContent;
     var abilities = document.getElementById("class-span").textContent;
-    var appearance = document.getElementById("description-span").textContent;
     var origin = document.getElementById("origin-span").textContent;
 
     summaryParagraph.textContent = `Your superhero name is ${name}. 
-    Your ability is ${abilities}. Your appearance is ${appearance}. 
+    Your ability is ${abilities}.
     Your origin story is ${origin}.`;
 
     document.getElementById("summary-section").style.display = "block";
@@ -58,10 +57,10 @@ function displaySummary() {
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("darkModeToggle");
   
-    // Check if dark mode preference is stored in local storage
+    // Check if dark mode preference is held in local storage
     const isDarkMode = localStorage.getItem("darkMode") === "true";
   
-    // Set initial dark mode state based on the stored preference
+    // Set initial dark mode state based on the current preference
     document.body.classList.toggle("dark-mode", isDarkMode);
     darkModeToggle.checked = isDarkMode;
   
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Check if dark mode is already in the desired state
     if (isDarkMode !== document.body.classList.contains("dark-mode")) {
-      // Update body class and store the user's preference in local storage
+      // Update body class and hold the user's preference in local storage
       document.body.classList.toggle("dark-mode", isDarkMode);
       localStorage.setItem("darkMode", isDarkMode.toString());
     }
@@ -103,7 +102,7 @@ function generate() {
     // Clear old input
     document.getElementById("submit").value = "";
 
-    // Access the element to store the generated CAPTCHA
+    // Access the element to hold the generated CAPTCHA
     captcha = document.getElementById("image");
     let uniquechar = "";
 
@@ -116,7 +115,7 @@ function generate() {
         );
     }
 
-    // Store generated input
+    // Hold generated input
     captcha.innerText = uniquechar;
 }
 
@@ -127,7 +126,7 @@ function printmsg() {
     // Check whether the input is equal to the generated CAPTCHA or not
     if (usr_input == captcha.innerText) {
         document.getElementById("key").innerText = "Matched";
-        // Store the successful login state in local storage
+        // Hold the successful login state in local storage
         localStorage.setItem('isLoggedIn', 'true');
         document.getElementById("captchaSection").style.display = 'none';
         document.getElementById("successfulLogin").style.display = 'block';

@@ -12,7 +12,7 @@ You will:
 + Add a form and input options to let people create a superhero character
 + Use JavaScript to show/hide elements on your website
 + Add light/dark mode options to your website
-+ Store user preferences
++ Keep user preferences
 + Create an image slider that scrolls through images.
 
 --- no-print ---

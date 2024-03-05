@@ -36,7 +36,7 @@ Events can be triggered by the user or the browser.
 
 Open the `character.html` file.
 
-Add a `<button>` element below the origin story `div` with the event `onclick="displaySummary()"`
+Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div` 
 
 Add the text 'Create' to the `<button>`, so the user knows what the button does.
 
@@ -45,14 +45,14 @@ Add the text 'Create' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 39
-line_highlights: 44
+line_number_start: 35
+line_highlights: 40
 ---
 
           </div>
           <div id="origin-input">
-            <label>Origin Story: </label> 
-            <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+            <label>Origin Story:</label> 
+            <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
           </div>
           <button onclick="displaySummary()">Create</button>
         </section>
@@ -62,12 +62,10 @@ line_highlights: 44
 **Test:** Click the **Run** button to see your changes.
 + You will see a Create button below your superhero form.
 + The Create button does not do anything at the moment. 
-  
-In the next step you will create the JavaScript function `displaySummary()` that will handle the `onclick` event.
 
 --- /task ---
 
-At the moment, the user can add character details on the `character.html` page, but nothing will happen when they click the Create button. 
+Nothing will happen when the user clicks the Create button. 
 
 This is because the summary section has its CSS `display` property set to `none`.
 
@@ -77,7 +75,7 @@ When the summary section is displayed, you will hide the character details form.
 
 ### Create constants to refer to each section
 
-First, you need to create constants that refer to each section.
+Your function will use constants that refer to each section.
 
 --- task ---
 
@@ -105,9 +103,9 @@ const characterDetails = document.querySelector("#character-details");
 
 ### Create constants to refer to each form field
 
-You need the character details to display in the summary section.
+You need to display the three character details to in the summary section.
 
-Set them as constants, so you can refer to them in your code.
+Set each as a constant, so you can refer to them in your code.
 
 --- task ---
 
@@ -119,7 +117,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 5
-line_highlights: 9-12
+line_highlights: 9-11
 ---
 // Create constants for superhero form
 const summary = document.querySelector("#summary-section");
@@ -127,7 +125,6 @@ const characterDetails = document.querySelector("#character-details");
 
 const characterName = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
-const characterAppearance = document.querySelector("#appearance-text");
 const characterOrigin = document.querySelector("#origin-text");
     
 --- /code ---
@@ -301,7 +298,7 @@ function displaySummary() {
   const summaryParagraph = document.querySelector("#summary-paragraph");
 
   summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Your ability is ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your ability is ${characterAbility.value}. 
   Your origin story is ${characterOrigin.value}.`;
 
 }
@@ -332,7 +329,7 @@ function displaySummary() {
   const summaryParagraph = document.querySelector("#summary-paragraph");
 
   summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Your ability is ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your ability is ${characterAbility.value}. 
   Your origin story is ${characterOrigin.value}.`;
 
   characterDetails.style.display = "none";
@@ -363,7 +360,7 @@ function displaySummary() {
   const summaryParagraph = document.querySelector("#summary-paragraph");
 
   summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Your ability is ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+  Your ability is ${characterAbility.value}. 
   Your origin story is ${characterOrigin.value}.`;
 
   characterDetails.style.display = "none";
@@ -391,4 +388,6 @@ Open `character.html`.
 + Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
 + Check you have added `;` a semicolon at the end of your declarations.
 
-Well done! You have created an interactive form that shows/hides elements. Next, you will allow the user to edit their choices!
+Well done! You have created an interactive form that shows/hides elements. 
+
+Next, you will allow the user to edit their choices!

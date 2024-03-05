@@ -1,4 +1,4 @@
-## Validate the user's input
+## Check the user's input
 
 In this step, you will check that the user has completed the form and warn them if they have missed a section.
 
@@ -6,17 +6,15 @@ In this step, you will check that the user has completed the form and warn them 
 
 At the moment, the user can submit the information even if they have left some form fields empty.
 
-You can check the user completes all the form fields before submitting it by using validation. 
+You need to create a new function that checks the user has completed all the form fields before calling the `displaySummary()` function. 
 
-For example, when you register on some websites, your registration form will be validated to check you have completed certain fields such as the username or password. Some forms can also validate the length and characters contained within your password input.
-
-### Create an area to show your validation alerts
+### Change the function that handles the Create button's onclick event
 
 --- task ---
 
 Open `character.html`.
 
-Change the event handler function in the `<button>` element with the attribute `onclick="changeSummary()` to `onclick="validateForm()`.
+Change the function that handles the Create button's `onclick` event. 
 
 --- code ---
 ---
@@ -27,23 +25,23 @@ line_number_start: 41
 line_highlights: 45
 ---
 
-      <div id="origin-input">
-        <label>Origin Story: </label> 
-        <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
-     </div>
-     <button onclick="validateForm()">Submit</button>
+    <div id="origin-input">
+      <label>Origin Story:</label> 
+      <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+    </div>
+    <button onclick="checkForm()">Create</button>
     
 --- /code ---
 
 --- /task ---
 
-You will need a section on your form page to show validation messages (alerts) to the user.
+### Create an area to show alerts
+
+You need to show alerts to the user if they have not completed a section of the form.
 
 --- task ---
 
-Create a `<div>` element with the attribute `id="alert"`.
-
-This should be placed below the `<button>` element with the attribute  `onclick="validateForm()`.
+Create an empty `<div>` element with the attribute `id="alert"` below the Create button.
 
 --- code ---
 ---
@@ -55,10 +53,10 @@ line_highlights: 46
 ---
 
       <div id="origin-input">
-        <label>Origin Story: </label> 
-        <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+        <label>Origin Story:</label> 
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
      </div>
-     <button onclick="validateForm()">Submit</button>
+     <button onclick="checkForm()">Create</button>
      <div id="alert"> 
      </div>
     
@@ -66,51 +64,51 @@ line_highlights: 46
 
 --- /task ---
 
-### Create validation message
+### Create an alert message
+
+You need to update the contents of the alert div with a message.
 
 --- task ---
 
 Open `script.js`.
 
-Use the `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
+Use `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
 
-Assign this element to a constant `alertBox`.
+Assign this to a constant `alertBox`.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 33
+line_number_start: 31
+line_highlights: 32
 ---
-    // Function to validate the character creation form 
-    const alertBox = document.querySelector("#alert");
+// Function to check the character details form 
+const alertBox = document.querySelector("#alert");
     
 --- /code ---
 
 --- /task ---
 
-You previously created a function `displaySummary()` which would be used as an event handler when the user clicks the "Create" button.
-
-However, you have changed this event attribute to `validateForm()` which will handle the response first, to check if the user has completed all the details on the superhero form.
+You need a new `checkForm()` function to check the user has completed the form first, before it calls the `displaySummary()` function.
 
 --- task ---
 
-Create a function `validateForm()` which will be the new event handler.
+Create a function `checkForm()`.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 35-37
+line_number_start: 31
+line_highlights: 34-36
 ---
-     // Function to validate the character creation form 
-      const alertBox = document.querySelector("#alert");
+// Function to check the character details form 
+const alertBox = document.querySelector("#alert");
 
-    function validateForm(){
+function checkForm(){
 
 }
     
@@ -118,28 +116,32 @@ line_highlights: 35-37
 
 --- /task ---
 
-This function will check the fields on your form for any empty values. If there are empty values, a validation message will be shown to the user in the alert box. The alert box will be hidden until the `validateForm()` function is run.
+The `checkForm()` function will check each field on your form for an empty value.
+
+If there is an empty value, an alert will be shown to the user in the `alertBox`. 
+
+The `alertBox` div will be hidden until it is needed.
 
 --- task ---
 
-Assign a variable `alertMessage` to store an empty string represented by two speech marks ("").
+Create a variable `alertMessage` and assign it an empty string(`""`).
 
-This will be used later to store validation messages when the function runs.
+`alertMessage` will hold a message if the function finds an empty value.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 35-39
+line_number_start: 31
+line_highlights: 36
 ---
-     // Function to validate the character creation form 
-    const alertBox = document.querySelector("#alert");
+// Function to check the character details form 
+const alertBox = document.querySelector("#alert");
 
-    function validateForm(){
+function checkForm(){
 
-    var alertMessage = ""
+var alertMessage = ""
 
 }
     
@@ -153,22 +155,21 @@ line_highlights: 35-39
 title: What is a variable?
 ---
 
-A variable in programming is a named area of memory that holds a value. The value can be changed when the program runs.
-For example, `var age = 30;` `age` is the variable storing the value `30`.
+A variable is a named area of computer memory that holds a value. 
 
-In this example `var alertMessage = ""`; `alertMessage` is the variable storing an empty string value.
-You will be able to change the value of this variable as the function is executed.
+The value can be changed by the program.
+
+For example, `var age = 10;` `age` is the name of the variable. It is assigned the value `10`.
 
 --- /collapse ---
 
-To check the data inputted on your form, you can use the `.value` property to retrieve the current value of the user's input.
+The `.value` property of a form field is the current user input.
 
-You will also need to use a conditional statement to check if the current value of the fields is empty or blank.
+You will use a conditional statement for each field to check if the current value is empty.
 
-Conditional statements are used to make decisions in your code based on different criteria. 
-There are three main types of conditional statements in JavaScript: `if`, `if-else`, `if-else if-else`.
+Conditional statements are used to make decisions in your code. 
 
-An `if` statement is used to check if a certain critera is true or false.
+An `if` statement is used to check if the result of a comparison is true or false.
 
 --- task ---
 
@@ -182,10 +183,10 @@ line_numbers: true
 line_number_start: 33
 line_highlights: 41
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -195,7 +196,7 @@ function validateForm(){
     
 --- /code ---
 
-Note that `name` is currently storing the HTML element with the attribute `id="name-text"`.
+Note that `name` is currently holding the HTML element with the attribute `id="name-text"`.
 So you will be checking if this form field has been left empty by the user.
 
 --- /task ---
@@ -378,7 +379,7 @@ Inside the `if` statement, you can set the block of code that will be executed i
 
 --- task ---
 
-Change the value of the variable `alertMessage` to store a user friendly validation message if the `name-text` input field has been left blank.
+Change the value of the variable `alertMessage` to hold a user friendly validation message if the `name-text` input field has been left blank.
 
 --- code ---
 ---
@@ -388,10 +389,10 @@ line_numbers: true
 line_number_start: 33
 line_highlights: 41-42
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -405,8 +406,8 @@ function validateForm(){
 
 --- /task ---
 
-You have now updated the variable `alertMessage` to store a validation message.
-Therefore, it no longer stores an empty string.
+You have now updated the variable `alertMessage` to hold a validation message.
+Therefore, it no longer holds an empty string.
 
 You will now need the program to check two conditions:
 + if `alertMessage` is not an empty string (it now contains the validation message you have created earlier).
@@ -426,10 +427,10 @@ line_numbers: true
 line_number_start: 32
 line_highlights: 45-51
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -447,13 +448,13 @@ function validateForm(){
 
 --- /task ---
 
-You will need to manipulate the content of the element, to display your validation message.
+You need to manipulate the content of the element, to display your validation message.
 
 --- task ---
 
 Inside the `if` statement, add the block of code that will be executed if the condition is true.
 
-Use the `.innerText` property to update the HTML element stored in the `alertBox` constant to the value of the current `alertMessage`.
+Use the `.innerText` property to update the HTML element held in the `alertBox` constant to the value of the current `alertMessage`.
 
 --- code ---
 ---
@@ -463,10 +464,10 @@ line_numbers: true
 line_number_start: 32
 line_highlights: 45-51
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -486,7 +487,7 @@ function validateForm(){
 
 The display property of the `<div>` element with the attribute `id="alert"` is currently set to `none;` 
 
-You will need to change this to make it appear, when there is a validation message to show the user.
+You need to change this to make it appear, when there is a validation message to show the user.
 
 --- task ---
 
@@ -500,10 +501,10 @@ line_numbers: true
 line_number_start: 32
 line_highlights: 45-51
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -525,7 +526,7 @@ You have set a decision to make `alertBox` appear, if `alertMessage `is not equa
 
 But what happens if `alertMessage` is equal to an empty string? This means the condition is false!
 
-You want the HTML element stored in the constant `alertBox` to disappear because there is no validation message to show the user. 
+You want the HTML element held in the constant `alertBox` to disappear because there is no validation message to show the user. 
 This means there are no empty fields and the form can then be submitted.
 
 You can use an `else` statement to set a decision for this. 
@@ -544,10 +545,10 @@ line_numbers: true
 line_number_start: 32
 line_highlights: 45-51
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -586,12 +587,12 @@ Open `character.html`.
 + Ensure you have added the block of code to be executed within curly braces `{}` if your condition is true.
 + Ensure you have called the `displaySummary()` function within your `else` condition block.
 
-### Create more validation messages
+### Create more alert messages
 
-You have created a validation message to be shown to the user, if the form field with the attribute `id="name-text"`(stored in the constant `name` ) is left empty. 
+You have created a validation message to be shown to the user, if the form field with the attribute `id="name-text"`(held in the constant `name` ) is left empty. 
 
-However, you will need to create more validation messages for the other form field elements.
-These have been stored in the constants `ability`, `appearance` and `origin`.
+However, you need to create more validation messages for the other form field elements.
+These have been held in the constants `characterAbility`, and `origin`.
 
 This means there are more than two conditions to check. 
 You can use an `if-else if-else` statement when checking multiple conditions.
@@ -600,7 +601,7 @@ You can use an `if-else if-else` statement when checking multiple conditions.
 
 Open `script.js`.
 
-Use an `else if` statement to check if the value of `ability` is empty.
+Use an `else if` statement to check if the value of `characterAbility` is empty.
 
 Inside the `else if` statement, add the block of code to be executed if the condition is true.
 
@@ -612,10 +613,10 @@ line_numbers: true
 line_number_start: 32
 line_highlights: 43-45
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -639,15 +640,15 @@ function validateForm(){
 
 --- /task ---
 
-Note that `ability` is currently storing the HTML element with the attribute `id="ability-choice"`.
+Note that `characterAbility` is currently holding the HTML element with the attribute `id="ability-choice"`.
 
 So you have changed the validation message to match the content of the form field.
 
 --- task ---
 
-Use two more `else if` statements to check the values of `appearance` and `origin`.
+Use another `else if` statement to check the value of `characterOrigin`.
 
-Add two more validation messages to show the user inside your `else if` statements.
+Add an alert message to show the user if it is blank.
 
 --- collapse ---
 
@@ -661,12 +662,12 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 32
-line_highlights: 45-50
+line_highlights: 43-44
 ---
-     // Function to validate the character creation form 
+     // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -674,8 +675,6 @@ function validateForm(){
         alertMessage = "Please enter a name"; 
     } else if (characterAbility.value == "") {
         alertMessage = "Please choose an ability";
-    } else if (characterAppearance.value == "") {
-        alertMessage = "Please describe the appearance";
     } else if (characterOrigin.value == "") {
         alertMessage = "Please write the origin story";
     } 

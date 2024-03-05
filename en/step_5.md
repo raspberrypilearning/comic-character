@@ -25,8 +25,8 @@ In your function:
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 26
-line_highlights: 27-30
+line_number_start: 25
+line_highlights: 26-29
 ---
 // Function to edit form content
 function changeSummary() {
@@ -55,8 +55,8 @@ Add the text 'Edit' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 48
-line_highlights: 51
+line_number_start: 41
+line_highlights: 44
 ---
 
     <section id="summary-section">
@@ -74,7 +74,7 @@ line_highlights: 51
 **Test:** Click the **Run** button to see your changes. 
 + Complete the form again.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
-+ You should see an Edit button. Click on it to edit your form.
++ You should see an Edit button. Click it to edit your form.
 
 --- /task ---
 

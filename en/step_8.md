@@ -133,12 +133,12 @@ A parameter acts as a placeholder for a value that you will pass when the functi
 
 --- /task ---
 
-Currently, `heroSlides` is storing the values of the three HTML elements with the attrbiutes `class="hero-slide"`.
+Currently, `heroSlides` is holding the values of the three HTML elements with the attrbiutes `class="hero-slide"`.
 
 One of the elements has the `active` class as an attribute when it is the image showing on the slider.
 You want to update this each time a user clicks the left (<) or right (>) button.
 
-You can create an array using `heroSlides` and the variable `currentHeroIndex` stores the index of the currently active slide.
+You can create an array using `heroSlides` and the variable `currentHeroIndex` holds the index of the currently active slide.
 
 An array is like a variable but it can hold more than one value; in this case you wnat it to hold three values (each HTML element)
 
@@ -148,7 +148,7 @@ An array is like a variable but it can hold more than one value; in this case yo
 title: How do arrays work? and what is index
 ---
 
-An array is a special type of storage in memory that allows you to store and organise multiple values in a single variable. Unlike regular variables that hold only one value, an array can hold multiple values, and these values can be of different types.
+An array is a special type of storage in memory that allows you to hold and organise multiple values in a single variable. Unlike regular variables that hold only one value, an array can hold multiple values, and these values can be of different types.
 
 Arrays are created using square brackets [] and can contain various types of data, such as numbers, strings, objects, or even other arrays. 
 
@@ -190,7 +190,7 @@ line_numbers: true
 
 --- task ---
 
-Use `heroSlides` as an array to store the current `active` class index `currentHeroIndex`.
+Use `heroSlides` as an array to hold the current `active` class index `currentHeroIndex`.
 
 --- code ---
 ---
@@ -215,7 +215,7 @@ function changeHero(direction) {
   
 --- /code ---
 
-Note when you created `currentHeroIndex`, you set it to store the value `0`; 
+Note when you created `currentHeroIndex`, you set it to hold the value `0`; 
 
 --- /task ---
 
@@ -255,7 +255,7 @@ This could either be +1 to find the next slide, or -1 to find the previous slide
 
 --- task ---
 
-Update the `currentHeroIndex` by storing its' current position + the direction.
+Update the `currentHeroIndex` by holding its' current position + the direction.
 
 --- code ---
 ---
@@ -392,7 +392,7 @@ Open `index.html`.
 + Ensure you have used -1 inside your `if-else` statement.
 
 
-Fantastic effort! You have created an interactive website where the user can create their own superhero character. You have validated user entry and allowed the user to choose a theme for the website. 
+Fantastic effort! You have created an interactive website where the user can create their own superhero character. You have checkd user entry and allowed the user to choose a theme for the website. 
 
 Check your understanding of the project using the reflection quiz on the next step.
 

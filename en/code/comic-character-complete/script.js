@@ -6,17 +6,16 @@ document.querySelector("#copyrightYear").innerText = currentDate.getFullYear();
 const characterDetails = document.querySelector("#character-details");
 const summary = document.querySelector("#summary-section");
 
-const name = document.querySelector("#name-text");
-const ability = document.querySelector("#ability-choice");
-const appearance = document.querySelector("#appearance-text");
-const origin = document.querySelector("#origin-text");
+const characterName = document.querySelector("#name-text");
+const characterAbility = document.querySelector("#ability-choice");
+const characterOrigin = document.querySelector("#origin-text");
 
 // Function to display summary
 function displaySummary() {
     const summaryParagraph = document.querySelector("#summary-paragraph");
 
     summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your ability is ${characterAbility.value}. Your appearance is ${characterAppearance.value}. 
+    Your ability is ${characterAbility.value}.
     Your origin story is ${characterOrigin.value}.`;
 
     characterDetails.style.display = "none";
@@ -29,10 +28,10 @@ function changeSummary() {
     summary.style.display = "none";
 }
 
-// Function to validate the character creation form 
+// Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
-function validateForm(){
+function checkForm(){
 
     var alertMessage = ""
 
@@ -40,8 +39,6 @@ function validateForm(){
         alertMessage = "Please enter a name"; 
     } else if (characterAbility.value == "") {
         alertMessage = "Please choose an ability";
-    } else if (characterAppearance.value == "") {
-        alertMessage = "Please describe the appearance";
     } else if (characterOrigin.value == "") {
         alertMessage = "Please write the origin story";
     } 
@@ -69,10 +66,10 @@ function changeLightMode(){
 // Check local storage 
 document.addEventListener("DOMContentLoaded", function () {    
   
-    // Check if light mode preference is stored in local storage
+    // Check if light mode preference is held in local storage
     var isLightMode = localStorage.getItem("lightMode") === "true";
   
-    // Set initial light mode state based on the stored preference
+    // Set initial light mode state based on the current preference
     document.body.classList.toggle("light-mode", isLightMode);
     lightModeToggle.checked = isLightMode;
 });

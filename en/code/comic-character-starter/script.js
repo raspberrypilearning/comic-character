@@ -6,15 +6,15 @@
 
 // Function to edit summary
 
-// Function to validate the character creation form 
+// Function to check the character details form 
 
 // Light mode function 
   
 // Check local storage 
 
-    // Check if light mode preference is stored in local storage
+    // Check if light mode preference is held in local storage
   
-    // Set initial light mode state based on the stored preference
+    // Set initial light mode state based on the current preference
      
 // Place Hero slider variables here 
 

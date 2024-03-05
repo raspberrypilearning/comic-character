@@ -398,6 +398,6 @@ line_highlights: 6
 
 --- /task ---
 
-Fantastic work! Your character creation page now contains a form with input fields.
+Fantastic work! Your character details page now contains a form with input fields.
 
 In the next step you will make your form interactive, so the user can view a summary of their character. 
