@@ -115,7 +115,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 14
-line_highlights: 15
+line_highlights: 15-17
 ---
     
 // Function to display summary
@@ -232,7 +232,7 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 14
-line_highlights: 19-20
+line_highlights: 18-20
 ---
     
 // Function to display summary
