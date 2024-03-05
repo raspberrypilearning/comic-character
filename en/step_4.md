@@ -1,10 +1,71 @@
 ## Make items appear/disappear
 
-In this step, you will continue building the functionality of your form. 
-
-You will use JavaScript to make parts of your form appear and disappear. 
+In this step, you will use JavaScript to make parts of your form appear and disappear. 
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step4" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+### Show the summary section
+
+Your user needs to press a button to show the summary section.
+
+An `onclick` event can be added to the button.
+
+JavaScript can be used to react to this event and show the summary.
+
+--- collapse ---
+
+---
+title: Other events
+---
+
+Events can be triggered by the user or the browser.
+
++ User events:
+  + Mouse events (click, double click, mouseover).
+  + Keyboard events (keypress, keydown, keyup).
+  + Touch events (touchstart, touchmove, touchend).
+
++ Browser events:
+  + Page load events (load, unload).
+  + Window events (resize, scroll).
+  + Time events (setInterval, setTimeout).
+
+--- /collapse ---
+
+--- task ---
+
+Open the `character.html` file.
+
+Add a `<button>` element below the origin story `div` with the event `onclick="displaySummary()"`
+
+Add the text 'Create' to the `<button>`, so the user knows what the button does.
+
+--- code ---
+---
+language: html
+filename: character.html
+line_numbers: true
+line_number_start: 39
+line_highlights: 44
+---
+
+          </div>
+          <div id="origin-input">
+            <label>Origin Story: </label> 
+            <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
+          </div>
+          <button onclick="displaySummary()">Create</button>
+        </section>
+
+--- /code ---
+
+**Test:** Click the **Run** button to see your changes.
++ You will see a Create button below your superhero form.
++ The Create button does not do anything at the moment. 
+  
+In the next step you will create the JavaScript function `displaySummary()` that will handle the `onclick` event.
+
+--- /task ---
 
 At the moment, the user can add character details on the `character.html` page, but nothing will happen when they click the Create button. 
 

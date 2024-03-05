@@ -26,9 +26,12 @@ You will add different types of form elements to allow the user to create their 
 title: Types of form elements
 ---
 
+**TODO** @m-bowley to update to make select not an input and change the appearance of the input indents:
+
 ![An example HTML form with form fields annotated to show their use.](images/HTML_form_elements.png)
 
 + `<input>` e.g. single-line text box, checkbox, button.
++ `<select>` A drop-down list.
 + `<textarea>` For entering multiple lines of text.
 + `<label>` Text to tell the user what information to enter.
 
@@ -315,10 +318,6 @@ line_highlights: 36-39
 
 --- /task ---
 
-### Superhero 'appearance' section 
-
-Next, the user will describe their superhero's appearance!
-
 ### Superhero 'summary' section 
 
 It would be great to show the user a summary of their character.
@@ -332,8 +331,8 @@ Add a new `<section>` element with the attribute `id="summary-section"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 44
-line_highlights: 45-47
+line_number_start: 40
+line_highlights: 41-43
 ---
       
     </section>
@@ -356,8 +355,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 45
-line_highlights: 46-47
+line_number_start: 41
+line_highlights: 42-43
 ---
 
     <section id="summary-section">
@@ -396,67 +395,6 @@ line_highlights: 6
 --- /code ---
 
 --- /collapse ---
-
---- /task ---
-
-### Show the summary section
-
-Your user needs to press a button to show the summary section.
-
-An `onclick` event can be added to the button.
-
-JavaScript can be used to react to this event and show the summary.
-
---- collapse ---
-
----
-title: Examples of events
----
-
-Events can be triggered by the user or the browser.
-
-+ User events:
-  + Mouse events (click, double click, mouseover).
-  + Keyboard events (keypress, keydown, keyup).
-  + Touch events (touchstart, touchmove, touchend).
-
-+ Browser events:
-  + Page load events (load, unload).
-  + Window events (resize, scroll).
-  + Time events (setInterval, setTimeout).
-
---- /collapse ---
-
---- task ---
-
-Add a `<button>` element below the origin story `div` with the event `onclick="displaySummary()"`
-
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
-
---- code ---
----
-language: html
-filename: character.html
-line_numbers: true
-line_number_start: 39
-line_highlights: 44
----
-
-            </div>
-            <div id="origin-input">
-                <label>Origin Story: </label> 
-                <textarea id="origin-text" placeholder="Type your superhero origin story here...."></textarea>
-            </div>
-            <button onclick="displaySummary()">Create</button>
-        </section>
-
---- /code ---
-
-**Test:** Click the **Run** button to see your changes.
-+ You will see a Create button below your superhero form.
-+ The Create button does not do anything at the moment. 
-  
-In the next step you will create the JavaScript function `displaySummary()` that will handle the `onclick` event.
 
 --- /task ---
 
