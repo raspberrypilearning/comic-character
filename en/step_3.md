@@ -52,7 +52,7 @@ language: html
 filename: character.html
 line_numbers: true
 line_number_start: 22
-line_highlights: 22-24
+line_highlights: 22
 ---
 
       <section id="character-details"> <!--Superhero character details-->
@@ -149,7 +149,7 @@ title: Examples of input types
 <br>*Try it*:
 <br><input type="checkbox">
 
-+ **radio:** Select one or more options.
++ **radio:** Select one or more options. **TODO**
 <br>`<input type="radio">`
 <br>*Try it*:
 <br><input type="radio">
@@ -276,29 +276,6 @@ This gives a hint as to what the user should enter.
 
 The hint is replaced when the user starts typing.
 
---- collapse ---
-
----
-title: Examples of input attributes
----
-
-+ placeholder: provides a short hint that describes the expected value of the input field and is replaced when the user enters a value.
-Example: `<input type="text" placeholder="Enter your name">`
-
-+ value: sets the default data entered in the input field. For example in a form where the user is asked for their dietary requirements, you could set the default value of that field to "None".
-Example: `<input type="text" name="Dietary requirements" value="None">`
-
-+ required: ensures that the input field must be filled out before submitting the form.
-Example: `<input type="text" required>`
-
-+ maxlength: sets the maximum number of characters allowed in a text or password input.
-Example: `<input type="text" maxlength="30">`
-
-+ min and max: sets the minimum and maximum values for number or date inputs.
-Example: `<input type="number" min="0" max="100">`
-
---- /collapse ---
-
 --- task ---
 
 Create a `<div>` element with the attribute `id="appearance-input"`.
@@ -346,9 +323,9 @@ Next, the user will describe their superhero's origin story!
 
 Create a `<div>` element with the attribute `id="origin-input"`.
 
-Add the <label> and <textarea> HTML inside the <div> element.
+Add the `<label>` and `<textarea>` HTML inside the `<div>` element.
 
-Include a placeholder attribute for the <textarea> element.
+Include a placeholder attribute for the `<textarea>` element.
 
 --- code ---
 ---
@@ -390,7 +367,7 @@ language: html
 filename: character.html
 line_numbers: true
 line_number_start: 44
-line_highlights: 46-48
+line_highlights: 45-47
 ---
       
     </section>

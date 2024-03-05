@@ -64,7 +64,7 @@ line_highlights: 30
 
 --- task ---
 
-Add a `<span>` element with the attribute `id="currentYear"` between the Ⓒ symbol and the name.
+Add a `<span>` element with the attribute `id="copyrightYear"` between the Ⓒ symbol and the name.
 
 The `id` attribute is used to specify a unique identifier for an HTML element.
 
@@ -78,7 +78,7 @@ line_highlights: 30
 ---
 
       <footer>
-        <p> Ⓒ <span id="currentYear"></span> Malik Johnson- All Rights Reserved</p>
+        <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
@@ -116,7 +116,7 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 Open `script.js`.
 
-Create a constant `currentYear` to hold a new `Date()` object.
+Create a constant `currentDate` to hold a new `Date()` object.
 
 --- code ---
 ---
@@ -128,7 +128,7 @@ line_highlights: 2
 ---
      
      // Update Copyright Year function 
-     const currentYear = new Date();
+     const currentDate = new Date();
     
 --- /code ---
 
@@ -162,13 +162,13 @@ The Document Object Model (DOM) provides a way for JavaScript (and other program
 
 It represents the structure of a web page (document).
 
-`querySelector()` is a DOM method that returns the first element in your web page that matches a specified CSS selector (e.g. `#currentYear`)
+`querySelector()` is a DOM method that returns the first element in your web page that matches a specified CSS selector (e.g. `copyrightYear`)
 
 --- /collapse ---
 
 --- task ---
 
-Use the `querySelector()` method to find the element in the web page document with the attribute `id="currentYear"`.
+Use the `querySelector()` method to find the element in the web page document with the attribute `id="copyrightYear"`.
 
 --- code ---
 ---
@@ -179,8 +179,8 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     const currentYear = new Date();
-     document.querySelector("#currentYear")
+     const currentDate = new Date();
+     document.querySelector("#copyrightYear")
     
 --- /code ---
 
@@ -192,33 +192,13 @@ You only need to change the text *inside* the element.
 
 The `.innerText` property can be used to refer to the text content of an HTML element.
 
---- task ---
-
-Add the `.innerText` property to the querySelector.
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 1
-line_highlights: 3
----
-     // Update Copyright Year function 
-     const currentYear = new Date();
-     document.querySelector("#currentYear").innerText
-    
---- /code ---
-
---- /task ---
-
-The `currentYear` constant holds the full date returned by the `Date()` function, but you only need the four-digit year part of the date.
+The `currentDate` constant holds the full date returned by the `Date()` function, but you only need the four-digit year part of the date.
 
 You can use the `.getFullYear()` method for this.
 
 --- task ---
 
-Set the text content of the `<span>` to the current year.
+Set the `.innerText` content of the `<span>` with the attribute `id="copyrightYear"` to the current four-digit year.
 
 --- code ---
 ---
@@ -229,10 +209,14 @@ line_number_start: 1
 line_highlights: 3
 ---
      // Update Copyright Year function 
-     const currentYear = new Date();
-     document.querySelector("#currentYear").innerText = currentYear.getFullYear();
+     const currentDate = new Date();
+     document.querySelector("#copyrightYear").innerText = currentDate.getFullYear();
     
 --- /code ---
+
+--- /task ---
+
+--- task ---
 
 **Test:** Click the **Run** button to see your changes.
 
@@ -241,7 +225,7 @@ line_highlights: 3
 --- /task ---
 
 **Debug step:**  
-+ Ensure there is a `#` in `#currentYear` in the `querySelector`
++ Ensure there is a `#` in `copyrightYear` in the `querySelector`
 + Check you have opening and closing brackets `()` at the end of `.getFullYear()`
 + Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
 + Check there is a `;` colon at the end of lines 2 and 3.
@@ -251,6 +235,10 @@ line_highlights: 3
 Open `index.html` 
 
 Copy (CTRL + C) or (CMD + C) the `<p>` element within the footer.
+
+--- /task ---
+
+--- task ---
 
 Open the `character.html` file.
 
@@ -268,7 +256,7 @@ line_highlights: 25
 ---
 
       <footer>
-        <p> <span id="currentYear"></span> Ⓒ Malik Johnson- All Rights Reserved</p>
+        <p> <span id="copyrightYear"></span> Ⓒ Malik Johnson- All Rights Reserved</p>
       </footer>
 
 --- /code ---
@@ -299,6 +287,6 @@ Retrieve specific components of the date and time:
 
 --- /collapse ---
 
-Great job! You have added dynamic footer content to your website!
+Great job! You have added some dynamic content to your web pages!
 
 Next, you will design an interactive web page where the user can create their own character.

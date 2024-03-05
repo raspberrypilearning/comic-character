@@ -1,6 +1,6 @@
 // Update Copyright Year function 
-const currentYear = new Date();
-document.querySelector("#currentYear").innerText = `${currentYear.getFullYear()}`;
+const currentDate = new Date();
+document.querySelector("#copyrightYear").innerText = `${currentDate.getFullYear()}`;
 
 // Create constants for superhero form
 
