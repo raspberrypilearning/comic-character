@@ -252,9 +252,9 @@ line_highlights: 27-35
 + Check you have four `<option>` elements inside your `<select>` elements.
 + Check you have closing `</option>` tags foe each option.
 
-### Superhero 'appearance' section 
+### Superhero 'origin story' section 
 
-Next, the user will describe their superhero's appearance!
+Next, the user will describe their superhero's origin story!
 
 The `<textarea>` element provides multi-line text entry.
 
@@ -278,11 +278,11 @@ The hint is replaced when the user starts typing.
 
 --- task ---
 
-Create a `<div>` element with the attribute `id="appearance-input"`.
+Create a `<div>` element with the attribute `id="origin-input"`.
 
 Add the `<label>` and `<textarea>` HTML inside the `<div>` element.
 
-Include a `placeholder` attribute for the `<textarea>` element.
+Include a placeholder attribute for the `<textarea>` element.
 
 --- code ---
 ---
@@ -302,46 +302,8 @@ line_highlights: 36-39
         <option value="Time travel">Time travel</option>
       </select>
     </div>
-    <div id="appearance-input">
-      <label>Appearance: </label> 
-      <textarea id="appearance-text" placeholder="Describe your superhero!"></textarea>
-    </div>
-  </section>
-    
---- /code ---
-
-**Test:** Click the **Run** button to see your changes.
-+ You will see a multi-line text box with the placeholder text.
-
---- /task ---
-
-### Superhero 'origin story' section 
-
-Next, the user will describe their superhero's origin story!
-
---- task ---
-
-Create a `<div>` element with the attribute `id="origin-input"`.
-
-Add the `<label>` and `<textarea>` HTML inside the `<div>` element.
-
-Include a placeholder attribute for the `<textarea>` element.
-
---- code ---
----
-language: html
-filename: character.html
-line_numbers: true
-line_number_start: 36
-line_highlights: 40-43
----
-
-    <div id="appearance-input">
-      <label>Appearance: </label> 
-      <textarea id="appearance-text" placeholder="Type the appearance of your superhero here...."></textarea>
-    </div>
     <div id="origin-input">
-      <label>Origin Story: </label> 
+      <label>Origin Story:</label> 
       <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
     </div>
   </section>
@@ -349,9 +311,13 @@ line_highlights: 40-43
 --- /code ---
 
 **Test:** Click the **Run** button to see your changes.
-+ You will see another multi-line text box showing placeholder text.
++ You will see a multi-line text box showing placeholder text.
 
 --- /task ---
+
+### Superhero 'appearance' section 
+
+Next, the user will describe their superhero's appearance!
 
 ### Superhero 'summary' section 
 
