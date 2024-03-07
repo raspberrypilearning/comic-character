@@ -59,6 +59,7 @@ line_highlights: 46-47
      <button onclick="checkForm()">Create</button>
      <div id="alert"> 
      </div>
+  </section>
     
 --- /code ---
 
@@ -165,7 +166,7 @@ For example, `var age = 10;` `age` is the name of the variable. It is assigned t
 
 --- /collapse ---
 
-### Check the user has entered a character name
+### Check the user has entered a superhero name
 
 
 You need to check each field to decide if it is empty.
@@ -209,7 +210,7 @@ Inside the `if` statement, you need code to run if the result is **true** (meani
 
 Assign `alertMessage` a string if the condition is true.
 
-The string needs to be a message that tells the user what to if the **character name** field has been left blank.
+The string needs to be a message that tells the user what to if the **Superhero Name** field has been left blank.
 
 --- code ---
 ---
@@ -238,17 +239,17 @@ function checkForm(){
 
 ### Show an alert
 
-You only need to show an alert if a message for the user has been assigned to `alertMessage`.
-
 When you created `alertMessage`, you assigned it an empty string (`""`).
+
+You only need to show an alert if a message has been assigned to `alertMessage`.
 
 You need to check if `alertMessage` is **not** an empty string now.
 
 --- task ---
 
-Use an `if` statement to check if the variable `alertMessage` is not an empty string (meaning it has been assigned a message for the user).
+Use an `if` statement to check if the variable `alertMessage` is **not** an empty string (meaning it has been assigned a message for the user).
 
-**Notice:** The operator `!=` is used. It is means 'is **not** the same as'.
+**Notice:** The operator `!=` is used. It means 'is **not** the same as'.
 
 --- code ---
 ---
@@ -313,7 +314,7 @@ function checkForm(){
 
 --- /task ---
 
-The `display` property for the `#alert` selector has been set to `none`, so the alert box is hidden.
+The `display` property for the `#alert` selector is set by default to `none`, so the alert box is hidden when the page loads.
 
 --- collapse ---
 
@@ -340,11 +341,11 @@ line_highlights: 4
 
 --- /collapse ---
 
-If there is a message to show the user, you need to make alertBox appear.
+If there is a message to show the user, you need to make the alert box appear.
 
 --- task ---
 
-Set the `display` property for the `#alert` selector to `block`
+In your new if statement, set the `display` property for the `#alert` selector to `block`
 
 --- code ---
 ---
@@ -375,46 +376,57 @@ function checkForm(){
 
 --- /task ---
 
-### Hide the alert
+--- task ---
 
-You need to use an `else` statement. This will let you do this:
+**Test:** Click the **Run** button to see your changes.
++ Leave the Superhero Name field blank
++ Click the Create button
++ The alert message will show. 
 
-    If the alert message is not `""`, then show the alert.
-    Otherwise (else), hide the alert.
+--- /task ---
+
+### Hide the alert and show the summary
+
+You need to use an `else` statement to hide the alert (and show the summary) if `alertMessage` is still set to an empty string (`""`).
+
+This is another way to think about how the `else` statement works with the `if` statement:
+
+    If the alert message is not ""
+      - show the alert.
+    Otherwise (else)
+      - hide the alert
+      - show the summary.
 
 --- task ---
 
-Use an `else` statement to set the `.style.display` property of  `alertBox` to `"none";`
-
-Call the `displaySummary()` function to be executed if there is no validation message displayed to the user.
+Use an `else` statement to set the `display` property for the `#alert` selector to `none` and call the `displaySummary()` function.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 45-51
+line_number_start: 31
+line_highlights: 45-47
 ---
-     // Function to check the character details form 
+// Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-    var alertMessage = ""
+  var alertMessage = ""
 
-    if (characterName.value == ""){
-        alertMessage = "Please enter a name"; 
-    }
+  if (characterName.value == ""){
+    alertMessage = "Please enter a name"; 
+  }
 
-    if (alertMessage != ""){
-        alertBox.innerText = alertMessage;
-        alertBox.style.display = "block";
-    } else {
-        alertBox.style.display = "none";
-        displaySummary();
-    }
-
+  if (alertMessage != ""){
+    alertBox.innerText = alertMessage;
+    alertBox.style.display = "block";
+  } else {
+    alertBox.style.display = "none";
+    displaySummary();
+  }
 }
     
 --- /code ---
@@ -423,48 +435,63 @@ function checkForm(){
 
 --- task ---
 
-Open `character.html`.
-
 **Test:** Click the **Run** button to see your changes. 
-
-+ Do not type in a superhero name on the form because this is the only validation check you have created.
-+ Click 'Create' to submit the form; a validation message should be shown.
-+ You can then type in a superhero name on the form. Click 'Create', a character summary should be shown.
++ Fill in the Superhero Name field
++ Click the Create button
++ The alert message will **not** show. 
++ The summary will show.
+**Notice:** The ability and origin story sections will be blank
 
 --- /task ---
 
 **Debug step:**
-+ Ensure you have used brackets`()` e.g.`if (characterName.value == "")` when checking a condition in an `if`, `if-else`, statement.
-+ Ensure you have added the block of code to be executed within curly braces `{}` if your condition is true.
-+ Ensure you have called the `displaySummary()` function within your `else` condition block.
++ Check you have used brackets`()` e.g. `if (characterName.value == "")` in `if` and `else` statements.
++ Check you have called the `displaySummary()` function in your `else` block.
 
-### Create more alert messages
+### Check the Ability field
 
-You have created a validation message to be shown to the user, if the form field with the attribute `id="name-text"`(held in the constant `characterName`) is left empty. 
+You have used an `if` statement to check if the value of `characterName` is empty.
 
-However, you need to create more validation messages for the other form field elements.
-These have been held in the constants `characterAbility`, and `origin`.
+If it is **not** empty, you need to use `else if` statements to check the other form fields.
 
-This means there are more than two conditions to check. 
-You can use an `if-else if-else` statement when checking multiple conditions.
+This is another way to think about how `else if` statements work with the `if` statement:
+
+    If characterName is ""
+      - set an alert.
+    Otherwise (else) if characterAbility is ""
+      - set an alert.
+    Otherwise (else) if characterOrigin is ""
+      - set an alert.
+
+--- collapse ---
+
+---
+title: Why not use three if statements?
+---
+
+**Tip:** Using `if` with `else if` statements means that if any condition is 'true', subsequent `else if` statements are ignored. This saves resources and time. If multiple `if` statements are used, all `if` statements are checked, even if one condition is met.
+
+In this form, the user is alerted about the first blank field.
+
+--- /collapse ---
 
 --- task ---
 
-Open `script.js`.
-
 Use an `else if` statement to check if the value of `characterAbility` is empty.
 
-Inside the `else if` statement, add the block of code to be executed if the condition is true.
+If it is, assign `alertMessage` a string.
+
+The string needs to be a message that tells the user what to if the **Ability** field has been left blank.
 
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 43-45
+line_number_start: 31
+line_highlights: 40-42
 ---
-     // Function to check the character details form 
+// Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -484,79 +511,67 @@ function checkForm(){
         alertBox.style.display = "none";
         displaySummary();
     }
-
 }
     
 --- /code ---
 
 --- /task ---
 
-Note that `characterAbility` is currently holding the HTML element with the attribute `id="ability-choice"`.
-
-So you have changed the validation message to match the content of the form field.
-
 --- task ---
+
+### Check the Origin Story field
 
 Use another `else if` statement to check the value of `characterOrigin`.
 
 Add an alert message to show the user if it is blank.
 
---- collapse ---
-
----
-title: Solution for else if statements
----
-
 --- code ---
 ---
 language: js
 filename: script.js
 line_numbers: true
-line_number_start: 32
+line_number_start: 31
 line_highlights: 43-44
 ---
-     // Function to check the character details form 
+// Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-    var alertMessage = ""
+  var alertMessage = ""
 
-    if (characterName.value == ""){
-        alertMessage = "Please enter a name"; 
-    } else if (characterAbility.value == "") {
-        alertMessage = "Please choose an ability";
-    } else if (characterOrigin.value == "") {
-        alertMessage = "Please write the origin story";
-    } 
+  if (characterName.value == ""){
+    alertMessage = "Please enter a name"; 
+  } else if (characterAbility.value == "") {
+    alertMessage = "Please choose an ability";
+  } else if (characterOrigin.value == "") {
+    alertMessage = "Please write the origin story";
+  } 
 
-    if (alertMessage != ""){
-        alertBox.innerText = alertMessage;
-        alertBox.style.display = "block";
-    } else {
-        alertBox.style.display = "none";
-        displaySummary();
-    }
-
+  if (alertMessage != ""){
+    alertBox.innerText = alertMessage;
+    alertBox.style.display = "block";
+  } else {
+    alertBox.style.display = "none";
+    displaySummary();
+  }
 }
     
 --- /code ---
-
---- /collapse ---
 
 --- /task ---
 
 --- task ---
 
-Open `character.html`.
-
 **Test:** Click the **Run** button to see your changes. 
 
-+ Type values into some of the form fields, while leaving some blank.
-+ Click "Create" to submit the form; a validation message should be shown for the form field you have left blank.
-+ Test this a few times with a different form field.
-+ You can then complete the whole form. Click 'Create', a character summary should be shown.
++ Type values into some of the form fields, but leave some blank.
++ Click the Create button. An alert message will show for any field you have left blank.
++ Test this a few times with a different form fields.
++ Complete all form fields. Click 'Create' to see the summary.
 
 --- /task ---
 
-Great effort, you have created validation checks to ensure the user completes all the form fields to create their superhero. Next, you will create a toggle switch that will allow the user to switch between light and dark mode.
+Great effort! You have created checks and alerts to help the user create their superhero!
+
+Next, you will create a toggle switch so the user can switch between light and dark mode!
