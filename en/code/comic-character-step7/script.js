@@ -72,8 +72,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Place Hero slider variables here 
-
 // Change Hero function
-
-

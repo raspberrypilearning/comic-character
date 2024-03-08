@@ -74,27 +74,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Place Hero slider variables here 
-const heroSlides = document.querySelectorAll('.hero-slide');
-let currentHeroIndex = 0;
-
 // Change Hero function
+const heroSlides = document.querySelectorAll('.hero-slide');
+var currentHeroIndex = 0;
+
 function changeHero(direction) {
-    //Turn the current slide off
-    heroSlides[currentHeroIndex].classList.remove("active");
 
-    // Find the next slide
-    currentHeroIndex = currentHeroIndex + direction;
+  heroSlides[currentHeroIndex].classList.remove("active");
+  currentHeroIndex = currentHeroIndex + direction;
 
-    // Wrap around
-    if (currentHeroIndex < 0){
-        currentHeroIndex = heroSlides.length - 1;
-    } else if (currentHeroIndex > heroSlides.length - 1) {
-        currentHeroIndex = 0;
-    }
+  if (currentHeroIndex < 0){
+    currentHeroIndex = 2;
+  } else if (currentHeroIndex > 2) {
+    currentHeroIndex = 0;
+  }
 
-    // Update the slider
-    heroSlides[currentHeroIndex].classList.add("active");
+  heroSlides[currentHeroIndex].classList.add("active");
+
 }
-
-

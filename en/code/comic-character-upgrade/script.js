@@ -58,11 +58,11 @@ const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 // Light mode function
 function changeLightMode(){
-    var isLightMode = lightModeSwitch.checked;
+  var isLightMode = lightModeSwitch.checked;
 
-    document.body.classList.toggle("light-mode");
+  document.body.classList.toggle("light-mode");
 
-    localStorage.setItem("lightMode", isLightMode);
+  localStorage.setItem("lightMode", isLightMode);
 }
 
 // Check local storage 
@@ -75,27 +75,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Place Hero slider variables here 
-const heroSlides = document.querySelectorAll('.hero-slide');
-let currentHeroIndex = 0;
-
 // Change Hero function
+const heroSlides = document.querySelectorAll('.hero-slide');
+var currentHeroIndex = 0;
+
 function changeHero(direction) {
-    //Turn the current slide off
-    heroSlides[currentHeroIndex].classList.remove("active");
 
-    // Find the next slide
-    currentHeroIndex = currentHeroIndex + direction;
+  heroSlides[currentHeroIndex].classList.remove("active");
+  currentHeroIndex = currentHeroIndex + direction;
 
-    // Wrap around
-    if (currentHeroIndex < 0){
-        currentHeroIndex = heroSlides.length - 1;
-    } else if (currentHeroIndex > heroSlides.length - 1) {
-        currentHeroIndex = 0;
-    }
+  if (currentHeroIndex < 0) {
+    currentHeroIndex = heroSlides.length - 1;
+  } else if (currentHeroIndex > heroSlides.length - 1) {
+    currentHeroIndex = 0;
+  }
 
-    // Update the slider
-    heroSlides[currentHeroIndex].classList.add("active");
+  heroSlides[currentHeroIndex].classList.add("active");
+
 }
-
-

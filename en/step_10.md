@@ -1,5 +1,53 @@
 ## Upgrade your project
 
+**TODO** Incorporate this somehow to deal with variable numbers of hero image...
+
+Here is how: 
++ if the value of `currentHeroIndex` is less than `0`, set it to the last index in the list;
++ if the value of `currentHeroIndex` is greater than the number of elements in the list, set it to `0`;
+
+The `.length` property returns the number of elements in a list.
+
+--- task ---
+
+Use an `if-else` statement and the `.length` property to check if the conditions are true or false;
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 75
+line_highlights: 94-98
+---
+
+// Change Hero function
+const heroSlides = document.querySelectorAll('.hero-slide');
+var currentHeroIndex = 0;
+
+function changeHero(direction) {
+
+  heroSlides[currentHeroIndex].classList.remove("active");
+  currentHeroIndex = currentHeroIndex + direction;
+
+  if (currentHeroIndex < 0){
+    currentHeroIndex = heroSlides.length - 1;
+  } else if (currentHeroIndex > heroSlides.length - 1) {
+    currentHeroIndex = 0;
+  }
+
+}
+
+--- /code ---
+
+--- /task ---
+
+
+
+
+
+
+
 If you have more time, you can: 
 
 + add more abilities on `character.html`
