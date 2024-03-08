@@ -8,6 +8,8 @@
 
 // Function to check the character details form 
 
+// Create the constant for light mode
+
 // Light mode function 
   
 // Check local storage 

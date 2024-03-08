@@ -54,26 +54,25 @@ function checkForm(){
     }
 }
 
-const lightModeToggle = document.querySelector("#lightModeToggle");
+const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 // Light mode function
 function changeLightMode(){
-    var isLightMode = lightModeToggle.checked;
+    var isLightMode = lightModeSwitch.checked;
 
-    document.body.classList.toggle("light-mode", isLightMode);
+    document.body.classList.toggle("light-mode");
 
-    localStorage.setItem("lightMode", isLightMode.toString());
+    localStorage.setItem("lightMode", isLightMode);
 }
 
 // Check local storage 
-document.addEventListener("DOMContentLoaded", function () {    
+document.addEventListener("DOMContentLoaded", function () {
   
-    // Check if light mode preference is held in local storage
-    var isLightMode = localStorage.getItem("lightMode") === "true";
-  
-    // Set initial light mode state based on the current preference
-    document.body.classList.toggle("light-mode", isLightMode);
-    lightModeToggle.checked = isLightMode;
+  if (localStorage.getItem("lightMode") == "true") {
+    document.body.classList.toggle("light-mode");
+    lightModeSwitch.checked = true;
+  }
+
 });
 
 // Place Hero slider variables here 

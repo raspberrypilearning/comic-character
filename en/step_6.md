@@ -574,4 +574,4 @@ function checkForm(){
 
 Great effort! You have created checks and alerts to help the user create their superhero!
 
-Next, you will create a toggle switch so the user can switch between light and dark mode!
+Next, you will create a switch so the user can change between light and dark mode!
