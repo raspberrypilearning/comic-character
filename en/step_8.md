@@ -1,7 +1,10 @@
 ## Create a hero image slider
 
-In this step you will create an interactive hero image slider for your web page. Users can navigate through different hero images using buttons on the slider.
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+In this step you will create an interactive hero image slider for your web page. 
+
+Users can navigate through different hero images using buttons on the slider.
+
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 ### View the slider code
 
