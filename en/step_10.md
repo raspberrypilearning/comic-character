@@ -1,53 +1,5 @@
 ## Upgrade your project
 
-**TODO** Incorporate this somehow to deal with variable numbers of hero image...
-
-Here is how: 
-+ if the value of `currentHeroIndex` is less than `0`, set it to the last index in the list;
-+ if the value of `currentHeroIndex` is greater than the number of elements in the list, set it to `0`;
-
-The `.length` property returns the number of elements in a list.
-
---- task ---
-
-Use an `if-else` statement and the `.length` property to check if the conditions are true or false;
-
---- code ---
----
-language: js
-filename: script.js
-line_numbers: true
-line_number_start: 75
-line_highlights: 94-98
----
-
-// Change Hero function
-const heroSlides = document.querySelectorAll('.hero-slide');
-var currentHeroIndex = 0;
-
-function changeHero(direction) {
-
-  heroSlides[currentHeroIndex].classList.remove("active");
-  currentHeroIndex = currentHeroIndex + direction;
-
-  if (currentHeroIndex < 0){
-    currentHeroIndex = heroSlides.length - 1;
-  } else if (currentHeroIndex > heroSlides.length - 1) {
-    currentHeroIndex = 0;
-  }
-
-}
-
---- /code ---
-
---- /task ---
-
-
-
-
-
-
-
 If you have more time, you can: 
 
 + add more abilities on `character.html`
@@ -90,44 +42,6 @@ line_highlights:
 --- /code ---
 
 --- /collapse ---
-
-#### Add more hero images
-
-In the starter projects there are multiple images you can use to expand your hero slider.
-
-`kwame-cape.jpg`
-`ellenhero-image.jpg`
-
-You can add more `<img>` elements to your hero slider.
-
---- collapse ---
-
----
-title: Add more hero images to the slider
----
-
---- code ---
----
-language: html
-filename: index.html
-line_numbers: false
-line_number_start: 
-line_highlights: 
----
-
-      <div class="hero-container">
-        <div class="hero-slider">
-          <span class="hero-slide active"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"></span>
-          <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape, in front of a blue and yellow background"></span>
-          <span class="hero-slide"><img src="kwame-cape.jpg" alt="A cartoon boy in a superhero costume standing proudly in front of majestic mountain range."></span>
-          <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"></span>
-          <span class="hero-slide"><img src="ellenhero-image.jpg" alt="A cartoon girl in a red cape and blue shirt standing in front of mountains."></span>
-      </div>
-
---- /code ---
-
---- /collapse ---
-
 
 #### Add more form fields to your superhero creation form
 
@@ -177,9 +91,9 @@ line_number_start:
 line_highlights: 
 ---
 
-    #name-input, #ability-input, #country-input, #origin-input {
+#name-input, #ability-input, #country-input, #origin-input {
   width: 100%;
-   }
+}
 
 --- /code ---
 
@@ -194,57 +108,158 @@ line_number_start:
 line_highlights: 
 ---
 
-    // Create constants for superhero form
-    const characterDetails = document.querySelector("#character-details");
-    const summary = document.querySelector("#summary-section");
+// Create constants for superhero form
+const characterDetails = document.querySelector("#character-details");
+const summary = document.querySelector("#summary-section");
 
-    const name = document.querySelector("#name-text");
-    const characterAbility = document.querySelector("#ability-choice");
-    const characterCountry = document.querySelector("#country-choice");
-    const characterOrigin = document.querySelector("#origin-text");
+const name = document.querySelector("#name-text");
+const characterAbility = document.querySelector("#ability-choice");
+const characterOrigin = document.querySelector("#origin-text");
+const characterCountry = document.querySelector("#country-text");
 
-    // Function to display summary
-    function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
+// Function to display summary
+function displaySummary() {
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your ability is ${characterAbility.value}. You are from ${country.value}.
-    Your origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Their ability is ${characterAbility.value}. They are from ${characterCountry.value}.
+  Their origin story is ${characterOrigin.value}.`;
 
-    characterDetails.style.display = "none";
-    summary.style.display = "flex";
+  characterDetails.style.display = "none";
+  summary.style.display = "flex";
 }
 
-    // Function to edit form content
-    function changeSummary() {
-    characterDetails.style.display = "flex";
-    summary.style.display = "none";
+// Function to edit form content
+function changeSummary() {
+  characterDetails.style.display = "flex";
+  summary.style.display = "none";
 }
 
-    // Function to check the character details form 
-    const alertBox = document.querySelector("#alert");
+// Function to check the character details form 
+const alertBox = document.querySelector("#alert");
 
-    function checkForm(){
+function checkForm(){
 
-    var alertMessage = ""
+  var alertMessage = ""
 
-    if (characterName.value == ""){
-        alertMessage = "Please enter a name"; 
-    } else if (characterAbility.value == "") {
-        alertMessage = "Please choose an ability";
-    } else if (country.value == "") {
-        alertMessage = "Please choose a country of origin";
-    } else if (characterOrigin.value == "") {
-        alertMessage = "Please write the origin story";
-    } 
-    
-    if (alertMessage != ""){
-        alertBox.innerText = alertMessage;
-        alertBox.style.display = "block";
-    } else {
-        alertBox.style.display = "none";
-        displaySummary();
-    }
+  if (characterName.value == ""){
+    alertMessage = "Please enter a name"; 
+  } else if (characterAbility.value == "") {
+    alertMessage = "Please choose an ability";
+  } else if (characterOrigin.value == "") {
+    alertMessage = "Please write the origin story";
+  } else if (characterCountry.value == "") {
+    alertMessage = "Please choose a country of origin";
+  } 
+
+  if (alertMessage != ""){
+    alertBox.innerText = alertMessage;
+    alertBox.style.display = "block";
+  } else {
+    alertBox.style.display = "none";
+    displaySummary();
+  }
+}
+
+--- /code ---
+
+--- /collapse ---
+
+#### Add more hero images
+
+In the starter projects there are more images you can use in your hero slider:
+
+`kwame-cape.jpg` and `ellenhero-image.jpg`
+
+--- collapse ---
+
+---
+title: Add more hero images to the slider
+---
+
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: false
+line_number_start: 
+line_highlights: 
+---
+
+      <div class="hero-container">
+        <div class="hero-slider">
+          <span class="hero-slide active"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"></span>
+          <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape, in front of a blue and yellow background"></span>
+          <span class="hero-slide"><img src="kwame-cape.jpg" alt="A superhero character in a superhero costume standing proudly in front of majestic mountain range."></span>
+          <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"></span>
+          <span class="hero-slide"><img src="ellenhero-image.jpg" alt="A superhero character in a red cape and blue shirt standing in front of mountains."></span>
+      </div>
+
+--- /code ---
+
+When you have more hero images, you need to change the `if` and `else if` statements to handle the longer length of `currentHeroIndex` that will be returned by `querySelectorAll`.
+
+If you have five images, then you will need to change the code like this:
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 75
+line_highlights: 85-86
+---
+
+// Change Hero function
+const heroSlides = document.querySelectorAll('.hero-slide');
+var currentHeroIndex = 0;
+
+function changeHero(direction) {
+
+  heroSlides[currentHeroIndex].classList.remove("active");
+  currentHeroIndex = currentHeroIndex + direction;
+
+  if (currentHeroIndex < 0){
+    currentHeroIndex = 4;
+  } else if (currentHeroIndex > 4) {
+    currentHeroIndex = 0;
+  }
+
+}
+
+--- /code ---
+
+If you would like to handle any number of images, then instead of handling a fixed length, you can just check the length of `currentHeroIndex`
+
+The `.length` property returns the number of elements in a list.
+
++ if the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (at the index that is the same as the length of the list minus 1)
++ if the value of `currentHeroIndex` is greater than the last index in the list, set it to `0`
+
+--- code ---
+---
+language: js
+filename: script.js
+line_numbers: true
+line_number_start: 75
+line_highlights: 85-86
+---
+
+// Change Hero function
+const heroSlides = document.querySelectorAll('.hero-slide');
+var currentHeroIndex = 0;
+
+function changeHero(direction) {
+
+  heroSlides[currentHeroIndex].classList.remove("active");
+  currentHeroIndex = currentHeroIndex + direction;
+
+  if (currentHeroIndex < 0){
+    currentHeroIndex = heroSlides.length - 1;
+  } else if (currentHeroIndex > heroSlides.length - 1) {
+    currentHeroIndex = 0;
+  }
+
 }
 
 --- /code ---

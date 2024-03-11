@@ -3,29 +3,30 @@ const currentDate = new Date();
 document.querySelector("#copyrightYear").innerText = currentDate.getFullYear();
 
 // Create constants for superhero form
-const summary = document.querySelector("#summary-section");
 const characterDetails = document.querySelector("#character-details");
+const summary = document.querySelector("#summary-section");
 
 const characterName = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
 const characterOrigin = document.querySelector("#origin-text");
+const characterCountry = document.querySelector("#country-choice");
 
 // Function to display summary
 function displaySummary() {
-    const summaryParagraph = document.querySelector("#summary-paragraph");
+  const summaryParagraph = document.querySelector("#summary-paragraph");
 
-    summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-    Your ability is ${characterAbility.value}. You are from ${country.value}.
-    Your origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
+  Their ability is ${characterAbility.value}. They are from ${characterCountry.value}.
+  Their origin story is ${characterOrigin.value}.`;
 
-    characterDetails.style.display = "none";
-    summary.style.display = "flex";
+  characterDetails.style.display = "none";
+  summary.style.display = "flex";
 }
 
 // Function to edit form content
 function changeSummary() {
-    characterDetails.style.display = "flex";
-    summary.style.display = "none";
+  characterDetails.style.display = "flex";
+  summary.style.display = "none";
 }
 
 // Function to check the character details form 
@@ -33,27 +34,28 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-    var alertMessage = ""
+  var alertMessage = ""
 
-    if (characterName.value == ""){
-        alertMessage = "Please enter a name"; 
-    } else if (characterAbility.value == "") {
-        alertMessage = "Please choose an ability";
-    } else if (country.value == "") {
-        alertMessage = "Please choose a country of origin";
-    } else if (characterOrigin.value == "") {
-        alertMessage = "Please write the origin story";
-    } 
-    
-    if (alertMessage != ""){
-        alertBox.innerText = alertMessage;
-        alertBox.style.display = "block";
-    } else {
-        alertBox.style.display = "none";
-        displaySummary();
-    }
+  if (characterName.value == ""){
+    alertMessage = "Please enter a name"; 
+  } else if (characterAbility.value == "") {
+    alertMessage = "Please choose an ability";
+  } else if (characterOrigin.value == "") {
+    alertMessage = "Please write the origin story";
+  } else if (characterCountry.value == "") {
+    alertMessage = "Please choose a country of origin";
+  } 
+  
+  if (alertMessage != ""){
+    alertBox.innerText = alertMessage;
+    alertBox.style.display = "block";
+  } else {
+    alertBox.style.display = "none";
+    displaySummary();
+  }
 }
 
+// Create the constant for light mode
 const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 // Light mode function

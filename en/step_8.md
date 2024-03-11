@@ -236,7 +236,7 @@ Here is how:
 
 --- task ---
 
-Use an `if else` statement to handle the out of range issues;
+Use an `if` statement with an `else if` statement to handle the out of range issues.
 
 --- code ---
 ---
@@ -318,13 +318,11 @@ Open `index.html`.
 
 --- /task ---
 
-**Debug step on script.js:**
-+ Ensure you have used square brackets`[]` when creating your array assignment.
-+ Ensure you have added the `.length` property to your `if-else` statement.
-+ Ensure you have used -1 inside your `if-else` statement.
+**Debug step:**
++ Make sure you have used the 'less than' `<` symbol or the 'greater than' `>` symbol in the correct places.
 
+Fantastic effort! 
 
-Fantastic effort! You have created an interactive website where the user can create their own superhero character. You have checkd user entry and allowed the user to choose a theme for the website. 
+You have created an interactive website so the user can create their own superhero character. You have checked user entry and allowed the user to choose a theme for the website. 
 
 Check your understanding of the project using the reflection quiz on the next step.
-
