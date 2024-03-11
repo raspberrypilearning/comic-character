@@ -6,8 +6,6 @@ If you have more time, you can:
 + add more form elements to your superhero creation form.
 + add more images to your hero slider
 
-#### Add more abilities 
-
 --- collapse ---
 
 ---
@@ -42,8 +40,6 @@ line_highlights:
 --- /code ---
 
 --- /collapse ---
-
-#### Add more form fields to your superhero creation form
 
 --- collapse ---
 
@@ -165,17 +161,17 @@ function checkForm(){
 
 --- /collapse ---
 
-#### Add more hero images
-
-In the starter projects there are more images you can use in your hero slider:
-
-`kwame-cape.jpg` and `ellenhero-image.jpg`
-
 --- collapse ---
 
 ---
 title: Add more hero images to the slider
 ---
+
+In the starter projects there are more images you can use in your hero slider:
+
+`kwame-cape.jpg` and `ellenhero-image.jpg`
+
+You can add more images to your slider by updating `index.html` and `script.js`.
 
 --- code ---
 ---
