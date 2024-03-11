@@ -8,13 +8,13 @@ copyedit: false
 last_tested: '2021-03-26'
 steps:
 - title: Introduction
-- title: Add Copyright text to footer
-- title: Add Form/Input elements
-- title: Show/Hide elements
-- title: Change the summary content
+- title: Add copyright text
+- title: Add form elements
+- title: Show/hide elements
+- title: Change the summary
 - title: Check user input
-- title: Create light mode theme
-- title: Create hero slider
+- title: Light mode theme
+- title: Hero image slider
 - title: Reflection
   knowledge_quiz:
     path: quiz1
