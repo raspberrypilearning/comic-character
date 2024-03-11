@@ -4,11 +4,9 @@
 legend: Question 3 of 3
 ---
 
-You used JavaScript to manipulate the Document Object Model (DOM) in your superhero project.
+You used a JavaScript function to handle 'out of range' issues with your hero image slider.
 
-Look at the code using a few DOM method tools. 
-
-What does this code do when the element with the attribute "submit-button" is clicked?
+How many images is this code designed to handle?
 
 --- code ---
 ---
@@ -19,36 +17,37 @@ line_number_start:
 line_highlights: 
 ---
 
-    document.querySelector("#submit-button").addEventListener("click", function() {
-      var inputValue = document.getElementById("user-input").value;
-      document.querySelector("#output-paragraph").textContent = "You entered: " + inputValue;
-    });
+if (currentHeroIndex < 0){
+  currentHeroIndex = 3;
+} else if (currentHeroIndex > 3) {
+  currentHeroIndex = 0;
+}
 
 --- /code ---
 
 --- choices ---
 
-- () Displays an alert box with the message "You entered:" followed by the user's input.
+- ( ) 0
 
   --- feedback ---
 
-  Incorrect. The code updates the text content of a paragraph, but it doesn't use an alert box.
+  Incorrect. `0` is the index number of the first image.
 
   --- /feedback ---
   
-- (x) Updates the text content of the paragraph with the id "output-paragraph" to "You entered: " followed by the user's input.
+- ( ) 3
 
   --- feedback ---
 
-  Correct! The code listens for a click on the "submit-button," collects the user's input from the element with the id "user-input," and updates the text content of the paragraph with the id "output-paragraph".
+  Not quite! `3` is the final index number. Indexing starts at `0`
  
   --- /feedback ---
 
-- ( ) Changes the background colour of the web page to the user's input.
+- (x) 4
 
   --- feedback ---
 
- Not quite! The code will not change the background colour of the web page baseed on user's input.
+  Correct! `currentHeroIndex` contains four items, starting at index `0` and finishing at index `3`
 
   --- /feedback ---
 

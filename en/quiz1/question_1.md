@@ -12,32 +12,33 @@ You will be guided towards the correct answer. You can do this activity as many 
 legend: Question 1 of 3
 ---
 
-To create a function in JavaScript, you use the function keyword.
+To create a function in JavaScript, you use the `function` keyword.
 
-What is the basic structure of writing a function?
+What is the basic structure of a function?
 
 --- choices ---
 
-- ( ) create functionmyFunction() { /* code here */ }
+- ( ) `create function myFunction() { /* code here */ }`
 
   --- feedback ---
 
-  Not quite! The correct way to declare a function is without the "create" keyword and with a space between function and the function name.
+  Not quite! The correct way to declare a function is without the 'create' keyword.
 
   --- /feedback ---
 
-- ( ) function myFunction { /* code here */ }
+- ( ) `function myFunction { /* code here */ }`
 
   --- feedback ---
 
-  Incorrect syntax. There are missing brackets in the function syntax. A correct function syntax requires brackets after the function name.
+  Almost! Brackets are required after the function name. These are used to hold any parameters used my the function 
 
   --- /feedback ---
 
-- (x) function myFunction() { /* code here */ }
+- (x) `function myFunction() { /* code here */ }`
 
   --- feedback ---
-  That's correct! The basic structure of writing a function includes the function keyword, followed by the function name, brackets, and curly braces containing the function's code.
+  
+  That's correct! A function includes the `function` keyword, followed by the function name, brackets, and curly braces containing the function's code.
 
   --- /feedback ---
 
