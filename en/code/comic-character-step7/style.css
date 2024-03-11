@@ -18,7 +18,7 @@ main {
 
 footer {
   height: 10%;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
   color: #e6b400;
   padding: 10px;
   text-align: center;
@@ -70,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 
@@ -82,41 +82,41 @@ nav a:hover {
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input,
 select,
 textarea {
-    width: 60%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  width: 60%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #007BFF;
-    width: 200px;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
+  background-color: #007BFF;
+  width: 200px;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 textarea {
-    height: 100px; 
+  height: 100px; 
 }
 
 
 #summary-section {
   background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   padding: 5px;
   display: none;
@@ -125,7 +125,7 @@ textarea {
 #summary-section h2 {
   width: 100%;
   text-align: center;
-  color: #333;
+  color: #333333;
 }
 
 #summary-section p {
@@ -137,7 +137,7 @@ textarea {
 
 #alert {
   text-align: center;
-  color: red;
+  color: #ff0000;
   display: none;
 }
 
@@ -161,8 +161,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
+  background-color: #cccccc;
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -174,8 +173,7 @@ textarea {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
+  background-color: #ffffff;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -189,16 +187,14 @@ input:focus + .switch-slider {
 }
 
 input:checked + .switch-slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
   
 .switch-label {
-    margin-left: 10px;
-    padding-right: 10px;
-    color: #fff;
-  }
+  margin-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
+}
 
 
 /* Hero Slider */
@@ -210,8 +206,8 @@ input:checked + .switch-slider:before {
 }
 
 .hero-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .hero-slide {
@@ -230,16 +226,16 @@ input:checked + .switch-slider:before {
 }
 
 .hero-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ffffff;
+  background: #00000080;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .prev {
@@ -281,7 +277,7 @@ input:checked + .switch-slider:before {
 /* Light Mode Styles */
 body.light-mode {
   background: linear-gradient(to right, #515152, #474747);
-  color: #fff;
+  color: #ffffff;
 }
 
 .light-mode .navigation {
@@ -289,17 +285,16 @@ body.light-mode {
 }
 
 .light-mode .year {
-  color: #000;
+  color: #000000;
 }
 
 
 .light-mode .logo {
-  color: #000;
-  
+  color: #000000; 
 }
 
 .light-mode nav a {
-color: #000;
+color: #000000;
 }
 
 .light-mode nav a:hover {
@@ -312,8 +307,7 @@ background: #e6b400;
 
 .light-mode footer {
 background-color: #e6b400;;
-color: #000;
-
+color: #000000;
 }
 
 .menu-icon {
@@ -324,7 +318,7 @@ cursor: pointer;
 .bar {
 width: 25px;
 height: 3px;
-background-color: #fff;
+background-color: #ffffff;
 margin: 6px 0;
 transition: 0.4s;
 }

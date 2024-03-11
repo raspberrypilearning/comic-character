@@ -386,7 +386,7 @@ line_highlights: 6
 
 #summary-section {
   background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   padding: 5px;
   display: none;

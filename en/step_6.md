@@ -333,7 +333,7 @@ line_highlights: 4
 
 #alert {
   text-align: center;
-  color: red;
+  color: #ff0000;
   display: none;
 }
     
