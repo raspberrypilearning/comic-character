@@ -236,11 +236,11 @@ input:checked + .switch-slider:before {
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 
 
