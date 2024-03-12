@@ -157,6 +157,11 @@ title: Examples of input types
 <br>*Try it*:
 <br><input type="radio">
 
++ **number** Numeric data with arrows to increase/decrease the value 
+<br>`<input type="number">`
+<br>*Try it*:
+<br><input type="number">
+
 --- /collapse ---
 
 --- task ---
@@ -385,8 +390,8 @@ line_highlights: 6
 ---
 
 #summary-section {
-  background-color: #f8f8f8;
-  border: 1px solid #dddddd;
+  background-color: var(--background-color-section);
+  border: 1px solid var(--border-color-section);
   border-radius: 5px;
   padding: 5px;
   display: none;

@@ -4,8 +4,7 @@ body, html {
 }
   
 body {
-  background: #ffffff;
-  margin: 0;
+  background: var(--background-color-body);
 }
 
 main {
@@ -14,8 +13,8 @@ main {
 
 footer {
   height: 10vh;
-  background-color: #000000;
-  color: #e6b400;
+  background: var(--background-color-footer);
+  color: var(--text-color-footer);
   text-align: center;
   position: absolute;
   width: 100%;
@@ -33,7 +32,7 @@ section {
 
 .header {
   height: 10vh;
-  background: #000000;
+  background: var(--background-color-header);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +40,7 @@ section {
 
 .logo {
   font-size: 32px;
-  color: #FFDB58;
+  color: var(--text-color-logo);
   text-decoration: none;
   font-weight: 700;
   padding-left: 10px;
@@ -58,14 +57,14 @@ section {
 nav a {
   display: inline;
   font-size: 18px;
-  color: #e6b400;
+  color: var(--text-color-nav-link);
   text-decoration: none;
   font-weight: 500;
   padding-right: 40px;
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: var(--text-color-nav-hover);
 }
 
 /* Create a character */
@@ -89,7 +88,7 @@ textarea {
 }
 
 button {
-  background-color: #007BFF;
+  background-color: var(--button-color);
   width: 200px;
   color: #ffffff;
   padding: 10px;
@@ -99,7 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--button-hover-color);
 }
 
 textarea {
@@ -107,8 +106,8 @@ textarea {
 }
 
 #summary-section {
-  background-color: #f8f8f8;
-  border: 1px solid #dddddd;
+  background-color: var(--background-color-section);
+  border: 1px solid var(--border-color-section);
   border-radius: 5px;
   padding: 5px;
   display: none;
@@ -117,19 +116,19 @@ textarea {
 #summary-section h2 {
   width: 100%;
   text-align: center;
-  color: #333333;
+  color: var(--text-color-section-heading);
 }
 
 #summary-section p {
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  color: #007BFF;
+  color: var(--text-color-section-summary);
 }
 
 #alert {
   text-align: center;
-  color: #ff0000;
+  color: var(--text-color-alert);
   display: none;
 }
 
@@ -154,7 +153,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #cccccc;
+  background-color: var(--background-color-switch);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -166,17 +165,13 @@ textarea {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #ffffff;
+  background-color: var(--switch-color);
   transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .switch-slider {
-  background-color: #2196f3;
-}
-
-input:focus + .switch-slider {
-  box-shadow: 0 0 1px #2196f3;
+  background-color: var(--background-color-switch-checked);
 }
 
 input:checked + .switch-slider:before {
@@ -186,7 +181,7 @@ input:checked + .switch-slider:before {
 .switch-label {
   margin-left: 10px;
   padding-right: 10px;
-  color: #ffffff;
+  color: var(--text-color-switch-label);
 }
 
 /* Hero Slider */
@@ -222,8 +217,8 @@ input:checked + .switch-slider:before {
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
-  color: #ffffff;
-  background: #00000080;
+  background: var(--background-color-hero-nav);
+  color: var(--text-color-hero-nav);
   padding: 10px;
   cursor: pointer;
   border: none;
@@ -254,48 +249,40 @@ input:checked + .switch-slider:before {
 /* Light Mode Styles */
 
 body.light-mode {
-  background: linear-gradient(to right, #515152, #474747);
-  color: #ffffff;
+  background: var(--background-color-light-mode);
+  color: var(--text-color-light-mode);
 }
 
 .light-mode .navigation {
-  background-color: #8e6363;
+  background-color: var(--background-color-light-mode-navigation);
 }
 
 .light-mode .year {
-  color: #000000;
+  color: var(--text-color-light-mode-year);
 }
 
 .light-mode .logo {
-  color: #000000; 
+  color: var(--text-color-light-mode-logo);
 }
 
 .light-mode nav a {
-  color: #000000;
+  color: var(--text-color-light-mode-nav);
 }
 
 .light-mode nav a:hover {
-  color: #2196f3;
+  color: var(--text-color-light-mode-nav-hover);
 }
 
 .light-mode .header {
-  background: #e6b400;
+  background: var(--background-color-light-mode-header);
 }
 
 .light-mode footer {
-  background-color: #e6b400;;
-  color: #000000;
+  background: var(--background-color-light-mode-footer);
+  color: var(--text-color-light-mode-footer);
 }
 
 .menu-icon {
   display: none;
   cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
-  margin: 6px 0;
-  transition: 0.4s;
 }
