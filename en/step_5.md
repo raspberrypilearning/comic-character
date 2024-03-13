@@ -71,7 +71,7 @@ line_highlights: 44
 
 --- task ---
 
-**Test:** Click the **Run** button to see your changes. 
+**Click Run** 
 + Complete the form again.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
 + You should see an Edit button. Click it to edit your form.

@@ -378,7 +378,7 @@ function checkForm(){
 
 --- task ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + Leave the Superhero Name field blank
 + Click the Create button
 + The alert message will show. 
@@ -435,7 +435,7 @@ function checkForm(){
 
 --- task ---
 
-**Test:** Click the **Run** button to see your changes. 
+**Click Run** 
 + Fill in the Superhero Name field
 + Click the Create button
 + The alert message will **not** show. 
@@ -563,8 +563,7 @@ function checkForm(){
 
 --- task ---
 
-**Test:** Click the **Run** button to see your changes. 
-
+**Click Run** 
 + Type values into some of the form fields, but leave some blank.
 + Click the Create button. An alert message will show for any field you have left blank.
 + Test this a few times with a different form fields.

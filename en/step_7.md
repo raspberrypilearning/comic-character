@@ -154,7 +154,7 @@ line_highlights: 24
       
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + Your switch should appear on the right in your nav bar.
 + You can click the switch, but it will not do anything... yet!
 
@@ -323,8 +323,7 @@ line_highlights: 21
       
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes. 
-
+**Click Run** 
 + Click on the switch to slide it into the light mode position.
 + The colours of your web page should change.
 
@@ -573,7 +572,7 @@ line_highlights: 19-25
 
 --- /task ---
 
-**Test:** Click the **Run** button to see your changes. 
+**Click Run** 
 + Your switch should appear in your nav bar to the right.
 + Click the switch on and off to see the theme colours change.
 + Navigate to the `index.html` page to check that your light mode preference stays on.

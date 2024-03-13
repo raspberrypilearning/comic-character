@@ -312,7 +312,7 @@ function changeHero(direction) {
 
 Open `index.html`.
 
-**Test:** Click the **Run** button to see your changes. 
+**Click Run** 
 + Click the left (<) button on your hero image slider, the image should change.
 + Click the right (>) button on your hero image slider, the image should change.
 

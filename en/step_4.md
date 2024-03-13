@@ -59,7 +59,7 @@ line_highlights: 40
 
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + You will see a Create button below your superhero form.
 + The Create button does not do anything at the moment. 
 
@@ -375,7 +375,7 @@ function displaySummary() {
 
 Open `character.html`.
 
-**Test:** Click the **Run** button to see your changes. 
+**Click Run** 
 + Fill in the character details.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
 + The summary paragraph will include a summary of your character.

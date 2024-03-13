@@ -186,7 +186,7 @@ line_highlights: 25
     
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + You will see a text box with the label "Superhero Name:" above it.
 
 --- /task ---
@@ -250,7 +250,7 @@ line_highlights: 27-35
 
 **Notice:** The first option has a blank `value`.
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + You will see a drop-down list.
 + Click the arrow to view the choices.
 
@@ -318,7 +318,7 @@ line_highlights: 36-39
     
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + You will see a multi-line text box showing placeholder text.
 
 --- /task ---
@@ -371,7 +371,7 @@ line_highlights: 42-43
     
 --- /code ---
 
-**Test:** Click the **Run** button to see your changes.
+**Click Run**
 + You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. Next, you will add a button that can run JavaScript code to show it.
 
 --- collapse ---
