@@ -148,14 +148,20 @@ title: Examples of input types
 <br><input type="password">
 
 + **checkbox:** Tick one or more options.
-<br>`<input type="checkbox">`
+<br>`<input type="checkbox"> <label>Breakfast</label>`
+<br>`<input type="checkbox"> <label>Lunch</label>`
 <br>*Try it*:
-<br><input type="checkbox">
+<br><input type="checkbox"><label>Breakfast</label>
+<br><input type="checkbox"><label>Lunch</label>
 
-+ **radio:** Select one or more options. **TODO**
-<br>`<input type="radio">`
++ **radio:** Select one option from a group.
+<br>`<input type="radio" name="meal"> <label>Breakfast</label> `
+<br>`<input type="radio" name="meal"> <label>Lunch</label>`
 <br>*Try it*:
-<br><input type="radio">
+<br><input type="radio" name="meal"><label>Breakfast</label>
+<br><input type="radio" name="meal"><label>Lunch</label>
+
+**Note:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button. 
 
 + **number** Numeric data with arrows to increase/decrease the value 
 <br>`<input type="number">`

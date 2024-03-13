@@ -35,5 +35,5 @@ Explore the Superhero website.
 --- /no-print ---
 
 --- print-only ---
-![Completed project](images/showcase_static.png) **TODO**
+![Completed project](images/animated-story.png)
 --- /print-only ---

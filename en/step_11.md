@@ -4,7 +4,7 @@ If you are following the [More Web](https://projects.raspberrypi.org/en/pathways
 
 --- print-only ---
 
-![The finished Animated story project](images/animated-story.png) **TODO** 
+![The finished Animated story project](images/animated-story.png)
 
 --- /print-only ---
 
