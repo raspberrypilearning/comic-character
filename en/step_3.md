@@ -191,8 +191,15 @@ line_highlights: 25
 
 --- /task ---
 
-**Debug step:**
+--- collapse ---
+
+---
+title: There is no text box
+---
 + Check you have added `""` marks around `text`.
+
+--- /collapse ---
+
 
 ### Superhero 'ability' section 
 
@@ -256,9 +263,15 @@ line_highlights: 27-35
 
 --- /task ---
 
-**Debug step:**
+--- collapse ---
+
+---
+title: There are no options in my drop-down
+---
 + Check you have four `<option>` elements inside your `<select>` elements.
 + Check you have closing `</option>` tags foe each option.
+
+--- /collapse ---
 
 ### Superhero 'origin story' section 
 

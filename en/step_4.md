@@ -382,11 +382,17 @@ Open `character.html`.
 
 --- /task ---
 
-**Debug step:**
+--- collapse ---
+
+---
+title: The summary section is not displaying properly
+---
 + Check you have named all constants (`const`) correctly.
 + Check you have used correct syntax when creating the functions, including `()` and `{}`.
 + Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
 + Check you have added `;` a semicolon at the end of your declarations.
+
+--- /collapse ---
 
 Well done! You have created an interactive form that shows/hides elements. 
 

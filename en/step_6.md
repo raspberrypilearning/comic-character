@@ -444,9 +444,16 @@ function checkForm(){
 
 --- /task ---
 
-**Debug step:**
+--- collapse ---
+
+---
+title: The summary section is not showing
+---
+
 + Check you have used brackets`()` e.g. `if (characterName.value == "")` in `if` and `else` statements.
 + Check you have called the `displaySummary()` function in your `else` block.
+
+--- /collapse ---
 
 ### Check the Ability field
 

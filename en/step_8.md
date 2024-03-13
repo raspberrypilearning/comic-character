@@ -318,8 +318,15 @@ Open `index.html`.
 
 --- /task ---
 
-**Debug step:**
+--- collapse ---
+
+---
+title: The buttons do not work properly
+---
+
 + Make sure you have used the 'less than' `<` symbol or the 'greater than' `>` symbol in the correct places.
+
+--- /collapse ---
 
 Fantastic effort! 
 

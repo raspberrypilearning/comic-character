@@ -223,11 +223,17 @@ line_highlights: 3
 
 --- /task ---
 
-**Debug step:**  
-+ Ensure there is a `#` in `copyrightYear` in the `querySelector`
+--- collapse ---
+
+---
+title: The year is not displayed
+---
++ Check there is a `#` in `copyrightYear` in the `querySelector`
 + Check you have opening and closing brackets `()` at the end of `.getFullYear()`
 + Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
 + Check there is a `;` colon at the end of lines 2 and 3.
+  
+--- /collapse ---
 
 --- task ---
 

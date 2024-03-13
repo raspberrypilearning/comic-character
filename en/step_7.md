@@ -160,8 +160,15 @@ line_highlights: 24
 
 --- /task ---
 
-**Debug step:**
-+ Ensure you have left spaces between your attributes where you have multiple attributes in an element.
+--- collapse ---
+
+---
+title: The switch does not display properly
+---
+
++ Check you have left spaces between your attributes where you have multiple attributes in an element.
+
+--- /collapse ---
 
 ### Create an event handler for your switch
 
