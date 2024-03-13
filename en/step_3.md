@@ -160,8 +160,7 @@ title: Examples of input types
 <br>*Try it*:
 <br><input type="radio" name="meal"><label>Breakfast</label>
 <br><input type="radio" name="meal"><label>Lunch</label>
-
-**Note:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button. 
+<br>**Tip:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button. 
 
 + **number** Numeric data with arrows to increase/decrease the value 
 <br>`<input type="number">`
