@@ -21,8 +21,8 @@ Change the function that handles the Create button's `onclick` event.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 41
-line_highlights: 45
+line_number_start: 42
+line_highlights: 46
 ---
 
     <div id="origin-input">
@@ -48,8 +48,8 @@ Create an empty `<div>` element with the attribute `id="alert"` below the Create
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 41
-line_highlights: 46-47
+line_number_start: 42
+line_highlights: 47-48
 ---
 
       <div id="origin-input">
@@ -503,21 +503,21 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-    var alertMessage = ""
+  var alertMessage = ""
 
-    if (characterName.value == ""){
-        alertMessage = "Please enter a name"; 
-    } else if (characterAbility.value == "") {
-        alertMessage = "Please choose an ability";
-    }
+  if (characterName.value == ""){
+    alertMessage = "Please enter a name"; 
+  } else if (characterAbility.value == "") {
+    alertMessage = "Please choose an ability";
+  }
 
-    if (alertMessage != ""){
-        alertBox.innerText = alertMessage;
-        alertBox.style.display = "block";
-    } else {
-        alertBox.style.display = "none";
-        displaySummary();
-    }
+  if (alertMessage != ""){
+    alertBox.innerText = alertMessage;
+    alertBox.style.display = "block";
+  } else {
+    alertBox.style.display = "none";
+    displaySummary();
+  }
 }
     
 --- /code ---

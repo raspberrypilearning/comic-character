@@ -55,8 +55,8 @@ Add the text 'Edit' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 41
-line_highlights: 44
+line_number_start: 42
+line_highlights: 45
 ---
 
     <section id="summary-section">

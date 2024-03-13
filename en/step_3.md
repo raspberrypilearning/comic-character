@@ -54,8 +54,8 @@ Add the attribute `id="character-details"` to the `<section>` tag.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 22
-line_highlights: 22
+line_number_start: 23
+line_highlights: 23
 ---
 
       <section id="character-details"> <!--Superhero character details-->
@@ -79,8 +79,8 @@ Add a `div` element with the attribute `id="name-input"` between the `<section>`
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 22
-line_highlights: 23-25
+line_number_start: 23
+line_highlights: 24-26
 ---
 
     <section id="character-details"> <!--Superhero character details-->
@@ -102,8 +102,8 @@ Add a `<label>` element to tell the user what they need to enter.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 22
-line_highlights: 24
+line_number_start: 23
+line_highlights: 25
 ---
 
     <section id="character-details"> <!--Superhero character details-->
@@ -178,8 +178,8 @@ Add a text `<input>` element with the attribute `id="name-text"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 22
-line_highlights: 25
+line_number_start: 23
+line_highlights: 26
 ---
 
     <section id="character-details"> <!--Superhero character details-->
@@ -238,8 +238,8 @@ Add a `<select>` element with **four** `<option>` elements for the choices.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 22
-line_highlights: 27-35
+line_number_start: 23
+line_highlights: 28-36
 ---
    
     <section id="character-details"> <!--Superhero character details-->
@@ -315,8 +315,8 @@ Include a placeholder attribute for the `<textarea>` element.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 27
-line_highlights: 36-39
+line_number_start: 28
+line_highlights: 37-40
 ---
 
     <div id="ability-input">
@@ -354,8 +354,8 @@ Add a new `<section>` element with the attribute `id="summary-section"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 40
-line_highlights: 41-43
+line_number_start: 41
+line_highlights: 42-44
 ---
       
     </section>
@@ -378,8 +378,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 41
-line_highlights: 42-43
+line_number_start: 42
+line_highlights: 43-44
 ---
 
     <section id="summary-section">

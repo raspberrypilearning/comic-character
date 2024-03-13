@@ -31,8 +31,8 @@ Give it the attribute `class="switch-container"`
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 18
-line_highlights: 19-21
+line_number_start: 19
+line_highlights: 20-22
 ---
 
       </nav>
@@ -62,8 +62,8 @@ Inside the `<label>` tags, add:
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 19
-line_highlights: 20-23
+line_number_start: 20
+line_highlights: 21-24
 ---
 
     <div class="switch-container">
@@ -140,8 +140,8 @@ Add the text: 'light_mode' inside the `<span>` element.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 19
-line_highlights: 24
+line_number_start: 20
+line_highlights: 23
 ---
 
     <div class="switch-container">
@@ -316,8 +316,8 @@ Add the event `onchange="changeLightMode()"` to the switch element.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 19
-line_highlights: 21
+line_number_start: 20
+line_highlights: 22
 ---
 
     <div class="switch-container">
@@ -561,8 +561,8 @@ Add the HTML for the switch to the header below the `</nav>` tag.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 18
-line_highlights: 19-25
+line_number_start: 19
+line_highlights: 20-26
 ---
 
       </nav>

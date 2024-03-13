@@ -15,7 +15,7 @@ Here is the HTML:
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 26
+line_number_start: 28
 line_highlights: 
 ---
 
@@ -33,12 +33,12 @@ line_highlights:
   
 --- /code ---
 
-**Lines 29, 30 and 31:** 
+**Lines 31, 32 and 33:** 
 + The `<span>` elements containing the Hero images.
   + They all have the same attribute: `class="hero-slide"`
 + The `active` class is used to show a particular image.
 
-**Lines 33 and 34:** 
+**Lines 35 and 36:** 
 + Buttons used to navigate left `<` and right `>`.
 + The JavaScript function `changeHero()` is used as event handler for button presses.
   + When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`

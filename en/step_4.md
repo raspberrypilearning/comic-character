@@ -45,8 +45,8 @@ Add the text 'Create' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 35
-line_highlights: 40
+line_number_start: 36
+line_highlights: 41
 ---
 
           </div>

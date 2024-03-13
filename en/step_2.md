@@ -50,8 +50,8 @@ Add a `<p>` element containing the Copyright message.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 29
-line_highlights: 30
+line_number_start: 30
+line_highlights: 31
 ---
 
       <footer>
@@ -73,8 +73,8 @@ The `id` attribute is used to specify a unique identifier for an HTML element.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 29
-line_highlights: 30
+line_number_start: 30
+line_highlights: 31
 ---
 
       <footer>
@@ -256,8 +256,8 @@ Paste (CTRL + V) or (CMD + V) the `<p>` element you copied earlier.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 24
-line_highlights: 25
+line_number_start: 27
+line_highlights: 28
 ---
 
       <footer>
