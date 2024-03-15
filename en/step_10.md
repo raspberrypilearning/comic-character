@@ -270,6 +270,6 @@ function changeHero(direction) {
 title: Upgraded project
 ---
 
-You can view the [upgraded project here](https://editor.raspberrypi.org/en/projects/comic-character-upgraded){:target="_blank"}.
+You can view the [upgraded project here](https://staging-editor.raspberrypi.org/en/projects/comic-character-upgraded){:target="_blank"}.
 
 --- /collapse ---
