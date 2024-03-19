@@ -85,7 +85,7 @@ line_highlights: 31
 
 --- /task ---
 
-** Click Run**
+**Click Run**
 + The Copyright message will be shown at the bottom (footer) of your web page.
   
 **Notice:** there is no date shown yet.

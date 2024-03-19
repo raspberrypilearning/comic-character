@@ -146,7 +146,7 @@ line_highlights: 23
 
     <div class="switch-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeSwitch"/>
+        <input type="checkbox" id="lightModeSwitch">
         <span class="switch-slider"></span>
       </label>
       <span class="switch-label material-symbols-outlined">light_mode</span>
@@ -322,7 +322,7 @@ line_highlights: 22
 
     <div class="switch-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()"/>
+        <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
         <span class="switch-slider"></span>
       </label>
       <span class="switch-label material-symbols-outlined">light_mode</span>
@@ -568,7 +568,7 @@ line_highlights: 20-26
       </nav>
       <div class="switch-container">
         <label class="switch">
-          <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()"/>
+          <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
           <span class="switch-slider"></span>
         </label>
         <span class="toggle-label material-symbols-outlined">light_mode</span>
