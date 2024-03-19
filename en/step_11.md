@@ -23,6 +23,4 @@ Explore the Animated Story.
 </div>
 </div>
 
---- /task ---
-
 --- /no-print ---

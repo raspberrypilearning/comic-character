@@ -186,8 +186,8 @@ line_highlights:
         <div class="hero-slider">
           <span class="hero-slide active"><img src="stacey-hero.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue and yellow background"></span>
           <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape, in front of a blue and yellow background"></span>
-          <span class="hero-slide"><img src="kwame-cape.jpg" alt="A superhero character in a superhero costume standing proudly in front of majestic mountain range."></span>
           <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"></span>
+          <span class="hero-slide"><img src="kwame-cape.jpg" alt="A superhero character in a superhero costume standing proudly in front of majestic mountain range."></span>
           <span class="hero-slide"><img src="ellenhero-image.jpg" alt="A superhero character in a red cape and blue shirt standing in front of mountains."></span>
       </div>
 
@@ -220,6 +220,8 @@ function changeHero(direction) {
   } else if (currentHeroIndex > 4) {
     currentHeroIndex = 0;
   }
+
+heroSlides[currentHeroIndex].classList.add("active");
 
 }
 
@@ -256,20 +258,22 @@ function changeHero(direction) {
     currentHeroIndex = 0;
   }
 
+  heroSlides[currentHeroIndex].classList.add("active");
+
 }
 
 --- /code ---
 
 --- /collapse ---
 
-### See the upgraded project
-
 --- collapse ---
 
 ---
-title: Upgraded project
+title: See the upgraded project
 ---
 
-You can view the [upgraded project here](https://staging-editor.raspberrypi.org/en/projects/comic-character-upgraded){:target="_blank"}.
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-upgrade" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
+You can see the [upgraded project files here](https://editor.raspberrypi.org/en/projects/comic-character-upgrade){:target="_blank"}.
 
 --- /collapse ---
