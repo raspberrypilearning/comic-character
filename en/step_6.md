@@ -2,7 +2,7 @@
 
 In this step, you will check that the user has completed the form and warn them if they have missed a section.
 
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 At the moment, the user can submit the information even if they have left some form fields empty.
 
@@ -144,7 +144,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-var alertMessage = ""
+var alertMessage = "";
 
 }
     
@@ -194,7 +194,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == "")
 
@@ -218,14 +218,14 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 39
+line_highlights: 38-40
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -264,7 +264,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -298,7 +298,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -360,7 +360,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -414,7 +414,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -503,7 +503,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -538,14 +538,14 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 43-44
+line_highlights: 42-44
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 

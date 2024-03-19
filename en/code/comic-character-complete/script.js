@@ -33,7 +33,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
