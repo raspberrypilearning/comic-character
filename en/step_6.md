@@ -144,7 +144,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-var alertMessage = ""
+var alertMessage = "";
 
 }
     
@@ -194,7 +194,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == "")
 
@@ -218,14 +218,14 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 39
+line_highlights: 38-40
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -264,7 +264,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -298,7 +298,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -360,7 +360,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -414,7 +414,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -503,7 +503,7 @@ const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
@@ -538,14 +538,14 @@ language: js
 filename: script.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 43-44
+line_highlights: 42-44
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
-  var alertMessage = ""
+  var alertMessage = "";
 
   if (characterName.value == ""){
     alertMessage = "Please enter a name"; 
