@@ -221,6 +221,8 @@ function changeHero(direction) {
     currentHeroIndex = 0;
   }
 
+heroSlides[currentHeroIndex].classList.add("active");
+
 }
 
 --- /code ---
@@ -255,6 +257,8 @@ function changeHero(direction) {
   } else if (currentHeroIndex > heroSlides.length - 1) {
     currentHeroIndex = 0;
   }
+
+  heroSlides[currentHeroIndex].classList.add("active");
 
 }
 

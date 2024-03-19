@@ -141,7 +141,7 @@ language: html
 filename: index.html
 line_numbers: true
 line_number_start: 20
-line_highlights: 23
+line_highlights: 25
 ---
 
     <div class="switch-container">
