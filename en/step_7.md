@@ -90,7 +90,7 @@ Google fonts provides icons and a way to add them to your website.
 <span style="color: #0faeb0">**Icons**</span> are an accessible way of representing text because they are universally understood.
 </p>
 
-The Google icon has already been included inside the `<head>` element of your web pages. The CSS styles have also been provided.
+The Google icon has already been included inside the `<head>` element of your webpages. The CSS styles have also been provided.
 
 --- collapse ---
 
@@ -332,7 +332,7 @@ line_highlights: 22
 
 **Click Run** 
 + Click on the switch to slide it into the light mode position.
-+ The colours of your web page should change.
++ The colours of your webpage should change.
 
 --- /task ---
 
@@ -402,7 +402,7 @@ function changeLightMode(){
 
 ### Get the user's preference
 
-When the web page loads, you need to check if lightMode was set.
+When the webpage loads, you need to check if lightMode was set.
 
 You can use `addEventListener` for this.
 
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
 --- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the web page is ready. 
+`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready. 
 
 **Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
 

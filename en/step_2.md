@@ -31,9 +31,9 @@ Your starter project contains:
 
 This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
-The **JavaScript** file you will use has already been linked to your web pages just before the closing `</body>` tag.
+The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
 
-The **CSS** file you will use has also been linked to your web pages.
+The **CSS** file you will use has also been linked to your webpages.
 
 --- task ---
 
@@ -86,7 +86,7 @@ line_highlights: 31
 --- /task ---
 
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer) of your web page.
++ The Copyright message will be shown at the bottom (footer) of your webpage.
   
 **Notice:** there is no date shown yet.
 
@@ -158,17 +158,17 @@ To access the `<span>` element, you will 'select' it, using the Document Object 
 title: What is the Document Object Model?
 ---
 
-The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with web page elements.
+The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
 
-It represents the structure of a web page (document).
+It represents the structure of a webpage (document).
 
-`querySelector()` is a DOM method that returns the first element in your web page that matches a specified CSS selector (e.g. `copyrightYear`)
+`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `copyrightYear`)
 
 --- /collapse ---
 
 --- task ---
 
-Use the `querySelector()` method to find the element in the web page document with the attribute `id="copyrightYear"`.
+Use the `querySelector()` method to find the element in the webpage document with the attribute `id="copyrightYear"`.
 
 --- code ---
 ---
@@ -269,7 +269,7 @@ line_highlights: 28
 **Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
 
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer section) of your web page.
++ The Copyright message will be shown at the bottom (footer section) of your webpage.
 + It will include the year.
 
 --- /task ---
@@ -292,6 +292,6 @@ Retrieve specific components of the date and time:
 
 --- /collapse ---
 
-Great job! You have added some dynamic content to your web pages!
+Great job! You have added some dynamic content to your webpages!
 
-Next, you will design an interactive web page where the user can create their own character.
+Next, you will design an interactive webpage where the user can create their own character.

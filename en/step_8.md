@@ -1,6 +1,6 @@
 ## Create a hero image slider
 
-In this step you will create an interactive hero image slider for your web page. 
+In this step you will create an interactive hero image slider for your webpage. 
 
 The user can use buttons to move to the next or previous hero image.
 
