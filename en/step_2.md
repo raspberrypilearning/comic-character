@@ -27,13 +27,13 @@ Your starter project contains:
 + the images you will use in the project
 + a JavaScript file to make your website interactive and engaging
 
-### Add content to your footer section
-
 This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
 The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
 
 The **CSS** file you will use has also been linked to your webpages.
+
+### Add content to your footer section
 
 --- task ---
 
@@ -85,10 +85,14 @@ line_highlights: 31
 
 --- /task ---
 
+--- task ---
+
 **Click Run**
 + The Copyright message will be shown at the bottom (footer) of your webpage.
   
 **Notice:** there is no date shown yet.
+
+--- /task ---
 
 There is no text inside the `<span>` element. 
 
@@ -114,14 +118,14 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Create a constant `currentDate` to hold a new `Date()` object.
 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 2
@@ -173,7 +177,7 @@ Use the `querySelector()` method to find the element in the webpage document wit
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 3
@@ -203,7 +207,7 @@ Set the `.innerText` content of the `<span>` with the attribute `id="copyrightYe
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 3

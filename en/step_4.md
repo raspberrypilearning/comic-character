@@ -79,7 +79,7 @@ Your function will use constants that refer to each section.
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use the `querySelector()` method to find:
 + the summary section element and assign it to the constant `summary`.
@@ -88,7 +88,7 @@ Use the `querySelector()` method to find:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
@@ -114,7 +114,7 @@ Use `querySelector()` methods to find the form elements and assign each to a con
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 9-11
@@ -170,7 +170,7 @@ Create a function `displaySummary()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 14
 line_highlights: 15-17
@@ -196,7 +196,7 @@ Assign the element to the constant `summaryParagraph`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 14
 line_highlights: 16
@@ -246,7 +246,7 @@ Here is an example:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
 ---
     
@@ -267,7 +267,7 @@ Here is an example:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
 ---
     
@@ -287,7 +287,7 @@ Update the `.textContent` of the `summaryParagraph`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 14
 line_highlights: 18-20
@@ -318,7 +318,7 @@ This will hide the whole form on the page.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 14
 line_highlights: 22
@@ -349,7 +349,7 @@ This will display the summary section on your page.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 14
 line_highlights: 23

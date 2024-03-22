@@ -71,7 +71,7 @@ You need to update the contents of the alert div with a message.
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
 
@@ -80,7 +80,7 @@ Assign this to a constant `alertBox`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 32
@@ -107,7 +107,7 @@ Create the function `checkForm()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 34-36
@@ -134,7 +134,7 @@ Create the variable `alertMessage` and assign it an empty string(`""`).
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 36
@@ -184,7 +184,7 @@ Use an `if` statement to check if the value of `characterName` is empty.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 38
@@ -215,7 +215,7 @@ The string needs to be a message that tells the user what to if the **Superhero 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 38-40
@@ -254,7 +254,7 @@ Use an `if` statement to check if the variable `alertMessage` is **not** an empt
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 42-44
@@ -288,7 +288,7 @@ Set the `.innerText` content of `alertBox` to the string held in `alertMessage`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 43
@@ -350,7 +350,7 @@ In your new if statement, set the `display` property for the `#alert` selector t
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 44
@@ -404,7 +404,7 @@ Use an `else` statement to set the `display` property for the `#alert` selector 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 45-47
@@ -493,7 +493,7 @@ The string needs to be a message that tells the user what to if the **Ability** 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 40-42
@@ -535,7 +535,7 @@ Add an alert message to show the user if it is blank.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 42-44

@@ -52,7 +52,7 @@ You can use `querySelectorAll()` to find and return a list of **all** `<span>` e
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Find the comment `// Change Hero function`
 
@@ -63,7 +63,7 @@ Assign the list to a constant `heroSlides`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 76
@@ -95,7 +95,7 @@ Create the variable `currentHeroIndex` and assign it the value `0`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 77
@@ -126,7 +126,7 @@ A <span style="color: #0faeb0">**parameter**</span> acts as a placeholder for a 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 79-81
@@ -157,7 +157,7 @@ Remove the `active` class from the element at the currentHeroIndex in the `heroS
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 81
@@ -193,7 +193,7 @@ Update the value of `currentHeroIndex`
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 82
@@ -241,7 +241,7 @@ Use an `if` statement with an `else if` statement to handle the out of range iss
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 84-88
@@ -279,7 +279,7 @@ Add the `active` class to the element at the current index.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 90

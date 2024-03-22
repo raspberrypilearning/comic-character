@@ -93,12 +93,12 @@ line_highlights:
 
 --- /code ---
 
-+ Update JavaScript on `script.js`
++ Update JavaScript on `scripts.js`
 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
 line_number_start: 
 line_highlights: 
@@ -171,7 +171,7 @@ In the starter projects there are more images you can use in your hero slider:
 
 `kwame-cape.jpg` and `ellenhero-image.jpg`
 
-You can add more images to your slider by updating `index.html` and `script.js`.
+You can add more images to your slider by updating `index.html` and `scripts.js`.
 
 --- code ---
 ---
@@ -200,7 +200,7 @@ If you have five images, then you will need to change the code like this:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 85-86
@@ -237,7 +237,7 @@ The `.length` property returns the number of elements in a list.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 85-86

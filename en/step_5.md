@@ -10,7 +10,7 @@ You need a function that shows the form and hides the summary when the user clic
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Find the comment `// Function to edit form content`
 
@@ -23,7 +23,7 @@ In your function:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 25
 line_highlights: 26-29

@@ -174,7 +174,7 @@ title: The switch does not display properly
 
 --- task ---
 
-Open `script.js`. 
+Open `scripts.js`. 
 
 Find the comment `// Create the constant for light mode`
 
@@ -185,7 +185,7 @@ Assign it to a constant `lightModeSwitch`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 55
 line_highlights: 56
@@ -206,7 +206,7 @@ Create the function `changeLightMode()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 59-61
@@ -234,7 +234,7 @@ Make the function assign the value of the switch's `.checked` property to the va
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 60
@@ -286,7 +286,7 @@ This will add the class to the element if it is not there, or remove it if it is
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 61
@@ -374,7 +374,7 @@ Example: `localStorage.clear()`
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use the `.setItem` method to add the key-value pair:
 + Set the 'key' to `"lightMode"`
@@ -383,7 +383,7 @@ Use the `.setItem` method to add the key-value pair:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 62
@@ -440,7 +440,7 @@ Use `.addEventListener` to trigger a function in response to a page load event.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 66-68
@@ -468,7 +468,7 @@ Add an `if` statement to check if `lightMode` is set to `"true"`
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 68-70
@@ -500,7 +500,7 @@ Toggle the `light-mode` class.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 69
@@ -530,7 +530,7 @@ Set the value of the switch's `.checked` property to the Boolean value `true`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 70
