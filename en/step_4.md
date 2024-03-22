@@ -59,6 +59,10 @@ line_highlights: 41
 
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a Create button below your superhero form.
 + The Create button does not do anything at the moment. 
@@ -137,6 +141,8 @@ In `character.html`, you added a `<p>` element with the attribute `id="summary-p
 
 --- collapse ---
 
+**Tip:** This is just here to remind you. You don't have to write it again!
+
 ---
 title: The summary paragraph you created earlier
 ---
@@ -145,7 +151,7 @@ title: The summary paragraph you created earlier
 ---
 language: html
 filename: character.html
-line_numbers: true
+line_numbers: false
 line_number_start: 
 line_highlights: 3
 ---
@@ -172,8 +178,8 @@ Create a function `displaySummary()`.
 language: js
 filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 15-17
+line_number_start: 13
+line_highlights: 14-16
 ---
     
 // Function to display summary
@@ -198,8 +204,8 @@ Assign the element to the constant `summaryParagraph`.
 language: js
 filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 16
+line_number_start: 13
+line_highlights: 15
 ---
     
 // Function to display summary
@@ -284,13 +290,15 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 Update the `.textContent` of the `summaryParagraph`.
 
+**Notice** The text content is inside backticks ``` ` ` ``` instead of using `" "` or `' '`
+
 --- code ---
 ---
 language: js
 filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 18-20
+line_number_start: 13
+line_highlights: 17-19
 ---
     
 // Function to display summary
@@ -320,8 +328,8 @@ This will hide the whole form on the page.
 language: js
 filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 22
+line_number_start: 13
+line_highlights: 21
 ---
     
 // Function to display summary
@@ -351,8 +359,8 @@ This will display the summary section on your page.
 language: js
 filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 23
+line_number_start: 13
+line_highlights: 22
 ---
     
 // Function to display summary
@@ -380,8 +388,6 @@ Open `character.html`.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
 + The summary paragraph will include a summary of your character.
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -393,6 +399,8 @@ title: The summary section is not displaying properly
 + Check you have added `;` a semicolon at the end of your declarations.
 
 --- /collapse ---
+
+--- /task ---
 
 Well done! You have created an interactive form that shows/hides elements. 
 

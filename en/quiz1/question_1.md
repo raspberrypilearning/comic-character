@@ -18,11 +18,11 @@ What is the basic structure of a function?
 
 --- choices ---
 
-- ( ) `create function myFunction() { /* code here */ }`
+- ( ) `new function myFunction() { /* code here */ }`
 
   --- feedback ---
 
-  Not quite! The correct way to declare a function is without the 'create' keyword.
+  Not quite! The correct way to declare a function is without the 'new' keyword.
 
   --- /feedback ---
 

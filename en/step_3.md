@@ -1,16 +1,10 @@
 ## Add form input fields
 
-In this step, you will design an interactive webpage and a web form where the user can create their own superhero!
+In this step, you will design an interactive webpage and a webform where the user can create their own superhero!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You have added text and images to your website. 
-
-There are other types of content, including:
-+ Videos
-+ Forms
-+ Maps
-+ Music
+You have added text and images to your website, but your user can change the content too!
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 HTML <span style="color: #0faeb0">**forms**</span> allows the user to input and submit information.
@@ -18,7 +12,7 @@ HTML <span style="color: #0faeb0">**forms**</span> allows the user to input and 
 
 You will add different types of form elements to allow the user to create their superhero character.
 
-**Note:** CSS styling for your form is already provided in the file `styles.css`.
+**Note:** CSS styling for your form is already provided in the file `style.css`.
 
 --- collapse ---
 
@@ -26,9 +20,7 @@ You will add different types of form elements to allow the user to create their 
 title: Types of form elements
 ---
 
-**TODO** @m-bowley to update to make select not an input and change the appearance of the input indents:
-
-![An example HTML form with form fields annotated to show their use.](images/HTML_form_elements.png)
+![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
 
 + `<input>` e.g. single-line text box, checkbox, button.
 + `<select>` A drop-down list.
@@ -191,10 +183,12 @@ line_highlights: 26
     
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a text box with the label "Superhero Name:" above it.
-
---- /task ---
 
 --- collapse ---
 
@@ -205,6 +199,7 @@ title: There is no text box
 
 --- /collapse ---
 
+--- /task ---
 
 ### Superhero 'ability' section 
 
@@ -262,11 +257,13 @@ line_highlights: 28-36
 
 **Notice:** The first option has a blank `value`.
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a drop-down list.
 + Click the arrow to view the choices.
-
---- /task ---
 
 --- collapse ---
 
@@ -277,6 +274,8 @@ title: There are no options in my drop-down
 + Check you have closing `</option>` tags foe each option.
 
 --- /collapse ---
+
+--- /task ---
 
 ### Superhero 'origin story' section 
 
@@ -336,6 +335,10 @@ line_highlights: 37-40
     
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a multi-line text box showing placeholder text.
 
@@ -389,8 +392,12 @@ line_highlights: 43-44
     
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
-+ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. Next, you will add a button that can run JavaScript code to show it.
++ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. 
 
 --- collapse ---
 
@@ -418,6 +425,8 @@ line_highlights: 6
 --- /code ---
 
 --- /collapse ---
+
+Next, you will add a button that can run JavaScript code to show it.
 
 --- /task ---
 

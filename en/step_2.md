@@ -50,8 +50,8 @@ Add a `<p>` element containing the Copyright message.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 30
-line_highlights: 31
+line_number_start: 32
+line_highlights: 33
 ---
 
       <footer>
@@ -73,8 +73,8 @@ The `id` attribute is used to specify a unique identifier for an HTML element.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 30
-line_highlights: 31
+line_number_start: 32
+line_highlights: 33
 ---
 
       <footer>
@@ -166,7 +166,7 @@ The Document Object Model (DOM) provides a way for JavaScript (and other program
 
 It represents the structure of a webpage (document).
 
-`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `copyrightYear`)
+`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `#copyrightYear`)
 
 --- /collapse ---
 
@@ -225,8 +225,6 @@ line_highlights: 3
 **Click Run**
 + You should see the current year displayed in the copyright message.
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -238,6 +236,8 @@ title: The year is not displayed
 + Check there is a `;` colon at the end of lines 2 and 3.
   
 --- /collapse ---
+
+--- /task ---
 
 --- task ---
 
@@ -271,6 +271,10 @@ line_highlights: 28
 --- /code ---
 
 **Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
+
+--- /task ---
+
+--- task ---
 
 **Click Run**
 + The Copyright message will be shown at the bottom (footer section) of your webpage.

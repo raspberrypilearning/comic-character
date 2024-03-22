@@ -47,6 +47,8 @@ line_highlights:
 title: Add more form fields
 ---
 
+### Example: Add a country the character is from
+
 + Add HTML to `character.html`
 
 --- code ---
@@ -76,7 +78,7 @@ line_highlights:
 
 --- /code ---
 
-+ Change styles on `style.css`
++ Change `style.css` to style the element with the id `country-input`
 
 --- code ---
 ---
@@ -87,7 +89,7 @@ line_number_start:
 line_highlights: 
 ---
 
-#name-input, #ability-input, #country-input, #origin-input {
+#name-input, #ability-input, #origin-input, #country-input {
   width: 100%;
 }
 
@@ -100,8 +102,7 @@ line_highlights:
 language: js
 filename: scripts.js
 line_numbers: false
-line_number_start: 
-line_highlights: 
+line_highlights: 8, 15, 41, 42
 ---
 
 // Create constants for superhero form
@@ -111,7 +112,7 @@ const summary = document.querySelector("#summary-section");
 const name = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
 const characterOrigin = document.querySelector("#origin-text");
-const characterCountry = document.querySelector("#country-text");
+const characterCountry = document.querySelector("#country-choice");
 
 // Function to display summary
 function displaySummary() {

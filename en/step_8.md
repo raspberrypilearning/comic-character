@@ -6,6 +6,8 @@ The user can use buttons to move to the next or previous hero image.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
+### The hero image HTML
+
 You have been provided with the HTML and CSS styling.
 
 Here is the HTML:
@@ -26,12 +28,18 @@ line_highlights:
             <span class="hero-slide"><img src="safina-cape.jpg" alt="A superhero character with black hair, wearing a red and white costume and blue cape, in front of a blue and yellow background"></span>
             <span class="hero-slide"><img src="layton-slider.jpg" alt="A superhero character with blonde hair, wearing a blue costume and red cape, in front of a blue background"></span>
           </div>
-            <button class="hero-nav-btn prev" onclick="changeHero(-1)">❮</button>
-            <button class="hero-nav-btn next" onclick="changeHero(+1)">❯</button>
+          <button class="hero-nav-btn prev" onclick="changeHero(-1)">❮</button>
+          <button class="hero-nav-btn next" onclick="changeHero(+1)">❯</button>
         </div>
       </main>
   
 --- /code ---
+
+--- collapse ---
+
+---
+title: I need the HTML explaining
+---
 
 **Lines 31, 32 and 33:** 
 + The `<span>` elements containing the Hero images.
@@ -43,6 +51,8 @@ line_highlights:
 + The JavaScript function `changeHero()` is used as event handler for button presses.
   + When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
   + When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
+
+--- /collapse ---
 
 ### Find all the images
 
@@ -175,6 +185,10 @@ function changeHero(direction) {
 
 --- /code ---
 
+Square brackets are used to refer to the position of the element in the list.
+
+So: `heroSlides[currentHeroIndex]` is the element at the position `currentHeroIndex` in the list `heroSlides`
+
 --- /task ---
 
 ### Update the current index
@@ -220,11 +234,11 @@ There are three elements in the `heroSlides` list.
 
 They are at indexes `0`, `1` and `2`.
 
-If the value of the variable `currentHeroIndex` is `2`, then calling `changeHero(+1)` will change `currentHeroIndex` to `3`.
+If the value of the variable `currentHeroIndex` is `2`, then calling `changeHero(+1)` will change it to `3`.
 
 🚨 But there is no index `3` 🚨
 
-If the value of the variable `currentHeroIndex` is `0`, then calling `changeHero(-1)` will change `currentHeroIndex` to `-1`.
+If the value of the variable `currentHeroIndex` is `0`, then calling `changeHero(-1)` will change it to `-1`.
 
 🚨 But there is no index `-1` 🚨
 
@@ -316,8 +330,6 @@ Open `index.html`.
 + Click the left (<) button on your hero image slider, the image should change.
 + Click the right (>) button on your hero image slider, the image should change.
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -327,6 +339,8 @@ title: The buttons do not work properly
 + Make sure you have used the 'less than' `<` symbol or the 'greater than' `>` symbol in the correct places.
 
 --- /collapse ---
+
+--- /task ---
 
 Fantastic effort! 
 

@@ -21,8 +21,8 @@ Change the function that handles the Create button's `onclick` event.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 46
+line_number_start: 37
+line_highlights: 41
 ---
 
     <div id="origin-input">
@@ -48,8 +48,8 @@ Create an empty `<div>` element with the attribute `id="alert"` below the Create
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 47-48
+line_number_start: 37
+line_highlights: 42-43
 ---
 
       <div id="origin-input">
@@ -187,7 +187,7 @@ language: js
 filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 38
+line_highlights: 38-40
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
@@ -196,7 +196,9 @@ function checkForm(){
 
   var alertMessage = "";
 
-  if (characterName.value == "")
+  if (characterName.value == ""){
+
+  }
 
 }
     
@@ -218,7 +220,7 @@ language: js
 filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 38-40
+line_highlights: 39
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
@@ -241,9 +243,11 @@ function checkForm(){
 
 When you created `alertMessage`, you assigned it an empty string (`""`).
 
-You only need to show an alert if a message has been assigned to `alertMessage`.
+If the **Superhero Name** field is blank, then you set `alertMessage` to a message to alert the user.
 
-You need to check if `alertMessage` is **not** an empty string now.
+You only want to show the alert if there is a message in `alertMessage`.
+
+So you need to check if `alertMessage` is **not** an empty string now.
 
 --- task ---
 
@@ -442,8 +446,6 @@ function checkForm(){
 + The summary will show.
 **Notice:** The ability and origin story sections will be blank
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -454,6 +456,8 @@ title: The summary section is not showing
 + Check you have called the `displaySummary()` function in your `else` block.
 
 --- /collapse ---
+
+--- /task ---
 
 ### Check the Ability field
 
@@ -575,6 +579,16 @@ function checkForm(){
 + Click the Create button. An alert message will show for any field you have left blank.
 + Test this a few times with a different form fields.
 + Complete all form fields. Click 'Create' to see the summary.
+
+--- collapse ---
+
+---
+title: I should be getting alerts but I am not
+---
+
++ Check you have added `.value` after `characterName`, `characterAbility` and `characterOrigin`.
+
+--- /collapse ---
 
 --- /task ---
 

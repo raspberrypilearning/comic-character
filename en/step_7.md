@@ -10,7 +10,64 @@ The website will remember the user's choice even if they navigate to another pag
 <span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
 </p>
 
-Your `style.css` file includes selectors used to update your website's colour scheme. Find the comment `/* Light Mode Styles */` to see them.
+Your `style.css` file includes selectors used to update your website's colour scheme.
+
+--- collapse ---
+
+**Tip:** This is just here to remind you. You don't have to write it again!
+
+---
+title: Light mode styles
+---
+
+--- code ---
+---
+language: css
+filename: style.html
+line_numbers: true
+line_number_start: 248
+---
+
+/* Light Mode Styles */
+
+body.light-mode {
+  background: var(--background-color-light-mode);
+  color: var(--text-color-light-mode);
+}
+
+.light-mode .navigation {
+  background-color: var(--background-color-light-mode-navigation);
+}
+
+.light-mode .year {
+  color: var(--text-color-light-mode-year);
+}
+
+.light-mode .logo {
+  color: var(--text-color-light-mode-logo);
+}
+
+.light-mode nav a {
+  color: var(--text-color-light-mode-nav);
+}
+
+.light-mode nav a:hover {
+  color: var(--text-color-light-mode-nav-hover);
+}
+
+.light-mode .header {
+  background: var(--background-color-light-mode-header);
+}
+
+.light-mode footer {
+  background: var(--background-color-light-mode-footer);
+  color: var(--text-color-light-mode-footer);
+}
+
+
+--- /code ---
+
+--- /collapse ---
 
 ### Add a switch to the header
 
@@ -78,7 +135,12 @@ line_highlights: 21-24
 
 --- /task ---
 
-**Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+--- task ---
+
+**Click Run**
++ **Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+
+--- /task ---
 
 ### Add an icon to the switch
 
@@ -154,11 +216,13 @@ line_highlights: 25
       
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + Your switch should appear on the right in your nav bar.
 + You can click the switch, but it will not do anything... yet!
-
---- /task ---
 
 --- collapse ---
 
@@ -169,6 +233,8 @@ title: The switch does not display properly
 + Check you have left spaces between your attributes where you have multiple attributes in an element.
 
 --- /collapse ---
+
+--- /task ---
 
 ### Create an event handler for your switch
 
@@ -322,13 +388,17 @@ line_highlights: 22
 
     <div class="switch-container">
       <label class="switch">
-        <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
+        <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
         <span class="switch-slider"></span>
       </label>
       <span class="switch-label material-symbols-outlined">light_mode</span>
     </div>
       
 --- /code ---
+
+--- /task ---
+
+--- task ---
 
 **Click Run** 
 + Click on the switch to slide it into the light mode position.
@@ -568,7 +638,7 @@ line_highlights: 20-26
       </nav>
       <div class="switch-container">
         <label class="switch">
-          <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
           <span class="switch-slider"></span>
         </label>
         <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -579,10 +649,14 @@ line_highlights: 20-26
 
 --- /task ---
 
+--- task ---
+
 **Click Run** 
 + Your switch should appear in your nav bar to the right.
 + Click the switch on and off to see the theme colours change.
 + Navigate to the `index.html` page to check that your light mode preference stays on.
+
+--- /task ---
 
 Great work! You have created a switch that allows the user to change colour themes. 
 
