@@ -411,7 +411,7 @@ language: js
 filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 45-47
+line_highlights: 45-48
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
