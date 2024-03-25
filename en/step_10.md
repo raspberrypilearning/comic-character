@@ -21,8 +21,7 @@ line_number_start:
 line_highlights: 
 ---
 
-      <div id="ability-input">
-        <label>Ability:</label>
+        <label for="ability-choice">Ability:</label>
         <select id="ability-choice">
           <option value="">Choose an option</option>
           <option value="Flight">Flying</option>
@@ -35,7 +34,6 @@ line_highlights:
           <option value="Speedstar">Speedstar</option>
           <option value="Ice">Ice</option>
         </select>
-      </div>
 
 --- /code ---
 
@@ -60,8 +58,7 @@ line_number_start:
 line_highlights: 
 ---
 
-      <div id="country-input">
-        <label>Where is your hero from?:</label>
+        <label for="country-choice">Where is your hero from?:</label>
         <select id="country-choice">
           <option value="">Choose an option</option>
           <option value="Space">Space</option>
@@ -74,24 +71,6 @@ line_highlights:
           <option value="Australia">Australia</option>
           <option value="South Africa">South Africa</option>
         </select>
-      </div>
-
---- /code ---
-
-+ Change `style.css` to style the element with the id `country-input`
-
---- code ---
----
-language: css
-filename: style.css
-line_numbers: false
-line_number_start: 
-line_highlights: 
----
-
-#name-input, #ability-input, #origin-input, #country-input {
-  width: 100%;
-}
 
 --- /code ---
 

@@ -25,43 +25,43 @@ title: Light mode styles
 language: css
 filename: style.html
 line_numbers: true
-line_number_start: 248
+line_number_start: 244
 ---
 
 /* Light Mode Styles */
 
 body.light-mode {
-  background: var(--background-color-light-mode);
-  color: var(--text-color-light-mode);
+  background: var(--background-colour-light-mode);
+  color: var(--text-colour-light-mode);
 }
 
 .light-mode .navigation {
-  background-color: var(--background-color-light-mode-navigation);
+  background-color: var(--background-colour-light-mode-navigation);
 }
 
 .light-mode .year {
-  color: var(--text-color-light-mode-year);
+  color: var(--text-colour-light-mode-year);
 }
 
 .light-mode .logo {
-  color: var(--text-color-light-mode-logo);
+  color: var(--text-colour-light-mode-logo);
 }
 
 .light-mode nav a {
-  color: var(--text-color-light-mode-nav);
+  color: var(--text-colour-light-mode-nav);
 }
 
 .light-mode nav a:hover {
-  color: var(--text-color-light-mode-nav-hover);
+  color: var(--text-colour-light-mode-nav-hover);
 }
 
 .light-mode .header {
-  background: var(--background-color-light-mode-header);
+  background: var(--background-colour-light-mode-header);
 }
 
 .light-mode footer {
-  background: var(--background-color-light-mode-footer);
-  color: var(--text-color-light-mode-footer);
+  background: var(--background-colour-light-mode-footer);
+  color: var(--text-colour-light-mode-footer);
 }
 
 
@@ -386,13 +386,13 @@ line_number_start: 20
 line_highlights: 22
 ---
 
-    <div class="switch-container">
-      <label class="switch">
-        <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
-        <span class="switch-slider"></span>
-      </label>
-      <span class="switch-label material-symbols-outlined">light_mode</span>
-    </div>
+      <div class="switch-container">
+        <label class="switch">
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="switch-label material-symbols-outlined">light_mode</span>
+      </div>
       
 --- /code ---
 

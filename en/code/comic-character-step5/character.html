@@ -21,23 +21,17 @@
     
     <main>
       <section id="character-details"> <!--Superhero character details-->
-        <div id="name-input">
-          <label>Superhero Name:</label>
-          <input type="text" id="name-text">
-        </div>
-        <div id="ability-input">
-          <label>Ability:</label>
-          <select id="ability-choice">
-            <option value="">Choose an option</option>
-            <option value="Flight">Flying</option>
-            <option value="Invisibility">Invisibility</option>
-            <option value="Time travel">Time travel</option>
-          </select>
-        </div>
-        <div id="origin-input">
-          <label>Origin Story:</label> 
-          <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-        </div>
+        <label for="name-text">Superhero Name:</label>
+        <input type="text" id="name-text">
+        <label for="ability-choice">Ability:</label>
+        <select id="ability-choice">
+          <option value="">Choose an option</option>
+          <option value="Flight">Flying</option>
+          <option value="Invisibility">Invisibility</option>
+          <option value="Time travel">Time travel</option>
+        </select>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
         <div id="alert"> 
         </div>
         <button onclick="displaySummary()">Create</button>

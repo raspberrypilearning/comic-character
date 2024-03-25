@@ -21,15 +21,13 @@ Change the function that handles the Create button's `onclick` event.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 37
-line_highlights: 41
+line_number_start: 33
+line_highlights: 35
 ---
 
-    <div id="origin-input">
-      <label>Origin Story:</label> 
-      <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    </div>
-    <button onclick="checkForm()">Create</button>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+        <button onclick="checkForm()">Create</button>
     
 --- /code ---
 
@@ -48,18 +46,16 @@ Create an empty `<div>` element with the attribute `id="alert"` below the Create
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 37
-line_highlights: 42-43
+line_number_start: 33
+line_highlights: 35-36
 ---
 
-      <div id="origin-input">
-        <label>Origin Story:</label> 
+        <label for="origin-text">Origin Story:</label>
         <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-     </div>
-     <button onclick="checkForm()">Create</button>
-     <div id="alert"> 
-     </div>
-  </section>
+        <div id="alert"> 
+        </div>
+        <button onclick="checkForm()">Create</button>
+      </section>
     
 --- /code ---
 
@@ -337,7 +333,7 @@ line_highlights: 4
 
 #alert {
   text-align: center;
-  color: var(--text-color-alert);
+  color: var(--text-colour-alert);
   display: none;
 }
     

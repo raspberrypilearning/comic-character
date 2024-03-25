@@ -45,17 +45,14 @@ Add the text 'Create' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 36
-line_highlights: 41
+line_number_start: 33
+line_highlights: 35
 ---
 
-          </div>
-          <div id="origin-input">
-            <label>Origin Story:</label> 
-            <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-          </div>
-          <button onclick="displaySummary()">Create</button>
-        </section>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+        <button onclick="displaySummary()">Create</button>
+      </section>
 
 --- /code ---
 
@@ -156,10 +153,10 @@ line_number_start:
 line_highlights: 3
 ---
 
-		<section id="summary-section">
-		  <h2>Superhero Summary</h2>
-		  <p id="summary-paragraph"></p>
-		</section>
+      <section id="summary-section">
+        <h2>Superhero Summary</h2>
+        <p id="summary-paragraph"></p>
+      </section>
 
 --- /code ---
 
