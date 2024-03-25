@@ -1,24 +1,18 @@
 ## Add form input fields
 
-In this step, you will design an interactive web page and a web form where the user can create their own superhero!
+In this step, you will design an interactive webpage and a webform where the user can create their own superhero!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You have added text and images to your website. 
-
-There are other types of content, including:
-+ Videos
-+ Forms
-+ Maps
-+ Music
+You have added text and images to your website, but your user can change the content too!
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-HTML <span style="color: #0faeb0">**forms**</span> allows the user to input and submit information.
+HTML <span style="color: #0faeb0">**forms**</span> allow the user to input and submit information.
 </p>
 
 You will add different types of form elements to allow the user to create their superhero character.
 
-**Note:** CSS styling for your form is already provided in the file `styles.css`.
+**Note:** CSS styling for your form is already provided in the file `style.css`.
 
 --- collapse ---
 
@@ -26,9 +20,7 @@ You will add different types of form elements to allow the user to create their 
 title: Types of form elements
 ---
 
-**TODO** @m-bowley to update to make select not an input and change the appearance of the input indents:
-
-![An example HTML form with form fields annotated to show their use.](images/HTML_form_elements.png)
+![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
 
 + `<input>` e.g. single-line text box, checkbox, button.
 + `<select>` A drop-down list.
@@ -68,11 +60,13 @@ line_highlights: 23
 
 ### Superhero 'name' section
 
-Users will start by naming their superhero!
+The user will start by naming their superhero!
+
+A `<label>` tells the user what they need to enter.
 
 --- task ---
 
-Add a `div` element with the attribute `id="name-input"` between the `<section>` tags.
+Add a `<label>` element with the attribute `"for=name-text"`
 
 --- code ---
 ---
@@ -80,37 +74,11 @@ language: html
 filename: character.html
 line_numbers: true
 line_number_start: 23
-line_highlights: 24-26
+line_highlights: 24
 ---
 
     <section id="character-details"> <!--Superhero character details-->
-      <div id="name-input">
-               
-      </div>
-    </section>
-    
---- /code ---
-
---- /task ---
-
---- task ---
-
-Add a `<label>` element to tell the user what they need to enter.
-
---- code ---
----
-language: html
-filename: character.html
-line_numbers: true
-line_number_start: 23
-line_highlights: 25
----
-
-    <section id="character-details"> <!--Superhero character details-->
-      <div id="name-input">
-        <label>Superhero Name:</label>
-               
-      </div>
+      <label for="name-text">Superhero Name:</label>
     </section>
     
 --- /code ---
@@ -122,6 +90,7 @@ title: Accessible design
 ---
 
 The `<label>` element allows screen-readers to read the label out loud when a user focuses on the input element.
+Adding a `for` attribute links the label to an input element.
 
 --- /collapse ---
 
@@ -179,22 +148,22 @@ language: html
 filename: character.html
 line_numbers: true
 line_number_start: 23
-line_highlights: 26
+line_highlights: 25
 ---
 
     <section id="character-details"> <!--Superhero character details-->
-      <div id="name-input">
-        <label>Superhero Name:</label>
-        <input type="text" id="name-text">     
-      </div>
+      <label for="name-text">Superhero Name:</label>
+      <input type="text" id="name-text">
     </section>
     
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a text box with the label "Superhero Name:" above it.
-
---- /task ---
 
 --- collapse ---
 
@@ -205,6 +174,16 @@ title: There is no text box
 
 --- /collapse ---
 
+--- collapse ---
+
+---
+title: The text box is very small
+---
++ Check you have given the `<input>` the id `"name-text"`, not `"name"`
+
+--- /collapse ---
+
+--- /task ---
 
 ### Superhero 'ability' section 
 
@@ -227,11 +206,9 @@ title: See an example
 
 --- task ---
 
-Add a `<div>` element with the attribute `id="ability-input"`.
+Add a `<label>` element with the attribute `for="ability-choice"`.
 
-Add a `<label>`. 
-
-Add a `<select>` element with **four** `<option>` elements for the choices.
+Add a `<select>` element with the attribute `id="ability-choice"` and **four** `<option>` elements for the choices.
 
 --- code ---
 ---
@@ -239,34 +216,32 @@ language: html
 filename: character.html
 line_numbers: true
 line_number_start: 23
-line_highlights: 28-36
+line_highlights: 26-32
 ---
    
     <section id="character-details"> <!--Superhero character details-->
-      <div id="name-input">
-        <label>Superhero Name:</label>
-        <input type="text" id="name-text">     
-      </div>
-      <div id="ability-input">
-        <label>Ability:</label>
-        <select id="ability-choice">
-          <option value="">Choose an option</option>
-          <option value="Flying">Flying</option>
-          <option value="Invisibility">Invisibility</option>
-          <option value="Time travel">Time travel</option>
-        </select>
-      </div>
+      <label for="name-text">Superhero Name:</label>
+      <input type="text" id="name-text">     
+      <label for="ability-choice">Ability:</label>
+      <select id="ability-choice">
+        <option value="">Choose an option</option>
+        <option value="Flying">Flying</option>
+        <option value="Invisibility">Invisibility</option>
+        <option value="Time travel">Time travel</option>
+      </select>
     </section>
     
 --- /code ---
 
 **Notice:** The first option has a blank `value`.
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + You will see a drop-down list.
 + Click the arrow to view the choices.
-
---- /task ---
 
 --- collapse ---
 
@@ -277,6 +252,8 @@ title: There are no options in my drop-down
 + Check you have closing `</option>` tags foe each option.
 
 --- /collapse ---
+
+--- /task ---
 
 ### Superhero 'origin story' section 
 
@@ -304,9 +281,7 @@ The hint is replaced when the user starts typing.
 
 --- task ---
 
-Create a `<div>` element with the attribute `id="origin-input"`.
-
-Add the `<label>` and `<textarea>` HTML inside the `<div>` element.
+Add the `<label>` and `<textarea>` HTML.
 
 Include a placeholder attribute for the `<textarea>` element.
 
@@ -315,26 +290,26 @@ Include a placeholder attribute for the `<textarea>` element.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 28
-line_highlights: 37-40
+line_number_start: 26
+line_highlights: 33-45
 ---
 
-    <div id="ability-input">
-      <label>Ability:</label>
-      <select id="ability-choice">
-        <option value="">Choose an option</option>
-        <option value="Flying">Flying</option>
-        <option value="Invisibility">Invisibility</option>
-        <option value="Time travel">Time travel</option>
-      </select>
-    </div>
-    <div id="origin-input">
-      <label>Origin Story:</label> 
-      <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    </div>
+    <label for="ability-choice">Ability:</label>
+    <select id="ability-choice">
+      <option value="">Choose an option</option>
+      <option value="Flying">Flying</option>
+      <option value="Invisibility">Invisibility</option>
+      <option value="Time travel">Time travel</option>
+    </select>
+    <label for="origin-text">Origin Story:</label>
+    <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
   </section>
     
 --- /code ---
+
+--- /task ---
+
+--- task ---
 
 **Click Run**
 + You will see a multi-line text box showing placeholder text.
@@ -354,8 +329,8 @@ Add a new `<section>` element with the attribute `id="summary-section"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 41
-line_highlights: 42-44
+line_number_start: 35
+line_highlights: 36-39
 ---
       
     </section>
@@ -378,8 +353,8 @@ Add a `<p>` element with the attribute `id="summary-paragraph"`.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 43-44
+line_number_start: 36
+line_highlights: 37-38
 ---
 
     <section id="summary-section">
@@ -389,8 +364,12 @@ line_highlights: 43-44
     
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
-+ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. Next, you will add a button that can run JavaScript code to show it.
++ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. 
 
 --- collapse ---
 
@@ -408,8 +387,8 @@ line_highlights: 6
 ---
 
 #summary-section {
-  background-color: var(--background-color-section);
-  border: 1px solid var(--border-color-section);
+  background-color: var(--background-colour-section);
+  border: 1px solid var(--border-colour-section);
   border-radius: 5px;
   padding: 5px;
   display: none;
@@ -418,6 +397,8 @@ line_highlights: 6
 --- /code ---
 
 --- /collapse ---
+
+Next, you will add a button that can run JavaScript code to show it.
 
 --- /task ---
 

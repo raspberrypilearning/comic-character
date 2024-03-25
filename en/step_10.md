@@ -21,8 +21,7 @@ line_number_start:
 line_highlights: 
 ---
 
-      <div id="ability-input">
-        <label>Ability:</label>
+        <label for="ability-choice">Ability:</label>
         <select id="ability-choice">
           <option value="">Choose an option</option>
           <option value="Flight">Flying</option>
@@ -35,7 +34,6 @@ line_highlights:
           <option value="Speedstar">Speedstar</option>
           <option value="Ice">Ice</option>
         </select>
-      </div>
 
 --- /code ---
 
@@ -46,6 +44,8 @@ line_highlights:
 ---
 title: Add more form fields
 ---
+
+### Example: Add a country the character is from
 
 + Add HTML to `character.html`
 
@@ -58,8 +58,7 @@ line_number_start:
 line_highlights: 
 ---
 
-      <div id="country-input">
-        <label>Where is your hero from?:</label>
+        <label for="country-choice">Where is your hero from?:</label>
         <select id="country-choice">
           <option value="">Choose an option</option>
           <option value="Space">Space</option>
@@ -72,36 +71,17 @@ line_highlights:
           <option value="Australia">Australia</option>
           <option value="South Africa">South Africa</option>
         </select>
-      </div>
 
 --- /code ---
 
-+ Change styles on `style.css`
-
---- code ---
----
-language: css
-filename: style.css
-line_numbers: false
-line_number_start: 
-line_highlights: 
----
-
-#name-input, #ability-input, #country-input, #origin-input {
-  width: 100%;
-}
-
---- /code ---
-
-+ Update JavaScript on `script.js`
++ Update JavaScript on `scripts.js`
 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
-line_number_start: 
-line_highlights: 
+line_highlights: 8, 15, 41, 42
 ---
 
 // Create constants for superhero form
@@ -110,8 +90,9 @@ const summary = document.querySelector("#summary-section");
 
 const name = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
+const characterCountry = document.querySelector("#country-choice");
 const characterOrigin = document.querySelector("#origin-text");
-const characterCountry = document.querySelector("#country-text");
+
 
 // Function to display summary
 function displaySummary() {
@@ -142,10 +123,10 @@ function checkForm(){
     alertMessage = "Please enter a name"; 
   } else if (characterAbility.value == "") {
     alertMessage = "Please choose an ability";
+  } else if (characterCountry.value == "") {
+    alertMessage = "Please select where your hero is from";
   } else if (characterOrigin.value == "") {
     alertMessage = "Please write the origin story";
-  } else if (characterCountry.value == "") {
-    alertMessage = "Please choose a country of origin";
   } 
 
   if (alertMessage != ""){
@@ -171,7 +152,7 @@ In the starter projects there are more images you can use in your hero slider:
 
 `kwame-cape.jpg` and `ellenhero-image.jpg`
 
-You can add more images to your slider by updating `index.html` and `script.js`.
+You can add more images to your slider by updating `index.html` and `scripts.js`.
 
 --- code ---
 ---
@@ -200,7 +181,7 @@ If you have five images, then you will need to change the code like this:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 85-86
@@ -237,7 +218,7 @@ The `.length` property returns the number of elements in a list.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 75
 line_highlights: 85-86

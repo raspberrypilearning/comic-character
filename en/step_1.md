@@ -8,7 +8,7 @@ In this project, you will combine JavaScript, HTML and CSS, to create an interac
 </p>
 
 You will:
-+ Use the `Date()` function in JavaScript to update Copyright text on your website
++ Use JavaScript to change text on a webpage
 + Add a form and input options to let people create a superhero character
 + Use JavaScript to show/hide elements on your website
 + Add light/dark mode options to your website

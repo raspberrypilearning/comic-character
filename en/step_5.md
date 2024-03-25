@@ -10,7 +10,7 @@ You need a function that shows the form and hides the summary when the user clic
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Find the comment `// Function to edit form content`
 
@@ -23,7 +23,7 @@ In your function:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 25
 line_highlights: 26-29
@@ -55,15 +55,15 @@ Add the text 'Edit' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 45
+line_number_start: 39
+line_highlights: 42
 ---
 
-    <section id="summary-section">
-      <h2>Superhero Summary</h2>
-      <p id="summary-paragraph"></p>
-      <button onclick="changeSummary()">Edit</button>
-    </section>
+      <section id="summary-section">
+        <h2>Superhero Summary</h2>
+        <p id="summary-paragraph"></p>
+        <button onclick="changeSummary()">Edit</button>
+      </section>
     
 --- /code ---
 

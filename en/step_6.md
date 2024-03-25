@@ -21,15 +21,13 @@ Change the function that handles the Create button's `onclick` event.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 46
+line_number_start: 33
+line_highlights: 35
 ---
 
-    <div id="origin-input">
-      <label>Origin Story:</label> 
-      <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    </div>
-    <button onclick="checkForm()">Create</button>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+        <button onclick="checkForm()">Create</button>
     
 --- /code ---
 
@@ -48,18 +46,16 @@ Create an empty `<div>` element with the attribute `id="alert"` below the Create
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 42
-line_highlights: 47-48
+line_number_start: 33
+line_highlights: 35-36
 ---
 
-      <div id="origin-input">
-        <label>Origin Story:</label> 
+        <label for="origin-text">Origin Story:</label>
         <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-     </div>
-     <button onclick="checkForm()">Create</button>
-     <div id="alert"> 
-     </div>
-  </section>
+        <div id="alert"> 
+        </div>
+        <button onclick="checkForm()">Create</button>
+      </section>
     
 --- /code ---
 
@@ -71,7 +67,7 @@ You need to update the contents of the alert div with a message.
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
 
@@ -80,7 +76,7 @@ Assign this to a constant `alertBox`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 32
@@ -107,7 +103,7 @@ Create the function `checkForm()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 34-36
@@ -134,7 +130,7 @@ Create the variable `alertMessage` and assign it an empty string(`""`).
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 36
@@ -184,10 +180,10 @@ Use an `if` statement to check if the value of `characterName` is empty.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 38
+line_highlights: 38-40
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
@@ -196,7 +192,9 @@ function checkForm(){
 
   var alertMessage = "";
 
-  if (characterName.value == "")
+  if (characterName.value == ""){
+
+  }
 
 }
     
@@ -215,10 +213,10 @@ The string needs to be a message that tells the user what to if the **Superhero 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 38-40
+line_highlights: 39
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
@@ -241,9 +239,11 @@ function checkForm(){
 
 When you created `alertMessage`, you assigned it an empty string (`""`).
 
-You only need to show an alert if a message has been assigned to `alertMessage`.
+If the **Superhero Name** field is blank, then you set `alertMessage` to a message to alert the user.
 
-You need to check if `alertMessage` is **not** an empty string now.
+You only want to show the alert if there is a message in `alertMessage`.
+
+So you need to check if `alertMessage` is **not** an empty string now.
 
 --- task ---
 
@@ -254,7 +254,7 @@ Use an `if` statement to check if the variable `alertMessage` is **not** an empt
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 42-44
@@ -288,7 +288,7 @@ Set the `.innerText` content of `alertBox` to the string held in `alertMessage`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 43
@@ -333,7 +333,7 @@ line_highlights: 4
 
 #alert {
   text-align: center;
-  color: var(--text-color-alert);
+  color: var(--text-colour-alert);
   display: none;
 }
     
@@ -350,7 +350,7 @@ In your new if statement, set the `display` property for the `#alert` selector t
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 44
@@ -404,10 +404,10 @@ Use an `else` statement to set the `display` property for the `#alert` selector 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
-line_highlights: 45-47
+line_highlights: 45-48
 ---
 // Function to check the character details form 
 const alertBox = document.querySelector("#alert");
@@ -442,8 +442,6 @@ function checkForm(){
 + The summary will show.
 **Notice:** The ability and origin story sections will be blank
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -454,6 +452,8 @@ title: The summary section is not showing
 + Check you have called the `displaySummary()` function in your `else` block.
 
 --- /collapse ---
+
+--- /task ---
 
 ### Check the Ability field
 
@@ -493,7 +493,7 @@ The string needs to be a message that tells the user what to if the **Ability** 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 40-42
@@ -535,7 +535,7 @@ Add an alert message to show the user if it is blank.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 31
 line_highlights: 42-44
@@ -575,6 +575,16 @@ function checkForm(){
 + Click the Create button. An alert message will show for any field you have left blank.
 + Test this a few times with a different form fields.
 + Complete all form fields. Click 'Create' to see the summary.
+
+--- collapse ---
+
+---
+title: I should be getting alerts but I am not
+---
+
++ Check you have added `.value` after `characterName`, `characterAbility` and `characterOrigin`.
+
+--- /collapse ---
 
 --- /task ---
 

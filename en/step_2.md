@@ -27,13 +27,13 @@ Your starter project contains:
 + the images you will use in the project
 + a JavaScript file to make your website interactive and engaging
 
-### Add content to your footer section
-
 This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
-The **JavaScript** file you will use has already been linked to your web pages just before the closing `</body>` tag.
+The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
 
-The **CSS** file you will use has also been linked to your web pages.
+The **CSS** file you will use has also been linked to your webpages.
+
+### Add content to your footer section
 
 --- task ---
 
@@ -50,8 +50,8 @@ Add a `<p>` element containing the Copyright message.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 30
-line_highlights: 31
+line_number_start: 32
+line_highlights: 33
 ---
 
       <footer>
@@ -73,8 +73,8 @@ The `id` attribute is used to specify a unique identifier for an HTML element.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 30
-line_highlights: 31
+line_number_start: 32
+line_highlights: 33
 ---
 
       <footer>
@@ -85,10 +85,14 @@ line_highlights: 31
 
 --- /task ---
 
+--- task ---
+
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer) of your web page.
++ The Copyright message will be shown at the bottom (footer) of your webpage.
   
 **Notice:** there is no date shown yet.
+
+--- /task ---
 
 There is no text inside the `<span>` element. 
 
@@ -114,14 +118,14 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Create a constant `currentDate` to hold a new `Date()` object.
 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 2
@@ -158,22 +162,22 @@ To access the `<span>` element, you will 'select' it, using the Document Object 
 title: What is the Document Object Model?
 ---
 
-The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with web page elements.
+The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
 
-It represents the structure of a web page (document).
+It represents the structure of a webpage (document).
 
-`querySelector()` is a DOM method that returns the first element in your web page that matches a specified CSS selector (e.g. `copyrightYear`)
+`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `#copyrightYear`)
 
 --- /collapse ---
 
 --- task ---
 
-Use the `querySelector()` method to find the element in the web page document with the attribute `id="copyrightYear"`.
+Use the `querySelector()` method to find the element in the webpage document with the attribute `id="copyrightYear"`.
 
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 3
@@ -203,7 +207,7 @@ Set the `.innerText` content of the `<span>` with the attribute `id="copyrightYe
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 1
 line_highlights: 3
@@ -221,8 +225,6 @@ line_highlights: 3
 **Click Run**
 + You should see the current year displayed in the copyright message.
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -234,6 +236,8 @@ title: The year is not displayed
 + Check there is a `;` colon at the end of lines 2 and 3.
   
 --- /collapse ---
+
+--- /task ---
 
 --- task ---
 
@@ -268,8 +272,12 @@ line_highlights: 28
 
 **Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer section) of your web page.
++ The Copyright message will be shown at the bottom (footer section) of your webpage.
 + It will include the year.
 
 --- /task ---
@@ -292,6 +300,6 @@ Retrieve specific components of the date and time:
 
 --- /collapse ---
 
-Great job! You have added some dynamic content to your web pages!
+Great job! You have added some dynamic content to your webpages!
 
-Next, you will design an interactive web page where the user can create their own character.
+Next, you will design an interactive webpage where the user can create their own character.

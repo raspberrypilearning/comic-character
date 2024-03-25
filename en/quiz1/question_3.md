@@ -11,7 +11,7 @@ How many images is this code designed to handle?
 --- code ---
 ---
 language: JavaScript
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 
 line_highlights: 

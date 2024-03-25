@@ -19,8 +19,8 @@
       </nav>
       <div class="switch-container">
         <label class="switch">
-            <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
-            <span class="switch-slider"></span>
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
+          <span class="switch-slider"></span>
         </label>
         <span class="switch-label material-symbols-outlined">light_mode</span>
       </div>
@@ -28,44 +28,36 @@
   
     <main>
       <section id="character-details"> <!--Superhero character details-->
-        <div id="name-input">
-          <label>Superhero Name:</label>
-          <input type="text" id="name-text">
-        </div>
-        <div id="ability-input">
-          <label>Ability:</label>
-          <select id="ability-choice">
-            <option value="">Choose an option</option>
-            <option value="Flight">Flying</option>
-            <option value="Invisibility">Invisibility</option>
-            <option value="Time travel">Time travel</option>
-            <option value="Telepathy">Telepathy</option>
-            <option value="Visions">Visions</option>
-            <option value="Stretch">Stretch</option>
-            <option value="Shapeshift">Shapeshift</option>
-            <option value="Speedstar">Speedstar</option>
-            <option value="Ice">Ice</option>
-          </select>
-        </div>
-        <div id="country-input">
-          <label>Where is your hero from?:</label>
-          <select id="country-choice">
-            <option value="">Choose an option</option>
-            <option value="Space">Space</option>
-            <option value="Wakanda">Wakanda</option>
-            <option value="USA">USA</option>
-            <option value="UK">UK</option>
-            <option value="India">India</option>
-            <option value="China">China</option>
-            <option value="Nigeria">Nigeria</option>
-            <option value="Australia">Australia</option>
-            <option value="South Africa">South Africa</option>
-          </select>
-        </div>
-        <div id="origin-input">
-          <label>Origin Story:</label> 
-          <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-        </div>
+        <label for="name-text">Superhero Name:</label>
+        <input type="text" id="name-text">
+        <label for="ability-choice">Ability:</label>
+        <select id="ability-choice">
+          <option value="">Choose an option</option>
+          <option value="Flight">Flying</option>
+          <option value="Invisibility">Invisibility</option>
+          <option value="Time travel">Time travel</option>
+          <option value="Telepathy">Telepathy</option>
+          <option value="Visions">Visions</option>
+          <option value="Stretch">Stretch</option>
+          <option value="Shapeshift">Shapeshift</option>
+          <option value="Speedstar">Speedstar</option>
+          <option value="Ice">Ice</option>
+        </select>
+        <label for="country-choice">Where is your hero from?:</label>
+        <select id="country-choice">
+          <option value="">Choose an option</option>
+          <option value="Space">Space</option>
+          <option value="Wakanda">Wakanda</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="India">India</option>
+          <option value="China">China</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Australia">Australia</option>
+          <option value="South Africa">South Africa</option>
+        </select>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
         <button onclick="checkForm()">Create</button>
         <div id="alert"> 
         </div>
@@ -79,7 +71,6 @@
     <footer>
       <p> Ⓒ <span id="copyrightYear"></span> - All Rights Reserved</p>
     </footer>
-    <script src="script.js"></script>
-
+    <script src="scripts.js"></script>
   </body>
 </html>

@@ -10,7 +10,64 @@ The website will remember the user's choice even if they navigate to another pag
 <span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
 </p>
 
-Your `style.css` file includes selectors used to update your website's colour scheme. Find the comment `/* Light Mode Styles */` to see them.
+Your `style.css` file includes selectors used to update your website's colour scheme.
+
+--- collapse ---
+
+**Tip:** This is just here to remind you. You don't have to write it again!
+
+---
+title: Light mode styles
+---
+
+--- code ---
+---
+language: css
+filename: style.html
+line_numbers: true
+line_number_start: 244
+---
+
+/* Light Mode Styles */
+
+body.light-mode {
+  background: var(--background-colour-light-mode);
+  color: var(--text-colour-light-mode);
+}
+
+.light-mode .navigation {
+  background-color: var(--background-colour-light-mode-navigation);
+}
+
+.light-mode .year {
+  color: var(--text-colour-light-mode-year);
+}
+
+.light-mode .logo {
+  color: var(--text-colour-light-mode-logo);
+}
+
+.light-mode nav a {
+  color: var(--text-colour-light-mode-nav);
+}
+
+.light-mode nav a:hover {
+  color: var(--text-colour-light-mode-nav-hover);
+}
+
+.light-mode .header {
+  background: var(--background-colour-light-mode-header);
+}
+
+.light-mode footer {
+  background: var(--background-colour-light-mode-footer);
+  color: var(--text-colour-light-mode-footer);
+}
+
+
+--- /code ---
+
+--- /collapse ---
 
 ### Add a switch to the header
 
@@ -78,7 +135,12 @@ line_highlights: 21-24
 
 --- /task ---
 
-**Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+--- task ---
+
+**Click Run**
++ **Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+
+--- /task ---
 
 ### Add an icon to the switch
 
@@ -90,7 +152,7 @@ Google fonts provides icons and a way to add them to your website.
 <span style="color: #0faeb0">**Icons**</span> are an accessible way of representing text because they are universally understood.
 </p>
 
-The Google icon has already been included inside the `<head>` element of your web pages. The CSS styles have also been provided.
+The Google icon has already been included inside the `<head>` element of your webpages. The CSS styles have also been provided.
 
 --- collapse ---
 
@@ -154,11 +216,13 @@ line_highlights: 25
       
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run**
 + Your switch should appear on the right in your nav bar.
 + You can click the switch, but it will not do anything... yet!
-
---- /task ---
 
 --- collapse ---
 
@@ -170,11 +234,13 @@ title: The switch does not display properly
 
 --- /collapse ---
 
+--- /task ---
+
 ### Create an event handler for your switch
 
 --- task ---
 
-Open `script.js`. 
+Open `scripts.js`. 
 
 Find the comment `// Create the constant for light mode`
 
@@ -185,7 +251,7 @@ Assign it to a constant `lightModeSwitch`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 55
 line_highlights: 56
@@ -206,7 +272,7 @@ Create the function `changeLightMode()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 59-61
@@ -234,7 +300,7 @@ Make the function assign the value of the switch's `.checked` property to the va
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 60
@@ -286,7 +352,7 @@ This will add the class to the element if it is not there, or remove it if it is
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 61
@@ -320,19 +386,23 @@ line_number_start: 20
 line_highlights: 22
 ---
 
-    <div class="switch-container">
-      <label class="switch">
-        <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
-        <span class="switch-slider"></span>
-      </label>
-      <span class="switch-label material-symbols-outlined">light_mode</span>
-    </div>
+      <div class="switch-container">
+        <label class="switch">
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="switch-label material-symbols-outlined">light_mode</span>
+      </div>
       
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Click Run** 
 + Click on the switch to slide it into the light mode position.
-+ The colours of your web page should change.
++ The colours of your webpage should change.
 
 --- /task ---
 
@@ -374,7 +444,7 @@ Example: `localStorage.clear()`
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use the `.setItem` method to add the key-value pair:
 + Set the 'key' to `"lightMode"`
@@ -383,7 +453,7 @@ Use the `.setItem` method to add the key-value pair:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 58
 line_highlights: 62
@@ -402,7 +472,7 @@ function changeLightMode(){
 
 ### Get the user's preference
 
-When the web page loads, you need to check if lightMode was set.
+When the webpage loads, you need to check if lightMode was set.
 
 You can use `addEventListener` for this.
 
@@ -440,7 +510,7 @@ Use `.addEventListener` to trigger a function in response to a page load event.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 66-68
@@ -453,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
 --- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the web page is ready. 
+`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready. 
 
 **Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
 
@@ -468,7 +538,7 @@ Add an `if` statement to check if `lightMode` is set to `"true"`
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 68-70
@@ -500,7 +570,7 @@ Toggle the `light-mode` class.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 69
@@ -530,7 +600,7 @@ Set the value of the switch's `.checked` property to the Boolean value `true`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 65
 line_highlights: 70
@@ -568,7 +638,7 @@ line_highlights: 20-26
       </nav>
       <div class="switch-container">
         <label class="switch">
-          <input type="checkbox" id="lightModeSwitch" onchange="changeLightMode()">
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
           <span class="switch-slider"></span>
         </label>
         <span class="toggle-label material-symbols-outlined">light_mode</span>
@@ -579,10 +649,14 @@ line_highlights: 20-26
 
 --- /task ---
 
+--- task ---
+
 **Click Run** 
 + Your switch should appear in your nav bar to the right.
 + Click the switch on and off to see the theme colours change.
 + Navigate to the `index.html` page to check that your light mode preference stays on.
+
+--- /task ---
 
 Great work! You have created a switch that allows the user to change colour themes. 
 

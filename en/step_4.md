@@ -45,19 +45,20 @@ Add the text 'Create' to the `<button>`, so the user knows what the button does.
 language: html
 filename: character.html
 line_numbers: true
-line_number_start: 36
-line_highlights: 41
+line_number_start: 33
+line_highlights: 35
 ---
 
-          </div>
-          <div id="origin-input">
-            <label>Origin Story:</label> 
-            <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-          </div>
-          <button onclick="displaySummary()">Create</button>
-        </section>
+        <label for="origin-text">Origin Story:</label>
+        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+        <button onclick="displaySummary()">Create</button>
+      </section>
 
 --- /code ---
+
+--- /task ---
+
+--- task ---
 
 **Click Run**
 + You will see a Create button below your superhero form.
@@ -79,7 +80,7 @@ Your function will use constants that refer to each section.
 
 --- task ---
 
-Open `script.js`.
+Open `scripts.js`.
 
 Use the `querySelector()` method to find:
 + the summary section element and assign it to the constant `summary`.
@@ -88,7 +89,7 @@ Use the `querySelector()` method to find:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 6-7
@@ -114,7 +115,7 @@ Use `querySelector()` methods to find the form elements and assign each to a con
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
 line_number_start: 5
 line_highlights: 9-11
@@ -137,6 +138,8 @@ In `character.html`, you added a `<p>` element with the attribute `id="summary-p
 
 --- collapse ---
 
+**Tip:** This is just here to remind you. You don't have to write it again!
+
 ---
 title: The summary paragraph you created earlier
 ---
@@ -145,15 +148,15 @@ title: The summary paragraph you created earlier
 ---
 language: html
 filename: character.html
-line_numbers: true
+line_numbers: false
 line_number_start: 
 line_highlights: 3
 ---
 
-		<section id="summary-section">
-		  <h2>Superhero Summary</h2>
-		  <p id="summary-paragraph"></p>
-		</section>
+      <section id="summary-section">
+        <h2>Superhero Summary</h2>
+        <p id="summary-paragraph"></p>
+      </section>
 
 --- /code ---
 
@@ -170,10 +173,10 @@ Create a function `displaySummary()`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 15-17
+line_number_start: 13
+line_highlights: 14-16
 ---
     
 // Function to display summary
@@ -196,10 +199,10 @@ Assign the element to the constant `summaryParagraph`.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 16
+line_number_start: 13
+line_highlights: 15
 ---
     
 // Function to display summary
@@ -246,7 +249,7 @@ Here is an example:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
 ---
     
@@ -267,7 +270,7 @@ Here is an example:
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: false
 ---
     
@@ -284,13 +287,15 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 Update the `.textContent` of the `summaryParagraph`.
 
+**Notice** The text content is inside backticks ``` ` ` ``` instead of using `" "` or `' '`
+
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 18-20
+line_number_start: 13
+line_highlights: 17-19
 ---
     
 // Function to display summary
@@ -318,10 +323,10 @@ This will hide the whole form on the page.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 22
+line_number_start: 13
+line_highlights: 21
 ---
     
 // Function to display summary
@@ -349,10 +354,10 @@ This will display the summary section on your page.
 --- code ---
 ---
 language: js
-filename: script.js
+filename: scripts.js
 line_numbers: true
-line_number_start: 14
-line_highlights: 23
+line_number_start: 13
+line_highlights: 22
 ---
     
 // Function to display summary
@@ -380,8 +385,6 @@ Open `character.html`.
 + When you click the Create button, the form will be hidden and the summary section will be displayed.
 + The summary paragraph will include a summary of your character.
 
---- /task ---
-
 --- collapse ---
 
 ---
@@ -393,6 +396,8 @@ title: The summary section is not displaying properly
 + Check you have added `;` a semicolon at the end of your declarations.
 
 --- /collapse ---
+
+--- /task ---
 
 Well done! You have created an interactive form that shows/hides elements. 
 

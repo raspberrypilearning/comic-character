@@ -4,7 +4,7 @@ body, html {
 }
   
 body {
-  background: var(--background-color-body);
+  background: var(--background-colour-body);
 }
 
 main {
@@ -13,8 +13,8 @@ main {
 
 footer {
   height: 10vh;
-  background: var(--background-color-footer);
-  color: var(--text-color-footer);
+  background: var(--background-colour-footer);
+  color: var(--text-colour-footer:);
   text-align: center;
   position: absolute;
   width: 100%;
@@ -32,7 +32,7 @@ section {
 
 .header {
   height: 10vh;
-  background: var(--background-color-header);
+  background: var(--background-colour-header);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +40,7 @@ section {
 
 .logo {
   font-size: 32px;
-  color: var(--text-color-logo);
+  color: var(--text-colour-logo);
   text-decoration: none;
   font-weight: 700;
   padding-left: 10px;
@@ -57,22 +57,17 @@ section {
 nav a {
   display: inline;
   font-size: 18px;
-  color: var(--text-color-nav-link);
+  color: var(--text-colour-nav-link);
   text-decoration: none;
   font-weight: 500;
   padding-right: 40px;
 }
 
 nav a:hover {
-  color: var(--text-color-nav-hover);
+  color: var(--text-colour-nav-hover);
 }
 
 /* Create a character */
-
-#name-input, #ability-input, #origin-input {
-  width: 100%;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
@@ -88,9 +83,9 @@ textarea {
 }
 
 button {
-  background-color: var(--button-color);
+  background-color: var(--button-colour);
   width: 200px;
-  color: #ffffff;
+  color: var(--button-text-colour);
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -98,7 +93,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-hover-colour);
 }
 
 textarea {
@@ -106,8 +101,8 @@ textarea {
 }
 
 #summary-section {
-  background-color: var(--background-color-section);
-  border: 1px solid var(--border-color-section);
+  background-color: var(--background-colour-section);
+  border: 1px solid var(--border-colour-section);
   border-radius: 5px;
   padding: 5px;
   display: none;
@@ -116,19 +111,19 @@ textarea {
 #summary-section h2 {
   width: 100%;
   text-align: center;
-  color: var(--text-color-section-heading);
+  color: var(--text-colour-section-heading);
 }
 
 #summary-section p {
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  color: var(--text-color-section-summary);
+  color: var(--text-colour-section-summary);
 }
 
 #alert {
   text-align: center;
-  color: var(--text-color-alert);
+  color: var(--text-colour-alert);
   display: none;
 }
 
@@ -153,7 +148,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--background-color-switch);
+  background-color: var(--background-colour-switch);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -165,13 +160,13 @@ textarea {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--switch-color);
+  background-color: var(--switch-colour);
   transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .switch-slider {
-  background-color: var(--background-color-switch-checked);
+  background-color: var(--background-colour-switch-checked);
 }
 
 input:checked + .switch-slider:before {
@@ -181,7 +176,7 @@ input:checked + .switch-slider:before {
 .switch-label {
   margin-left: 10px;
   padding-right: 10px;
-  color: var(--text-color-switch-label);
+  color: var(--text-colour-switch-label);
 }
 
 /* Hero Slider */
@@ -217,8 +212,8 @@ input:checked + .switch-slider:before {
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
-  background: var(--background-color-hero-nav);
-  color: var(--text-color-hero-nav);
+  background: var(--background-colour-hero-nav);
+  color: var(--text-colour-hero-nav);
   padding: 10px;
   cursor: pointer;
   border: none;
@@ -249,37 +244,37 @@ input:checked + .switch-slider:before {
 /* Light Mode Styles */
 
 body.light-mode {
-  background: var(--background-color-light-mode);
-  color: var(--text-color-light-mode);
+  background: var(--background-colour-light-mode);
+  color: var(--text-colour-light-mode);
 }
 
 .light-mode .navigation {
-  background-color: var(--background-color-light-mode-navigation);
+  background-color: var(--background-colour-light-mode-navigation);
 }
 
 .light-mode .year {
-  color: var(--text-color-light-mode-year);
+  color: var(--text-colour-light-mode-year);
 }
 
 .light-mode .logo {
-  color: var(--text-color-light-mode-logo);
+  color: var(--text-colour-light-mode-logo);
 }
 
 .light-mode nav a {
-  color: var(--text-color-light-mode-nav);
+  color: var(--text-colour-light-mode-nav);
 }
 
 .light-mode nav a:hover {
-  color: var(--text-color-light-mode-nav-hover);
+  color: var(--text-colour-light-mode-nav-hover);
 }
 
 .light-mode .header {
-  background: var(--background-color-light-mode-header);
+  background: var(--background-colour-light-mode-header);
 }
 
 .light-mode footer {
-  background: var(--background-color-light-mode-footer);
-  color: var(--text-color-light-mode-footer);
+  background: var(--background-colour-light-mode-footer);
+  color: var(--text-colour-light-mode-footer);
 }
 
 .menu-icon {
