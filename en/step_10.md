@@ -90,8 +90,9 @@ const summary = document.querySelector("#summary-section");
 
 const name = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
-const characterOrigin = document.querySelector("#origin-text");
 const characterCountry = document.querySelector("#country-choice");
+const characterOrigin = document.querySelector("#origin-text");
+
 
 // Function to display summary
 function displaySummary() {
@@ -122,10 +123,10 @@ function checkForm(){
     alertMessage = "Please enter a name"; 
   } else if (characterAbility.value == "") {
     alertMessage = "Please choose an ability";
+  } else if (characterCountry.value == "") {
+    alertMessage = "Please select where your hero is from";
   } else if (characterOrigin.value == "") {
     alertMessage = "Please write the origin story";
-  } else if (characterCountry.value == "") {
-    alertMessage = "Please choose a country of origin";
   } 
 
   if (alertMessage != ""){
