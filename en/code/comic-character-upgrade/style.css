@@ -14,7 +14,7 @@ main {
 footer {
   height: 10vh;
   background: var(--background-colour-footer);
-  color: var(--text-colour-footer:);
+  color: var(--text-colour-footer);
   text-align: center;
   position: absolute;
   width: 100%;
