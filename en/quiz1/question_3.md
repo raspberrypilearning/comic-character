@@ -39,7 +39,7 @@ if (currentHeroIndex < 0){
 
   --- feedback ---
 
-  Not quite! `3` is the final index number. Indexing starts at `0`
+  Not quite! `3` is the final index number. Indexing starts at `0`.
  
   --- /feedback ---
 
@@ -47,7 +47,7 @@ if (currentHeroIndex < 0){
 
   --- feedback ---
 
-  Correct! `currentHeroIndex` contains four items, starting at index `0` and finishing at index `3`
+  Correct! `currentHeroIndex` contains four items, starting at index `0` and finishing at index `3`.
 
   --- /feedback ---
 
