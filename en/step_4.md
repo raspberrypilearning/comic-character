@@ -21,14 +21,14 @@ title: Other events
 Events can be triggered by the user or the browser.
 
 + User events:
-  + Mouse events (click, double click, mouseover).
-  + Keyboard events (keypress, keydown, keyup).
-  + Touch events (touchstart, touchmove, touchend).
+  + Mouse events (click, double click, mouseover)
+  + Keyboard events (keypress, keydown, keyup)
+  + Touch events (touchstart, touchmove, touchend)
 
 + Browser events:
-  + Page load events (load, unload).
-  + Window events (resize, scroll).
-  + Time events (setInterval, setTimeout).
+  + Page load events (load, unload)
+  + Window events (resize, scroll)
+  + Time events (setInterval, setTimeout)
 
 --- /collapse ---
 
@@ -36,7 +36,7 @@ Events can be triggered by the user or the browser.
 
 Open the `character.html` file.
 
-Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div` 
+Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div`. 
 
 Add the text 'Create' to the `<button>`, so the user knows what the button does.
 
@@ -61,8 +61,8 @@ line_highlights: 35
 --- task ---
 
 **Click Run**
-+ You will see a Create button below your superhero form.
-+ The Create button does not do anything at the moment. 
++ You will see a Create button below your superhero form
++ The Create button does not do anything at the moment 
 
 --- /task ---
 
@@ -83,8 +83,8 @@ Your function will use constants that refer to each section.
 Open `scripts.js`.
 
 Use the `querySelector()` method to find:
-+ the summary section element and assign it to the constant `summary`.
-+ the character details section element and assign it to the constant `characterDetails`.
++ The summary section element and assign it to the constant `summary`
++ The character details section element and assign it to the constant `characterDetails`
 
 --- code ---
 ---
@@ -104,7 +104,7 @@ const characterDetails = document.querySelector("#character-details");
 
 ### Create constants to refer to each form field
 
-You need to display the three character details to in the summary section.
+You need to display the three character details in the summary section.
 
 Set each as a constant, so you can refer to them in your code.
 
@@ -241,7 +241,7 @@ If you want to include the values from constants, variables, or expressions in a
 
 Instead of using `" "` or `' '`, you use backticks ``` ` ` ``` to indicate a string.
 
-Then use `${}` and place the constant, variable or expression inside the `{}` part.
+Then use `${}` and place the constant, variable, or expression inside the `{}` part.
 
 Here is an example:
 + Include the values held in the constants `heroName` and `age` inside a string.
@@ -287,7 +287,7 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 Update the `.textContent` of the `summaryParagraph`.
 
-**Notice** The text content is inside backticks ``` ` ` ``` instead of using `" "` or `' '`
+**Notice:** The text content is inside backticks ``` ` ` ``` instead of using `" "` or `' '`.
 
 --- code ---
 ---
@@ -381,19 +381,19 @@ function displaySummary() {
 Open `character.html`.
 
 **Click Run** 
-+ Fill in the character details.
-+ When you click the Create button, the form will be hidden and the summary section will be displayed.
-+ The summary paragraph will include a summary of your character.
++ Fill in the character details
++ When you click the Create button, the form will be hidden and the summary section will be displayed
++ The summary paragraph will include a summary of your character
 
 --- collapse ---
 
 ---
 title: The summary section is not displaying properly
 ---
-+ Check you have named all constants (`const`) correctly.
-+ Check you have used correct syntax when creating the functions, including `()` and `{}`.
-+ Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element.
-+ Check you have added `;` a semicolon at the end of your declarations.
++ Check you have named all constants (`const`) correctly
++ Check you have used correct syntax when creating the functions, including `()` and `{}`
++ Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element
++ Check you have added a semicolon `;` at the end of your declarations
 
 --- /collapse ---
 
