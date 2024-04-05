@@ -1,4 +1,4 @@
-## Add Copyright message to footer
+## Add copyright message to footer
 
 In this step, you will create a copyright message and a function to automatically update the current year. You will add this to your footer section.
 
@@ -11,9 +11,9 @@ In this step, you will create a copyright message and a function to automaticall
 In modern web design, websites include a footer section, displaying a copyright message. 
 
 A copyright message usually contains:
-+ a copyright symbol Ⓒ
-+ the owner of the website
-+ the year the content was published
++ A copyright symbol Ⓒ
++ The name of the owner of the website
++ The year the content was published
 
 --- task ---
 
@@ -22,10 +22,10 @@ Open the [Comic Character starter project](https://staging-editor.raspberrypi.or
 --- /task ---
 
 Your starter project contains:
-+ two HTML pages with some content
-+ a CSS file that contains styling for some of the content
-+ the images you will use in the project
-+ a JavaScript file to make your website interactive and engaging
++ Two HTML pages with some content
++ A CSS file that contains styling for some of the content
++ The images you will use in the project
++ A JavaScript file to make your website interactive and engaging
 
 This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica). 
 
@@ -41,7 +41,7 @@ Open the `index.html` file.
 
 Find the `footer` element.
 
-Add a `<p>` element containing the Copyright message. 
+Add a `<p>` element containing the copyright message. 
 
 (You can change the fictional name `Malik Johnson` to a name of your choice.)
 
@@ -88,9 +88,9 @@ line_highlights: 33
 --- task ---
 
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer) of your webpage.
++ The copyright message will be shown at the bottom (footer) of your webpage.
   
-**Notice:** there is no date shown yet.
+**Notice:** There is no date shown yet.
 
 --- /task ---
 
@@ -154,15 +154,15 @@ The current year will be added to the `<span>` element you created earlier.
 
 JavaScript can be used to find and change HTML elements.
 
-To access the `<span>` element, you will 'select' it, using the Document Object Model method: `querySelector()`. 
+To access the `<span>` element, you will 'select' it, using the document object model method: `querySelector()`. 
 
 --- collapse ---
 
 ---
-title: What is the Document Object Model?
+title: What is the document object model?
 ---
 
-The Document Object Model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
+The document object model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
 
 It represents the structure of a webpage (document).
 
@@ -192,7 +192,7 @@ line_highlights: 3
 
 The querySelector will find the whole `<span>` element. 
 
-You only need to change the text *inside* the element. 
+You only need to change the text **inside** the element. 
 
 The `.innerText` property can be used to refer to the text content of an HTML element.
 
@@ -233,7 +233,7 @@ title: The year is not displayed
 + Check there is a `#` in `copyrightYear` in the `querySelector`
 + Check you have opening and closing brackets `()` at the end of `.getFullYear()`
 + Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
-+ Check there is a `;` colon at the end of lines 2 and 3.
++ Check there is a `;` at the end of lines 2 and 3
   
 --- /collapse ---
 
@@ -241,9 +241,9 @@ title: The year is not displayed
 
 --- task ---
 
-Open `index.html` 
+Open `index.html`. 
 
-Copy (CTRL + C) or (CMD + C) the `<p>` element within the footer.
+Copy (CTRL + C or CMD + C) the `<p>` element within the footer.
 
 --- /task ---
 
@@ -253,7 +253,7 @@ Open the `character.html` file.
 
 Find the `footer` element.
 
-Paste (CTRL + V) or (CMD + V) the `<p>` element you copied earlier.
+Paste (CTRL + V or CMD + V) the `<p>` element you copied earlier.
 
 --- code ---
 ---
@@ -277,8 +277,8 @@ line_highlights: 28
 --- task ---
 
 **Click Run**
-+ The Copyright message will be shown at the bottom (footer section) of your webpage.
-+ It will include the year.
++ The copyright message will be shown at the bottom (footer section) of your webpage
++ It will include the year
 
 --- /task ---
 
