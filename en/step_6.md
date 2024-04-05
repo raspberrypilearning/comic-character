@@ -63,7 +63,7 @@ line_highlights: 35-36
 
 ### Create an alert message
 
-You need to update the contents of the alert div with a message.
+You need to update the contents of the alert `<div>` with a message.
 
 --- task ---
 
@@ -92,7 +92,7 @@ You need a new `checkForm()` function to check each field on your form for an em
 
 If there is an empty value, an alert will be shown to the user in the `alertBox`. 
 
-The `alertBox` div will be hidden until it is needed.
+The `alertBox` `<div>` will be hidden until it is needed.
 
 ### Create the checkForm() function
 
@@ -164,10 +164,9 @@ For example, `var age = 10;` `age` is the name of the variable. It is assigned t
 
 ### Check the user has entered a superhero name
 
-
 You need to check each field to decide if it is empty.
 
-Start with the first field: `characterName`, which holds the HTML element with the attribute `id="name-text"`.
+Start with the first field, `characterName`, which holds the HTML element with the attribute `id="name-text"`.
 
 The `.value` property of a form field will be empty if the user has missed it.
 
@@ -175,7 +174,7 @@ The `.value` property of a form field will be empty if the user has missed it.
 
 Use an `if` statement to check if the value of `characterName` is empty.
 
-**Notice:** The operator `==` is used. It is means 'is the same as'.
+**Notice:** The operator `==` is used. It means 'is the same as'.
 
 --- code ---
 ---
@@ -341,11 +340,11 @@ line_highlights: 4
 
 --- /collapse ---
 
-If there is a message to show the user, you need to make the alert box appear.
+If there is a message to show to the user, you need to make the alert box appear.
 
 --- task ---
 
-In your new if statement, set the `display` property for the `#alert` selector to `block`
+In your new `if` statement, set the `display` property for the `#alert` selector to `block`.
 
 --- code ---
 ---
@@ -381,7 +380,7 @@ function checkForm(){
 **Click Run**
 + Leave the Superhero Name field blank
 + Click the Create button
-+ The alert message will show. 
++ The alert message will show 
 
 --- /task ---
 
@@ -438,8 +437,8 @@ function checkForm(){
 **Click Run** 
 + Fill in the Superhero Name field
 + Click the Create button
-+ The alert message will **not** show. 
-+ The summary will show.
++ The alert message will **not** show 
++ The summary will show
 **Notice:** The ability and origin story sections will be blank
 
 --- collapse ---
@@ -448,8 +447,8 @@ function checkForm(){
 title: The summary section is not showing
 ---
 
-+ Check you have used brackets`()` e.g. `if (characterName.value == "")` in `if` and `else` statements.
-+ Check you have called the `displaySummary()` function in your `else` block.
++ Check you have used brackets`()` e.g. `if (characterName.value == "")` in your `if` and `else` statements
++ Check you have called the `displaySummary()` function in your `else` block
 
 --- /collapse ---
 
@@ -582,7 +581,7 @@ function checkForm(){
 title: I should be getting alerts but I am not
 ---
 
-+ Check you have added `.value` after `characterName`, `characterAbility` and `characterOrigin`.
++ Check you have added `.value` after `characterName`, `characterAbility`, and `characterOrigin`.
 
 --- /collapse ---
 
