@@ -12,9 +12,9 @@ You need a function that shows the form and hides the summary when the user clic
 
 Open `scripts.js`.
 
-Find the comment `// Function to edit form content`
+Find the comment `// Function to edit form content`.
 
-Add the function `changeSummary()`
+Add the function `changeSummary()`.
 
 In your function:
 + Set the value of the `display` property of the character details `<section>` to `flex`
