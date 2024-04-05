@@ -1,6 +1,6 @@
 ## Create a hero image slider
 
-In this step you will create an interactive hero image slider for your webpage. 
+In this step, you will create an interactive hero image slider for your webpage. 
 
 The user can use buttons to move to the next or previous hero image.
 
@@ -42,13 +42,13 @@ title: I need the HTML explaining
 ---
 
 **Lines 31, 32 and 33:** 
-+ The `<span>` elements containing the Hero images.
++ The `<span>` elements contain the hero images
   + They all have the same attribute: `class="hero-slide"`
-+ The `active` class is used to show a particular image.
++ The `active` class is used to show a particular image
 
 **Lines 35 and 36:** 
-+ Buttons used to navigate left `<` and right `>`.
-+ The JavaScript function `changeHero()` is used as event handler for button presses.
++ Buttons used to navigate left `<` and right `>`
++ The JavaScript function `changeHero()` is used as event handler for button presses
   + When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
   + When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
 
@@ -64,7 +64,7 @@ You can use `querySelectorAll()` to find and return a list of **all** `<span>` e
 
 Open `scripts.js`.
 
-Find the comment `// Change Hero function`
+Find the comment `// Change Hero function`.
 
 Use `querySelectorAll()` to return a list of all elements with the attribute `class="hero-slide"`.
 
@@ -125,7 +125,7 @@ The `changeHero()` function is called when the user moves to the next or previou
 
 --- task ---
 
-Find the comment `// Change Hero function`
+Find the comment `// Change Hero function`.
 
 Create a function `changeHero()` with the parameter `direction`.
 
@@ -162,7 +162,7 @@ First, it removes the `active` class from the current `<span>` element.
 
 --- task ---
 
-Remove the `active` class from the element at the currentHeroIndex in the `heroSlides` list.
+Remove the `active` class from the element at the `currentHeroIndex` in the `heroSlides` list.
 
 --- code ---
 ---
@@ -187,13 +187,13 @@ function changeHero(direction) {
 
 Square brackets are used to refer to the position of the element in the list.
 
-So: `heroSlides[currentHeroIndex]` is the element at the position `currentHeroIndex` in the list `heroSlides`
+So, `heroSlides[currentHeroIndex]` is the element at the position `currentHeroIndex` in the list `heroSlides`.
 
 --- /task ---
 
 ### Update the current index
 
-The function changes the `currentHeroIndex`
+The function changes the `currentHeroIndex`.
 
 It adds `1` or subtracts `1`, depending on the `direction` value passed to the function.
 
@@ -202,7 +202,7 @@ It adds `1` or subtracts `1`, depending on the `direction` value passed to the f
 
 --- task ---
 
-Update the value of `currentHeroIndex`
+Update the value of `currentHeroIndex`.
 
 --- code ---
 ---
@@ -232,7 +232,7 @@ function changeHero(direction) {
 
 There are three elements in the `heroSlides` list. 
 
-They are at indexes `0`, `1` and `2`.
+They are at indexes `0`, `1`, and `2`.
 
 If the value of the variable `currentHeroIndex` is `2`, then calling `changeHero(+1)` will change it to `3`.
 
@@ -245,8 +245,8 @@ If the value of the variable `currentHeroIndex` is `0`, then calling `changeHero
 You need a way to handle these 'out of range' issues!
 
 Here is how: 
-+ if the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (`2`);
-+ if the value of `currentHeroIndex` is greater `2`, set it to `0`;
++ If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (`2`)
++ If the value of `currentHeroIndex` is greater `2`, set it to `0`
 
 --- task ---
 
@@ -327,8 +327,8 @@ function changeHero(direction) {
 Open `index.html`.
 
 **Click Run** 
-+ Click the left (<) button on your hero image slider, the image should change.
-+ Click the right (>) button on your hero image slider, the image should change.
++ Click the left (<) button on your hero image slider, the image should change
++ Click the right (>) button on your hero image slider, the image should change
 
 --- collapse ---
 
