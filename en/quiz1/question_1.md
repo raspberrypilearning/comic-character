@@ -1,6 +1,6 @@
 ## Reflection
 
-Well done. You have created a website using HTML, CSS and JavaScript.
+Well done. You have created a website using HTML, CSS, and JavaScript.
 
 Answer the three questions below to reflect on what you've learnt.
 
@@ -30,7 +30,7 @@ What is the basic structure of a function?
 
   --- feedback ---
 
-  Almost! Brackets are required after the function name. These are used to hold any parameters used my the function 
+  Almost! Brackets are required after the function name. These are used to hold any parameters used by the function. 
 
   --- /feedback ---
 
