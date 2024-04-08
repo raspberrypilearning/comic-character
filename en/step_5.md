@@ -46,7 +46,7 @@ You need to create a new button to call the `changeSummary()` function.
 
 Open `character.html`.
 
-Add a `<button>` element with the event `onlick="changeSummary()` to the summary section.
+Add a `<button>` element with the event `onlick="changeSummary()"` to the summary section.
 
 Add the text 'Edit' to the `<button>`, so the user knows what the button does.
 
