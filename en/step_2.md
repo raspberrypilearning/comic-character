@@ -1,6 +1,6 @@
 ## Add copyright message to footer
 
-In this step, you will create a copyright message and a function to automatically update the current year. You will add this to your footer section.
+In this step, you will create a copyright message and a function to automatically update it to the current year. You will add this to your footer section.
 
 <iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -55,7 +55,7 @@ line_highlights: 33
 ---
 
       <footer>
-        <p> Ⓒ Malik Johnson- All Rights Reserved</p>
+        <p> Ⓒ Malik Johnson - All Rights Reserved</p>
       </footer>
 
 --- /code ---
@@ -78,7 +78,7 @@ line_highlights: 33
 ---
 
       <footer>
-        <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- All Rights Reserved</p>
+        <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson - All Rights Reserved</p>
       </footer>
 
 --- /code ---
@@ -265,7 +265,7 @@ line_highlights: 28
 ---
 
       <footer>
-        <p> <span id="copyrightYear"></span> Ⓒ Malik Johnson- All Rights Reserved</p>
+        <p> <span id="copyrightYear"></span> Ⓒ Malik Johnson - All Rights Reserved</p>
       </footer>
 
 --- /code ---
