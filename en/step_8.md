@@ -41,7 +41,7 @@ line_highlights:
 title: I need the HTML explaining
 ---
 
-**Lines 31, 32 and 33:** 
+**Lines 31, 32, and 33:** 
 + The `<span>` elements contain the hero images
   + They all have the same attribute: `class="hero-slide"`
 + The `active` class is used to show a particular image
@@ -246,7 +246,7 @@ You need a way to handle these 'out of range' issues!
 
 Here is how: 
 + If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (`2`)
-+ If the value of `currentHeroIndex` is greater `2`, set it to `0`
++ If the value of `currentHeroIndex` is greater than `2`, set it to `0`
 
 --- task ---
 
