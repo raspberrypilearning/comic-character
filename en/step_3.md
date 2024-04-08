@@ -131,7 +131,7 @@ title: Examples of input types
 <br><input type="radio" name="meal"><label>Lunch</label>
 <br>**Tip:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button. 
 
-+ **Number** Numeric data with arrows to increase/decrease the value 
++ **Number:** Numeric data with arrows to increase/decrease the value 
 <br>`<input type="number">`
 <br>*Try it*:
 <br><input type="number">
@@ -369,7 +369,7 @@ line_highlights: 37-38
 --- task ---
 
 **Click Run**
-+ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. 
++ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector is set to `none`, so it is hidden. 
 
 --- collapse ---
 
@@ -398,10 +398,10 @@ line_highlights: 6
 
 --- /collapse ---
 
-Next, you will add a button that can run JavaScript code to show it.
+Next, you will add a button that will run some JavaScript code to make the summary visible. 
 
 --- /task ---
 
 Fantastic work! Your character details page now contains a form with input fields.
 
-In the next step you will make your form interactive, so the user can view a summary of their character. 
+In the next step, you will make your form interactive, so the user can view a summary of their character. 
