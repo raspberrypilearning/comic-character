@@ -27,13 +27,23 @@ Explore the Superhero website.
 + Click the light mode switch to change the theme colours
 + Navigate to the Create Character page and complete the input fields to create your own superhero character!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
 </div>
+
+--- collapse ---
+
+---
+title: Images in this project
+---
+
+Images included in this project were created using generative AI. Model: Firefly Image 2
+
+--- /collapse ---
 
 --- /task ---
 --- /no-print ---
 
 --- print-only ---
-![Completed project](images/animated-story.png)
+![Completed project](images/comic-character.png)
 --- /print-only ---

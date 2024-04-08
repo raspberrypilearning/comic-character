@@ -4,7 +4,7 @@ In this step, you will create an interactive hero image slider for your webpage.
 
 The user can use buttons to move to the next or previous hero image.
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 ### The hero image HTML
 

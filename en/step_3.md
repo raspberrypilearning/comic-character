@@ -2,7 +2,7 @@
 
 In this step, you will design an interactive webpage and a form that the user can use to create their own superhero!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 You have added text and images to your website, but your user can change the content too!
 

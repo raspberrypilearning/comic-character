@@ -2,7 +2,7 @@
 
 In this step, you will check that the user has completed the form and warn them if they have missed a section.
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 At the moment, the user can submit the information even if they have left some form fields empty.
 
