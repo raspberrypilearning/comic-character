@@ -10,7 +10,7 @@ steps:
 - title: Introduction
 - title: Add copyright text
 - title: Add form elements
-- title: Show/hide elements
+- title: Show and hide elements
 - title: Change the summary
 - title: Check user input
 - title: Light mode theme
