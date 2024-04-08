@@ -1,4 +1,4 @@
-## Make items appear/disappear
+## Make items appear and disappear
 
 In this step, you will use JavaScript to make parts of your form appear and disappear. 
 
@@ -399,6 +399,6 @@ title: The summary section is not displaying properly
 
 --- /task ---
 
-Well done! You have created an interactive form that shows/hides elements. 
+Well done! You have created an interactive form that shows and hides elements. 
 
 Next, you will allow the user to edit their choices!
