@@ -1,10 +1,10 @@
 ## Upgrade your project
 
-If you have more time, you can: 
+If you have time, you can: 
 
-+ add more abilities on `character.html`
-+ add more form elements to your superhero creation form.
-+ add more images to your hero slider
++ Add more abilities on `character.html`
++ Add more form elements to your superhero creation form
++ Add more images to your hero slider
 
 --- collapse ---
 
@@ -74,7 +74,7 @@ line_highlights:
 
 --- /code ---
 
-+ Update JavaScript on `scripts.js`
++ Update JavaScript on `scripts.js`.
 
 --- code ---
 ---
@@ -148,7 +148,7 @@ function checkForm(){
 title: Add more hero images to the slider
 ---
 
-In the starter projects there are more images you can use in your hero slider:
+There are more images you can use for your hero slider in the starter projects:
 
 `kwame-cape.jpg` and `ellenhero-image.jpg`
 
@@ -208,12 +208,12 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 --- /code ---
 
-If you would like to handle any number of images, then instead of handling a fixed length, you can just check the length of `currentHeroIndex`
+If you would like to handle any number of images, then instead of handling a fixed length, you can just check the length of `currentHeroIndex`.
 
 The `.length` property returns the number of elements in a list.
 
-+ if the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (at the index that is the same as the length of the list minus 1)
-+ if the value of `currentHeroIndex` is greater than the last index in the list, set it to `0`
++ If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (at the index that is the same as the length of the list minus 1)
++ If the value of `currentHeroIndex` is greater than the last index in the list, set it to `0`
 
 --- code ---
 ---

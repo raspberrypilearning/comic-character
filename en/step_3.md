@@ -1,8 +1,8 @@
 ## Add form input fields
 
-In this step, you will design an interactive webpage and a webform where the user can create their own superhero!
+In this step, you will design an interactive webpage and a form that the user can use to create their own superhero!
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 You have added text and images to your website, but your user can change the content too!
 
@@ -22,10 +22,10 @@ title: Types of form elements
 
 ![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
 
-+ `<input>` e.g. single-line text box, checkbox, button.
-+ `<select>` A drop-down list.
-+ `<textarea>` For entering multiple lines of text.
-+ `<label>` Text to tell the user what information to enter.
++ `<input>` e.g. single-line text box, checkbox, button
++ `<select>` A drop-down list
++ `<textarea>` For entering multiple lines of text
++ `<label>` Text to tell the user what information to enter
 
 --- /collapse ---
 
@@ -106,24 +106,24 @@ You set the type of input using `type=`.
 title: Examples of input types
 ---
 
-+ **text:** Single line of text. 
++ **Text:** Single line of text. 
 <br>`<input type="text">`
 <br>*Try it*:
 <br><input type="text">
 
-+ **password:** Hides the entered text.
++ **Password:** Hides the entered text.
 <br>`<input type="password">`
 <br>*Try it*:
 <br><input type="password">
 
-+ **checkbox:** Tick one or more options.
++ **Checkbox:** Tick one or more options.
 <br>`<input type="checkbox"> <label>Breakfast</label>`
 <br>`<input type="checkbox"> <label>Lunch</label>`
 <br>*Try it*:
 <br><input type="checkbox"><label>Breakfast</label>
 <br><input type="checkbox"><label>Lunch</label>
 
-+ **radio:** Select one option from a group.
++ **Radio:** Select one option from a group.
 <br>`<input type="radio" name="meal"> <label>Breakfast</label> `
 <br>`<input type="radio" name="meal"> <label>Lunch</label>`
 <br>*Try it*:
@@ -131,7 +131,7 @@ title: Examples of input types
 <br><input type="radio" name="meal"><label>Lunch</label>
 <br>**Tip:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button. 
 
-+ **number** Numeric data with arrows to increase/decrease the value 
++ **Number:** Numeric data with arrows to increase/decrease the value 
 <br>`<input type="number">`
 <br>*Try it*:
 <br><input type="number">
@@ -179,7 +179,7 @@ title: There is no text box
 ---
 title: The text box is very small
 ---
-+ Check you have given the `<input>` the id `"name-text"`, not `"name"`
++ Check you have given the `<input>` the id `"name-text"`, not `"name"`.
 
 --- /collapse ---
 
@@ -189,8 +189,8 @@ title: The text box is very small
 
 Next, the user will choose an ability for their superhero!
 
-+ The `<select>` element is used to create the drop-down list.
-+ The `<option>` elements are used to provide choices.
++ The `<select>` element is used to create the drop-down list
++ The `<option>` elements are used to provide choices
 
 --- collapse ---
 
@@ -240,16 +240,16 @@ line_highlights: 26-32
 --- task ---
 
 **Click Run**
-+ You will see a drop-down list.
-+ Click the arrow to view the choices.
++ You will see a drop-down list
++ Click the arrow to view the choices
 
 --- collapse ---
 
 ---
-title: There are no options in my drop-down
+title: There are no options in my drop-down list
 ---
-+ Check you have four `<option>` elements inside your `<select>` elements.
-+ Check you have closing `</option>` tags foe each option.
++ Check you have four `<option>` elements inside your `<select>` elements
++ Check you have closing `</option>` tags for each option
 
 --- /collapse ---
 
@@ -369,7 +369,7 @@ line_highlights: 37-38
 --- task ---
 
 **Click Run**
-+ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector has been set to `none`, so it is hidden. 
++ You might expect to see the summary section. However, the `display` property for the `#summary-section` selector is set to `none`, so it is hidden. 
 
 --- collapse ---
 
@@ -398,10 +398,10 @@ line_highlights: 6
 
 --- /collapse ---
 
-Next, you will add a button that can run JavaScript code to show it.
+Next, you will add a button that will run some JavaScript code to make the summary visible. 
 
 --- /task ---
 
 Fantastic work! Your character details page now contains a form with input fields.
 
-In the next step you will make your form interactive, so the user can view a summary of their character. 
+In the next step, you will make your form interactive, so the user can view a summary of their character. 

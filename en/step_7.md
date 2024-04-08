@@ -4,7 +4,7 @@ In this step, you will create a switch so the user can change between dark mode 
 
 The website will remember the user's choice even if they navigate to another page.
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
@@ -71,9 +71,9 @@ body.light-mode {
 
 ### Add a switch to the header
 
-You have already used `<button>` elements to trigger an event. 
+You have already used `<button>` elements to trigger events. 
 
-You need to use a checkbox (<input type="checkbox">) styled as a switch, so the user can change between colour themes.
+This time, you will use a checkbox (`<input type="checkbox">`) styled as a switch, so the user can change between colour themes.
 
 --- task ---
 
@@ -81,7 +81,7 @@ Open `index.html`.
 
 Create a `<div>` element below the `<nav>` element in the `<header>` section.
 
-Give it the attribute `class="switch-container"`
+Give it the attribute `class="switch-container"`.
 
 --- code ---
 ---
@@ -102,17 +102,17 @@ line_highlights: 20-22
 
 --- /task ---
 
-The switch uses three elements, `<label>`, `<input>`, and `<span>`
+The switch uses three elements: `<label>`, `<input>`, and `<span>`.
 
-You have used some of these when you created the character details form. 
+You used some of these when you created the character details form. 
 
 --- task ---
 
-Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`
+Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`.
 
-Inside the `<label>` tags, add:
-+ an `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
-+ a `<span>` element with the attribute `class="switch"`
+Inside the `<label>` tags, add
++ An `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
++ A `<span>` element with the attribute `class="switch-slider"`
 
 --- code ---
 ---
@@ -144,7 +144,7 @@ line_highlights: 21-24
 
 ### Add an icon to the switch
 
-You can show the user an icon that represents light mode rather than show them the phrase "light mode"
+You can show the user an icon that represents light mode rather than show them the phrase "light mode".
 
 Google fonts provides icons and a way to add them to your website. 
 
@@ -165,20 +165,20 @@ Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The l
 ![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
 You can search for icons. Each icon has a unique name.
 
-Click on the icon you want to add. This will open some instructions
+Click on the icon you want to add. This will open some instructions.
 ![The Google Fonts icons page with the 'Home' icon selected and an instructions panel.](images/google-selected-icon.png)
 
-+ Include Icons in HTML:
++ Include icons in HTML:
 Add this in the `<head>` section of an HTML file.
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
 
-+ Use Icons in HTML:
++ Use icons in HTML:
 Add a class to an HTML element. For example:
 
-    <span class="material-symbols-outlined">home</span>
+    `<span class="material-symbols-outlined">home</span>`
 
-+ CSS Styling:
++ CSS styling:
 Add the icon’s custom styles to your CSS stylesheet. You can also customise it:
     
     .material-symbols-outlined {
@@ -195,7 +195,7 @@ Add the icon’s custom styles to your CSS stylesheet. You can also customise it
 
 Below the `</label>` tag, add a `<span>` element with the attribute `class="switch-label material-symbols-outlined"`.
 
-Add the text: 'light_mode' inside the `<span>` element.
+Add the text 'light_mode' inside the `<span>` element.
 
 --- code ---
 ---
@@ -221,8 +221,8 @@ line_highlights: 25
 --- task ---
 
 **Click Run**
-+ Your switch should appear on the right in your nav bar.
-+ You can click the switch, but it will not do anything... yet!
++ Your switch should appear on the right in your navbar
++ You can click the switch, but it will not do anything...yet!
 
 --- collapse ---
 
@@ -242,7 +242,7 @@ title: The switch does not display properly
 
 Open `scripts.js`. 
 
-Find the comment `// Create the constant for light mode`
+Find the comment `// Create the constant for light mode`.
 
 Use `querySelector()` to find the element with the attribute `id="lightModeSwitch"`.
 
@@ -265,7 +265,7 @@ const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 --- task ---
 
-Find the comment `// Light mode function`
+Find the comment `// Light mode function`.
 
 Create the function `changeLightMode()`.
 
@@ -320,7 +320,7 @@ The `.classList` property returns an element's `class` attributes.
 
 You can modify an element's class attributes using methods. 
 
-For example, you can add(), toggle() or remove() an element's classes.
+For example, you can add(), toggle(), or remove() an element's classes.
 
 --- collapse ---
 
@@ -328,18 +328,18 @@ For example, you can add(), toggle() or remove() an element's classes.
 title: classList methods
 ---
 
-+ Accessing classList:
++ Access a classList:
 `element.classList` returns a list of the specified element's class attributes.
 
-+ Adding a Class: `element.classList.add("className")`
++ Add a class: `element.classList.add("className")`
 
-+ Removing a Class: `element.classList.remove("className")`
++ Remove a class: `element.classList.remove("className")`
 
-+ Toggling a Class: `element.classList.toggle("className")` (If the class is present, it is removed; otherwise, it is added.)
++ Toggle a class: `element.classList.toggle("className")` (If the class is present, it is removed; otherwise, it is added.)
 
-+ Checking if a Class Exists: `element.classList.contains("className")` returns a Boolean value confirming whether the element contains the specified class.
++ Check if a class exists: `element.classList.contains("className")` returns a Boolean value confirming whether the element contains the specified class.
 
-+ Replacing Classes: `element.classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
++ Replace a class: `element.classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
 
 --- /collapse ---
 
@@ -401,14 +401,14 @@ line_highlights: 22
 --- task ---
 
 **Click Run** 
-+ Click on the switch to slide it into the light mode position.
-+ The colours of your webpage should change.
++ Click on the switch to slide it into the light mode position
++ The colours of your webpage should change
 
 --- /task ---
 
 ### Save the user's preference
 
-The switch adds or removes the light-mode class. 
+The switch adds or removes the `light-mode` class. 
 
 When your user navigates to another page (or reloads the current one) the changes will be lost as the `light-mode` class attribute is not set in the HTML file. 
 
@@ -416,7 +416,7 @@ You need a way to keep the user's choice.
 
 You can do this with the `localStorage` property.
 
-`localStorage` holds data as key-value pairs. A ***key*** is a 'label' for a value.
+`localStorage` holds data as key-value pairs. A **key** is a 'label' for a value.
 
 --- collapse ---
 
@@ -448,7 +448,7 @@ Open `scripts.js`.
 
 Use the `.setItem` method to add the key-value pair:
 + Set the 'key' to `"lightMode"`
-+ Set the 'value' to `isLightMode`: representing the Boolean (true or false) value of the toggle's `.checked` property.
++ Set the 'value' to `isLightMode`, representing the Boolean (true or false) value of the toggle's `.checked` property
 
 --- code ---
 ---
@@ -497,9 +497,9 @@ element.addEventListener(eventType, callbackFunction);
 
 --- /code ---
 
-+ element: The HTML element to which you want to attach the event listener.
-+ eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded").
-+ callbackFunction: The function to be executed when the event happens.
++ element: The HTML element to which you want to attach the event listener
++ eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded")
++ callbackFunction: The function to be executed when the event happens
 
 --- /collapse ---
 
@@ -533,7 +533,7 @@ You need the function to check `localStorage` to see if the 'value' paired with 
 
 --- task ---
 
-Add an `if` statement to check if `lightMode` is set to `"true"`
+Add an `if` statement to check if `lightMode` is set to `"true"`.
 
 --- code ---
 ---
@@ -652,9 +652,9 @@ line_highlights: 20-26
 --- task ---
 
 **Click Run** 
-+ Your switch should appear in your nav bar to the right.
-+ Click the switch on and off to see the theme colours change.
-+ Navigate to the `index.html` page to check that your light mode preference stays on.
++ Your switch should appear in your navbar to the right
++ Click the switch on and off to see the theme colours change
++ Navigate to the `index.html` page to check that your light mode preference stays on
 
 --- /task ---
 

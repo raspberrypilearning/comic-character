@@ -15,7 +15,7 @@ Which attribute is used to specify the category of input to display to the user?
 
   --- feedback ---
 
-Correct! The `type` attribute of the `<input>` element is used to specify the category of input to display to the user. Examples are `type=text`, `type=password`, `type=checkbox`
+Correct! The `type` attribute of the `<input>` element is used to specify the category of input to display to the user. Examples are `type=text`, `type=password`, and `type=checkbox`.
 
   --- /feedback ---
 

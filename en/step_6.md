@@ -2,7 +2,7 @@
 
 In this step, you will check that the user has completed the form and warn them if they have missed a section.
 
-<iframe src="https://staging-editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 At the moment, the user can submit the information even if they have left some form fields empty.
 
@@ -63,7 +63,7 @@ line_highlights: 35-36
 
 ### Create an alert message
 
-You need to update the contents of the alert div with a message.
+You need to update the contents of the alert `<div>` with a message.
 
 --- task ---
 
@@ -92,7 +92,7 @@ You need a new `checkForm()` function to check each field on your form for an em
 
 If there is an empty value, an alert will be shown to the user in the `alertBox`. 
 
-The `alertBox` div will be hidden until it is needed.
+The `alertBox` `<div>` will be hidden until it is needed.
 
 ### Create the checkForm() function
 
@@ -164,10 +164,9 @@ For example, `var age = 10;` `age` is the name of the variable. It is assigned t
 
 ### Check the user has entered a superhero name
 
-
 You need to check each field to decide if it is empty.
 
-Start with the first field: `characterName`, which holds the HTML element with the attribute `id="name-text"`.
+Start with the first field, `characterName`, which holds the HTML element with the attribute `id="name-text"`.
 
 The `.value` property of a form field will be empty if the user has missed it.
 
@@ -175,7 +174,7 @@ The `.value` property of a form field will be empty if the user has missed it.
 
 Use an `if` statement to check if the value of `characterName` is empty.
 
-**Notice:** The operator `==` is used. It is means 'is the same as'.
+**Notice:** The operator `==` is used. It means 'is the same as'.
 
 --- code ---
 ---
@@ -243,7 +242,7 @@ If the **Superhero Name** field is blank, then you set `alertMessage` to a messa
 
 You only want to show the alert if there is a message in `alertMessage`.
 
-So you need to check if `alertMessage` is **not** an empty string now.
+So now you need to check if `alertMessage` is **not** an empty string.
 
 --- task ---
 
@@ -341,11 +340,11 @@ line_highlights: 4
 
 --- /collapse ---
 
-If there is a message to show the user, you need to make the alert box appear.
+If there is a message to show to the user, you need to make the alert box appear.
 
 --- task ---
 
-In your new if statement, set the `display` property for the `#alert` selector to `block`
+In your new `if` statement, set the `display` property for the `#alert` selector to `block`.
 
 --- code ---
 ---
@@ -381,7 +380,7 @@ function checkForm(){
 **Click Run**
 + Leave the Superhero Name field blank
 + Click the Create button
-+ The alert message will show. 
++ The alert message will show 
 
 --- /task ---
 
@@ -438,8 +437,9 @@ function checkForm(){
 **Click Run** 
 + Fill in the Superhero Name field
 + Click the Create button
-+ The alert message will **not** show. 
-+ The summary will show.
++ The alert message will **not** show 
++ The summary will show
+
 **Notice:** The ability and origin story sections will be blank
 
 --- collapse ---
@@ -448,8 +448,8 @@ function checkForm(){
 title: The summary section is not showing
 ---
 
-+ Check you have used brackets`()` e.g. `if (characterName.value == "")` in `if` and `else` statements.
-+ Check you have called the `displaySummary()` function in your `else` block.
++ Check you have used brackets`()` in your `if` and `else` statements, e.g. `if (characterName.value == "")` 
++ Check you have called the `displaySummary()` function in your `else` block
 
 --- /collapse ---
 
@@ -488,7 +488,7 @@ Use an `else if` statement to check if the value of `characterAbility` is empty.
 
 If it is, assign `alertMessage` a string.
 
-The string needs to be a message that tells the user what to if the **Ability** field has been left blank.
+The string needs to be a message that tells the user what to do if the **Ability** field has been left blank.
 
 --- code ---
 ---
@@ -574,7 +574,7 @@ function checkForm(){
 + Type values into some of the form fields, but leave some blank.
 + Click the Create button. An alert message will show for any field you have left blank.
 + Test this a few times with a different form fields.
-+ Complete all form fields. Click 'Create' to see the summary.
++ Complete all form fields. Click Create to see the summary.
 
 --- collapse ---
 
@@ -582,7 +582,7 @@ function checkForm(){
 title: I should be getting alerts but I am not
 ---
 
-+ Check you have added `.value` after `characterName`, `characterAbility` and `characterOrigin`.
++ Check you have added `.value` after `characterName`, `characterAbility`, and `characterOrigin`.
 
 --- /collapse ---
 
