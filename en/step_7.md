@@ -71,9 +71,9 @@ body.light-mode {
 
 ### Add a switch to the header
 
-You have already used `<button>` elements to trigger an event. 
+You have already used `<button>` elements to trigger events. 
 
-You need to use a checkbox (<input type="checkbox">) styled as a switch, so the user can change between colour themes.
+This time, you will use a checkbox (`<input type="checkbox">`) styled as a switch, so the user can change between colour themes.
 
 --- task ---
 
@@ -104,7 +104,7 @@ line_highlights: 20-22
 
 The switch uses three elements: `<label>`, `<input>`, and `<span>`.
 
-You have used some of these when you created the character details form. 
+You used some of these when you created the character details form. 
 
 --- task ---
 
@@ -112,7 +112,7 @@ Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`.
 
 Inside the `<label>` tags, add
 + An `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
-+ A `<span>` element with the attribute `class="switch"`
++ A `<span>` element with the attribute `class="switch-slider"`
 
 --- code ---
 ---
@@ -171,12 +171,12 @@ Click on the icon you want to add. This will open some instructions.
 + Include icons in HTML:
 Add this in the `<head>` section of an HTML file.
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
 
 + Use icons in HTML:
 Add a class to an HTML element. For example:
 
-    <span class="material-symbols-outlined">home</span>
+    `<span class="material-symbols-outlined">home</span>`
 
 + CSS styling:
 Add the icon’s custom styles to your CSS stylesheet. You can also customise it:
@@ -328,7 +328,7 @@ For example, you can add(), toggle(), or remove() an element's classes.
 title: classList methods
 ---
 
-+ Accessing classList:
++ Access a classList:
 `element.classList` returns a list of the specified element's class attributes.
 
 + Add a class: `element.classList.add("className")`
