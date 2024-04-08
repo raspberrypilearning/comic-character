@@ -242,7 +242,7 @@ If the **Superhero Name** field is blank, then you set `alertMessage` to a messa
 
 You only want to show the alert if there is a message in `alertMessage`.
 
-So you need to check if `alertMessage` is **not** an empty string now.
+So now you need to check if `alertMessage` is **not** an empty string.
 
 --- task ---
 
@@ -439,6 +439,7 @@ function checkForm(){
 + Click the Create button
 + The alert message will **not** show 
 + The summary will show
+
 **Notice:** The ability and origin story sections will be blank
 
 --- collapse ---
@@ -447,7 +448,7 @@ function checkForm(){
 title: The summary section is not showing
 ---
 
-+ Check you have used brackets`()` e.g. `if (characterName.value == "")` in your `if` and `else` statements
++ Check you have used brackets`()` in your `if` and `else` statements, e.g. `if (characterName.value == "")` 
 + Check you have called the `displaySummary()` function in your `else` block
 
 --- /collapse ---
@@ -487,7 +488,7 @@ Use an `else if` statement to check if the value of `characterAbility` is empty.
 
 If it is, assign `alertMessage` a string.
 
-The string needs to be a message that tells the user what to if the **Ability** field has been left blank.
+The string needs to be a message that tells the user what to do if the **Ability** field has been left blank.
 
 --- code ---
 ---
@@ -573,7 +574,7 @@ function checkForm(){
 + Type values into some of the form fields, but leave some blank.
 + Click the Create button. An alert message will show for any field you have left blank.
 + Test this a few times with a different form fields.
-+ Complete all form fields. Click 'Create' to see the summary.
++ Complete all form fields. Click Create to see the summary.
 
 --- collapse ---
 
