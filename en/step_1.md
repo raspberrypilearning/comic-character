@@ -10,8 +10,8 @@ In this project, you will combine JavaScript, HTML, and CSS to create an interac
 You will:
 + Use JavaScript to change text on a webpage
 + Add a form and input options to let people create a superhero character
-+ Use JavaScript to show/hide elements on your website
-+ Add light/dark mode options to your website
++ Use JavaScript to show and hide elements on your website
++ Add light and dark mode options to your website
 + Keep user preferences
 + Create an image slider that scrolls through images
 
