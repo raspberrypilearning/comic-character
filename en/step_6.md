@@ -158,7 +158,9 @@ A variable is a named area of computer memory that holds a value.
 
 The value can be changed by the program.
 
-For example, `var age = 10;` `age` is the name of the variable. It is assigned the value `10`.
+For example, `var age = 10;` 
++ `age` is the name of the variable. 
++ It is assigned the value `10`.
 
 --- /collapse ---
 
