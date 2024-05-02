@@ -10,12 +10,15 @@ steps:
 - title: Introduction
 - title: Add copyright text
 - title: Add form elements
+  completion: engaged
 - title: Show and hide elements
 - title: Change the summary
 - title: Check user input
 - title: Light mode theme
 - title: Hero image slider
+  completion: internal
 - title: Reflection
+  completion: external
   knowledge_quiz:
     path: quiz1
     version: 1
