@@ -33,9 +33,9 @@ line_highlights: 35
 
 --- /task ---
 
-### Create an area to show alerts
+### Create an area to show a warning
 
-You need to show an alert to the user if part of the form is blank.
+You need to show a warning to the user if part of the form is blank.
 
 --- task ---
 
@@ -156,7 +156,7 @@ title: What is a variable?
 
 A variable is a named area of computer memory that holds a value. 
 
-The value can be changed by the program.
+The value can be changed while the program is running.
 
 For example, `var age = 10;` 
 + `age` is the name of the variable. 

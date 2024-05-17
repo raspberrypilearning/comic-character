@@ -12,7 +12,7 @@ You need a function that shows the form and hides the summary when the user clic
 
 Open `scripts.js`.
 
-Find the comment `// Function to edit form content`.
+Find the comment `// Function to edit summary`.
 
 Add the function `changeSummary()`.
 
@@ -28,7 +28,7 @@ line_numbers: true
 line_number_start: 25
 line_highlights: 26-29
 ---
-// Function to edit form content
+// Function to edit summary
 function changeSummary() {
   characterDetails.style.display = "flex";
   summary.style.display = "none";
