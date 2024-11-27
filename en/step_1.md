@@ -16,6 +16,7 @@ You will:
 + Create an image slider that scrolls through images
 
 --- no-print ---
+
 --- task ---
 
 ### Try it
@@ -42,8 +43,11 @@ Images included in this project were created using generative AI. Model: Firefly
 --- /collapse ---
 
 --- /task ---
+
 --- /no-print ---
 
 --- print-only ---
+
 ![Completed project](images/comic-character.png)
+
 --- /print-only ---
