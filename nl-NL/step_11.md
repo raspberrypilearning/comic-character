@@ -1,24 +1,24 @@
-## What next?
+## Wat kun je verder nog doen?
 
-If you are following the [More web](https://projects.raspberrypi.org/en/pathways/more-web) path, you can move on to the [Animated story](https://projects.raspberrypi.org/en/projects/animated-story) project. In this project, you will make an interactive story with features that are triggered when the user scrolls.
+Als je het [Meer web](https://projects.raspberrypi.org/nl/pathways/meere-web) pad volgt, kun je doorgaan naar het [Verhaal met animatie](https://projects.raspberrypi.org/en/projects/animated-story) project. In dit project maak je een interactief verhaal met functies die worden geactiveerd wanneer de gebruiker scrolt.
 
 \--- print-only ---
 
-![The finished Animated story project](images/animated-story.png)
+![Het voltooide verhaal met animatie project](images/animated-story.png)
 
 \--- /print-only ---
 
 \--- no-print ---
 
-### Try it
+### Probeer het uit
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Explore the Animated Story. 
+Verken het Verhaal met animatie. 
 
-- Scroll down on the page to watch the images load
-- Click on the links on the navbar at the side to see the different pages
-- Scroll down the page to see the different interactive features
+- Scroll naar beneden op de pagina om de afbeeldingen te bekijken
+- Klik op de links op de navigatiebalk aan de zijkant om de verschillende pagina's te zien
+- Scroll naar beneden op de pagina om de verschillende interactieve functies te zien
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/animated-story-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
