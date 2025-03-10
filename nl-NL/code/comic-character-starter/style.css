@@ -67,7 +67,7 @@ nav a:hover {
   color: var(--text-colour-nav-hover);
 }
 
-/* Create a character */
+/* Creëer je personage */
 
 label {
   display: block;
@@ -128,7 +128,7 @@ textarea {
   display: none;
 }
 
-/* Light mode */
+/*Light mode */
 
 .switch-container {
   display: flex;
@@ -242,7 +242,7 @@ input:checked + .switch-slider:before {
   margin: 20px;
 }
 
-/* Light Mode Styles */
+/* Stijlen voor Light mode */
 
 body.light-mode {
   background: var(--background-colour-light-mode);
