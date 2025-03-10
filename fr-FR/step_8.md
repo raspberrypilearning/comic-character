@@ -1,16 +1,16 @@
-## Create a hero image slider
+## Créer un slider d'image Hero
 
-In this step, you will create an interactive hero image slider for your webpage.
+Dans cette étape, tu créeras un slider interactif d'images Hero pour ta page web.
 
-The user can use buttons to move to the next or previous hero image.
+L'utilisateur peut utiliser des boutons pour se déplacer vers l'image Hero suivante ou précédente.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### The hero image HTML
+### Le code HTML de l'image Hero
 
-You have been provided with the HTML and CSS styling.
+Le style HTML et CSS t'est fourni.
 
-Here is the HTML:
+Voici le code HTML :
 
 ## --- code ---
 
@@ -41,38 +41,38 @@ line_highlights:
 
 ---
 
-## title: I need the HTML explaining
+## title: J'ai besoin de l'explication HTML
 
-**Lines 31, 32, and 33:**
+**Lignes 31, 32 et 33 :**
 
-- The `<span>` elements contain the hero images
-  - They all have the same attribute: `class="hero-slide"`
-- The `active` class is used to show a particular image
+- Les éléments `<span>` contiennent les images Hero
+  - Elles ont toutes le même attribut : `class="hero-slide"`
+- La classe `active` est utilisée pour montrer une image particulière
 
-**Lines 35 and 36:**
+**Lignes 35 et 36 :**
 
-- Buttons used to navigate left `<` and right `>`
-- The JavaScript function `changeHero()` is used as event handler for button presses
-  - When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
-  - When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
+- Boutons utilisés pour naviguer à gauche `<` et à droite `>`
+- La fonction JavaScript `changeHero()` est utilisée comme gestionnaire d'événements pour les pressions sur les boutons
+  - Lorsque le bouton `<` est cliqué, la fonction `changeHero()` est appelée avec l'argument `-1`
+  - Lorsque le bouton `>` est cliqué, la fonction `changeHero()` est appelée avec l'argument `+1`
 
 \--- /collapse ---
 
-### Find all the images
+### Trouver toutes les images
 
-You have used `querySelector()` in previous steps to find the first element that matches the specified CSS selector.
+Tu as utilisé `querySelector()` dans les étapes précédentes pour trouver le premier élément qui correspond au sélecteur CSS spécifié.
 
-You can use `querySelectorAll()` to find and return a list of **all** `<span>` elements.
+Tu peux utiliser `querySelectorAll()` pour trouver et renvoyer une liste des éléments **tous** `<span>`.
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Find the comment `// Change Hero function`.
+Trouve le commentaire `// Fonction Change Hero`.
 
-Use `querySelectorAll()` to return a list of all elements with the attribute `class="hero-slide"`.
+Utilise `querySelectorAll()` pour renvoyer une liste de tous les éléments avec l'attribut `class="hero-slide"`.
 
-Assign the list to a constant `heroSlides`.
+Attribue la liste à une constante `heroSlides`.
 
 ## --- code ---
 
@@ -83,16 +83,16 @@ line_number_start: 75
 line_highlights: 76
 --------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 
 \--- /code ---
 
 \--- /task ---
 
-### Track active hero image
+### Suis l'image Hero actif
 
-The first element in the returned list in `heroSlides` is at index 0.
+Le premier élément de la liste renvoyée dans `heroSlides` est à l'index 0.
 
 ```
  ___________   ___________   ___________  
@@ -101,11 +101,11 @@ The first element in the returned list in `heroSlides` is at index 0.
 |  Index 0  | |  Index 1  | |  Index 2  |
 ```
 
-It will be the first active image in the slider.
+Ce sera la première image active dans le slider.
 
 \--- task ---
 
-Create the variable `currentHeroIndex` and assign it the value `0`.
+Crée la variable `currentHeroIndex` et attribue-lui la valeur `0`.
 
 ## --- code ---
 
@@ -116,7 +116,7 @@ line_number_start: 75
 line_highlights: 77
 --------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -124,18 +124,18 @@ var currentHeroIndex = 0;
 
 \--- /task ---
 
-### Create the changeHero() function
+### Créer la fonction changeHero()
 
-The `changeHero()` function is called when the user moves to the next or previous image.
+La fonction `changeHero()` est appelée lorsque l'utilisateur se déplace à l'image suivante ou précédente.
 
 \--- task ---
 
-Find the comment `// Change Hero function`.
+Trouve le commentaire `// Fonction Change Hero`.
 
-Create a function `changeHero()` with the parameter `direction`.
+Crée une fonction `changeHero()` avec le paramètre `direction`.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A <span style="color: #0faeb0">**parameter**</span> acts as a placeholder for a value used by the function.
+Un <span style="color: #0faeb0">**parameter**</span> agit comme un placeholder pour une valeur utilisée par la fonction.
 </p>
 
 ## --- code ---
@@ -147,7 +147,7 @@ line_number_start: 75
 line_highlights: 79-81
 -----------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -159,15 +159,15 @@ function changeHero(direction) {
 
 \--- /task ---
 
-### Remove the active image
+### Supprimer l'image active
 
-The `changeHero()` function needs to update the current image.
+La fonction `changeHero()` doit mettre à jour l'image actuelle.
 
-First, it removes the `active` class from the current `<span>` element.
+Tout d'abord, elle supprime la classe `active` de l'élément `<span>`.
 
 \--- task ---
 
-Remove the `active` class from the element at the `currentHeroIndex` in the `heroSlides` list.
+Supprime la classe `active` de l'élément dans `currentHeroIndex` dans la liste `heroSlides`.
 
 ## --- code ---
 
@@ -178,7 +178,7 @@ line_number_start: 75
 line_highlights: 81
 --------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -190,24 +190,24 @@ heroSlides[currentHeroIndex].classList.remove("active");
 
 \--- /code ---
 
-Square brackets are used to refer to the position of the element in the list.
+Les crochets sont utilisés pour faire référence à la position de l'élément dans la liste.
 
-So, `heroSlides[currentHeroIndex]` is the element at the position `currentHeroIndex` in the list `heroSlides`.
+Donc, `heroSlides[currentHeroIndex]` est l'élément à la position `currentHeroIndex` dans la liste `heroSlides`.
 
 \--- /task ---
 
-### Update the current index
+### Mettre à jour l'index actuel
 
-The function changes the `currentHeroIndex`.
+La fonction modifie le `currentHeroIndex`.
 
-It adds `1` or subtracts `1`, depending on the `direction` value passed to the function.
+Elle ajoute `1` ou soustrait `1`, selon la valeur `direction` transmise à la fonction.
 
-- When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
-- When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
+- Lorsque le bouton `<` est cliqué, la fonction `changeHero()` est appelée avec l'argument `-1`
+- Lorsque le bouton `>` est cliqué, la fonction `changeHero()` est appelée avec l'argument `+1`
 
 \--- task ---
 
-Update the value of `currentHeroIndex`.
+Mettre à jour la valeur de `currentHeroIndex`.
 
 ## --- code ---
 
@@ -218,7 +218,7 @@ line_number_start: 75
 line_highlights: 82
 --------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -233,30 +233,30 @@ currentHeroIndex = currentHeroIndex + direction;
 
 \--- /task ---
 
-### Dealing with ‘out of range’
+### Gérer les « out of range »
 
-There are three elements in the `heroSlides` list.
+Il y a trois éléments dans la liste `heroSlides`.
 
-They are at indexes `0`, `1`, and `2`.
+Ils sont aux index `0`, `1`, et `2`.
 
-If the value of the variable `currentHeroIndex` is `2`, then calling `changeHero(+1)` will change it to `3`.
+Si la valeur de la variable `currentHeroIndex` est `2`, alors l'appel de `changeHero(+1)` la changera en `3`.
 
-🚨 But there is no index `3` 🚨
+🚨 Mais il n'y a pas d'index `3` 🚨
 
-If the value of the variable `currentHeroIndex` is `0`, then calling `changeHero(-1)` will change it to `-1`.
+Si la valeur de la variable `currentHeroIndex` est `0`, alors l'appel de `changeHero(-1)` la changera en `-1`.
 
-🚨 But there is no index `-1` 🚨
+🚨 Mais il n'y a pas d'index `-1` 🚨
 
-You need a way to handle these 'out of range' issues!
+Tu as besoin d'un moyen de gérer ces problèmes « out of range » !
 
-Here is how:
+Voici comment :
 
-- If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (`2`)
-- If the value of `currentHeroIndex` is greater than `2`, set it to `0`
+- Si la valeur de `currentHeroIndex` est inférieure à `0`, définis-la sur le dernier index de la liste (`2`)
+- Si la valeur de `currentHeroIndex` est supérieure à `2`, définis-la à `0`
 
 \--- task ---
 
-Use an `if` statement with an `else if` statement to handle the out of range issues.
+Utilise une instruction `if` avec une instruction `else if` pour gérer les problèmes « out of range ».
 
 ## --- code ---
 
@@ -267,7 +267,7 @@ line_number_start: 75
 line_highlights: 84-88
 -----------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -288,13 +288,13 @@ currentHeroIndex = 0;
 
 \--- /task ---
 
-### Set the new active image
+### Définir la nouvelle image active
 
-You need to make the element at the current index active.
+Tu dois rendre l'élément actif à l'index actuel.
 
 \--- task ---
 
-Add the `active` class to the element at the current index.
+Ajoute la classe `active` à l'élément à l'index courant.
 
 ## --- code ---
 
@@ -305,7 +305,7 @@ line_number_start: 75
 line_highlights: 90
 --------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -330,27 +330,27 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 \--- task ---
 
-Open `index.html`.
+Ouvre `index.html`.
 
-**Click Run**
+**Clique sur Run**
 
-- Click the left (<) button on your hero image slider, the image should change
-- Click the right (>) button on your hero image slider, the image should change
+- Clique sur le bouton gauche (<) sur ton slider d'image Hero, l'image doit changer
+- Clique sur le bouton droit (>) sur ton slider d'image Hero, l'image doit changer
 
 \--- collapse ---
 
 ---
 
-## title: The buttons do not work properly
+## title: Les boutons ne fonctionnent pas correctement
 
-- Make sure you have used the 'less than' `<` symbol or the 'greater than' `>` symbol in the correct places.
+- Assure-toi d'avoir utilisé le symbole 'moins que ' `<` ou le symbole 'plus que' `>` aux bons endroits.
 
 \--- /collapse ---
 
 \--- /task ---
 
-Fantastic effort!
+C'est super !
 
-You have created an interactive website so the user can create their own superhero character. You have checked user entry and allowed the user to choose a theme for the website.
+Tu as créé un site web interactif pour que l'utilisateur puisse créer son propre personnage de super-héros. Tu as vérifié l'entrée de l'utilisateur et autorisé l'utilisateur à choisir un thème pour le site web.
 
-Check your understanding of the project using the reflection quiz on the next step.
+Vérifie que tu as bien compris le projet en utilisant le questionnaire de réflexion à l'étape suivante.
