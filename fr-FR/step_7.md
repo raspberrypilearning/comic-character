@@ -1,24 +1,24 @@
-## Create light mode theme
+## Créer un thème Light Mode
 
-In this step, you will create a switch so the user can change between dark mode and light mode.
+Dans cette étape, tu vas créer un bouton pour que l'utilisateur puisse passer du mode sombre au mode clair.
 
-The website will remember the user's choice even if they navigate to another page.
+Le site web se souviendra du choix de l'utilisateur même s'il navigue vers une autre page.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
+<span style="color: #0faeb0">**Thèmes de couleurs clairs et sombres**</span> sont utilisés lors de la conception de sites web et d'applications. Le mode sombre est un thème de couleurs qui utilise du texte et des icônes de couleur claire sur des arrière-plans sombres. Le mode clair est l'inverse. Fournir cette option à l'utilisateur améliore la lisibilité et l'accessibilité.
 </p>
 
-Your `style.css` file includes selectors used to update your website's colour scheme.
+Ton fichier `style.css` inclut des sélecteurs utilisés pour mettre à jour le thème de couleurs de ton site web.
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+**Astuce :** ceci est juste là pour te rappeler. Tu n'as plus besoin de l'écrire à nouveau !
 
 ---
 
-## title: Light mode styles
+## title: Styles Light mode
 
 ## --- code ---
 
@@ -28,7 +28,7 @@ line_numbers: true
 line_number_start: 244
 --------------------------------------------------------------------------------
 
-/\* Light Mode Styles \*/
+/\* Styles Light Mode \*/
 
 body.light-mode {
 background: var(--background-colour-light-mode);
@@ -68,19 +68,19 @@ color: var(--text-colour-light-mode-footer);
 
 \--- /collapse ---
 
-### Add a switch to the header
+### Ajouter un bouton à l'en-tête
 
-You have already used `<button>` elements to trigger events.
+Tu as déjà utilisé les éléments `<button>` pour déclencher des événements.
 
-This time, you will use a checkbox (`<input type="checkbox">`) styled as a switch, so the user can change between colour themes.
+Cette fois-ci, tu utiliseras une case à cocher (`<input type="checkbox">`) stylisée comme bouton, de sorte que l'utilisateur peut changer entre les thèmes de couleur.
 
 \--- task ---
 
-Open `index.html`.
+Ouvre `index.html`.
 
-Create a `<div>` element below the `<nav>` element in the `<header>` section.
+Crée un élément `<div>` en dessous de l'élément `<nav>` dans la section `<header>`.
 
-Give it the attribute `class="switch-container"`.
+Donne-lui l'attribut `class="switch-container"`.
 
 ## --- code ---
 
@@ -104,18 +104,18 @@ line_highlights: 20-22
 
 \--- /task ---
 
-The switch uses three elements: `<label>`, `<input>`, and `<span>`.
+Le bouton utilise trois éléments : `<label>`, `<input>`, et `<span>`.
 
-You used some of these when you created the character details form.
+Tu en as utilisé certains lorsque tu as créé le formulaire des informations du personnage.
 
 \--- task ---
 
-Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`.
+À l'intérieur des balises `<div>`, ajoute un `<label>` avec l'attribut `class="switch"`.
 
-Inside the `<label>` tags, add
+À l'intérieur des balises `<label>`, ajoute
 
-- An `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
-- A `<span>` element with the attribute `class="switch-slider"`
+- Un élément `<input>` avec deux attributs : `type="checkbox"` et `id="lightModeSwitch"`
+- Un élément `<span>` avec l'attribut `class="switch-slider"`
 
 ## --- code ---
 
@@ -143,50 +143,50 @@ line_highlights: 21-24
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- **Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+- **Remarque :** le sélecteur `.switch` fournit un style pour convertir la case à cocher en une forme de bouton.
 
 \--- /task ---
 
-### Add an icon to the switch
+### Ajouter une icône au bouton
 
-You can show the user an icon that represents light mode rather than show them the phrase "light mode".
+Tu peux montrer à l'utilisateur une icône qui représente le Light Mode plutôt que de leur montrer la phrase "Light Mode".
 
-Google fonts provides icons and a way to add them to your website.
+Google Fonts fournit des icônes et un moyen de les ajouter à ton site web.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Icons**</span> are an accessible way of representing text because they are universally understood.
+<span style="color: #0faeb0">**Les icônes**</span> sont une façon accessible de représenter du texte car ils sont universellement compris.
 </p>
 
-The Google icon has already been included inside the `<head>` element of your webpages. The CSS styles have also been provided.
+L'icône Google a déjà été incluse dans l'élément `<head>` de tes pages web. Les styles CSS ont également été fournis.
 
 \--- collapse ---
 
 ---
 
-## title: How to import icons using Google fonts
+## title: Comment importer des icônes en utilisant Google Fonts
 
-Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The link will open in a new tab.
+Ouvre [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. Le lien s'ouvrira dans un nouvel onglet.
 
-![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
-You can search for icons. Each icon has a unique name.
+![La page des icônes de Google Fonts avec diverses icônes et la barre de recherche affichée.](images/google-icons.png)
+Tu peux rechercher des icônes. Chaque icône a un nom unique.
 
-Click on the icon you want to add. This will open some instructions.
-![The Google Fonts icons page with the 'Home' icon selected and an instructions panel.](images/google-selected-icon.png)
+Clique sur l'icône que tu souhaites ajouter. Cela ouvrira quelques instructions.
+![La page des icônes Google Fonts avec l'icône "Home" sélectionnée et un panneau d'instructions.](images/google-selected-icon.png)
 
-- Include icons in HTML:
-  Add this in the `<head>` section of an HTML file.
+- Inclus les icônes dans le HTML :
+  Ajoute ceci dans la section `<head>` d'un fichier HTML.
 
   `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
 
-- Use icons in HTML:
-  Add a class to an HTML element. For example:
+- Utilise les icônes en HTML :
+  Ajoute une classe à un élément HTML. Par exemple :
 
   `<span class="material-symbols-outlined">home</span>`
 
-- CSS styling:
-  Add the icon’s custom styles to your CSS stylesheet. You can also customise it:
+- Style CSS :
+  Ajoute les styles personnalisés de l’icône à ta feuille de style CSS. Tu peux également le personnaliser :
 
   .material-symbols-outlined {
   font-variation-settings:
@@ -200,9 +200,9 @@ Click on the icon you want to add. This will open some instructions.
 
 \--- task ---
 
-Below the `</label>` tag, add a `<span>` element with the attribute `class="switch-label material-symbols-outlined"`.
+Sous la balise `</label>`, ajoute un élément `<span>` avec l'attribut `class="switch-label material-symbols-outlined"`.
 
-Add the text 'light_mode' inside the `<span>` element.
+Ajoute le texte 'light_mode' à l'intérieur de l'élément `<span>`.
 
 ## --- code ---
 
@@ -230,34 +230,34 @@ line_highlights: 25
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- Your switch should appear on the right in your navbar
-- You can click the switch, but it will not do anything...yet!
+- Ton bouton devrait apparaître à droite dans ta barre de navigation
+- Tu peux cliquer sur le bouton, mais il ne fera rien pour le moment !
 
 \--- collapse ---
 
 ---
 
-## title: The switch does not display properly
+## title: Le bouton ne s'affiche pas correctement
 
-- Check you have left spaces between your attributes where you have multiple attributes in an element.
+- Vérifie que tu as laissé des espaces entre tes attributs lorsque tu as plusieurs attributs dans un élément.
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Create an event handler for your switch
+### Créer un gestionnaire d'événements pour ton bouton
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Find the comment `// Create the constant for light mode`.
+Trouve le commentaire `// Créer la constante pour le Light Mode`.
 
-Use `querySelector()` to find the element with the attribute `id="lightModeSwitch"`.
+Utilise `querySelector()` pour trouver l'élément avec l'attribut `id="lightModeSwitch"`.
 
-Assign it to a constant `lightModeSwitch`.
+Attribue-le à une constante `lightModeSwitch`.
 
 ## --- code ---
 
@@ -268,7 +268,7 @@ line_number_start: 55
 line_highlights: 56
 --------------------------------------------------------
 
-// Create the constant for light mode
+// Crée la constante pour le Light Mode
 const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- /code ---
@@ -277,9 +277,9 @@ const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- task ---
 
-Find the comment `// Light mode function`.
+Trouve le commentaire `// Fonction Light Mode`.
 
-Create the function `changeLightMode()`.
+Crée la fonction `changeLightMode()`.
 
 ## --- code ---
 
@@ -290,7 +290,7 @@ line_number_start: 58
 line_highlights: 59-61
 -----------------------------------------------------------
 
-// Light mode function
+// Fonction Light Mode
 function changeLightMode(){
 
 }
@@ -299,15 +299,15 @@ function changeLightMode(){
 
 \--- /task ---
 
-You added an `<input>` element with the attribute `type="checkbox"` and styled it as a switch.
+Tu as ajouté un élément `<input>` avec l'attribut `type="checkbox"` et l'a stylisé comme un bouton.
 
-You can check if a switch is 'on' using the `.checked` property.
+Tu peux vérifier si un bouton est 'activé' en utilisant la propriété `.checked`.
 
-The value of the `.checked` property is Boolean, meaning it can either be **true** (on) or **false** (off).
+La valeur de la propriété `.checked` est Boolean, ce qui signifie qu'elle peut être **true** (on), ou **false** (off).
 
 \--- task ---
 
-Make the function assign the value of the switch's `.checked` property to the variable `isLightMode`.
+Fais en sorte que la fonction attribue la valeur de la propriété `.checked` du bouton à la variable `isLightMode`.
 
 ## --- code ---
 
@@ -318,7 +318,7 @@ line_number_start: 58
 line_highlights: 60
 --------------------------------------------------------
 
-// Light mode function
+// Fonction Light Mode
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 
@@ -328,38 +328,38 @@ var isLightMode = lightModeSwitch.checked;
 
 \--- /task ---
 
-The `.classList` property returns an element's `class` attributes.
+La propriété `.classList` retourne les attributs `class` d'un élément.
 
-You can modify an element's class attributes using methods.
+Tu peux modifier les attributs de classe d'un élément en utilisant des méthodes.
 
-For example, you can add(), toggle(), or remove() an element's classes.
+Par exemple, tu peux ajouter (add ()), activer/désactiver(toggle()), ou supprimer(remove()) une classe d'un élément.
 
 \--- collapse ---
 
 ---
 
-## title: classList methods
+## title: Méthodes classList
 
-- Access a classList:
-  `element.classList` returns a list of the specified element's class attributes.
+- Accède à une classList :
+  `element.classList` renvoie une liste des attributs de classe de l'élément spécifié.
 
-- Add a class: `element.classList.add("className")`
+- Ajoute une classe : `element.classList.add("className")`
 
-- Remove a class: `element.classList.remove("className")`
+- Supprimer une classe : `element.classList.remove("className")`
 
-- Toggle a class: `element.classList.toggle("className")` (If the class is present, it is removed; otherwise, it is added.)
+- Activer/désactiver une classe : `element.classList.toggle("className")` (Si la classe est présente, elle est supprimée ; sinon, elle est ajoutée.)
 
-- Check if a class exists: `element.classList.contains("className")` returns a Boolean value confirming whether the element contains the specified class.
+- Vérifie si une classe existe : `element.classList.contains("className")` renvoie une valeur booléenne confirmant si l'élément contient la classe spécifiée.
 
-- Replace a class: `element.classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
+- Remplace une classe : `element.classList.replace("oldClass", "newClass")` remplace l'ancienne classe spécifiée par une nouvelle.
 
 \--- /collapse ---
 
 \--- task ---
 
-Use the `.toggle` method to add or remove the `light-mode` class to the `<body>` element.
+Utilise la méthode `.toggle` pour ajouter ou supprimer la classe `light-mode` à l'élément `<body>`.
 
-This will add the class to the element if it is not there, or remove it if it is.
+Cela ajoutera la classe à l'élément si elle n'est pas là, ou la supprimera si c'est le cas.
 
 ## --- code ---
 
@@ -370,7 +370,7 @@ line_number_start: 58
 line_highlights: 61
 --------------------------------------------------------
 
-// Light mode function
+// Fonction Light Mode
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -381,13 +381,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-### Add the event handler to the switch
+### Ajouter le gestionnaire d'événements au bouton
 
 \--- task ---
 
-Open `index.html`.
+Ouvre `index.html`.
 
-Add the event `onchange="changeLightMode()"` to the switch element.
+Ajoute l'évènement `onchange="changeLightMode()"` à l'élément bouton.
 
 ## --- code ---
 
@@ -415,57 +415,57 @@ line_highlights: 22
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- Click on the switch to slide it into the light mode position
-- The colours of your webpage should change
+- Clique sur le bouton pour le faire glisser dans la position du Light Mode
+- Les couleurs de ta page web devraient changer
 
 \--- /task ---
 
-### Save the user's preference
+### Enregistrer les préférences de l'utilisateur
 
-The switch adds or removes the `light-mode` class.
+Le bouton ajoute ou supprime la classe `light-mode`.
 
-When your user navigates to another page (or reloads the current one) the changes will be lost as the `light-mode` class attribute is not set in the HTML file.
+Lorsque ton utilisateur navigue vers une autre page (ou recharge celle actuelle), les changements seront perdus car l'attribut de classe `light-mode` n'est pas défini dans le fichier HTML.
 
-You need a way to keep the user's choice.
+Tu as besoin d'un moyen de conserver le choix de l'utilisateur.
 
-You can do this with the `localStorage` property.
+Tu peux le faire avec la propriété `localStorage`.
 
-`localStorage` holds data as key-value pairs. A **key** is a 'label' for a value.
+`localStorage` contient les données comme paires clé-valeur. Une **clé** est un 'label' pour une valeur.
 
 \--- collapse ---
 
 ---
 
-## title: localStorage methods
+## title: Méthodes localStorage
 
 - setItem(key, value):
-  Adds a key-value pair to localStorage.
-  Example: `localStorage.setItem("username", "raspberry")`
+  Ajoute une paire clé-valeur à localStorage.
+  Exemple : `localStorage.setItem("nom d'utilisateur", "raspberry")`
 
 - getItem(key):
-  Retrieves the value associated with the specified key.
-  Example: `var username = localStorage.getItem("username")`
+  Récupère la valeur associée à la clé spécifiée.
+  Exemple : `var username = localStorage.getItem("nom d'utilisateur")`
 
 - removeItem(key):
-  Removes the key-value pair associated with the specified key.
-  Example: `localStorage.removeItem("username")`
+  Supprime la paire clé-valeur associée à la clé spécifiée.
+  Exemple : `localStorage.removeItem("nom d'utilisateur")`
 
 - clear():
-  Removes all key-value pairs from localStorage.
-  Example: `localStorage.clear()`
+  Supprime toutes les paires clé-valeur de localStorage.
+  Exemple : `localStorage.clear()`
 
 \--- /collapse ---
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Use the `.setItem` method to add the key-value pair:
+Utilise la méthode `.setItem` pour ajouter la paire clé-valeur :
 
-- Set the 'key' to `"lightMode"`
-- Set the 'value' to `isLightMode`, representing the Boolean (true or false) value of the toggle's `.checked` property
+- Définis 'key' sur `"lightMode"`
+- Définis 'value' sur `isLightMode`, représentant la valeur booléenne (true ou false) de la propriété `.checked` du toggle
 
 ## --- code ---
 
@@ -476,7 +476,7 @@ line_number_start: 58
 line_highlights: 62
 --------------------------------------------------------
 
-// Light mode function
+// Fonction Light mode
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -487,19 +487,19 @@ localStorage.setItem("lightMode", isLightMode);
 
 \--- /task ---
 
-### Get the user's preference
+### Obtenir les préférences de l'utilisateur
 
-When the webpage loads, you need to check if lightMode was set.
+Lorsque la page web se charge, tu dois vérifier si lightMode a été défini.
 
-You can use `addEventListener` for this.
+Tu peux utiliser `addEventListener` pour cela.
 
 \--- collapse ---
 
 ---
 
-## title: The addEventListener method
+## title: La méthode addEventListener
 
-Use `.addEventListener` like this:
+Utilise `.addEventListener` comme ceci :
 
 ## --- code ---
 
@@ -514,15 +514,15 @@ element.addEventListener(eventType, callbackFunction);
 
 \--- /code ---
 
-- element: The HTML element to which you want to attach the event listener
-- eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded")
-- callbackFunction: The function to be executed when the event happens
+- element : l'élément HTML auquel tu veux attacher l'event listener
+- eventType : le type d'événement que tu veux recevoir l'entrée (par exemple "click", "keydown", "DOMContentLoaded")
+- callbackFunction : la fonction à exécuter lorsque l'événement se produit
 
 \--- /collapse ---
 
 \--- task ---
 
-Use `.addEventListener` to trigger a function in response to a page load event.
+Utilise `.addEventListener` pour déclencher une fonction en réponse à un événement de chargement de page.
 
 ## --- code ---
 
@@ -533,24 +533,24 @@ line_number_start: 65
 line_highlights: 66-68
 -----------------------------------------------------------
 
-// Check local storage
+// Vérifier le stockage local
 document.addEventListener("DOMContentLoaded", function () {
 
 });
 
 \--- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready.
+`"DOMContentLoaded"` est un `eventType` qui est déclenché lorsque la page web est prête.
 
-**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
+**Astuce :** il est préférable d'utiliser `"DOMContentLoaded"` ici plutôt que le type d'événement `"load"`, qui n'est déclenché que lorsque toutes les images sont chargées.
 
 \--- /task ---
 
-You need the function to check `localStorage` to see if the 'value' paired with the `lightMode` 'key' is **"true"**.
+Tu as besoin de la fonction pour vérifier `localStorage` pour voir si 'value' associée à 'key' `lightMode` est **"true"**.
 
 \--- task ---
 
-Add an `if` statement to check if `lightMode` is set to `"true"`.
+Ajoute une instruction `si` pour vérifier si `lightMode` est défini sur `"true"`.
 
 ## --- code ---
 
@@ -561,7 +561,7 @@ line_number_start: 65
 line_highlights: 68-70
 -----------------------------------------------------------
 
-// Check local storage
+// Vérifier le stockage local
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -574,15 +574,15 @@ if (localStorage.getItem("lightMode") == "true") {
 
 \--- /task ---
 
-If `lightMode` is set to `"true"`, you need to add the `.light-mode` class.
+Si `lightMode` est défini sur `"true`, tu dois ajouter la classe `.light-mode`.
 
-You can use the `.toggle` method from the `classList` property to achieve this.
+Tu peux utiliser la méthode `.toggle` de la propriété `classList` pour y parvenir.
 
-**Tip:** You could also use the `.add` method.
+**Astuce :** tu peux également utiliser la méthode `.add`.
 
 \--- task ---
 
-Toggle the `light-mode` class.
+Activer/désactiver la classe `light-mode`.
 
 ## --- code ---
 
@@ -593,7 +593,7 @@ line_number_start: 65
 line_highlights: 69
 --------------------------------------------------------
 
-// Check local storage
+// Vérifier le stockage local
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -606,13 +606,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-You also have to show the switch as 'on'.
+Tu dois également afficher le bouton comme "activé".
 
-If this isn't done, the light mode preference would be set, but the switch position would be set to 'off'.
+Si cela n'est pas fait, la préférence du Light Mode sera définie, mais la position du bouton sera définie sur 'désactivé'.
 
 \--- task ---
 
-Set the value of the switch's `.checked` property to the Boolean value `true`.
+Définis la valeur de la propriété `.checked` du changement à la valeur booléenne `true`.
 
 ## --- code ---
 
@@ -623,7 +623,7 @@ line_number_start: 65
 line_highlights: 70
 --------------------------------------------------------
 
-// Light mode function
+// Fonction Light Mode
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -639,9 +639,9 @@ lightModeSwitch.checked = true;
 
 \--- task ---
 
-Open `character.html`.
+Ouvre `character.html`.
 
-Add the HTML for the switch to the header below the `</nav>` tag.
+Ajoute le code HTML pour le bouton vers l'en-tête en dessous de la balise `</nav>`.
 
 ## --- code ---
 
@@ -671,14 +671,14 @@ line_highlights: 20-26
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- Your switch should appear in your navbar to the right
-- Click the switch on and off to see the theme colours change
-- Navigate to the `index.html` page to check that your light mode preference stays on
+- Ton bouton devrait apparaître dans ta barre de navigation à droite
+- Clique sur l'activation et la désactivation pour voir le changement de couleurs du thème
+- Navigue vers la page `index.html` pour vérifier que ta préférence de Light Mode reste activée
 
 \--- /task ---
 
-Great work! You have created a switch that allows the user to change colour themes.
+Excellent travail ! Tu as créé un bouton qui permet à l'utilisateur de changer de thème de couleur.
 
-Next, you will add a hero slider to your website and allow the user to see different images!
+Ensuite, tu vas ajouter un slider Hero à ton site web et permettre à l'utilisateur de voir différentes images !
