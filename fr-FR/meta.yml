@@ -1,7 +1,7 @@
 ---
-title: Comic character
+title: Personnage de Comics
 hero_image: images/banner.png
-description: Create a superhero design website!
+description: Crée un site web de création de super-héros !
 version: 4
 listed: true
 copyedit: false
@@ -10,23 +10,23 @@ steps:
   - 
     title: Introduction
   - 
-    title: Add copyright text
+    title: Ajouter un texte de copyright
   - 
-    title: Add form elements
+    title: Ajouter des éléments de formulaire
     completion: engaged
   - 
-    title: Show and hide elements
+    title: Afficher et masquer des éléments
   - 
-    title: Change the summary
+    title: Modifier le résumé
   - 
-    title: Check user input
+    title: Vérifier la saisie de l'utilisateur
   - 
-    title: Light mode theme
+    title: Thème du Light Mode
   - 
-    title: Hero image slider
+    title: Slider image Hero
     completion: internal
   - 
-    title: Reflection
+    title: Réflexion
     completion: external
     knowledge_quiz:
       path: quiz1
@@ -34,6 +34,6 @@ steps:
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: Améliorer ton projet
   - 
-    title: What next?
+    title: Et ensuite ?
