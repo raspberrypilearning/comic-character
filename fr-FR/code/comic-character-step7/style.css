@@ -69,7 +69,7 @@ nav a:hover {
 
 
 
-/* Create a character */
+/* Créer un personnage */
 
 label {
   display: block;
@@ -130,7 +130,7 @@ textarea {
   display: none;
 }
 
-/* Light mode */
+/* Light Mode */
 
 .switch-container {
   display: flex;
@@ -182,7 +182,7 @@ input:checked + .switch-slider:before {
   color: var(--text-colour-switch-label);
 }
 
-/* Hero Slider */
+/* Slider Hero */
 
 .hero-container {
   width: 100%;
@@ -244,7 +244,7 @@ input:checked + .switch-slider:before {
   margin: 20px;
 }
 
-/* Responsive styles */
+/* Styles réactifs */
 
 
 @media only screen and (max-width: 768px) {
@@ -257,7 +257,7 @@ input:checked + .switch-slider:before {
   }
 }
 
-/* Light Mode Styles */
+/* Styles Light Mode */
 body.light-mode {
   background: var(--background-colour-light-mode);
   color: var(--text-colour-light-mode);
