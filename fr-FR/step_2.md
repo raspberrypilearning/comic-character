@@ -1,51 +1,51 @@
-## Add copyright message to footer
+## Ajouter un message de copyright au pied de page
 
-In this step, you will create a copyright message and a function to automatically update it to the current year. You will add this to your footer section.
+Dans cette étape, tu vas créer un message de copyright et une fonction pour le mettre à jour automatiquement pour l'année en cours. Tu l'ajouteras à ta section de pied de page.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Copyright**</span> is a legal protection that stops people from using someone else's work (e.g. websites, images, music) without their permission.
+<span style="color: #0faeb0">**Copyright**</span> est une protection juridique qui empêche les gens d'utiliser le travail de quelqu'un d'autre (par exemple des sites web, des images, de la musique) sans sa permission.
 </p>
 
-In modern web design, websites include a footer section, displaying a copyright message.
+Dans la conception moderne des sites web, les sites web incluent une section de pied de page, affichant un message de copyright.
 
-A copyright message usually contains:
+Un message de copyright (droits d'auteur) contient généralement les éléments suivants :
 
-- A copyright symbol Ⓒ
-- The name of the owner of the website
-- The year the content was published
+- Un symbole copyright Ⓒ
+- Le nom du propriétaire du site web
+- L'année où le contenu a été publié
 
 \--- task ---
 
-Open the [Comic Character starter project](https://editor.raspberrypi.org/en/projects/comic-character-starter){:target="_blank"}.
+Ouvre le [projet de démarrage Personnage de Comics](https://editor.raspberrypi.org/fr-FR/projects/comic-character-starter){:target="_blank"}.
 
 \--- /task ---
 
-Your starter project contains:
+Ton projet de démarrage contient :
 
-- Two HTML pages with some content
-- A CSS file that contains styling for some of the content
-- The images you will use in the project
-- A JavaScript file to make your website interactive and engaging
+- Deux pages HTML avec du contenu
+- Un fichier CSS qui contient le style d'une partie du contenu
+- Les images que tu utiliseras dans le projet
+- Un fichier JavaScript pour rendre ton site web interactif et attrayant
 
-This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica).
+Ce projet contient déjà une barre de navigation et une image Hero, que tu as appris à créer dans [Bienvenue en Antarctique](https://projects.raspberrypi.org/fr-FR/projects/welcome-to-antarctica).
 
-The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
+Le fichier **JavaScript** que tu vas utiliser a déjà été lié à tes pages web juste avant la balise de fermeture `</body>`.
 
-The **CSS** file you will use has also been linked to your webpages.
+Le fichier **CSS** que tu vas utiliser a également été lié à tes pages web.
 
-### Add content to your footer section
+### Ajouter du contenu à ta section de pied de page
 
 \--- task ---
 
-Open the `index.html` file.
+Ouvre le fichier `index.html`.
 
-Find the `footer` element.
+Trouve l'élément `footer`.
 
-Add a `<p>` element containing the copyright message.
+Ajoute un élément `<p>` contenant le message de copyright.
 
-(You can change the fictional name `Malik Johnson` to a name of your choice.)
+(Tu peux changer le nom fictif `Malik Johnson` par un nom de ton choix.)
 
 ## --- code ---
 
@@ -58,7 +58,7 @@ line_highlights: 33
 
 ```
   <footer>
-    <p> Ⓒ Malik Johnson - All Rights Reserved</p>
+    <p> Ⓒ Malik Johnson - Tous droits réservés</p>
   </footer>
 ```
 
@@ -68,9 +68,9 @@ line_highlights: 33
 
 \--- task ---
 
-Add a `<span>` element with the attribute `id="copyrightYear"` between the Ⓒ symbol and the name.
+Ajoute un élément `<span>` avec l'attribut `id="copyrightYear"` entre le symbole Ⓒ et le nom.
 
-The `id` attribute is used to specify a unique identifier for an HTML element.
+L'attribut `id` est utilisé pour spécifier un identifiant unique pour un élément HTML.
 
 ## --- code ---
 
@@ -83,7 +83,7 @@ line_highlights: 33
 
 ```
   <footer>
-    <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson - All Rights Reserved</p>
+    <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson - Tous droits réservés</p>
   </footer>
 ```
 
@@ -93,31 +93,31 @@ line_highlights: 33
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- The copyright message will be shown at the bottom (footer) of your webpage.
+- Le message de copyright sera affiché en bas (footer) de ta page web.
 
-**Notice:** There is no date shown yet.
+**Remarque :** il n'y a pas encore de date affichée.
 
 \--- /task ---
 
-There is no text inside the `<span>` element.
+Il n'y a pas de texte à l'intérieur de l'élément `<span>`.
 
-JavaScript will be used to update the content of the `<span>` to display the current year.
+JavaScript sera utilisé pour mettre à jour le contenu du `<span>` pour afficher l'année en cours.
 
-### Display the current year
+### Afficher l'année en cours
 
-JavaScript has a `Date()` function that returns the current date and time, using the browser's time zone.
+JavaScript dispose d'une fonction `Date()` qui renvoie la date et l'heure actuelles, en utilisant le fuseau horaire du navigateur.
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: Voir un exemple
 
-A call to `Date()` returns a string.
+Un appel à `Date()` renvoie une chaîne de caractères.
 
-Here is the result of the call to `Date()` when this page was loaded:
+Voici le résultat de l'appel à `Date()` lorsque cette page a été chargée :
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-date" width="100%" height="100" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -125,9 +125,9 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Create a constant `currentDate` to hold a new `Date()` object.
+Crée une constante `currentDate` pour contenir un nouvel objet `Date()`.
 
 ## --- code ---
 
@@ -139,7 +139,7 @@ line_highlights: 2
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // Mise à jour de la fonction Copyright Year
  const currentDate = new Date();
 ```
 
@@ -151,37 +151,37 @@ line_highlights: 2
 
 ---
 
-## title: What is a constant?
+## title: Qu'est-ce qu'une constante ?
 
-A constant is a named data value.
+Une constante est une valeur de données nommée.
 
-The value cannot be changed by the program.
+La valeur ne peut pas être modifiée par le programme.
 
 \--- /collapse ---
 
-The current year will be added to the `<span>` element you created earlier.
+L'année en cours sera ajoutée à l'élément `<span>` que tu as créé plus tôt.
 
-JavaScript can be used to find and change HTML elements.
+JavaScript peut être utilisé pour trouver et modifier des éléments HTML.
 
-To access the `<span>` element, you will 'select' it, using the document object model method: `querySelector()`.
+Pour accéder à l'élément `<span>`, tu vas le « sélectionner » en utilisant la méthode du modèle d'objet de document : `querySelector()`.
 
 \--- collapse ---
 
 ---
 
-## title: What is the document object model?
+## title: Qu'est-ce que le modèle objet de document ?
 
-The document object model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
+Le modèle objet de document (DOM) permet à JavaScript (et à d'autres langages de programmation) d'interagir avec les éléments d'une page web.
 
-It represents the structure of a webpage (document).
+Il représente la structure d'une page web (document).
 
-`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `#copyrightYear`)
+`querySelector()` est une méthode DOM qui renvoie le premier élément de ta page web qui correspond à un sélecteur CSS spécifié (par exemple `#copyrightYear`)
 
 \--- /collapse ---
 
 \--- task ---
 
-Use the `querySelector()` method to find the element in the webpage document with the attribute `id="copyrightYear"`.
+Utilise la méthode `querySelector()` pour trouver l'élément dans le document de la page web avec l'attribut `id="copyrightYear"`.
 
 ## --- code ---
 
@@ -193,7 +193,7 @@ line_highlights: 3
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // Mise à jour de la fonction Copyright Year 
  const currentDate = new Date();
  document.querySelector("#copyrightYear")
 ```
@@ -202,19 +202,19 @@ line_highlights: 3
 
 \--- /task ---
 
-The querySelector will find the whole `<span>` element.
+Le querySelector trouvera tout l'élément `<span>`.
 
-You only need to change the text **inside** the element.
+Tu dois seulement modifier le texte **à l'intérieur** de l'élément.
 
-The `.innerText` property can be used to refer to the text content of an HTML element.
+La propriété `.innerText` peut être utilisée pour faire référence au contenu du texte d'un élément HTML.
 
-The `currentDate` constant holds the full date returned by the `Date()` function, but you only need the four-digit year part of the date.
+La constante `currentDate` contient la date complète renvoyée par la fonction `Date()`, mais tu as besoin que de la partie année à quatre chiffres de la date.
 
-You can use the `.getFullYear()` method for this.
+Tu peux utiliser la méthode `.getFullYear()` pour cela.
 
 \--- task ---
 
-Set the `.innerText` content of the `<span>` with the attribute `id="copyrightYear"` to the current four-digit year.
+Définis le contenu `.innerText` de `<span>` avec l'attribut `id="copyrightYear"` à l'année en cours à quatre chiffres.
 
 ## --- code ---
 
@@ -226,9 +226,9 @@ line_highlights: 3
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // Mise à jour de la fonction Copyright Year 
  const currentDate = new Date();
- document.querySelector("#copyrightYear").innerText = currentDate.getFullYear();
+ document.querySelector("#copyright").innerText = currentDate.getFullYear();
 ```
 
 \--- /code ---
@@ -237,20 +237,20 @@ line_highlights: 3
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You should see the current year displayed in the copyright message.
+- Tu devrais voir l'année en cours dans le message de copyright.
 
 \--- collapse ---
 
 ---
 
-## title: The year is not displayed
+## title: L'année n'est pas affichée
 
-- Check there is a `#` in `copyrightYear` in the `querySelector`
-- Check you have opening and closing brackets `()` at the end of `.getFullYear()`
-- Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
-- Check there is a `;` at the end of lines 2 and 3
+- Vérifie qu'il y a un `#` dans `copyrightYear` dans le `querySelector`
+- Vérifie que tu as des parenthèses ouvrantes et fermantes `()` à la fin de `.getFullYear()`
+- Vérifie l'orthographe de `querySelector` et `.getFullYear` (y compris les majuscules)
+- Vérifie qu'il y a un `;` à la fin des lignes 2 et 3
 
 \--- /collapse ---
 
@@ -258,19 +258,19 @@ line_highlights: 3
 
 \--- task ---
 
-Open `index.html`.
+Ouvre `index.html`.
 
-Copy (CTRL + C or CMD + C) the `<p>` element within the footer.
+Copie (CTRL + C ou CMD + C) l'élément `<p>` dans le pied de page.
 
 \--- /task ---
 
 \--- task ---
 
-Open the `character.html` file.
+Ouvre le fichier `character.html`.
 
-Find the `footer` element.
+Trouve l'élément `footer`.
 
-Paste (CTRL + V or CMD + V) the `<p>` element you copied earlier.
+Colle (CTRL + V ou CMD + V) l'élément `<p>` que tu as copié plus tôt.
 
 ## --- code ---
 
@@ -283,22 +283,22 @@ line_highlights: 28
 
 ```
   <footer>
-    <p> <span id="copyrightYear"></span> Ⓒ Malik Johnson - All Rights Reserved</p>
+    <p> <span id="copyrightYear"></span> Ⓒ Malik Johnson - Tous droits réservés</p>
   </footer>
 ```
 
 \--- /code ---
 
-**Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
+**Rappel :** tu peux remplacer le nom fictif « Malik Johnson » par un nom de ton choix.
 
 \--- /task ---
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- The copyright message will be shown at the bottom (footer section) of your webpage
-- It will include the year
+- Le message de copyright sera affiché en bas (section footer) de ta page web
+- Il comprendra l'année
 
 \--- /task ---
 
@@ -306,13 +306,13 @@ line_highlights: 28
 
 ---
 
-## title: What other date methods can I use?
+## title: Quelles autres méthodes de date puis-je utiliser ?
 
-Retrieve specific components of the date and time:
+Récupère les composants spécifiques de la date et de l'heure :
 
 ```
 const year = currentDate.getFullYear();
-const month = currentDate.getMonth(); // (0 = January, 11 = December)
+const month = currentDate.getMonth(); // (0 = Janvier, 11 = Décembre)
 const day = currentDate.getDate();
 const hours = currentDate.getHours();
 const minutes = currentDate.getMinutes();
@@ -322,6 +322,6 @@ const milliseconds = currentDate.getMilliseconds();
 
 \--- /collapse ---
 
-Great job! You have added some dynamic content to your webpages!
+Bravo ! Tu as ajouté du contenu dynamique à ta pages web !
 
-Next, you will design an interactive webpage where the user can create their own character.
+Ensuite, tu vas créer une page web interactive où l'utilisateur peut créer son propre personnage.
