@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <title>Comic Book</title>
+    <title>Stripalbum</title>
   </head>
   <body>
     <header class="header">
       <a href="index.html" class="logo">Pi Comics</a>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="character.html">CREATE CHARACTER</a>
+        <a href="character.html">PERSONAGE MAKEN</a>
       </nav>
       <div class="switch-container">
         <label class="switch">
@@ -28,48 +28,48 @@
   
     <main>
       <section id="character-details"> <!--Superhero character details-->
-        <label for="name-text">Superhero Name:</label>
+        <label for="name-text">Naam superheld:</label>
         <input type="text" id="name-text">
-        <label for="ability-choice">Ability:</label>
+        <label for="ability-choice">Vaardigheid:</label>
         <select id="ability-choice">
-          <option value="">Choose an option</option>
-          <option value="Flight">Flying</option>
-          <option value="Invisibility">Invisibility</option>
-          <option value="Time travel">Time travel</option>
-          <option value="Telepathy">Telepathy</option>
-          <option value="Visions">Visions</option>
-          <option value="Stretch">Stretch</option>
-          <option value="Shapeshift">Shapeshift</option>
+          <option value="">Kies een optie</option>
+          <option value="Flight">Vliegen</option>
+          <option value="Invisibility">Onzichtbaarheid</option>
+          <option value="Time travel">Tijdreizen</option>
+          <option value="Telepathy">Telepathie</option>
+          <option value="Visions">Visioenen</option>
+          <option value="Stretch">Uitrekken</option>
+          <option value="Shapeshift">ShapeShift</option>
           <option value="Speedstar">Speedstar</option>
-          <option value="Ice">Ice</option>
+          <option value="Ice">IJs</option>
         </select>
-        <label for="country-choice">Where is your hero from?:</label>
+        <label for="country-choice">Waar komt jouw held vandaan?:</label>
         <select id="country-choice">
-          <option value="">Choose an option</option>
-          <option value="Space">Space</option>
+          <option value="">Kies een optie</option>
+          <option value="Space">Ruimte</option>
           <option value="Wakanda">Wakanda</option>
-          <option value="USA">USA</option>
+          <option value="USA">VS</option>
           <option value="UK">UK</option>
           <option value="India">India</option>
           <option value="China">China</option>
           <option value="Nigeria">Nigeria</option>
-          <option value="Australia">Australia</option>
-          <option value="South Africa">South Africa</option>
+          <option value="Australia">Australië</option>
+          <option value="South Africa">Zuid-Afrika</option>
         </select>
-        <label for="origin-text">Origin Story:</label>
-        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-        <button onclick="checkForm()">Create</button>
+        <label for="origin-text">Oorsprongsverhaal:</label>
+        <textarea id="origin-text" placeholder="Voeg jouw verhaal waar je superheld vandaan komt toe!"></textarea>
+        <button onclick="checkForm()">Maken</button>
         <div id="alert"> 
         </div>
       </section>
       <section id="summary-section">
-        <h2>Superhero Summary</h2>
+        <h2>Superheld Samenvatting</h2>
         <p id="summary-paragraph"></p>
-        <button onclick="changeSummary()">Edit</button>
+        <button onclick="changeSummary()">Bewerken</button>
       </section>
     </main>
     <footer>
-      <p> Ⓒ <span id="copyrightYear"></span> - All Rights Reserved</p>
+      <p> Ⓒ <span id="copyrightYear"></span> - Alle rechten voorbehouden</p>
     </footer>
     <script src="scripts.js"></script>
   </body>
