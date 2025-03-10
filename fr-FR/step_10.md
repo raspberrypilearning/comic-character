@@ -1,16 +1,16 @@
-## Upgrade your project
+## Améliorer ton projet
 
-If you have time, you can:
+Si tu as le temps, tu peux :
 
-- Add more abilities on `character.html`
-- Add more form elements to your superhero creation form
-- Add more images to your hero slider
+- Ajouter plus de pouvoirs dans `character.html`
+- Ajouter plus d'éléments de formulaire à ton formulaire de création de super-héros
+- Ajouter plus d'images à ton slider Hero
 
 \--- collapse ---
 
 ---
 
-## title: Add more abilities to the superhero creation form
+## title: Ajouter plus de pouvoirs au formulaire de création de super-héros
 
 ## --- code ---
 
@@ -22,18 +22,18 @@ line_highlights:
 -----------------------------------------------------
 
 ```
-    <label for="ability-choice">Ability:</label>
+    <label for="ability-choice">Pouvoir :</label>
     <select id="ability-choice">
-      <option value="">Choose an option</option>
-      <option value="Flight">Flying</option>
-      <option value="Invisibility">Invisibility</option>
-      <option value="Time travel">Time travel</option>
-      <option value="Telepathy">Telepathy</option>
+      <option value="">Choisir une option</option>
+      <option value="Flight">Vol</option>
+      <option value="Invisibility">Invisibilité</option>
+      <option value="Time travel">Voyage dans le temps</option>
+      <option value="Telepathy">Télépathie</option>
       <option value="Visions">Visions</option>
-      <option value="Stretch">Stretch</option>
-      <option value="Shapeshift">Shapeshift</option>
+      <option value="Stretch">Étirement</option>
+      <option value="Shapeshift">Métamorphose</option>
       <option value="Speedstar">Speedstar</option>
-      <option value="Ice">Ice</option>
+      <option value="Ice">Glace</option>
     </select>
 ```
 
@@ -45,11 +45,11 @@ line_highlights:
 
 ---
 
-## title: Add more form fields
+## title: Ajouter plus de champs au formulaire
 
-### Example: Add a country the character is from
+### Exemple : ajouter un pays d'origine du personnage
 
-- Add HTML to `character.html`
+- Ajouter du code HTML dans `character.html`
 
 ## --- code ---
 
@@ -61,24 +61,24 @@ line_highlights:
 -----------------------------------------------------
 
 ```
-    <label for="country-choice">Where is your hero from?:</label>
+    <label for="country-choice">D'où vient ton héros ?:</label>
     <select id="country-choice">
-      <option value="">Choose an option</option>
-      <option value="Space">Space</option>
+      <option value="">Choisir une option</option>
+      <option value="Space">Espace</option>
       <option value="Wakanda">Wakanda</option>
-      <option value="USA">USA</option>
-      <option value="UK">UK</option>
-      <option value="India">India</option>
-      <option value="China">China</option>
+      <option value="USA">États-Unis</option>
+      <option value="UK">Royaume-Uni</option>
+      <option value="India">Inde</option>
+      <option value="China">Chine</option>
       <option value="Nigeria">Nigeria</option>
-      <option value="Australia">Australia</option>
-      <option value="South Africa">South Africa</option>
+      <option value="Australia">Australie</option>
+      <option value="South Africa">Afrique du Sud</option>
     </select>
 ```
 
 \--- /code ---
 
-- Update JavaScript on `scripts.js`.
+- Mettre à jour JavaScript sur `scripts.js`.
 
 ## --- code ---
 
@@ -88,7 +88,7 @@ line_numbers: false
 line_highlights: 8, 15, 41, 42
 -------------------------------------------------------------------
 
-// Create constants for superhero form
+// Créer des constantes pour le formulaire du super-héros
 const characterDetails = document.querySelector("#character-details");
 const summary = document.querySelector("#summary-section");
 
@@ -97,25 +97,25 @@ const characterAbility = document.querySelector("#ability-choice");
 const characterCountry = document.querySelector("#country-choice");
 const characterOrigin = document.querySelector("#origin-text");
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. They are from ${characterCountry.value}.
-  Their origin story is ${characterOrigin.value}.`;
+sumyParagraph.textContent = `Le nom de ton super-héros est ${characterName.value}. 
+  Son pouvoir est ${characterAbility.value}. Il vient de ${characterCountry.value}.
+  Son histoire est ${characterOrigin.value}. `;
 
 characterDetails.style.display = "none";
 summary.style.display = "flex";
 }
 
-// Function to edit summary
+// Fonction pour modifier le résumé
 function changeSummary() {
 characterDetails.style.display = "flex";
 summary.style.display = "none";
 }
 
-// Function to check the character details form
+// Fonction pour vérifier le formulaire des informations du personnage
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -123,13 +123,13 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Veuillez saisir un nom";
 } else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "Veuillez choisir un pouvoir";
 } else if (characterCountry.value == "") {
-alertMessage = "Please select where your hero is from";
+alertMessage = "Veuillez choisir d'où vient votre héros";
 } else if (characterOrigin.value == "") {
-alertMessage = "Please write the origin story";
+alertMessage = "Veuillez écrire l'histoire";
 }
 
 if (alertMessage != ""){
@@ -149,13 +149,13 @@ displaySummary();
 
 ---
 
-## title: Add more hero images to the slider
+## title: Ajouter plus d'images Hero au slider
 
-There are more images you can use for your hero slider in the starter projects:
+Il existe d'autres images que tu peux utiliser pour ton slider Hero dans les projets de démarrage :
 
-`kwame-cape.jpg` and `ellenhero-image.jpg`
+`kwame-cape.jpg` et `ellenhero-image.jpg`
 
-You can add more images to your slider by updating `index.html` and `scripts.js`.
+Tu peux ajouter plus d'images à ton slider en mettant à jour `index.html` et `scripts.js`.
 
 ## --- code ---
 
@@ -179,9 +179,9 @@ line_highlights:
 
 \--- /code ---
 
-When you have more hero images, you need to change the `if` and `else if` statements to handle the longer length of `currentHeroIndex` that will be returned by `querySelectorAll`.
+Lorsque tu as plus d'images Hero, tu dois modifier les instructions `if` et `else if` pour gérer la longueur plus longue de `currentHeroIndex` qui sera renvoyée par `querySelectorAll`.
 
-If you have five images, then you will need to change the code like this:
+Si tu as cinq images, tu devras modifier le code comme ceci :
 
 ## --- code ---
 
@@ -192,7 +192,7 @@ line_number_start: 75
 line_highlights: 85-86
 -----------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -213,12 +213,12 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 \--- /code ---
 
-If you would like to handle any number of images, then instead of handling a fixed length, you can just check the length of `currentHeroIndex`.
+Si tu souhaites gérer un certain nombre d'images, alors au lieu de gérer une longueur fixe, tu peux simplement vérifier la longueur de `currentHeroIndex`.
 
-The `.length` property returns the number of elements in a list.
+La propriété `.length` renvoie le nombre d'éléments dans une liste.
 
-- If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (at the index that is the same as the length of the list minus 1)
-- If the value of `currentHeroIndex` is greater than the last index in the list, set it to `0`
+- Si la valeur de `currentHeroIndex` est inférieure à `0`, définis-le au dernier index de la liste (à l'index qui est le même que la longueur de la liste moins 1)
+- Si la valeur de `currentHeroIndex` est plus grande que le dernier index de la liste, définis-la à `0`
 
 ## --- code ---
 
@@ -229,7 +229,7 @@ line_number_start: 75
 line_highlights: 85-86
 -----------------------------------------------------------
 
-// Change Hero function
+// Fonction Change Hero
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -256,10 +256,10 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 ---
 
-## title: See the upgraded project
+## title: Voir le projet amélioré
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-upgrade" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You can see the [upgraded project files here](https://editor.raspberrypi.org/en/projects/comic-character-upgrade){:target="_blank"}.
+Tu peux voir les [fichiers du projet amélioré ici](https://editor.raspberrypi.org/fr-FR/projects/comic-character-upgrade){:target="_blank"}.
 
 \--- /collapse ---
