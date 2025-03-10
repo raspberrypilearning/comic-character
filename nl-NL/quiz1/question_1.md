@@ -1,44 +1,44 @@
-## Reflection
+## Reflectie
 
-Well done. You have created a website using HTML, CSS, and JavaScript.
+Goed gedaan. Je hebt een website gemaakt met behulp van HTML, CSS en JavaScript.
 
-Answer the three questions below to reflect on what you've learnt.
+Beantwoord de drie onderstaande vragen om terug te kijken op wat je hebt geleerd.
 
-You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Je wordt naar het juiste antwoord geleid. Je kunt deze activiteit zo vaak doen als je wilt.
 
 \--- question ---
 
 ---
 
-## legend: Question 1 of 3
+## legend: Vraag 1 van 3
 
-To create a function in JavaScript, you use the `function` keyword.
+Om een functie in JavaScript te maken, gebruik je het trefwoord `function`.
 
-What is the basic structure of a function?
+Wat is de basisstructuur van een functie?
 
 \--- choices ---
 
-- ( ) `new function myFunction() { /* code here */ }`
+- ( ) `new function myFunction() { /* code hier */ }`
 
   \--- feedback ---
 
-  Not quite! The correct way to declare a function is without the 'new' keyword.
+  Niet helemaal! De juiste manier om een functie op te stellen is zonder het trefwoord 'new'.
 
   \--- /feedback ---
 
-- ( ) `function myFunction { /* code here */ }`
+- ( ) `function myFunction { /* code hier */ }`
 
   \--- feedback ---
 
-  Almost! Brackets are required after the function name. These are used to hold any parameters used by the function.
+  Bijna! De haakjes moeten worden geplaatst na de functienaam. Deze worden gebruikt om parameters in op te slaan die door de functie worden gebruikt.
 
   \--- /feedback ---
 
-- (x) `function myFunction() { /* code here */ }`
+- ( x) `function myFunction() { /* code hier */ }`
 
   \--- feedback ---
 
-  That's correct! A function includes the `function` keyword, followed by the function name, brackets, and curly braces containing the function's code.
+  Dat klopt! Een functie bestaat uit het trefwoord `function`, gevolgd door de functienaam, haakjes en accolades met de code van de functie.
 
   \--- /feedback ---
 
