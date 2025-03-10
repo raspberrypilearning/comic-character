@@ -1,33 +1,33 @@
-## Introduction
+## Inleiding
 
-In this project, you will combine JavaScript, HTML, and CSS to create an interactive website where the user can design their own superhero character!
+In dit project combineer je JavaScript, HTML en CSS om een interactieve website te maken waarop de gebruiker zijn eigen superheldenpersonage kan ontwerpen!
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**JavaScript**</span> is the programming language of the web and is used to make websites dynamic and interactive. It is a very popular programming language and without it, websites would be static and boring.
+<span style="color: #0faeb0">**JavaScript**</span> is de programmeertaal van het web en wordt gebruikt om websites dynamisch en interactief te maken. Het is een zeer populaire programmeertaal en zonder die taal zouden websites statisch en saai zijn.
 </p>
 
-You will:
+Je gaat:
 
-- Use JavaScript to change text on a webpage
-- Add a form and input options to let people create a superhero character
-- Use JavaScript to show and hide elements on your website
-- Add light and dark mode options to your website
-- Keep user preferences
-- Create an image slider that scrolls through images
+- JavaScript gebruiken om tekst op een webpagina te wijzigen
+- Een formulier toevoegen en invoer opties om mensen een superheld personage te laten maken
+- JavaScript gebruiken om elementen op je website te tonen en te verbergen
+- De opties voor light en dark mode toevoegen aan je website
+- Gebruikersvoorkeuren behouden
+- Een image slider maken die door afbeeldingen scrolt
 
 \--- no-print ---
 
 \--- task ---
 
-### Try it
+### Probeer het uit
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Explore the Superhero website. 
+Ontdek de superheldenwebsite. 
 
-- Click the arrows on the home page slider to navigate through the images
-- Click the light mode switch to change the theme colours
-- Navigate to the Create Character page and complete the input fields to create your own superhero character!
+- Klik op de pijlen op de schuifbalk van de homepage om door de afbeeldingen te bewegen
+- Klik op de light mode schakelaar om de thema-kleuren te wijzigen
+- Ga naar de pagina Personage maken en vul de invoervelden in om je eigen superheldenpersonage te creëren!
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
@@ -37,9 +37,9 @@ Explore the Superhero website.
 
 ---
 
-## title: Images in this project
+## title: Afbeeldingen in dit project
 
-Images included in this project were created using generative AI. Model: Firefly Image 2
+Afbeeldingen die zijn opgenomen in dit project zijn gemaakt met behulp van generatieve AI. Model: Firefly Image 2
 
 \--- /collapse ---
 
@@ -49,6 +49,6 @@ Images included in this project were created using generative AI. Model: Firefly
 
 \--- print-only ---
 
-![Completed project](images/comic-character.png)
+![Voltooid project](images/comic-character.png)
 
 \--- /print-only ---
