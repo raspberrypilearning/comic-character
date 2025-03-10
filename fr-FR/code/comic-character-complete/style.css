@@ -67,7 +67,7 @@ nav a:hover {
   color: var(--text-colour-nav-hover);
 }
 
-/* Create a character */
+/* Créer un personnage */
 label {
   display: block;
   margin-bottom: 5px;
@@ -127,7 +127,7 @@ textarea {
   display: none;
 }
 
-/* Light mode */
+/* Light Mode */
 
 .switch-container {
   display: flex;
@@ -179,7 +179,7 @@ input:checked + .switch-slider:before {
   color: var(--text-colour-switch-label);
 }
 
-/* Hero Slider */
+/* Slider Hero */
 
 .hero-container {
   width: 100%;
@@ -241,7 +241,7 @@ input:checked + .switch-slider:before {
   margin: 20px;
 }
 
-/* Light Mode Styles */
+/* Styles Light Mode */
 
 body.light-mode {
   background: var(--background-colour-light-mode);
