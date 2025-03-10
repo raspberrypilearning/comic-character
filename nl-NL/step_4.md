@@ -1,44 +1,44 @@
-## Make items appear and disappear
+## Laat items verschijnen en verdwijnen
 
-In this step, you will use JavaScript to make parts of your form appear and disappear.
+In deze stap gebruik je JavaScript om delen van je formulier te laten verschijnen en verdwijnen.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step4?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Show the summary section
+### Toon het samenvattingsgedeelte
 
-Your user needs to press a button to show the summary section.
+Je gebruiker moet op een knop drukken om het samenvattingsgedeelte te tonen.
 
-An `onclick` event can be added to the button.
+Er kan een `onclick`-gebeurtenis aan de knop worden toegevoegd.
 
-JavaScript can be used to react to this event and show the summary.
+JavaScript kan worden gebruikt om te reageren op deze gebeurtenis en de samenvatting te tonen.
 
 \--- collapse ---
 
 ---
 
-## title: Other events
+## title: Andere gebeurtenissen
 
-Events can be triggered by the user or the browser.
+Gebeurtenissen kunnen worden geactiveerd door de gebruiker of de browser.
 
-- User events:
-  - Mouse events (click, double click, mouseover)
-  - Keyboard events (keypress, keydown, keyup)
-  - Touch events (touchstart, touchmove, touchend)
+- Gebruikers gebeurtenissen:
+  - Met de muis (klik, dubbele klik, muis eroverheen bewegen)
+  - Met het toetsenbord (toetsaanslag, toetsomlaag, toetsomhoog)
+  - Door aanrakingen (touchstart, touchmove, touchend)
 
-- Browser events:
-  - Page load events (load, unload)
-  - Window events (resize, scroll)
-  - Time events (setInterval, setTimeout)
+- Browser gebeurtenissen:
+  - Het laden van de pagina (load, unload)
+  - Venster gebeurtenissen (formaat wijzigen, scrollen)
+  - Tijdgebeurtenissen (setInterval, setTimeout)
 
 \--- /collapse ---
 
 \--- task ---
 
-Open the `character.html` file.
+Open het `character.html` bestand.
 
-Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div`.
+Voeg een `<button>`-element toe met de gebeurtenis `onclick="displaySummary()"` onder het oorspronkelijke verhaal `div`.
 
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
+Voeg de tekst 'Maken' toe aan `<button>`, zodat de gebruiker weet wat de knop doet.
 
 ## --- code ---
 
@@ -50,9 +50,9 @@ line_highlights: 35
 --------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">Oorsprongsverhaal:</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    <button onclick="displaySummary()">Create</button>
+    <button onclick="displaySummary()">Maken</button>
   </section>
 ```
 
@@ -62,33 +62,33 @@ line_highlights: 35
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- You will see a Create button below your superhero form
-- The Create button does not do anything at the moment
+- Je ziet een knop Maken onder je superheldenformulier
+- De knop Maken doet op dit moment niets
 
 \--- /task ---
 
-Nothing will happen when the user clicks the Create button.
+Er gebeurt niets wanneer de gebruiker op de knop Maken klikt.
 
-This is because the summary section has its CSS `display` property set to `none`.
+Dit komt omdat de samenvatting sectie zijn `display` eigenschap ingesteld heeft op `none`.
 
-You need to use JavaScript to change the summary section's `display` property to `flex`.
+Je moet JavaScript gebruiken om de eigenschap `display` van de samenvattingssectie te wijzigen naar `flex`.
 
-When the summary section is displayed, you will hide the character details form.
+Wanneer de samenvatting sectie wordt weergegeven, wordt het personage details formulier verborgen.
 
-### Create constants to refer to each section
+### Maak constanten om naar elke sectie te verwijzen
 
-Your function will use constants that refer to each section.
+Je functie zal constanten gebruiken die verwijzen naar elke sectie.
 
 \--- task ---
 
 Open `scripts.js`.
 
-Use the `querySelector()` method to find:
+Gebruik de `querySelector()`-methode om het volgende te vinden:
 
-- The summary section element and assign it to the constant `summary`
-- The character details section element and assign it to the constant `characterDetails`
+- Het samenvattingssectie-element en wijs het toe aan de constante `samenvatting`
+- Het element van de sectie personage details en wijs het toe aan de constante `personageDetails`
 
 ## --- code ---
 
@@ -99,23 +99,23 @@ line_number_start: 5
 line_highlights: 6-7
 ---------------------------------------------------------
 
-// Create constants for superhero form
-const summary = document.querySelector("#summary-section");
-const characterDetails = document.querySelector("#character-details");
+// Maak constanten voor superheldenformulier
+const summary = document.querySelector("#samenvatting-sectie");
+const characterDetails = document.querySelector("#personage-details");
 
 \--- /code ---
 
 \--- /task ---
 
-### Create constants to refer to each form field
+### Maak constanten om naar elk formulierveld te verwijzen
 
-You need to display the three character details in the summary section.
+Je moet de drie personage details weergeven in de samenvatting sectie.
 
-Set each as a constant, so you can refer to them in your code.
+Stel elk van deze waarden in als een constante, zodat je ernaar kunt verwijzen in jouw code.
 
 \--- task ---
 
-Use `querySelector()` methods to find the form elements and assign each to a constant.
+Gebruik `querySelector()` methodes om de formulierelementen te vinden en deze toe te wijzen aan een constante.
 
 ## --- code ---
 
@@ -126,9 +126,9 @@ line_number_start: 5
 line_highlights: 9-11
 ----------------------------------------------------------
 
-// Create constants for superhero form
-const summary = document.querySelector("#summary-section");
-const characterDetails = document.querySelector("#character-details");
+// Maak constanten voor superheldenformulier
+const summary = document.querySelector("#samenvatting-sectie");
+const characterDetails = document.querySelector("#personage-details");
 
 const characterName = document.querySelector("#name-text");
 const characterAbility = document.querySelector("#ability-choice");
@@ -138,17 +138,17 @@ const characterOrigin = document.querySelector("#origin-text");
 
 \--- /task ---
 
-### Update the contents of the summary
+### De inhoud van de samenvatting bijwerken
 
-In `character.html`, you added a `<p>` element with the attribute `id="summary-paragraph"`.
+In `character.html`, heb je een `<p>` element met het attribuut `id="samenvatting-alinea"` toegevoegd.
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+**Tip:** Dit staat er alleen maar om je eraan te herinneren. Je hoeft het niet nog een keer te schrijven!
 
 ---
 
-## title: The summary paragraph you created earlier
+## title: De samenvattingsalinea die je eerder hebt gemaakt
 
 ## --- code ---
 
@@ -161,22 +161,22 @@ line_highlights: 3
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
-    <p id="summary-paragraph"></p>
-  </section>
+  <h2>Superheldensamenvatting</h2>
+  <p id="summary-paragraph"></p>
+</section>
 ```
 
 \--- /code ---
 
 \--- /collapse ---
 
-The summary paragraph will display a summary of the character details.
+In de samenvattingsalinea wordt een samenvatting van de personagegegevens weergegeven.
 
-You need a function to update the contents of the summary paragraph.
+Je hebt een functie nodig om de inhoud van de alinea te wijzigen.
 
 \--- task ---
 
-Create a function `displaySummary()`.
+Maak een functie `displaySummary()`.
 
 ## --- code ---
 
@@ -187,7 +187,7 @@ line_number_start: 13
 line_highlights: 14-16
 -----------------------------------------------------------
 
-// Function to display summary
+// Functie om de samenvatting te tonen
 function displaySummary() {
 
 }
@@ -196,13 +196,13 @@ function displaySummary() {
 
 \--- /task ---
 
-The `displaySummary()` function needs to change the `<p>` element with the attribute `id="summary-paragraph"`.
+De functie `displaySummary()` moet het element `<p>` wijzigen met het kenmerk `id="samenvatting-alinea"`.
 
 \--- task ---
 
-Use the `querySelector()` to find the `<p>` element with the attribute `id="summary-paragraph"`.
+Gebruik `querySelector()` om het `<p>`-element met het kenmerk `id="samenvatting-alinea"` te vinden.
 
-Assign the element to the constant `summaryParagraph`.
+Wijs het element toe aan de constante `summaryParagraph`.
 
 ## --- code ---
 
@@ -213,7 +213,7 @@ line_number_start: 13
 line_highlights: 15
 --------------------------------------------------------
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
@@ -223,37 +223,37 @@ const summaryParagraph = document.querySelector("#summary-paragraph");
 
 \--- /task ---
 
-You have previously changed the `.innerText` property of an HTML element.
+Je hebt eerder de `.innerText` eigenschap van een HTML-element gewijzigd.
 
-Here, you will change the `.textContent` property of the summary paragraph to include the values entered by the user in each field.
+Hier verander je de `.textContent` eigenschap van de samenvattingsalinea om de waarden die door de gebruiker zijn ingevoerd in elk veld op te nemen.
 
-Each value will appear next to text introducing the value (e.g. 'Your superhero name is ')
+Elke waarde wordt weergegeven naast de tekst die de waarde introduceert (bijvoorbeeld 'De naam van je superheld is ')
 
-You can use 'string formatting' to do this.
+Je kunt hiervoor 'string formatting' gebruiken.
 
 \--- collapse ---
 
 ---
 
-## title: What is string formatting?
+## title: Wat is string formatting?
 
-A string is a data type in JavaScript and other programming languages.
+Een string (tekenreeks) is een gegevenstype in JavaScript en andere programmeertalen.
 
-A string is a collection of characters between double quotes `" "` or single quotes `' '`.
+Een string is een verzameling tekens tussen dubbele aanhalingstekens: `" "` of enkele aanhalingstekens `' '`.
 
-You can format strings using template literals or concatenation.
+Je kunt strings opmaken met behulp van sjabloonliteralen of samenvoeging.
 
-### Template literals
+### Sjabloonliteralen
 
-If you want to include the values from constants, variables, or expressions in a string, then you can use template literals.
+Als je de waarden van constanten, variabelen of expressies in een tekenreeks wilt opnemen, kun je sjabloonliteralen gebruiken.
 
-Instead of using `" "` or `' '`, you use backticks `` ` ` `` to indicate a string.
+In plaats van `" "` of `' '' te gebruiken, gebruik je backticks ``` ` \` \`\`\` om een string aan te geven.
 
-Then use `${}` and place the constant, variable, or expression inside the `{}` part.
+Gebruik daarna `${}` en plaats de constante, variabele of expressie in het `{}` deel.
 
-Here is an example:
+Hier is een voorbeeld:
 
-- Include the values held in the constants `heroName` and `age` inside a string.
+- Voeg de waarden toe in de constanten `heldNaam` en `leeftijd` in een string.
 
 ## --- code ---
 
@@ -262,19 +262,19 @@ filename: scripts.js
 line_numbers: false
 --------------------------------------------------------
 
-const heroName = "Spider Man";
-const age = 25;
-const message = `Hello, ${heroName}! You are ${age} years old.`;
+const heldNaam = "Spider Man";
+const leeftijd = 25;
+const bericht = `Hallo, ${heroName}! Je bent ${age} jaar oud.`;
 
 \--- /code ---
 
-### Concatenation
+### Samenvoeging
 
-Concatenation is the act of joining things together.
+Concatenatie is het samenvoegen van dingen.
 
-You can join strings together using the `+` operator.
+Je kunt strings samenvoegen met behulp van de operator `+`.
 
-Here is an example:
+Hier is een voorbeeld:
 
 ## --- code ---
 
@@ -283,10 +283,10 @@ filename: scripts.js
 line_numbers: false
 --------------------------------------------------------
 
-const superhero = "Iron Man";
-const power = "suit of armor";
+const superheld = "Iron Man";
+const kracht = "harnas";
 
-const description = "The superhero " + superhero + " has a " + power + ".";
+const description = "De superheld " + superheld + " heeft een " + kracht + ".";
 
 \--- /code ---
 
@@ -294,9 +294,9 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 \--- task ---
 
-Update the `.textContent` of the `summaryParagraph`.
+Werk de `.textContent` van de `summaryParagraph` bij.
 
-**Notice:** The text content is inside backticks `` ` ` `` instead of using `" "` or `' '`.
+**Let op:** De tekstinhoud staat tussen backticks `` ` ` `` in plaats van `" "` of `' '`.
 
 ## --- code ---
 
@@ -307,13 +307,13 @@ line_number_start: 13
 line_highlights: 17-19
 -----------------------------------------------------------
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
-const summaryParagraph = document.querySelector("#summary-paragraph");
+const summaryParagraph = document.querySelector("#samenvatting-paragraaf");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `De naam van je superheld is ${characterName.value}. 
+  De vaardigheid is ${characterAbility.value}. 
+  Het oorsprongsverhaal is ${characterOrigin.value}.`;
 
 }
 
@@ -321,13 +321,13 @@ summaryParagraph.textContent = `Your superhero name is ${characterName.value}.
 
 \--- /task ---
 
-### Hide the character details form
+### Het formulier voor de personage details verbergen
 
 \--- task ---
 
-Set the value of the `display` property of the character details `<section>` to `none`.
+Zet de waarde van de `display` eigenschap van de personagedetails `<section>` in op `none`.
 
-This will hide the whole form on the page.
+Dit verbergt het hele formulier op de pagina.
 
 ## --- code ---
 
@@ -338,13 +338,13 @@ line_number_start: 13
 line_highlights: 21
 --------------------------------------------------------
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
-const summaryParagraph = document.querySelector("#summary-paragraph");
+const summaryParagraph = document.querySelector("#samenvatting-paragraaf");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `De naam van je superheld is ${characterName.value}. 
+  De vaardigheid is ${characterAbility.value}. 
+  Het oorsprongsverhaal is ${characterOrigin.value}.`;
 
 characterDetails.style.display = "none";
 
@@ -356,9 +356,9 @@ characterDetails.style.display = "none";
 
 \--- task ---
 
-Set the value of the `display` property of the summary `<section>` to `flex`.
+Stel de waarde van de eigenschap `display` van de samenvatting `<section>` in op `flex`.
 
-This will display the summary section on your page.
+Dit toont de samenvatting sectie op jouw pagina.
 
 ## --- code ---
 
@@ -369,13 +369,13 @@ line_number_start: 13
 line_highlights: 22
 --------------------------------------------------------
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
-const summaryParagraph = document.querySelector("#summary-paragraph");
+const summaryParagraph = document.querySelector("#samenvatting-paragraaf");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `De naam van je superheld is ${characterName.value}. 
+  De vaardigheid is ${characterAbility.value}. 
+  Het oorsprongsverhaal is ${characterOrigin.value}.`;
 
 characterDetails.style.display = "none";
 summary.style.display = "flex";
@@ -389,27 +389,27 @@ summary.style.display = "flex";
 
 Open `character.html`.
 
-**Click Run**
+**Klik op Run**
 
-- Fill in the character details
-- When you click the Create button, the form will be hidden and the summary section will be displayed
-- The summary paragraph will include a summary of your character
+- Vul de personage details in
+- Wanneer je op de knop Maken klikt, wordt het formulier verborgen en wordt het samenvattingsgedeelte weergegeven
+- De samenvattingsalinea bevat een samenvatting van jouw personage
 
 \--- collapse ---
 
 ---
 
-## title: The summary section is not displaying properly
+## title: De samenvatting sectie wordt niet goed weergegeven
 
-- Check you have named all constants (`const`) correctly
-- Check you have used correct syntax when creating the functions, including `()` and `{}`
-- Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element
-- Check you have added a semicolon `;` at the end of your declarations
+- Controleer of je alle constanten (`const`) correct hebt benoemd
+- Controleer of je de juiste syntaxis gebruikt bij het aanmaken van de functies, inclusief `()` en `{}`
+- Controleer of je `onclick = "displaySummary()"` hebt toegevoegd als een gebeurtenis op het `<button>`-element
+- Controleer of je een puntkomma `;` hebt toegevoegd aan het einde van jouw declaraties
 
 \--- /collapse ---
 
 \--- /task ---
 
-Well done! You have created an interactive form that shows and hides elements.
+Goed gedaan! Je hebt een interactieve formulier gemaakt dat elementen laat zien en verbergt.
 
-Next, you will allow the user to edit their choices!
+Vervolgens kun je de gebruiker zijn/haar keuzes laten bewerken!
