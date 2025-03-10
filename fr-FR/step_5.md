@@ -1,25 +1,25 @@
-## Change the summary content
+## Modifier le contenu du résumé
 
-In this step, you will allow the user to change their form choices.
+Dans cette étape, tu permettras à l'utilisateur de modifier ses choix de formulaire.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step5?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Add the changeSummary() function
+### Ajouter la fonction changeSummary()
 
-You need a function that shows the form and hides the summary when the user clicks an Edit button.
+Tu as besoin d'une fonction qui affiche le formulaire et masque le résumé lorsque l'utilisateur clique sur un bouton Modifier.
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Find the comment `// Function to edit summary`.
+Trouve le commentaire `// Fonction pour modifier le résumé`.
 
-Add the function `changeSummary()`.
+Ajoute la fonction `changeSummary()`.
 
-In your function:
+Dans ta fonction :
 
-- Set the value of the `display` property of the character details `<section>` to `flex`
-- Set the value of the `display` property of the summary `<section>` to `none`
+- Définis la valeur de la propriété `display` des informations du personnage `<section>` sur `none`
+- Définis la valeur de la propriété `display` du résumé `<section>` sur `none`
 
 ## --- code ---
 
@@ -30,7 +30,7 @@ line_number_start: 25
 line_highlights: 26-29
 -----------------------------------------------------------
 
-// Function to edit summary
+// Fonction pour modifier le résumé
 function changeSummary() {
 characterDetails.style.display = "flex";
 summary.style.display = "none";
@@ -40,17 +40,17 @@ summary.style.display = "none";
 
 \--- /task ---
 
-### Create an Edit button
+### Créer un bouton Modifier
 
-You need to create a new button to call the `changeSummary()` function.
+Tu dois créer un nouveau bouton pour appeler la fonction `changeSummary()`.
 
 \--- task ---
 
-Open `character.html`.
+Ouvre `character.html`.
 
-Add a `<button>` element with the event `onlick="changeSummary()"` to the summary section.
+Ajoute un élément `<button>` avec l'événement `onlick="changeSummary()"` à la section résumé.
 
-Add the text 'Edit' to the `<button>`, so the user knows what the button does.
+Ajoute le texte 'Modifier' au `<button>`, afin que l'utilisateur sache ce que fait le bouton.
 
 ## --- code ---
 
@@ -63,9 +63,9 @@ line_highlights: 42
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
+    <h2>Résumé du super-héros</h2>
     <p id="summary-paragraph"></p>
-    <button onclick="changeSummary()">Edit</button>
+    <button onclick="changeSummary()">Modifier</button>
   </section>
 ```
 
@@ -75,14 +75,14 @@ line_highlights: 42
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- Complete the form again.
-- When you click the Create button, the form will be hidden and the summary section will be displayed.
-- You should see an Edit button. Click it to edit your form.
+- Remplis à nouveau le formulaire.
+- Lorsque tu cliques sur le bouton Créer, le formulaire sera masqué et la section résumé sera affichée.
+- Tu devrais voir un bouton Modifier. Clique dessus pour modifier ton formulaire.
 
 \--- /task ---
 
-Well done! You have added even more interactivity to your website!
+Bien joué ! Tu as ajouté encore plus d'interactivité à ton site web !
 
-Next, you will check that the user has completed the form and warn them if they have missed a section.
+Ensuite, tu vérifieras que l'utilisateur a rempli le formulaire et l'avertiras s'il a manqué une section.
