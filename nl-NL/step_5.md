@@ -1,25 +1,25 @@
-## Change the summary content
+## Wijzig de inhoud van de samenvatting
 
-In this step, you will allow the user to change their form choices.
+In deze stap kun je de gebruiker toestaan zijn/haar formulierkeuzes te wijzigen.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step5?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Add the changeSummary() function
+### Voeg de changeSummary() functie toe
 
-You need a function that shows the form and hides the summary when the user clicks an Edit button.
+Je hebt een functie nodig die het formulier toont en de samenvatting verbergt wanneer de gebruiker op de knop Bewerken klikt.
 
 \--- task ---
 
 Open `scripts.js`.
 
-Find the comment `// Function to edit summary`.
+Zoek de opmerking `// Functie om samenvatting te bewerken`.
 
-Add the function `changeSummary()`.
+Voeg de functie `changeSummary()` toe.
 
-In your function:
+Zet in je functie:
 
-- Set the value of the `display` property of the character details `<section>` to `flex`
-- Set the value of the `display` property of the summary `<section>` to `none`
+- de waarde van de `display` eigenschap van de personagedetails `<section>` op `flex`
+- de waarde van de `display` eigenschap van de samenvatting `<section>` op `none`
 
 ## --- code ---
 
@@ -30,7 +30,7 @@ line_number_start: 25
 line_highlights: 26-29
 -----------------------------------------------------------
 
-// Function to edit summary
+// Functie om samenvatting te bewerken
 function changeSummary() {
 characterDetails.style.display = "flex";
 summary.style.display = "none";
@@ -40,17 +40,17 @@ summary.style.display = "none";
 
 \--- /task ---
 
-### Create an Edit button
+### Maak een knop Bewerken
 
-You need to create a new button to call the `changeSummary()` function.
+Je moet een nieuwe knop maken om de 'changeSummary()' functie aan te roepen.
 
 \--- task ---
 
 Open `character.html`.
 
-Add a `<button>` element with the event `onlick="changeSummary()"` to the summary section.
+Voeg een `<button>` element toe met het event `onlick="changeSummary()"` aan de samenvatting sectie.
 
-Add the text 'Edit' to the `<button>`, so the user knows what the button does.
+Voeg de tekst 'Bewerken' toe aan `<button>`, zodat de gebruiker weet wat de knop doet.
 
 ## --- code ---
 
@@ -63,9 +63,9 @@ line_highlights: 42
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
+    <h2>Superheldensamenvatting</h2>
     <p id="summary-paragraph"></p>
-    <button onclick="changeSummary()">Edit</button>
+    <button onclick="changeSummary()">Bewerken</button>
   </section>
 ```
 
@@ -75,14 +75,14 @@ line_highlights: 42
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Complete the form again.
-- When you click the Create button, the form will be hidden and the summary section will be displayed.
-- You should see an Edit button. Click it to edit your form.
+- Vul het formulier opnieuw in.
+- Wanneer je op de knop Maken klikt, wordt het formulier verborgen en wordt het samenvattingsgedeelte weergegeven.
+- Je zou een knop Bewerken moeten zien. Klik erop om je formulier te bewerken.
 
 \--- /task ---
 
-Well done! You have added even more interactivity to your website!
+Goed gedaan! Je hebt nog meer interactiviteit aan je website toegevoegd!
 
-Next, you will check that the user has completed the form and warn them if they have missed a section.
+Vervolgens ga je controleren of de gebruiker het formulier heeft ingevuld en een waarschuwing geven als er een sectie niet is ingevuld.
