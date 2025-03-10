@@ -1,45 +1,45 @@
-## Add form input fields
+## Ajouter des champs de saisie de formulaire
 
-In this step, you will design an interactive webpage and a form that the user can use to create their own superhero!
+Dans cette étape, tu vas créer une page web interactive et un formulaire que l'utilisateur peut utiliser pour créer son propre super-héros !
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You have added text and images to your website, but your user can change the content too!
+Tu as ajouté du texte et des images à ton site web, mais ton utilisateur peut également en modifier le contenu !
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-HTML <span style="color: #0faeb0">**forms**</span> allow the user to input and submit information.
+Les <span style="color: #0faeb0">**formulaires**</span> HTML permettent à l'utilisateur de saisir et de soumettre des informations.
 </p>
 
-You will add different types of form elements to allow the user to create their superhero character.
+Tu ajouteras différents types d'éléments de formulaire pour permettre à l'utilisateur de créer son personnage de super-héros.
 
-**Note:** CSS styling for your form is already provided in the file `style.css`.
+**Remarque :** le style CSS pour ton formulaire est déjà fourni dans le fichier `style.css`.
 
 \--- collapse ---
 
 ---
 
-## title: Types of form elements
+## title: Types d'éléments de formulaire
 
-![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
+![Un exemple de formulaire HTML avec des champs de formulaire annotés pour montrer leur utilisation.](images/form-labelled.png)
 
-- `<input>` e.g. single-line text box, checkbox, button
-- `<select>` A drop-down list
-- `<textarea>` For entering multiple lines of text
-- `<label>` Text to tell the user what information to enter
+- `<input>` Par exemple la case de texte à une ligne, la case à cocher, le bouton
+- `<select>` Une liste déroulante
+- `<textarea>` Pour entrer plusieurs lignes de texte
+- `<label>` Texte pour indiquer à l'utilisateur quelles informations entrer
 
 \--- /collapse ---
 
-### Set up the form
+### Configurer le formulaire
 
-All the input elements will be inside a `<section>` with an `id` attribute, so you can update it later.
+Tous les éléments d'entrée seront à l'intérieur d'une `<section>` avec un attribut `id`, tu pourras le mettre à jour plus tard.
 
 \--- task ---
 
-Open the `character.html` file.
+Ouvre le fichier `character.html`.
 
-Find the comment `<!--Superhero character details-->`.
+Trouve le commentaire `<!--Informations sur le personnage de super-héros-->`.
 
-Add the attribute `id="character-details"` to the `<section>` tag.
+Ajoute l'attribut `id="character-details"` à la balise `<section>`.
 
 ## --- code ---
 
@@ -51,7 +51,7 @@ line_highlights: 23
 --------------------------------------------------------
 
 ```
-  <section id="character-details"> <!--Superhero character details-->
+  <section id="character-details"> <!--Informations sur le personnage de super-héros-->
 
   </section>
 ```
@@ -60,15 +60,15 @@ line_highlights: 23
 
 \--- /task ---
 
-### Superhero 'name' section
+### Section « nom » du super-héros
 
-The user will start by naming their superhero!
+L'utilisateur commencera par nommer son super-héros !
 
-A `<label>` tells the user what they need to enter.
+Un `<label>` indique à l'utilisateur ce qu'il doit entrer.
 
 \--- task ---
 
-Add a `<label>` element with the attribute `"for=name-text"`
+Ajoute un élément `<label>` avec l'attribut `"for=name-text"`
 
 ## --- code ---
 
@@ -80,8 +80,8 @@ line_highlights: 24
 --------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
+<section id="character-details"> <!--Informations sur le personnage de super-héros-->
+  <label for="name-text">Nom du super-héros :</label>
 </section>
 ```
 
@@ -91,40 +91,40 @@ line_highlights: 24
 
 ---
 
-## title: Accessible design
+## title: Conception accessible
 
-The `<label>` element allows screen-readers to read the label out loud when a user focuses on the input element.
-Adding a `for` attribute links the label to an input element.
+L'élément `<label>` permet aux lecteurs d'écran de lire le label à haute voix lorsqu'un utilisateur se concentre sur l'élément d'entrée.
+L'ajout d'un attribut `for` relie le label à un élément d'entrée.
 
 \--- /collapse ---
 
 \--- /task ---
 
-An `<input>` element allows the user to enter data.
+Un élément `<input>` permet à l'utilisateur d'entrer des données.
 
-You set the type of input using `type=`.
+Tu définis le type d'entrée en utilisant `type=`.
 
 \--- collapse ---
 
 ---
 
-## title: Examples of input types
+## title: Exemples de types d'entrée
 
-- **Text:** Single line of text. <br>`<input type="text">` <br>_Try it_: <br><input type="text">
+- **Texte :** une seule ligne de texte. <br>`<input type="text">` <br>_Essaie-le_ : <br><input type="text">
 
-- **Password:** Hides the entered text. <br>`<input type="password">` <br>_Try it_: <br><input type="password">
+- **Mot de passe :** masque le texte entré. <br>`<input type="password">` <br>_Essaie-le_ : <br><input type="password">
 
-- **Checkbox:** Tick one or more options. <br>`<input type="checkbox"> <label>Breakfast</label>` <br>`<input type="checkbox"> <label>Lunch</label>` <br>_Try it_: <br><input type="checkbox"><label>Breakfast</label> <br><input type="checkbox"><label>Lunch</label>
+- **Case à cocher :** coche une ou plusieurs options. <br>`<input type="checkbox"> <label>Petit déjeuner</label>` <br>`<input type="checkbox"> <label>Déjeuner</label>` <br>_Essaie-le_ : <br><input type="checkbox"><label>Petit déjeuner</label> <br><input type="checkbox"><label>Déjeuner</label>
 
-- **Radio:** Select one option from a group. <br>`<input type="radio" name="meal"> <label>Breakfast</label> ` <br>`<input type="radio" name="meal"> <label>Lunch</label>` <br>_Try it_: <br><input type="radio" name="meal"><label>Breakfast</label> <br><input type="radio" name="meal"><label>Lunch</label> <br>**Tip:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button.
+- **Radio :** sélectionne une option dans un groupe. <br>`<input type="radio" name="meal"> <label>Petit déjeuner</label> ` <br>`<input type="radio" name="meal"> <label>Déjeuner</label>` <br>_Essaie-le_ : <br><input type="radio" name="meal"><label>Petit déjeuner</label> <br><input type="radio" name="meal"><label>Déjeuner</label> <br>**Astuce :** les boutons radio doivent avoir le même attribut `name` afin que la sélection d'un bouton radio désélectionne tout autre bouton radio sélectionné.
 
-- **Number:** Numeric data with arrows to increase/decrease the value <br>`<input type="number">` <br>_Try it_: <br><input type="number">
+- **Nombre :** données numériques avec des flèches pour augmenter/diminuer la valeur <br>`<input type="number">` <br>_Essaie-le_ : <br><input type="number">
 
 \--- /collapse ---
 
 \--- task ---
 
-Add a text `<input>` element with the attribute `id="name-text"`.
+Ajoute un élément texte `<input>` avec l'attribut `id="name-text"`.
 
 ## --- code ---
 
@@ -136,9 +136,9 @@ line_highlights: 25
 --------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
-  <input type="text" id="name-text">
+<section id="character-details"> <!--Informations sur le personnage de super-héros-->
+  <label for="name-text">Nom du super-héros :</label>
+<input type="text" id="name-text">
 </section>
 ```
 
@@ -148,17 +148,17 @@ line_highlights: 25
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You will see a text box with the label "Superhero Name:" above it.
+- Tu verras une zone de texte avec le label « Nom du super-héros : » au-dessus de celui-ci.
 
 \--- collapse ---
 
 ---
 
-## title: There is no text box
+## title: Il n'y a pas de zone de texte
 
-- Check you have added `""` marks around `text`.
+- Vérifie que tu as ajouté des marques `""` autour de `text`.
 
 \--- /collapse ---
 
@@ -166,36 +166,36 @@ line_highlights: 25
 
 ---
 
-## title: The text box is very small
+## title: La zone de texte est très petite
 
-- Check you have given the `<input>` the id `"name-text"`, not `"name"`.
+- Vérifie que tu as donné au `<input>` l'id `"name-text"`, et pas `"name"`.
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Superhero 'ability' section
+### Section « Pouvoir » du super-héros
 
-Next, the user will choose an ability for their superhero!
+Ensuite, l'utilisateur choisira un pouvoir pour son super-héros !
 
-- The `<select>` element is used to create the drop-down list
-- The `<option>` elements are used to provide choices
+- L'élément `<select>` est utilisé pour créer la liste déroulante
+- Les éléments `<option>` sont utilisés pour fournir des choix
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: Voir un exemple
 
-<br>`<select><option value="Water">Water</option><option value="Juice">Juice</option></select>` <br>_Try it_: <br><select><option value="Water">Water</option><option value="Juice">Juice</option></select>
+<br>`<select><option value="Water">Eau</option><option value="Juice">Jus</option></select>` <br>_Essaie-le_ : <br><select><option value="Water">Eau</option><option value="Juice">Jus</option></select>
 
 \--- /collapse ---
 
 \--- task ---
 
-Add a `<label>` element with the attribute `for="ability-choice"`.
+Ajoute un élément `<label>` avec l'attribut `for="ability-choice"`.
 
-Add a `<select>` element with the attribute `id="ability-choice"` and **four** `<option>` elements for the choices.
+Ajoute un élément `<select>` avec l'attribut `id="ability-choice"` et **quatre** `<option>` pour les choix.
 
 ## --- code ---
 
@@ -207,72 +207,72 @@ line_highlights: 26-32
 -----------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
+<section id="character-details"> <!--Informations sur le personnage de super-héros-->
+  <label for="name-text">Nom du super-héros :</label>
   <input type="text" id="name-text">     
-  <label for="ability-choice">Ability:</label>
+  <label for="ability-choice">Pouvoir :</label>
   <select id="ability-choice">
-    <option value="">Choose an option</option>
-    <option value="Flying">Flying</option>
-    <option value="Invisibility">Invisibility</option>
-    <option value="Time travel">Time travel</option>
+    <option value="">Choisir une option</option>
+    <option value="Flying">Vol</option>
+    <option value="Invisibility">Invisibilité</option>
+    <option value="Time travel">Voyage dans le temps</option>
   </select>
 </section>
 ```
 
 \--- /code ---
 
-**Notice:** The first option has a blank `value`.
+**Remarque :** la première option a une `valeur` vide.
 
 \--- /task ---
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You will see a drop-down list
-- Click the arrow to view the choices
+- Tu verras une liste déroulante
+- Clique sur la flèche pour voir les choix
 
 \--- collapse ---
 
 ---
 
-## title: There are no options in my drop-down list
+## title: Il n'y a pas d'options dans ma liste déroulante
 
-- Check you have four `<option>` elements inside your `<select>` elements
-- Check you have closing `</option>` tags for each option
+- Vérifie que tu as quatre éléments `<option>` à l'intérieur de tes éléments `<select>`
+- Vérifie que tu as des balises de fermeture `</option>` pour chaque option
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Superhero 'origin story' section
+### Section « Histoire » du super-héros
 
-Next, the user will describe their superhero's origin story!
+Ensuite, l'utilisateur décrira l'histoire de son super-héros !
 
-The `<textarea>` element provides multi-line text entry.
+L'élément `<textarea>` fournit une saisie de texte sur plusieurs lignes.
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: Voir un exemple
 
-<br>`<textarea></textarea>` <br>_Try it_: <br><textarea></textarea>
+<br>`<textarea></textarea>` <br>_Essaie-le_ : <br><textarea></textarea>
 
 \--- /collapse ---
 
-You can add a `placeholder` attribute to an input element.
+Tu peux ajouter un attribut `placeholder` à un élément d'entrée.
 
-This gives a hint as to what the user should enter.
+Cela donne un indice sur ce que l'utilisateur doit entrer.
 
-The hint is replaced when the user starts typing.
+L'indice est remplacé lorsque l'utilisateur commence à taper.
 
 \--- task ---
 
-Add the `<label>` and `<textarea>` HTML.
+Ajoute l'HTML `<label>` et `<textarea>`.
 
-Include a placeholder attribute for the `<textarea>` element.
+Inclus un attribut placeholder pour l'élément `<textarea>`.
 
 ## --- code ---
 
@@ -284,14 +284,14 @@ line_highlights: 33-45
 -----------------------------------------------------------
 
 ```
-<label for="ability-choice">Ability:</label>
+<label for="ability-choice">Pouvoir :</label>
 <select id="ability-choice">
-  <option value="">Choose an option</option>
-  <option value="Flying">Flying</option>
-  <option value="Invisibility">Invisibility</option>
-  <option value="Time travel">Time travel</option>
+  <option value="">Choisir une option</option>
+  <option value="Flying">Vol</option>
+  <option value="Invisibility">Invisibilité</option>
+  <option value="Time travel">Voyage dans le temps</option>
 </select>
-<label for="origin-text">Origin Story:</label>
+<label for="origin-text">Histoire :</label>
 <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
 ```
 
@@ -303,19 +303,19 @@ line_highlights: 33-45
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You will see a multi-line text box showing placeholder text.
+- Tu verras apparaître une zone de texte de plusieurs lignes contenant un placeholder (texte de remplacement).
 
 \--- /task ---
 
-### Superhero 'summary' section
+### Section « Résumé » du super-héros
 
-It would be great to show the user a summary of their character.
+Ce serait bien de montrer à l'utilisateur un résumé de son personnage.
 
 \--- task ---
 
-Add a new `<section>` element with the attribute `id="summary-section"`.
+Ajoute un nouvel élément `<section>` avec l'attribut `id="summary-section"`.
 
 ## --- code ---
 
@@ -339,9 +339,9 @@ line_highlights: 36-39
 
 \--- task ---
 
-Add a `<h2>` element to create a title for the summary.
+Ajoute un élément `<h2>` pour créer un titre pour le résumé.
 
-Add a `<p>` element with the attribute `id="summary-paragraph"`.
+Ajoute un élément `<p>` avec l'attribut `id="summary-paragraph"`.
 
 ## --- code ---
 
@@ -354,7 +354,7 @@ line_highlights: 37-38
 
 ```
 <section id="summary-section">
-  <h2>Superhero Summary</h2>
+  <h2>Résumé du super-héros</h2>
   <p id="summary-paragraph"></p>
 </section>
 ```
@@ -365,15 +365,15 @@ line_highlights: 37-38
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You might expect to see the summary section. However, the `display` property for the `#summary-section` selector is set to `none`, so it is hidden.
+- Tu peux t'attendre à voir la section résumé. Cependant, la propriété `display` du sélecteur `#summary-section` est définie à `none`, donc elle est cachée.
 
 \--- collapse ---
 
 ---
 
-## title: View the summary-section CSS selector
+## title: Voir le sélecteur CSS de la section résumé
 
 ## --- code ---
 
@@ -396,10 +396,10 @@ display: none;
 
 \--- /collapse ---
 
-Next, you will add a button that will run some JavaScript code to make the summary visible.
+Ensuite, tu vas ajouter un bouton qui exécutera du code JavaScript pour rendre le résumé visible.
 
 \--- /task ---
 
-Fantastic work! Your character details page now contains a form with input fields.
+Super boulot ! La page d'informations de ton personnage contient maintenant un formulaire avec les champs de saisie.
 
-In the next step, you will make your form interactive, so the user can view a summary of their character.
+Dans la prochaine étape, tu rendras ton formulaire interactif, de sorte que l'utilisateur peut voir un résumé de leur personnage.
