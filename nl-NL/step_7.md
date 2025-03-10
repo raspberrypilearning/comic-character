@@ -1,24 +1,24 @@
-## Create light mode theme
+## Aanmaken light mode thema
 
-In this step, you will create a switch so the user can change between dark mode and light mode.
+In deze stap maak je een schakelaar zodat de gebruiker kan veranderen tussen donkere modus en lichte modus.
 
-The website will remember the user's choice even if they navigate to another page.
+De website zal de keuze van de gebruiker onthouden, zelfs als ze naar een andere pagina navigeren.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
+<span style="color: #0faeb0">**Lichte en donkere**</span> kleurthema's worden gebruikt bij het ontwerpen van websites en apps. De donkere modus is een kleurenschema waarbij lichte tekst en pictogrammen op donkere achtergronden worden weergegeven. De lichte modus is het tegenovergestelde hiervan. Door de gebruiker deze optie te bieden, wordt de leesbaarheid en toegankelijkheid verbeterd.
 </p>
 
-Your `style.css` file includes selectors used to update your website's colour scheme.
+Je `style.css` bestand bevat selectors die gebruikt worden om het kleurenschema van jouw website bij te werken.
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+**Tip:** Dit staat er alleen maar om je eraan te herinneren. Je hoeft het niet nog een keer te schrijven!
 
 ---
 
-## title: Light mode styles
+## title: Light mode stijlen
 
 ## --- code ---
 
@@ -28,7 +28,7 @@ line_numbers: true
 line_number_start: 244
 --------------------------------------------------------------------------------
 
-/\* Light Mode Styles \*/
+/\* Stijlen voor Light mode \*/
 
 body.light-mode {
 background: var(--background-colour-light-mode);
@@ -68,19 +68,19 @@ color: var(--text-colour-light-mode-footer);
 
 \--- /collapse ---
 
-### Add a switch to the header
+### Een schakelaar toevoegen aan de koptekst
 
-You have already used `<button>` elements to trigger events.
+Je hebt al `<button>` elementen gebruikt om gebeurtenissen te activeren.
 
-This time, you will use a checkbox (`<input type="checkbox">`) styled as a switch, so the user can change between colour themes.
+Deze keer zal je een selectievakje (`<input type="checkbox">`) gebruiken als een schakelaar, zodat de gebruiker kan veranderen tussen kleurthema's.
 
 \--- task ---
 
 Open `index.html`.
 
-Create a `<div>` element below the `<nav>` element in the `<header>` section.
+Maak een `<div>` element onder het `<nav>` element in de `<header>` sectie.
 
-Give it the attribute `class="switch-container"`.
+Geef het het kenmerk `class="switch-container"`.
 
 ## --- code ---
 
@@ -104,18 +104,18 @@ line_highlights: 20-22
 
 \--- /task ---
 
-The switch uses three elements: `<label>`, `<input>`, and `<span>`.
+De schakelaar gebruikt drie elementen: `<label>`, `<input>`, en `<span>`.
 
-You used some of these when you created the character details form.
+Je hebt enkele van deze al gebruikt toen je het personage details formulier maakte.
 
 \--- task ---
 
-Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`.
+Binnen de `<div>` tags, voeg een `<label>` toe met het attribuut `class="switch"`.
 
-Inside the `<label>` tags, add
+Voeg binnen de `<label>`-tags toe
 
-- An `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
-- A `<span>` element with the attribute `class="switch-slider"`
+- Een `<input>`-element met twee kenmerken: `type="checkbox"` en `id="lightModeSwitch"`
+- Een `<span>`-element met het kenmerk `class="switch-slider"`
 
 ## --- code ---
 
@@ -143,50 +143,50 @@ line_highlights: 21-24
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- **Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+- **Let op:** De `.switch` selector biedt een styling om de checkbox om te zetten in een schakelaar vorm.
 
 \--- /task ---
 
-### Add an icon to the switch
+### Een pictogram toevoegen aan de schakelaar
 
-You can show the user an icon that represents light mode rather than show them the phrase "light mode".
+Je kunt de gebruiker een pictogram laten zien dat de light mode weergeeft in plaats van de zin "light mode".
 
-Google fonts provides icons and a way to add them to your website.
+Google Fonts biedt pictogrammen en een manier om deze aan je website toe te voegen.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Icons**</span> are an accessible way of representing text because they are universally understood.
+<span style="color: #0faeb0">**Pictogrammen**</span> zijn een toegankelijke manier om tekst weer te geven, omdat ze universeel worden begrepen.
 </p>
 
-The Google icon has already been included inside the `<head>` element of your webpages. The CSS styles have also been provided.
+Het Google-pictogram is al opgenomen in het `<head>`-element van je webpagina's. De CSS-stijlen zijn ook beschikbaar.
 
 \--- collapse ---
 
 ---
 
-## title: How to import icons using Google fonts
+## title: Hoe kan je pictogrammen importeren met behulp van Google fonts
 
-Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The link will open in a new tab.
+Open [fonts.google.com](https://fonts.google.com/icons/){:target="_blank"}. De link wordt geopend in een nieuw tabblad.
 
-![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
-You can search for icons. Each icon has a unique name.
+![De Google Fonts-pictogrammen pagina met verschillende pictogrammen en de zoekbalk die wordt weergegeven.](images/google-icons.png)
+Je kunt zoeken naar pictogrammen. Elk pictogram heeft een unieke naam.
 
-Click on the icon you want to add. This will open some instructions.
-![The Google Fonts icons page with the 'Home' icon selected and an instructions panel.](images/google-selected-icon.png)
+Klik op het pictogram dat je wil toevoegen. Hiermee worden enkele instructies geopend.
+![De pagina met Google Fonts-pictogrammen met het 'Home'-pictogram geselecteerd en een instructiepaneel.](images/google-selected-icon.png)
 
-- Include icons in HTML:
-  Add this in the `<head>` section of an HTML file.
+- Pictogrammen toevoegen aan HTML:
+  Voeg dit toe in de sectie `<head>` van een HTML-bestand.
 
   `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
 
-- Use icons in HTML:
-  Add a class to an HTML element. For example:
+- Gebruik pictogrammen in HTML:
+  Voeg een klasse toe aan een HTML-element. Bijvoorbeeld:
 
   `<span class="material-symbols-outlined">home</span>`
 
-- CSS styling:
-  Add the icon’s custom styles to your CSS stylesheet. You can also customise it:
+- CSS-styling:
+  Voeg de aangepaste stijl van het icoon toe aan je CSS stylesheet. Je kunt het ook aanpassen:
 
   .material-symbols-outlined {
   font-variation-settings:
@@ -200,9 +200,9 @@ Click on the icon you want to add. This will open some instructions.
 
 \--- task ---
 
-Below the `</label>` tag, add a `<span>` element with the attribute `class="switch-label material-symbols-outlined"`.
+Voeg onder de tag `</label>` een `<span>`-element toe met het attribuut `class="switch-label material-symbols-outlined"`.
 
-Add the text 'light_mode' inside the `<span>` element.
+Voeg de tekst 'light_mode' toe binnen het element `<span>`.
 
 ## --- code ---
 
@@ -230,34 +230,34 @@ line_highlights: 25
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Your switch should appear on the right in your navbar
-- You can click the switch, but it will not do anything...yet!
+- Je schakelaar zou rechts in je navigatiebalk moeten verschijnen
+- Je kunt op de schakelaar klikken, maar er gebeurt nog niets....!
 
 \--- collapse ---
 
 ---
 
-## title: The switch does not display properly
+## title: De schakelaar wordt niet goed weergegeven
 
-- Check you have left spaces between your attributes where you have multiple attributes in an element.
+- Controleer of je spaties hebt gelaten tussen je attributen als er meerdere attributen in een element zitten.
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Create an event handler for your switch
+### Maak een event handler voor jouw schakelaar
 
 \--- task ---
 
 Open `scripts.js`.
 
-Find the comment `// Create the constant for light mode`.
+Zoek de opmerking `// Maak de constante voor de lightmodus`.
 
-Use `querySelector()` to find the element with the attribute `id="lightModeSwitch"`.
+Gebruik `querySelector()` om het element te vinden met het attribuut `id="lightModeSwitch"`.
 
-Assign it to a constant `lightModeSwitch`.
+Wijs het toe aan de constante `lightModeSwitch`.
 
 ## --- code ---
 
@@ -268,7 +268,7 @@ line_number_start: 55
 line_highlights: 56
 --------------------------------------------------------
 
-// Create the constant for light mode
+// Maak de constante voor de lightmodus
 const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- /code ---
@@ -277,9 +277,9 @@ const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- task ---
 
-Find the comment `// Light mode function`.
+Zoek de opmerking `// Light mode function`.
 
-Create the function `changeLightMode()`.
+Maak de functie `changeLightMode()`.
 
 ## --- code ---
 
@@ -290,7 +290,7 @@ line_number_start: 58
 line_highlights: 59-61
 -----------------------------------------------------------
 
-// Light mode function
+// Light mode functie
 function changeLightMode(){
 
 }
@@ -299,15 +299,15 @@ function changeLightMode(){
 
 \--- /task ---
 
-You added an `<input>` element with the attribute `type="checkbox"` and styled it as a switch.
+Je hebt een `<input>` element met het attribuut `type="checkbox"` toegevoegd en opgemaakt als een schakelaar.
 
-You can check if a switch is 'on' using the `.checked` property.
+Je kunt controleren of een schakelaar 'aan' staat met de eigenschap `.checked`.
 
-The value of the `.checked` property is Boolean, meaning it can either be **true** (on) or **false** (off).
+De waarde van de `.checked` eigenschap is Boolean, wat betekent dat het **waar** (aan) of **onwaar** (uit) kan zijn.
 
 \--- task ---
 
-Make the function assign the value of the switch's `.checked` property to the variable `isLightMode`.
+Zorg ervoor dat de functie de waarde van de eigenschap `.checked` van de schakelaar toewijst aan de variabele `isLightMode`.
 
 ## --- code ---
 
@@ -318,7 +318,7 @@ line_number_start: 58
 line_highlights: 60
 --------------------------------------------------------
 
-// Light mode function
+// Light mode functie
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 
@@ -328,11 +328,11 @@ var isLightMode = lightModeSwitch.checked;
 
 \--- /task ---
 
-The `.classList` property returns an element's `class` attributes.
+De eigenschap `.classList` retourneert de `class`-kenmerken van een element.
 
-You can modify an element's class attributes using methods.
+Je kunt de klassenkenmerken van een element aanpassen met behulp van methodes.
 
-For example, you can add(), toggle(), or remove() an element's classes.
+Je kunt bijvoorbeeld de klassen van een element toevoegen(add ()), in of uitschakelen(toggle()), of verwijderen(remove()) .
 
 \--- collapse ---
 
@@ -340,26 +340,26 @@ For example, you can add(), toggle(), or remove() an element's classes.
 
 ## title: classList methods
 
-- Access a classList:
-  `element.classList` returns a list of the specified element's class attributes.
+- Toegang tot een classList:
+  `element.classList` geeft een lijst van de klassenattributen van het gespecificeerde element weer.
 
-- Add a class: `element.classList.add("className")`
+- Een klasse toevoegen: `element.classList.add("className")`
 
-- Remove a class: `element.classList.remove("className")`
+- Een klasse verwijderen: `element.classList.remove("className")`
 
-- Toggle a class: `element.classList.toggle("className")` (If the class is present, it is removed; otherwise, it is added.)
+- Een klasse in- of uitschakelen: `element.classList.toggle("className")` (Als de klasse aanwezig is, wordt deze verwijderd; anders wordt deze toegevoegd.)
 
-- Check if a class exists: `element.classList.contains("className")` returns a Boolean value confirming whether the element contains the specified class.
+- Controleer of een klasse bestaat: `element.classList.contains("className")` retourneert een Booleaanse waarde die bevestigt of het element de opgegeven klasse bevat.
 
-- Replace a class: `element.classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
+- Vervang een klasse: `element.classList.replace("oldClass", "newClass")` vervangt de opgegeven oude klasse door een nieuwe.
 
 \--- /collapse ---
 
 \--- task ---
 
-Use the `.toggle` method to add or remove the `light-mode` class to the `<body>` element.
+Gebruik de `.toggle` methode om de `light-mode` klasse aan het `<body>` element toe te voegen of te verwijderen.
 
-This will add the class to the element if it is not there, or remove it if it is.
+Hiermee wordt de klasse aan het element toegevoegd als deze er niet is, of verwijderd als deze er wel is.
 
 ## --- code ---
 
@@ -370,7 +370,7 @@ line_number_start: 58
 line_highlights: 61
 --------------------------------------------------------
 
-// Light mode function
+// Light mode functie
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -381,13 +381,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-### Add the event handler to the switch
+### Voeg de event-handler toe aan de schakelaar
 
 \--- task ---
 
 Open `index.html`.
 
-Add the event `onchange="changeLightMode()"` to the switch element.
+Voeg de gebeurtenis `onchange="changeLightMode()"` toe aan het schakelaar-element.
 
 ## --- code ---
 
@@ -415,46 +415,46 @@ line_highlights: 22
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Click on the switch to slide it into the light mode position
-- The colours of your webpage should change
+- Klik op de schakelaar om de light mode te schuiven naar aan
+- De kleuren van je webpagina zouden nu moeten veranderen
 
 \--- /task ---
 
-### Save the user's preference
+### Sla de voorkeur van de gebruiker op
 
-The switch adds or removes the `light-mode` class.
+Met deze schakelaar wordt de klasse `light-mode` toegevoegd of verwijderd.
 
-When your user navigates to another page (or reloads the current one) the changes will be lost as the `light-mode` class attribute is not set in the HTML file.
+Wanneer de gebruiker naar een andere pagina navigeert (of de huidige pagina opnieuw laadt), gaan de wijzigingen verloren omdat het klassekenmerk `light-mode` niet is ingesteld in het HTML-bestand.
 
-You need a way to keep the user's choice.
+Je hebt een manier nodig om de keuze van de gebruiker te behouden.
 
-You can do this with the `localStorage` property.
+Je kunt dit doen met de `localStorage` eigenschap.
 
-`localStorage` holds data as key-value pairs. A **key** is a 'label' for a value.
+`localStorage` houdt gegevens vast als sleutel-waardeparen. Een **sleutel** is een 'label' voor een waarde.
 
 \--- collapse ---
 
 ---
 
-## title: localStorage methods
+## title: localStorage methoden
 
 - setItem(key, value):
-  Adds a key-value pair to localStorage.
-  Example: `localStorage.setItem("username", "raspberry")`
+  Voegt een sleutel-waardepaar toe aan localStorage.
+  Voorbeeld: `localStorage.setItem("gebruikersnaam", "raspberry")`
 
 - getItem(key):
-  Retrieves the value associated with the specified key.
-  Example: `var username = localStorage.getItem("username")`
+  Haalt de waarde op die aan de opgegeven sleutel is gekoppeld.
+  Voorbeeld: `var gebruikersnaam = localStorage.getItem("gebruikersnaam")`
 
 - removeItem(key):
-  Removes the key-value pair associated with the specified key.
-  Example: `localStorage.removeItem("username")`
+  Verwijdert het sleutel-waardepaar dat aan de opgegeven sleutel is gekoppeld.
+  Voorbeeld: `localStorage.removeItem("gebruikersnaam")`
 
 - clear():
-  Removes all key-value pairs from localStorage.
-  Example: `localStorage.clear()`
+  Verwijdert alle sleutel-waardeparen uit localStorage.
+  Voorbeeld: `localStorage.clear()`
 
 \--- /collapse ---
 
@@ -462,10 +462,10 @@ You can do this with the `localStorage` property.
 
 Open `scripts.js`.
 
-Use the `.setItem` method to add the key-value pair:
+Gebruik de `.setItem`-methode om het sleutel-waardepaar toe te voegen:
 
-- Set the 'key' to `"lightMode"`
-- Set the 'value' to `isLightMode`, representing the Boolean (true or false) value of the toggle's `.checked` property
+- Zet de 'sleutel' (key) op `"lightMode"`
+- Stel de 'waarde' (value) in op `isLightMode`, wat de Booleaanse waarde (true of false) van de eigenschap `.checked` van de schakelaar vertegenwoordigt
 
 ## --- code ---
 
@@ -476,7 +476,7 @@ line_number_start: 58
 line_highlights: 62
 --------------------------------------------------------
 
-// Light mode function
+// Light mode functie
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -487,19 +487,19 @@ localStorage.setItem("lightMode", isLightMode);
 
 \--- /task ---
 
-### Get the user's preference
+### De voorkeur van de gebruiker ophalen
 
-When the webpage loads, you need to check if lightMode was set.
+Wanneer de webpagina wordt geladen, moet je controleren of lightMode was ingesteld.
 
-You can use `addEventListener` for this.
+Hiervoor kun je `addEventListener` gebruiken.
 
 \--- collapse ---
 
 ---
 
-## title: The addEventListener method
+## title: De addEventListener methode
 
-Use `.addEventListener` like this:
+Gebruik `.addEventListener` zoals hier:
 
 ## --- code ---
 
@@ -514,15 +514,15 @@ element.addEventListener(eventType, callbackFunction);
 
 \--- /code ---
 
-- element: The HTML element to which you want to attach the event listener
-- eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded")
-- callbackFunction: The function to be executed when the event happens
+- element: Het HTML-element waaraan je de event listener wilt koppelen
+- eventType: Het type event waar je naar wilt luisteren (bijv. "click", "keydown", "DOMContentLoaded")
+- callbackFunction: De functie die moet worden uitgevoerd wanneer de gebeurtenis plaatsvindt
 
 \--- /collapse ---
 
 \--- task ---
 
-Use `.addEventListener` to trigger a function in response to a page load event.
+Gebruik `.addEventListener` om een functie te activeren in reactie op een pagina-load event.
 
 ## --- code ---
 
@@ -533,24 +533,24 @@ line_number_start: 65
 line_highlights: 66-68
 -----------------------------------------------------------
 
-// Check local storage
+// Controleer lokale opslag
 document.addEventListener("DOMContentLoaded", function () {
 
 });
 
 \--- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready.
+`"DOMContentLoaded"` is een `eventType` dat wordt geactiveerd wanneer de webpagina klaar is.
 
-**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
+**Tip:** Het is beter om hier `"DOMContentLoaded"` te gebruiken in plaats van het eventType `"load"`, dat alleen wordt geactiveerd wanneer alle afbeeldingen zijn geladen.
 
 \--- /task ---
 
-You need the function to check `localStorage` to see if the 'value' paired with the `lightMode` 'key' is **"true"**.
+Je hebt de functie nodig om `localStorage` te controleren of de 'waarde' gekoppeld aan de 'lightMode' 'sleutel' **'true'** is.
 
 \--- task ---
 
-Add an `if` statement to check if `lightMode` is set to `"true"`.
+Voeg een `if`-statement toe om te controleren of `lightMode` is ingesteld op `"true"`.
 
 ## --- code ---
 
@@ -561,7 +561,7 @@ line_number_start: 65
 line_highlights: 68-70
 -----------------------------------------------------------
 
-// Check local storage
+// Controleer lokale opslag
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -574,15 +574,15 @@ if (localStorage.getItem("lightMode") == "true") {
 
 \--- /task ---
 
-If `lightMode` is set to `"true"`, you need to add the `.light-mode` class.
+Als `lightMode` is ingesteld op `"true"`, dan moet je de `.light-mode` klasse toevoegen.
 
-You can use the `.toggle` method from the `classList` property to achieve this.
+Je kunt hiervoor de `.toggle`-methode van de `classList`-eigenschap gebruiken.
 
-**Tip:** You could also use the `.add` method.
+**Tip:** Je kunt ook de `.add` methode gebruiken.
 
 \--- task ---
 
-Toggle the `light-mode` class.
+Schakel de klasse `light-mode` in of uit.
 
 ## --- code ---
 
@@ -593,7 +593,7 @@ line_number_start: 65
 line_highlights: 69
 --------------------------------------------------------
 
-// Check local storage
+// Controleer lokale opslag
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -606,13 +606,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-You also have to show the switch as 'on'.
+Je moet de schakelaar ook als 'aan' weergeven.
 
-If this isn't done, the light mode preference would be set, but the switch position would be set to 'off'.
+Als je dit niet doet, wordt de voorkeur voor de lichtmodus ingesteld, maar staat de schakelaar op 'uit'.
 
 \--- task ---
 
-Set the value of the switch's `.checked` property to the Boolean value `true`.
+Stel de waarde van de eigenschap `.checked` van de schakelaar in op de Booleaanse waarde `true`.
 
 ## --- code ---
 
@@ -623,7 +623,7 @@ line_number_start: 65
 line_highlights: 70
 --------------------------------------------------------
 
-// Light mode function
+// Light mode functie
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -641,7 +641,7 @@ lightModeSwitch.checked = true;
 
 Open `character.html`.
 
-Add the HTML for the switch to the header below the `</nav>` tag.
+Voeg de HTML voor de schakelaar toe aan de header onder de tag `</nav>`.
 
 ## --- code ---
 
@@ -671,14 +671,14 @@ line_highlights: 20-26
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Your switch should appear in your navbar to the right
-- Click the switch on and off to see the theme colours change
-- Navigate to the `index.html` page to check that your light mode preference stays on
+- Je schakelaar zou in je navigatiebalk aan de rechterkant moeten verschijnen
+- Klik op de schakelaar om deze aan en uit te zetten en de thema-kleuren te zien veranderen
+- Ga naar de pagina `index.html` om te controleren of jouw voorkeur voor de lichtmodus aan blijft staan
 
 \--- /task ---
 
-Great work! You have created a switch that allows the user to change colour themes.
+Goed gedaan! Je hebt een schakelaar gemaakt waarmee de gebruiker het kleurenthema kan wijzigen.
 
-Next, you will add a hero slider to your website and allow the user to see different images!
+Vervolgens ga je een hero slider aan je website toevoegen, zodat de gebruiker verschillende afbeeldingen kan bekijken!
