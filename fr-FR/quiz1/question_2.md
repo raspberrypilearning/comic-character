@@ -2,11 +2,11 @@
 
 ---
 
-## legend: Question 2 of 3
+## legend: Question 2 sur 3
 
-In HTML, `<input>` is a form element.
+En HTML, `<input>` est un élément de formulaire.
 
-Which attribute is used to specify the category of input to display to the user?
+Quel attribut est utilisé pour spécifier la catégorie d'entrée à afficher à l'utilisateur ?
 
 \--- choices ---
 
@@ -14,7 +14,7 @@ Which attribute is used to specify the category of input to display to the user?
 
   \--- feedback ---
 
-Correct! The `type` attribute of the `<input>` element is used to specify the category of input to display to the user. Examples are `type=text`, `type=password`, and `type=checkbox`.
+Correct ! L'attribut `type` de l'élément `<input>` est utilisé pour spécifier la catégorie d'entrée à afficher à l'utilisateur. Les exemples sont `type=text`, `type=password`, et `type=checkbox`.
 
 \--- /feedback ---
 
@@ -22,7 +22,7 @@ Correct! The `type` attribute of the `<input>` element is used to specify the ca
 
   \--- feedback ---
 
-Not quite! The `data-` prefix is used for custom data attributes.
+Pas tout à fait ! Le préfixe `data-` est utilisé pour les attributs de données personnalisés.
 
 \--- /feedback ---
 
@@ -30,7 +30,7 @@ Not quite! The `data-` prefix is used for custom data attributes.
 
   \--- feedback ---
 
-Almost! There is no need to include the `input-` here.
+Presque ! Il n'y a pas besoin d'inclure le `input-` ici.
 
 \--- /feedback ---
 
