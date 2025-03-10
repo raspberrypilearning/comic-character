@@ -2,11 +2,11 @@
 
 ---
 
-## legend: Question 3 of 3
+## legend: Vraag 3 van 3
 
-You used a JavaScript function to handle 'out of range' issues with your hero image slider.
+Je hebt een JavaScript-functie gebruikt om 'buiten bereik' problemen met je hero image slider te verwerken.
 
-How many images is this code designed to handle?
+Hoeveel afbeeldingen kan deze code verwerken?
 
 ## --- code ---
 
@@ -31,7 +31,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Incorrect. `0` is the index number of the first image.
+  Onjuist. `0` is het index nummer van de eerste afbeelding.
 
   \--- /feedback ---
 
@@ -39,7 +39,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Not quite! `3` is the final index number. Indexing starts at `0`.
+  Niet helemaal! `3` is het laatste index nummer. Indexering begint bij `0`.
 
   \--- /feedback ---
 
@@ -47,7 +47,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Correct! `currentHeroIndex` contains four items, starting at index `0` and finishing at index `3`.
+  Juist! `currentHeroIndex` bevat vier items, beginnend bij index `0` en eindigend op index `3`.
 
   \--- /feedback ---
 
