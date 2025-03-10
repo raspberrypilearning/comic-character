@@ -12,9 +12,9 @@ const characterOrigin = document.querySelector('#origin-text');
 // Function to display summary
 function displaySummary() {
   const summaryParagraph = document.querySelector('#summary-paragraph');
-  summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+  summaryParagraph.textContent = `Le nom de ton super-héros est ${characterName.value}. 
+  Son pouvoir est ${characterAbility.value}. 
+  Son histoire est ${characterOrigin.value}.`;
   characterDetails.style.display = 'none';
   summary.style.display = 'flex';
 }
