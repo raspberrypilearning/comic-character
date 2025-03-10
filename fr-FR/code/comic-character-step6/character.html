@@ -14,36 +14,36 @@
     <header class="header">
       <a href="index.html" class="logo">Pi Comics</a>
       <nav>
-        <a href="index.html">HOME</a>
-        <a href="character.html">CREATE CHARACTER</a>
+        <a href="index.html">ACCUEIL</a>
+        <a href="character.html">CRÉER UN PERSONNAGE</a>
       </nav>
     </header>
    
     <main>
       <section id="character-details"> <!--Superhero character details-->
-        <label for="name-text">Superhero Name:</label>
+        <label for="name-text">Nom du super-héros :</label>
         <input type="text" id="name-text">
-        <label for="ability-choice">Ability:</label>
+        <label for="ability-choice">Pouvoir :</label>
         <select id="ability-choice">
-          <option value="">Choose an option</option>
-          <option value="Flight">Flying</option>
-          <option value="Invisibility">Invisibility</option>
-          <option value="Time travel">Time travel</option>
+          <option value="">Choisir une option</option>
+          <option value="Flight">Vol</option>
+          <option value="Invisibility">Invisibilité</option>
+          <option value="Time travel">Voyage dans le temps</option>
         </select>
-        <label for="origin-text">Origin Story:</label>
-        <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
+        <label for="origin-text">Histoire :</label>
+        <textarea id="origin-text" placeholder="Ajoute l'histoire de ton super-héros !"></textarea>
         <div id="alert"> 
         </div>
-        <button onclick="checkForm()">Create</button>
+        <button onclick="checkForm()">Créer</button>
       </section>
       <section id="summary-section">
-        <h2>Superhero Summary</h2>
+        <h2>Résumé du super-héros</h2>
         <p id="summary-paragraph"></p>
-        <button onclick="changeSummary()">Edit</button>
+        <button onclick="changeSummary()">Modifier</button>
       </section>
     </main>
     <footer>
-      <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- All Rights Reserved</p>
+      <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- Tous droits réservés</p>
     </footer>
     <script src="scripts.js"></script>
   </body>
