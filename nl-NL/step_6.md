@@ -1,20 +1,20 @@
-## Check the user's input
+## Controleer gebruikersinvoer
 
-In this step, you will check that the user has completed the form and warn them if they have missed a section.
+In deze stap controleer je of de gebruiker het formulier heeft ingevuld en waarschuw je de gebruiker als hij of zij een onderdeel heeft gemist.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-At the moment, the user can submit the information even if they have left some form fields empty.
+Op dit moment kan de gebruiker de informatie opslaan, zelfs als hij sommige formuliervelden leeg heeft gelaten.
 
-You need to create a new function that checks the user has completed all the form fields before calling the `displaySummary()` function.
+Je moet een nieuwe functie maken die controleert of de gebruiker alle formuliervelden heeft ingevuld voordat de `displaySummary()` functie wordt aangeroepen.
 
-### Change the function for the Create button
+### Wijzig de functie voor de knop Maken
 
 \--- task ---
 
 Open `character.html`.
 
-Change the function that handles the Create button's `onclick` event.
+Wijzig de functie die de `onclick`-gebeurtenis van de knop Maken afhandelt.
 
 ## --- code ---
 
@@ -26,22 +26,22 @@ line_highlights: 35
 --------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">Oorsprongsverhaal:</label>   
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    <button onclick="checkForm()">Create</button>
+    <button onclick="checkForm()">Maken</button>
 ```
 
 \--- /code ---
 
 \--- /task ---
 
-### Create an area to show a warning
+### Maak een gebied om een waarschuwing te tonen
 
-You need to show a warning to the user if part of the form is blank.
+Je moet een waarschuwing tonen aan de gebruiker als een deel van het formulier leeg is.
 
 \--- task ---
 
-Create an empty `<div>` element with the attribute `id="alert"` below the Create button.
+Maak een leeg `<div>`-element met het kenmerk `id="alert"` onder de knop Maken.
 
 ## --- code ---
 
@@ -53,11 +53,11 @@ line_highlights: 35-36
 -----------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">Oorsprongsverhaal:</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
     <div id="alert"> 
     </div>
-    <button onclick="checkForm()">Create</button>
+    <button onclick="checkForm()">Maken</button>
   </section>
 ```
 
@@ -65,17 +65,17 @@ line_highlights: 35-36
 
 \--- /task ---
 
-### Create an alert message
+### Maak een waarschuwingsbericht
 
-You need to update the contents of the alert `<div>` with a message.
+Je moet de inhoud van de waarschuwings `<div>` bijwerken met een bericht.
 
 \--- task ---
 
 Open `scripts.js`.
 
-Use `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
+Gebruik `querySelector()` om het `<div>`-element met het kenmerk `id="alert"` te vinden.
 
-Assign this to a constant `alertBox`.
+Wijs dit toe aan een constante `alertBox`.
 
 ## --- code ---
 
@@ -86,24 +86,24 @@ line_number_start: 31
 line_highlights: 32
 --------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 \--- /code ---
 
 \--- /task ---
 
-You need a new `checkForm()` function to check each field on your form for an empty value.
+Je hebt een nieuwe 'checkForm()' functie nodig om elk veld op je formulier te controleren voor een lege waarde.
 
-If there is an empty value, an alert will be shown to the user in the `alertBox`.
+Als er een lege waarde is, wordt er een waarschuwing aan de gebruiker getoond in de `alertBox`.
 
-The `alertBox` `<div>` will be hidden until it is needed.
+De `alertBox` `<div>` wordt verborgen totdat deze nodig is.
 
-### Create the checkForm() function
+### Maak de checkForm() functie
 
 \--- task ---
 
-Create the function `checkForm()`.
+Maak de functie `checkForm()`.
 
 ## --- code ---
 
@@ -114,7 +114,7 @@ line_number_start: 31
 line_highlights: 34-36
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -125,13 +125,13 @@ function checkForm(){
 
 \--- /task ---
 
-### Create a variable to hold an alert message
+### Maak een variabele om een waarschuwingsbericht in op te slaan
 
-You need a variable to hold an alert message if the function finds an empty value.
+Je hebt een variabele nodig om een waarschuwingsbericht in op te slaan als de functie een lege waarde vindt.
 
 \--- task ---
 
-Create the variable `alertMessage` and assign it an empty string(`""`).
+Maak de variabele `alertMessage` aan en wijs een lege tekenreeks toe (`""`).
 
 ## --- code ---
 
@@ -142,7 +142,7 @@ line_number_start: 31
 line_highlights: 36
 --------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -159,32 +159,32 @@ var alertMessage = "";
 
 ---
 
-## title: What is a variable?
+## title: Wat is een variabele?
 
-A variable is a named area of computer memory that holds a value.
+Een variabele is een gebied in het computergeheugen met een naam dat een waarde bevat.
 
-The value can be changed while the program is running.
+De waarde kan worden gewijzigd terwijl het programma wordt uitgevoerd.
 
-For example, `var age = 10;`
+Bijvoorbeeld, `var leeftijd = 10;`
 
-- `age` is the name of the variable.
-- It is assigned the value `10`.
+- `leeftijd` is de naam van de variabele.
+- Er is de waarde `10` aan toegekend.
 
 \--- /collapse ---
 
-### Check the user has entered a superhero name
+### Controleer of de gebruiker een naam voor de superheld heeft ingevoerd
 
-You need to check each field to decide if it is empty.
+Controleer elk veld om te zien of het leeg is.
 
-Start with the first field, `characterName`, which holds the HTML element with the attribute `id="name-text"`.
+Begin met het eerste veld, `characterName`, welke het HTML-element bevat met het attribuut `id="naam-text"`.
 
-The `.value` property of a form field will be empty if the user has missed it.
+De `.value` eigenschap van een formulier zal leeg zijn als de gebruiker deze heeft gemist.
 
 \--- task ---
 
-Use an `if` statement to check if the value of `characterName` is empty.
+Gebruik een `if` statement om te controleren of de waarde `characterName` leeg is.
 
-**Notice:** The operator `==` is used. It means 'is the same as'.
+**Let op:** De operator `==` wordt gebruikt. Het betekent 'is hetzelfde als'.
 
 ## --- code ---
 
@@ -195,7 +195,7 @@ line_number_start: 31
 line_highlights: 38-40
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -212,13 +212,13 @@ if (characterName.value == ""){
 
 \--- /task ---
 
-Inside the `if` statement, you need code to run if the result is **true** (meaning `characterName` **is** empty).
+In het `if` statement moet je code uitvoeren als het resultaat **true** is (wat betekent dat `characterName` leeg **is**).
 
 \--- task ---
 
-Assign `alertMessage` a string if the condition is true.
+Wijs `alertMessage` een string toe als de voorwaarde waar is.
 
-The string needs to be a message that tells the user what to if the **Superhero Name** field has been left blank.
+De string moet een bericht zijn dat de gebruiker vertelt wat er moet gebeuren als het veld **Naam van je superheld** leeg is gelaten.
 
 ## --- code ---
 
@@ -229,7 +229,7 @@ line_number_start: 31
 line_highlights: 39
 --------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -237,7 +237,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Voer een naam in";
 }
 
 }
@@ -246,21 +246,21 @@ alertMessage = "Please enter a name";
 
 \--- /task ---
 
-### Show an alert
+### Toon een waarschuwing
 
-When you created `alertMessage`, you assigned it an empty string (`""`).
+Wanneer je `alertMessage` hebt aangemaakt, heb je een lege tekenreeks toegewezen (`""`).
 
-If the **Superhero Name** field is blank, then you set `alertMessage` to a message to alert the user.
+Als het **Naam van je superheld** veld leeg is, stel je `alertMessage` in op een bericht om de gebruiker te waarschuwen.
 
-You only want to show the alert if there is a message in `alertMessage`.
+Je wilt de waarschuwing alleen weergeven als er een bericht in `alertMessage` staat.
 
-So now you need to check if `alertMessage` is **not** an empty string.
+Dus moet je nu controleren of `alertMessage` **geen** lege tekenreeks is.
 
 \--- task ---
 
-Use an `if` statement to check if the variable `alertMessage` is **not** an empty string (meaning it has been assigned a message for the user).
+Gebruik een 'if' statement om te controleren of de variabele 'alertMessage' **geen** lege string is (wat betekent dat het een bericht is toegewezen voor de gebruiker).
 
-**Notice:** The operator `!=` is used. It means 'is **not** the same as'.
+**Let op:** De operator `!=` wordt gebruikt. Het betekent 'is **niet** hetzelfde als'.
 
 ## --- code ---
 
@@ -271,7 +271,7 @@ line_number_start: 31
 line_highlights: 42-44
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -279,7 +279,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Voer een naam in";
 }
 
 if (alertMessage != ""){
@@ -291,11 +291,11 @@ if (alertMessage != ""){
 
 \--- /task ---
 
-If `alertMessage` contains a message for the user, you need to set the `.innerText` content of `alertBox` to be that message.
+Als `alertMessage` een bericht voor de gebruiker bevat, moet je de `.innerText` inhoud van `alertBox` instellen op dat bericht.
 
 \--- task ---
 
-Set the `.innerText` content of `alertBox` to the string held in `alertMessage`.
+Stel de `.innerText` inhoud van `alertBox` in op de string opgeslagen in `alertMessage`.
 
 ## --- code ---
 
@@ -306,7 +306,7 @@ line_number_start: 31
 line_highlights: 43
 --------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -314,7 +314,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Voer een naam in";
 }
 
 if (alertMessage != ""){
@@ -327,13 +327,13 @@ alertBox.innerText = alertMessage;
 
 \--- /task ---
 
-The `display` property for the `#alert` selector is set by default to `none`, so the alert box is hidden when the page loads.
+De `display` eigenschap voor de `#alert` selector is standaard ingesteld op `none`, dus het waarschuwingsveld wordt verborgen wanneer de pagina wordt geladen.
 
 \--- collapse ---
 
 ---
 
-## title: View the alert CSS selector
+## title: Bekijk de waarschuwings CSS-selector
 
 ## --- code ---
 
@@ -354,11 +354,11 @@ display: none;
 
 \--- /collapse ---
 
-If there is a message to show to the user, you need to make the alert box appear.
+Als er een bericht is om te laten zien aan de gebruiker, moet je het waarschuwingsveld laten verschijnen.
 
 \--- task ---
 
-In your new `if` statement, set the `display` property for the `#alert` selector to `block`.
+In je nieuwe `if` statement zet je de `display` eigenschap voor de `#alert` selector op `block`.
 
 ## --- code ---
 
@@ -369,7 +369,7 @@ line_number_start: 31
 line_highlights: 44
 --------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -377,7 +377,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Voer een naam in";
 }
 
 if (alertMessage != ""){
@@ -392,31 +392,31 @@ alertBox.style.display = "block";
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Leave the Superhero Name field blank
-- Click the Create button
-- The alert message will show
+- Laat het veld Naam van je superheld leeg
+- Klik op de knop Maken
+- Het waarschuwingsbericht wordt weergegeven
 
 \--- /task ---
 
-### Hide the alert and show the summary
+### Verberg de waarschuwing en toon de samenvatting
 
-You need to use an `else` statement to hide the alert (and show the summary) if `alertMessage` is still set to an empty string (`""`).
+Je moet een `else` statement gebruiken om de waarschuwing te verbergen (en de samenvatting te laten zien) als `alertMessage` nog steeds op een lege string staat (`""`).
 
-This is another way to think about how the `else` statement works with the `if` statement:
+Dit is een andere manier om na te denken over hoe de `else` statement werkt met de `if` statement:
 
 ```
-If the alert message is not ""
-  - show the alert.
-Otherwise (else)
-  - hide the alert
-  - show the summary.
+Als het waarschuwingsbericht niet "" is
+  - toon de waarschuwing.
+Anders (else)
+  - verberg de waarschuwing.
+  - toon de samenvatting.
 ```
 
 \--- task ---
 
-Use an `else` statement to set the `display` property for the `#alert` selector to `none` and call the `displaySummary()` function.
+Gebruik een `else` statement om de `display` eigenschap voor de `#alert` selector op `none` te zetten en roep de `displaySummary()` functie aan.
 
 ## --- code ---
 
@@ -427,7 +427,7 @@ line_number_start: 31
 line_highlights: 45-48
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -435,7 +435,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "Voer een naam in";
 }
 
 if (alertMessage != ""){
@@ -453,64 +453,64 @@ displaySummary();
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Fill in the Superhero Name field
-- Click the Create button
-- The alert message will **not** show
-- The summary will show
+- Vul het Naam van je superheld veld in
+- Klik op de knop Maken
+- Het waarschuwingsbericht wordt **niet** weergegeven
+- De samenvatting wordt weergegeven
 
-**Notice:** The ability and origin story sections will be blank
+**Let op:** De secties over vaardigheden en het oorsprongsverhaal zijn leeg
 
 \--- collapse ---
 
 ---
 
-## title: The summary section is not showing
+## title: De samenvatting sectie wordt niet weergegeven
 
-- Check you have used brackets`()` in your `if` and `else` statements, e.g. `if (characterName.value == "")`
-- Check you have called the `displaySummary()` function in your `else` block
+- Controleer of je haakjes `()` gebruikt hebt in je `if` en `else` statements, bijvoorbeeld `if (characterName.value == "")`
+- Controleer of je de `displaySummary()` functie in je `else` blok hebt aangeroepen
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Check the Ability field
+### Controleer het veld Vaardigheid
 
-You have used an `if` statement to check if the value of `characterName` is empty.
+Je hebt een `if` statement gebruikt om te controleren of de waarde `characterName` leeg is.
 
-If it is **not** empty, you need to use `else if` statements to check the other form fields.
+Als het **niet** leeg is, moet je `else if` statements gebruiken om de andere formuliervelden te controleren.
 
-This is another way to think about how `else if` statements work with the `if` statement:
+Dit is een andere manier om na te denken over hoe `else if` statements werken met het `if` statement:
 
 ```
-If characterName is ""
-  - set an alert.
-Otherwise (else) if characterAbility is ""
-  - set an alert.
-Otherwise (else) if characterOrigin is ""
-  - set an alert.
+Als characterName "" is
+  - een waarschuwing instellen.
+Anders (else) als characterAbility "" is
+  - een waarschuwing instellen.
+Anders (else) als characterOrigin "" is
+  - een waarschuwing instellen.
 ```
 
 \--- collapse ---
 
 ---
 
-## title: Why not use three if statements?
+## title: Waarom kun je niet drie if-statements gebruiken?
 
-**Tip:** Using `if` with `else if` statements means that if any condition is 'true', subsequent `else if` statements are ignored. This saves resources and time. If multiple `if` statements are used, all `if` statements are checked, even if one condition is met.
+**Tip:** Als je `if` gebruikt met 'else if`statements betekent dat als een voorwaarde 'true' (waar) is, volgende`else if`boodschappen worden genegeerd. Dit bespaart middelen en tijd. Als meerdere`if\` statements worden gebruikt, worden alle 'if' statements gecontroleerd, zelfs als al aan één voorwaarde is voldaan.
 
-In this form, the user is alerted about the first blank field.
+In dit formulier wordt de gebruiker gewaarschuwd over het eerste lege veld.
 
 \--- /collapse ---
 
 \--- task ---
 
-Use an `else if` statement to check if the value of `characterAbility` is empty.
+Gebruik een `else if` statement om te controleren of de waarde `characterAbility` leeg is.
 
-If it is, assign `alertMessage` a string.
+Als dat zo is, wijs dan een string toe aan `alertMessage`.
 
-The string needs to be a message that tells the user what to do if the **Ability** field has been left blank.
+De tekenreeks moet een bericht zijn dat de gebruiker vertelt wat hij moet doen als het **Vaardigheid** veld leeg is gelaten.
 
 ## --- code ---
 
@@ -521,7 +521,7 @@ line_number_start: 31
 line_highlights: 40-42
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -529,9 +529,9 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
-} else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "Voer een naam in";
+} else if (characterAability. alue == "") {
+alertMessage = "Kies een vaardigheid";
 }
 
 if (alertMessage != ""){
@@ -549,11 +549,11 @@ displaySummary();
 
 \--- task ---
 
-### Check the Origin Story field
+### Controleer het veld Oorsprongsverhaal
 
-Use another `else if` statement to check the value of `characterOrigin`.
+Gebruik een ander `else if`-statement om de waarde van `characterOrigin` te controleren.
 
-Add an alert message to show the user if it is blank.
+Voeg een waarschuwingsbericht toe dat aan de gebruiker wordt weergegeven als het veld leeg is.
 
 ## --- code ---
 
@@ -564,19 +564,19 @@ line_number_start: 31
 line_highlights: 42-44
 -----------------------------------------------------------
 
-// Function to check the character details form
+// Functie om het formulier met personage details te controleren
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
 
 var alertMessage = "";
 
-if (characterName.value == ""){
-alertMessage = "Please enter a name";
+if (characterName.value == "") {
+alertMessage = "Voer een naam in";
 } else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "Kies een vaardigheid";
 } else if (characterOrigin.value == "") {
-alertMessage = "Please write the origin story";
+alertMessage = "Schrijf het oorsprongsverhaal";
 }
 
 if (alertMessage != ""){
@@ -594,25 +594,25 @@ displaySummary();
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- Type values into some of the form fields, but leave some blank.
-- Click the Create button. An alert message will show for any field you have left blank.
-- Test this a few times with a different form fields.
-- Complete all form fields. Click Create to see the summary.
+- Typ waarden in een aantal velden van het formulier, maar laat ook een aantal velden leeg.
+- Klik op de knop Maken. Er wordt een waarschuwingsbericht weergegeven voor elk veld dat je leeg gelaten hebt.
+- Test dit een paar keer met een verschillende formuliervelden.
+- Vul alle formuliervelden in. Klik op Maken om het overzicht te bekijken.
 
 \--- collapse ---
 
 ---
 
-## title: I should be getting alerts but I am not
+## title: Ik zou waarschuwingen moeten krijgen maar dat gebeurt niet
 
-- Check you have added `.value` after `characterName`, `characterAbility`, and `characterOrigin`.
+- Controleer of je `.value` hebt toegevoegd na `characterName`, `characterAbility`, en `characterOrigin`.
 
 \--- /collapse ---
 
 \--- /task ---
 
-Great effort! You have created checks and alerts to help the user create their superhero!
+Goed zo! Je hebt controles en waarschuwingen gemaakt om de gebruiker te helpen bij het maken van zijn of haar superheld!
 
-Next, you will create a switch so the user can change between light and dark mode!
+Vervolgens ga je een schakelaar maken zodat de gebruiker kan veranderen tussen light en dark (licht en donker) mode!
