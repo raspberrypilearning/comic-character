@@ -1,44 +1,44 @@
-## Make items appear and disappear
+## Faire apparaître et disparaître les éléments
 
-In this step, you will use JavaScript to make parts of your form appear and disappear.
+Dans cette étape, tu utiliseras JavaScript pour faire apparaître et disparaître des parties de ton formulaire.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step4?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Show the summary section
+### Afficher la section résumé
 
-Your user needs to press a button to show the summary section.
+Ton utilisateur doit appuyer sur un bouton pour afficher la section résumé.
 
-An `onclick` event can be added to the button.
+Un événement `onclick` peut être ajouté au bouton.
 
-JavaScript can be used to react to this event and show the summary.
+JavaScript peut être utilisé pour réagir à cet événement et afficher le résumé.
 
 \--- collapse ---
 
 ---
 
-## title: Other events
+## title: Autres événements
 
-Events can be triggered by the user or the browser.
+Les événements peuvent être déclenchés par l'utilisateur ou le navigateur.
 
-- User events:
-  - Mouse events (click, double click, mouseover)
-  - Keyboard events (keypress, keydown, keyup)
-  - Touch events (touchstart, touchmove, touchend)
+- Évènements utilisateur :
+  - Événements de la souris (clic, double clic, souris)
+  - Événements du clavier (appui sur une touche, enfoncement d'une touche, relâchement d'une touche)
+  - Événements tactiles (touchstart, touchmove, touchend)
 
-- Browser events:
-  - Page load events (load, unload)
-  - Window events (resize, scroll)
-  - Time events (setInterval, setTimeout)
+- Événements du navigateur :
+  - Événements de chargement de page (chargement, déchargement)
+  - Evénements de la fenêtre (redimensionnement, défilement)
+  - Événements temporels (setInterval, setTimeout)
 
 \--- /collapse ---
 
 \--- task ---
 
-Open the `character.html` file.
+Ouvre le fichier `character.html`.
 
-Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div`.
+Ajoute un élément `<button>` avec l'événement `onclick="displaySummary()"` en dessous de l'histoire `div`.
 
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
+Ajoute le texte 'Créer' au `<button>`, afin que l'utilisateur sache ce que fait le bouton.
 
 ## --- code ---
 
@@ -50,9 +50,9 @@ line_highlights: 35
 --------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">Histoire :</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    <button onclick="displaySummary()">Create</button>
+    <button onclick="displaySummary()">Créer</button>
   </section>
 ```
 
@@ -62,33 +62,33 @@ line_highlights: 35
 
 \--- task ---
 
-**Click Run**
+**Clique sur Run**
 
-- You will see a Create button below your superhero form
-- The Create button does not do anything at the moment
+- Tu verras un bouton Créer sous ton formulaire de super-héros
+- Le bouton Créer ne fait rien pour le moment
 
 \--- /task ---
 
-Nothing will happen when the user clicks the Create button.
+Rien ne se passera lorsque l'utilisateur cliquera sur le bouton Créer.
 
-This is because the summary section has its CSS `display` property set to `none`.
+Cela est dû au fait que la propriété CSS `display` de la section résumé est définie sur `none`.
 
-You need to use JavaScript to change the summary section's `display` property to `flex`.
+Tu devras utiliser JavaScript pour changer la propriété `display` de la section résumé en `flex`.
 
-When the summary section is displayed, you will hide the character details form.
+Lorsque la section résumé est affichée, tu masqueras le formulaire des informations du personnage.
 
-### Create constants to refer to each section
+### Créer des constantes pour se référer à chaque section
 
-Your function will use constants that refer to each section.
+Ta fonction utilisera des constantes qui font référence à chaque section.
 
 \--- task ---
 
-Open `scripts.js`.
+Ouvre `scripts.js`.
 
-Use the `querySelector()` method to find:
+Utilise la méthode `querySelector()` pour trouver :
 
-- The summary section element and assign it to the constant `summary`
-- The character details section element and assign it to the constant `characterDetails`
+- L'élément de la section résumé et l'attribuer à la constante `summary`
+- L'élément de la section informations du personnage et attribue-le à la constante `characterDetails`
 
 ## --- code ---
 
@@ -99,7 +99,7 @@ line_number_start: 5
 line_highlights: 6-7
 ---------------------------------------------------------
 
-// Create constants for superhero form
+// Créer des constantes pour le formulaire de super-héros
 const summary = document.querySelector("#summary-section");
 const characterDetails = document.querySelector("#character-details");
 
@@ -107,15 +107,15 @@ const characterDetails = document.querySelector("#character-details");
 
 \--- /task ---
 
-### Create constants to refer to each form field
+### Créer des constantes pour se référer à chaque champ de formulaire
 
-You need to display the three character details in the summary section.
+Tu dois afficher les trois informations du personnage dans la section résumé.
 
-Set each as a constant, so you can refer to them in your code.
+Définis chacun comme une constante, pour que tu puisses y faire référence dans ton code.
 
 \--- task ---
 
-Use `querySelector()` methods to find the form elements and assign each to a constant.
+Utilise les méthodes `querySelector()` pour trouver les éléments du formulaire et attribuer chacun d'eux à une constante.
 
 ## --- code ---
 
@@ -126,7 +126,7 @@ line_number_start: 5
 line_highlights: 9-11
 ----------------------------------------------------------
 
-// Create constants for superhero form
+// Créer des constantes pour le formulaire de super-héros
 const summary = document.querySelector("#summary-section");
 const characterDetails = document.querySelector("#character-details");
 
@@ -138,17 +138,17 @@ const characterOrigin = document.querySelector("#origin-text");
 
 \--- /task ---
 
-### Update the contents of the summary
+### Mettre à jour le contenu du résumé
 
-In `character.html`, you added a `<p>` element with the attribute `id="summary-paragraph"`.
+Dans `character.html`, tu as ajouté un élément `<p>` avec l'attribut `id="summary-paragraph"`.
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+**Astuce :** ceci est juste là pour te rappeler. Tu n'as plus besoin de l'écrire à nouveau !
 
 ---
 
-## title: The summary paragraph you created earlier
+## title: Le paragraphe résumé que tu as créé précédemment
 
 ## --- code ---
 
@@ -161,22 +161,22 @@ line_highlights: 3
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
-    <p id="summary-paragraph"></p>
-  </section>
+  <h2>Résumé du super-héros</h2>
+  <p id="summary-paragraph"></p>
+</section>
 ```
 
 \--- /code ---
 
 \--- /collapse ---
 
-The summary paragraph will display a summary of the character details.
+Le paragraphe résumé affichera un résumé des informations du personnage.
 
-You need a function to update the contents of the summary paragraph.
+Tu as besoin d'une fonction pour mettre à jour le contenu du paragraphe résumé.
 
 \--- task ---
 
-Create a function `displaySummary()`.
+Crée une fonction `displaySummary()`.
 
 ## --- code ---
 
@@ -187,7 +187,7 @@ line_number_start: 13
 line_highlights: 14-16
 -----------------------------------------------------------
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 
 }
@@ -196,13 +196,13 @@ function displaySummary() {
 
 \--- /task ---
 
-The `displaySummary()` function needs to change the `<p>` element with the attribute `id="summary-paragraph"`.
+La fonction `displaySummary()` doit changer l'élément `<p>` avec l'attribut `id="summary-paragraph"`.
 
 \--- task ---
 
-Use the `querySelector()` to find the `<p>` element with the attribute `id="summary-paragraph"`.
+Utilise `querySelector()` pour trouver l'élément `<p>` avec l'attribut `id="summary-paragraph"`.
 
-Assign the element to the constant `summaryParagraph`.
+Attribue l'élément à la constante `sumyParagraph`.
 
 ## --- code ---
 
@@ -213,7 +213,7 @@ line_number_start: 13
 line_highlights: 15
 --------------------------------------------------------
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
@@ -223,37 +223,37 @@ const summaryParagraph = document.querySelector("#summary-paragraph");
 
 \--- /task ---
 
-You have previously changed the `.innerText` property of an HTML element.
+Tu as précédemment modifié la propriété `.innerText` d'un élément HTML.
 
-Here, you will change the `.textContent` property of the summary paragraph to include the values entered by the user in each field.
+Ici, tu vas changer la propriété `.textContent` du paragraphe résumé pour inclure les valeurs entrées par l'utilisateur dans chaque champ.
 
-Each value will appear next to text introducing the value (e.g. 'Your superhero name is ')
+Chaque valeur apparaîtra à côté du texte introduisant la valeur (par exemple 'Le nom de ton super-héros est ')
 
-You can use 'string formatting' to do this.
+Tu peux utiliser le « formatage des chaînes de caractères » pour faire cela.
 
 \--- collapse ---
 
 ---
 
-## title: What is string formatting?
+## title: Qu'est-ce que le formatage des chaînes de caractères ?
 
-A string is a data type in JavaScript and other programming languages.
+Une chaîne de caractères est un type de données en JavaScript et dans d'autres langages de programmation.
 
-A string is a collection of characters between double quotes `" "` or single quotes `' '`.
+Une chaîne de caractères est un ensemble de caractères placés entre des guillemets doubles ` » “` ou des guillemets simples `” '`.
 
-You can format strings using template literals or concatenation.
+Tu peux formater des chaînes de caractères à l'aide de modèles littéraux ou de concaténations.
 
-### Template literals
+### Modèles littéraux
 
-If you want to include the values from constants, variables, or expressions in a string, then you can use template literals.
+Si tu veux inclure les valeurs des constantes, des variables ou des expressions dans une chaîne de caractère, alors tu peux utiliser des modèles littéraux.
 
-Instead of using `" "` or `' '`, you use backticks `` ` ` `` to indicate a string.
+Au lieu d'utiliser ` » “` ou `” '`, tu utiliseras des antisèches `` ` ` `` pour indiquer une chaîne de caractères.
 
-Then use `${}` and place the constant, variable, or expression inside the `{}` part.
+Utilise ensuite `${}` et place la constante, la variable ou l'expression à l'intérieur de la partie `{}`.
 
-Here is an example:
+Voici un exemple :
 
-- Include the values held in the constants `heroName` and `age` inside a string.
+- Inclus les valeurs contenues dans les constantes `heroName` et `age` dans une chaîne.
 
 ## --- code ---
 
@@ -264,17 +264,17 @@ line_numbers: false
 
 const heroName = "Spider Man";
 const age = 25;
-const message = `Hello, ${heroName}! You are ${age} years old.`;
+const message = `Bonjour, ${heroName} ! Tu as ${age} ans.`;
 
 \--- /code ---
 
-### Concatenation
+### Concaténation
 
-Concatenation is the act of joining things together.
+La concaténation est l'action d'assembler des éléments.
 
-You can join strings together using the `+` operator.
+Tu peux joindre des chaînes de caractères ensemble en utilisant l'opérateur `+`.
 
-Here is an example:
+Voici un exemple :
 
 ## --- code ---
 
@@ -284,9 +284,9 @@ line_numbers: false
 --------------------------------------------------------
 
 const superhero = "Iron Man";
-const power = "suit of armor";
+const power = "armure";
 
-const description = "The superhero " + superhero + " has a " + power + ".";
+const description = "Le super-héros " + super-héros + " a un " + pouvoir + ".";
 
 \--- /code ---
 
@@ -294,9 +294,9 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 \--- task ---
 
-Update the `.textContent` of the `summaryParagraph`.
+Mets à jour le `.textContent` du `summaryParagraph`.
 
-**Notice:** The text content is inside backticks `` ` ` `` instead of using `" "` or `' '`.
+**Remarque :** le contenu du texte est à l'intérieur de `` ` `` au lieu d'utiliser `" "` ou `' '`.
 
 ## --- code ---
 
@@ -307,13 +307,13 @@ line_number_start: 13
 line_highlights: 17-19
 -----------------------------------------------------------
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+sumyParagraph.textContent = `Le nom de ton super-héros est ${characterName.value}. 
+  Son pouvoir est ${characterAbility.value}. 
+  Son histoire est ${characterOrigin.value}. `;
 
 }
 
@@ -321,13 +321,13 @@ summaryParagraph.textContent = `Your superhero name is ${characterName.value}.
 
 \--- /task ---
 
-### Hide the character details form
+### Masquer le formulaire des informations du personnage
 
 \--- task ---
 
-Set the value of the `display` property of the character details `<section>` to `none`.
+Définis la valeur de la propriété `display` des informations du personnage `<section>` sur `none`.
 
-This will hide the whole form on the page.
+Ceci masquera l'ensemble du formulaire de la page.
 
 ## --- code ---
 
@@ -338,13 +338,13 @@ line_number_start: 13
 line_highlights: 21
 --------------------------------------------------------
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+sumyParagraph.textContent = `Le nom de ton super-héros est ${characterName.value}. 
+  Son pouvoir est ${characterAbility.value}. 
+  Son histoire est ${characterOrigin.value}. `;
 
 characterDetails.style.display = "none";
 
@@ -356,9 +356,9 @@ characterDetails.style.display = "none";
 
 \--- task ---
 
-Set the value of the `display` property of the summary `<section>` to `flex`.
+Définis la valeur de la propriété `display` du résumé `<section>` sur `flex`.
 
-This will display the summary section on your page.
+Ceci affichera la section résumé sur ta page.
 
 ## --- code ---
 
@@ -369,13 +369,13 @@ line_number_start: 13
 line_highlights: 22
 --------------------------------------------------------
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+sumyParagraph.textContent = `Le nom de ton super-héros est ${characterName.value}. 
+  Son pouvoir est ${characterAbility.value}. 
+  Son histoire est ${characterOrigin.value}. `;
 
 characterDetails.style.display = "none";
 summary.style.display = "flex";
@@ -387,29 +387,29 @@ summary.style.display = "flex";
 
 \--- task ---
 
-Open `character.html`.
+Ouvre `character.html`.
 
-**Click Run**
+**Clique sur Run**
 
-- Fill in the character details
-- When you click the Create button, the form will be hidden and the summary section will be displayed
-- The summary paragraph will include a summary of your character
+- Remplis les informations du personnage
+- Lorsque tu cliques sur le bouton Créer, le formulaire sera masqué et la section résumé sera affichée
+- Le paragraphe résumé inclura un résumé de ton personnage
 
 \--- collapse ---
 
 ---
 
-## title: The summary section is not displaying properly
+## title: La section résumé ne s'affiche pas correctement
 
-- Check you have named all constants (`const`) correctly
-- Check you have used correct syntax when creating the functions, including `()` and `{}`
-- Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element
-- Check you have added a semicolon `;` at the end of your declarations
+- Vérifie que tu as correctement nommé toutes les constantes (`const`)
+- Vérifie que tu as utilisé la syntaxe correcte lors de la création des fonctions, y compris `()` et `{}`
+- Vérifie que tu ajoutes l'élément `onclick = "displaySummary()"` en tant qu'événement sur l'élément `<button>`
+- Vérifie que tu as ajouté un point-virgule `;` à la fin de tes déclarations
 
 \--- /collapse ---
 
 \--- /task ---
 
-Well done! You have created an interactive form that shows and hides elements.
+Bien joué ! Tu as créé un formulaire interactif qui affiche et masque les éléments.
 
-Next, you will allow the user to edit their choices!
+Ensuite, tu autoriseras l'utilisateur à modifier ses choix !
