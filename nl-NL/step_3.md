@@ -1,45 +1,45 @@
-## Add form input fields
+## Formulier invoervelden toevoegen
 
-In this step, you will design an interactive webpage and a form that the user can use to create their own superhero!
+In deze stap ontwerp je een interactieve webpagina en een formulier waarmee de gebruiker zijn eigen superheld kan maken!
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step3?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You have added text and images to your website, but your user can change the content too!
+Je hebt tekst en afbeeldingen toegevoegd aan je website, maar je gebruiker kan ook de inhoud wijzigen!
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-HTML <span style="color: #0faeb0">**forms**</span> allow the user to input and submit information.
+HTML <span style="color: #0faeb0">**formulieren**</span> stellen de gebruiker in staat om informatie in te voeren en te verzenden.
 </p>
 
-You will add different types of form elements to allow the user to create their superhero character.
+Je gaat verschillende types formulierelementen toevoegen zodat de gebruiker zijn eigen superheldenpersonage kan maken.
 
-**Note:** CSS styling for your form is already provided in the file `style.css`.
+**Opmerking:** CSS styling voor je formulier is al beschikbaar in het bestand `style.css`.
 
 \--- collapse ---
 
 ---
 
-## title: Types of form elements
+## title: Typen formulierelementen
 
-![An example HTML form with form fields annotated to show their use.](images/form-labelled.png)
+![Een voorbeeld HTML-formulier met formuliervelden die zijn voorzien van opmerkingen om hun gebruik weer te geven.](images/form-labelled.png)
 
-- `<input>` e.g. single-line text box, checkbox, button
-- `<select>` A drop-down list
-- `<textarea>` For entering multiple lines of text
-- `<label>` Text to tell the user what information to enter
+- `<input>` bijv. een enkelregelig tekstvak, selectievakje, knop
+- `<select>` Een keuzelijst
+- `<textarea>` Voor het invoeren van meerdere tekstregels
+- `<label>` Tekst om de gebruiker te vertellen welke informatie hij moet invoeren
 
 \--- /collapse ---
 
-### Set up the form
+### Formulier instellen
 
-All the input elements will be inside a `<section>` with an `id` attribute, so you can update it later.
+Alle invoerelementen bevinden zich in een `<section>` met een `id`-attribuut, zodat je dit later kunt bijwerken.
 
 \--- task ---
 
-Open the `character.html` file.
+Open het `character.html` bestand.
 
-Find the comment `<!--Superhero character details-->`.
+Vind de opmerking `<!--Superheld personage details--> `.
 
-Add the attribute `id="character-details"` to the `<section>` tag.
+Voeg het attribuut `id="personage-details"` toe aan de `<section>` tag.
 
 ## --- code ---
 
@@ -51,7 +51,7 @@ line_highlights: 23
 --------------------------------------------------------
 
 ```
-  <section id="character-details"> <!--Superhero character details-->
+  <section id="character-details"> <!--Superheld personage details-->
 
   </section>
 ```
@@ -60,15 +60,15 @@ line_highlights: 23
 
 \--- /task ---
 
-### Superhero 'name' section
+### Superheld 'naam' sectie
 
-The user will start by naming their superhero!
+De gebruiker begint met het bedenken van een naam voor zijn superheld!
 
-A `<label>` tells the user what they need to enter.
+Een `<label>` vertelt de gebruiker wat hij moet invoeren.
 
 \--- task ---
 
-Add a `<label>` element with the attribute `"for=name-text"`
+Voeg een `<label>`-element toe met het kenmerk `"for=name-text"`
 
 ## --- code ---
 
@@ -80,8 +80,8 @@ line_highlights: 24
 --------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
+<section id="character-details"> <!--Superhero personage details-->
+  <label for="name-text">Naam van je superheld:</label>
 </section>
 ```
 
@@ -91,40 +91,40 @@ line_highlights: 24
 
 ---
 
-## title: Accessible design
+## title: Toegankelijk ontwerp
 
-The `<label>` element allows screen-readers to read the label out loud when a user focuses on the input element.
-Adding a `for` attribute links the label to an input element.
+Het `<label>` element staat screen-readers toe om het label voor te lezen wanneer een gebruiker op het invoerelement bevindt.
+Door het toevoegen van een `for`-attribuut wordt het label gekoppeld aan een invoerelement.
 
 \--- /collapse ---
 
 \--- /task ---
 
-An `<input>` element allows the user to enter data.
+Met een `<input>`-element kan de gebruiker gegevens invoeren.
 
-You set the type of input using `type=`.
+Je stelt het type invoer in met `type=`.
 
 \--- collapse ---
 
 ---
 
-## title: Examples of input types
+## title: Voorbeelden van invoertypes
 
-- **Text:** Single line of text. <br>`<input type="text">` <br>_Try it_: <br><input type="text">
+- **Tekst:** Enkele regel tekst. <br>`<input type="text">` <br>_Probeer het_: <br><input type="text">
 
-- **Password:** Hides the entered text. <br>`<input type="password">` <br>_Try it_: <br><input type="password">
+- **Wachtwoord:** Verbergt de ingevoerde tekst. <br>`<input type="password">` <br>_Probeer het_: <br><input type="password">
 
-- **Checkbox:** Tick one or more options. <br>`<input type="checkbox"> <label>Breakfast</label>` <br>`<input type="checkbox"> <label>Lunch</label>` <br>_Try it_: <br><input type="checkbox"><label>Breakfast</label> <br><input type="checkbox"><label>Lunch</label>
+- **Selectievakje:** Selecteer een of meer opties. <br>`<input type="checkbox"> <label>Ontbijt</label>` <br>`<input type="checkbox"> <label>Lunch</label>` <br>_Probeer het_: <br><input type="checkbox"><label>Ontbijt</label> <br><input type="checkbox"><label>Lunch</label>
 
-- **Radio:** Select one option from a group. <br>`<input type="radio" name="meal"> <label>Breakfast</label> ` <br>`<input type="radio" name="meal"> <label>Lunch</label>` <br>_Try it_: <br><input type="radio" name="meal"><label>Breakfast</label> <br><input type="radio" name="meal"><label>Lunch</label> <br>**Tip:** The radio buttons must have the same `name` attribute so that selecting a radio button deselects any other selected radio button.
+- **Radio:** Selecteer één optie uit een groep. <br>`<input type="radio" name="meal"> <label>Ontbijt</label> ` <br>`<input type="radio" name="meal"> <label>Lunch</label>` <br>_Probeer het_: <br><input type="radio" name="meal"><label>Ontbijt</label> <br><input type="radio" name="meal"><label>Lunch</label> <br>**Tip:** De keuzerondjes moeten hetzelfde `name`-kenmerk hebben, zodat wanneer je een keuzerondje selecteert, alle andere geselecteerde keuzerondjes worden gedeselecteerd.
 
-- **Number:** Numeric data with arrows to increase/decrease the value <br>`<input type="number">` <br>_Try it_: <br><input type="number">
+- **Getal:** Numerieke data met pijlen om de waarde te verhogen/verlagen <br>`<input type="number">` <br>_Probeer het_: <br><input type="number">
 
 \--- /collapse ---
 
 \--- task ---
 
-Add a text `<input>` element with the attribute `id="name-text"`.
+Voeg een tekst `<input>` element toe met het kenmerk `id="name-text"`.
 
 ## --- code ---
 
@@ -136,9 +136,9 @@ line_highlights: 25
 --------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
-  <input type="text" id="name-text">
+<section id="character-details"> <!--Superheld personage details-->
+  <label for="name-text">Naam van je superheld:</label>
+ <input type="text" id="name-text">
 </section>
 ```
 
@@ -148,17 +148,17 @@ line_highlights: 25
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- You will see a text box with the label "Superhero Name:" above it.
+- Je ziet een tekstvak met het label "Naam van je superheld:" hierboven.
 
 \--- collapse ---
 
 ---
 
-## title: There is no text box
+## title: Er is geen tekstvak
 
-- Check you have added `""` marks around `text`.
+- Controleer of je `""` tekens rond `text` hebt toegevoegd.
 
 \--- /collapse ---
 
@@ -166,36 +166,36 @@ line_highlights: 25
 
 ---
 
-## title: The text box is very small
+## title: Het tekstvak is erg klein
 
-- Check you have given the `<input>` the id `"name-text"`, not `"name"`.
+- Controleer of je de `<input>` het id `"naam-text"` hebt gegeven, niet `"name"`.
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Superhero 'ability' section
+### Superhelden 'vaardigheden' sectie
 
-Next, the user will choose an ability for their superhero!
+Vervolgens kiest de gebruiker een vaardigheid voor zijn superheld!
 
-- The `<select>` element is used to create the drop-down list
-- The `<option>` elements are used to provide choices
+- Het `<select>` element wordt gebruikt om de keuzelijst aan te maken
+- De `<option>` elementen worden gebruikt om keuzes aan te bieden
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: Bekijk een voorbeeld
 
-<br>`<select><option value="Water">Water</option><option value="Juice">Juice</option></select>` <br>_Try it_: <br><select><option value="Water">Water</option><option value="Juice">Juice</option></select>
+<br>`<select><option value="Water">Water</option><option value="Juice">Sap</option></select>` <br>_Probeer het_: <br><select><option value="Water">Water</option><option value="Juice">Sap</option></select>
 
 \--- /collapse ---
 
 \--- task ---
 
-Add a `<label>` element with the attribute `for="ability-choice"`.
+Voeg een `<label>`-element toe met het kenmerk `for="ability-choice"`.
 
-Add a `<select>` element with the attribute `id="ability-choice"` and **four** `<option>` elements for the choices.
+Voeg een `<select>` element toe met het attribuut `id="ability-choice"` en **vier** `<option>` elementen voor de keuzes.
 
 ## --- code ---
 
@@ -207,72 +207,72 @@ line_highlights: 26-32
 -----------------------------------------------------------
 
 ```
-<section id="character-details"> <!--Superhero character details-->
-  <label for="name-text">Superhero Name:</label>
+<section id="character-details"> <!--Superheld personage details-->
+  <label for="name-text">Naam van je superheld:</label>
   <input type="text" id="name-text">     
-  <label for="ability-choice">Ability:</label>
+  <label for="ability-choice">Vaardigheid:</label>
   <select id="ability-choice">
-    <option value="">Choose an option</option>
-    <option value="Flying">Flying</option>
-    <option value="Invisibility">Invisibility</option>
-    <option value="Time travel">Time travel</option>
+    <option value="">Kies een optie</option>
+    <option value="Flying">Vliegen</option>
+    <option value="Invisibility">Onzichtbaarheid</option>
+    <option value="Time travel">Tijdreizen</option>
   </select>
 </section>
 ```
 
 \--- /code ---
 
-**Notice:** The first option has a blank `value`.
+**Let op:** De eerste optie heeft een lege `waarde`.
 
 \--- /task ---
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- You will see a drop-down list
-- Click the arrow to view the choices
+- Je ziet een keuzelijst
+- Klik op de pijl om de keuzes te bekijken
 
 \--- collapse ---
 
 ---
 
-## title: There are no options in my drop-down list
+## title: Er zijn geen opties in mijn keuzelijst
 
-- Check you have four `<option>` elements inside your `<select>` elements
-- Check you have closing `</option>` tags for each option
+- Controleer of je vier `<option>` elementen in je `<select>` elementen hebt
+- Controleer of je voor elke optie afsluitende `</option>`-tags hebt
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Superhero 'origin story' section
+### Superheld 'oorsprongsverhaal' sectie
 
-Next, the user will describe their superhero's origin story!
+Vervolgens zal de gebruiker de herkomst van zijn superheld beschrijven!
 
-The `<textarea>` element provides multi-line text entry.
+Het `<textarea>` element biedt meerdere regels tekst invoer.
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: Bekijk een voorbeeld
 
-<br>`<textarea></textarea>` <br>_Try it_: <br><textarea></textarea>
+<br>`<textarea></textarea>` <br>_Probeer het_: <br><textarea></textarea>
 
 \--- /collapse ---
 
-You can add a `placeholder` attribute to an input element.
+Je kunt een `placeholder` attribuut toevoegen aan een invoerelement.
 
-This gives a hint as to what the user should enter.
+Dit geeft een hint over wat de gebruiker moet invoeren.
 
-The hint is replaced when the user starts typing.
+De hint wordt vervangen zodra de gebruiker begint met typen.
 
 \--- task ---
 
-Add the `<label>` and `<textarea>` HTML.
+Voeg de `<label>` en `<textarea>` HTML toe.
 
-Include a placeholder attribute for the `<textarea>` element.
+Voeg een placeholder attribuut toe voor het `<textarea>` element.
 
 ## --- code ---
 
@@ -284,14 +284,14 @@ line_highlights: 33-45
 -----------------------------------------------------------
 
 ```
-<label for="ability-choice">Ability:</label>
+<label for="ability-choice">Vaardigheid:</label>
 <select id="ability-choice">
-  <option value="">Choose an option</option>
-  <option value="Flying">Flying</option>
-  <option value="Invisibility">Invisibility</option>
-  <option value="Time travel">Time travel</option>
+  <option value="">Kies een optie</option>
+  <option value="Flying">Vliegen</option>
+  <option value="Invisibility">Onzichtbaarheid</option>
+  <option value="Time travel">Tijdreizen</option>
 </select>
-<label for="origin-text">Origin Story:</label>
+<label for="origin-text">Oorsprongsverhaal:</label>
 <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
 ```
 
@@ -303,19 +303,19 @@ line_highlights: 33-45
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- You will see a multi-line text box showing placeholder text.
+- Je ziet een tekstvak met meerdere regels met tijdelijke tekst.
 
 \--- /task ---
 
-### Superhero 'summary' section
+### Superhelden 'samenvatting' sectie
 
-It would be great to show the user a summary of their character.
+Het zou geweldig zijn om de gebruiker een samenvatting van zijn personage te laten zien.
 
 \--- task ---
 
-Add a new `<section>` element with the attribute `id="summary-section"`.
+Voeg een nieuw `<section>` element toe met het attribuut `id="samenvattingssectie"`.
 
 ## --- code ---
 
@@ -339,9 +339,9 @@ line_highlights: 36-39
 
 \--- task ---
 
-Add a `<h2>` element to create a title for the summary.
+Voeg een `<h2>` element toe om een titel te maken voor het samenvatting.
 
-Add a `<p>` element with the attribute `id="summary-paragraph"`.
+Voeg een `<p>` element toe met het attribuut `id="samenvatting-alinea"`.
 
 ## --- code ---
 
@@ -354,7 +354,7 @@ line_highlights: 37-38
 
 ```
 <section id="summary-section">
-  <h2>Superhero Summary</h2>
+  <h2>Superheldensamenvatting</h2>
   <p id="summary-paragraph"></p>
 </section>
 ```
@@ -365,15 +365,15 @@ line_highlights: 37-38
 
 \--- task ---
 
-**Click Run**
+**Klik op Run**
 
-- You might expect to see the summary section. However, the `display` property for the `#summary-section` selector is set to `none`, so it is hidden.
+- Je verwacht misschien om een samenvatting te zien. Echter, de `display` eigenschap voor de `#samenvatting-sectie` selector is ingesteld op `none`, dus het is verborgen.
 
 \--- collapse ---
 
 ---
 
-## title: View the summary-section CSS selector
+## title: Bekijk de samenvattingssectie CSS-selector
 
 ## --- code ---
 
@@ -396,10 +396,10 @@ display: none;
 
 \--- /collapse ---
 
-Next, you will add a button that will run some JavaScript code to make the summary visible.
+Vervolgens zal je een knop toevoegen die een JavaScript-code uitvoert om de samenvatting zichtbaar te maken.
 
 \--- /task ---
 
-Fantastic work! Your character details page now contains a form with input fields.
+Goed gedaan! De pagina met personagegegevens bevat nu een formulier met invoervelden.
 
-In the next step, you will make your form interactive, so the user can view a summary of their character.
+In de volgende stap maak je je formulier interactief, zodat de gebruiker een samenvatting van zijn of haar personage kan bekijken.
