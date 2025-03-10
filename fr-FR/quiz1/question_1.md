@@ -1,44 +1,44 @@
-## Reflection
+## Réflexion
 
-Well done. You have created a website using HTML, CSS, and JavaScript.
+Bien joué. Tu as créé un site web en utilisant HTML, CSS et JavaScript.
 
-Answer the three questions below to reflect on what you've learnt.
+Réponds aux trois questions ci-dessous pour réfléchir à ce que tu as appris.
 
-You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Tu seras guidé vers la bonne réponse. Tu peux faire cette activité autant de fois que tu le souhaites.
 
 \--- question ---
 
 ---
 
-## legend: Question 1 of 3
+## legend: Question 1 sur 3
 
-To create a function in JavaScript, you use the `function` keyword.
+Pour créer une fonction en JavaScript, tu utiliseras le mot-clé `function`.
 
-What is the basic structure of a function?
+Quelle est la structure de base d'une fonction ?
 
 \--- choices ---
 
-- ( ) `new function myFunction() { /* code here */ }`
+- ( ) `new function myFunction() { /* code ici */ }`
 
   \--- feedback ---
 
-  Not quite! The correct way to declare a function is without the 'new' keyword.
+  Pas tout à fait ! La façon correcte de déclarer une fonction est sans le mot-clé 'new'.
 
   \--- /feedback ---
 
-- ( ) `function myFunction { /* code here */ }`
+- ( ) `function myFunction { /* code ici */ }`
 
   \--- feedback ---
 
-  Almost! Brackets are required after the function name. These are used to hold any parameters used by the function.
+  Presque ! Les parenthèses sont requises après le nom de la fonction. Elles sont utilisées pour contenir tous les paramètres utilisés par la fonction.
 
   \--- /feedback ---
 
-- (x) `function myFunction() { /* code here */ }`
+- (x) `function myFunction() { /* code ici */ }`
 
   \--- feedback ---
 
-  That's correct! A function includes the `function` keyword, followed by the function name, brackets, and curly braces containing the function's code.
+  C'est correct ! Une fonction inclut le mot-clé `function`, suivi du nom de la fonction, des parenthèses et des accolades contenant le code de la fonction.
 
   \--- /feedback ---
 
