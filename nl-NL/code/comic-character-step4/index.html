@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>SuperPi Stripalbum</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">Pi Comics</a>
+      <nav class="navbar" id="nav">
+        <a href="index.html">HOME</a>
+        <a href="character.html">PERSONAGE MAKEN</a>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-container">
+        <div class="hero-slider">
+          <span class="hero-slide active"><img src="stacey-hero.jpg" alt="Een superheldenpersonage met blond haar, gekleed in een blauw kostuum en een rode cape, voor een blauw-gele achtergrond"></span>
+          <span class="hero-slide"><img src="safina-cape.jpg" alt="Een superheldenpersonage met zwart haar, gekleed in een rood-wit kostuum en een blauwe cape, voor een blauw-gele achtergrond"></span>
+          <span class="hero-slide"><img src="layton-slider.jpg" alt="Een superheldenpersonage met blond haar, gekleed in een blauw kostuum en een rode cape, voor een blauwe achtergrond"></span>
+        </div>
+        <button class="hero-nav-btn prev" onclick="changeHero(-1)">❮</button>
+        <button class="hero-nav-btn next" onclick="changeHero(+1)">❯</button>
+      </div>
+    </main>
+    <footer>
+      <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- Alle rechten voorbehouden</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+title: Stripfiguur
+hero_image: images/banner.png
+description: Maak een superheld ontwerp website!
+version: 4
+listed: true
+copyedit: false
+last_tested: '2021-03-26'
+steps:
+  - title: Inleiding
+  - title: Voeg copyrighttekst toe
+  - title: Formulierelementen toevoegen
+    completion: engaged
+  - title: Elementen weergeven en verbergen
+  - title: Wijzig de samenvatting
+  - title: Controleer gebruikersinvoer
+  - title: Light mode thema
+  - title: Hero image slider
+    completion: internal
+  - title: Reflectie
+    completion: external
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Verbeter je project
+  - title: Wat kun je verder nog doen?
