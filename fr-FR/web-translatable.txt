@@ -13,3 +13,30 @@ Un personnage de super-héros aux cheveux blonds, portant un costume bleu et une
 Un personnage de super-héros en costume de super-héros se tenant fièrement devant une majestueuse chaîne de montagnes.
 
 Un personnage de super-héros vêtu d'une cape rouge et d'une chemise bleue se tient devant des montagnes.
+
+Update Copyright Year function 
+
+Create constants for superhero form
+
+Function to display summary
+
+Function to edit summary
+
+Function to check the character details form
+
+Please enter a name
+
+Please choose an ability
+
+Please write the origin story
+
+Please select where your hero is from
+
+Create the constant for light mode
+
+Light mode function
+
+Check local storage
+
+Change Hero function
+
