@@ -13,3 +13,30 @@ Een superheldenpersonage met blond haar, gekleed in een blauw kostuum en een rod
 Een superheld in een superheldenkostuum staat trots voor een majestueuze bergketen.
 
 Een superheld met een rode cape en een blauw shirt staat voor de bergen.
+
+Update Copyright Year function 
+
+Create constants for superhero form
+
+Function to display summary
+
+Function to edit summary
+
+Function to check the character details form
+
+Please enter a name
+
+Please choose an ability
+
+Please write the origin story
+
+Please select where your hero is from
+
+Create the constant for light mode
+
+Light mode function
+
+Check local storage
+
+Change Hero function
+
