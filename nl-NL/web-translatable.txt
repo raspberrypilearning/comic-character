@@ -14,29 +14,29 @@ Een superheld in een superheldenkostuum staat trots voor een majestueuze bergket
 
 Een superheld met een rode cape en een blauw shirt staat voor de bergen.
 
-Update Copyright Year function 
+Ververs Copyrightaar-functie 
 
-Create constants for superhero form
+Maak constanten voor superheld-formulier
 
-Function to display summary
+Functie om samenvatting weer te geven
 
-Function to edit summary
+Functie om samenvatting te bewerken
 
-Function to check the character details form
+Functie om het karakterdetails-formulier te controleren
 
-Please enter a name
+Voer een naam in
 
-Please choose an ability
+Kies een vaardigheid
 
-Please write the origin story
+Schrijf het oorsprongsverhaal
 
-Please select where your hero is from
+Selecteer waar jouw held vandaan komt
 
-Create the constant for light mode
+Maak de constante voor de lichtmodus
 
-Light mode function
+Lichtmodus-functie
 
-Check local storage
+Controleer lokale opslag
 
-Change Hero function
+Held-functie wijzigen
 
