@@ -85,8 +85,8 @@ Open `scripts.js`.
 
 Gebruik de `querySelector()`-methode om het volgende te vinden:
 
-- Het samenvattingssectie-element en wijs het toe aan de constante `samenvatting`
-- Het element van de sectie personage details en wijs het toe aan de constante `personageDetails`
+- Het samenvattingssectie-element en wijs het toe aan de constante `summary`
+- Het element van de sectie personage details en wijs het toe aan de constante `characterDetails`
 
 --- code ---
 ---
@@ -247,7 +247,7 @@ Gebruik daarna `${}` en plaats de constante, variabele of expressie in het `{}` 
 
 Hier is een voorbeeld:
 
-- Voeg de waarden toe in de constanten `heldNaam` en `leeftijd` in een string.
+- Voeg de waarden toe in de constanten `heroName` en `age` in een string.
 
 --- code ---
 ---

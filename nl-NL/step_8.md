@@ -66,7 +66,7 @@ Je kunt `querySelectorAll()` gebruiken om een lijst van **alle** `<span>` elemen
 
 Open `scripts.js`.
 
-Zoek de opmerking `// Change Hero functie`.
+Zoek de opmerking `// Wijzig Hero-functie`.
 
 Gebruik `querySelectorAll()` om een lijst te retourneren van alle elementen met het attribuut `class="hero-slide"`.
 

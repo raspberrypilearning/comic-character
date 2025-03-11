@@ -280,7 +280,7 @@ line_numbers: false
 const superhero = "Iron Man";
 const power = "armure";
 
-const description = "Le super-héros " + super-héros + " a un " + pouvoir + ".";
+const description = "Le super-héros " + superhero + " a un " + power + ".";
 
 --- /code ---
 

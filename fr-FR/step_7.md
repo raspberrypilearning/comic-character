@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 --- /task ---
 
-Si `lightMode` est défini sur `"true`, tu dois ajouter la classe `.light-mode`.
+Si `lightMode` est défini sur `"true"`, tu dois ajouter la classe `.light-mode`.
 
 Tu peux utiliser la méthode `.toggle` de la propriété `classList` pour y parvenir.
 

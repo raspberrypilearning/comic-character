@@ -34,7 +34,7 @@ Wat is de basisstructuur van een functie?
 
   --- /feedback ---
 
-- ( x) `function myFunction() { /* code hier */ }`
+- (x) `function myFunction() { /* code hier */ }`
 
   --- feedback ---
 
