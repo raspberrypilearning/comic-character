@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>Comic Book</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">Pi Comics</a>
+      <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="character.html">CRÉER UN PERSONNAGE</a>
+      </nav>
+      <div class="switch-container">
+        <label class="switch">
+          <input onchange="changeLightMode()" type="checkbox" id="lightModeSwitch">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="switch-label material-symbols-outlined">light_mode</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="character-details"> <!--Superhero character details-->
+        <label for="name-text">Nom du super-héros :</label>
+        <input type="text" id="name-text">
+        <label for="ability-choice">Pouvoir :</label>
+        <select id="ability-choice">
+          <option value="">Choisir une option</option>
+          <option value="Flight">Vol</option>
+          <option value="Invisibility">Invisibilité</option>
+          <option value="Time travel">Voyage dans le temps</option>
+        </select>
+        <label for="origin-text">Histoire :</label>
+        <textarea id="origin-text" placeholder="Ajoute l'histoire de ton super-héros !"></textarea>
+        <div id="alert"></div>
+        <button onclick="checkForm()">Créer</button>
+      </section>
+      <section id="summary-section">
+        <h2>Résumé du super-héros</h2>
+        <p id="summary-paragraph"></p>
+        <button onclick="changeSummary()">Modifier</button>
+      </section>
+    </main>
+    <footer>
+      <p>Ⓒ <span id="copyrightYear"></span> - Tous droits réservés</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
