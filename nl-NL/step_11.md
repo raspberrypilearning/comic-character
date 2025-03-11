@@ -1,6 +1,6 @@
 ## Wat kun je verder nog doen?
 
-Als je het [Meer web](https://projects.raspberrypi.org/nl/pathways/meere-web) pad volgt, kun je doorgaan naar het [Verhaal met animatie](https://projects.raspberrypi.org/en/projects/animated-story) project. In dit project maak je een interactief verhaal met functies die worden geactiveerd wanneer de gebruiker scrolt.
+Als je het [Meer web](https://projects.raspberrypi.org/en/pathways/more-web) pad volgt, kun je doorgaan naar het [Verhaal met animatie](https://projects.raspberrypi.org/en/projects/animated-story) project. In dit project maak je een interactief verhaal met functies die worden geactiveerd wanneer de gebruiker scrolt.
 
 \--- print-only ---
 
