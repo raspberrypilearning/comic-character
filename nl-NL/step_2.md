@@ -233,7 +233,7 @@ line_highlights: 3
 
 ---
 title: Het jaar wordt niet weergegeven
-
+---
 - Controleer of er een `#` in `copyrightYear` in de `querySelector` staat
 - Controleer of er openings- en sluitingshaakjes `()` aan het einde van `.getFullYear()` staan
 - Controleer de spelling van `querySelector` en `.getFullYear` (inclusief de hoofdletters)
