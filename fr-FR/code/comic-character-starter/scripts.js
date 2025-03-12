@@ -1,17 +1,17 @@
-// Update Copyright Year function
+// Fonction de mise à jour de l'année du Copyright
 
-// Create constants for superhero form
+// Créer des constantes pour le formulaire de super-héros
 
-// Function to display summary
+// Fonction pour afficher le résumé
 
-// Function to edit summary
+// Fonction pour modifier le résumé
 
-// Function to check the character details form
+// Fonction pour vérifier le formulaire d'informations du personnage
 
-// Create the constant for light mode
+// Créer la constante pour le light mode
 
-// Light mode function
+// Fonction du light mode
 
-// Check local storage
+// Vérifiez le stockage local
 
-// Change Hero function
+// Fonction changer de héros

@@ -1,15 +1,15 @@
-// Update Copyright Year function
+// Ververs Copyrightjaar-functie
 const currentDate = new Date();
 document.querySelector('#copyrightYear').innerText = currentDate.getFullYear();
 
-// Create constants for superhero form
+// Maak constanten voor superheld-formulier
 const characterDetails = document.querySelector('#character-details');
 const summary = document.querySelector('#summary-section');
 const characterName = document.querySelector('#name-text');
 const characterAbility = document.querySelector('#ability-choice');
 const characterOrigin = document.querySelector('#origin-text');
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
   const summaryParagraph = document.querySelector('#summary-paragraph');
   summaryParagraph.textContent = `De naam van jouw superheld is ${characterName.value}. 
@@ -19,22 +19,22 @@ function displaySummary() {
   summary.style.display = 'flex';
 }
 
-// Function to edit summary
+// Functie om samenvatting te bewerken
 function changeSummary() {
   characterDetails.style.display = 'flex';
   summary.style.display = 'none';
 }
 
-// Function to check the character details form
+// Functie om het karakterdetails-formulier te controleren
 const alertBox = document.querySelector('#alert');
 function checkForm() {
   var alertMessage = '';
   if (characterName.value == '') {
-    alertMessage = 'Please enter a name';
+    alertMessage = 'Voer een naam in';
   } else if (characterAbility.value == '') {
-    alertMessage = 'Please choose an ability';
+    alertMessage = 'Kies een vaardigheid';
   } else if (characterOrigin.value == '') {
-    alertMessage = 'Please write the origin story';
+    alertMessage = 'Schrijf het oorsprongsverhaal';
   }
   if (alertMessage != '') {
     alertBox.innerText = alertMessage;
@@ -45,17 +45,17 @@ function checkForm() {
   }
 }
 
-// Create the constant for light mode
+// Maak de constante voor de lichtmodus
 const lightModeSwitch = document.querySelector('#lightModeSwitch');
 
-// Light mode function
+// Lichtmodus-functie
 function changeLightMode() {
   var isLightMode = lightModeSwitch.checked;
   document.body.classList.toggle('light-mode');
   localStorage.setItem('lightMode', isLightMode);
 }
 
-// Check local storage
+// Controleer lokale opslag
 document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem('lightMode') == 'true') {
     document.body.classList.toggle('light-mode');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Change Hero function
+// Held-functie wijzigen
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 function changeHero(direction) {

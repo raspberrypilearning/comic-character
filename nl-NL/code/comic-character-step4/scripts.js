@@ -1,15 +1,15 @@
-// Update Copyright Year function
+// Ververs Copyrightjaar-functie
 const currentDate = new Date();
 document.querySelector('#copyrightYear').innerText = `${currentDate.getFullYear()}`;
 
-// Create constants for superhero form
+// Maak constanten voor superheld-formulier
 const summary = document.querySelector('#summary-section');
 const characterDetails = document.querySelector('#character-details');
 const characterName = document.querySelector('#name-text');
 const characterAbility = document.querySelector('#ability-choice');
 const characterOrigin = document.querySelector('#origin-text');
 
-// Function to display summary
+// Functie om samenvatting weer te geven
 function displaySummary() {
   const summaryParagraph = document.querySelector('#summary-paragraph');
   summaryParagraph.textContent = `De naam van jouw superheld is ${characterName.value}. 
@@ -19,14 +19,14 @@ function displaySummary() {
   summary.style.display = 'flex';
 }
 
-// Function to edit summary
+// Functie om samenvatting te bewerken
 
-// Function to check the character details form
+// Functie om het karakterdetails-formulier te controleren
 
-// Create the constant for light mode
+// Maak de constante voor de lichtmodus
 
-// Light mode function
+// Lichtmodus-functie
 
-// Check local storage
+// Controleer lokale opslag
 
-// Change Hero function
+// Held-functie wijzigen
