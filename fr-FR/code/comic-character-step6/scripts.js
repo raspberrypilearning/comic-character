@@ -1,15 +1,15 @@
-// Update Copyright Year function
+// Fonction de mise à jour de l'année du Copyright
 const currentDate = new Date();
 document.querySelector('#copyrightYear').innerText = `${currentDate.getFullYear()}`;
 
-// Create constants for superhero form
+// Créer des constantes pour le formulaire de super-héros
 const summary = document.querySelector('#summary-section');
 const characterDetails = document.querySelector('#character-details');
 const characterName = document.querySelector('#name-text');
 const characterAbility = document.querySelector('#ability-choice');
 const characterOrigin = document.querySelector('#origin-text');
 
-// Function to display summary
+// Fonction pour afficher le résumé
 function displaySummary() {
   const summaryParagraph = document.querySelector('#summary-paragraph');
   summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
@@ -19,22 +19,22 @@ function displaySummary() {
   summary.style.display = 'flex';
 }
 
-// Function to edit summary
+// Fonction pour modifier le résumé
 function changeSummary() {
   characterDetails.style.display = 'flex';
   summary.style.display = 'none';
 }
 
-// Function to check the character details form
+// Fonction pour vérifier le formulaire d'informations du personnage
 const alertBox = document.querySelector('#alert');
 function checkForm() {
   var alertMessage = '';
   if (characterName.value == '') {
-    alertMessage = 'Please enter a name';
+    alertMessage = 'Merci d’indiquer un nom';
   } else if (characterAbility.value == '') {
-    alertMessage = 'Please choose an ability';
+    alertMessage = 'Veuillez choisir un pouvoir';
   } else if (characterOrigin.value == '') {
-    alertMessage = 'Please write the origin story';
+    alertMessage = 'Merci d’écrire l’histoire';
   }
   if (alertMessage != '') {
     alertBox.innerText = alertMessage;
@@ -45,10 +45,10 @@ function checkForm() {
   }
 }
 
-// Create the constant for light mode
+// Créer la constante pour le light mode
 
-// Light mode function
+// Fonction du light mode
 
-// Check local storage
+// Vérifiez le stockage local
 
-// Change Hero function
+// Fonction changer de héros
