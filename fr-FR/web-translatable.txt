@@ -28,7 +28,7 @@ Merci d’indiquer un nom
 
 Veuillez choisir un pouvoir
 
-Merci d'écrire l'histoire
+Merci d’écrire l’histoire
 
 Veuillez sélectionner la provenance de votre héros
 
