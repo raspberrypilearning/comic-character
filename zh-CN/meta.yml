@@ -1,0 +1,37 @@
+---
+title: Comic character
+hero_image: images/banner.png
+description: Create a superhero design website!
+version: 4
+listed: true
+copyedit: false
+last_tested: '2021-03-26'
+steps:
+  - 
+    title: Introduction
+  - 
+    title: Add copyright text
+  - 
+    title: Add form elements
+    completion: engaged
+  - 
+    title: Show and hide elements
+  - 
+    title: Change the summary
+  - 
+    title: Check user input
+  - 
+    title: Light mode theme
+  - 
+    title: Hero image slider
+    completion: internal
+  - 
+    title: Reflection
+    completion: external
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - 
+    title: Upgrade your project
