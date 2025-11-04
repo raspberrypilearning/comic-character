@@ -1,20 +1,20 @@
-## Reflection
+## 回顾与思考
 
-Well done. You have created a website using HTML, CSS, and JavaScript.
+干得不错。 你已经使用 HTML、CSS 和 JavaScript 创建了一个网站。
 
-Answer the three questions below to reflect on what you've learnt.
+回答以下三个问题来帮助自己回顾并思考所学的内容。
 
-You will be guided towards the correct answer. You can do this activity as many times as you want to.
+我们会引导你找到正确答案。 你可以根据需要多次尝试。
 
 \--- question ---
 
 ---
 
-## legend: Question 1 of 3
+## legend: 问题 1/3
 
-To create a function in JavaScript, you use the `function` keyword.
+要在 JavaScript 中创建函数，请使用 `function` 关键字。
 
-What is the basic structure of a function?
+函数的基本结构是什么？
 
 \--- choices ---
 
@@ -22,7 +22,7 @@ What is the basic structure of a function?
 
   \--- feedback ---
 
-  Not quite! The correct way to declare a function is without the 'new' keyword.
+  不完全对！ 声明函数的正确方法不使用 `new` 关键字。
 
   \--- /feedback ---
 
@@ -30,7 +30,7 @@ What is the basic structure of a function?
 
   \--- feedback ---
 
-  Almost! Brackets are required after the function name. These are used to hold any parameters used by the function.
+  差一点！ 函数名称后面需要有括号。 它们用于保存函数使用的任何参数。
 
   \--- /feedback ---
 
@@ -38,7 +38,7 @@ What is the basic structure of a function?
 
   \--- feedback ---
 
-  That's correct! A function includes the `function` keyword, followed by the function name, brackets, and curly braces containing the function's code.
+  这是正确的！ 函数包括 `function` 关键字，后跟函数名称、括号和包含函数代码的花括号。
 
   \--- /feedback ---
 
