@@ -1,32 +1,32 @@
 ---
-title: Comic character
+title: 漫画人物
 hero_image: images/banner.png
-description: Create a superhero design website!
+description: 创建一个超级英雄设计网站！
 version: 4
 listed: true
 copyedit: false
 last_tested: '2021-03-26'
 steps:
   - 
-    title: Introduction
+    title: 介绍
   - 
-    title: Add copyright text
+    title: 添加版权文本
   - 
-    title: Add form elements
+    title: 添加表单元素
     completion: engaged
   - 
-    title: Show and hide elements
+    title: 显示和隐藏元素
   - 
-    title: Change the summary
+    title: 更改摘要
   - 
-    title: Check user input
+    title: 检查用户输入
   - 
-    title: Light mode theme
+    title: 浅色模式主题
   - 
-    title: Hero image slider
+    title: 首页轮播图
     completion: internal
   - 
-    title: Reflection
+    title: 回顾与思考
     completion: external
     knowledge_quiz:
       path: quiz1
@@ -34,4 +34,4 @@ steps:
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: 升级你的项目
