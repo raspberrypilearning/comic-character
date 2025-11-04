@@ -2,11 +2,11 @@
 
 ---
 
-## legend: Question 2 of 3
+## legend: 问题 2/3
 
-In HTML, `<input>` is a form element.
+在 HTML 中，`<input>` 是一个表单元素。
 
-Which attribute is used to specify the category of input to display to the user?
+哪个属性用于指定向用户显示的输入类别？
 
 \--- choices ---
 
@@ -14,7 +14,7 @@ Which attribute is used to specify the category of input to display to the user?
 
   \--- feedback ---
 
-Correct! The `type` attribute of the `<input>` element is used to specify the category of input to display to the user. Examples are `type=text`, `type=password`, and `type=checkbox`.
+正确！ `<input>` 元素的 `type` 属性用于指定向用户显示的输入类别。 例如 `type=text`、`type=password` 和`type=checkbox`。
 
 \--- /feedback ---
 
@@ -22,7 +22,7 @@ Correct! The `type` attribute of the `<input>` element is used to specify the ca
 
   \--- feedback ---
 
-Not quite! The `data-` prefix is used for custom data attributes.
+不完全对！ `data-` 前缀用于自定义数据属性。
 
 \--- /feedback ---
 
@@ -30,7 +30,7 @@ Not quite! The `data-` prefix is used for custom data attributes.
 
   \--- feedback ---
 
-Almost! There is no need to include the `input-` here.
+差一点！ 这里不需要包含 `input-`。
 
 \--- /feedback ---
 
