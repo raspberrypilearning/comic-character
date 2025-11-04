@@ -2,11 +2,11 @@
 
 ---
 
-## legend: Question 3 of 3
+## legend: 问题 3/3
 
-You used a JavaScript function to handle 'out of range' issues with your hero image slider.
+你使用 JavaScript 函数来处理英雄图像滑块的“超出范围”问题。
 
-How many images is this code designed to handle?
+这个代码可以处理多少幅图像？
 
 ## --- code ---
 
@@ -31,7 +31,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Incorrect. `0` is the index number of the first image.
+  不正确。 `0` 是第一张图像的索引。
 
   \--- /feedback ---
 
@@ -39,7 +39,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Not quite! `3` is the final index number. Indexing starts at `0`.
+  不完全对！ `3` 是最终索引号。 索引从 `0` 开始。
 
   \--- /feedback ---
 
@@ -47,7 +47,7 @@ currentHeroIndex = 0;
 
   \--- feedback ---
 
-  Correct! `currentHeroIndex` contains four items, starting at index `0` and finishing at index `3`.
+  正确！ `currentHeroIndex` 包含四个项目，从索引 `0` 开始到索引 `3` 结束。
 
   \--- /feedback ---
 
