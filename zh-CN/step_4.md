@@ -1,44 +1,44 @@
-## Make items appear and disappear
+## 使物品出现和消失
 
-In this step, you will use JavaScript to make parts of your form appear and disappear.
+在此步骤中，你将使用 JavaScript 让表单的各个部分显示和消失。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step4?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Show the summary section
+### 显示概述部分
 
-Your user needs to press a button to show the summary section.
+你的用户需要按下按钮来显示概述部分。
 
-An `onclick` event can be added to the button.
+可以向按钮添加 `onclick` 事件。
 
-JavaScript can be used to react to this event and show the summary.
+JavaScript 可用于对此事件做出反应并显示概述。
 
 \--- collapse ---
 
 ---
 
-## title: Other events
+## title: 其他事件
 
-Events can be triggered by the user or the browser.
+事件可以由用户或浏览器触发。
 
-- User events:
-  - Mouse events (click, double click, mouseover)
-  - Keyboard events (keypress, keydown, keyup)
-  - Touch events (touchstart, touchmove, touchend)
+- 用户事件：
+  - 鼠标事件（单击、双击、鼠标悬停）
+  - 键盘事件（按键、键盘按下、键盘弹起）
+  - 触摸事件（触摸开始、移动、触摸结束）
 
-- Browser events:
-  - Page load events (load, unload)
-  - Window events (resize, scroll)
-  - Time events (setInterval, setTimeout)
+- 浏览器事件：
+  - 页面加载事件（加载、卸载）
+  - 窗口事件（调整大小、滚动）
+  - 时间事件（setInterval、setTimeout）
 
 \--- /collapse ---
 
 \--- task ---
 
-Open the `character.html` file.
+打开 `character.html` 文件。
 
-Add a `<button>` element with the event `onclick="displaySummary()"` below the origin story `div`.
+在起源故事的 `div` 下方添加一个带有事件 `onclick="displaySummary()"` 的 `<button>` 元素。
 
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
+将文本“创建”添加到 `<button>` ，以便用户知道该按钮的作用。
 
 ## --- code ---
 
@@ -50,9 +50,9 @@ line_highlights: 35
 --------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">起源故事：</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    <button onclick="displaySummary()">Create</button>
+    <button onclick="displaySummary()">创造</button>
   </section>
 ```
 
@@ -62,33 +62,33 @@ line_highlights: 35
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- You will see a Create button below your superhero form
-- The Create button does not do anything at the moment
+- 你将在超级英雄表单下方看到一个创建按钮
+- 创建按钮目前没有任何作用
 
 \--- /task ---
 
-Nothing will happen when the user clicks the Create button.
+当用户单击创建按钮时不会发生任何事情。
 
-This is because the summary section has its CSS `display` property set to `none`.
+这是因为概述部分的 CSS `display` 属性设置为 `none`。
 
-You need to use JavaScript to change the summary section's `display` property to `flex`.
+你需要使用 JavaScript 将概述部分的 `display` 属性更改为 `flex`。
 
-When the summary section is displayed, you will hide the character details form.
+当显示概述部分时，你将隐藏角色详细信息表单。
 
-### Create constants to refer to each section
+### 创建常量来引用每个部分
 
-Your function will use constants that refer to each section.
+你的函数将使用常量来引用每个部分。
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Use the `querySelector()` method to find:
+使用 `querySelector()` 方法查找：
 
-- The summary section element and assign it to the constant `summary`
-- The character details section element and assign it to the constant `characterDetails`
+- 概述部分元素并将其分配给常量 `summary`
+- 角色详细信息部分元素并将其分配给常量 `characterDetails`
 
 ## --- code ---
 
@@ -99,7 +99,7 @@ line_number_start: 5
 line_highlights: 6-7
 ---------------------------------------------------------
 
-// Create constants for superhero form
+// 为超级英雄表单创建常量
 const summary = document.querySelector("#summary-section");
 const characterDetails = document.querySelector("#character-details");
 
@@ -107,15 +107,15 @@ const characterDetails = document.querySelector("#character-details");
 
 \--- /task ---
 
-### Create constants to refer to each form field
+### 创建常量来引用每个表单字段
 
-You need to display the three character details in the summary section.
+你需要在概述部分显示三个角色的详细信息。
 
-Set each as a constant, so you can refer to them in your code.
+将每个设置为常量，以便你可以在代码中引用它们。
 
 \--- task ---
 
-Use `querySelector()` methods to find the form elements and assign each to a constant.
+使用 `querySelector()` 方法查找表单元素并将每个元素分配给一个常量。
 
 ## --- code ---
 
@@ -126,7 +126,7 @@ line_number_start: 5
 line_highlights: 9-11
 ----------------------------------------------------------
 
-// Create constants for superhero form
+// 为超级英雄表单创建常量
 const summary = document.querySelector("#summary-section");
 const characterDetails = document.querySelector("#character-details");
 
@@ -138,17 +138,17 @@ const characterOrigin = document.querySelector("#origin-text");
 
 \--- /task ---
 
-### Update the contents of the summary
+### 更新概述内容
 
-In `character.html`, you added a `<p>` element with the attribute `id="summary-paragraph"`.
+在 `character.html` 中，你添加了一个具有属性 `id="summary-paragraph"` 的 `<p>` 元素。
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+\*\*提示：\*\*这只是为了提醒你。 你不必再写一遍！
 
 ---
 
-## title: The summary paragraph you created earlier
+## title: 你之前创建的概述段落
 
 ## --- code ---
 
@@ -161,7 +161,7 @@ line_highlights: 3
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
+    <h2>超级英雄概要</h2>
     <p id="summary-paragraph"></p>
   </section>
 ```
@@ -170,13 +170,13 @@ line_highlights: 3
 
 \--- /collapse ---
 
-The summary paragraph will display a summary of the character details.
+概述段落将显示角色详细信息的概述。
 
-You need a function to update the contents of the summary paragraph.
+你需要一个函数来更新概述段落的内容。
 
 \--- task ---
 
-Create a function `displaySummary()`.
+创建一个函数 `displaySummary()`。
 
 ## --- code ---
 
@@ -187,7 +187,7 @@ line_number_start: 13
 line_highlights: 14-16
 -----------------------------------------------------------
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 
 }
@@ -196,13 +196,13 @@ function displaySummary() {
 
 \--- /task ---
 
-The `displaySummary()` function needs to change the `<p>` element with the attribute `id="summary-paragraph"`.
+`displaySummary()` 函数需要使用属性 `id="summary-paragraph"` 更改 `<p>` 元素。
 
 \--- task ---
 
-Use the `querySelector()` to find the `<p>` element with the attribute `id="summary-paragraph"`.
+使用 `querySelector()` 查找具有属性 `id="summary-paragraph"` 的 `<p>` 元素。
 
-Assign the element to the constant `summaryParagraph`.
+将元素分配给常量 `summaryParagraph`。
 
 ## --- code ---
 
@@ -213,7 +213,7 @@ line_number_start: 13
 line_highlights: 15
 --------------------------------------------------------
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
@@ -223,37 +223,37 @@ const summaryParagraph = document.querySelector("#summary-paragraph");
 
 \--- /task ---
 
-You have previously changed the `.innerText` property of an HTML element.
+你之前已更改 HTML 元素的 `.innerText`属性。
 
-Here, you will change the `.textContent` property of the summary paragraph to include the values entered by the user in each field.
+在这里，你将更改概述段落的 `.textContent` 属性以包含用户在每个字段中输入的值。
 
-Each value will appear next to text introducing the value (e.g. 'Your superhero name is ')
+每个值都会出现在介绍该值的文本旁边（例如“你的超级英雄名称是”）
 
-You can use 'string formatting' to do this.
+你可以使用 `字符串格式化` 来执行此操作。
 
 \--- collapse ---
 
 ---
 
-## title: What is string formatting?
+## title: 什么是字符串格式化？
 
-A string is a data type in JavaScript and other programming languages.
+字符串是 JavaScript 和其他编程语言中的一种数据类型。
 
-A string is a collection of characters between double quotes `" "` or single quotes `' '`.
+字符串是双引号 `“”` 或单引号 `''` 之间的字符集合。
 
-You can format strings using template literals or concatenation.
+你可以使用模板字符串或字符串连接来格式化字符串。
 
-### Template literals
+### 模板字符串
 
-If you want to include the values from constants, variables, or expressions in a string, then you can use template literals.
+如果你想在字符串中包含常量、变量或表达式的值，那么你可以使用模板字符串。
 
-Instead of using `" "` or `' '`, you use backticks `` ` ` `` to indicate a string.
+不要使用 `" "` 或 `' '`，而是使用反引号 `` ` ` `` 来表示字符串。
 
-Then use `${}` and place the constant, variable, or expression inside the `{}` part.
+然后使用 `${}` 并将常量、变量或表达式放在 `{}` 部分内。
 
-Here is an example:
+下面是一个示例：
 
-- Include the values held in the constants `heroName` and `age` inside a string.
+- 将常量 `heroName` 和 `age` 中的值包含在字符串中。
 
 ## --- code ---
 
@@ -262,19 +262,19 @@ filename: scripts.js
 line_numbers: false
 --------------------------------------------------------
 
-const heroName = "Spider Man";
+const heroName =“蜘蛛侠”;
 const age = 25;
-const message = `Hello, ${heroName}! You are ${age} years old.`;
+const message =`你好， ${heroName}！ 你已经 ${age} 岁了。`;
 
 \--- /code ---
 
-### Concatenation
+### 字符串连接
 
-Concatenation is the act of joining things together.
+连接是将事物拼接在一起的行为。
 
-You can join strings together using the `+` operator.
+你可以使用 `+` 运算符将字符串连接在一起。
 
-Here is an example:
+下面是一个示例：
 
 ## --- code ---
 
@@ -283,10 +283,10 @@ filename: scripts.js
 line_numbers: false
 --------------------------------------------------------
 
-const superhero = "Iron Man";
-const power = "suit of armor";
+const superhero = "钢铁侠";
+const power = "盔甲套装";
 
-const description = "The superhero " + superhero + " has a " + power + ".";
+const description = "超级英雄 " + superhero + " 拥有 " + 力量 + "。";
 
 \--- /code ---
 
@@ -294,9 +294,9 @@ const description = "The superhero " + superhero + " has a " + power + ".";
 
 \--- task ---
 
-Update the `.textContent` of the `summaryParagraph`.
+更新 `summaryParagraph` 的 `.textContent`。
 
-**Notice:** The text content is inside backticks `` ` ` `` instead of using `" "` or `' '`.
+\*\*注意：\*\*文本内容在反引号 `` ` ` `` 内，而不是使用 `" "` 或 `' '`。
 
 ## --- code ---
 
@@ -307,13 +307,13 @@ line_number_start: 13
 line_highlights: 17-19
 -----------------------------------------------------------
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `你的超级英雄名字是 ${characterName.value}。 
+  他们的能力是 ${characterAbility.value}。 
+  他们的起源故事是 ${characterOrigin.value}。`;
 
 }
 
@@ -321,13 +321,13 @@ summaryParagraph.textContent = `Your superhero name is ${characterName.value}.
 
 \--- /task ---
 
-### Hide the character details form
+### 隐藏角色详细信息表单
 
 \--- task ---
 
-Set the value of the `display` property of the character details `<section>` to `none`.
+将角色详细信息 `<section>` 的 `display` 属性值设置为 `none`。
 
-This will hide the whole form on the page.
+这将隐藏页面上的整个表单。
 
 ## --- code ---
 
@@ -338,13 +338,13 @@ line_number_start: 13
 line_highlights: 21
 --------------------------------------------------------
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `你的超级英雄名字是 ${characterName.value}。 
+  他们的能力是 ${characterAbility.value}。 
+  他们的起源故事是 ${characterOrigin.value}。`;
 
 characterDetails.style.display = "none";
 
@@ -356,9 +356,9 @@ characterDetails.style.display = "none";
 
 \--- task ---
 
-Set the value of the `display` property of the summary `<section>` to `flex`.
+将概述 `<section>` 的 `display` 属性值设置为 `flex`。
 
-This will display the summary section on your page.
+这将在你的页面上显示概述部分。
 
 ## --- code ---
 
@@ -369,13 +369,13 @@ line_number_start: 13
 line_highlights: 22
 --------------------------------------------------------
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. 
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `你的超级英雄名字是 ${characterName.value}。 
+  他们的能力是 ${characterAbility.value}。 
+  他们的起源故事是 ${characterOrigin.value}。`;
 
 characterDetails.style.display = "none";
 summary.style.display = "flex";
@@ -387,29 +387,29 @@ summary.style.display = "flex";
 
 \--- task ---
 
-Open `character.html`.
+打开 `character.html`。
 
-**Click Run**
+**点击运行**
 
-- Fill in the character details
-- When you click the Create button, the form will be hidden and the summary section will be displayed
-- The summary paragraph will include a summary of your character
+- 填写角色详细信息
+- 单击创建按钮时，表单将被隐藏，并显示概述部分
+- 概述段落将包括你的性格的总结
 
 \--- collapse ---
 
 ---
 
-## title: The summary section is not displaying properly
+## title: 概述部分显示不正确
 
-- Check you have named all constants (`const`) correctly
-- Check you have used correct syntax when creating the functions, including `()` and `{}`
-- Check you add the `onclick = "displaySummary()"` as an event on the `<button>` element
-- Check you have added a semicolon `;` at the end of your declarations
+- 检查所有常量（`const`）的命名是否正确
+- 检查创建函数时是否使用了正确的语法，包括 `()` 和 `{}`
+- 检查你是否将 `onclick = "displaySummary()"` 添加为 `<button>` 元素上的事件
+- 检查你是否在声明末尾添加了分号 `;`
 
 \--- /collapse ---
 
 \--- /task ---
 
-Well done! You have created an interactive form that shows and hides elements.
+太棒了！ 你已经创建了一个显示和隐藏元素的交互式表单。
 
-Next, you will allow the user to edit their choices!
+接下来，你将允许用户编辑他们的选择！
