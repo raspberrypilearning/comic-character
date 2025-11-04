@@ -1,51 +1,51 @@
-## Add copyright message to footer
+## 在页脚添加版权信息
 
-In this step, you will create a copyright message and a function to automatically update it to the current year. You will add this to your footer section.
+在此步骤中，你将创建版权信息和一个自动将其更新为当前年份的功能。 你将把它添加到页脚部分。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step2" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Copyright**</span> is a legal protection that stops people from using someone else's work (e.g. websites, images, music) without their permission.
+<span style="color: #0faeb0">**Copyright**</span> 是一种法律保护，禁止人们未经许可使用他人的作品（例如网站、图像、音乐）。
 </p>
 
-In modern web design, websites include a footer section, displaying a copyright message.
+在现代网页设计中，网站包含一个页脚部分，显示版权信息。
 
-A copyright message usually contains:
+版权信息通常包含：
 
-- A copyright symbol Ⓒ
-- The name of the owner of the website
-- The year the content was published
+- 版权符号Ⓒ
+- 网站所有者的姓名
+- 内容发布的年份
 
 \--- task ---
 
-Open the [Comic Character starter project](https://editor.raspberrypi.org/en/projects/comic-character-starter){:target="_blank"}.
+打开 [漫画人物入门项目](https://editor.raspberrypi.org/en/projects/comic-character-starter){:target="_blank"}.
 
 \--- /task ---
 
-Your starter project contains:
+你的入门项目包含：
 
-- Two HTML pages with some content
-- A CSS file that contains styling for some of the content
-- The images you will use in the project
-- A JavaScript file to make your website interactive and engaging
+- 两个包含一些内容的 HTML 页面
+- 包含部分内容样式的 CSS 文件
+- 你将在项目中使用的图像
+- 一个可以让你的网站具有互动性和吸引力的JavaScript文件
 
-This project already contains a navbar and a hero image, which you learnt how to create in [Welcome to Antarctica](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica).
+这个项目已经包含了一个导航栏和一个首页横幅，你已经在[欢迎来到南极洲](https://projects.raspberrypi.org/en/projects/welcome-to-antarctica)中学会了如何创建他们。
 
-The **JavaScript** file you will use has already been linked to your webpages just before the closing `</body>` tag.
+你将使用的 **JavaScript** 文件已经在结束标签 `</body>` 之前链接到你的网页。
 
-The **CSS** file you will use has also been linked to your webpages.
+你将使用的**CSS**文件也已链接到你的网页。
 
-### Add content to your footer section
+### 将内容添加到你的页脚部分
 
 \--- task ---
 
-Open the `index.html` file.
+打开 `index.html` 文件。
 
-Find the `footer` element.
+找到 `footer` 元素。
 
-Add a `<p>` element containing the copyright message.
+添加包含版权信息的 `<p>` 元素。
 
-(You can change the fictional name `Malik Johnson` to a name of your choice.)
+（你可以将化名 `Malik Johnson` 更改为你选择的名称。）
 
 ## --- code ---
 
@@ -68,9 +68,9 @@ line_highlights: 33
 
 \--- task ---
 
-Add a `<span>` element with the attribute `id="copyrightYear"` between the Ⓒ symbol and the name.
+在 Ⓒ 符号和名称之间添加一个带有属性 `id="copyrightYear"` 的 `<span>` 元素。
 
-The `id` attribute is used to specify a unique identifier for an HTML element.
+`id` 属性用于为 HTML 元素指定唯一标识符。
 
 ## --- code ---
 
@@ -83,7 +83,7 @@ line_highlights: 33
 
 ```
   <footer>
-    <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson - All Rights Reserved</p>
+    <p> Ⓒ<span id="copyrightYear"></span> Malik Johnson - All Rights Reserved</p>
   </footer>
 ```
 
@@ -93,31 +93,31 @@ line_highlights: 33
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- The copyright message will be shown at the bottom (footer) of your webpage.
+- 版权信息将显示在你的网页底部（页脚）。
 
-**Notice:** There is no date shown yet.
+\*\*注意：\*\*尚未显示日期。
 
 \--- /task ---
 
-There is no text inside the `<span>` element.
+`<span>` 元素内没有文本。
 
-JavaScript will be used to update the content of the `<span>` to display the current year.
+JavaScript 将用于更新 `<span>` 的内容以显示当前年份。
 
-### Display the current year
+### 显示当前年份
 
-JavaScript has a `Date()` function that returns the current date and time, using the browser's time zone.
+JavaScript 有一个 `Date()` 函数，它使用浏览器的时区返回当前日期和时间。
 
 \--- collapse ---
 
 ---
 
-## title: See an example
+## title: 查看示例
 
-A call to `Date()` returns a string.
+调用 `Date()` 返回一个字符串。
 
-Here is the result of the call to `Date()` when this page was loaded:
+这是此页面加载时调用 `Date()` 的结果：
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-date" width="100%" height="100" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
@@ -125,9 +125,9 @@ Here is the result of the call to `Date()` when this page was loaded:
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Create a constant `currentDate` to hold a new `Date()` object.
+创建一个常量 `currentDate` 来保存一个新的 `Date()` 对象。
 
 ## --- code ---
 
@@ -139,7 +139,7 @@ line_highlights: 2
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // 更新版权年份函数 
  const currentDate = new Date();
 ```
 
@@ -151,37 +151,37 @@ line_highlights: 2
 
 ---
 
-## title: What is a constant?
+## title: 什么是常量
 
-A constant is a named data value.
+常量是一个命名的数据值。
 
-The value cannot be changed by the program.
+该值不能被程序改变。
 
 \--- /collapse ---
 
-The current year will be added to the `<span>` element you created earlier.
+当前年份将被添加到你之前创建的 `<span>` 元素中。
 
-JavaScript can be used to find and change HTML elements.
+JavaScript 可用于查找和更改 HTML 元素。
 
-To access the `<span>` element, you will 'select' it, using the document object model method: `querySelector()`.
+要访问 `<span>` 元素，你将使用文档对象模型方法 `querySelector()` 来“选择”它。
 
 \--- collapse ---
 
 ---
 
-## title: What is the document object model?
+## title: 什么是文档对象模型？
 
-The document object model (DOM) provides a way for JavaScript (and other programming languages) to interact with webpage elements.
+文档对象模型（DOM）为 JavaScript（和其他编程语言）提供了一种与网页元素交互的方式。
 
-It represents the structure of a webpage (document).
+它代表网页（文档）的结构。
 
-`querySelector()` is a DOM method that returns the first element in your webpage that matches a specified CSS selector (e.g. `#copyrightYear`)
+`querySelector()` 是一种 DOM 方法，它返回网页中与指定 CSS 选择器（例如 `#copyrightYear`）匹配的第一个元素
 
 \--- /collapse ---
 
 \--- task ---
 
-Use the `querySelector()` method to find the element in the webpage document with the attribute `id="copyrightYear"`.
+使用 `querySelector()` 方法在网页文档中查找属性为 `id="copyrightYear"` 的元素。
 
 ## --- code ---
 
@@ -193,7 +193,7 @@ line_highlights: 3
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // 更新版权年份函数 
  const currentDate = new Date();
  document.querySelector("#copyrightYear")
 ```
@@ -202,19 +202,19 @@ line_highlights: 3
 
 \--- /task ---
 
-The querySelector will find the whole `<span>` element.
+querySelector 将找到整个 `<span>` 元素。
 
-You only need to change the text **inside** the element.
+你只需要更改元素**内部**的文本。
 
-The `.innerText` property can be used to refer to the text content of an HTML element.
+`.innerText` 属性可用于引用 HTML 元素的文本内容。
 
-The `currentDate` constant holds the full date returned by the `Date()` function, but you only need the four-digit year part of the date.
+`currentDate` 常量保存由 `Date()` 函数返回的完整日期，但你只需要日期的四位数年份部分。
 
-You can use the `.getFullYear()` method for this.
+你可以为此使用 `.getFullYear()` 方法。
 
 \--- task ---
 
-Set the `.innerText` content of the `<span>` with the attribute `id="copyrightYear"` to the current four-digit year.
+将带有属性 `id="copyrightYear"` 的 `<span>` 的 `.innerText` 内容设置为当前的四位数年份。
 
 ## --- code ---
 
@@ -226,7 +226,7 @@ line_highlights: 3
 -------------------------------------------------------
 
 ```
- // Update Copyright Year function 
+ // 更新版权年份函数 
  const currentDate = new Date();
  document.querySelector("#copyrightYear").innerText = currentDate.getFullYear();
 ```
@@ -237,20 +237,20 @@ line_highlights: 3
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- You should see the current year displayed in the copyright message.
+- 你应该会看到版权信息中显示的当前年份。
 
 \--- collapse ---
 
 ---
 
-## title: The year is not displayed
+## title: 年份没有显示
 
-- Check there is a `#` in `copyrightYear` in the `querySelector`
-- Check you have opening and closing brackets `()` at the end of `.getFullYear()`
-- Check your spelling of `querySelector` and `.getFullYear` (including the capital letters)
-- Check there is a `;` at the end of lines 2 and 3
+- 检查 `querySelector` 中 `copyrightYear` 中是否有 `#`
+- 检查 `.getFullYear()` 末尾是否有左括号和右括号 `()`
+- 检查 `querySelector` 和 `.getFullYear` 的拼写（包括大写字母）
+- 检查第 2 行和第 3 行末尾是否有 `;`
 
 \--- /collapse ---
 
@@ -258,19 +258,19 @@ line_highlights: 3
 
 \--- task ---
 
-Open `index.html`.
+打开 `index.html`。
 
-Copy (CTRL + C or CMD + C) the `<p>` element within the footer.
+复制 (CTRL + C 或者 CMD + C) 页脚内的 `<p>` 元素。
 
 \--- /task ---
 
 \--- task ---
 
-Open the `character.html` file.
+打开 `character.html` 文件。
 
-Find the `footer` element.
+找到 `footer` 元素。
 
-Paste (CTRL + V or CMD + V) the `<p>` element you copied earlier.
+粘贴 (CTRL + V 或者 CMD + V) 你之前复制的 `<p>` 元素。
 
 ## --- code ---
 
@@ -289,16 +289,16 @@ line_highlights: 28
 
 \--- /code ---
 
-**Remember:** You may have changed the fictional name `Malik Johnson` to a name of your choice.
+\*\*记住：\*\*你可能已将化名 `Malik Johnson` 更改为你选择的名称。
 
 \--- /task ---
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- The copyright message will be shown at the bottom (footer section) of your webpage
-- It will include the year
+- 版权信息将显示在你的网页底部（页脚部分）。
+- 它将包括年份
 
 \--- /task ---
 
@@ -306,9 +306,9 @@ line_highlights: 28
 
 ---
 
-## title: What other date methods can I use?
+## title: 我还可以使用哪些其他的日期方法？
 
-Retrieve specific components of the date and time:
+获取日期和时间的特定组件：
 
 ```
 const year = currentDate.getFullYear();
@@ -322,6 +322,6 @@ const milliseconds = currentDate.getMilliseconds();
 
 \--- /collapse ---
 
-Great job! You have added some dynamic content to your webpages!
+做得好！ 你已经向你的网页添加了一些动态内容！
 
-Next, you will design an interactive webpage where the user can create their own character.
+接下来，你将设计一个交互式网页，用户可以在其中创建自己的角色。
