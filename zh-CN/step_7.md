@@ -1,24 +1,24 @@
-## Create light mode theme
+## 创建浅色模式主题
 
-In this step, you will create a switch so the user can change between dark mode and light mode.
+在此步骤中，你将创建一个切换开关，让用户可以在深色模式和亮色模式之间切换。
 
-The website will remember the user's choice even if they navigate to another page.
+网站会记住用户的选择，即使他们导航到其他页面。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step7" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Light and dark**</span> colour themes are used when designing websites and apps. Dark mode is a colour scheme that uses light-coloured text and icons on dark backgrounds. Light mode is the opposite of this. Providing this option to the user improves readability and accessibility.
+<span style="color: #0faeb0">**深浅**</span>颜色主题用于设计网站和应用程序。 深色模式是一种在深色背景上使用浅色文本和图标的配色方案。 浅色模式与此相反。 向用户提供此选项可提高可读性和可访问性。
 </p>
 
-Your `style.css` file includes selectors used to update your website's colour scheme.
+你的 `style.css` 文件包含用于更新你网站配色方案的选择器。
 
 \--- collapse ---
 
-**Tip:** This is just here to remind you. You don't have to write it again!
+\*\*提示：\*\*这只是为了提醒你。 你不必再写一遍！
 
 ---
 
-## title: Light mode styles
+## title: 浅色模式样式
 
 ## --- code ---
 
@@ -28,7 +28,7 @@ line_numbers: true
 line_number_start: 244
 --------------------------------------------------------------------------------
 
-/\* Light Mode Styles \*/
+/\* 浅色模式样式 \*/
 
 body.light-mode {
 background: var(--background-colour-light-mode);
@@ -68,19 +68,19 @@ color: var(--text-colour-light-mode-footer);
 
 \--- /collapse ---
 
-### Add a switch to the header
+### 在头部添加切换开关
 
-You have already used `<button>` elements to trigger events.
+你已经使用过 `<button>` 元素来触发事件。
 
-This time, you will use a checkbox (`<input type="checkbox">`) styled as a switch, so the user can change between colour themes.
+这次，你将使用一个复选框（`<input type="checkbox">`）并将其样式化为开关，以便用户可以更改配色主题。
 
 \--- task ---
 
-Open `index.html`.
+打开 `index.html`。
 
-Create a `<div>` element below the `<nav>` element in the `<header>` section.
+在 `<header>` 部分的 `<nav>` 元素下面创建一个 `<div>` 元素。
 
-Give it the attribute `class="switch-container"`.
+给它添加属性 `class="switch-container"`。
 
 ## --- code ---
 
@@ -104,18 +104,18 @@ line_highlights: 20-22
 
 \--- /task ---
 
-The switch uses three elements: `<label>`, `<input>`, and `<span>`.
+开关使用三个元素：`<label>`、`<input>` 和 `<span>`。
 
-You used some of these when you created the character details form.
+你在创建角色详情表单时也使用过其中的一些元素。
 
 \--- task ---
 
-Inside the `<div>` tags, add a `<label>` with the attribute `class="switch"`.
+在 `<div>` 标签内，添加一个带有属性 `class="switch"` 的 `<label>`。
 
-Inside the `<label>` tags, add
+在 `<label>` 标签内，添加
 
-- An `<input>` element with two attributes: `type="checkbox"` and `id="lightModeSwitch"`
-- A `<span>` element with the attribute `class="switch-slider"`
+- 一个带有两个属性的 `<input>` 元素：`type="checkbox"` 和 `id="lightModeSwitch"`
+- 一个具有属性 `class="switch-slider"` 的 `<span>` 元素
 
 ## --- code ---
 
@@ -143,50 +143,50 @@ line_highlights: 21-24
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- **Notice:** The `.switch` selector provides styling to convert the checkbox into a switch shape.
+- **注意：** `.switch` 选择器已提供样式以将复选框转换为开关形状。
 
 \--- /task ---
 
-### Add an icon to the switch
+### 为开关添加图标
 
-You can show the user an icon that represents light mode rather than show them the phrase "light mode".
+你可以向用户显示表示亮色模式的图标，而不是显示文字“light mode”。
 
-Google fonts provides icons and a way to add them to your website.
+Google 字体提供图标并可以将其添加到你的网站。
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Icons**</span> are an accessible way of representing text because they are universally understood.
+<span style="color: #0faeb0">**图标**</span>是以可访问的方式表示文本的一种手段，因为它们具有通用的可理解性。
 </p>
 
-The Google icon has already been included inside the `<head>` element of your webpages. The CSS styles have also been provided.
+Google 图标已经在网页的 `<head>` 元素中引入。相应的 CSS 样式也已提供。 还提供了 CSS 样式。
 
 \--- collapse ---
 
 ---
 
-## title: How to import icons using Google fonts
+## title: 如何使用 Google 字体导入图标
 
-Open [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. The link will open in a new tab.
+打开 [fonts.google.com](https://fonts.google.com/icons){:target="_blank"}. 该链接将在新选项卡中打开。
 
-![The Google Fonts icons page with various icons and the search bar showing.](images/google-icons.png)
-You can search for icons. Each icon has a unique name.
+![Google 字体图标页面，其中显示格子图标和搜索栏。](images/google-icons.png)
+你可以搜索图标。 每个图标都有一个唯一的名称。
 
-Click on the icon you want to add. This will open some instructions.
+单击你想要添加的图标。 这将打开一些说明。
 ![The Google Fonts icons page with the 'Home' icon selected and an instructions panel.](images/google-selected-icon.png)
 
-- Include icons in HTML:
-  Add this in the `<head>` section of an HTML file.
+- 在 HTML 中包含图标：
+  将其添加到 HTML 文件的 `<head>` 部分。
 
   `<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">`
 
-- Use icons in HTML:
-  Add a class to an HTML element. For example:
+- 在 HTML 中使用图标：
+  向 HTML 元素添加一个类。 例如：
 
-  `<span class="material-symbols-outlined">home</span>`
+  `<span class="material-symbols-outlined">主页</span>`
 
-- CSS styling:
-  Add the icon’s custom styles to your CSS stylesheet. You can also customise it:
+- CSS 样式：
+  将图标的自定义样式添加到您的 CSS 样式表。 你还可以自定义它：
 
   .material-symbols-outlined {
   font-variation-settings:
@@ -200,9 +200,9 @@ Click on the icon you want to add. This will open some instructions.
 
 \--- task ---
 
-Below the `</label>` tag, add a `<span>` element with the attribute `class="switch-label material-symbols-outlined"`.
+在 `</label>` 标签下面，添加一个属性为 `class="switch-label material-symbols-outlined"` 的 `<span>` 元素。
 
-Add the text 'light_mode' inside the `<span>` element.
+在该 `<span>` 元素内添加文本 'light_mode'。
 
 ## --- code ---
 
@@ -230,34 +230,34 @@ line_highlights: 25
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Your switch should appear on the right in your navbar
-- You can click the switch, but it will not do anything...yet!
+- 你的开关应该出现在导航栏的右侧
+- 你可以点击开关，但它尚未生效！
 
 \--- collapse ---
 
 ---
 
-## title: The switch does not display properly
+## title: 开关显示不正确
 
-- Check you have left spaces between your attributes where you have multiple attributes in an element.
+- 检查元素中多个属性之间是否留有空格。
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Create an event handler for your switch
+### 为开关创建事件处理函数
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Find the comment `// Create the constant for light mode`.
+找到注释 `// Create the constant for light mode`。
 
-Use `querySelector()` to find the element with the attribute `id="lightModeSwitch"`.
+使用 `querySelector()` 查找具有属性 `id="lightModeSwitch"` 的元素。
 
-Assign it to a constant `lightModeSwitch`.
+将其赋值给常量 `lightModeSwitch`。
 
 ## --- code ---
 
@@ -268,7 +268,7 @@ line_number_start: 55
 line_highlights: 56
 --------------------------------------------------------
 
-// Create the constant for light mode
+// 创建浅色模式常量
 const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- /code ---
@@ -277,9 +277,9 @@ const lightModeSwitch = document.querySelector("#lightModeSwitch");
 
 \--- task ---
 
-Find the comment `// Light mode function`.
+找到注释 `// Light mode function`。
 
-Create the function `changeLightMode()`.
+创建函数 `changeLightMode()`。
 
 ## --- code ---
 
@@ -290,7 +290,7 @@ line_number_start: 58
 line_highlights: 59-61
 -----------------------------------------------------------
 
-// Light mode function
+// 浅色模式函数
 function changeLightMode(){
 
 }
@@ -299,15 +299,15 @@ function changeLightMode(){
 
 \--- /task ---
 
-You added an `<input>` element with the attribute `type="checkbox"` and styled it as a switch.
+你添加了一个带有属性 `type="checkbox"` 的 `<input>` 元素并将其样式化为开关。
 
-You can check if a switch is 'on' using the `.checked` property.
+可以使用 `.checked` 属性检查开关是否处于“开启”状态。
 
-The value of the `.checked` property is Boolean, meaning it can either be **true** (on) or **false** (off).
+`.checked` 属性的值为布尔值，即可以是 **true**（开）或 **false**（关）。
 
 \--- task ---
 
-Make the function assign the value of the switch's `.checked` property to the variable `isLightMode`.
+使该函数将开关的 `.checked` 属性的值赋给变量 `isLightMode`。
 
 ## --- code ---
 
@@ -318,7 +318,7 @@ line_number_start: 58
 line_highlights: 60
 --------------------------------------------------------
 
-// Light mode function
+//浅色模式函数
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 
@@ -328,38 +328,38 @@ var isLightMode = lightModeSwitch.checked;
 
 \--- /task ---
 
-The `.classList` property returns an element's `class` attributes.
+`.classList` 属性返回元素的类属性。
 
-You can modify an element's class attributes using methods.
+可以使用方法修改元素的类属性。
 
-For example, you can add(), toggle(), or remove() an element's classes.
+例如，可以使用 add()、toggle() 或 remove()。
 
 \--- collapse ---
 
 ---
 
-## title: classList methods
+## title: classList 方法
 
-- Access a classList:
-  `element.classList` returns a list of the specified element's class attributes.
+- 访问 classList：
+  `element.classList` 返回指定元素的类属性列表。
 
-- Add a class: `element.classList.add("className")`
+- 添加一个类：`element.classList.add("className")`
 
-- Remove a class: `element.classList.remove("className")`
+- 删除一个类：`element.classList.remove("className")`
 
-- Toggle a class: `element.classList.toggle("className")` (If the class is present, it is removed; otherwise, it is added.)
+- 切换类：`element.classList.toggle("className")`（如果该类存在，则将其删除；否则，则添加该类。）
 
-- Check if a class exists: `element.classList.contains("className")` returns a Boolean value confirming whether the element contains the specified class.
+- 检查某个类是否存在：`element.classList.contains("className")` 返回一个布尔值，确认元素是否包含指定的类。
 
-- Replace a class: `element.classList.replace("oldClass", "newClass")` replaces the specified old class with a new one.
+- 替换一个类：`element.classList.replace("oldClass", "newClass")` 用一个新类替换指定的旧类。
 
 \--- /collapse ---
 
 \--- task ---
 
-Use the `.toggle` method to add or remove the `light-mode` class to the `<body>` element.
+使用 `.toggle` 方法向 `<body>` 元素添加或移除 `light-mode` 类。
 
-This will add the class to the element if it is not there, or remove it if it is.
+如果该类不存在则添加，存在则移除。
 
 ## --- code ---
 
@@ -370,7 +370,7 @@ line_number_start: 58
 line_highlights: 61
 --------------------------------------------------------
 
-// Light mode function
+// 浅色模式函数
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -381,13 +381,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-### Add the event handler to the switch
+### 将事件处理函数添加到开关
 
 \--- task ---
 
-Open `index.html`.
+打开 `index.html`。
 
-Add the event `onchange="changeLightMode()"` to the switch element.
+在开关元素上添加事件 `onchange="changeLightMode()"`。
 
 ## --- code ---
 
@@ -415,57 +415,57 @@ line_highlights: 22
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Click on the switch to slide it into the light mode position
-- The colours of your webpage should change
+- 点击开关将其滑动到亮色模式位置
+- 网页的配色应当发生变化
 
 \--- /task ---
 
-### Save the user's preference
+### 保存用户的偏好设置
 
-The switch adds or removes the `light-mode` class.
+开关会添加或移除 `light-mode` 类。
 
-When your user navigates to another page (or reloads the current one) the changes will be lost as the `light-mode` class attribute is not set in the HTML file.
+当用户导航到另一个页面（或重新加载当前页面）时，这些更改将丢失，因为 HTML 文件中没有设置 `light-mode` 类。
 
-You need a way to keep the user's choice.
+你需要一种方法来保留用户的选择。
 
-You can do this with the `localStorage` property.
+可以使用 `localStorage` 属性来实现。
 
-`localStorage` holds data as key-value pairs. A **key** is a 'label' for a value.
+`localStorage` 以键值对的形式保存数据。键是值的“标签”。 **键** 是值的“标签”。
 
 \--- collapse ---
 
 ---
 
-## title: localStorage methods
+## title: localStorage 方法
 
 - setItem(key, value):
-  Adds a key-value pair to localStorage.
-  Example: `localStorage.setItem("username", "raspberry")`
+  向 localStorage 添加一个键值对。
+  例如：`localStorage.setItem("username", "raspberry")`
 
 - getItem(key):
-  Retrieves the value associated with the specified key.
-  Example: `var username = localStorage.getItem("username")`
+  检索与指定键关联的值。
+  例如：`var username = localStorage.getItem("username")`
 
 - removeItem(key):
-  Removes the key-value pair associated with the specified key.
-  Example: `localStorage.removeItem("username")`
+  删除与指定键关联的键值对。
+  例如：`localStorage.removeItem("username")`
 
-- clear():
-  Removes all key-value pairs from localStorage.
-  Example: `localStorage.clear()`
+- clear()：
+  从 localStorage 中删除所有键值对。
+  例如：`localStorage.clear()`
 
 \--- /collapse ---
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Use the `.setItem` method to add the key-value pair:
+使用 `.setItem` 方法添加以下键值对：
 
-- Set the 'key' to `"lightMode"`
-- Set the 'value' to `isLightMode`, representing the Boolean (true or false) value of the toggle's `.checked` property
+- 将 'key' 设置为 `"lightMode"`
+- 将 'value' 设置为 `isLightMode`，表示切换开关的 `.checked` 布尔值（true 或 false）
 
 ## --- code ---
 
@@ -476,7 +476,7 @@ line_number_start: 58
 line_highlights: 62
 --------------------------------------------------------
 
-// Light mode function
+// 浅色模式函数
 function changeLightMode(){
 var isLightMode = lightModeSwitch.checked;
 document.body.classList.toggle("light-mode");
@@ -487,19 +487,19 @@ localStorage.setItem("lightMode", isLightMode);
 
 \--- /task ---
 
-### Get the user's preference
+### 获取用户的偏好设置
 
-When the webpage loads, you need to check if lightMode was set.
+当网页加载时，需要检查是否设置了 lightMode。
 
-You can use `addEventListener` for this.
+可以使用 addEventListener 来完成此检查。
 
 \--- collapse ---
 
 ---
 
-## title: The addEventListener method
+## title: addEventListener 方法
 
-Use `.addEventListener` like this:
+像这样使用 `.addEventListener`：
 
 ## --- code ---
 
@@ -514,15 +514,15 @@ element.addEventListener(eventType, callbackFunction);
 
 \--- /code ---
 
-- element: The HTML element to which you want to attach the event listener
-- eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded")
-- callbackFunction: The function to be executed when the event happens
+- element：要附加事件监听器的 HTML 元素
+- eventType：你想要监听的事件类型（例如“click”、“keydown”、“DOMContentLoaded”）
+- callbackFunction：事件发生时执行的函数
 
 \--- /collapse ---
 
 \--- task ---
 
-Use `.addEventListener` to trigger a function in response to a page load event.
+使用 `.addEventListener` 在页面加载事件时触发一个函数。
 
 ## --- code ---
 
@@ -533,24 +533,24 @@ line_number_start: 65
 line_highlights: 66-68
 -----------------------------------------------------------
 
-// Check local storage
+// 检查本地存储
 document.addEventListener("DOMContentLoaded", function () {
 
 });
 
 \--- /code ---
 
-`"DOMContentLoaded"` is an `eventType` that is triggered when the webpage is ready.
+`"DOMContentLoaded"` 是在网页准备就绪时触发的事件类型。
 
-**Tip:** It is better to use `"DOMContentLoaded"` here rather than the `"load"` eventType, which is only triggered when all images are loaded.
+提示：在这里使用 `"DOMContentLoaded"` 比使用 `"load"` 更好，后者仅在所有图片加载完毕时才触发。
 
 \--- /task ---
 
-You need the function to check `localStorage` to see if the 'value' paired with the `lightMode` 'key' is **"true"**.
+需要函数检查 `localStorage` 中与 `lightMode` 键关联的值是否为 **"true"**。
 
 \--- task ---
 
-Add an `if` statement to check if `lightMode` is set to `"true"`.
+添加一个 `if` 语句来检查 `lightMode` 是否被设置为 `"true"`。
 
 ## --- code ---
 
@@ -561,7 +561,7 @@ line_number_start: 65
 line_highlights: 68-70
 -----------------------------------------------------------
 
-// Check local storage
+// 检查本地存储
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -574,15 +574,15 @@ if (localStorage.getItem("lightMode") == "true") {
 
 \--- /task ---
 
-If `lightMode` is set to `"true"`, you need to add the `.light-mode` class.
+如果 `lightMode` 被设置为 `"true"`，你需要添加 `.light-mode` 类。
 
-You can use the `.toggle` method from the `classList` property to achieve this.
+你可以使用 `classList` 的 `.toggle` 方法实现这一点。
 
-**Tip:** You could also use the `.add` method.
+提示：也可以使用 `.add` 方法。
 
 \--- task ---
 
-Toggle the `light-mode` class.
+切换 `light-mode` 类。
 
 ## --- code ---
 
@@ -593,7 +593,7 @@ line_number_start: 65
 line_highlights: 69
 --------------------------------------------------------
 
-// Check local storage
+// 检查本地存储
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -606,13 +606,13 @@ document.body.classList.toggle("light-mode");
 
 \--- /task ---
 
-You also have to show the switch as 'on'.
+你还必须将开关显示为“开启”状态。
 
-If this isn't done, the light mode preference would be set, but the switch position would be set to 'off'.
+如果不这样做，亮色模式偏好会被设置，但开关位置仍然显示为“关闭”。
 
 \--- task ---
 
-Set the value of the switch's `.checked` property to the Boolean value `true`.
+将开关的 `.checked` 属性设置为布尔值 `true`。
 
 ## --- code ---
 
@@ -623,7 +623,7 @@ line_number_start: 65
 line_highlights: 70
 --------------------------------------------------------
 
-// Light mode function
+// 浅色模式函数
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
@@ -639,9 +639,9 @@ lightModeSwitch.checked = true;
 
 \--- task ---
 
-Open `character.html`.
+打开 `character.html`。
 
-Add the HTML for the switch to the header below the `</nav>` tag.
+将开关的 HTML 添加到头部，放在 `</nav>` 标签下面。
 
 ## --- code ---
 
@@ -671,14 +671,14 @@ line_highlights: 20-26
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Your switch should appear in your navbar to the right
-- Click the switch on and off to see the theme colours change
-- Navigate to the `index.html` page to check that your light mode preference stays on
+- 开关应该出现在导航栏的右侧
+- 打开或关闭开关以查看主题颜色变化
+- 导航到 `index.html` 页面以检查亮色模式偏好是否保持
 
 \--- /task ---
 
-Great work! You have created a switch that allows the user to change colour themes.
+做得好！ 干得好！你已经创建了一个允许用户更改配色主题的开关。
 
-Next, you will add a hero slider to your website and allow the user to see different images!
+接下来，你将为网站添加一个英雄图片滑块并允许用户查看不同的图片！
