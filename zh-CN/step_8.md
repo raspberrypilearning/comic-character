@@ -1,16 +1,16 @@
-## Create a hero image slider
+## 创建首页横幅滑块
 
-In this step, you will create an interactive hero image slider for your webpage.
+在此步骤中，你将为你的网页创建一个交互式英雄图像滑块。
 
-The user can use buttons to move to the next or previous hero image.
+用户可以使用按钮移动到下一个或上一个首页横幅图像。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-complete" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### The hero image HTML
+### 首页横幅图像 HTML
 
-You have been provided with the HTML and CSS styling.
+你已获得 HTML 和 CSS 样式。
 
-Here is the HTML:
+以下是 HTML：
 
 ## --- code ---
 
@@ -41,38 +41,38 @@ line_highlights:
 
 ---
 
-## title: I need the HTML explaining
+## title: 我需要 HTML 解释
 
-**Lines 31, 32, and 33:**
+**第 31、32 和 33 行：**
 
-- The `<span>` elements contain the hero images
-  - They all have the same attribute: `class="hero-slide"`
-- The `active` class is used to show a particular image
+- `<span>` 元素包含首页横幅图像
+  - 它们都具有相同的属性：`class="hero-slide"`
+- `active` 类用于显示特定图像
 
-**Lines 35 and 36:**
+**第 35 行和第 36 行：**
 
-- Buttons used to navigate left `<` and right `>`
-- The JavaScript function `changeHero()` is used as event handler for button presses
-  - When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
-  - When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
+- 用于向左导航的按钮 `<` 和向右导航的按钮 `>`
+- JavaScript 函数 `changeHero()` 用作按钮按下的事件处理程序
+  - 当单击 `<` 按钮时，将使用参数 `-1` 调用 `changeHero()` 函数
+  - 当单击 `>` 按钮时，将使用参数 `+1` 调用 `changeHero()` 函数
 
 \--- /collapse ---
 
-### Find all the images
+### 查找所有图像
 
-You have used `querySelector()` in previous steps to find the first element that matches the specified CSS selector.
+你在前面的步骤中使用了 `querySelector()` 来查找与指定 CSS 选择器匹配的第一个元素。
 
-You can use `querySelectorAll()` to find and return a list of **all** `<span>` elements.
+你可以使用 `querySelectorAll()` 来查找并返回**所有** `<span>` 元素的列表。
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Find the comment `// Change Hero function`.
+找到注释 `//更改英雄功能`。
 
-Use `querySelectorAll()` to return a list of all elements with the attribute `class="hero-slide"`.
+使用 `querySelectorAll()` 返回具有属性 `class="hero-slide"` 的所有元素的列表。
 
-Assign the list to a constant `heroSlides`.
+将列表分配给常量 `heroSlides`。
 
 ## --- code ---
 
@@ -83,29 +83,29 @@ line_number_start: 75
 line_highlights: 76
 --------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 
 \--- /code ---
 
 \--- /task ---
 
-### Track active hero image
+### 跟踪活跃的英雄形象
 
-The first element in the returned list in `heroSlides` is at index 0.
+`heroSlides` 返回列表中的第一个元素位于索引 0。
 
 ```
- ___________   ___________   ___________  
-| Element 1 | | Element 2 | | Element 3 |
- ‾‾‾‾‾‾‾‾‾‾‾   ‾‾‾‾‾‾‾‾‾‾    ‾‾‾‾‾‾‾‾‾‾‾
-|  Index 0  | |  Index 1  | |  Index 2  |
+ ___________ ___________ ___________  
+| 元素 1 | | 元素 2 | | 元素 3 |
+ ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+| 索引 0 | | 索引 1 | | 索引 2 |
 ```
 
-It will be the first active image in the slider.
+它将是滑块中第一个活动图像。
 
 \--- task ---
 
-Create the variable `currentHeroIndex` and assign it the value `0`.
+创建变量 `currentHeroIndex` 并赋值 `0`。
 
 ## --- code ---
 
@@ -116,7 +116,7 @@ line_number_start: 75
 line_highlights: 77
 --------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -124,18 +124,18 @@ var currentHeroIndex = 0;
 
 \--- /task ---
 
-### Create the changeHero() function
+### 创建 changeHero() 函数
 
-The `changeHero()` function is called when the user moves to the next or previous image.
+当用户移动到下一个或上一个图像时，将调用`changeHero()` 函数。
 
 \--- task ---
 
-Find the comment `// Change Hero function`.
+找到注释 `//更改英雄功能`。
 
-Create a function `changeHero()` with the parameter `direction`.
+创建一个带有参数 `direction` 的函数 `changeHero()`。
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A <span style="color: #0faeb0">**parameter**</span> acts as a placeholder for a value used by the function.
+ <span style="color: #0faeb0">**参数**</span> 充当函数使用的值的占位符。
 </p>
 
 ## --- code ---
@@ -147,7 +147,7 @@ line_number_start: 75
 line_highlights: 79-81
 -----------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -159,15 +159,15 @@ function changeHero(direction) {
 
 \--- /task ---
 
-### Remove the active image
+### 删除活动图像
 
-The `changeHero()` function needs to update the current image.
+`changeHero()` 函数需要更新当前图像。
 
-First, it removes the `active` class from the current `<span>` element.
+首先，它从当前 `<span>` 元素中删除 `active` 类。
 
 \--- task ---
 
-Remove the `active` class from the element at the `currentHeroIndex` in the `heroSlides` list.
+从 `heroSlides` 列表中的 `currentHeroIndex` 处的元素中删除 `active` 类。
 
 ## --- code ---
 
@@ -178,7 +178,7 @@ line_number_start: 75
 line_highlights: 81
 --------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -190,24 +190,24 @@ heroSlides[currentHeroIndex].classList.remove("active");
 
 \--- /code ---
 
-Square brackets are used to refer to the position of the element in the list.
+方括号用于指代元素在列表中的位置。
 
-So, `heroSlides[currentHeroIndex]` is the element at the position `currentHeroIndex` in the list `heroSlides`.
+因此，`heroSlides[currentHeroIndex]` 是列表 `heroSlides` 中位于 `currentHeroIndex` 的元素。
 
 \--- /task ---
 
-### Update the current index
+### 更新当前索引
 
-The function changes the `currentHeroIndex`.
+该函数改变了 `currentHeroIndex`。
 
-It adds `1` or subtracts `1`, depending on the `direction` value passed to the function.
+它会根据传递给函数的 `direction` 值添加 `1` 或减去 `1`。
 
-- When the `<` button is clicked, the `changeHero()` function is called with the argument `-1`
-- When the `>` button is clicked, the `changeHero()` function is called with the argument `+1`
+- 当单击 `<` 按钮时，将使用参数 `-1` 调用 `changeHero()` 函数
+- 当单击 `>` 按钮时，将使用参数 `+1` 调用 `changeHero()` 函数
 
 \--- task ---
 
-Update the value of `currentHeroIndex`.
+更新 `currentHeroIndex` 的值。
 
 ## --- code ---
 
@@ -218,7 +218,7 @@ line_number_start: 75
 line_highlights: 82
 --------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -233,30 +233,30 @@ currentHeroIndex = currentHeroIndex + direction;
 
 \--- /task ---
 
-### Dealing with ‘out of range’
+### 处理“超出范围”
 
-There are three elements in the `heroSlides` list.
+`heroSlides` 列表中有三个元素。
 
-They are at indexes `0`, `1`, and `2`.
+它们位于索引 `0`、`1` 和 `2`。
 
-If the value of the variable `currentHeroIndex` is `2`, then calling `changeHero(+1)` will change it to `3`.
+如果变量 `currentHeroIndex` 的值为 `2`，则调用 `changeHero(+1)` 会将其更改为 `3`。
 
-🚨 But there is no index `3` 🚨
+🚨 但是没有索引 `3`🚨
 
-If the value of the variable `currentHeroIndex` is `0`, then calling `changeHero(-1)` will change it to `-1`.
+如果变量 `currentHeroIndex` 的值为 `0`，则调用 `changeHero(-1)` 会将其更改为 `-1`。
 
-🚨 But there is no index `-1` 🚨
+🚨 但是没有索引 `-1` 🚨
 
-You need a way to handle these 'out of range' issues!
+你需要一种方法来处理这些“超出范围”的问题！
 
-Here is how:
+方法如下：
 
-- If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (`2`)
-- If the value of `currentHeroIndex` is greater than `2`, set it to `0`
+- 如果 `currentHeroIndex` 的值小于 `0`，则将其设置为列表中的最后一个索引（`2`）
+- 如果 `currentHeroIndex` 的值大于 `2`，则将其设置为 `0`
 
 \--- task ---
 
-Use an `if` statement with an `else if` statement to handle the out of range issues.
+使用带有 `else if` 语句的 `if` 语句来处理超出范围的问题。
 
 ## --- code ---
 
@@ -267,7 +267,7 @@ line_number_start: 75
 line_highlights: 84-88
 -----------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -288,13 +288,13 @@ currentHeroIndex = 0;
 
 \--- /task ---
 
-### Set the new active image
+### 设置新的活动图像
 
-You need to make the element at the current index active.
+你需要使当前索引处的元素处于活动状态。
 
 \--- task ---
 
-Add the `active` class to the element at the current index.
+将 `active` 类添加到当前索引处的元素。
 
 ## --- code ---
 
@@ -305,7 +305,7 @@ line_number_start: 75
 line_highlights: 90
 --------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -330,27 +330,27 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 \--- task ---
 
-Open `index.html`.
+打开 `index.html`。
 
-**Click Run**
+**点击运行**
 
-- Click the left (<) button on your hero image slider, the image should change
-- Click the right (>) button on your hero image slider, the image should change
+- 单击首页横幅图像滑块上的左侧 (<) 按钮，图像应该会发生变化
+- 单击首页横幅图像滑块上的右侧 (>) 按钮，图像应该会发生变化
 
 \--- collapse ---
 
 ---
 
-## title: The buttons do not work properly
+## title: 按钮无法正常工作
 
-- Make sure you have used the 'less than' `<` symbol or the 'greater than' `>` symbol in the correct places.
+- 确保在正确的位置使用了“小于”`<`符号或“大于”`>`符号。
 
 \--- /collapse ---
 
 \--- /task ---
 
-Fantastic effort!
+太棒了！
 
-You have created an interactive website so the user can create their own superhero character. You have checked user entry and allowed the user to choose a theme for the website.
+你已经创建了一个交互式网站，以便用户可以创建自己的超级英雄角色。 你已检查用户输入并允许用户选择网站的主题。
 
-Check your understanding of the project using the reflection quiz on the next step.
+下一步，使用回顾测验检查你对项目的理解。
