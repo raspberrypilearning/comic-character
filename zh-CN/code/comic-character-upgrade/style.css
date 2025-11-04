@@ -67,7 +67,7 @@ nav a:hover {
   color: var(--text-colour-nav-hover);
 }
 
-/* Create a character */
+/* 创建一个角色 */
 
 label {
   display: block;
@@ -128,7 +128,7 @@ textarea {
   display: none;
 }
 
-/* Light mode */
+/* 亮色模式 */
 
 .switch-container {
   display: flex;
@@ -180,7 +180,7 @@ input:checked + .switch-slider:before {
   color: var(--text-colour-switch-label);
 }
 
-/* Hero Slider */
+/* 首页轮播图 */
 
 .hero-container {
   width: 100%;
@@ -242,7 +242,7 @@ input:checked + .switch-slider:before {
   margin: 20px;
 }
 
-/* Responsive styles */
+/* 响应式样式 */
 
 
 @media only screen and (max-width: 768px) {
@@ -255,7 +255,7 @@ input:checked + .switch-slider:before {
   }
 }
 
-/* Light Mode Styles */
+/* 亮色模式样式 */
 body.light-mode {
   background: var(--background-colour-light-mode);
   color: var(--text-colour-light-mode);
