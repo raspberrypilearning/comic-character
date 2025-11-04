@@ -1,16 +1,16 @@
-## Upgrade your project
+## 升级你的项目
 
-If you have time, you can:
+如果你有时间，你可以：
 
-- Add more abilities on `character.html`
-- Add more form elements to your superhero creation form
-- Add more images to your hero slider
+- 在 `character.html` 上添加更多能力
+- 向你的超级英雄创作表单添加更多表单元素
+- 向首页横幅滑块添加更多图像
 
 \--- collapse ---
 
 ---
 
-## title: Add more abilities to the superhero creation form
+## title: 为超级英雄创建表单添加更多能力
 
 ## --- code ---
 
@@ -22,18 +22,18 @@ line_highlights:
 -----------------------------------------------------
 
 ```
-    <label for="ability-choice">Ability:</label>
+    <label for="ability-choice">能力：</label>
     <select id="ability-choice">
-      <option value="">Choose an option</option>
-      <option value="Flight">Flying</option>
-      <option value="Invisibility">Invisibility</option>
-      <option value="Time travel">Time travel</option>
-      <option value="Telepathy">Telepathy</option>
-      <option value="Visions">Visions</option>
-      <option value="Stretch">Stretch</option>
-      <option value="Shapeshift">Shapeshift</option>
-      <option value="Speedstar">Speedstar</option>
-      <option value="Ice">Ice</option>
+      <option value="">选择一个选项</option>
+      <option value="Flight">飞行</option>
+      <option value="Invisibility">隐形</option>
+      <option value="Time travel">时间旅行</option>
+      <option value="Telepathy">心灵感应</option>
+      <option value="Visions">预测未来</option>
+      <option value="Stretch">弹力伸展</option>
+      <option value="Shapeshift">变形</option>
+      <option value="Speedstar">极速</option>
+      <option value="Ice">冰冻</option>
     </select>
 ```
 
@@ -45,11 +45,11 @@ line_highlights:
 
 ---
 
-## title: Add more form fields
+## title: 添加更多表单字段
 
-### Example: Add a country the character is from
+### 示例：添加角色所在的国家/地区
 
-- Add HTML to `character.html`
+- 将 HTML 添加到 `character.html`
 
 ## --- code ---
 
@@ -61,24 +61,24 @@ line_highlights:
 -----------------------------------------------------
 
 ```
-    <label for="country-choice">Where is your hero from?:</label>
+    <label for="country-choice">你的英雄来自哪里？：</label>
     <select id="country-choice">
-      <option value="">Choose an option</option>
-      <option value="Space">Space</option>
-      <option value="Wakanda">Wakanda</option>
-      <option value="USA">USA</option>
-      <option value="UK">UK</option>
-      <option value="India">India</option>
-      <option value="China">China</option>
-      <option value="Nigeria">Nigeria</option>
-      <option value="Australia">Australia</option>
-      <option value="South Africa">South Africa</option>
+      <option value="">选择一个选项</option>
+      <option value="Space">太空</option>
+      <option value="Wakanda">瓦坎达</option>
+      <option value="USA">美国</option>
+      <option value="UK">英国</option>
+      <option value="India">印度</option>
+      <option value="China">中国</option>
+      <option value="Nigeria">尼日利亚</option>
+      <option value="Australia">澳大利亚</option>
+      <option value="South Africa">南非</option>
     </select>
 ```
 
 \--- /code ---
 
-- Update JavaScript on `scripts.js`.
+- 更新 `scripts.js` 上的 JavaScript。
 
 ## --- code ---
 
@@ -88,7 +88,7 @@ line_numbers: false
 line_highlights: 8, 15, 41, 42
 -------------------------------------------------------------------
 
-// Create constants for superhero form
+// 为超级英雄表单创建常量
 const characterDetails = document.querySelector("#character-details");
 const summary = document.querySelector("#summary-section");
 
@@ -97,25 +97,25 @@ const characterAbility = document.querySelector("#ability-choice");
 const characterCountry = document.querySelector("#country-choice");
 const characterOrigin = document.querySelector("#origin-text");
 
-// Function to display summary
+// 显示概述的函数
 function displaySummary() {
 const summaryParagraph = document.querySelector("#summary-paragraph");
 
-summaryParagraph.textContent = `Your superhero name is ${characterName.value}. 
-  Their ability is ${characterAbility.value}. They are from ${characterCountry.value}.
-  Their origin story is ${characterOrigin.value}.`;
+summaryParagraph.textContent = `你的超级英雄名字是 ${characterName.value}。 
+  他们的能力是 ${characterAbility.value}。 它们来自 ${characterCountry.value}。
+  他们的起源故事是 ${characterOrigin.value}。`;
 
 characterDetails.style.display = "none";
 summary.style.display = "flex";
 }
 
-// Function to edit summary
+// 编辑概述的函数
 function changeSummary() {
 characterDetails.style.display = "flex";
 summary.style.display = "none";
 }
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -123,13 +123,13 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 } else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "请选择一项能力";
 } else if (characterCountry.value == "") {
-alertMessage = "Please select where your hero is from";
+alertMessage = "请选择你的英雄来自哪里";
 } else if (characterOrigin.value == "") {
-alertMessage = "Please write the origin story";
+alertMessage = "请写下起源故事";
 }
 
 if (alertMessage != ""){
@@ -149,13 +149,13 @@ displaySummary();
 
 ---
 
-## title: Add more hero images to the slider
+## title: 向滑块添加更多首页横幅图像
 
-There are more images you can use for your hero slider in the starter projects:
+在初始项目中，你可以为你的首页横幅滑块使用更多图像：
 
-`kwame-cape.jpg` and `ellenhero-image.jpg`
+`kwame-cape.jpg` 和 `ellenhero-image.jpg`
 
-You can add more images to your slider by updating `index.html` and `scripts.js`.
+你可以通过更新 `index.html` 和 `scripts.js` 向滑块添加更多图像。
 
 ## --- code ---
 
@@ -179,9 +179,9 @@ line_highlights:
 
 \--- /code ---
 
-When you have more hero images, you need to change the `if` and `else if` statements to handle the longer length of `currentHeroIndex` that will be returned by `querySelectorAll`.
+当你拥有更多英雄图像时，您需要更改 `if` 和 `else if` 语句以处理 `querySelectorAll` 返回的更长的 `currentHeroIndex` 长度。
 
-If you have five images, then you will need to change the code like this:
+如果你有五张图片，那么你将需要像这样更改代码：
 
 ## --- code ---
 
@@ -192,7 +192,7 @@ line_number_start: 75
 line_highlights: 85-86
 -----------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -213,12 +213,12 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 \--- /code ---
 
-If you would like to handle any number of images, then instead of handling a fixed length, you can just check the length of `currentHeroIndex`.
+如果你想处理任意数量的图像，那么你只需检查 `currentHeroIndex` 的长度，而不是处理固定长度。
 
-The `.length` property returns the number of elements in a list.
+`.length` 属性返回列表中元素的数量。
 
-- If the value of `currentHeroIndex` is less than `0`, set it to the last index in the list (at the index that is the same as the length of the list minus 1)
-- If the value of `currentHeroIndex` is greater than the last index in the list, set it to `0`
+- 如果 `currentHeroIndex` 的值小于 `0`，则将其设置为列表中的最后一个索引（与列表长度减 1 相同的索引）
+- 如果 `currentHeroIndex` 的值大于列表中的最后一个索引，则将其设置为 `0`
 
 ## --- code ---
 
@@ -229,7 +229,7 @@ line_number_start: 75
 line_highlights: 85-86
 -----------------------------------------------------------
 
-// Change Hero function
+// 更改 Hero 函数
 const heroSlides = document.querySelectorAll('.hero-slide');
 var currentHeroIndex = 0;
 
@@ -256,10 +256,10 @@ heroSlides[currentHeroIndex].classList.add("active");
 
 ---
 
-## title: See the upgraded project
+## title: 查看升级后的项目
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-upgrade" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-You can see the [upgraded project files here](https://editor.raspberrypi.org/en/projects/comic-character-upgrade){:target="_blank"}.
+你可以在此处查看 [升级后的项目文件](https://editor.raspberrypi.org/en/projects/comic-character-upgrade){:target="_blank"}。
 
 \--- /collapse ---
