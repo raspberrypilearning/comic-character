@@ -340,7 +340,7 @@ line_highlights: 21
 
 // Functie om samenvatting weer te geven
 function displaySummary() {
-const summaryParagraph = document.querySelector("#samenvatting-paragraaf");
+const summaryParagraph = document.querySelector("#summary-paragraph");
 
 summaryParagraph.textContent = `De naam van je superheld is ${characterName.value}. 
   De vaardigheid is ${characterAbility.value}. 
@@ -371,7 +371,7 @@ line_highlights: 22
 
 // Functie om samenvatting weer te geven
 function displaySummary() {
-const summaryParagraph = document.querySelector("#samenvatting-paragraaf");
+const summaryParagraph = document.querySelector("#summary-paragraph");
 
 summaryParagraph.textContent = `De naam van je superheld is ${characterName.value}. 
   De vaardigheid is ${characterAbility.value}. 
