@@ -1,20 +1,20 @@
-## Check the user's input
+## 检查用户输入
 
-In this step, you will check that the user has completed the form and warn them if they have missed a section.
+在此步骤中，你将检查用户是否已完成表格，并在他们错过某个部分时发出警告。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step6?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-At the moment, the user can submit the information even if they have left some form fields empty.
+目前，即使用户的一些表单字段留空，他们也可以提交信息。
 
-You need to create a new function that checks the user has completed all the form fields before calling the `displaySummary()` function.
+你需要创建一个新函数，在调用 `displaySummary()` 函数之前检查用户是否已完成所有表单字段。
 
-### Change the function for the Create button
+### 更改创建按钮的功能
 
 \--- task ---
 
-Open `character.html`.
+打开 `character.html`。
 
-Change the function that handles the Create button's `onclick` event.
+更改处理创建按钮的 `onclick` 事件的函数。
 
 ## --- code ---
 
@@ -26,22 +26,22 @@ line_highlights: 35
 --------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">起源故事：</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
-    <button onclick="checkForm()">Create</button>
+    <button onclick="checkForm()">创造</button>
 ```
 
 \--- /code ---
 
 \--- /task ---
 
-### Create an area to show a warning
+### 创建一个区域来显示警告
 
-You need to show a warning to the user if part of the form is blank.
+如果表单的一部分是空白的，你需要向用户显示警告。
 
 \--- task ---
 
-Create an empty `<div>` element with the attribute `id="alert"` below the Create button.
+在创建按钮下方创建一个空的 `<div>` 元素，其属性为 `id="alert"`。
 
 ## --- code ---
 
@@ -53,11 +53,11 @@ line_highlights: 35-36
 -----------------------------------------------------------
 
 ```
-    <label for="origin-text">Origin Story:</label>
+    <label for="origin-text">起源故事：</label>
     <textarea id="origin-text" placeholder="Add your superhero origin story!"></textarea>
     <div id="alert"> 
     </div>
-    <button onclick="checkForm()">Create</button>
+    <button onclick="checkForm()">创建</button>
   </section>
 ```
 
@@ -65,17 +65,17 @@ line_highlights: 35-36
 
 \--- /task ---
 
-### Create an alert message
+### 创建警告消息
 
-You need to update the contents of the alert `<div>` with a message.
+你需要使用消息更新警告 `<div>` 的内容。
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Use `querySelector()` to find the `<div>` element with the attribute `id="alert"`.
+使用 `querySelector()` 查找具有属性 `id="alert"` 的 `<0>` 元素。
 
-Assign this to a constant `alertBox`.
+将其分配给常量 `alertBox`。
 
 ## --- code ---
 
@@ -86,24 +86,24 @@ line_number_start: 31
 line_highlights: 32
 --------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 \--- /code ---
 
 \--- /task ---
 
-You need a new `checkForm()` function to check each field on your form for an empty value.
+你需要一个新的 `checkForm()` 函数来检查表单上的每个字段是否为空值。
 
-If there is an empty value, an alert will be shown to the user in the `alertBox`.
+如果值为空，则会在 `alertBox` 中向用户显示警告。
 
-The `alertBox` `<div>` will be hidden until it is needed.
+`alertBox` `<div>` 将会被隐藏，直到需要它为止。
 
-### Create the checkForm() function
+### 创建 checkForm() 函数
 
 \--- task ---
 
-Create the function `checkForm()`.
+创建函数 `checkForm()`。
 
 ## --- code ---
 
@@ -114,7 +114,7 @@ line_number_start: 31
 line_highlights: 34-36
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -125,13 +125,13 @@ function checkForm(){
 
 \--- /task ---
 
-### Create a variable to hold an alert message
+### 创建一个变量来保存警告消息
 
-You need a variable to hold an alert message if the function finds an empty value.
+如果函数发现空值，则需要一个变量来保存警告消息。
 
 \--- task ---
 
-Create the variable `alertMessage` and assign it an empty string(`""`).
+创建变量 `alertMessage` 并为其分配一个空字符串（`""`）。
 
 ## --- code ---
 
@@ -142,7 +142,7 @@ line_number_start: 31
 line_highlights: 36
 --------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -159,32 +159,32 @@ var alertMessage = "";
 
 ---
 
-## title: What is a variable?
+## title: 什么是变量？
 
-A variable is a named area of computer memory that holds a value.
+变量是计算机内存中保存值的命名区域。
 
-The value can be changed while the program is running.
+该值可以在程序运行时更改。
 
-For example, `var age = 10;`
+例如，`var age = 10;`
 
-- `age` is the name of the variable.
-- It is assigned the value `10`.
+- `age` 是变量的名称。
+- 它被赋值为 `10`。
 
 \--- /collapse ---
 
-### Check the user has entered a superhero name
+### 检查用户是否输入了超级英雄的名称
 
-You need to check each field to decide if it is empty.
+你需要检查每个字段以确定它是否为空。
 
-Start with the first field, `characterName`, which holds the HTML element with the attribute `id="name-text"`.
+从第一个字段 `characterName` 开始，它包含具有属性 `id="name-text"` 的 HTML 元素。
 
-The `.value` property of a form field will be empty if the user has missed it.
+如果用户错过了，表单字段的 `.value` 属性将为空。
 
 \--- task ---
 
-Use an `if` statement to check if the value of `characterName` is empty.
+使用 `if` 语句检查 `characterName` 的值是否为空。
 
-**Notice:** The operator `==` is used. It means 'is the same as'.
+\*\*注意：\*\*使用了运算符 `==`。 意思是‘与……相同’。
 
 ## --- code ---
 
@@ -195,7 +195,7 @@ line_number_start: 31
 line_highlights: 38-40
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -212,13 +212,13 @@ if (characterName.value == ""){
 
 \--- /task ---
 
-Inside the `if` statement, you need code to run if the result is **true** (meaning `characterName` **is** empty).
+在 `if` 语句中，如果结果为 **true**（意味着 `characterName` **为**空），则需要运行代码。
 
 \--- task ---
 
-Assign `alertMessage` a string if the condition is true.
+如果条件为真，则为 `alertMessage` 分配一个字符串。
 
-The string needs to be a message that tells the user what to if the **Superhero Name** field has been left blank.
+该字符串需要是一条消息，告诉用户如果**超级英雄名称**字段留空该怎么办。
 
 ## --- code ---
 
@@ -229,7 +229,7 @@ line_number_start: 31
 line_highlights: 39
 --------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -237,7 +237,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 }
 
 }
@@ -246,21 +246,21 @@ alertMessage = "Please enter a name";
 
 \--- /task ---
 
-### Show an alert
+### 显示警告
 
-When you created `alertMessage`, you assigned it an empty string (`""`).
+当你创建 `alertMessage` 时，你为其分配了一个空字符串（`""`）。
 
-If the **Superhero Name** field is blank, then you set `alertMessage` to a message to alert the user.
+如果**超级英雄名称**字段为空，则你可以将 `alertMessage` 设置为一条消息来提醒用户。
 
-You only want to show the alert if there is a message in `alertMessage`.
+仅当 `alertMessage` 中有消息时才显示警告。
 
-So now you need to check if `alertMessage` is **not** an empty string.
+所以现在你需要检查 `alertMessage` **不**为空字符串。
 
 \--- task ---
 
-Use an `if` statement to check if the variable `alertMessage` is **not** an empty string (meaning it has been assigned a message for the user).
+使用 `if` 语句检查变量 `alertMessage` 不为空字符串（意味着它已为用户分配了一条消息）。
 
-**Notice:** The operator `!=` is used. It means 'is **not** the same as'.
+**注意：**使用了运算符 `!=`。 它的意思是**不**相同。
 
 ## --- code ---
 
@@ -271,7 +271,7 @@ line_number_start: 31
 line_highlights: 42-44
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -279,7 +279,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 }
 
 if (alertMessage != ""){
@@ -291,11 +291,11 @@ if (alertMessage != ""){
 
 \--- /task ---
 
-If `alertMessage` contains a message for the user, you need to set the `.innerText` content of `alertBox` to be that message.
+如果 `alertMessage` 包含给用户的消息，则需要将 `alertBox` 的 `.innerText` 内容设置为该消息。
 
 \--- task ---
 
-Set the `.innerText` content of `alertBox` to the string held in `alertMessage`.
+将 `alertBox` 的 `.innerText` 内容设置为 `alertMessage` 中保存的字符串。
 
 ## --- code ---
 
@@ -306,7 +306,7 @@ line_number_start: 31
 line_highlights: 43
 --------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -314,7 +314,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 }
 
 if (alertMessage != ""){
@@ -327,13 +327,13 @@ alertBox.innerText = alertMessage;
 
 \--- /task ---
 
-The `display` property for the `#alert` selector is set by default to `none`, so the alert box is hidden when the page loads.
+`#alert` 选择器的 `display` 属性默认设置为 `none`，因此页面加载时警告框会被隐藏。
 
 \--- collapse ---
 
 ---
 
-## title: View the alert CSS selector
+## title: 查看警告 CSS 选择器
 
 ## --- code ---
 
@@ -354,11 +354,11 @@ display: none;
 
 \--- /collapse ---
 
-If there is a message to show to the user, you need to make the alert box appear.
+如果有消息要向用户显示，你需要显示警告框。
 
 \--- task ---
 
-In your new `if` statement, set the `display` property for the `#alert` selector to `block`.
+在新的 `if` 语句中，将 `#alert` 选择器的 `display` 属性设置为 `block`。
 
 ## --- code ---
 
@@ -369,7 +369,7 @@ line_number_start: 31
 line_highlights: 44
 --------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -377,7 +377,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 }
 
 if (alertMessage != ""){
@@ -392,31 +392,32 @@ alertBox.style.display = "block";
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Leave the Superhero Name field blank
-- Click the Create button
-- The alert message will show
+- 将超级英雄名称字段留空
+- 点击创建按钮
+- 警告信息将显示
 
 \--- /task ---
 
-### Hide the alert and show the summary
+### 隐藏警告并显示概述
 
-You need to use an `else` statement to hide the alert (and show the summary) if `alertMessage` is still set to an empty string (`""`).
+如果`alertMessage` 仍然设置为空字符串(`""`)，
+你需要使用 `else` 语句来隐藏提醒 (并显示概述)
 
-This is another way to think about how the `else` statement works with the `if` statement:
+这是思考 `else` 语句与 `if` 语句如何运作的另一种方法：
 
 ```
-If the alert message is not ""
-  - show the alert.
-Otherwise (else)
-  - hide the alert
-  - show the summary.
+如果警告消息不是“”
+  - 显示警告。
+否则
+  - 隐藏警告
+  - 显示概述。
 ```
 
 \--- task ---
 
-Use an `else` statement to set the `display` property for the `#alert` selector to `none` and call the `displaySummary()` function.
+使用 `else` 语句将 `#alert` 选择器的 `display` 属性设置为 `none`，并调用 `displaySummary()` 函数。
 
 ## --- code ---
 
@@ -427,7 +428,7 @@ line_number_start: 31
 line_highlights: 45-48
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -435,7 +436,7 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 }
 
 if (alertMessage != ""){
@@ -453,64 +454,64 @@ displaySummary();
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Fill in the Superhero Name field
-- Click the Create button
-- The alert message will **not** show
-- The summary will show
+- 填写超级英雄名称字段
+- 点击创建按钮
+- 警告消息将不会显示
+- 概述将显示
 
-**Notice:** The ability and origin story sections will be blank
+\*\*注意：\*\*能力和起源故事部分将为空白
 
 \--- collapse ---
 
 ---
 
-## title: The summary section is not showing
+## title: 概述部分不显示
 
-- Check you have used brackets`()` in your `if` and `else` statements, e.g. `if (characterName.value == "")`
-- Check you have called the `displaySummary()` function in your `else` block
+- 检查你是否在 `if` 和 `else` 语句中使用了括号 `()`，例如 `if (characterName.value == "")`
+- 检查您是否已在 `else` 块中调用了`displaySummary()` 函数
 
 \--- /collapse ---
 
 \--- /task ---
 
-### Check the Ability field
+### 检查能力字段
 
-You have used an `if` statement to check if the value of `characterName` is empty.
+你已使用 `if` 语句检查 `characterName` 的值是否为空。
 
-If it is **not** empty, you need to use `else if` statements to check the other form fields.
+如果它不为空，则需要使用 `else if`语句来检查其他表单字段。
 
-This is another way to think about how `else if` statements work with the `if` statement:
+这是思考 `else if` 语句如何与 `if` 语句协同工作的另一种方式：
 
 ```
-If characterName is ""
-  - set an alert.
-Otherwise (else) if characterAbility is ""
-  - set an alert.
-Otherwise (else) if characterOrigin is ""
-  - set an alert.
+如果角色名称为 ""
+  - 设置警告。
+否则如果角色能力为 ""
+  - 设置警告。
+否则如果角色起源为 ""
+  - 设置警告。
 ```
 
 \--- collapse ---
 
 ---
 
-## title: Why not use three if statements?
+## title: 为什么不使用三个 if 语句？
 
-**Tip:** Using `if` with `else if` statements means that if any condition is 'true', subsequent `else if` statements are ignored. This saves resources and time. If multiple `if` statements are used, all `if` statements are checked, even if one condition is met.
+**提示**：将 `if` 与 `else if` 语句一起使用意味着如果任何条件为`true`，则后续的 `else if` 语句将被忽略。 这节省了资源和时间。 如果使用多个 `if` 语句，则会检查所有 `if` 语句，即使只满足一个条件。
 
-In this form, the user is alerted about the first blank field.
+在这个表单中，用户会收到关于第一个空白字段的警告。
 
 \--- /collapse ---
 
 \--- task ---
 
-Use an `else if` statement to check if the value of `characterAbility` is empty.
+使用 `else if` 语句检查 `characterAbility` 的值是否为空。
 
-If it is, assign `alertMessage` a string.
+如果是，则为 `alertMessage` 分配一个字符串。
 
-The string needs to be a message that tells the user what to do if the **Ability** field has been left blank.
+该字符串需要是一条消息，告诉用户如果**能力**字段留空该怎么做。
 
 ## --- code ---
 
@@ -521,7 +522,7 @@ line_number_start: 31
 line_highlights: 40-42
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -529,9 +530,9 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 } else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "请选择一项能力";
 }
 
 if (alertMessage != ""){
@@ -549,11 +550,11 @@ displaySummary();
 
 \--- task ---
 
-### Check the Origin Story field
+### 检查起源故事字段
 
-Use another `else if` statement to check the value of `characterOrigin`.
+使用另一个 `else if` 语句来检查 `characterOrigin` 的值。
 
-Add an alert message to show the user if it is blank.
+如果为空白，则添加警告消息以向用户显示。
 
 ## --- code ---
 
@@ -564,7 +565,7 @@ line_number_start: 31
 line_highlights: 42-44
 -----------------------------------------------------------
 
-// Function to check the character details form
+// 用于检查字符详细信息的函数
 const alertBox = document.querySelector("#alert");
 
 function checkForm(){
@@ -572,11 +573,11 @@ function checkForm(){
 var alertMessage = "";
 
 if (characterName.value == ""){
-alertMessage = "Please enter a name";
+alertMessage = "请输入名称";
 } else if (characterAbility.value == "") {
-alertMessage = "Please choose an ability";
+alertMessage = "请选择一项能力";
 } else if (characterOrigin.value == "") {
-alertMessage = "Please write the origin story";
+alertMessage = "请写下起源故事";
 }
 
 if (alertMessage != ""){
@@ -594,25 +595,25 @@ displaySummary();
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Type values into some of the form fields, but leave some blank.
-- Click the Create button. An alert message will show for any field you have left blank.
-- Test this a few times with a different form fields.
-- Complete all form fields. Click Create to see the summary.
+- 在一些表单字段中输入值，但保留一些空白。
+- 点击创建按钮。 对于任何留空的字段，将显示一条警告消息。
+- 使用不同的表单字段测试几次。
+- 填写所有表单字段。 单击创建查看概述。
 
 \--- collapse ---
 
 ---
 
-## title: I should be getting alerts but I am not
+## title: 我应该收到警告，但我没有
 
-- Check you have added `.value` after `characterName`, `characterAbility`, and `characterOrigin`.
+- 检查您是否已在 `characterName` 、`characterAbility` 和 `characterOrigin` 后添加了`.value`。
 
 \--- /collapse ---
 
 \--- /task ---
 
-Great effort! You have created checks and alerts to help the user create their superhero!
+Great effort! 你已经创建了检查和警告来帮助用户创建他们的超级英雄！
 
-Next, you will create a switch so the user can change between light and dark mode!
+接下来，你将创建一个开关，以便用户可以在明暗模式之间切换！
