@@ -1,25 +1,25 @@
-## Change the summary content
+## 更改概述内容
 
-In this step, you will allow the user to change their form choices.
+在此步骤中，你将允许用户更改他们的表单选择。
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/comic-character-step5?page=character.html" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-### Add the changeSummary() function
+### 添加 changeSummary() 函数
 
-You need a function that shows the form and hides the summary when the user clicks an Edit button.
+你需要一个功能，当用户单击编辑按钮时显示表单并隐藏概述。
 
 \--- task ---
 
-Open `scripts.js`.
+打开 `scripts.js`。
 
-Find the comment `// Function to edit summary`.
+找到注释 `//编辑概述的函数`。
 
-Add the function `changeSummary()`.
+添加函数 `changeSummary()`。
 
-In your function:
+在你的函数中：
 
-- Set the value of the `display` property of the character details `<section>` to `flex`
-- Set the value of the `display` property of the summary `<section>` to `none`
+- 将角色详情 `<section>` 的 `display` 属性值设置为 `flex`
+- 将概述 `<section>` 的 `display` 属性值设置为 `none`
 
 ## --- code ---
 
@@ -30,7 +30,7 @@ line_number_start: 25
 line_highlights: 26-29
 -----------------------------------------------------------
 
-// Function to edit summary
+// 编辑概述的函数
 function changeSummary() {
 characterDetails.style.display = "flex";
 summary.style.display = "none";
@@ -40,17 +40,17 @@ summary.style.display = "none";
 
 \--- /task ---
 
-### Create an Edit button
+### 创建编辑按钮
 
-You need to create a new button to call the `changeSummary()` function.
+你需要创建一个新按钮来调用 `changeSummary()` 函数。
 
 \--- task ---
 
-Open `character.html`.
+打开 `character.html`。
 
-Add a `<button>` element with the event `onlick="changeSummary()"` to the summary section.
+在概述部分添加带有事件 `onlick="changeSummary()"` 的 `<button>` 元素。
 
-Add the text 'Edit' to the `<button>`, so the user knows what the button does.
+将文本 `编辑` 添加到 `<button>`，以便用户知道该按钮的作用。
 
 ## --- code ---
 
@@ -63,9 +63,9 @@ line_highlights: 42
 
 ```
   <section id="summary-section">
-    <h2>Superhero Summary</h2>
+    <h2>超级英雄概要</h2>
     <p id="summary-paragraph"></p>
-    <button onclick="changeSummary()">Edit</button>
+    <button onclick="changeSummary()">编辑</button>
   </section>
 ```
 
@@ -75,14 +75,14 @@ line_highlights: 42
 
 \--- task ---
 
-**Click Run**
+**点击运行**
 
-- Complete the form again.
-- When you click the Create button, the form will be hidden and the summary section will be displayed.
-- You should see an Edit button. Click it to edit your form.
+- 再次填写表格。
+- 当你单击创建按钮时，表单将被隐藏，并显示概述部分。
+- 你应该会看到一个编辑按钮。 单击它即可编辑你的表单。
 
 \--- /task ---
 
-Well done! You have added even more interactivity to your website!
+太棒了！ 你已为您的网站添加了更多互动性！
 
-Next, you will check that the user has completed the form and warn them if they have missed a section.
+接下来，你将检查用户是否已完成表格，并在他们错过某个部分时发出警告。
