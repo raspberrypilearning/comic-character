@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>SuperPi 漫画书</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">Pi 漫画</a>
+      <nav class="navbar" id="nav">
+        <a href="index.html">主页</a>
+        <a href="character.html">创建角色</a>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-container">
+        <div class="hero-slider">
+          <span class="hero-slide active"><img src="stacey-hero.jpg" alt="一位金发超级英雄，身穿蓝色服装和红色斗篷，背景为蓝色和黄色"></span>
+          <span class="hero-slide"><img src="safina-cape.jpg" alt="一位黑发超级英雄，身穿红白相间的服装和蓝色斗篷，背景为蓝色和黄色"></span>
+          <span class="hero-slide"><img src="layton-slider.jpg" alt="蓝色背景前，一位金发超级英雄，身穿蓝色服装和红色斗篷"></span>
+        </div>
+        <button class="hero-nav-btn prev" onclick="changeHero(-1)">❮</button>
+        <button class="hero-nav-btn next" onclick="changeHero(+1)">❯</button>
+      </div>
+    </main>
+    <footer>
+      <p> Ⓒ <span id="copyrightYear"></span> Malik Johnson- 版权所有</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
